@@ -1,0 +1,14 @@
+//雪碧圖示
+
+	// 請注意！本 scss 所做設定皆全域可見。
+	// 本 sass 引入 images 資料夾內的 icon-pic 圖示，用以作為雪碧圖示。
+
+$icon-spacing: 0; //圖片合併間距
+$icon-repeat: no-repeat; //不重複
+$icon-layout: horizontal; //水平排列
+$icon-sprite-dimensions: false; //自動使用大小
+$disabled-magic-sprite-selectors: true; //-hover 自動轉成 :hover
+
+@import 'icon-pic/*.png'; //指定路徑/副檔名
+
+@include all-icon-pic-sprites; //合併

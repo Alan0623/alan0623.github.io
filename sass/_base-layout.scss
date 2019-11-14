@@ -1,0 +1,212 @@
+//變數
+//主要版面顏色================================================================
+	$major-color: #71C1DD !default; //主色: 
+	$minor-color: #D8D6D1  !default; //次色
+	$menu-color: #F6F6F6;
+//灰階=======================================================================
+	$white: #fff; //白色
+	$light: lighten($black, 65%); //淺色
+	$light-gray: lighten($black, 25%); //淺灰  #D8CAB6 seach框
+	$deep-gray: $black ; //灰色 #767164 footer框
+	$deep-gray: darken($black, 10%); //深灰
+	$deep: darken($black, 15%); //深色 #1E1D1B 內文字色
+	$gray: #b2b2b2 ;
+	$black: #262626 ;//黑色
+//預設圓角====================================================================
+	$border-radius: $interval-s;
+//隱藏文字與...================================================================
+
+	%hide-text {//隱藏文字的方法
+			font: 0/0 a;
+			color: transparent;
+	}
+
+/*------------------------------------------------------------------
+Reset HTML5
+------------------------------------------------------------------*/
+	article,aside,dialog,footer,header,section,footer,nav,figure,menu,details,figcaption,figure,hgroup{display:block;}
+	audio, canvas, video{display: inline-block; *display: inline; *zoom: 1;}
+	audio:not([controls]){display: none;}
+	[hidden]{display: none;}
+	*{margin: 0;padding: 0;box-sizing: border-box;}
+	html, body {min-width: 300px;height: 100%;padding: 0; margin: 0;font-family: "微軟正黑體","Ubuntu", Helvetica, "Heiti TC", "Microsoft Sans Serif", "Microsoft Sans Serif", "Helvetica", "Geneva", "sans-serif";}
+	/* Safari、Chrome、IE9、Opera */::selection {background:$deep-gray;color: $white;.high_contrast &{background:#fefe00;;color:black;}}
+	/* Firefox */::-moz-selection {background:$deep-gray;color: $white;}
+	a, a:active, a:hover{text-decoration: none;outline: none;}
+	ul,li{list-style: none;padding: 0;margin: 0;}
+
+/*------------------------------------------------------------------
+跳到主要內容區塊
+------------------------------------------------------------------*/
+	.sr-only {/*跳到主要內容區塊*/
+		color: $white;
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		z-index: 9998;
+		padding:0;
+		border-radius: $border-radius;
+		white-space: nowrap;
+		overflow: hidden;
+		&:focus{
+			background:$major-color;
+			padding: 8px 10px;
+			width: auto;
+			height: auto;
+		}
+		.high_contrast &{
+			color: black;
+			font-weight: bold;
+			&:focus{
+				background:#fefe00;
+			}
+		}
+	}
+/*------------------------------------------------------------------
+#wrapper
+------------------------------------------------------------------*/
+	.wrapper{
+		color: $black;
+		min-height: 100vh;
+		position: relative;
+		background-image: image-url('section2/bg_section2.jpg', false, false);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+/*------------------------------------------------------------------
+header class="head"
+------------------------------------------------------------------*/
+	.head{
+		width: 100%;
+		.head_navigation{
+			width: 100%;
+			height: 32px;
+			border-bottom: $white solid 1px;
+			.head_navigation_link{//NIKE PLUS logo
+				li{
+					a{
+						&.nike_plus{
+
+						}
+						&.jordan_logo{
+							
+						}
+					}    
+				}
+			}
+
+			.head_navigation_log{//臺灣
+				li{
+					a{
+						
+					}    
+				}
+			}
+
+		}
+	}
+
+	.head_menu{
+		width: 100%;
+		.head_menu_brand{
+			display: inline-block;
+			.logo{
+				display: inline-block;
+				h1{
+					display: block;
+					width: 92px;
+					height: 37px;
+					@extend %hide-text;
+					background-image: image-url('icon-pic/logo.png', false, false);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+			}
+		}
+
+		.head_menu_nav{
+			.head_menu_nav_main{
+				li{
+					a{
+
+					}
+				}
+			}
+			.head_menu_nav_shopping{
+				li{
+
+				}
+			}
+		}
+	}
+
+/*------------------------------------------------------------------
+footer class="fatfooter"
+------------------------------------------------------------------*/
+	.footer{
+		width: 100%;
+		background-color: #000;
+	}
+	.footer_fatfooter{
+		> ul{
+			> li{
+				> a{
+					color: $white;
+				}
+				> ol{
+					> li{
+						> a{
+							color: $gray;
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer_fatfooter_Community{
+		ul{
+			li{
+				a{
+					@extend %hide-text;
+					display: block;
+					width: 32px;
+					height: 32px;
+					background-repeat: no-repeat;
+					background-size: cover;
+					opacity: 0.6;
+					border: $white solid 1px;
+					border-radius: 32px;
+					&.twitter{
+						background-image: image-url('icon-pic/twitter.png', false, false);
+						
+					}
+					&.facebook{
+						background-image: image-url('icon-pic/facebook.png', false, false);
+					}
+					&.youtube{
+						background-image: image-url('icon-pic/you.png', false, false);
+					}
+					&.instagram{
+						background-image: image-url('icon-pic/ig.png', false, false);
+					}
+				}
+			}
+		}
+	}
+	.footer_info{
+		.copyright{
+			color: $gray;
+		}
+		.Community{
+			li{
+				display: inline-block;
+				a{
+					color: $gray;
+				}
+			}
+		}
+	}
