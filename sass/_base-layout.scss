@@ -1,0 +1,421 @@
+/*------------------------------------------------------------------
+Reset HTML5
+------------------------------------------------------------------*/
+	article,aside,dialog,footer,header,section,footer,nav,figure,menu,details,figcaption,figure,hgroup{display:block;}
+	audio, canvas, video{display: inline-block; *display: inline; *zoom: 1;}
+	audio:not([controls]){display: none;}
+	[hidden]{display: none;}
+	*{margin: 0;padding: 0;box-sizing: border-box;}
+	html, body {min-width: 300px;height: 100%;padding: 0; margin: 0;font-family: "微軟正黑體","Ubuntu", Helvetica, "Heiti TC", "Microsoft Sans Serif", "Microsoft Sans Serif", "Helvetica", "Geneva", "sans-serif";}
+	/* Safari、Chrome、IE9、Opera */::selection {background:$black;color: $white;}
+	/* Firefox */::-moz-selection {background:$black;color: $white;}
+	a, a:active, a:hover{text-decoration: none;outline: none;}
+	ul,li{list-style: none;padding: 0;margin: 0;}
+
+/*------------------------------------------------------------------
+跳到主要內容區塊
+------------------------------------------------------------------*/
+	.sr-only {/*跳到主要內容區塊*/
+		color: $white;
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		z-index: 9998;
+		padding:0;
+		border-radius: $border-radius;
+		white-space: nowrap;
+		overflow: hidden;
+		&:focus{
+			background:$major-color;
+			padding: 8px 10px;
+			width: auto;
+			height: auto;
+		}
+	}
+/*------------------------------------------------------------------
+#wrapper
+------------------------------------------------------------------*/
+	.wrapper{
+		color: $black;
+		min-height: 100vh;
+		position: relative;
+		background-image: image-url('section2/bg_section2.jpg', false, false);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+/*------------------------------------------------------------------
+header class="head"
+------------------------------------------------------------------*/
+	.head{
+		width: 100%;
+		position: fixed;
+		z-index: 10;
+		background-color: rgba(248,245,238,0.8);
+		&::before{
+			content: "";
+			position: absolute;
+			z-index: 1;
+			top: 32px;
+			width: 100%;
+			height: 1px;
+			background-color: $white;
+		}
+		.head_navigation{
+			width: 100%;
+			height: 32px;
+			box-sizing: border-box;
+			position: relative;
+			box-sizing: border-box;
+        	padding: 0 40px;
+			@extend %center;
+			.head_navigation_link{//NIKE PLUS logo
+				display: inline-block;
+				position: absolute;
+				z-index: 2;
+				left: 40px;
+				&::after{
+					content: "";
+					display: block;
+					clear: both;
+				}
+				li{
+					display: inline-block;
+					float: left;
+
+					a{
+						@extend %hide-text;
+						@extend %display-flex;
+						text-align: center;
+						height: 32px;
+						opacity: 0.4;
+						&::before{
+							content: "";
+							display: block;
+							margin: 0 auto;
+							@extend %bg-cover;
+						}
+						&.nike_plus{
+							width: 64px;
+							&::before{
+								width: 27px;
+								height: 9px;
+								background-image: image-url('icon-pic/nike_plus.png', false, false);
+							}
+
+						}
+						&.jordan_logo{
+							width: 40px;
+							&::before{
+								width: 18px;
+								height: 17px;
+								background-image: image-url('icon-pic/jordan_logo.png', false, false);
+							}
+						}
+						
+					}    
+				}
+			}
+
+			.head_navigation_log{//臺灣
+				display: inline-block;
+				position: absolute;
+				z-index: 2;
+				right: 40px;
+				
+				li{
+					display: inline-block;
+					margin: 0 8px;
+					a{
+						line-height: 32px;
+						color: $black;
+						&.location{
+							padding-left: 14px;
+							position: relative;
+							&::before{
+								content: "";
+								display: block;
+								width: 11px;
+								height: 11px;
+								position: absolute;
+								z-index: 1;
+								top: calc(50% - 6px);
+								background-image: image-url('icon-pic/location.png', false, false);
+								@extend %bg-cover;
+							}
+						}
+
+						&:hover, &:focus{
+							color: $major-color;
+						}
+					}    
+				}
+			}
+
+		}
+	}
+
+	.head_menu{
+		width: 100%;
+		height: 56px;
+		@extend %center;
+		box-sizing: border-box;
+        padding: 0 40px;
+		.head_menu_brand{
+			@extend %display-flex;
+			position: absolute;
+			z-index: 2;
+			width: 140px;
+			.logo{
+				display: inline-block;
+				h1{
+					display: block;
+					width: 92px;
+					height: 37px;
+					@extend %hide-text;
+					@extend %bg-cover;
+					background-image: image-url('icon-pic/logo.png', false, false);
+					
+				}
+			}
+		}
+
+		.head_menu_nav{
+			position: relative;
+			padding-left: 140px;
+			.head_menu_nav_main{
+				display: inline-block;
+				height: 56px;
+				line-height: 56px;
+				li{
+					display: inline-block;
+					margin: 0 16px;
+					a{
+						color: $black;
+						font-weight: bold;
+						font-size: 1.2em;
+						span{
+							font-family: $entitle-font-style;
+						}
+
+						&:hover, &:focus{
+							color: $major-color;
+						}
+					}
+				}
+			}
+			.head_menu_nav_shopping{
+				position: absolute;
+				z-index: 2;
+				right: 0;
+				top: 0;
+				&::after{
+					content: "";
+					display: block;
+					clear: both;
+				}
+				li{
+					display: inline-block;
+					float: left;
+
+					a{
+						@extend %hide-text;
+						@extend %display-flex;
+						text-align: center;
+						height: 44px;
+						&::before{
+							content: "";
+							display: block;
+							width: 44px;
+							height: 44px;
+							margin: 0 auto;
+							@extend %bg-cover;
+						}
+						&.search{
+							width: 44px;
+							&::before{
+								background-image: image-url('icon-pic/seach.png', false, false);
+							}
+							&:hover, &:focus{
+								&::before{
+									background-image: image-url('icon-pic/seach_o.png', false, false);
+								}
+							}
+						}
+						&.shopping_cart{
+							width: 44px;
+							&::before{
+								background-image: image-url('icon-pic/shopping.png', false, false);
+							}
+							&:hover, &:focus{
+								&::before{
+									background-image: image-url('icon-pic/shopping_o.png', false, false);
+								}
+							}
+						}
+					}    
+				}
+			}
+		}
+	}
+
+/*------------------------------------------------------------------
+footer class="fatfooter"
+------------------------------------------------------------------*/
+
+	$footer-padding: 44px;
+
+	.footer{
+		width: 100%;
+		background-color: #000;
+		clear: both;
+		position: relative;
+		z-index: 5;
+	}
+	.footer_fatfooter{
+		@extend %center;
+		position: relative;
+		height: 320px;
+		box-sizing: border-box;
+		padding-top: $footer-padding;
+		max-width: 1200px;
+		.footer_fatfooter_logo{
+			position: absolute;
+			top: $footer-padding;
+			left: 0;
+			display: block;
+			a{
+				display: block;
+				width: 92px;
+				height: 37px;
+				@extend %hide-text;
+				@extend %bg-cover;
+				background-image: image-url('icon-pic/logo_w.png', false, false);
+
+			}
+		}
+		.footer_fatfooter_menu{
+			margin-left: 208px;
+			&::after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			> li{
+				display: block;
+				clear: both;
+				margin-bottom: 8px;
+				> a{
+					color: $white;
+					font-weight: bold;
+				}
+				> ol{
+					margin-top: 8px;
+					font-size: 1.1em;
+					> li{
+						display: block;
+						margin-bottom: 8px;
+						> a{
+							color: $gray;
+							font-weight: bold;
+						}
+					}
+				}
+				
+				&:nth-child(4){
+					position: absolute;
+					z-index: 1;
+					top: $footer-padding;
+					left: 416px;
+				}
+				&:nth-child(5){
+					position: absolute;
+					z-index: 1;
+					top: $footer-padding;
+					left: 624px;
+				}
+			}
+			
+		}
+		.footer_fatfooter_Community{
+			display: block;
+			position: absolute;
+			right: 0;
+			top: $footer-padding;
+			&::after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			li{
+				display: inline-block;
+				float: left;
+				margin: 0 4px;
+				a{
+					@extend %hide-text;
+					@extend %bg-cover;
+					display: block;
+					width: 32px;
+					height: 32px;
+					opacity: 0.6;
+					border: $white solid 2px;
+					border-radius: 32px;
+					&.twitter{
+						background-image: image-url('icon-pic/twitter.png', false, false);
+					}
+					&.facebook{
+						background-image: image-url('icon-pic/facebook.png', false, false);
+					}
+					&.youtube{
+						background-image: image-url('icon-pic/you.png', false, false);
+					}
+					&.instagram{
+						background-image: image-url('icon-pic/ig.png', false, false);
+					}
+
+					&:hover, &:focus{
+						opacity: 1;
+					}
+				}
+			}
+			
+		}
+	}
+	.footer_info{
+		@extend %center;
+		position: relative;
+		max-width: 1200px;
+		line-height: 44px;
+		.copyright{
+			color: $gray;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			font-family: $base-font-style;
+		}
+		.Community{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			&::after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			li{
+				display: inline-block;
+				margin: 0 4px;
+				float: left;
+
+				a{
+					color: $gray;
+
+					&:hover, &:focus{
+						color: $minor-color;
+					}
+				}
+			}
+		}
+	}

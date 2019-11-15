@@ -1,0 +1,285 @@
+//變數
+
+//設定================================================================
+	$debug: true; // true 或 false，是否開啟除錯模式
+	$rwd: true; // true 或 false，是否開啟 rwd
+
+//灰階================================================================
+	$white: #ffffff; //白色
+	$light: #f8f5fe; //淺色
+	$light-gray: #dbdbdb; //淺灰
+	$gray: #b2b2b2; //灰色
+	$deep-gray: #646464; //深灰
+	$deep: #656565; //深色
+	$black: #262626; //黑色
+
+//主要版面顏色================================================================
+	$major-color: #9A7F53 !default; //主色: #0558a4  #0695a5  #a53c05
+	$minor-color: #FFC200 !default; //次色 
+
+//其他版面顏色================================================================
+	$lesser1-color: #181b2c; //更次色
+	$lesser2-color: #fff; //更次色
+	$lesser3-color: #fff; //更次色
+
+//文字顏色================================================================
+	$title-color: $deep !default; //標題色 #0558a4
+	$span-color: #1b6d79 !default; //附註色 #1b6d79 #f0ad4e #00b27f #1b6d79
+
+//文字樣式================================================================
+	/* 修正粗體 */
+	@font-face {
+		font-family: '微軟正黑體修正';
+		unicode-range: U+7db0, U+78A7, U+7B75; /* ASCII (碧筵綰) */
+		font-style: normal;
+		font-weight: bold;
+		src: local(Yu Gothic), local(MS Gothic);
+	}
+	/* 一般粗細的時候改回微軟正黑 */
+	@font-face {
+		font-family: '微軟正黑體修正';
+		unicode-range: U+7db0, U+78A7, U+7B75; /* ASCII (碧筵綰) */
+		font-style: normal;
+		font-weight: normal;
+		src: local(微軟正黑體);
+	}
+	$base-font-style: OpenSans,'微軟正黑體修正', '微軟正黑體', 'Helvetica Neue', Helvetica, sans-serif, '新細明體';
+//英文字型包================================================================
+
+@font-face {
+    font-family: TradeGothicForNike;
+    src: url('../Images/icon-font/TradeGothicForNike365');
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url('../Images/icon-font/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: OpenSansBold;
+    src: url('../Images/icon-font/OpenSans-Bold.ttf');
+}
+	$entitle-font-style: TradeGothicForNike,OpenSans,'sans-serif';
+	$number-font-style: OpenSansBold,'sans-serif';
+//文字大小================================================================
+
+	$font-size-xs: .85em;
+	$font-size-s: 1em;
+	$font-size-m: 1.05em;
+	$font-size-l: 1.1em;
+	$font-size-xl: 1.4em;
+	$font-size-xxl: 1.6em;
+	$font-size-xxxl: 1.75em;
+
+	/*$font-size-xs: .8em;
+	$font-size-s: .9em;
+	$font-size-m: 1em;
+	$font-size-l: 1.1em;
+	$font-size-xl: 1.4em;
+	$font-size-xxl: 1.6em;
+	$font-size-xxxl: 1.75em;*/
+
+//文字厚度================================================================
+	$font-weight-n: 400;
+	$font-weight-b: 700;
+
+//文字行高================================================================
+	$line-height-xs: 1;
+	$line-height-s: 1.2;
+	$line-height-m: 1.7;
+	$line-height-l: 2;
+	$line-height-xl: 2.4;
+
+//文字間格================================================================
+	$letter-spacing-xs: 1px;
+	$letter-spacing-s: 2px;
+	$letter-spacing-m: 3px;
+	$letter-spacing-l: 4px;
+	$letter-spacing-xl: 5px;
+
+//透明度================================================================
+	$opacity-vl: .1;
+	$opacity-l: .3;
+	$opacity-m: .5;
+	$opacity-h: .7;
+	$opacity-vh: .9;
+
+//變形大小================================================================
+	$size-xs: .6;
+	$size-s: .8;
+	$size-m: 1;
+	$size-l: 1.2;
+	$size-xl: 1.4;
+
+//間隔設定================================================================
+	$interval-xs: 8px;
+	$interval-s: 12px;
+	$interval-m: 16px;
+	$interval-l: 32px;
+	$interval-xl: 40px;
+
+//基本動畫速度================================================================
+	$transition: 150ms;
+
+//RWD設定================================================================
+	$pc-width: 1280px; //pc寬度
+	$pad-width: 768px; //pad寬度
+	$phone-width: 560px; //phone寬度
+
+	$rwd-btn-size: 48px; //RWD 手機側欄按鈕大小
+
+//grid 框架設定================================================================
+	$max-child: 10; //最多的分割數量
+
+//預設空文字================================================================
+	$content: '\200B'; //空偽類的字元
+
+//預設陰影================================================================
+	//$box-shadow: 0 0 $interval-m $gray;
+	$box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+	$text-shadow: 0 0 $interval-m $deep-gray;
+
+//文字圖示================================================================
+	$icon-font-size: inherit; //文字圖示大小
+	$icon-font-color: inherit; //文字圖示顏色
+
+//全頁文字================================================================
+	$body-font-color: $deep; //網站文字顏色
+	
+	$body-font-size-s: 0.95em !default; //small
+	$body-font-size-m: 1em !default; //medium
+	$body-font-size-l: 1.05em !default; //large
+
+//預設線條================================================================
+	$border-style: solid;
+	$border-width: 1px;
+	$border-color: $gray;
+	$border: $border-width $border-style $border-color;
+
+//預設圓角================================================================
+	$border-radius: 5px;
+
+//連結顏色================================================================
+	$link-color: inherit; //連結顏色
+	$visited-color: inherit; //造訪過連結顏色
+	$hover-color: $minor-color; //指標移入連結顏色，不可與任何底色重疊
+	$active-color: inherit; //點擊連結顏色
+
+//按鈕樣式================================================================
+	$btn-bg-color: $major-color; //按鈕背景色
+	$btn-hover-bg-color: $deep; //按鈕滑入顏色
+	$btn-text-color: $white; //按鈕文字顏色
+	$btn-padding: $interval-s $interval-m; //按鈕內邊距，決定按鈕大小
+	$btn-padding-xs: $interval-xs $interval-s; //按鈕內邊距，決定按鈕大小
+	$btn-border: 0; //按鈕線框
+
+//輸入框樣式================================================================
+	$input-padding: $interval-s $interval-m;
+	$input-border: $border;
+	$input-bg-color: $white;
+
+//特殊字元"\"================================================================
+	$backslash: str-slice( '\\', 1, 1 ); //反斜線字串
+
+//範例陣列===============================================================
+	$sample-list: #fff #fff;
+
+//範例物件===============================================================
+	$sample-map: (
+		'key1': #fff,
+		'key2': #fff
+	);
+
+//分享圖片 & 顏色物件===============================================================
+	$share-map: (
+		'facebook': ( 'pic': 'share-w-facebook.png', 'color': #3c5998 ),
+		'google': ( 'pic': 'share-w-google.png', 'color': #cb3726 ),
+		'twitter': ( 'pic': 'share-w-twitter.png', 'color': #6aaed0 ),
+		'plurk': ( 'pic': 'share-w-plurk.png', 'color': #C6602B ),
+		'line': ( 'pic': 'share-w-line.png', 'color': #4bc700 ),
+		'email': ( 'pic': 'share-w-email.png', 'color': #666666 )
+	);
+
+//檔案類型圖片 & 顏色物件===============================================================
+	$file-type-map: (
+		'ai': ( 'pic': 'file-type-ai.png', 'color': #5A422A ),
+		'avi': ( 'pic': 'file-type-avi.png', 'color': #1E4B84 ),
+		'bmp': ( 'pic': 'file-type-bmp.png', 'color': #333333 ),
+		'cdr': ( 'pic': 'file-type-cdr.png', 'color': #39B54A ),
+		'css': ( 'pic': 'file-type-css.png', 'color': #BEC730 ),
+		'csv': ( 'pic': 'file-type-csv.png', 'color': #745076 ),
+		'dmg': ( 'pic': 'file-type-dmg.png', 'color': #808080 ),
+		'doc': ( 'pic': 'file-type-doc.png', 'color': #2A5696 ),
+		'docx': ( 'pic': 'file-type-docx.png', 'color': #2A5696 ),
+		'exe': ( 'pic': 'file-type-exe.png', 'color': #333333 ),
+		'gif': ( 'pic': 'file-type-gif.png', 'color': #DCA61F ),
+		'html': ( 'pic': 'file-type-html.png', 'color': #25B7D3 ),
+		'ico': ( 'pic': 'file-type-ico.png', 'color': #A60B09 ),
+		'jpeg': ( 'pic': 'file-type-jpeg.png', 'color': #208895 ),
+		'jpg': ( 'pic': 'file-type-jpg.png', 'color': #208895 ),
+		'js': ( 'pic': 'file-type-js.png', 'color': #5E5021 ),
+		'link': ( 'pic': 'file-type-link.png', 'color': #0069FF ),
+		'md': ( 'pic': 'file-type-md.png', 'color': #333333 ),
+		'mov': ( 'pic': 'file-type-mov.png', 'color': #0069FF ),
+		'mp3': ( 'pic': 'file-type-mp3.png', 'color': #333333 ),
+		'mp4': ( 'pic': 'file-type-mp4.png', 'color': #333333 ),
+		'odf': ( 'pic': 'file-type-odf.png', 'color': #03659D ),
+		'odp': ( 'pic': 'file-type-odp.png', 'color': #9C3B03 ),
+		'ods': ( 'pic': 'file-type-ods.png', 'color': #179D03 ),
+		'odt': ( 'pic': 'file-type-odt.png', 'color': #03659D ),
+		'ogg': ( 'pic': 'file-type-ogg.png', 'color': #333333 ),
+		'ogv': ( 'pic': 'file-type-ogv.png', 'color': #333333 ),
+		'other': ( 'pic': 'file-type-other.png', 'color': #333333 ),
+		'pdf': ( 'pic': 'file-type-pdf.png', 'color': #EF1011 ),
+		'png': ( 'pic': 'file-type-png.png', 'color': #3374AE ),
+		'ppt': ( 'pic': 'file-type-ppt.png', 'color': #D04324 ),
+		'pptx': ( 'pic': 'file-type-pptx.png', 'color': #D04324 ),
+		'psd': ( 'pic': 'file-type-psd.png', 'color': #2C275D ),
+		'rar': ( 'pic': 'file-type-rar.png', 'color': #AA834D ),
+		'rss': ( 'pic': 'file-type-rss.png', 'color': #F8991D ),
+		'sass': ( 'pic': 'file-type-sass.png', 'color': #CC6699 ),
+		'svg': ( 'pic': 'file-type-svg.png', 'color': #5A422A ),
+		'swf': ( 'pic': 'file-type-swf.png', 'color': #B60000 ),
+		'tar': ( 'pic': 'file-type-tar.png', 'color': #AA834D ),
+		'tif': ( 'pic': 'file-type-tif.png', 'color': #2C275D ),
+		'txt': ( 'pic': 'file-type-txt.png', 'color': #333333 ),
+		'wav': ( 'pic': 'file-type-wav.png', 'color': #254B9D ),
+		'webm': ( 'pic': 'file-type-webm.png', 'color': #70BA1D ),
+		'xls': ( 'pic': 'file-type-xls.png', 'color': #1D7044 ),
+		'xlsx': ( 'pic': 'file-type-xlsx.png', 'color': #1D7044 ),
+		'xml': ( 'pic': 'file-type-xml.png', 'color': #25B7D3 ),
+		'zip': ( 'pic': 'file-type-zip.png', 'color': #AA834D )
+	);
+
+//瀏覽器媒體，給 hack 用================================================================
+
+	$hack: (
+		'ip5-5s': 'only screen and (device-aspect-ratio: 40/71)  and (-webkit-min-device-pixel-ratio: 2) and (orientation : portrait)',
+		'ip6': 'only screen and (device-aspect-ratio: 667/375) and (-webkit-min-device-pixel-ratio : 2) and (orientation : portrait)',
+		'ip6+': 'only screen and (device-aspect-ratio: 16/9) and (-webkit-device-pixel-ratio: 3) and (orientation : portrait)',
+
+		'ie6-7': 'screen' + $backslash + '9',
+		'ie6-7-8': $backslash + '0screen' + $backslash +',screen' + $backslash + '9',
+		'ie8': $backslash +'0screen',
+		'ie8-9-10': 'screen' + $backslash + '0',
+		'ie9-10': 'screen and (min-resolution: +72dpi)',
+		'ie9-10+': 'screen and (min-width:0' + $backslash + '0)',
+		'ie10+': 'screen and (-ms-high-contrast: active), (-ms-high-contrast: none)'
+	);
+
+//瀏覽器媒體，給 rwd 用================================================================
+
+	$media: (
+		'center': 'screen and (max-width: #{$pc-width})',
+		'pc': 'screen and (max-width: #{$pc-width}) and (min-width: #{$pad-width + 1})',
+		'mobile': 'screen and (max-width: #{$pad-width})',
+		'pad': 'screen and (max-width: #{$pad-width}) and (min-width: #{$phone-width + 1})',
+		'phone': 'screen and (max-width: #{$phone-width})'
+	);
+
+//hyc 想要的顏色================================================================
+	$menu-bg-color: $white !default; //選單背景色
+	$menu-btn-text-color: inherit !default; //選單按鈕文字色
+	$menu-btn-bg-color: transparent !default; //選單按鈕背景色
+	$menu-btn-text-hover-color: inherit !default; //選單按鈕文字色(移入)
+	$menu-btn-bg-hover-color: $light !default; //選單按鈕背景色(移入)
