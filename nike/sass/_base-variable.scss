@@ -6,16 +6,16 @@
 
 //灰階================================================================
 	$white: #ffffff; //白色
-	$light: #f0f0f0; //淺色
-	$light-gray: #e4e4e4; //淺灰
+	$light: #f8f5fe; //淺色
+	$light-gray: #dbdbdb; //淺灰
 	$gray: #b2b2b2; //灰色
 	$deep-gray: #646464; //深灰
-	$deep: #343434; //深色
+	$deep: #656565; //深色
 	$black: #262626; //黑色
 
 //主要版面顏色================================================================
-	$major-color: #0558a4 !default; //主色: #0558a4  #0695a5  #a53c05
-	$minor-color: #f2703c !default; //次色 
+	$major-color: #9A7F53 !default; //主色: #0558a4  #0695a5  #a53c05
+	$minor-color: #FFC200 !default; //次色 
 
 //其他版面顏色================================================================
 	$lesser1-color: #181b2c; //更次色
@@ -43,8 +43,24 @@
 		font-weight: normal;
 		src: local(微軟正黑體);
 	}
-	$base-font-style: Arial,'微軟正黑體修正', '微軟正黑體', 'Helvetica Neue', Helvetica, sans-serif, '新細明體';
+	$base-font-style: OpenSans,'微軟正黑體修正', '微軟正黑體', 'Helvetica Neue', Helvetica, sans-serif, '新細明體';
+//英文字型包================================================================
 
+@font-face {
+    font-family: TradeGothicForNike;
+    src: url('../Images/icon-font/TradeGothicForNike365');
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url('../Images/icon-font/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: OpenSansBold;
+    src: url('../Images/icon-font/OpenSans-Bold.ttf');
+}
+	$entitle-font-style: TradeGothicForNike,OpenSans,'sans-serif';
+	$number-font-style: OpenSansBold,'sans-serif';
 //文字大小================================================================
 
 	$font-size-xs: .85em;
@@ -141,7 +157,7 @@
 	$border: $border-width $border-style $border-color;
 
 //預設圓角================================================================
-	$border-radius: $interval-xs;
+	$border-radius: 5px;
 
 //連結顏色================================================================
 	$link-color: inherit; //連結顏色

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jarallax</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script type="text/javascript" src="js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/jarallax.js"></script>
+    <script type="text/javascript">
+    function show_browse(){
+      //alert('dw wd');
+      jarallax = new Jarallax();
+      jarallax.setDefault('h2,p', { display: 'none' });
+      jarallax.addAnimation('.small_moon', [{ progress: "0%", top: "120%" }, { progress: "100%", top: "-10%" }]);
+      jarallax.addAnimation('.big_moon', [{ progress: "0%", top: "70%" }, { progress: "100%", top: "20%" }]);
+      jarallax.addAnimation('.background', [{ progress: "0%", top: "-2%" }, { progress: "100%", top: "-10%" }]);
+      jarallax.addAnimation('h1', [{ progress: "0", top: "50px", opacity: "1" }, { progress: "10", top: "0px", opacity: "0" }]);
+      jarallax.addAnimation('h2', [{ progress: "10", left: "-100%", display: 'block' },
+                                  { progress: "12", left: "50%", display: 'block'},
+                                  { progress: "24", left: "55%", }]);
+
+
+      jarallax.addAnimation('h2',[{ progress: "20", opacity: "1" },
+                                  { progress: "24", opacity: "0" }]);
+      jarallax.addAnimation('p', [{ progress: "23", opacity: "0", display: 'block'},
+                                  { progress: "25", opacity: "1", display: 'block' }, 
+                                  { progress: "27", opacity: "1", display: 'block' },
+                                  { progress: "28", opacity: "0"}]);
+
+    }
+    $(document).ready(function () {
+        show_browse();
+
+    });
+    </script>
+  </head>
+  <body>
+    <div class="background planet0"></div>
+    <div class="big_moon planet1"></div>
+    <div class="small_moon planet2"></div>
+    <h1>HEAD1</h1>
+    <h2>HEAD2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam fugiat architecto alias animi ratione. Nesciunt
+      dolorum odit ipsa quia veniam, dignissimos odio provident quaerat excepturi magnam sit enim, eaque voluptates?
+    </p>
+    <h2>HEAD2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam fugiat architecto alias animi ratione. Nesciunt
+      dolorum odit ipsa quia veniam, dignissimos odio provident quaerat excepturi magnam sit enim, eaque voluptates?
+    </p>
+    <h2>HEAD2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam fugiat architecto alias animi ratione. Nesciunt
+      dolorum odit ipsa quia veniam, dignissimos odio provident quaerat excepturi magnam sit enim, eaque voluptates?
+    </p>
+  </body>
+</html>

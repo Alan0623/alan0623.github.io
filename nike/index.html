@@ -36,8 +36,8 @@
     <link rel="apple-touch-icon-precomposed" href="images/apple-icon-114x114.png" sizes="114x114" />
     <link rel="apple-touch-icon-precomposed" href="images/apple-icon-144x144.png" sizes="144x144" />
     <!--[if gte IE 9]><!-->
-    <link rel="stylesheet" href="css/all_page_ui.css">
-    <link rel="stylesheet" href="css/product_info.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="main.css" />
 </head><!--/head-->
 <body class="no_js">
     <div class="wrapper">
@@ -54,9 +54,9 @@
                     <li><a class="jordan_logo" href="#" title="Jordan logo">Jordan logo</a></li>
                 </ul>
                 <ul class="head_navigation_log">
-                    <li><a href="#" title="臺灣">臺灣</a></li>
+                    <li><a class="location" href="#" title="臺灣">臺灣</a></li>
                     <li><a href="#" title="說明">說明</a></li>
-                    <li><a href="#" title="說明">登入 / 註冊</a></li>
+                    <li><a href="#" title="登入 / 註冊">登入 / 註冊</a></li>
                 </ul>
             </div><!--head_navigation-->
             <div class="head_menu">
@@ -88,10 +88,10 @@
                     </ul>
                     <ul class="head_menu_nav_shopping">
                         <li>
-                            <a href="#" title="search">search</a>
+                            <a class="search" href="#" title="search">search</a>
                         </li>
                         <li>
-                            <a href="#" title="shopping cart">shopping cart</a>
+                            <a class="shopping_cart" href="#" title="shopping cart">shopping cart</a>
                         </li>
                     </ul>
                 </nav>
@@ -105,104 +105,170 @@
                     <div class="air-max-270-react-0JdRkV"></div>
                     <div class="react"></div>
                     <div class="nike_air_max"></div>
-                </div>
-                <article class="content_product_info">
-                    <header>
-                        <h2>Nike Air Max 270 React</h2>
-                        <ul>
-                            <li><span>款式：</span>CT5528-001</li>
-                            <li><span>類別：</span>男鞋</li>
-                            <li><span>價格：</span>$4,900</li>
-                        </ul>
-                    </header>
-                    <section>
-                        <p>Nike Air Max 270 React 透過添加 Nike React 泡棉，並運用在鞋跟處搶眼的 Max Air 氣墊中，將舒適提升至另一個境界。迷彩印花為這款街頭必備鞋款增添新鮮花樣。</p>
-                        <a href="#" title="深入瞭解">深入瞭解</a>
-                    </section>
-                    <section>
-                        <div class="color">
-                            <b>顯示顏色</b>
+
+                    <article class="content_product_img_info">
+                        <header>
+                            <h2>Nike Air Max 270 React</h2>
                             <ul>
-                                <li>黑色</li>
-                                <li>Anthracite</li>
-                                <li>白色</li>
+                                <li class="style_no"><span>款式：</span>CT5528-001</li>
+                                <li class="type"><span>類別：</span>男鞋</li>
+                                <li class="price"><span>價格：</span>$4,900</li>
                             </ul>
-                        </div>
-                        <div class="color">
-                            <b>選取尺寸</b>
-                            <select name="選取尺寸">
-                                <option value="CM25">CM 25</option>
-                                <option value="CM25.5">CM 25.5</option>
-                                <option value="CM26">CM 26</option>
-                                <option value="CM26.5">CM 26.5</option>
-                                <option value="CM27">CM 27</option>
-                                <option value="CM27.5">CM 27.5</option>
-                                <option value="CM28">CM 28</option>
-                                <option value="CM28.5">CM 28.5</option>
-                                <option value="CM29">CM 29</option>
-                                <option value="CM29.5">CM 29.5</option>
-                                <option value="CM30">CM 30</option>
-                                <option value="CM31">CM 31</option>
-                            </select>
-                        </div>
-                    </section>
-                    <footer>
-                        <a class="favourite" href="#" title="加入我的最愛">加入我的最愛</a>
-                        <a class="buy" href="#" title="加入購物籃">加入購物籃</a>
-                    </footer>
-                </article>
-            </section><!--content_product-->
-            <section class="media">
-                <h3>宣傳影音</h3>
-                <ul class="media_album">
-                    <li><img src="images/product/ix2q48fnv1g6f8eggcods.jpg" alt="一雙側面照"></li>
-                    <li><img src="images/product/air-max-270-react-0JdRkV-3s.jpg" alt="上視圖"></li>
-                    <li><img src="images/product/air-max-270-react-0JdRkV-2s.jpg" alt="右側圖""></li>
-                </ul>
-                <ul class="media_video">
-                    <li><a href="#" title=""><img src="images/video/v1.jpg" alt="廣告宣傳影片"></a></li>
-                    <li><a href="#" title=""><img src="images/video/v2.jpg" alt="廣告宣傳影片"></a></li>
-                    <li><a href="#" title=""><img src="images/video/v3.jpg" alt="廣告宣傳影片"></a></li>
-                </ul>
+                        </header>
+                        <section>
+                            <p>Nike Air Max 270 React 透過添加 Nike React 泡棉，並運用在鞋跟處搶眼的 Max Air 氣墊中，將舒適提升至另一個境界。迷彩印花為這款街頭必備鞋款增添新鮮花樣。</p>
+                            <a href="#" title="深入瞭解">深入瞭解</a>
+                        </section>
+                        <section>
+                            <div class="color">
+                                <b>顯示顏色</b>
+                                <ul>
+                                    <li class="black">黑色</li>
+                                    <li class="anthracite">Anthracite</li>
+                                    <li class="white">白色</li>
+                                </ul>
+                            </div>
+                            <div class="size">
+                                <b>選取尺寸</b>
+                                <select name="選取尺寸">
+                                    <option value="CM25">CM 25</option>
+                                    <option value="CM25.5">CM 25.5</option>
+                                    <option value="CM26">CM 26</option>
+                                    <option value="CM26.5">CM 26.5</option>
+                                    <option value="CM27">CM 27</option>
+                                    <option value="CM27.5">CM 27.5</option>
+                                    <option value="CM28">CM 28</option>
+                                    <option value="CM28.5">CM 28.5</option>
+                                    <option value="CM29">CM 29</option>
+                                    <option value="CM29.5">CM 29.5</option>
+                                    <option value="CM30">CM 30</option>
+                                    <option value="CM31">CM 31</option>
+                                </select>
+                                <a href="#" title="深入瞭解">尺寸指南</a>
+                            </div>
+                        </section>
+                        <footer>
+                            <a class="favourite" href="#" title="加入我的最愛">加入我的最愛</a>
+                            <a class="buy" href="#" title="加入購物籃">加入購物籃</a>
+                        </footer>
+                    </article>
+                </div>
+            </section>
+            
+            <!--content_product-->
+            <section class="content_media">
+                <div class="content_media_block">
+                    <h3>宣傳影音</h3>
+                    <div class="content_media_block_model"></div>
+                    <div class="content_media_block_album">
+                        <ul>
+                            <li><img src="images/product/ix2q48fnv1g6f8eggcods.jpg" alt="一雙側面照"></li>
+                            <li><img src="images/product/air-max-270-react-0JdRkV-3s.jpg" alt="上視圖"></li>
+                            <li><img src="images/product/air-max-270-react-0JdRkV-2s.jpg" alt="右側圖"></li>
+                        </ul>
+                    </div>
+                    <div class="content_media_block_video">
+                        <ul class="autoplay3">
+                            <li><a href="#" title=""><img src="images/video/v1.jpg" alt="廣告宣傳影片"></a></li>
+                            <li><a href="#" title=""><img src="images/video/v2.jpg" alt="廣告宣傳影片"></a></li>
+                            <li><a href="#" title=""><img src="images/video/v3.jpg" alt="廣告宣傳影片"></a></li>
+                            <li><a href="#" title=""><img src="images/video/v1.jpg" alt="廣告宣傳影片"></a></li>
+                            <li><a href="#" title=""><img src="images/video/v2.jpg" alt="廣告宣傳影片"></a></li>
+                            <li><a href="#" title=""><img src="images/video/v3.jpg" alt="廣告宣傳影片"></a></li>
+                        </ul>
+                    </div>
+                </div>
             </section>
             <!--media 以上影音相簿-->
 
-            <section class="maybe_like">
-                <h3>你可能也會喜歡</h3>
-                <ul class="maybe_like_list">
-                    <li>                 
-                        <ul>
-                            <li><img src="images/maybe_like/310805_200.jpeg" alt="Air Jordan 10 Retro"></li>
-                            <li><span>款式：</span>Air Jordan 10 Retro</li>
-                            <li><span>類別：</span>男鞋</li>
-                            <li><span>價格：</span>$6,300</li>
+            <section class="content_maybe">
+                <div class="content_maybe_like">
+                    <h3>你可能也會喜歡</h3>
+                    <div class="content_maybe_like_list">
+                        <ul class="autoplay4">
+                            <li>
+                                <a href="#" title="Air Jordan 10 Retro">      
+                                    <ol>
+                                        <li class="img"><img src="images/maybe_like/310805_200.jpeg" alt="Air Jordan 10 Retro"></li>
+                                        <li class="style_no"><span>款式：</span>Air Jordan 10 Retro</li>
+                                        <li class="type"><span>類別：</span>男鞋</li>
+                                        <li class="price"><span>價格：</span>$6,300</li>
+                                    </ol>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Nike React Sertu"> 
+                                    <ol>
+                                        <li class="img"><img src="images/maybe_like/AT5301_700.jpeg" alt="Nike React Sertu"></li>
+                                        <li class="style_no"><span>款式：</span>Nike React Sertu</li>
+                                        <li class="type"><span>類別：</span>男鞋</li>
+                                        <li class="price"><span>價格：</span>$5,400</li>
+                                    </ol>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Nike Sportswear JDI">
+                                    <ol>
+                                        <li class="img"><img src="images/maybe_like/BV5100_010.jpeg" alt="Nike Sportswear JDI"></li>
+                                        <li class="style_no"><span>款式：</span>Nike Sportswear JDI</li>
+                                        <li class="type"><span>類別：</span>男款 Fleece 運動褲</li>
+                                        <li class="price"><span>價格：</span>$1,780</li>
+                                    </ol>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Nike Sportswear">
+                                    <ol>
+                                        <li class="img"><img src="images/maybe_like/BV5337_010.jpeg" alt="Nike Sportswear"></li>
+                                        <li class="style_no"><span>款式：</span>Nike Sportswear</li>
+                                        <li class="type"><span>類別：</span>男款連帽上衣</li>
+                                        <li class="price"><span>價格：</span>$3,600</li>
+                                    </ol>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Air Jordan 10 Retro">      
+                                    <ol>
+                                        <li class="img"><img src="images/maybe_like/310805_200.jpeg" alt="Air Jordan 10 Retro"></li>
+                                        <li class="style_no"><span>款式：</span>Air Jordan 10 Retro</li>
+                                        <li class="type"><span>類別：</span>男鞋</li>
+                                        <li class="price"><span>價格：</span>$6,300</li>
+                                    </ol>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Nike React Sertu"> 
+                                    <ol>
+                                        <li class="img"><img src="images/maybe_like/AT5301_700.jpeg" alt="Nike React Sertu"></li>
+                                        <li class="style_no"><span>款式：</span>Nike React Sertu</li>
+                                        <li class="type"><span>類別：</span>男鞋</li>
+                                        <li class="price"><span>價格：</span>$5,400</li>
+                                    </ol>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Nike Sportswear JDI">
+                                    <ol>
+                                        <li class="img"><img src="images/maybe_like/BV5100_010.jpeg" alt="Nike Sportswear JDI"></li>
+                                        <li class="style_no"><span>款式：</span>Nike Sportswear JDI</li>
+                                        <li class="type"><span>類別：</span>男款 Fleece 運動褲</li>
+                                        <li class="price"><span>價格：</span>$1,780</li>
+                                    </ol>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Nike Sportswear">
+                                    <ol>
+                                        <li class="img"><img src="images/maybe_like/BV5337_010.jpeg" alt="Nike Sportswear"></li>
+                                        <li class="style_no"><span>款式：</span>Nike Sportswear</li>
+                                        <li class="type"><span>類別：</span>男款連帽上衣</li>
+                                        <li class="price"><span>價格：</span>$3,600</li>
+                                    </ol>
+                                </a>
+                            </li>
                         </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li><img src="images/maybe_like/AT5301_700.jpeg" alt="Nike React Sertu"></li>
-                            <li><span>款式：</span>Nike React Sertu</li>
-                            <li><span>類別：</span>男鞋</li>
-                            <li><span>價格：</span>$5,400</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li><img src="images/maybe_like/BV5100_010.jpeg" alt="Nike Sportswear JDI"></li>
-                            <li><span>款式：</span>Nike Sportswear JDI</li>
-                            <li><span>類別：</span>男款 Fleece 運動褲</li>
-                            <li><span>價格：</span>$1,780</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li><img src="images/maybe_like/BV5337_010.jpeg" alt="Nike Sportswear"></li>
-                            <li><span>款式：</span>Nike Sportswear</li>
-                            <li><span>類別：</span>男款連帽上衣</li>
-                            <li><span>價格：</span>$3,600</li>
-                        </ul>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </section><!--maybe_like 以上你可能也會喜歡-->
 
         </main>
@@ -210,6 +276,7 @@
 
         <footer class="footer">
             <div class="footer_fatfooter">
+                <div class="footer_fatfooter_logo"><a href="#" title="NIKE">NIKE</a></div>
                 <ul class="footer_fatfooter_menu">
                     <li><a href="#" title="尋找商店">尋找商店</a></li>
                     <li><a href="#" title="加入會員">加入會員</a></li>
@@ -235,10 +302,10 @@
                     </li>
                 </ul>
                 <ul class="footer_fatfooter_Community">
-                    <li><a href="#" title="twitter">twitter</a></li>
-                    <li><a href="#" title="facebook">facebook</a></li>
-                    <li><a href="#" title="youtube">youtube</a></li>
-                    <li><a href="#" title="instagram">instagram</a></li>
+                    <li><a class="twitter" href="#" title="twitter">twitter</a></li>
+                    <li><a class="facebook" href="#" title="facebook">facebook</a></li>
+                    <li><a class="youtube" href="#" title="youtube">youtube</a></li>
+                    <li><a class="instagram" href="#" title="instagram">instagram</a></li>
                 </ul>
             </div>
             <div class="footer_info">
@@ -254,8 +321,8 @@
     </div>  
     <script src="js/jquery-latest.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jstorage.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jarallax.js"></script>
     <script src="js/effect.js"></script>
 </body>
 </html>
