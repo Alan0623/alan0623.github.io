@@ -232,6 +232,8 @@
                         right: 0;
                         @include media('mobile') {
                             font-size: 1.4em;
+                            top: auto;
+                            bottom: 0;
                         }
                     }
 
@@ -647,7 +649,21 @@
         padding-bottom: 72px;
         position: relative;
         z-index: 4;
-       
+        &::after{
+            content: "";
+            @extend %bg-cover;
+            position: absolute;
+            z-index: 1;
+            width: 310px;
+            height: 125px;
+            right: 40px;
+            top: -120px;
+            background-image: image-url('section2/title1.png', false, false);
+            @media screen and (max-width: 900px){
+                content: none;
+                display: none;
+            }
+        }
         @media screen and (max-width: 1210px) and (min-width: 981px) {
         margin-top: 950px;
         }
@@ -686,6 +702,8 @@
         }
         ul{
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
             &::after{
                 content: "";
                 display: block;
@@ -732,10 +750,26 @@
 
     }
     .content_maybe_like_list{
+        position: relative;
         text-align: center;
         padding: 44px 40px 72px 40px;
         @include media('phone') {
             padding: 20px 0px 72px 0px;
+        }
+        &::after{
+            content: "";
+            @extend %bg-cover;
+            position: absolute;
+            z-index: 1;
+            width: 648px;
+            height: 125px;
+            right: 50px;
+            top: -78px;
+            background-image: image-url('section2/title2.png', false, false);
+            @media screen and (max-width: 900px){
+                content: none;
+                display: none;
+            }
         }
         a{
             display: inline-block;
@@ -749,6 +783,8 @@
         }
         ul{
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
             &::after{
                 content: "";
                 display: block;
