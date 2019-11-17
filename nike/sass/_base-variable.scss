@@ -48,7 +48,7 @@
 
 @font-face {
     font-family: TradeGothicForNike;
-    src: url('../Images/icon-font/TradeGothicForNike365');
+    src: url('../Images/icon-font/TradeGothicForNike365.ttf');
 }
 
 @font-face {
@@ -119,13 +119,12 @@
 	$interval-xl: 40px;
 
 //基本動畫速度================================================================
-	$transition: 150ms;
+	$transition: all .8s ease-out;
 
 //RWD設定================================================================
 	$pc-width: 1280px; //pc寬度
-	$pad-width: 768px; //pad寬度
-	$phone-width: 560px; //phone寬度
-
+	$pad-width: 980px; //pad寬度
+	$phone-width: 600px; //phone寬度
 	$rwd-btn-size: 48px; //RWD 手機側欄按鈕大小
 
 //grid 框架設定================================================================
@@ -136,7 +135,8 @@
 
 //預設陰影================================================================
 	//$box-shadow: 0 0 $interval-m $gray;
-	$box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+	$box-shadow: 	rgba(0, 0, 0, 0.2) -8px 8px 10px,
+					rgba(0, 0, 0, 0.2) -1px 2px 6px;
 	$text-shadow: 0 0 $interval-m $deep-gray;
 
 //文字圖示================================================================

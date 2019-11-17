@@ -753,6 +753,7 @@
 			text-decoration: none;
 		}
 	}
+
 	%border_line{
 		min-height: 40px;
 		border: 2px solid $major-color;
@@ -1061,6 +1062,135 @@
 		align-items:center;
 		justify-content:center;
 	}
+	%img-hover{
+		position: relative;
+		transition: $transition;
+		overflow: hidden;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 9;
+			background-color: rgba(0, 0, 0, 0.5);
+			transition: $transition;
+			transform: scale(0);
+			//transform: translate(0%, 0%) rotate(-210deg);
+			//transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+			border-radius: 500px;
+		}
+
+		&::after {
+			content: '放大圖片';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 10;
+			color: $white;
+			transition-delay: 0.2s;
+			transition: $transition;
+			transform: scale(3);
+			opacity: 0;
+		}
+
+		&:hover::before {
+			transform: scale(2);
+		}
+		&:hover::after {
+			transform: scale(1);
+			opacity: 1;
+		}
+	}
+	%video-hover {
+		position: relative;
+		transition: $transition;
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: calc(50% - 250px);
+			left: calc(50% - 250px);
+			width: 500px;
+			height: 500px;
+			z-index: 9;
+			background-color: rgba(0, 0, 0, 0.1);
+			transition: all 0.8s ease-out;
+			transform: scale(1);
+			border-radius: 500px;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 10;
+			background-image: image-url('icon-pic/play.png', false, false);
+			background-position: center;
+			background-repeat: no-repeat;
+			transition: all 0.8s ease-out;
+			opacity: 1;
+		}
+
+		&:hover::before {
+			transform: scale(0);
+		}
+
+		&:hover::after {
+			opacity: 0;
+		}
+	}
+	%link-hover {
+		position: relative;
+		overflow: hidden;
+		.img{
+			position: relative;
+			display: block;
+			&::after ,
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 9;
+				background-color: rgba(255, 111, 97, 0.6);
+				//mix-blend-mode: multiply;
+				transition: $transition;
+				transform: scale(0);
+				border-radius: 500px;
+			}
+
+			&::after {
+
+				transition-delay: 0.2s;
+
+			}
+		}
+		&:hover, &:focus {
+			color: #FFC200;
+			.img {
+				&::after,
+				&::before {
+					transform: scale(2);
+				}
+			}
+		}
+	}
 	%btn-Moema {
 		cursor: pointer;
 		display: flex; align-items: center; justify-content: center;
@@ -1154,9 +1284,18 @@
 		}
 
 	}
+	%font-title{
+		font-size: 2.2em;
+		@include media('mobile') {
+			font-size: 2em;
+		}
+		@include media('phone') {
+			font-size: 1.8em;
+		}
+	}
 	%btn { //按鈕組件
 		display: inline-block;
-		padding: 18.5px 16px;
+		padding: 18.5px 0px;
 		border: 0!important;
 		box-sizing: border-box;
 		line-height: 1;
