@@ -24,7 +24,8 @@
     }
     @include media('phone') {
         display: inline-block;
-        height: 900px;
+        height: auto;
+        padding-bottom: 44px;
     }
     .content_product_block{
         @extend %center;
@@ -485,13 +486,12 @@
         left: 54px;
         top: -88px;
         @include media('phone') {
+            top: auto;
+            left: 0;
+            text-align: left;
             position: relative;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            top: 0;
-            right: 0;
-            display: none;
+            //margin-left: -40px;
+            margin-bottom: 20px;
         }
     }
     .content_media_block_model{
@@ -509,7 +509,7 @@
         @include media('mobile') {
             margin: 0;
             margin-left: 0px;
-            margin-top: -50px;
+            margin-top: -150px;
         }
         @media screen and (max-width: 750px) {
             width: 110%;
@@ -528,7 +528,7 @@
         top: -800px;
         z-index: 9;
         @media screen and (max-width: 1210px) {
-            top: -700px;
+            top: -750px;
         }
         @include media('mobile') {
             right: 2px;
@@ -539,10 +539,14 @@
             right: 0;
             padding: 0;
             margin: 0;
-            margin-top: 156px;
+            display: inline-block;
+            height: auto;
         }
         ul{
             position: relative;
+            @include media('phone') {
+                margin-right: -8px;
+            }
             li{
                 display: block;
                 max-width: 232px;
@@ -558,10 +562,12 @@
                     left: 0;
                     top: 0;
                     margin: 0;
+                    margin-right: 8px;
                     width: calc(50% - 8px);
                     float: left;
                     padding-bottom: calc(50% - 8px);
                     margin-bottom: 8px;
+                    max-width: 100%;
                 }
                 a {
                     border-radius: 5px;
@@ -573,10 +579,14 @@
                             transform: scale(1.2);
                         }
                     }
+                    @include media('phone') {
+                        float: left;
+                    }
                 }
                 img{
                     width: 100%;
                     transition: $transition;
+                    float: left;
                 }
                 &:nth-child(1){
                     position: absolute;
@@ -589,17 +599,35 @@
                         margin-right: 8px;
                         width: calc(50% - 8px);
                         padding-bottom: calc(50% - 8px);
+                        max-width: 100%;
                     }
                     a::after{
                         content: '側面照'!important;
                     }
                 }
-                &:nth-child(2) {
+                &:nth-child(2){
+                    position: absolute;
+                    left: -248px;
+                    top: 368px;
+                    @include media('phone') {
+                        position: relative;
+                        left: 0;
+                        top: 0;
+                        margin-right: 8px;
+                        width: calc(50% - 8px);
+                        padding-bottom: calc(50% - 8px);
+                        max-width: 100%;
+                    }
+                    a::after{
+                        content: '鞋跟照'!important;
+                    }
+                }
+                &:nth-child(3) {
                     a::after {
                         content: '上視圖'!important;
                     }
                 }
-                &:nth-child(3) {
+                &:nth-child(4) {
                     a::after {
                         content: '右側圖'!important;
                     }
@@ -633,8 +661,10 @@
         margin-top: 1150px;
         }
         @include media('phone') {
-        margin: 0;
-        padding-top: 56px;
+            margin: 0;
+            padding: 0;
+            padding-top: 44px;
+            padding-bottom: 44px;
         }
         a{
             height: 0;
@@ -683,6 +713,10 @@
     z-index: 5;
     padding: 0 20px;
     padding-top: 72px;
+    @include media('phone') {
+        padding-top: 44px;
+    }
+
 }
 .content_maybe_like{
     @extend %center;
@@ -692,10 +726,17 @@
         @extend %font-title;
         font-weight: normal;
         margin-left: 52px;
+        @include media('phone') {
+            margin: 0;
+        }
+
     }
     .content_maybe_like_list{
         text-align: center;
         padding: 44px 40px 72px 40px;
+        @include media('phone') {
+            padding: 20px 0px 72px 0px;
+        }
         a{
             display: inline-block;
             color: $white;

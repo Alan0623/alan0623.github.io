@@ -123,6 +123,9 @@
             background-color: #ff6f61;
             border-color: #ff6f61;
         }
+        @include media('phone') {
+            top: -56px;
+		}
     }
     &.slick-prev{
         left: -40px;
@@ -130,6 +133,10 @@
         &:hover, &:focus{
             background-image: image-url('icon-pic/prev_o.png', false, false);
         }
+        @include media('phone') {
+            left: auto;
+            right: 56px;
+		}
     }
     &.slick-next{
         right: -40px;
@@ -137,5 +144,8 @@
         &:hover, &:focus{
             background-image: image-url('icon-pic/next_o.png', false, false);
         }
+        @include media('phone') {
+            right: 8px;
+		}
     }
 }
