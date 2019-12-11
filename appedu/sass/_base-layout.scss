@@ -55,6 +55,9 @@ overflow: hidden;
 	background-image: url(../images/main.jpg);
 	background-position: top center;
 	background-repeat: no-repeat;
+	@include media('center') {
+		background-image: url(../images/main_pad.jpg);
+	}
 }
 /*------------------------------------------------------------------
 header class="header"
@@ -62,20 +65,20 @@ header class="header"
 .header {
     margin: 0 auto;
 	max-width: 980px;
-	padding: 0 32px;
+	padding: 0 $interval-xl;
 	position: relative;
 	height: 120px;
 	.mark_appedu{
 		position: absolute;
 		top: 70px;
-		left: 32px;
+		left: $interval-xl;
 		z-index: 2;
 		@extend %hide-text;
 	}
 	.mark_adobe{
 		position: absolute;
 		top: 0;
-		right: 32px;
+		right: $interval-xl;
 		z-index: 2;
 	}
 }
@@ -85,7 +88,7 @@ main class="content"
 .content {
 	margin: 0 auto;
 	max-width: 980px;
-	padding: 0 32px;
+	padding: 0 $interval-xl;
 	@include media('center') {
 		padding: 0 0px;
 	}
@@ -98,12 +101,18 @@ main class="content"
 		//background-image: url(../images/main.jpg);
 		background-position: top center;
 		background-repeat: no-repeat;
-		padding: 0 32px;
+		padding: 0 $interval-xl;
 		}
 		
 		.content_main_text{
 			position: relative;
 			display: inline-block;
+			@include media('center') {
+				transform: scale(0.8) translate(0px, -68px);
+			}
+			@include media('mobile') {
+				transform: scale(0.8) translate(-50px, -68px);
+			}
 			h2{
 				text-align: center;
 			}
@@ -178,9 +187,10 @@ main class="content"
 	}
 	.content_form{
 		padding: 0 80px;
-				@include media('mobile') {
-					padding: 0 20px;
-				}
+		@include media('center') {
+			padding: 0 $interval-xl;
+			margin-top: -80px;
+		}
 		select,
 		input{
 			border-radius: 0;
@@ -227,6 +237,9 @@ main class="content"
 		}
 		.form-check-label{
 			font-size: 1.1em;
+			a{
+			   padding-left: 10px;
+			}
 		}
 		.content_form_title{
 			text-align: center;
@@ -305,7 +318,7 @@ footer class="fatfooter"
 	margin: 0 auto;
 	margin-top: 80px;
 	max-width: 980px;
-	padding: 0 32px;
+	padding: 0 $interval-xl;
 	.footer_container{
 		display: inline-block;
 		float: left;
@@ -338,6 +351,7 @@ footer class="fatfooter"
 	}
 	.footer_copyright{
 		font-size: 0.9em;
+		margin-bottom: 24px;
 		p{
 			padding: 2px 0;
 		}
