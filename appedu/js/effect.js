@@ -1,8 +1,12 @@
-================================================================
+//================================================================
 $(document).ready(function() {
     console.log("Hello!! Nice to see you.(\u30fb\u2200\u30fb)."), 
-    console.log("Front-end programming By Alan Lin"), 
+    console.log("Front-end programming By Alan Lin");
 });
+//================================================================
+$.preload('/images/main_pad.jpg',
+  '/images/main_phone.jpg'
+);
 //jarallax===============================================================
   function show_browse(){
   jarallax = new Jarallax();

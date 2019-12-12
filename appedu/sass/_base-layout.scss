@@ -58,6 +58,14 @@ overflow: hidden;
 	@include media('center') {
 		background-image: url(../images/main_pad.jpg);
 	}
+	@media screen and (max-width: 700px) {
+		background-position: right 100px;
+	}
+	@include media('phone') {
+		background-image: url(../images/main_phone.jpg);
+		background-size: contain;
+		background-position: center 240px;
+	}
 }
 /*------------------------------------------------------------------
 header class="header"
@@ -68,18 +76,35 @@ header class="header"
 	padding: 0 $interval-xl;
 	position: relative;
 	height: 120px;
+	@media screen and (max-width: 700px) {
+		height: 90px;
+	}
+	@include media('phone') {
+		height: 120px;
+	}
+	@media screen and (max-width: 380px) {
+		padding: 0;
+	}
 	.mark_appedu{
 		position: absolute;
 		top: 70px;
 		left: $interval-xl;
 		z-index: 2;
 		@extend %hide-text;
+		@media screen and (max-width: 700px) {
+			top: 40px;
+		}
 	}
 	.mark_adobe{
 		position: absolute;
 		top: 0;
 		right: $interval-xl;
 		z-index: 2;
+		img{
+			@media screen and (max-width: 700px) {
+				width: 50px;
+			}
+		}
 	}
 }
 /*------------------------------------------------------------------
@@ -97,13 +122,22 @@ main class="content"
 		margin-top: 51px;
 		padding: 0 80px;
 		@include media('center') {
-		background-size: contain;
-		//background-image: url(../images/main.jpg);
-		background-position: top center;
-		background-repeat: no-repeat;
-		padding: 0 $interval-xl;
+			background-size: contain;
+			//background-image: url(../images/main.jpg);
+			background-position: top center;
+			background-repeat: no-repeat;
+			padding: 0 $interval-xl;
 		}
-		
+		@media screen and (max-width: 700px) {
+			padding: 0 58px;
+			margin-top: 0px;
+		}
+		@media screen and (max-width: 540px) {
+			padding: 0;
+			margin-top: 0px;
+			margin: 0 auto;
+			text-align: center;
+		}
 		.content_main_text{
 			position: relative;
 			display: inline-block;
@@ -112,6 +146,13 @@ main class="content"
 			}
 			@include media('mobile') {
 				transform: scale(0.8) translate(-50px, -68px);
+			}
+			@media screen and (max-width: 540px) {
+				transform: scale(0.8) translate(0px, -68px);
+				margin: 0 auto;
+			}
+			@include media('phone') {
+				transform: initial;
 			}
 			h2{
 				text-align: center;
@@ -122,6 +163,12 @@ main class="content"
 					font-weight: 300;
 					text-align: center;
 					margin-bottom: 34px;
+					@media screen and (max-width: 700px) {
+						margin-bottom: 20px;
+					}
+					@include media('phone') {
+						font-size: 1.2em;
+					}
 				}
 				&:nth-child(2) {
 					.sub_title {
@@ -129,12 +176,27 @@ main class="content"
 						position: relative;
 						text-align: right;
 						padding-right: 14px;
+						@include media('phone') {
+							font-size: 1.4em;
+						}
 						i {
 							@extend %hide-text;
 							position: absolute;
 							top: 14px;
 							left: 4px;
+							z-index: 2;
+							@include media('phone') {
+								left: 4px;
+							}
+							img {
+								@include media('phone') {
+									width: 88px!important;
+									margin-top: -2px;
+								}
+							}
 						}
+
+
 					}
 
 					.main_title {
@@ -143,6 +205,12 @@ main class="content"
 						letter-spacing: 0.05em;
 						text-shadow: rgba(43, 92, 147, 0.8) 2px 2px 8px;
 						margin-bottom: 24px;
+						@media screen and (max-width: 700px) {
+							margin-bottom: 16px;
+						}
+						@include media('phone') {
+							font-size: 3.4em;
+						}
 					}
 				}
 				&:nth-child(3) {
@@ -152,7 +220,7 @@ main class="content"
 					border-radius: 100px;
 					background-color: rgba(0,0,0,0.5);
 					border: #26C9FF solid 3px;
-					
+
 				}
 
 				&:nth-child(4) {
@@ -165,17 +233,31 @@ main class="content"
 						font-weight: 400;
 						text-decoration: line-through;
 					}
+					@include media('phone') {
+						font-size: 1.4em;
+					}
 				}
 				&:nth-child(5) {
 					font-size: 2.4em;
 					font-weight: bold;
 					text-align: left;
 					text-shadow: rgba(43, 92, 147, 0.8) 2px 2px 8px;
+					@media screen and (max-width: 700px) {
+						margin-top: 360px;
+						font-size: 2.8em;
+					}
+					@include media('phone') {
+						margin-top: 290px;
+					}
 				}
 				&:nth-child(6) {
 					font-size: 1.6em;
 					text-align: left;
 					text-shadow: rgba(43, 92, 147, 0.8) 2px 2px 8px;
+					@media screen and (max-width: 700px) {
+						font-size: 2em;
+						margin-top: -8px;
+					}
 					b{
 						font-size: 1.6em;
 						font-weight: 700;
@@ -190,6 +272,13 @@ main class="content"
 		@include media('center') {
 			padding: 0 $interval-xl;
 			margin-top: -80px;
+		}
+		@media screen and (max-width: 700px) {
+			padding: 0 58px;
+			margin-top: 128px;
+		}
+		@include media('phone') {
+			padding: 0 32px;
 		}
 		select,
 		input{
@@ -255,6 +344,12 @@ main class="content"
 			p{
 				font-size: 1.4em;
 				font-weight: 300;
+				@media screen and (max-width: 700px) {
+					font-size: 1.2em;
+				}
+				@media screen and (max-width: 540px) {
+					text-align: left;
+				}
 			}
 		}
 		.content_form_llst{
@@ -266,13 +361,26 @@ main class="content"
 				&:nth-child(1),
 				&:nth-child(4) {
 					padding-right: 10px;
+					@media screen and (max-width: 540px) {
+						padding-right: 0;
+						width: 100%;
+						margin: 8px 0;
+					}
 				}
 				&:nth-child(2),
 				&:nth-child(5) {
 					padding-left: 10px;
+					@media screen and (max-width: 540px) {
+						padding-left: 0;
+						width: 100%;
+						margin: 8px 0;
+					}
 				}
 				&:nth-child(3){
 					margin: 24px 0;
+					@media screen and (max-width: 540px) {
+						margin: 8px 0;
+					}
 				}
 				&:nth-child(3),
 				&:nth-child(6),
@@ -319,6 +427,10 @@ footer class="fatfooter"
 	margin-top: 80px;
 	max-width: 980px;
 	padding: 0 $interval-xl;
+	position: relative;
+	@include media('phone') {
+		padding: 0 32px;
+	}
 	.footer_container{
 		display: inline-block;
 		float: left;
@@ -333,6 +445,15 @@ footer class="fatfooter"
 	}
 	.footer_social{
 		float: right;
+		@media screen and (max-width: 700px) {
+			position: absolute;
+			top: 56px;
+			left: 258px;
+			z-index: 2;
+		}
+		@media screen and (max-width: 540px) {
+			left: 248px;
+		}
 		a{
 			display: inline-block;
 			width: 38px;
