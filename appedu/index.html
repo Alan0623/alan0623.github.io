@@ -40,6 +40,83 @@
     <link rel="stylesheet" href="css/global.css">
     <!--fonts -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,900|Open+Sans:400,700&display=swap" rel="stylesheet">
+
+    <!-- 
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K56ZZM"></script>
+    <script src="https://connect.facebook.net/signals/config/1694829620628427?v=2.9.15&amp;r=stable" async=""></script>
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <script src="https://s.yimg.com/wi/ytc.js" async=""></script>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-68890793-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script type="application/javascript">
+        (function (w, d, t, r, u) {
+            w[u] = w[u] || [];
+            w[u].push({
+                'projectId': '10000',
+                'properties': {
+                    'pixelId': '10059766'
+                }
+            });
+            var s = d.createElement(t);
+            s.src = r;
+            s.async = true;
+            s.onload = s.onreadystatechange = function () {
+                var y, rs = this.readyState,
+                    c = w[u];
+                if (rs && rs != "complete" && rs != "loaded") {
+                    return
+                }
+                try {
+                    y = YAHOO.ywa.I13N.fireBeacon;
+                    w[u] = [];
+                    w[u].push = function (p) {
+                        y([p])
+                    };
+                    y(c)
+                } catch (e) {}
+            };
+            var scr = d.getElementsByTagName(t)[0],
+                par = scr.parentNode;
+            par.insertBefore(s, scr)
+        })(window, document, "script", "https://s.yimg.com/wi/ytc.js", "dotq");
+    </script>
+
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-K56ZZM" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K56ZZM');
+    </script>
+    -->
 </head>
 <!--/head-->
 <body class="no_js">
@@ -167,7 +244,7 @@
             <div class="footer_copyright">
                 <p>軟體序號卡不得轉售，註冊一門課程可申請一張軟體序號卡，本軟體屬於報名課程教材其中項目。</p>
                 <p>需搭配 Adobe 兌換網站流程申請開通，活動期間 2019年12月1日至2019年12月31日。</p>
-                <p>Copyright ©Appedu. All rights reserved. 主辦單位赫綵電腦有限公司保有活動內容更改之權利。</p>
+                <p><b>Copyright ©Appedu. All rights reserved.</b> <b>主辦單位赫綵電腦有限公司保有活動內容更改之權利。</b></p>
             </div>
         </footer>
     </div>  
@@ -175,5 +252,96 @@
     <script src="js/jquery.preload.min.js"></script>
     <script src="js/jarallax.js"></script>
     <script src="js/effect.js"></script>
+    <!--
+    <script src="js/popper.min.js"></script>
+    <script src="js/distribution.js"></script>
+    <script language="JavaScript">
+        var media_sub_id = 642; //媒體版位子項目
+        var outlet_sub_id = 213; //通路子項目
+        var distribution_id = 4; //規則ID	
+        var type = 'Event'; //類型	 Lectures = 每月課程 Web = 官網
+        var course = '設計體驗營'; //課程名稱
+
+
+        $(document).ready(function () {
+            LoadCityData(""); //載入城市資料
+            //送出表單  
+            $('#btnsubmit').click(function (e) {
+                if ($('#txtName').val() == '') {
+                    alert("請輸入您的姓名!");
+                    return false;
+                }
+                if ($('#txtCellPhone').val() == '') {
+                    alert("請輸入您的聯絡電話!");
+                    return false;
+                }
+                if ($('#txtEMail').val() == '') {
+                    alert("請輸入您的E-mail信箱!");
+                    return false;
+                }
+                if ($('#selLiveCity').val() == '') {
+                    alert("請選擇縣市!");
+                    return false;
+                }
+                if ($('#selLiveArea').val() == '') {
+                    alert("請選擇地區!");
+                    return false;
+                }
+                if ($('#selGifts :selected').val() == '') {
+                    alert("請選擇好禮!");
+                    return false;
+                }
+                if ($('#selSubCourseName :selected').val() == '') {
+                    alert("請選擇想學課程!");
+                    return false;
+                }
+                if (!$("#Provision").prop("checked")) {
+                    alert("您尚未接受隱私權使用條款!");
+                    return false;
+                }
+                if (!validateCellPhone($('#txtCellPhone').val())) {
+                    alert("請輸入有效的聯絡電話!");
+                    return false;
+                }
+                if (!validateEmail($('#txtEMail').val())) {
+                    alert("請輸入有效的E-mail信箱!");
+                    return false;
+                }
+                $.ajax({
+                    url: "/Librarys/_ajax/Distribution.php",
+                    type: "POST",
+                    dataType: "json",
+                    data: {
+                        postFlag: "InsertData",
+                        distribution_id: distribution_id,
+                        media_sub_id: media_sub_id,
+                        outlet_sub_id: outlet_sub_id,
+                        type: type,
+                        course: course,
+                        name: $('#txtName').val(),
+                        cellphone: $('#txtCellPhone').val(),
+                        email: $('#txtEMail').val(),
+                        zip_id: $('#selLiveArea').val(),
+                        gift: $('#selGifts :selected').val(),
+                        remark: $('#selSubCourseName :selected').val()
+
+                    },
+                    success: function (response) {
+
+                        if (response.result == "true") {
+
+                            alert("資料已送出，將安排專人與您聯絡!");
+                            top.location.href = '/';
+                        } else {
+                            //  alert(response.data)    ;
+                            alert("您輸入的資料有誤或者已輸入過相同資料!");
+                            //top.location.href='/'  ;
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    -->
 </body>
 </html>

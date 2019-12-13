@@ -10,9 +10,10 @@ $.preload('/images/main_pad.jpg',
 //jarallax===============================================================
   function show_browse(){
   jarallax = new Jarallax();
-  jarallax.addAnimation('.react', [{ progress: "0%", top: "0%" }, { progress: "100%", top: "-100%" }]);
-  jarallax.addAnimation('.air-max-270-react-0JdRkV',  [{ progress: "0%", top: "0%" }, { progress: "100%", top: "-80%" }]);
-  jarallax.addAnimation('.nike_air_max', [{ progress: "0%", top: "0%" }, { progress: "100%", top: "-20%" }]);
+  jarallax.addAnimation('.content_main_text', [{ progress: "0%", top: "0%" }, { progress: "100%", top: "-50%" }]);
+  jarallax.addAnimation('.content_form', [{ progress: "0%", top: "0%" }, { progress: "100%", top: "-40%" }]);
+  jarallax.addAnimation('.cube_ae',  [{ progress: "0%", top: "0%" }, { progress: "100%", top: "-85%" }]);
+  jarallax.addAnimation('.cube_ps',  [{ progress: "0%", top: "0%" }, { progress: "100%", top: "-80%" }]);
   }
 
   $(document).ready(function () {

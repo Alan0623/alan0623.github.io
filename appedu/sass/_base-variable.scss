@@ -124,7 +124,9 @@
 //RWD設定================================================================
 	$pc-width: 960px; //pc寬度
 	$pad-width: 768px; //pad寬度
+	$pad2-width: 700px;
 	$phone-width: 500px; //phone寬度
+	$minphone-width: 375px; //phone寬度
 	$rwd-btn-size: 48px; //RWD 手機側欄按鈕大小
 
 //grid 框架設定================================================================
@@ -273,8 +275,10 @@
 		'center': 'screen and (max-width: #{$pc-width})',
 		'pc': 'screen and (max-width: #{$pc-width}) and (min-width: #{$pad-width + 1})',
 		'mobile': 'screen and (max-width: #{$pad-width})',
+		'mobile2': 'screen and (max-width: #{$pad2-width})',
 		'pad': 'screen and (max-width: #{$pad-width}) and (min-width: #{$phone-width + 1})',
-		'phone': 'screen and (max-width: #{$phone-width})'
+		'phone': 'screen and (max-width: #{$phone-width})',
+		'minphone': 'screen and (max-width: #{$minphone-width})'
 	);
 
 //hyc 想要的顏色================================================================
