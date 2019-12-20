@@ -459,11 +459,11 @@ main class="content"
 		}
 		.form-check-input{
 			width: auto;
-			height: auto;
+			height: 19px;
 			float: left;
 			transform: scale(2);
 			position: absolute;
-			top: 9px;
+			top: calc(50% - 9px);
 			border: none;
 		}
 		input[type="checkbox"] {
@@ -473,6 +473,7 @@ main class="content"
 		.form-check-label{
 			font-size: 1.2em;
 			padding-left: 30px;
+			line-height: 38px;
 			@include media('minphone') {
 				font-size: 1em;
 				padding-left: 25px;
@@ -567,6 +568,7 @@ main class="content"
 						display: inline-block;
 						margin: 20px auto;
 						position: relative;
+						height: 38px;
 					}
 				}
 				&:nth-last-child(1){
