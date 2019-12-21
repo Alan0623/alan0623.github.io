@@ -131,6 +131,23 @@ header class="header"
 /*------------------------------------------------------------------
 main class="content"
 ------------------------------------------------------------------*/
+@keyframes head {
+  0% {text-shadow:0 0 0px rgba(255,255,255,1); opacity:1; content: "訂閱版 NT18,900 /年"; text-decoration: line-through;}
+  10% {text-shadow:0 0 0px rgba(255,255,255,1); opacity:1; }
+  12.5% {text-shadow:0 0 4px rgba(255,255,255,1); opacity:0.8; }
+  24.5% {text-shadow:0 0 8px rgba(255,255,255,1); opacity:0; }
+  24.9% {text-shadow:0 0 10px rgba(255,255,255,1); opacity:0; content: "訂閱版 NT18,900 /年"; text-decoration: line-through;}
+  25% {text-shadow:0 0 8px rgba(255,255,255,1); opacity:0; content: "免 費 加 贈"; text-decoration: none;}
+  37.5% {text-shadow:0 0 4px rgba(255,255,255,1); opacity:0.8; }
+  50% {text-shadow:0 0 0px rgba(255,255,255,1); opacity:1; }
+  60% {text-shadow:0 0 0px rgba(255,255,255,1); opacity:1; }
+  62.5% {text-shadow:0 0 4px rgba(255,255,255,1); opacity:0.8; }
+  74.4% {text-shadow:0 0 8px rgba(255,255,255,1); opacity:0; }
+  74.5% {text-shadow:0 0 10px rgba(255,255,255,1); opacity:0; content: "免 費 加 贈"; text-decoration: none;}
+  75% {text-shadow:0 0 8px rgba(255,255,255,1); opacity:0; content: "訂閱版 NT18,900 /年"; text-decoration: line-through;}
+  87.5% {text-shadow:0 0 4px rgba(255,255,255,1); opacity:0.8; content: "訂閱版 NT18,900 /年"; text-decoration: line-through;}
+  100% {text-shadow:0 0 0px rgba(255,255,255,1); opacity:1; content: "訂閱版 NT18,900 /年"; text-decoration: line-through;}
+}
 .no_js_info{text-align: center;}
 .content {
 	margin: 0 auto;
@@ -329,10 +346,23 @@ main class="content"
 					border-radius: 100px;
 					background-color: rgba(0,0,0,0.5);
 					border: #26C9FF solid 3px;
+					&::before {
+						content: '訂閱版 NT18,900 /年';
+						text-decoration: line-through;
+						animation-name: head;
+						animation-duration: 10s;
+						animation-iteration-count: infinite;
+						color: #FFF;
+					}
 					@include media('minphone') {
 						font-size: 1.4em;
 						margin: 0;
 						background-color: rgba(0, 0, 0, 0.7);
+					}
+					i{
+						font: 0/0 a;
+						opacity: 0;
+						width: 0px;
 					}
 				}
 
@@ -462,10 +492,11 @@ main class="content"
 			width: auto;
 			height: 19px;
 			float: left;
-			transform: scale(2);
+			transform: scale(1.6);
 			position: absolute;
-			top: calc(50% - 9px);
+			top: calc(50% - 8px);
 			border: none;
+			border-radius: 3px;
 		}
 		input[type="checkbox"] {
 			border: none;
