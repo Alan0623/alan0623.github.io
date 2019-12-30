@@ -85,50 +85,25 @@
                     <h2>立即索取</h2>
                     <p>馬上報名搶先索取！報名結果將有專人電話通知。</p>
                 </div>
+                <form class="form-distribution">
                 <ul class="content_form_llst">
                     <li>
-                        <input type="text" placeholder="真實姓名" id="txtName" name="txtName">
+                        <input type="text" class="form-control" placeholder="真實姓名" name="name">
                     </li>
                     <li>
-                        <input type="tel" placeholder="聯絡電話" id="txtCellPhone" name="txtCellPhone">
+                        <input type="tel" class="form-control" placeholder="聯絡電話" name="cellphone">
                     </li>
                     <li>
-                        <input type="email" placeholder="電子信箱" id="txtEMail" name="txtEMail">
+                        <input type="email" placeholder="電子信箱" name="email">
                     </li>
                     <li>
-                        <select id="selLiveCity" name="selLiveCity">
-                            <option value="">請選擇縣市</option>
-                            <option value="1">臺北市</option>
-                            <option value="2">基隆市</option>
-                            <option value="3">新北市</option>
-                            <option value="4">宜蘭縣</option>
-                            <option value="5">新竹市</option>
-                            <option value="6">新竹縣</option>
-                            <option value="7">桃園市</option>
-                            <option value="8">苗栗縣</option>
-                            <option value="9">臺中市</option>
-                            <option value="10">彰化縣</option>
-                            <option value="11">南投縣</option>
-                            <option value="12">嘉義市</option>
-                            <option value="13">嘉義縣</option>
-                            <option value="14">雲林縣</option>
-                            <option value="15">臺南市</option>
-                            <option value="16">高雄市</option>
-                            <option value="17">澎湖縣</option>
-                            <option value="18">屏東縣</option>
-                            <option value="19">臺東縣</option>
-                            <option value="20">花蓮縣</option>
-                            <option value="21">金門縣</option>
-                            <option value="22">連江縣</option>
-                        </select>
+                        <select name="city" class="form-control"> </select>
                     </li>
                     <li>
-                        <select id="selLiveArea" name="selLiveArea" class="form-control">
-                            <option value="">請選擇地區</option>
-                        </select>
+                        <select name="area" class="form-control"> </select>
                     </li>
                     <li>
-                        <select id="selSubCourseName" name="selSubCourseName" class="form-control">
+                        <select name="course" class="form-control">
                             <option value="">課程六選一</option>
                             <option value="平面視覺設計">平面視覺設計</option>
                             <option value="數位繪畫">數位繪畫</option>
@@ -139,7 +114,7 @@
                         </select>
                     </li>
                     <li>
-                        <select id="selGifts" name="selGifts" class="form-control">
+                        <select name="remark" class="form-control">
                             <option value="">從哪裡得知資訊</option>
                             <option value="赫綵官網">赫綵官網</option>
                             <option value="Facebook">Facebook</option>
@@ -149,14 +124,16 @@
                     </li>
                     <li>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="Provision" required="" value="1">
-                            <label for="" class="form-check-label">我已詳細閱讀並同意<a href="https://www.appedu.com.tw/frame-privacy" target="_blank" title="隱私權使用條款">隱私權使用條款</a></label>
+                                <label class="form-check-label text-white" for="Provision">
+                                <input name="agreement" type="checkbox" class="form-check-input" id="Provision" required="" value="1"/>
+                                我已詳細閱讀並同意<a href="https://www.appedu.com.tw/frame-privacy" target="_blank" class="text-white" title="隱私權使用條款">隱私權使用條款</a></label>
                         </div>
                     </li>
                     <li>
-                        <a href="#" class="btn-submit" name="btnsubmit" id="btnsubmit" value="確認送出">確認送出</a>
+                        <button class="btn-submit" type="submit">確認送出</button>
                     </li>
                 </ul>
+                </form>
             </section>
             <!--content_form 以上表單-->
             <div class="cube_ps"></div>
@@ -192,8 +169,66 @@
         </footer>
     </div>  
     <script src="js/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>
+    <!-- 引入串接腳本 -->
+    <script type="text/javascript" src="https://www.appedu.com.tw/Librarys/Scripts/distribution2020.js" charset="UTF-8"></script>
     <script src="js/jquery.preload.min.js"></script>
     <script src="js/jarallax.js"></script>
     <script src="js/effect.js"></script>
+    <script>
+        $(document).ready(function() {
+          var $form = $("form.form-distribution");
+          loadLocation({
+            city: {
+              element: $form.find("[name=city]"),
+              defaultLabel: "請選縣市",
+              errorMessage: "無法載入縣市資料"
+            },
+            area: {
+              element: $form.find("[name=area]"),
+              defaultLabel: "請選地區",
+              errorMessage: "無法載入地區資料"
+            }
+          });
+        
+          $form
+            .submit(function(e) {
+              e.preventDefault();
+            })
+            .validate({
+              // debug: true,
+              submitHandler: distributionSubmitHandler({
+                successMessage: "資料已送出，將安排專人與您聯絡",
+                errorMessage: "您輸入的資料有誤或者已輸入過相同資料"
+              }),
+              rules: {
+                name: "required",
+                email: { required: true, email: true },
+                cellphone: { required: true, cellphone: true },
+                city: "required",
+                area: "required",
+                remark: "required",
+                course: "required",
+                agreement: "required"
+              },
+              messages: {
+                name: "請輸入您的姓名",
+                email: {
+                  required: "請輸入您的E-mail信箱",
+                  email: "請輸入有效的E-mail信箱"
+                },
+                cellphone: {
+                  required: "請輸入您的聯絡電話",
+                  cellphone: "請輸入有效的聯絡電話"
+                },
+                city: "請選擇縣市",
+                area: "請選擇地區",
+                remark: "請選擇您從哪裡得知資訊",
+                course: "請選擇想學課程",
+                agreement: "您尚未接受隱私權使用條款"
+              }
+            });
+        });
+    </script>
 </body>
 </html>
