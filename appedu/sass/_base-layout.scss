@@ -132,21 +132,23 @@ header class="header"
 main class="content"
 ------------------------------------------------------------------*/
 @keyframes head {
-  0% {text-shadow:0 0 0px rgba(255,255,255,1); opacity:1; content: "訂閱版 NT18,900 /年"; text-decoration: line-through;}
-  10% {text-shadow:0 0 0px rgba(255,255,255,1); opacity:1; }
-  12.5% {text-shadow:0 0 4px rgba(255,255,255,1); opacity:0.8; }
-  24.5% {text-shadow:0 0 8px rgba(255,255,255,1); opacity:0; }
-  24.9% {text-shadow:0 0 10px rgba(255,255,255,1); opacity:0; content: "訂閱版 NT18,900 /年"; text-decoration: line-through;}
-  25% {text-shadow:0 0 8px rgba(255,255,255,1); opacity:0; content: "免 費 加 贈"; text-decoration: none;}
-  37.5% {text-shadow:0 0 4px rgba(255,255,255,1); opacity:0.8; }
-  50% {text-shadow:0 0 0px rgba(255,255,255,1); opacity:1; }
-  60% {text-shadow:0 0 0px rgba(255,255,255,1); opacity:1; }
-  62.5% {text-shadow:0 0 4px rgba(255,255,255,1); opacity:0.8; }
-  74.4% {text-shadow:0 0 8px rgba(255,255,255,1); opacity:0; }
-  74.5% {text-shadow:0 0 10px rgba(255,255,255,1); opacity:0; content: "免 費 加 贈"; text-decoration: none;}
-  75% {text-shadow:0 0 8px rgba(255,255,255,1); opacity:0; content: "訂閱版 NT18,900 /年"; text-decoration: line-through;}
-  87.5% {text-shadow:0 0 4px rgba(255,255,255,1); opacity:0.8; content: "訂閱版 NT18,900 /年"; text-decoration: line-through;}
-  100% {text-shadow:0 0 0px rgba(255,255,255,1); opacity:1; content: "訂閱版 NT18,900 /年"; text-decoration: line-through;}
+	0% {text-shadow: 0 0 0 #fff;opacity: 1}
+	10% {text-shadow: 0 0 0 #fff;opacity: 1}
+	12.5% {text-shadow: 0 0 4px #fff;opacity: .8}
+	24.5% {text-shadow: 0 0 8px #fff;opacity: 0}
+	75% {text-shadow: 0 0 8px #fff;opacity: 0}
+	87.5% {text-shadow: 0 0 4px #fff;opacity: .8}
+	100% {text-shadow: 0 0 0 #fff;opacity: 1}
+}
+@keyframes head2 {
+	0% {text-shadow: 0 0 0 #fff;opacity: 0}
+	25% {text-shadow: 0 0 8px #fff;opacity: 0}
+	37.5% {text-shadow: 0 0 4px #fff;opacity: .8}
+	50% {text-shadow: 0 0 0 #fff;opacity: 1}
+	60% {text-shadow: 0 0 0 #fff;opacity: 1}
+	62.5% {text-shadow: 0 0 4px #fff;opacity: .8}
+	74.4% {text-shadow: 0 0 8px #fff;opacity: 0}
+	100% {text-shadow: 0 0 0 #fff;opacity: 0}
 }
 .no_js_info{text-align: center;}
 .content {
@@ -342,17 +344,38 @@ main class="content"
 				&:nth-child(3) {
 					text-align: center;
 					font-size: 2.2em;
+					line-height: 2em;
 					padding: 8px 0 10px 0;
 					border-radius: 100px;
 					background-color: rgba(0,0,0,0.5);
 					border: #26C9FF solid 3px;
 					&::before {
-						content: '訂閱版 NT18,900 /年';
+						//content: '訂閱版 NT18,900 /年';
 						text-decoration: line-through;
 						animation-name: head;
 						animation-duration: 10s;
 						animation-iteration-count: infinite;
 						color: #FFF;
+					}
+					b.before,b.after{
+						animation-duration: 10s;
+						animation-iteration-count: infinite;
+						color: #FFF;
+						text-align: center;
+						width: 100%
+					}
+					b.before {
+						text-decoration: line-through;
+						animation-name: head
+					}
+
+					b.after {
+						text-decoration: none;
+						animation-name: head2;
+						position: absolute;
+						width: 100%;
+						left: 0;
+						z-index: 1
 					}
 					@include media('minphone') {
 						font-size: 1.4em;
@@ -368,8 +391,9 @@ main class="content"
 
 				&:nth-child(4) {
 					margin-top: 0;
-					margin-bottom: 88px;
+					margin-bottom: 0px;
 					font-size: 2.2em;
+					line-height: 2em;
 					text-align: center;
 					text-shadow: rgba(43, 92, 147, 0.8) 2px 2px 8px;
 					b{
@@ -391,6 +415,18 @@ main class="content"
 					}
 				}
 				&:nth-child(5) {
+					margin-bottom: 80px;
+					text-align: center;
+					font-size: 1.15em;
+					text-shadow: rgba(43, 92, 147, 0.8) 2px 2px 8px;
+					@media screen and (max-width: 594px) {
+						font-size: 1.05em;
+					}
+					@media screen and (max-width: 575px) {
+						font-size: 1em;
+					}
+				}
+				&:nth-child(6) {
 					font-size: 2.4em;
 					font-weight: bold;
 					text-align: left;
@@ -400,14 +436,14 @@ main class="content"
 						font-size: 2.8em;
 					}
 					@include media('phone') {
-						margin-top: 290px;
+						margin-top: 240px;
 					}
 					@include media('minphone') {
 						margin-top: 190px;
 						font-size: 2.2em;
 					}
 				}
-				&:nth-child(6) {
+				&:nth-child(7) {
 					font-size: 2em;
 					text-align: left;
 					text-shadow: rgba(43, 92, 147, 0.8) 2px 2px 8px;
@@ -484,6 +520,7 @@ main class="content"
 			font-size: 1.4em;
 			letter-spacing: .2em;
 			text-decoration: none!important;
+			border: none!important;
 			@include media('minphone') {
 				font-size: 1.2em;
 			}
@@ -776,4 +813,7 @@ footer class="fatfooter"
 .no_js .content .cube_ps,
 .no_js .content .cube_ae{
 	display: none;
+}
+form.form-distribution .error {
+	color: red;
 }
