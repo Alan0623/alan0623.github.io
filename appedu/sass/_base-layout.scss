@@ -53,10 +53,12 @@ overflow: hidden;
 	//background-image: image-url('main.jpg', false, false);
 	//background-size: contain;
 	background-image: url(../images/main.jpg);
-	background-position: top center;
+	//background-position: top center;
+	background-position: center 80px;
 	background-repeat: no-repeat;
 	@include media('center') {
 		background-image: url(../images/main_pad.jpg);
+		background-position: right 80px;
 	}
 	@include media('mobile2') {
 		background-position: right 100px;
@@ -64,13 +66,13 @@ overflow: hidden;
 	@include media('phone') {
 		background-image: url(../images/main_phone.jpg);
 		background-size: contain;
-		background-position: center 240px;
+		background-position: center 280px;
 	}
 	@include media('minphone') {
-		background-position: center 140px;
+		background-position: center 180px;
 	}
 	@media screen and (max-width: 320px) {
-		background-position: center 150px;
+		background-position: center 180px;
 	}
 }
 /*------------------------------------------------------------------
@@ -425,6 +427,14 @@ main class="content"
 					@media screen and (max-width: 575px) {
 						font-size: 1em;
 					}
+					@media screen and (max-width: 400px) {
+						//font-size: 1.2em;
+						margin-bottom: 18px;
+						margin-top: 240px;
+						br{
+							display: none;
+						}
+					}
 				}
 				&:nth-child(6) {
 					font-size: 2.4em;
@@ -438,8 +448,11 @@ main class="content"
 					@include media('phone') {
 						margin-top: 240px;
 					}
+					@media screen and (max-width: 400px) {
+						margin-top: 0px;
+					}
 					@include media('minphone') {
-						margin-top: 190px;
+						
 						font-size: 2.2em;
 					}
 				}
@@ -534,6 +547,9 @@ main class="content"
 			top: calc(50% - 8px);
 			border: none;
 			border-radius: 3px;
+			@media screen and (max-width: 365px) {
+				left: 0;
+			}
 		}
 		input[type="checkbox"] {
 			border: none;
@@ -556,6 +572,12 @@ main class="content"
 				a{
 					display: inline-block !important;
 				}
+			}
+			@media screen and (max-width: 334px) {
+				font-size: 0.95em;
+			}
+			@media screen and (max-width: 330px) {
+				font-size: 0.9em;
 			}
 			a{
 			   padding-left: 10px;
@@ -638,6 +660,10 @@ main class="content"
 						margin: 20px auto;
 						position: relative;
 						height: 38px;
+						@media screen and (max-width: 400px) {
+							width: 100%;
+							font-size: 0.9em;
+						}
 					}
 				}
 				&:nth-last-child(1){
