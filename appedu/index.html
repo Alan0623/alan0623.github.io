@@ -40,9 +40,72 @@
     <link rel="stylesheet" href="css/global.css">
     <!--fonts -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,900|Open+Sans:400,700&display=swap" rel="stylesheet">
+
+    <!-- Facebook追蹤碼 Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1694829620628427');
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- GA代碼 Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68890793-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-68890793-1');
+    </script>
+
+    <!-- GTM代碼 Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K56ZZM');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Line_追蹤碼 LINE Tag Base Code -->
+    <!-- Do Not Modify -->
+    <script>
+        (function (g, d, o) {
+            g._ltq = g._ltq || []; g._lt = g._lt || function () { g._ltq.push(arguments) };
+            var h = location.protocol === 'https:' ? 'https://d.line-scdn.net' : 'http://d.line-cdn.net';
+            var s = d.createElement('script'); s.async = 1;
+            s.src = o || h + '/n/line_tag/public/release/v1/lt.js';
+            var t = d.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s, t);
+        })(window, document);
+        _lt('init', {
+            customerType: 'lap',
+            tagId: 'a8c14f6a-37c9-45c4-8771-efe71625e2d4'
+        });
+        _lt('send', 'pv', ['a8c14f6a-37c9-45c4-8771-efe71625e2d4']);
+    </script>
+    <!-- End LINE Tag Base Code -->
+    
 </head>
 <!--/head-->
 <body class="no_js">
+    <!-- Facebook追蹤碼 Facebook Pixel Code -->
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1694829620628427&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- GTM代碼 Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K56ZZM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- LINE Tag Base Code -->
+    <noscript><img height="1" width="1" style="display:none" src="https://tr.line.me/tag.gif?c_t=lap&t_id=a8c14f6a-37c9-45c4-8771-efe71625e2d4&e=pv&noscript=1" /></noscript>
+    <!-- End LINE Tag Base Code -->
     <div class="wrapper">
         <noscript>
             <div class="no_js_info">    
@@ -136,7 +199,12 @@
                                 我已詳細閱讀並同意<a href="https://www.appedu.com.tw/frame-privacy" target="_blank" class="text-white" title="隱私權使用條款">隱私權使用條款</a></label>
                         </div>
                     </li>
-                    <li>
+                    <li><!--Line_追蹤碼-->
+                        <script>
+                            _lt('send', 'cv', {
+                                type: 'Conversion'
+                            }, ['a8c14f6a-37c9-45c4-8771-efe71625e2d4']);
+                        </script>
                         <button class="btn-submit" type="submit">確認送出</button>
                     </li>
                 </ul>
