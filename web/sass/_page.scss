@@ -1,0 +1,627 @@
+/*------------------------------------------------------------------
+內容 個別頁面 最新消息列表
+------------------------------------------------------------------*/
+.intro_list,
+.news_list{
+	position: relative;
+	padding-left: calc(50% + 56px);
+	width: 100%;
+	min-height: calc(100vh - 128px);
+	height: calc(100vh - 128px);
+	@media screen and (max-width:$pc-width){
+		padding-left: calc(50% + 14px);
+	}
+	@media screen and (max-width:$pad-width){
+		padding-left: 0;
+	}
+	section{
+		height: 50%;
+		flex: 0 0 100%;
+		&:first-child{
+			position: absolute;
+			left: 128px;
+			width: calc(50% - 72px);
+			height: calc(100% - 16px);
+			@media screen and (max-width:$pc-width){
+				left: 12px;
+				width: calc(50% - 0px);
+			}
+			@media screen and (max-width:$pad-width){
+				width: calc(100% - 24px);
+				position: relative;
+				height: auto;
+				left: 0px;
+			}
+			@media screen and (max-width:$phone-width){
+				padding-bottom: 0;
+    			//padding-left: 2px;
+			}
+		}
+		p{
+			margin-bottom: 24px;
+		}
+	}
+}
+.news_list{
+	min-height: calc(100vh - 208px);
+	height: calc(100vh - 208px);
+	@media screen and (max-width:$pc-width){
+		min-height: calc(100vh - 308px);
+		height: calc(100vh - 308px);
+	}
+	@media screen and (max-width:$pad-width){
+		min-height: auto;
+		height: auto;
+		padding-left: 8px;
+    	padding-right: 8px;
+	}
+	section{
+		overflow: hidden;
+		&:first-child{
+			.img{
+				height: calc(100% - 120px)!important;
+				img{
+					@media screen and (max-width:$pc-width){
+						max-height: 100%;
+					}
+				}
+			}
+		}
+	}
+	a{
+		color: $black;
+		display: block;
+		position: relative;
+		border-radius: 5px;
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+		@media screen and (max-width:$pad-width){
+			height: auto;
+			width: auto;
+		}
+		&:hover, &:focus{
+			//height: auto;
+			//width: auto;
+			//border: #FACEBF solid 4px;
+			img{
+				transform: scale(1.2);
+			}
+			
+		}
+	}
+	.img{
+		height: calc(100% - 100px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		@media screen and (max-width:$pad-width){
+			height: calc(100% - 120px);
+		}
+		img{
+			//height: 100%;
+			transition: $transition;
+			@media screen and (max-width:$pad-width){
+				max-height: initial!important;
+				max-width: 100%;
+			}
+		}
+	}
+	.text{
+		padding: 12px 24px!important;
+
+	}
+}
+.intro_list{
+	@media screen and (max-width:$pc-width){
+		min-height: calc(100vh - 428px);
+		height: calc(100vh - 428px);
+	}
+	section{
+		@media screen and (max-width:$pad-width){
+			margin-left: 14px!important;
+			height: auto!important;
+		}
+		@media screen and (max-width:$phone-width){
+			padding-bottom: 0;
+			padding-left: 2px;
+		}
+		&:last-child{
+			position: absolute;
+			left: 128px;
+			top: calc(100% - 16px);
+			width: calc(100% - 144px);
+			height: auto;
+			.w40{
+				width: 38%;
+			}
+			.w60{
+				width: 60%;
+			}
+			@media screen and (max-width:$pc-width){
+				left: 12px!important;
+				width: calc(100% - 28px)!important;
+			}
+			@media screen and (max-width:$pad-width){
+				position: relative;
+				top: auto;
+				left: 0px!important;
+				.w40{
+					width: 100%!important;
+				}
+				.w60{
+					width: 100%!important;
+				}
+			}
+		}
+		.text{
+			font-size: 1.2em;
+			line-height: 1.6em;
+			padding: 12px 32px!important;
+		}
+		a{
+			display: inline-block;
+			vertical-align: top;
+		}
+		img{
+			max-width: 100%;
+			//max-height: 30vh;
+		}
+	}
+}
+/*------------------------------------------------------------------
+內容 個別頁面 最新消息內容
+------------------------------------------------------------------*/
+.news_content{
+	section{
+		flex: 0 0 100%;
+		margin-bottom: 24px;
+	}
+	article{
+		font-size: 1.2em;
+		line-height: 1.6em;
+		padding: 32px;
+		padding-bottom: 0;
+		@media screen and (max-width:$phone-width){
+			padding: 12px;
+		}
+		img{
+			width: 45%;
+			float: left;
+			margin-right: 32px;
+			margin-bottom: 32px;
+			@media screen and (max-width:$pc-width){
+				width: 100%;
+				float: initial;
+			}
+		}
+	}
+	p{
+		margin-bottom: 24px;
+	}
+}
+.section_title{
+	color: white;
+	width: 100%;
+	padding: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	white-space: nowrap;
+	@media screen and (max-width:$phone-width){
+		padding: 24px 12px;
+	}
+	.date{
+		font-size: 1.2em;
+		padding: 6px 12px 7px 12px;
+		display: inline-block;
+		border: white solid thin;
+		color: white;
+		font-family: 'Open Sans', sans-serif;
+		border-radius: 40px;
+		margin-bottom: 8px;
+		float: left;
+		@media screen and (max-width:$phone-width){
+			display: block;
+			font-size: 0.9em;
+		}
+	}
+	.text_title{
+		color: white;
+		display: inline-block;
+		font-weight: bold;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		float: left;
+		font-size: 1.6em;
+		line-height: 34px;
+		padding-left: 12px;
+		@media screen and (max-width:$pad-width){
+			overflow: visible;
+			text-overflow: initial;
+			white-space: pre-wrap;
+		}
+		@media screen and (max-width:$phone-width){
+			display: block;
+			padding-left: 0;
+			font-size: 1.4em;
+			line-height: 1.4em;
+		}
+	}
+
+}
+.video{
+	max-width: 1000px;
+	max-height: 600px;
+	.video_container {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 30px;
+		height: 0;
+		overflow: hidden;
+		iframe, object, embed {
+			position: absolute;
+			top: 0;left: 0;
+			width: 100%;
+			height: 100%;
+			max-width: 1000px;
+			max-height: 600px;
+		}
+	}
+}
+/*------------------------------------------------------------------
+內容 個別頁面 民眾反應
+------------------------------------------------------------------*/
+.feedback_list{
+	min-height: auto;
+	height: auto;
+	section{
+		flex: 2;
+		@media screen and (max-width:$pad-width){
+			flex: 0 0 100%;
+		}
+		article{
+			background-color: transparent;
+			color: white;
+			.text{
+				@media screen and (max-width:$phone-width){
+					padding-left: 0!important;
+				}
+			}
+		}
+		ul{
+			li{
+				position: relative;
+				padding-left: 20px;
+				@media screen and (max-width:$phone-width){
+					padding-left: 14px!important;
+					&::before{
+						top: 9px!important;
+					}
+				}
+				&::before{
+					content: "";
+					display: block;
+					width: 8px;
+					height: 8px;
+					background-color: #FACEBF;
+					position: absolute;
+					top: 12px;
+					left: 0;
+				}
+			}
+		}
+		&:last-child{
+			flex: 1;
+			@media screen and (max-width:1300px){
+				flex: 2;
+			}
+			@media screen and (max-width:$pad-width){
+				flex: 0 0 100%;
+				padding: 0 8px!important;
+			}
+			ul{
+				li{
+					margin-bottom: 24px;
+					padding: 0!important;
+					&::before{
+						display: none;
+					}
+					&:last-child{
+						text-align: center;
+						label{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	label{
+		position: absolute;
+		font-size: 1.2em;
+		font-weight: bold;
+		color: $black;
+		line-height: 56px;
+		padding-left: 12px;
+	}
+	input{
+		width: 100%;
+		height: 54px;
+		border: none;
+		border-radius: 5px;
+		color: #22132A;
+		background-color: #E1CCE0;
+		box-shadow: rgba(0,0,0,0.5) 0 2px 4px,
+		inset rgba(255,255,255,0.5) 0 1px 3px;
+		font-weight: bold;
+		font-size: 1.2em;
+		padding-left: 64px;
+    	box-sizing: border-box;
+	}
+	input[type="button"],
+	input[type="submit"]{
+		@extend %btn-Moema;
+		background-color: #FACEBF;
+		font-size: 1.4em;
+		letter-spacing: 0.5em;
+		text-align: center;
+		max-width: 205px;
+		margin: 0 auto;
+		padding-left: 0;
+		background-image: url(../images/icon/icon_arrow2.png);
+		background-repeat: no-repeat;
+		background-position: center right;
+		&:hover, &:focus{
+			background-image: url(../images/icon/icon_arrow_o.png);
+			background-repeat: no-repeat;
+			background-position: center right;
+		}
+	}
+	textarea{
+		width: 100%;
+		font-size: 1.2em;
+		background-color: #E1CCE0;
+		color: #22132A;
+		font-weight: bold;
+		box-sizing: border-box;
+    	padding: 44px 12px 12px 12px;
+	}
+}
+
+
+/*------------------------------------------------------------------
+內容 個別頁面  工程進度
+------------------------------------------------------------------*/
+.construction_list{
+	display: block;
+	min-height: calc(100vh - 130px);
+	height: auto;
+	.main_page{
+		margin: 0;
+		clear: both;
+	}
+	.construction_list_btn{
+		margin-top: -8px;
+		margin-left: 14px;
+		@media screen and (max-width:$phone-width){
+			margin: 0;
+		}
+		a{
+			color: #C587AE;
+			background-color: #601986;
+			border: #481660 solid 1px;
+			height: 55px;
+			line-height: 55px;
+			width: 177px;
+			text-align: center;
+			display: block;
+			border-radius: 0 0 5px 5px;
+			font-size: 1.4em;
+			font-weight: bold;
+			@media screen and (max-width:$phone-width){
+				font-size: 1.1em;
+				width: 100%;
+				height: 44px;
+    			line-height: 44px;
+			}
+		}
+		li{
+			display: inline-block;
+			@media screen and (max-width:$phone-width){
+				width: calc(33.33% - 4px);
+			}
+			&.active{
+				a{
+					color: #22132A;
+					background-color: #FACEBF;
+				}
+			}
+		}
+	}
+	.construction_list_tab{
+		@for $i from 1 through 8 {
+			/* span:target */
+			#tab-#{$i}{
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				opacity: 0;
+			}
+			#tab-#{$i}:target{
+			}
+			span:target ~ #tab > ul li:first-child a {
+			background: transparent;
+			color: #C587AE;
+			border-color: transparent;
+			}
+			span:target ~ #tab > div:first-of-type {
+			visibility:hidden;
+			height:0;
+			padding:0 15px;
+			position: absolute;
+			}
+			
+			span ~ #tab > ul li:first-child a,
+			#tab-1:target ~ #tab > ul li a[href$="#tab-1"],
+			#tab-2:target ~ #tab > ul li a[href$="#tab-2"],
+			#tab-3:target ~ #tab > ul li a[href$="#tab-3"],
+			#tab-4:target ~ #tab > ul li a[href$="#tab-4"] {
+			color: #FEEEC7;
+			background: url(../images/bg_tab.png);
+			background-size: contain;
+			background-position: bottom center;
+			background-repeat: no-repeat;
+			padding-bottom: 22px;
+				@media screen and (max-width:$phone-width){
+					background: none;
+					border: #FEEEC7 solid 1px;
+					padding: 10px 18px;
+					font-size: 1.1em;
+					border-radius: 5px;
+					width: auto;
+					height: auto;
+					display: block;
+					line-height: normal;
+					min-width: auto;
+				}
+			}
+
+			#tab{
+
+				ul.construction_list_tab_ul{
+					margin: 8px 16px;
+					@media screen and (max-width:$phone-width){
+						margin: 8px;
+					}
+					>li{
+						display: inline-block;
+						a {
+							color: #C587AE;
+							font-size: 1.4em;
+							height: 55px;
+							display: block;
+							line-height: 55px;
+							//padding: 0 24px;
+							min-width: 177px;
+							//box-sizing: border-box;
+							text-align: center;
+							font-weight: bold;
+							@media screen and (max-width:$phone-width){
+								padding: 10px 18px;
+								font-size: 1.1em;
+								border-radius: 5px;
+								width: auto;
+								height: auto;
+								display: block;
+								line-height: normal;
+								min-width: auto;
+								border-color: transparent;
+							}
+						}
+					} 
+				}
+			}
+
+			span:target ~ #tab > ul li:first-child a {
+			
+			}
+			span:target ~ #tab > div {
+			visibility:hidden;
+			overflow: hidden;
+			height:0;
+			padding:0 15px;
+			}
+
+
+			span ~ #tab > ul>li:first-child a,
+			#tab-#{$i}:target ~ #tab > ul>li a[href$="#tab-#{$i}"] {
+			//background: #fff;
+			}
+			span ~ #tab > div:first-of-type,
+			#tab-#{$i}:target ~ #tab > div.tab-content-#{$i}{
+			visibility:visible;
+			//height: calc(100vh - 250px);
+			height: auto;
+			//background: #fff;
+			font-size: 1.4em;
+			overflow: visible;
+			padding: 0;
+			}
+			span ~ #tab > div:first-of-type,
+			#tab-1:target ~ #tab > div.tab-content-1{
+			padding-right: 16px;
+				@media screen and (max-width:$phone-width){
+					padding-right: 0px;
+				}
+			}
+
+
+			/*頁籤div內容*/
+			#tab>div {
+			clear:both;
+			padding:0 15px;
+			height:0;
+			overflow:hidden;
+			visibility:hidden;
+
+			// -webkit-transition:all .4s ease-in-out;
+			// -moz-transition:all .4s ease-in-out;
+			// -ms-transition:all .4s ease-in-out;
+			// -o-transition:all .4s ease-in-out;
+			// transition:all .4s ease-in-out;
+			}
+		}
+	}
+}
+
+.fancybox_list{ //工程進度 相簿
+	display: block;
+	width: 100%;
+	li{
+		width: 33.33%;
+		display: inline-block;
+		float: left;
+		&:nth-child(4){
+			clear: both;
+		}
+		@media screen and (max-width:$pc-width){
+			width: 50%;
+			&:nth-child(3),
+			&:nth-child(5){
+				clear: right;
+			}
+			&:nth-child(4){
+				clear: right;
+			}
+		}
+		@media screen and (max-width:$phone-width){
+			width: 100%;
+		}
+		a{
+			display: inline-block;
+			border-radius: 5px;
+			overflow: hidden;
+			margin: 16px;
+			border: transparent solid 4px;
+			@media screen and (max-width:$phone-width){
+				margin-top: 0;
+			}
+
+			&:hover, &:focus{
+				border: #FACEBF solid 4px;
+				img{
+					transform: scale(1.2);
+				}
+			}
+
+			img{
+				width: 100%;
+				float: left;
+				transition: $transition;
+			}
+		}
+	}
+}

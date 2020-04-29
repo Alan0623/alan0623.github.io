@@ -1,0 +1,1495 @@
+//方法與涵式
+
+//rwd 與 hack================================================================
+
+@mixin rwd($max, $min: 0) { //自訂 RWD 寬度，第一個參數是最大值，第二個參數是最小值
+
+    @if( $rwd==true) {
+        $type: 'screen and (max-width: #{$max + 0px }) and (min-width: #{$min + 1px})';
+
+        @media #{$type} {
+            @content;
+        }
+    }
+}
+
+@mixin hack($key) { //查詢瀏覽器媒體，給 hack 用，$key 為 $hack 的 key
+
+    @media #{map-get( $hack, $key )} {
+        @content;
+    }
+}
+
+@mixin media($key) { //查詢瀏覽器媒體，給 rwd 用，$key 為 $media 的 key
+
+    @if( $rwd == true ) {
+
+        @media #{map-get( $media, $key )} {
+            @content;
+        }
+    }
+}
+
+@mixin supports($key) { //查詢瀏覽器媒體與瀏覽器支持，在不同情況下呈現不同樣式，$key 為 $supports 的 $key
+
+    @supports #{ '(' + $key + ')' } {
+        @content;
+    }
+}
+
+//狀態================================================================
+
+@mixin at($selector) { //在某個選擇器下的樣式，參數是選擇器
+
+    #{$selector} & {
+        @content;
+    }
+}
+
+@mixin js( $boolean: true ) { //有/無 js下的樣式表現，$boolean 是布林值
+
+    [data-js="#{$boolean}"] & {
+        @content;
+    }
+}
+
+@mixin admin( $boolean: true ) { //管理員/一般使用者 登入的樣式，$boolean 是布林值
+
+    [data-admin="#{$boolean}"] & {
+        @content;
+    }
+}
+
+//數量與框架================================================================
+
+@mixin default-min-len($type, $default-len, $max-len: $max-child) { //設定預設的最小單行數量，更多時會平均分割。$default-len 為預設的數量，$type 為 data-type 參數，$max-len 為最大的分割數量，超過時會以預設數量往下新增
+
+    @if ( $type == 0 ) { // list 模組的狀況
+
+        .ct {
+
+            ul {
+
+                @for $i from 1 through $default-len { //group list 的 child
+
+                    &[data-child="#{$i}"] {
+
+                        li {
+                            width: 100% / $default-len; //均分li
+                        }
+                    }
+                }
+
+                @for $i from $default-len through $max-len { //group list 的 child
+
+                    &[data-child="#{$i}"] {
+
+                        li {
+                            width: 100% / $i; //均分li
+                        }
+                    }
+                }
+            }
+
+            li {
+                width: 100% / $default-len;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+
+    }@else if( $type == 4 ) {
+
+        > .bg-drop-layout > .in > .ct > .in, > .in > .ct > .in {
+
+            > ul {
+
+                @for $i from 1 through $default-len { //group list 的 child
+
+                    &[data-child="#{$i}"] {
+
+                        > li {
+                            width: 100% / $default-len; //均分li
+                        }
+                    }
+                }
+
+                @for $i from $default-len through $max-len { //group list 的 child
+
+                    &[data-child="#{$i}"] {
+
+                        > li {
+                            width: 100% / $i; //均分li
+                        }
+                    }
+                }
+
+                > li {
+                    width: 100% / $max-len;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            }
+        }
+    }@else { // group 的狀況
+
+        > .bg-drop-layout > .in > .ct > .in, > .in > .ct > .in {
+
+            > [data-index][data-type] {
+                width: 100% / $default-len;
+                float: left;
+            }
+        }
+
+        @for $i from ( $default-len + 1) through $max-len { //group 的 child
+
+            &[data-child="#{$i}"] {
+
+                > .bg-drop-layout > .in > .ct > .in, > .in > .ct > .in {
+
+                    > [data-index][data-type] {
+                        width: 100% / $i; //均分li
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@mixin default-len($type, $len) { //設定預設的單行數量，$len 為預設的數量，$type 為 data-type 參數
+
+    @if ( $type == 0 ) { // list 模組的狀況
+
+        .ct {
+
+            li {
+                width: 100% / $len;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+
+    }@else if( $type == 4 ) {
+
+        > .bg-drop-layout > .in > .ct > .in, > .in > .ct > .in {
+
+            > ul {
+
+                > li {
+                    width: 100% / $len;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            }
+        }
+    }@else { // 分割 group 的狀況
+
+        > .bg-drop-layout > .in > .ct > .in, > .in > .ct > .in {
+
+            > [data-index][data-type] {
+                width: 100% / $len;
+                float: left;
+
+                &:nth-child(#{$len}n+1) {
+                    clear: left;
+                }
+            }
+        }
+
+    }
+}
+
+@mixin default-len-hide($type, $len) { //設定預設的單行數量，更多時會隱藏，$len 為預設的數量，$type 為 data-type 參數
+    @include default-len($type, $len);
+
+    @if ( $type == 0 ) { // list 模組的狀況
+
+        .ct {
+
+            li {
+
+                &:nth-child(n+#{$len + 1}) {
+                    display: none;
+                }
+
+                $li: ' '; //以下都是 for ie8
+
+                @for $i from 1 through $len { 
+
+                    $li: $li + '+ li '; 
+                }
+
+                &#{$li}{
+                    display: none;
+                }
+            }
+        }
+
+    }@else if( $type == 1 ) { // 分割 group 的狀況
+
+        > .bg-drop-layout > .in > .ct > .in, > .in > .ct > .in {
+
+            > [data-index][data-type] {
+
+                &:nth-child(n+#{$len + 1}) {
+                    display: none;
+                }
+
+                $div: ' '; //以下都是 for ie8
+
+                @for $i from 1 through $len {
+
+                    $div: $div + '+ [data-index][data-type] '; 
+                }
+
+                &#{$div}{
+                    display: none;
+                }
+            }
+        }
+
+    }@else if( $type == 4 ) {
+
+        > .bg-drop-layout > .in > .ct > .in, > .in > .ct > .in {
+
+            > ul {
+
+                > li {
+
+                    &:nth-child(n+#{$len + 1}) {
+                        display: none;
+                    }
+
+                    $li: ' '; //以下都是 for ie8
+
+                    @for $i from 1 through $len {
+
+                        $li: $li + '+ li '; 
+                    }
+
+                    &#{$li}{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin average($type, $default-len: 4, $max-len: $max-child) { //平均分割物件的數量，若超過 $max-child，則隱藏起來，$type 為 data-type 參數
+
+    @if ( $type == 0 ) { // list 模組的狀況
+
+        .ct {
+
+            li {
+                max-width: 100% / $default-len;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+
+        .ct {
+
+            ul {
+
+                @for $i from 1 through $max-child {
+
+                    &[data-child="#{$i}"] { //自然分割
+
+                        li {
+                            width: ( 100% / $i );
+                        }
+                    }
+                }
+            }
+        }
+
+    }@else if( $type == 1 ) { // 分割 group 的狀況
+
+        > .bg-drop-layout > .in > .ct > .in, > .in > .ct > .in {
+
+            > [data-index][data-type] {
+                max-width: 100% / $default-len;
+                float: left;
+            }
+        }
+
+        @for $i from 1 through $max-child {
+
+            &[data-child="#{$i}"] { //自然分割
+
+                > .in > .ct > .in {
+
+                    > [data-index][data-type] {
+                        width: 100% / $i;
+                    }
+                }
+            }
+        }
+
+    }@else if( $type == 4 ) {
+
+        > .bg-drop-layout > .in > .ct > .in, > .in > .ct > .in > ul {
+
+            > li {
+                max-width: 100% / $default-len;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+
+        > .bg-drop-layout > .in > .ct > .in, > .in > .ct > .in > ul {
+
+            @for $i from 1 through $max-child {
+
+                &[data-child="#{$i}"] { //自然分割
+
+                    > li {
+                        width: ( 100% / $i );
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin set-len($type, $max-len: $max-child) { //手動設定單行數量，$type 為 data-type 參數，$max-len 為 data-setLen 的最大數量
+
+    @if ( $type == 0 ) { // list 模組的狀況
+
+        @for $i from 1 through $max-len { //算設定分割
+
+            &[data-setLen="#{$i}"] {
+
+                .ct {
+
+                    li {
+                        width: 100% / $i;
+                        display: inline-block;
+                        vertical-align: top;
+                    }
+                }
+            }
+        }
+
+    }@else if( $type == 4 ) {
+
+        @for $i from 1 through $max-len { //算設定分割
+
+            &[data-setLen="#{$i}"] {
+
+                > .bg-drop-layout > .in > .ct > .in, > .in > .ct > .in {
+
+                    > ul {
+
+                        > li {
+                            width: 100% / $i;
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+                    }
+                }
+            }
+        }
+
+    }@else { // 分割 group 的狀況
+
+        @for $i from 1 through $max-len { //算設定分割
+
+            &[data-setLen="#{$i}"] {
+
+                > .bg-drop-layout > .in > .ct > .in, > .in > .ct > .in {
+
+                    > [data-index][data-type] {
+                        width: 100% / $i;
+                        clear: none;
+
+                        &:nth-child(#{$i}n+1) {
+                            clear: left;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@mixin set-len-hide($type, $max-len: $max-child) { //手動設定單行數量，並且隱藏超過的，$type 為 data-type 參數，$max-len 為 data-setLen 的最大數量
+    @include set-len($type, $max-len);
+
+    @if ( $type == 0 ) { // list 模組的狀況
+
+        @for $i from 1 through $max-len { //算設定分割
+
+            &[data-setLen="#{$i}"] {
+
+                .ct {
+
+                    li {
+
+                        &:nth-child(n+#{$i + 1}) {
+                            display: none;
+                        }
+
+                        $li: ' '; //以下都是 for ie8
+
+                        @for $j from 1 through $i {
+
+                            $li: $li + '+ li '; 
+                        }
+
+                        &#{$li}{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+    }@else if( $type == 1 ) { // 分割 group 的狀況
+
+        @for $i from 1 through $max-len { //算設定分割
+
+            &[data-setLen="#{$i}"] > .bg-drop-layout > .in > .ct > .in, &[data-setLen="#{$i}"] > .in > .ct > .in {
+
+                > [data-index][data-type] {
+
+                    &:nth-child(n+#{$i + 1}) {
+                        display: none;
+                    }
+
+                    $li: ' '; //以下都是 for ie8
+
+                    @for $j from 1 through $i {
+
+                        $li: $li + '+ li '; 
+                    }
+
+                    &#{$li}{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }@else if( $type == 4 ) {
+
+        @for $i from 1 through $max-len { //算設定分割
+
+            &[data-setLen="#{$i}"] > .bg-drop-layout > .in > .ct > .in, &[data-setLen="#{$i}"] > .in > .ct > .in {
+
+                > ul {
+
+                    > li {
+
+                        &:nth-child(n+#{$i + 1}) {
+                            display: none;
+                        }
+
+                        $li: ' '; //以下都是 for ie8
+
+                        @for $j from 1 through $i {
+
+                            $li: $li + '+ li '; 
+                        }
+
+                        &#{$li}{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin len-rwd($key, $len: 1, $int: 100%) { //手動設定 rwd 數量，$key 為 $media 的 key，$len 為 rwd 的數量，$int 是被計算的基數
+
+    @if( $rwd == true ) {
+
+        @media #{map-get( $media, $key )} {
+            max-width: none !important;
+            width: $int / $len !important;
+            clear: none;
+
+            &:nth-child(#{$len}n+1) {
+                clear: left
+            }
+        }
+    }
+}
+
+//reset 重設樣式================================================================
+
+%reset-outer { //重新設定外部樣式
+    margin: 0;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+}
+
+%reset-inner { //重新設定內部樣式
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    list-style: none;
+    background-color: transparent;
+    font-size: 1em;
+    font-weight: normal;
+    transition: initial;
+
+    &:before {
+        content: none;
+    }
+
+    &:after {
+        content: none;
+    }
+}
+
+%reset { //重新設定全部樣式
+    @extend %reset-outer;
+    @extend %reset-inner;
+}
+
+//隱藏文字與...================================================================
+
+%hide-text { //隱藏文字的方法
+    text-indent: -9999px;
+    font: 0/0 a;
+    color: transparent;
+}
+
+%ellipsis { //單行超過範圍文字變成'...'的方法
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin re-ellipsis() { //reset %ellipsis 的方法
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+}
+
+// %multi-ellipsis {
+// 	overflow: hidden;
+
+// 	&:before {
+// 		content: '\200B';
+// 		float: left;
+// 		width: 1px;
+// 	}
+
+// 	> * {
+// 		float: right;
+// 		width: 100%;
+// 		box-sizing: border-box;
+// 		margin-left: -1px;
+// 	}
+
+// 	&:after {
+// 		content: '...';
+// 		position: relative;
+// 		float: right;
+// 		left: 100%;
+// 		width: 50px;
+// 		margin-left: -50px;
+// 		margin-right: 1px;
+// 		text-indent: 30px;
+// 	}
+// }
+
+// @mixin multi-ellipsis($line: 6, $line-height: 20px, $background-color: $white, $position: 60% ){ //多行超過範圍文字變成'...'的方法
+
+// 	@extend %multi-ellipsis;
+// 	height: $line-height * $line;
+
+// 	&:before {
+// 		height: $line-height * $line;
+// 	}
+
+// 	> * {
+// 		line-height: $line-height;
+// 	}
+
+// 	&:after {
+// 		top: -1 * $line-height;
+// 		line-height: $line-height;
+// 		background-image: linear-gradient(to right, transparent 0, $background-color $position);
+// 	}
+// }
+
+@mixin multi-ellipsis($line: 4, $line-height: 25px ){ //多行超過範圍文字變成'...'的方法
+    overflow: hidden;
+    line-height: $line-height;
+    height: $line-height * $line;
+}
+
+@mixin re-multi-ellipsis() { //reset %multi-ellipsis 的方法
+    height: auto;
+    overflow: visible;
+
+    > * {
+        float: none;
+    }
+
+    &:before, &:after {
+        content: none;
+    }
+}
+
+//框架預設樣式================================================================
+
+%center { //齊中寬度
+    margin: 0 auto;
+    
+    @if( $rwd ) {
+        /*max-width: $pc-width;*/
+    }@else {
+        width: $pc-width;
+    }
+}
+
+%area-module-no-header { //沒有 header 的首頁模組
+    margin-top: $interval-s !important;
+
+    > .in {
+
+        > .hd {
+            display: none !important;
+        }
+    }
+}
+
+%area-page-no-header { //沒有 header 的內頁模組
+    margin-top: $interval-m !important;
+
+    > .in {
+
+        > .hd {
+            display: none !important;
+        }
+    }
+}
+
+%area-mobile-no-header { //沒有 header 的手機側欄模組
+    margin-top: $interval-m !important;
+
+    > .in {
+
+        > .hd {
+            display: none !important;
+        }
+    }
+}
+
+%area-module { //首頁模組
+
+    [data-index][data-type="0"], [data-index][data-type="2"], [data-index][data-type="4"] {
+
+        > .in {
+            /*margin-left: $interval-m;
+            margin-right: $interval-m;*/
+        }
+    }
+
+    [data-index][data-type] {
+
+        > .in {
+            /*margin-top: $interval-l;
+            margin-bottom: $interval-l;*/
+        }
+    }
+
+    [data-index][data-type] + .is-hide-header { //在首頁模組上下 ".is-hide-header" 的樣式
+
+        > .in {
+            @extend %area-module-no-header;
+        }
+    }
+}
+
+%area-page { //內頁模組
+
+    [data-type] + [data-type] {
+        margin-bottom: $interval-xl;
+    }
+
+    [data-type] + .is-hide-header { //在內頁模組上下 ".is-hide-header" 的 margin 樣式
+        @extend %area-page-no-header;
+    }
+}
+
+%area-mobile { //手機側欄模組
+
+    [data-index][data-type="0"], [data-index][data-type="2"], [data-index][data-type="4"] {
+
+        > .in {
+            margin-top: $interval-m;
+            margin-right: $interval-m;
+            margin-bottom: $interval-m;
+            margin-left: $interval-m;
+        }
+    }
+
+    .is-hide-header { //在手機側欄模組上下 ".is-hide-header" 的 margin 樣式
+
+        > .in {
+            @extend %area-mobile-no-header;
+        }
+    }
+}
+
+//元件預設樣式================================================================
+
+%a { //顯示文字連結顏色
+    $color: #08c;
+
+    color: $color;
+    text-decoration: underline;
+
+    &:hover, &:focus {
+        color: deeper($color);
+        text-decoration: none;
+    }
+}
+
+%header { //模組、內頁 title
+
+    > .in {
+        h2,h4, h3,>div {
+            @extend %ellipsis;
+            font-size: $font-size-xl;
+            padding-bottom: $interval-m;
+            border-bottom: $border;
+            margin-bottom: $interval-m;
+            line-height: 40px;
+            &::before{
+                
+            }
+        }
+
+    }
+
+
+
+    span {
+
+    }
+
+    a {
+
+    }
+}
+
+%caption { //標題組件
+    @extend %ellipsis;
+    margin-bottom: $interval-s;
+    font-size: $font-size-l;
+    font-weight: $font-weight-b;
+    color: $title-color;
+
+    span {
+        
+    }
+
+    a {
+        font-size: 1em;
+    }
+}
+
+%label { //標籤組件
+    margin: $interval-s 0;
+
+    ul {
+
+    }
+
+    li {
+
+    }
+
+    span {
+
+    }
+}
+
+%mark { //標籤組件
+    display: inline-block;
+    padding: 0px 8px;
+    padding-left: 22px;
+    vertical-align: middle;
+    color: $black;
+    font-size: $font-size-s;
+    //background-color: $btn-bg-color;
+    border-radius: 0;
+    margin-right: $interval-s;
+    background-image: image-url('icon-pic/dynDateTime.png');
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+
+%mark-absolute { //延伸的標籤組件
+    @extend %mark;
+    position: absolute;
+    bottom: $interval-m;
+    left: $interval-m;
+    z-index: 1;
+}
+
+%paragraph { //文章段落組件
+    margin: $interval-s 0;
+
+    p {
+        line-height: $line-height-m;
+    }
+
+    a {
+        @extend %a;
+    }
+
+    span {
+
+    }
+}
+%related-title{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    border-bottom: #ED1E79 solid 1px;
+    
+    a{
+        font-size: 1em;
+        color: #FFF;
+        line-height: 40px;
+        height: 40px;
+        display: inline-block;
+        padding: 0 30px 0 40px;
+        background: linear-gradient(90deg, #FF7FB1 0%, #ED1E79 100%);
+        background: -moz-linear-gradient(90deg, #FF7FB1 0%, #ED1E79 100%);
+        background: -webkit-linear-gradient(0deg, #FF7FB1 0%, #ED1E79 100%);
+        background: -o-linear-gradient(90deg, #FF7FB1 0%, #ED1E79 100%);
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            display: block;
+            width: 24px;
+            height: 24px;
+            //background-image: image-url('icon_file.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 20px 40px 0;
+            border-color: transparent #ffffff transparent transparent;
+        }
+    }
+}
+%btn-Moema {
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    vertical-align: middle;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+    &:focus {
+        border: none;
+        outline: none;
+    }
+    span{
+        vertical-align: middle;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        bottom: -20px;
+        right: -20px;
+        background: inherit;
+        border-radius: 60px;
+        z-index: -1;
+        opacity: 0.2;
+        -webkit-transform: scale3d(0.5, 0.5, 1);
+        transform: scale3d(0.5, 0.5, 1);
+    }
+    &:focus,
+    &:hover {
+        background:none;
+        text-shadow:none;
+        box-shadow:none;
+        -webkit-transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+        transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+        color: #ECEFF1;
+        background-color: $major-color;
+        -webkit-animation: anim-moema-1 0.3s forwards;
+        animation: anim-moema-1 0.3s forwards;
+        border: solid $major-color  1px;
+    }
+
+    &:focus:after,
+    &:hover:after {/*水波*/
+        -webkit-animation: anim-moema-2 0.3s 0.3s forwards;
+        animation: anim-moema-2 0.3s 0.3s forwards;
+    }
+    @-webkit-keyframes anim-moema-1 {
+        60% {
+            -webkit-transform: scale3d(0.8, 0.8, 1);
+            transform: scale3d(0.8, 0.8, 1);
+        }
+        85% {
+            -webkit-transform: scale3d(1.1, 1.1, 1);
+            transform: scale3d(1.1, 1.1, 1);
+        }
+        100% {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+    @keyframes anim-moema-1 {
+        60% {
+            -webkit-transform: scale3d(0.8, 0.8, 1);
+            transform: scale3d(0.8, 0.8, 1);
+        }
+        85% {
+            -webkit-transform: scale3d(1.1, 1.1, 1);
+            transform: scale3d(1.1, 1.1, 1);
+        }
+        100% {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+    @-webkit-keyframes anim-moema-2 {
+        to {
+            opacity: 0;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+    @keyframes anim-moema-2 {
+        to {
+            opacity: 0;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+}
+%btn { //按鈕組件
+    display: inline-block;
+    padding: 12.5px 32px;
+    border-radius: 0px;
+    box-sizing: border-box;
+    line-height: 1;
+    text-align: center;
+    vertical-align: middle;
+    color: $white;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-decoration: none;
+    background-color: #333333;
+    font-weight: bold;
+    position: relative;
+    @extend %btn-Moema;
+    @include media('phone') {
+        font-size: 1em;
+        padding: 12.5px 28px;
+    }
+
+    &:hover, &:focus {
+        background-color: $minor-color!important;
+        border-color: $minor-color!important; 
+    }
+
+    &:active {
+        color: $btn-text-color;
+    }
+}
+
+%btn-s { //小按鈕組件
+    @extend %btn;
+    //padding: $btn-padding-xs;
+}
+
+%btn-imp { // important 重要的按鈕組件
+    background-color: $minor-color;
+
+    &:hover, &:focus {
+        background-color: $minor-color;
+    }
+}
+%btn-tool { // tool 內頁 icon工具列
+    display: block;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: $transition;
+    font-size: .5em;
+    text-align: center;
+    line-height: 20px;
+    font-weight: normal;
+    background-color: #333;
+    border: none;
+    border-radius: 50px;
+    padding: 5px 0;
+    //letter-spacing: -1px;
+    color: #FFF;
+    background-size: cover;
+    box-shadow: none;
+    /*-moz-transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;*/
+    transition: all .4s ease-out;
+    &:hover, &:focus {
+        background-color: $minor-color;
+        border: 1px solid rgba(217,214,210,1);
+        box-shadow:rgba(217,214,210,1) 0 0px 3px;
+        /*-moz-transform:scale(1.2);
+        -webkit-transform:scale(1.2);
+        -o-transform:scale(1.2);
+        -ms-transform:scale(1.2);*/
+        transform:scale(1.2);
+    }
+}
+
+%input { //輸入框組件
+    padding: 8px 10px;
+    border: $input-border;
+    box-sizing: border-box;
+    background-color: $input-bg-color;
+    vertical-align: middle;
+    box-sizing: border-box;
+    //line-height: 28px;
+    color: #000;
+    border-radius: 3px;
+    font-size: 1em !important;
+}
+
+%article { //文章區塊組件
+    line-height: $line-height-m;
+
+    p {
+
+        + p {
+            margin-top: $interval-l;
+        }
+    }
+    
+    a {
+        @extend %a;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+%article-extend { //延伸的文章區塊組件
+    @extend %article;
+}
+
+%footer { //footer 按鈕
+    position: absolute;
+    top: 13px;
+    right: 0;
+
+    > .in {
+
+    }
+
+    ul {
+        text-align: right;
+    }
+
+    li {
+        display: inline-block;
+
+        + li {
+            margin-left: $interval-xs;
+        }
+    }
+
+    span {
+        display: block;
+        background-image: none !important;
+    }
+
+    a {
+        @extend %btn;
+    }
+}
+
+%list { //列表樣式
+    display: block;
+    /*padding: $interval-m;
+    background-color: $light;*/
+    padding: 0px 16px;
+    background-color: $light;
+    line-height: 32px;
+    transition: $transition;
+    box-sizing: border-box;
+    border-radius: 0px;
+    border-left: #ed1e79 solid 4px;
+}
+
+%list-hover { //列表 :hover 樣式
+
+    &:hover,&:focus {
+        color: $minor-color;
+    }
+}
+//快速取用樣式================================================================
+
+%mask { //圖片遮罩
+    position: relative;
+    display: block;
+
+    &:after {
+        content: $content;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: transparent;
+        transition: $transition;
+    }
+
+    &:hover, &:focus {
+
+        &:after {
+            background-color: $black;
+            background-color: rgba($black, $opacity-l);
+        }
+    }
+}
+
+%mask-link { //圖片遮罩
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+//背景與圖示================================================================
+
+%bg-cover { // cover 底圖
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+%bg-contain { // contain 底圖
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+%icon { //偽類作為行內icon的方法
+    content: $content;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -4px;
+}
+
+%icon-pic { //偽類作為行內icon-pic的方法，請參閱 /bace/icon-pic
+    content: $content;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -4px;
+}
+
+%icon-font { //偽類作為行內icon-font的方法，請參閱 /bace/icon-font
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin bg-to-pic($img-src, $size: true, $height: null) { //依圖改變大小並置中，$img-src為圖片檔名，$size為false就不匯出寬高，參數為數字就會出指定倍數大小，$size為數字帶單位就會匯出指定大小，若指定$height就會當作高度使用
+    background-image: image-url($img-src);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @if( $size == true ) { //如果是 true 就匯出大小
+        width: image-width($img-src);
+        height: image-height($img-src);
+
+    } @else if( $size == false ) { //如果是 false 就不匯出大小
+        
+    } @else { //如果是數字就會出指定大小
+        background-size: contain;
+
+        @if( $height != null ) { //如果有 $height 就給高
+            
+            @if( unitless($height) ) { //沒單位就是倍數
+                height: round( image-height($img-src) * $height);
+
+            } @else { //有單位就直接使用
+                height: $height;
+            }
+
+        } @else { //如果沒 $height ，高度就是 $size
+            
+            @if( unitless($size) ) { //沒單位就是倍數
+                height: round( image-height($img-src) * $size);
+
+            } @else { //有單位就直接使用
+                height: $size;
+            }
+        }
+
+        @if( unitless($size) ) { //沒單位就是倍數
+            width: round( image-width($img-src) * $size);
+
+        } @else { //有單位就直接使用
+            width: $size;
+        }
+    }
+}
+
+@mixin icon-pic($img-name, $size: true, $height: null) { //取雪碧圖icon，$img-name為圖片檔名，$size為false就不匯出寬高，$size為數字就會出指定倍數大小，$size為數字帶單位就會出指定指定大小，若指定第$height就會當作高度使用
+
+    @if( str-index( $img-name, '.png') ) { //如果有副檔名就拿掉
+        $img-name: str-slice( $img-name, 1, str-index( $img-name, '.png') - 1);
+    }
+
+    @extend %icon-pic;
+
+    @if( $size == true ) { //如果是 true 就匯出大小並使用sprites圖片
+
+        @if($debug) {
+            @extend .icon-pic-#{ $img-name };
+        }@else {
+            @extend .icon-pic-#{ $img-name } !optional;
+        }
+        
+        width: image-width('icon-pic/#{$img-name}.png');
+        height: image-height('icon-pic/#{$img-name}.png');
+
+    } @else {
+        @include bg-to-pic('icon-pic/#{$img-name}.png', $size, $height);
+    }
+}
+
+@mixin icon-font($font) { //文字圖示，列表請參閱 https://icomoon.io/
+    
+    @extend %icon-font;
+
+    @if($debug) {
+        @extend %icon-font-#{$font};
+    }@else {
+        @extend %icon-font-#{$font} !optional;
+    }
+
+    font-size: $icon-font-size;
+    color: $icon-font-color;
+}
+
+@mixin icon-pic-btn($img-name, $size: true, $height: null) { //只有icon圖片的按鈕，隱含佔用了 :before
+    @extend %hide-text;
+    display: inline-block;
+
+    &:before{
+        @include icon-pic( $img-name, $size, $height );
+        display: block !important;
+    }
+}
+
+//簡易動畫 上下左右移動
+%animate-go-top { 
+
+    opacity: 0;
+    transform: translateY(200px);
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    @include media('mobile') {
+        transition: all .1s ease-out;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    .run-animate &{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+%animate-go-down { 
+
+    opacity: 0;
+    transform: translateY(-200px);
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    @include media('mobile') {
+        transition: all .1s ease-out;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    .run-animate &{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+%animate-go-right { 
+    
+    opacity: 0;
+    transform: translateX(-200px);
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    @include media('mobile') {
+        transition: all .1s ease-out;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    .run-animate &{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+%animate-go-left { 
+
+    opacity: 0;
+    transform: translateX(200px);
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    @include media('mobile') {
+        transition: all .1s ease-out;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    .run-animate &{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.animate-go-top { 
+    
+    opacity: 0;
+    transform: translateY(200px);
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    @include media('mobile') {
+        transition: all .1s ease-out;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    .run-animate &{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.animate-go-down { 
+
+    opacity: 0;
+    transform: translateY(-200px);
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    @include media('mobile') {
+        transition: all .1s ease-out;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    .run-animate &{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.animate-go-right { 
+    
+    opacity: 0;
+    transform: translateX(-200px);
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    @include media('mobile') {
+        transition: all .1s ease-out;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    .run-animate &{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.animate-go-left { 
+
+    opacity: 0;
+    transform: translateX(200px);
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    @include media('mobile') {
+        transition: all .1s ease-out;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    .run-animate &{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
