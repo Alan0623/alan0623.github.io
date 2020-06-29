@@ -1,3 +1,6 @@
+/*------------------------------------------------------------------
+light box
+------------------------------------------------------------------*/
 $(function() {
     var imgOpts = $.extend(true, {}, $.fancybox.defaults, {
         caption : function( instance, item ) {
@@ -9,48 +12,73 @@ $(function() {
     function applyImgOpts() {
         $('[data-fancybox="images"]').fancybox(imgOpts);
     }
-
-    $("#imgOpts select").change(function () {
-        var opt = $(this).attr("id");
-        var val = $(this).val();
-
-        imgOpts[opt] = val === "" ? false : val;
-
-        // Make "fade" transiton faster than others
-        if (opt === 'transitionEffect') {
-            imgOpts['transitionDuration'] = opt === 'fade' ? 330 : 550;
-        }
-
-        applyImgOpts();
-    });
-
-    $("#imgOpts input[type=radio][name=lang]").on("change", function () {
-        imgOpts.lang = $(this).val();
-
-        applyImgOpts();
-    });
-
-    $("#imgOpts .toggle").change(function () {
-        if (this.id === 'thumbs') {
-            imgOpts.thumbs.autoStart = this.checked ? true : false;
-        } else {
-            imgOpts[this.id] = this.checked ? true : false;
-        }
-
-        applyImgOpts();
-    });
-
-    $("#imgOpts .buttons").change(function () {
-        var buttonArr = $('input:checkbox:checked.buttons').map(function () {
-            return this.value;
-        }).get();
-
-        buttonArr.push('close');
-
-        imgOpts.buttons = buttonArr;
-
-        applyImgOpts();
-    });
-
     applyImgOpts();
+});
+/*------------------------------------------------------------------
+主選單
+------------------------------------------------------------------*/
+$(function() {
+    $(function(){ $('.nav_style li:nth-child(1) a').click(function(){ 
+        $('html,body').animate({scrollTop:$('#NEWS').offset().top - 80}, 500); 
+        });  
+    }); 
+    $(function(){ $('.nav_style li:nth-child(2) a').click(function(){ 
+        $('html,body').animate({scrollTop:$('#ABOUT').offset().top - 80}, 500); 
+        });  
+    }); 
+    $(function(){ $('.nav_style li:nth-child(3) a').click(function(){ 
+        $('html,body').animate({scrollTop:$('#CRYSTALS').offset().top + 435}, 500); 
+        });  
+    }); 
+    $(function(){ $('.nav_style li:nth-child(4) a').click(function(){ 
+        $('html,body').animate({scrollTop:$('#RESEARCH_TOPICS').offset().top + 135}, 500); 
+        });  
+    }); 
+    $(function(){ $('.nav_style li:nth-child(5) a').click(function(){ 
+        $('html,body').animate({scrollTop:$('#FACILITIES').offset().top - 132}, 500); 
+        });  
+    }); 
+    $(function(){ $('.nav_style li:nth-child(6) a').click(function(){ 
+        $('html,body').animate({scrollTop:$('#TEAM').offset().top - 80}, 500); 
+        });  
+    }); 
+    $(function(){ $('.nav_style li:nth-child(7) a').click(function(){ 
+        $('html,body').animate({scrollTop:$('#CONTACT').offset().top - 80}, 500); 
+        });  
+    }); 
+});
+/*------------------------------------------------------------------
+主選單
+------------------------------------------------------------------*/
+$(function(){
+    //control display of goTop button and motion
+    $("#gotop").click(function(){
+        jQuery("html,body").animate({
+            scrollTop:0
+        },1000);
+    });
+    $(window).scroll(function() {
+        if ( $(this).scrollTop() > 150){
+            $('#gotop').fadeIn("fast");
+        } else {
+            $('#gotop').stop().fadeOut("fast");
+        }
+    });
+});
+/*------------------------------------------------------------------
+手機板 主選單 按鈕 icon效果
+------------------------------------------------------------------*/
+$(document).ready(function () {
+    $(".open_nav").click(function() {
+        $(this).toggleClass("open");
+        $(".main_menu").slideToggle(500);
+        window.addEventListener('resize', function () {
+            if ($(window).width() > 768) {
+                $(".main_menu").removeAttr("style");
+                $(".open_nav").removeClass("open");  
+            }
+            else {
+            }
+        });
+    });
 });
