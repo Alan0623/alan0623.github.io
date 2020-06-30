@@ -168,20 +168,19 @@
             <span>:::</span>
         </a>
         <a id="gotop" href="#"><span>go top</span></a>
-        <section id="master_Vision">
-            <!--div class="slider-wrapper theme-default">
-                <ul id="slider" class="nivoSlider">
-                    <li>
-                        <img class="high_contrast_hide" src="images/banner1_mobile.jpg" alt=""/>
-                        <img class="high_contrast_show" src="images/banner1_pc.jpg"  alt=""/>
-                    </li>
-                </ul>
-            </div>"slider-wrapper-->
-            <div>
+        <section id="master_Vision" class="PC">
+            <div id="slider_PC">
                 <div id="slider" class="nivoSlider">
-                    <img src="images/banner/banner1.jpg" alt="" />
-                    <img src="images/banner/banner2.jpg" alt=""/>
-                    <img src="images/banner/banner3.jpg" alt="" />
+                    <img src="images/banner/banner1.jpg" alt="Grow with Innovation" />
+                    <img src="images/banner/banner2.jpg" alt="Taiwan and The Baltic states"/>
+                    <img src="images/banner/banner3.jpg" alt="Explore the Physic of the Early Universe CCR, NSYSU Joins the CMS Project at LHC, CERN" />
+                </div>
+            </div>
+            <div id="slider_PAD">
+                <div id="slider" class="nivoSlider">
+                    <img src="images/banner/banner1s.jpg" alt="Grow with Innovation" />
+                    <img src="images/banner/banner2s.jpg" alt="Taiwan and The Baltic states"/>
+                    <img src="images/banner/banner3s.jpg" alt="Explore the Physic of the Early Universe CCR, NSYSU Joins the CMS Project at LHC, CERN" />
                 </div>
             </div>
         </section><!--#master_Vision-->
@@ -769,7 +768,19 @@
     <script src="js/effect.js"></script>
     <script type="text/javascript">
     $(window).load(function() {
-        $('#slider').nivoSlider({
+        $('#slider_PC #slider').nivoSlider({
+            effect: 'fade',
+            slices: 15, // slice動畫效果參數，For slice animations 
+            boxCols: 8, // box動畫效果參數，For box animations
+            boxRows: 4, // For box animations
+            animSpeed: 500, // 動畫變化速度，Slide transition speed
+            pauseTime: 3000, // 每個影像的展示時間，How long each slide will show
+            startSlide: 0, // 設定起始幻燈片，Set starting Slide (0 index)
+            directionNav: true, // 是否顯示“上一個”和“下一個”導航Next & Prev navigation
+            directionNavHide: true, //是否懸浮顯示導航
+            pauseOnHover: true // 滑鼠停在圖片時暫停換場
+        });
+        $('#slider_PAD #slider').nivoSlider({
             effect: 'fade',
             slices: 15, // slice動畫效果參數，For slice animations 
             boxCols: 8, // box動畫效果參數，For box animations
