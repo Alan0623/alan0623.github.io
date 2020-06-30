@@ -1,0 +1,199 @@
+/*------------------------------------------------------------------
+內頁
+------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+article#TEAM_INFO
+------------------------------------------------------------------*/
+article#TEAM_INFO{
+	background-color: #fff;
+	// padding-bottom: 105px;
+	background-color: #F6F6F6;
+	background-image: url(../images/bg_facilities2.gif),
+	url(../images/bg_team1.gif);
+    background-repeat: no-repeat,no-repeat;
+    // background-size: contain;
+    background-position: center top,center bottom;
+    padding-top: $menu-hight;
+    
+	@media (max-width: #{$web-width + 1}) {
+        background-image: none;
+        padding-top: $pad-menu-hight;
+	}
+	h2{
+		color: $major-color;
+	}
+	.bg_pad_research{
+		display: none;
+		opacity: 0;
+		width: 100%;
+		float: left;
+		@media (max-width: #{$web-width + 1}) {
+			display: block;
+			opacity: 1;
+		}
+	}
+	section.content{
+		@extend %clear;
+		@media (max-width: #{$web-width + 1}) {
+			display: block;
+			width: 100%;
+		}
+		.text,
+		.card{
+			// float: left;
+            box-sizing: border-box;
+            float: right;
+            position: relative;
+			@media (max-width: #{$web-width + 1}) {
+				display: block;
+                float: left;
+                min-width: 600px;
+            }
+            @media (max-width: #{$phone-width + 1}) {
+                min-width: 100%;
+            }
+		}
+		.text{
+            width: 60%;
+            padding-right: 16px;
+            @media (max-width: #{$web-width + 1}) {
+                padding-top: 20%;
+                padding-right: 0;
+                width: 100%!important;
+            }
+            .sub_title{
+                margin-bottom: 20px;
+                display: block;
+            }
+            >div{
+                margin-bottom: 40px;
+                text-align: justify;
+            }
+			p{
+				padding-bottom: 24px;
+				text-align: justify;
+			}
+			ol{
+				padding-left: 26px;
+				margin-top: 20px;
+				margin-bottom: 16px;
+				li{
+					padding-left: 4px;
+					margin-bottom: 20px;
+				}
+            }
+            ul{
+                li{
+                    position: relative;
+                    font-size: 0.9em;
+                    padding-left: 24px;
+                    &::after{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 14px;
+                        left: 2px;
+                        z-index: 2;
+                        width: 12px;
+                        height: 2px;
+                        // border-radius: 50%;
+                        background-color: $hover-color;
+                    }
+                }
+            }
+		}
+		.card{
+            width: 40%;
+			padding-left: 16px;
+			text-align: right;
+			
+			.img{
+				img{
+                    width: 80%;
+					@media (max-width: #{$web-width + 1}) {
+						width: 80%;
+					}
+				}
+			}
+			.info{
+				text-align: left;
+				background-color: #FAFAFA;
+				position: absolute;
+				z-index: 2;
+				bottom: -28%;
+				width: 80%;
+				padding: 24px 16px;
+                @media (max-width: #{$web-width + 1}) {
+                    bottom: -20%;
+                }
+				.name{
+					color: $major-color;
+					font-size: 1.6em;
+					font-weight: bold;
+					display: block;
+					padding-bottom: 12px;
+					border-bottom: #ECECEC solid 2px;
+					margin: 0 -16px;
+					margin-bottom: 12px;
+					padding-left: 28px;
+				}
+				ul{
+					li{
+						position: relative;
+						font-size: 0.9em;
+						padding-left: 14px;
+						&::after{
+							content: "";
+							display: block;
+							position: absolute;
+							top: 14px;
+							left: 2px;
+							z-index: 2;
+							width: 4px;
+							height: 4px;
+							border-radius: 50%;
+							background-color: $hover-color;
+						}
+					}
+				}
+			}
+		}
+    }
+    
+	section.content.Research{
+		padding-bottom: 380px;
+		display: block;
+		@media (max-width: #{$web-width + 1}) {
+		background-color: #F6F6F6;
+		padding-bottom: 0px;
+		}
+		.text{
+			width: 58%;
+			@media (max-width: #{$web-width + 1}) {
+				width: 100%;
+			}
+		}
+	}
+}
+.btn_back{
+    display: block;
+    width: 200px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    margin: 0 auto;
+    background: $major-color;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none!important;
+    color: #FFF!important;
+    clear: both;
+    font-size: 1.125em;
+    font-weight: bold;
+    margin-bottom: 44px;
+    float: right;
+    @media (max-width: #{$web-width + 1}) {
+        float: unset;
+    }
+}
