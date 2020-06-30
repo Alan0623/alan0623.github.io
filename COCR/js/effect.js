@@ -18,35 +18,35 @@ $(function() {
 主選單
 ------------------------------------------------------------------*/
 $(function() {
-    $(function(){ $('.nav_style li:nth-child(1) a').click(function(){ 
-        $('html,body').animate({scrollTop:$('#NEWS').offset().top - 80}, 500); 
-        });  
-    }); 
-    $(function(){ $('.nav_style li:nth-child(2) a').click(function(){ 
-        $('html,body').animate({scrollTop:$('#ABOUT').offset().top - 80}, 500); 
-        });  
-    }); 
-    $(function(){ $('.nav_style li:nth-child(3) a').click(function(){ 
-        $('html,body').animate({scrollTop:$('#CRYSTALS').offset().top + 435}, 500); 
-        });  
-    }); 
-    $(function(){ $('.nav_style li:nth-child(4) a').click(function(){ 
-        $('html,body').animate({scrollTop:$('#RESEARCH_TOPICS').offset().top + 135}, 500); 
-        });  
-    }); 
-    $(function(){ $('.nav_style li:nth-child(5) a').click(function(){ 
-        $('html,body').animate({scrollTop:$('#FACILITIES').offset().top - 132}, 500); 
-        });  
-    }); 
-    $(function(){ $('.nav_style li:nth-child(6) a').click(function(){ 
-        $('html,body').animate({scrollTop:$('#TEAM').offset().top - 80}, 500); 
-        });  
-    }); 
-    $(function(){ $('.nav_style li:nth-child(7) a').click(function(){ 
-        $('html,body').animate({scrollTop:$('#CONTACT').offset().top - 80}, 500); 
-        });  
-    }); 
+    $('.nav_style li:nth-child(1) a').click(function(){ 
+        $('html,body').animate({scrollTop:$('#NEWS').offset().top}, 500); 
+    });  
+
+    $('.nav_style li:nth-child(2) a').click(function(){ 
+        $('html,body').animate({scrollTop:$('#ABOUT').offset().top}, 500); 
+    });  
+   
+    $('.nav_style li:nth-child(3) a').click(function(){ 
+        $('html,body').animate({scrollTop:$('#CRYSTALS').offset().top}, 500); 
+    });  
+//  + 435
+    $('.nav_style li:nth-child(4) a').click(function(){ 
+        $('html,body').animate({scrollTop:$('#RESEARCH_TOPICS').offset().top}, 500); 
+    });  
+//  135
+    $('.nav_style li:nth-child(5) a').click(function(){ 
+        $('html,body').animate({scrollTop:$('#FACILITIES').offset().top }, 500); 
+    });  
+//  - 132
+    $('.nav_style li:nth-child(6) a').click(function(){ 
+        $('html,body').animate({scrollTop:$('#TEAM').offset().top}, 500); 
+    });  
+ 
+    $('.nav_style li:nth-child(7) a').click(function(){ 
+        $('html,body').animate({scrollTop:$('#CONTACT').offset().top}, 500); 
+    });  
 });
+
 /*------------------------------------------------------------------
 主選單
 ------------------------------------------------------------------*/
