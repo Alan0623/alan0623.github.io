@@ -1,0 +1,459 @@
+/*------------------------------------------------------------------
+Reset
+------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+body {line-height: 1;min-width: 300px;height: 100%;padding: 0; margin: 0;font-family: $base-font-style;font-size: 1em;}
+ul, ul li{list-style: none;padding: 0;margin: 0;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: '';ontent: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+/* Safari、Chrome、IE9、Opera */::selection {background:$deep-gray;color: $white;.high_contrast &{background:#fefe00;;color:black;}}
+/* Firefox */::-moz-selection {background:$major-color;color: $white;.high_contrast &{background:#fefe00;;color:black;}}
+a{outline: none;}
+a, a:active, a:hover{text-decoration: none;}
+
+/*------------------------------------------------------------------
+Reset HTML5
+------------------------------------------------------------------*/
+article,aside,dialog,footer,header,section,footer,nav,figure,menu,details,figcaption,figure,hgroup{display:block;}
+audio, canvas, video{display: inline-block; *display: inline; *zoom: 1;}
+audio:not([controls]){display: none;}
+[hidden]{display: none;}
+
+/*------------------------------------------------------------------
+整個網站 首頁 內頁 介面樣式 header
+------------------------------------------------------------------*/
+html, body{
+	background-color: $minor-color;
+	position: relative;
+	min-width: 375px;
+}
+.sr-only {/*跳到主要內容區塊*/
+	color: $white;
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 9998;
+	padding:0;
+	border-radius: $border-radius;
+	white-space: nowrap;
+	overflow: hidden;
+	&:focus{
+		background:$major-color;
+		padding: 8px 10px;
+		width: auto;
+		height: auto;
+	}
+}
+#wrapper{
+	min-height: 100vh;
+	position: relative;
+}
+/*------------------------------------------------------------------
+選單
+------------------------------------------------------------------*/
+
+#head{
+	position: fixed;
+	height: $menu-hight;
+	width: 100%;
+	background-color: $minor-color;
+	z-index: 9900;
+	box-shadow: rgba(0,0,0,0.35)2px 2px 4px;
+	@include media('web'){
+		height: $pad-menu-hight;
+	}
+}
+#head_bar{
+	@extend %center;
+	padding: 0 32px;
+	height: $menu-hight;
+	@include media('web'){
+		text-align: center;
+		height: $pad-menu-hight;
+		padding: 0;
+	}
+	.logo{
+		display: block;
+		width: 332px;
+		height: $pad-menu-hight;
+		background-image: url(../images/logo.png);
+		background-size: contain;
+		@extend %hide-text;
+		margin: 11px 0;
+		float: left;
+		position: relative;
+		z-index: 2;
+		width: 282px;
+		height: 56px;
+		margin: 16px 0;
+		@include media('web'){
+			width: 262px;
+			height: 52px;
+			margin: 7px auto;
+			float: none;
+			clear: both;
+			background-repeat: no-repeat;
+			padding-left: 64px;
+			background-position: right;
+		}
+		@media (max-width: #{$minphone-width + 1}) {
+			width: 222px;
+			height: 44px;
+			margin: 11px auto;
+		}
+	}
+	.main_menu{ //主選單
+		position: relative;
+		height: $menu-hight;
+		width: 100%;
+		@include media('web'){
+			display: none;
+		}
+		#accesskey_M{
+			display: none;
+		}
+		.nav_style{
+			position: absolute;
+			right: 0;
+			top: 33.5px;
+			list-style-type: none;
+			
+			@include media('web'){
+				top: 0px;
+				width: 100%;
+				padding: 5px 0;
+				background-color: rgba(0, 0, 0, 0.8);
+				background: var(--backdropColor);
+				backdrop-filter: blur(5px);
+				box-sizing: border-box;
+				opacity: 1;
+				--backdropColor: hsla(0,0%,0%,0.8);
+			}
+			li{
+				float: left;
+				@include media('web'){
+					width: 100%;
+					// background-color: rgba(0, 0, 0, 0.6);
+					border-bottom: rgba(0, 0, 0, 0.8) solid 1px;
+				}
+				a{
+					color: $white;
+					display: inline-block;
+					@include media('web'){
+						width: 100%;
+						
+					}
+					.loader{
+						padding: 0 1.125em;
+						display: inline-block;
+						margin: 0 auto;
+						@media (max-width: #{$pc-width + 1}) {
+							padding: 0 1em;
+						}
+						span{
+							display: inline-block;
+							transition: all 0.8s ease;
+							padding: 0 0.05em;
+							font-size: 1.2em;
+							float: left;
+							@include media('web'){
+							line-height: 2.4em;
+							}
+						}
+					}
+				}
+				a:focus,
+        		a:hover{
+					.loader{
+						span{
+							-moz-animation: loading 1s linear infinite -0.8s;
+							-webkit-animation: loading 1s linear infinite -0.8s;
+							animation: loading 1s linear infinite -0.8s;
+							float: left;
+							// margin: 0 1px;
+							// color:white;
+						}
+						.span2 {
+						-moz-animation: loading 1s linear infinite -0.2s;
+						-webkit-animation: loading 1s linear infinite -0.2s;
+						animation: loading 1s linear infinite -0.2s;
+						}
+						.span3 {
+						-moz-animation: loading 1s linear infinite -0.5s;
+						-webkit-animation: loading 1s linear infinite -0.5s;
+						animation: loading 1s linear infinite -0.5s;
+						}
+						.span4 {
+						-moz-animation: loading 1s linear infinite -1.1s;
+						-webkit-animation: loading 1s linear infinite -1.1s;
+						animation: loading 1s linear infinite -1.1s;
+						}
+						.span5 {
+						-moz-animation: loading 1s linear infinite -0.36s;
+						-webkit-animation: loading 1s linear infinite -0.36s;
+						animation: loading 1s linear infinite -0.36s;
+						}
+						.span6 {
+						-moz-animation: loading 1s linear infinite -0.65s;
+						-webkit-animation: loading 1s linear infinite -0.65s;
+						animation: loading 1s linear infinite -0.65s;
+						}
+						.span7 {
+						-moz-animation: loading 1s linear infinite -0.93s;
+						-webkit-animation: loading 1s linear infinite -0.93s;
+						animation: loading 1s linear infinite -0.93s;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.open_nav{
+	display: block;
+	position: absolute;
+	z-index: 99999;
+	left: 10px;top:8px;
+	width: 45px;
+	height: 45px;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	cursor: pointer;
+	border-radius: 3px;
+	@media screen and (min-width: 1261px){
+		display: none!important;
+	}
+	h2{@extend %hide-text;
+		height: 0;
+		opacity: 0;
+	}
+	b{
+		position: absolute;
+		top: 35%;
+		right: 110%;
+		font-weight: normal;
+		font-size:  0.75em;
+		display: none;
+	}
+	.icon{
+	transition-duration: 0.2s;
+	position: absolute;
+	width: 30px;
+	height: 2px;
+	background-color: #FFF;
+	top: 22px;
+	left: 8px;
+	cursor: pointer;
+	&:before, &:after{
+		transition-duration: 0.5s;
+		background-color: #FFF;
+		position: absolute;
+		content: "";
+		width: 30px;
+		height: 2px;
+		left: 0px;
+	}
+	&:before{
+		top: -10px;
+		height: 2px;
+	}    
+	&:after{
+		top: 10px;
+	}
+	}
+	&:focus,&:hover{
+	// background-color: $hover-color;
+		.icon{
+			background-color: $hover-color;
+			&:before, &:after{
+			background-color: $hover-color;
+			}
+		}
+	}
+	&.open{
+		.icon{
+		background-color: transparent;    
+		&:before, &:after{
+			top: 0;
+		}    
+		&:before{
+			transform: rotate(-45deg);
+			-webkit-transform: rotate(-45deg);
+			height: 2px;
+		}      
+		&:after{
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+		}
+		}
+	}
+}
+
+@-moz-keyframes loading {
+	0%, 100% {
+	-moz-transform: scale(1) rotateZ(0deg);
+	transform: scale(1) rotateZ(0deg);
+	opacity: 1;
+	}
+
+	26% {
+	-moz-transform: scale(1.1) rotateZ(12deg);
+	transform: scale(1.1) rotateZ(12deg);
+	opacity: .2;
+	}
+
+	76% {
+	-moz-transform: scale(0.8) rotateZ(-8deg);
+	transform: scale(0.8) rotateZ(-8deg);
+	opacity: .6;
+	}
+}
+@-webkit-keyframes loading {
+	0%, 100% {
+	-webkit-transform: scale(1) rotateZ(0deg);
+	transform: scale(1) rotateZ(0deg);
+	opacity: 1;
+	}
+
+	26% {
+	-webkit-transform: scale(1.1) rotateZ(12deg);
+	transform: scale(1.1) rotateZ(12deg);
+	opacity: .2;
+	}
+
+	76% {
+	-webkit-transform: scale(0.8) rotateZ(-8deg);
+	transform: scale(0.8) rotateZ(-8deg);
+	opacity: .6;
+	}
+}
+@keyframes loading {
+	0%, 100% {
+	-moz-transform: scale(1) rotateZ(0deg);
+	-ms-transform: scale(1) rotateZ(0deg);
+	-webkit-transform: scale(1) rotateZ(0deg);
+	transform: scale(1) rotateZ(0deg);
+	opacity: 1;
+	}
+
+	26% {
+	-moz-transform: scale(1.1) rotateZ(12deg);
+	-ms-transform: scale(1.1) rotateZ(12deg);
+	-webkit-transform: scale(1.1) rotateZ(12deg);
+	transform: scale(1.1) rotateZ(12deg);
+	opacity: .2;
+	}
+
+	76% {
+	-moz-transform: scale(0.8) rotateZ(-8deg);
+	-ms-transform: scale(0.8) rotateZ(-8deg);
+	-webkit-transform: scale(0.8) rotateZ(-8deg);
+	transform: scale(0.8) rotateZ(-8deg);
+	opacity: .6;
+	}
+}
+/*------------------------------------------------------------------
+整個網站 首頁 內頁 介面樣式 footer#fatfooter
+------------------------------------------------------------------*/
+footer#fatfooter{
+	color: $white;
+	@extend %center;
+	padding: 24px 0;
+	@include media('mobile'){
+		padding: 0;
+	}
+	@include media('phone'){
+		margin-bottom: 24px;
+	}
+	ul.footer_info{
+		padding: 0 32px;
+		li{
+			font-size: 1.2em;
+			line-height: 1.5em;
+			@include media('web'){
+				clear: both;
+				width: 100%;
+				text-align: center;
+			}
+			@include media('phone'){
+				font-size: 1em;
+			}
+			&:nth-child(1){
+				float: left;
+				padding-right: 36px;
+				@include media('web'){
+				padding-top: 32px;
+				padding-right: 0;
+				float: unset;
+				}
+			}
+			&:nth-child(2){
+				padding-top: 10px;
+			}
+			a{
+				display: block;
+			}
+			img{
+				max-width: 345px;
+				@include media('mobile'){
+					width: 50%;
+    				margin: 0 auto;
+				}
+				@include media('phone'){
+					width: 70%;
+    				margin: 0 auto;
+				}
+				@media (max-width: #{$minphone-width + 1}) {
+					width: 60%;
+    				margin: 0 auto;
+				}
+			}
+		}
+	}
+}
+
+#gotop{
+	background-color: $major-color;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    opacity: 1;
+	padding: 8px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 401;
+	transform-origin: left;
+	transform: skewY(-20deg);
+	
+	&:hover{
+		background-color: $hover-color;
+	}
+	span{
+		display: block;
+		// transform-origin: left;
+		transform: skewY(20deg);
+		height: 44px;
+		width: 44px;
+		background-image: url(../images/gotop.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		@extend %hide-text;
+		@include media('phone'){
+			transform: scale(0.8) skewY(20deg);
+			width: 28px;
+			height: 32px;
+		}
+	}
+}
