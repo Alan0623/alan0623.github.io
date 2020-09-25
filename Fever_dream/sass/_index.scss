@@ -755,6 +755,7 @@ section{
 	@media (max-width: 500px) {
 		background-size: 210%,cover;
 		background-position: top left,top;
+		padding-bottom: 80px;
 	}
 	.content_contact_block{
 		&::after{
@@ -855,7 +856,7 @@ section{
 					background-color: rgba(255,255,255,0.7);
 				}
 				#botton{
-					max-width: 208px;
+					max-width: 120px;
 					float: right;
 					text-align: center;
 					padding: 0;
@@ -863,6 +864,7 @@ section{
 					// width: 50%;
 					width: auto;
 					color: #501686;
+					width: 120px;
 					cursor: pointer;
 					&:hover, &:focus{
 						background-color: $hover-color;
@@ -876,7 +878,7 @@ section{
 					display: inline-block;
 					line-height: 56px;
 					height: 56px;
-					font-size: 1.4em;
+					font-size: 1.2em;
 					border: black solid 1px;
 					box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 2px;
 					border-radius: 10px;
@@ -887,7 +889,7 @@ section{
 					position: relative;
 					padding-left: 64px;
 					padding-right: 24px;
-					width: 50%;
+					width: auto;
     				max-width: 400px;
 					@include media('mobile') {
 						padding-right: 8px;
@@ -896,6 +898,13 @@ section{
 					}
 					@include media('phone') {
 						width: auto;
+						font-size: 1.1em;
+					}
+					@media (max-width: 500px){
+						position: absolute;
+						top: 64px;
+						width: 100%;
+						max-width: 100%;
 					}
 					&::before{
 						display: block;
