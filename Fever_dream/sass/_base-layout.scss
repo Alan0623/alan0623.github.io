@@ -29,6 +29,9 @@ audio:not([controls]){display: none;}
 /*------------------------------------------------------------------
 整個網站 首頁 內頁 介面樣式 header
 ------------------------------------------------------------------*/
+a.hide{
+	display: none!important;
+}
 html, body{
 	background-color: $body-bgc;
 	position: relative;
@@ -68,16 +71,26 @@ html, body{
 	background-color: rgba(0,0,0,0.8);
 	z-index: 99;
 	box-shadow: rgba(0,0,0,0.35)2px 2px 4px;
-	@include media('web'){
+	backdrop-filter: blur(10px);
+	@include media('mobile'){
 		height: $pad-menu-hight;
 	}
 	.head_menu{
 		@extend %center;
 		padding: 0 32px;
+		@include media('mobile'){
+			height: 66px;
+		}
 		.head_menu_brand{
 			display: inline-block;
 			height: 88px;
 			float: left;
+			@include media('mobile'){
+				height: 66px;
+				float: none;
+				display: block;
+				text-align: center;
+			}
 			.logo{
 				display: block;
 				@extend %hide-text;
@@ -87,7 +100,10 @@ html, body{
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: contain;
-				
+				@include media('mobile'){
+					height: 66px;
+    				margin: 0 auto;
+				}
 			}
 		}
 	}
@@ -100,6 +116,14 @@ html, body{
 	.head_menu_nav_main{
 		float: right;
 		height: 88px;
+		@include media('mobile'){
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			left: 0;
+			display: none;
+		}
 		li{
 			height: 88px;
 			float: left;
@@ -107,6 +131,11 @@ html, body{
 			align-items: center;
 			justify-content: center;
 			margin: 0 16px;
+			@include media('mobile'){
+				width: 100%;
+				margin: 0;
+				height: 44px;
+			}
 			&::after{
 				content: "";
 				display: block;
@@ -118,6 +147,10 @@ html, body{
 				display: block;
 				font-size: 1.2em;
 				line-height: 1.4em;
+				@include media('mobile'){
+					width: 100%;
+					text-align: center;
+				}
 				&:hover ,&:focus{
 					color: $hover-color;
 				}
@@ -126,6 +159,10 @@ html, body{
 					display: block;
 					width: 100%;
 					text-align: center;
+					@include media('mobile'){
+						display: inline-block;
+						width: auto;
+					}
 				}
 				i{
 					display: block;
@@ -135,6 +172,10 @@ html, body{
 					font-weight: lighter;
 					font-size: 0.9em;
 					letter-spacing: 2px;
+					@include media('mobile'){
+						display: inline-block;
+						width: auto;
+					}
 				}
 			}
 		}
@@ -152,7 +193,7 @@ html, body{
 	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 	cursor: pointer;
 	border-radius: 3px;
-	@media screen and (min-width: 1261px){
+	@media screen and (min-width: 936px){
 		display: none!important;
 	}
 	h2{@extend %hide-text;

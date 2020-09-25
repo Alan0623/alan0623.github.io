@@ -159,7 +159,10 @@ body.compensate-for-scrollbar {
 
 .fancybox-slide--image {
     overflow: hidden;
-    padding: 44px 0;
+    padding: 44px 0!important;
+    // display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fancybox-slide--image::before {
@@ -351,7 +354,8 @@ body.compensate-for-scrollbar {
 /* Buttons */
 
 .fancybox-button {
-    background: rgba(30, 30, 30, .6);
+    // background: rgba(30, 30, 30, .6);
+    background-color: #501686;
     border: 0;
     border-radius: 0;
     box-shadow: none;
@@ -374,7 +378,7 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-button:hover {
-    color: #fff;
+    background-color: #F5A623;
 }
 
 .fancybox-button:focus {
@@ -404,7 +408,7 @@ body.compensate-for-scrollbar {
     position: relative;
 	width: 100%;
 	color: #FFF;
-    transform: skewY(20deg);
+    transform: skewY(0deg);
     @include media('web'){
         transform: skewY(0);
     }
@@ -450,13 +454,13 @@ body.compensate-for-scrollbar {
     cursor: pointer;
     opacity: 1;
     padding: 8px;
-    position: absolute;
+    position: fixed;
     right: -12px;
     top: -44px;
 	z-index: 401;
 	transform-origin: left;
-    transform: skewY(-20deg);
-    top: 48px!important;
+    transform: skewY(0deg);
+    top: 0;
 }
 
 .fancybox-close-small:hover {
@@ -520,6 +524,7 @@ body.compensate-for-scrollbar {
     right: 0;
     /* text-align: center; */
     z-index: 99996;
+    display: none;
 }
 
 .fancybox-caption--separate {
@@ -936,6 +941,7 @@ body.compensate-for-scrollbar {
         max-width: calc(100% - 10px);
     }
 }
+a.overlay,
 a.btn_html,
 a.btn_lightbox{
     position: relative;
@@ -999,7 +1005,7 @@ a.btn_lightbox{
 	img{
         max-height: 90vh;
         @include media('web'){
-            width: 100%;
+            // width: 100%;
             max-width: 100%;
             height: auto;
         }
