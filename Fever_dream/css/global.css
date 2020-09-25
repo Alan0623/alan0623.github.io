@@ -1511,35 +1511,41 @@ section > div {
 .content_project {
   padding-top: 44px;
 }
+@media (max-width: 1400px) {
+  /* line 605, ../sass/_index.scss */
+  .content_project {
+    background-color: white;
+  }
+}
 @media (max-width: 935px) {
   /* line 605, ../sass/_index.scss */
   .content_project {
     background-color: white;
   }
 }
-/* line 610, ../sass/_index.scss */
+/* line 613, ../sass/_index.scss */
 .content_project .content_project_block {
   padding: 0 24px;
 }
-/* line 616, ../sass/_index.scss */
+/* line 619, ../sass/_index.scss */
 .content_project .content_project_block .content_project_block_ul {
   width: 100%;
   padding: 32px 16px;
   box-sizing: border-box;
 }
 @media (max-width: 670px) {
-  /* line 616, ../sass/_index.scss */
+  /* line 619, ../sass/_index.scss */
   .content_project .content_project_block .content_project_block_ul {
     padding: 0;
   }
 }
-/* line 623, ../sass/_index.scss */
+/* line 626, ../sass/_index.scss */
 .content_project .content_project_block .content_project_block_ul::after {
   content: "";
   display: block;
   clear: both;
 }
-/* line 628, ../sass/_index.scss */
+/* line 631, ../sass/_index.scss */
 .content_project .content_project_block .content_project_block_ul li {
   display: inline-block;
   width: calc( 100% / 4 );
@@ -1548,51 +1554,51 @@ section > div {
   box-sizing: border-box;
 }
 @media (max-width: 935px) {
-  /* line 628, ../sass/_index.scss */
+  /* line 631, ../sass/_index.scss */
   .content_project .content_project_block .content_project_block_ul li {
     width: calc( 100% / 3 );
   }
 }
 @media (max-width: 670px) {
-  /* line 628, ../sass/_index.scss */
+  /* line 631, ../sass/_index.scss */
   .content_project .content_project_block .content_project_block_ul li {
     width: calc( 100% / 2 );
   }
 }
 @media (max-width: 1024px) {
-  /* line 628, ../sass/_index.scss */
+  /* line 631, ../sass/_index.scss */
   .content_project .content_project_block .content_project_block_ul li {
     padding: 8px;
   }
 }
-/* line 643, ../sass/_index.scss */
+/* line 646, ../sass/_index.scss */
 .content_project .content_project_block .content_project_block_ul li.title_pad {
   display: none;
   opacity: 0;
 }
 @media (max-width: 935px) {
-  /* line 643, ../sass/_index.scss */
+  /* line 646, ../sass/_index.scss */
   .content_project .content_project_block .content_project_block_ul li.title_pad {
     display: block;
     opacity: 1;
   }
 }
 @media (max-width: 935px) {
-  /* line 651, ../sass/_index.scss */
+  /* line 654, ../sass/_index.scss */
   .content_project .content_project_block .content_project_block_ul li.title_pc {
     display: none;
     opacity: 0;
   }
 }
-/* line 657, ../sass/_index.scss */
+/* line 660, ../sass/_index.scss */
 .content_project .content_project_block .content_project_block_ul li a {
   display: block;
 }
-/* line 660, ../sass/_index.scss */
+/* line 663, ../sass/_index.scss */
 .content_project .content_project_block .content_project_block_ul li img {
   width: 100%;
 }
-/* line 663, ../sass/_index.scss */
+/* line 666, ../sass/_index.scss */
 .content_project .content_project_block .content_project_block_ul li h2 {
   display: block;
   background-color: #AFAFAF;
@@ -1608,18 +1614,18 @@ section > div {
   position: relative;
 }
 @media (max-width: 935px) {
-  /* line 663, ../sass/_index.scss */
+  /* line 666, ../sass/_index.scss */
   .content_project .content_project_block .content_project_block_ul li h2 {
     font-size: 1.6em;
   }
 }
 @media (max-width: 500px) {
-  /* line 663, ../sass/_index.scss */
+  /* line 666, ../sass/_index.scss */
   .content_project .content_project_block .content_project_block_ul li h2 {
     font-size: 1.4em;
   }
 }
-/* line 685, ../sass/_index.scss */
+/* line 688, ../sass/_index.scss */
 .content_project .content_project_block .content_project_block_ul li h2 i {
   display: block;
   font-weight: 800;
@@ -1632,27 +1638,27 @@ section > div {
   word-break: keep-all;
 }
 @media (max-width: 935px) {
-  /* line 685, ../sass/_index.scss */
+  /* line 688, ../sass/_index.scss */
   .content_project .content_project_block .content_project_block_ul li h2 i {
     left: 5px;
     bottom: 37px;
   }
 }
 @media (max-width: 700px) {
-  /* line 685, ../sass/_index.scss */
+  /* line 688, ../sass/_index.scss */
   .content_project .content_project_block .content_project_block_ul li h2 i {
     left: 20px;
     bottom: 47px;
   }
 }
 @media (max-width: 500px) {
-  /* line 685, ../sass/_index.scss */
+  /* line 688, ../sass/_index.scss */
   .content_project .content_project_block .content_project_block_ul li h2 i {
     left: 5px;
     bottom: 37px;
   }
 }
-/* line 708, ../sass/_index.scss */
+/* line 711, ../sass/_index.scss */
 .content_project .content_project_block .content_project_block_ul li h2 span {
   position: absolute;
   bottom: 20px;
@@ -1660,26 +1666,42 @@ section > div {
   word-break: keep-all;
 }
 @media (max-width: 935px) {
-  /* line 708, ../sass/_index.scss */
+  /* line 711, ../sass/_index.scss */
   .content_project .content_project_block .content_project_block_ul li h2 span {
     left: 5px;
     bottom: 5px;
   }
 }
 @media (max-width: 700px) {
-  /* line 708, ../sass/_index.scss */
+  /* line 711, ../sass/_index.scss */
   .content_project .content_project_block .content_project_block_ul li h2 span {
     left: 20px;
     bottom: 20px;
   }
 }
 
-/* line 729, ../sass/_index.scss */
+/* line 732, ../sass/_index.scss */
 .content_contact {
   padding-bottom: 48px;
 }
+@media (max-width: 1400px) {
+  /* line 732, ../sass/_index.scss */
+  .content_contact {
+    background-image: url(../images/bg_content_project.png), url(../images/bg_master_Vision.jpg);
+    background-size: 125%,cover;
+    background-repeat: no-repeat;
+    background-attachment: local,fixed;
+    background-position: -120px -240px ,top;
+  }
+}
+@media (max-width: 1250px) {
+  /* line 732, ../sass/_index.scss */
+  .content_contact {
+    background-position: -160px -200px ,top;
+  }
+}
 @media (max-width: 935px) {
-  /* line 729, ../sass/_index.scss */
+  /* line 732, ../sass/_index.scss */
   .content_contact {
     background-image: url(../images/bg_content_project.png), url(../images/bg_master_Vision.jpg);
     background-size: 140%,cover;
@@ -1689,19 +1711,19 @@ section > div {
   }
 }
 @media (max-width: 500px) {
-  /* line 729, ../sass/_index.scss */
+  /* line 732, ../sass/_index.scss */
   .content_contact {
     background-size: 210%,cover;
     background-position: top left,top;
   }
 }
-/* line 743, ../sass/_index.scss */
+/* line 756, ../sass/_index.scss */
 .content_contact .content_contact_block::after {
   content: "";
   display: block;
   clear: both;
 }
-/* line 748, ../sass/_index.scss */
+/* line 761, ../sass/_index.scss */
 .content_contact .content_contact_block h2 {
   width: 50%;
   float: left;
@@ -1712,27 +1734,33 @@ section > div {
   font-size: 2em;
   margin-top: 48px;
 }
+@media (max-width: 1400px) {
+  /* line 761, ../sass/_index.scss */
+  .content_contact .content_contact_block h2 {
+    color: #501686;
+  }
+}
 @media (max-width: 935px) {
-  /* line 748, ../sass/_index.scss */
+  /* line 761, ../sass/_index.scss */
   .content_contact .content_contact_block h2 {
     color: #501686;
     font-size: 1.8em;
   }
 }
 @media (max-width: 1024px) {
-  /* line 748, ../sass/_index.scss */
+  /* line 761, ../sass/_index.scss */
   .content_contact .content_contact_block h2 {
     width: 33.33%;
   }
 }
 @media (max-width: 700px) {
-  /* line 748, ../sass/_index.scss */
+  /* line 761, ../sass/_index.scss */
   .content_contact .content_contact_block h2 {
     width: 100%;
     text-align: center;
   }
 }
-/* line 769, ../sass/_index.scss */
+/* line 785, ../sass/_index.scss */
 .content_contact .content_contact_block h2 i {
   display: block;
   font-weight: 800;
@@ -1740,12 +1768,12 @@ section > div {
   margin-bottom: 4px;
   font-family: 'Open Sans';
 }
-/* line 776, ../sass/_index.scss */
+/* line 792, ../sass/_index.scss */
 .content_contact .content_contact_block h2 span {
   display: block;
   letter-spacing: 1px;
 }
-/* line 782, ../sass/_index.scss */
+/* line 798, ../sass/_index.scss */
 .content_contact .content_contact_block .content_contact_block_ul {
   width: 50%;
   float: left;
@@ -1753,24 +1781,24 @@ section > div {
   padding: 32px 16px;
 }
 @media (max-width: 1024px) {
-  /* line 782, ../sass/_index.scss */
+  /* line 798, ../sass/_index.scss */
   .content_contact .content_contact_block .content_contact_block_ul {
     width: 66.66%;
   }
 }
 @media (max-width: 700px) {
-  /* line 782, ../sass/_index.scss */
+  /* line 798, ../sass/_index.scss */
   .content_contact .content_contact_block .content_contact_block_ul {
     width: 100%;
     padding: 0;
   }
 }
-/* line 794, ../sass/_index.scss */
+/* line 810, ../sass/_index.scss */
 .content_contact .content_contact_block .content_contact_block_ul li {
   position: relative;
   margin: 22px 0;
 }
-/* line 797, ../sass/_index.scss */
+/* line 813, ../sass/_index.scss */
 .content_contact .content_contact_block .content_contact_block_ul li label {
   position: absolute;
   left: 20px;
@@ -1783,7 +1811,8 @@ section > div {
   font-family: 'open sans';
   color: #501686;
 }
-/* line 809, ../sass/_index.scss */
+/* line 825, ../sass/_index.scss */
+.content_contact .content_contact_block .content_contact_block_ul li button,
 .content_contact .content_contact_block .content_contact_block_ul li input {
   line-height: 56px;
   height: 56px;
@@ -1798,12 +1827,13 @@ section > div {
   background-color: rgba(255, 255, 255, 0.7);
 }
 @media (max-width: 935px) {
-  /* line 809, ../sass/_index.scss */
+  /* line 825, ../sass/_index.scss */
+  .content_contact .content_contact_block .content_contact_block_ul li button,
   .content_contact .content_contact_block .content_contact_block_ul li input {
     font-size: 1.2em;
   }
 }
-/* line 825, ../sass/_index.scss */
+/* line 842, ../sass/_index.scss */
 .content_contact .content_contact_block .content_contact_block_ul li textarea {
   height: 226px;
   min-height: 226px;
@@ -1815,22 +1845,29 @@ section > div {
   padding: 54px 16px 16px 16px;
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 836, ../sass/_index.scss */
+/* line 853, ../sass/_index.scss */
 .content_contact .content_contact_block .content_contact_block_ul li #botton {
   max-width: 208px;
   float: right;
   text-align: center;
   padding: 0;
   font-weight: 800;
-  width: 50%;
+  width: auto;
+  color: #501686;
+  cursor: pointer;
+}
+/* line 863, ../sass/_index.scss */
+.content_contact .content_contact_block .content_contact_block_ul li #botton:hover, .content_contact .content_contact_block .content_contact_block_ul li #botton:focus {
+  background-color: #F5A623;
+  color: #000;
 }
 @media (max-width: 700px) {
-  /* line 836, ../sass/_index.scss */
+  /* line 853, ../sass/_index.scss */
   .content_contact .content_contact_block .content_contact_block_ul li #botton {
     width: calc(40% - 16px);
   }
 }
-/* line 847, ../sass/_index.scss */
+/* line 871, ../sass/_index.scss */
 .content_contact .content_contact_block .content_contact_block_ul li .link_line {
   display: inline-block;
   line-height: 56px;
@@ -1847,23 +1884,23 @@ section > div {
   padding-left: 64px;
   padding-right: 24px;
   width: 50%;
-  max-width: 230px;
+  max-width: 400px;
 }
 @media (max-width: 935px) {
-  /* line 847, ../sass/_index.scss */
+  /* line 871, ../sass/_index.scss */
   .content_contact .content_contact_block .content_contact_block_ul li .link_line {
     padding-right: 8px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     padding-left: 48px;
   }
 }
 @media (max-width: 700px) {
-  /* line 847, ../sass/_index.scss */
+  /* line 871, ../sass/_index.scss */
   .content_contact .content_contact_block .content_contact_block_ul li .link_line {
-    width: 60%;
+    width: auto;
   }
 }
-/* line 872, ../sass/_index.scss */
+/* line 896, ../sass/_index.scss */
 .content_contact .content_contact_block .content_contact_block_ul li .link_line::before {
   display: block;
   content: "";
@@ -1877,7 +1914,7 @@ section > div {
   left: 16px;
 }
 @media (max-width: 935px) {
-  /* line 872, ../sass/_index.scss */
+  /* line 896, ../sass/_index.scss */
   .content_contact .content_contact_block .content_contact_block_ul li .link_line::before {
     width: 32px;
     height: 32px;
@@ -1887,7 +1924,7 @@ section > div {
   }
 }
 
-/* line 897, ../sass/_index.scss */
+/* line 921, ../sass/_index.scss */
 .bg_section {
   background-image: url(../images/bg_content_project.png), url(../images/bg_master_Vision.jpg);
   background-size: 120% ,cover;

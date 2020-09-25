@@ -604,6 +604,9 @@ section{
 
 .content_project{
 	padding-top: 44px;
+	@media (max-width: 1400px) {
+		background-color: white;
+	}
 	@include media('mobile') {
 		background-color: white;
 	}
@@ -728,6 +731,16 @@ section{
 
 .content_contact{
 	padding-bottom: 48px;
+	@media (max-width: 1400px) {
+		background-image: url(../images/bg_content_project.png), url(../images/bg_master_Vision.jpg);
+		background-size: 125%,cover;
+		background-repeat: no-repeat;
+		background-attachment: local,fixed;
+		background-position: -120px -240px ,top;
+	}
+	@media (max-width: 1250px) {
+		background-position: -160px -200px ,top;
+	}
 	@include media('mobile') {
 		background-image: url(../images/bg_content_project.png), url(../images/bg_master_Vision.jpg);
 		background-size: 140%,cover;
@@ -755,6 +768,9 @@ section{
 			font-size: 2em;
 			// margin-top: 22px;
 			margin-top: 48px;
+			@media (max-width: 1400px) {
+				color: #501686;
+			}
 			@include media('mobile') {
 				color: #501686;
 				font-size: 1.8em;
@@ -806,6 +822,7 @@ section{
 					font-family: 'open sans';
 					color: #501686;
 				}
+				button,
 				input{
 					line-height: 56px;
 					height: 56px;
@@ -839,7 +856,14 @@ section{
 					text-align: center;
 					padding: 0;
 					font-weight: 800;
-					width: 50%;
+					// width: 50%;
+					width: auto;
+					color: #501686;
+					cursor: pointer;
+					&:hover, &:focus{
+						background-color: $hover-color;
+						color: #000;
+					}
 					@include media('phone') {
 						width: calc(40% - 16px);
 					}
@@ -860,14 +884,14 @@ section{
 					padding-left: 64px;
 					padding-right: 24px;
 					width: 50%;
-    				max-width: 230px;
+    				max-width: 400px;
 					@include media('mobile') {
 						padding-right: 8px;
-						font-size: 1.1em;
+						font-size: 1.2em;
 						padding-left: 48px;
 					}
 					@include media('phone') {
-						width: 60%
+						width: auto;
 					}
 					&::before{
 						display: block;
