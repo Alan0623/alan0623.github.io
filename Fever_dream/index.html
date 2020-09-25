@@ -276,6 +276,7 @@
             <section id="contact" class="content_contact">
                 <div class="content_contact_block">
                     <h2><i lang="en">CONTACT</i><span>聯絡我們</span></h2>
+                    <form action="https://formspree.io/r7a1984@hotmail.com"method="POST">
                     <ul class="content_contact_block_ul">
                         <li>
                             <label for="Name">Name</label>
@@ -297,10 +298,10 @@
                                     <h4>0939440707a</h4>
                                 </figcaption>
                             </figure>
-                            <button type="submit" id="botton" >SUBMIT</button>
+                            <input type="submit" id="botton" value="SUBMIT">
                         </li>
                     </ul>
-
+                    </form>
                 </div>
             </section><!--about 以上關於我們-->
         </main>
@@ -316,5 +317,10 @@
     <script src="js/jquery.slider.js"></script>
     <script src="js/jarallax.js"></script>
     <script src="js/effect.js"></script>
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <script>
+      window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+      formbutton("create", {action: "https://formspree.io/r7a1984@hotmail.com"})
+    </script>
 </body>
 </html>
