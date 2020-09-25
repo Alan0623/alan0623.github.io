@@ -68,18 +68,25 @@ html, body{
 	position: fixed;
 	height: 88px;
 	width: 100%;
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.85);
 	z-index: 99;
 	box-shadow: rgba(0,0,0,0.35)2px 2px 4px;
 	backdrop-filter: blur(10px);
 	@include media('mobile'){
 		height: $pad-menu-hight;
 	}
+	@include media('phone'){
+		height: 48px;
+	}
 	.head_menu{
 		@extend %center;
 		padding: 0 32px;
 		@include media('mobile'){
 			height: 66px;
+			padding: 0;
+		}
+		@include media('phone'){
+			height: 48px;
 		}
 		.head_menu_brand{
 			display: inline-block;
@@ -87,9 +94,13 @@ html, body{
 			float: left;
 			@include media('mobile'){
 				height: 66px;
+				padding: 0;
 				float: none;
 				display: block;
 				text-align: center;
+			}
+			@include media('phone'){
+				height: 48px;
 			}
 			.logo{
 				display: block;
@@ -104,25 +115,40 @@ html, body{
 					height: 66px;
     				margin: 0 auto;
 				}
+				@include media('phone'){
+					height: 48px;
+				}
+				@media (max-width: 600px){
+					background-size: 80%;
+				}
+				@media (max-width: 500px){
+					background-image: url(../images/logo_mobile.png);
+					background-size: 50%;
+				}
 			}
 		}
 	}
 }
 
 .head_menu_nav{
+	@include media('mobile'){
+		height: 180px;
+		display: none;
+	}
 	#accesskey_M{
 		opacity: 0;
+		@include media('mobile'){
+			display: none;
+		}
 	}
 	.head_menu_nav_main{
 		float: right;
 		height: 88px;
 		@include media('mobile'){
+			height: 180px;
 			width: 100%;
-			margin: 0;
-			padding: 0;
-			position: absolute;
-			left: 0;
-			display: none;
+			background-color: rgba(0,0,0,0.85);
+			backdrop-filter: blur(10px);
 		}
 		li{
 			height: 88px;
@@ -135,6 +161,7 @@ html, body{
 				width: 100%;
 				margin: 0;
 				height: 44px;
+				border-bottom:#000 solid 1px;
 			}
 			&::after{
 				content: "";
@@ -175,6 +202,8 @@ html, body{
 					@include media('mobile'){
 						display: inline-block;
 						width: auto;
+						padding-left: 10px;
+						letter-spacing: 1px;
 					}
 				}
 			}
@@ -196,7 +225,11 @@ html, body{
 	@media screen and (min-width: 936px){
 		display: none!important;
 	}
-	h2{@extend %hide-text;
+	@include media('phone'){
+		top: 2px;
+	}
+	h2{
+		@extend %hide-text;
 		height: 0;
 		opacity: 0;
 	}
@@ -340,11 +373,22 @@ html, body{
 	.footer_info{
 		display: block;
 		width: 100%;
-		background-color: rgba(0,0,0,0.8);
+		background-color: rgba(0,0,0,0.85);
+		backdrop-filter: blur(10px);
 		color: $white;
 		text-align: center;
 		height: 80px;
-    	line-height: 80px;
+		line-height: 80px;
+		@include media('mobile'){
+			font-size: 0.9em;
+			height: 66px;
+			line-height: 66px;
+		}
+		@include media('phone'){
+			font-size: 0.8em;
+			height: 48px;
+			line-height: 48px;
+		}
 	}		
 }
 

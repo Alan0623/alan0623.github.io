@@ -237,6 +237,9 @@ nivoSlider 主視覺輪播
 				font-size: 2em;
 				line-height: 1.3em;
 			}
+			@include media('phone') {
+				transform: translateY(100px);
+			}
 			&::before{
 				
 			}
@@ -254,6 +257,9 @@ nivoSlider 主視覺輪播
 			@include media('mobile') {
 				font-size: 1.1em;
     			transform: translateY(305px);
+			}
+			@include media('phone') {
+				transform: translateY(245px);
 			}
 			ul{
 				position: relative;
@@ -286,6 +292,9 @@ nivoSlider 主視覺輪播
 		@include media('mobile') {
 			transform: scale(0.8) translateY(52vh) translateX(-40vw);
 		}
+		@include media('phone'){
+			transform: scale(0.5) translateY(100vh) translateX(-70vw);
+		}
 	}
 	.man{
 		right: 32px;
@@ -298,6 +307,9 @@ nivoSlider 主視覺輪播
 		background-repeat: no-repeat;
 		@include media('mobile') {
 			transform: scale(0.7) translateY(160px) translateX(180px);
+		}
+		@include media('phone'){
+			transform: scale(0.5) translateY(440px) translateX(440px);
 		}
 	}
 	.star{
@@ -414,7 +426,12 @@ section{
 	.content_about_block{
 		position: relative;
 		z-index: 2;
-		padding-top: 200px;
+		// padding-top: 200px;
+		padding-top: 120px;
+		@include media('phone') {
+			padding: 0;
+			padding-top: 80px;
+		}
 		&::after{
 			content: "";
 			display: block;
@@ -432,6 +449,10 @@ section{
 		font-weight: bold;
 		color: $major-color;
 		margin-top: 20px;
+		@include media('phone') {
+			width: 100%;
+			text-align: center;
+		}
 		i{
 			display: block;
 			font-weight: 800;
@@ -450,6 +471,12 @@ section{
 		padding-left: 16px;
 		padding-right: 24px;
 		text-align: justify;
+		@include media('phone') {
+			width: 100%;
+			padding: 0 32px;
+			border-bottom: #FFF solid 2px;
+		}
+
 		p{
 			font-size: 1.2em;
 			line-height: 1.7em;
@@ -457,6 +484,9 @@ section{
 			@include media('mobile') {
 				font-size: 1.1em;
 				line-height: 1.6em;
+			}
+			@include media('phone') {
+				padding: 16px 0;
 			}
 		}
 	}
@@ -485,6 +515,12 @@ section{
 			background-position: center ;
 			background-repeat: no-repeat;
 			background-size: contain;
+			@include media('mobile') {
+				height: 140px;
+			}
+			@include media('phone') {
+				height: 80px;
+			}
 			i{
 				@extend %hide-text;
 			}
@@ -498,6 +534,10 @@ section{
 			width: 100%;
 			text-align: center;
 			margin-top: 32px;
+			@include media('mobile') {
+				margin-top: 16px;
+				margin-bottom: 32px;
+			}
 			&::after{
 				content: "";
 				display: block;
@@ -518,8 +558,15 @@ section{
 					font-size: 1.2em;
 					padding: 0 8px;
 				}
+				@include media('phone') {
+					width: 50%;
+					&:nth-child(1){
+						margin-left: 25%;
+					}
+				}
 				a{
 					color: $gray;
+					cursor: default;
 				}
 				.img{
 					display: block;
@@ -556,10 +603,12 @@ section{
 
 
 .content_project{
+	padding-top: 44px;
 	@include media('mobile') {
 		background-color: white;
 	}
 	.content_project_block{
+		padding: 0 24px;
 		h2{
 
 		}
@@ -568,6 +617,9 @@ section{
 			width: 100%;
 			padding: 32px 16px;
 			box-sizing: border-box;
+			@media (max-width: 670px){
+				padding: 0;
+			}
 			&::after{
 				content: "";
 				display: block;
@@ -587,6 +639,20 @@ section{
 				}
 				@include media('center') {
 					padding: 8px;
+				}
+				&.title_pad{
+					display: none;
+					opacity: 0;
+					@include media('mobile') {
+						display: block;
+						opacity: 1;
+					}
+				}
+				&.title_pc{
+					@include media('mobile') {
+						display: none;
+						opacity: 0;
+					}
 				}
 				a{
 					display: block;
@@ -627,6 +693,10 @@ section{
 							left: 5px;
 							bottom: 37px;
 						}
+						@include media('phone') {
+							left: 20px;
+							bottom: 47px;
+						}
 					}
 					span{
 						position: absolute;
@@ -636,6 +706,10 @@ section{
 						@include media('mobile') {
 							left: 5px;
 							bottom: 5px;
+						}
+						@include media('phone') {
+							left: 20px;
+							bottom: 20px;
 						}
 					}
 				}
@@ -649,10 +723,14 @@ section{
 	padding-bottom: 48px;
 	@include media('mobile') {
 		background-image: url(../images/bg_content_project.png), url(../images/bg_master_Vision.jpg);
-		background-size: 140%;
+		background-size: 140%,cover;
 		background-repeat: no-repeat;
-		background-attachment: local;
+		background-attachment: local,fixed;
 		background-position: top;
+	}
+	@media (max-width: 500px) {
+		background-size: 210%,cover;
+		background-position: top left,top;
 	}
 	.content_contact_block{
 		&::after{
@@ -675,7 +753,11 @@ section{
 				font-size: 1.8em;
 			}
 			@include media('center') {
-			width: 33.33%;
+				width: 33.33%;
+			}
+			@include media('phone') {
+				width: 100%;
+				text-align: center;
 			}
 			i{
 				display: block;
@@ -697,6 +779,10 @@ section{
 			padding: 32px 16px;
 			@include media('center') {
 				width: 66.66%;
+			}
+			@include media('phone') {
+				width: 100%;
+				padding: 0;
 			}
 			li{
 				position: relative;
@@ -731,6 +817,7 @@ section{
 				}
 				textarea{
 					height: 226px;
+					min-height: 226px;
 					width: 100%;
 					font-size: 1.6em;
 					border: white solid 1px;

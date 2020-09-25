@@ -17,6 +17,8 @@ function show_browse(){
 $(document).ready(function () {
     show_browse();
 });
+
+
 //jarallax===============================================================
 $(function() {
     var o = $.extend(!0, {}, $.fancybox.defaults, {
@@ -60,11 +62,15 @@ $(function() {
 }),
 $(document).ready(function() {
     $(".open_nav").click(function() {
-        $(this).toggleClass("open"),
-        $(".main_menu").slideToggle(500),
-        window.addEventListener("resize", function() {
-            768 < $(window).width() && ($(".main_menu").removeAttr("style"),
-            $(".open_nav").removeClass("open"))
-        })
-    })
+        $(this).toggleClass("open");
+        $(".head_menu_nav").slideToggle(500);
+        window.addEventListener('resize', function () {
+            if ($(window).width() > 768) {
+                $(".head_menu_nav").removeAttr("style");
+                $(".open_nav").removeClass("open");  
+            }
+            else {
+            }
+        });
+    });
 });
