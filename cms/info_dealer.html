@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+	<title>ARK管理中心  |  經銷商資料</title>
+	<!--IE integration -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"><!--強迫 IE 在顯示網頁時使用最新的引擎版本-->
+	<!--viewport integration -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Telephone -->
+	<meta name="format-detection" content="telephone=no" />
+	<!--Google font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/global.css" type="text/css">
+	<link rel="stylesheet" href="css/page.css" type="text/css">
+</head><!--/head-->
+<body class="no_js">
+	<div class="wrapper">
+		<header id="header">
+			<nav class="header_menu">
+				<div class="header_menu_logo">
+					<a href="index.html" title="回首頁">
+						<h1>ARK  |  La Solution Parfait</h1>
+					</a>
+				</div>
+				<ul class="header_menu_ul">
+					<li><a class="announcement" href="announcement.html" title="訊息公告">訊息公告</a></li>
+					<li><a class="order_management" href="order_management.html" title="訂單管理">訂單管理</a></li>
+					<li><a class="info_customer" href="info_customer.html" title="客戶資料">客戶資料</a></li>
+					<li><a class="product_management" href="product_management.html" title="商品管理">商品管理</a></li>
+				</ul>
+				<ul class="header_menu_ul">
+					<li><a class="send_sms" href="send_sms.html" title="發送簡訊">發送簡訊</a></li>
+					<li><a class="send_email" href="send_email.html" title="發送電子郵件">發送電子郵件</a></li>
+					<li><a class="coupon" href="coupon.html" title="折扣券">折扣券</a></li>
+				</ul>
+				<ul class="header_menu_ul">
+					<li><a class="info_staff" href="info_staff.html" title="員工資料">員工資料</a></li>
+					<li class="is-active"><a class="info_dealer" href="info_dealer.html" title="經銷商資料">經銷商資料</a></li>
+					<li><a class="info_partner" href="info_partner.html" title="合作夥伴資料">合作夥伴資料</a></li>
+				</ul>
+			</nav>
+		</header><!--header以上主選單區-->
+		<main id="main">
+			<section class="main_header">
+				<div class="bread_crumbs">
+					<ul>
+						<li><a href="index.html" title="回首頁">ARK管理中心</a></li>
+						<li>經銷商資料</li>
+					</ul>
+				</div>
+				<div class="personal">
+					<a href="#">
+						<div class="personal_img">
+							<img src="./images/personal_img.jpg" alt="">
+						</div>
+						<div class="personal_name">陸人甲</div>
+					</a>
+				</div>
+			</section>
+			<section class="main_content">
+				<div class="main_content_title big">
+					<h2 class="info_dealer">經銷商資料</h2>
+					<div class="main_content_title_input">
+						<ul>
+							<li class="input-add">
+								<a href="#" title="新增經銷商資料">新增經銷商資料</a>
+							</li>
+							<li class="input-customer">
+								<form>                   
+									<label for="S"  style="display:none;">客戶姓名搜尋</label>
+									<input type="text" id="S" name="S" placeholder="請輸入客戶姓名" title="請輸入客戶姓名">
+									<label for="sKwss" style="display:none;">送出客戶姓名查詢</label>
+									<input type="submit" id="sKwss" name="sKwss" value="送出查詢" title="送出客戶姓名查詢" >
+								</form>
+							</li>
+							<li class="input-email">
+								<form>                   
+									<label for="S"  style="display:none;">請輸入 E-mail / 帳號搜尋</label>
+									<input type="text" id="S" name="S" placeholder="請輸入請輸入 E-mail / 帳號" title="請輸入請輸入 E-mail / 帳號">
+									<label for="sKwss" style="display:none;">送出請輸入 E-mail / 帳號查詢</label>
+									<input type="submit" id="sKwss" name="sKwss" value="送出查詢" title="送出請輸入 E-mail / 帳號查詢" >
+								</form>
+							</li>
+							<li class="input-phone" >
+								<form>                   
+									<label for="S"  style="display:none;">聯絡電話搜尋</label>
+									<input type="text" id="S" name="S" placeholder="請輸入聯絡電話" title="請輸入聯絡電話">
+									<label for="sKwss" style="display:none;">送出聯絡電話查詢</label>
+									<input type="submit" id="sKwss" name="sKwss" value="送出查詢" title="送出聯絡電話查詢" >
+								</form>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="main_content_table">
+					<table class="info_customer_table">
+						<thead>
+							<tr>
+								<th>編號</th>
+								<th>照片</th>
+								<th>姓名</th>
+								<th>職稱</th>
+								<th>E-mail / 帳號</th>
+								<th>聯絡電話</th>
+								<th>加入日期</th>
+								<th>狀態</th>
+								<th class="w100">動作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>行銷總監</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>0927387821</td>
+								<td>2020-10-05</td>
+								<td><span class="luck">鎖定</span></td>
+								<td>
+									<ul class="functions">
+										<li><a class="btn order_record" href="#" title="訂購紀錄">訂購紀錄</a></li>
+										<li><a class="btn edit" href="#" title="修改">修改</a></li>
+										<li><a class="btn delete" href="#" title="刪除">刪除</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>0927387821</td>
+								<td>2020-10-05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><a class="btn order_record" href="#" title="訂購紀錄">訂購紀錄</a></li>
+										<li><a class="btn edit" href="#" title="修改">修改</a></li>
+										<li><a class="btn delete" href="#" title="刪除">刪除</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>0927387821</td>
+								<td>2020-10-05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><a class="btn order_record" href="#" title="訂購紀錄">訂購紀錄</a></li>
+										<li><a class="btn edit" href="#" title="修改">修改</a></li>
+										<li><a class="btn delete" href="#" title="刪除">刪除</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>0927387821</td>
+								<td>2020-10-05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><a class="btn order_record" href="#" title="訂購紀錄">訂購紀錄</a></li>
+										<li><a class="btn edit" href="#" title="修改">修改</a></li>
+										<li><a class="btn delete" href="#" title="刪除">刪除</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>0927387821</td>
+								<td>2020-10-05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><a class="btn order_record" href="#" title="訂購紀錄">訂購紀錄</a></li>
+										<li><a class="btn edit" href="#" title="修改">修改</a></li>
+										<li><a class="btn delete" href="#" title="刪除">刪除</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>0927387821</td>
+								<td>2020-10-05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><a class="btn order_record" href="#" title="訂購紀錄">訂購紀錄</a></li>
+										<li><a class="btn edit" href="#" title="修改">修改</a></li>
+										<li><a class="btn delete" href="#" title="刪除">刪除</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>0927387821</td>
+								<td>2020-10-05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><a class="btn order_record" href="#" title="訂購紀錄">訂購紀錄</a></li>
+										<li><a class="btn edit" href="#" title="修改">修改</a></li>
+										<li><a class="btn delete" href="#" title="刪除">刪除</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>0927387821</td>
+								<td>2020-10-05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><a class="btn order_record" href="#" title="訂購紀錄">訂購紀錄</a></li>
+										<li><a class="btn edit" href="#" title="修改">修改</a></li>
+										<li><a class="btn delete" href="#" title="刪除">刪除</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>0927387821</td>
+								<td>2020-10-05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><a class="btn order_record" href="#" title="訂購紀錄">訂購紀錄</a></li>
+										<li><a class="btn edit" href="#" title="修改">修改</a></li>
+										<li><a class="btn delete" href="#" title="刪除">刪除</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>0927387821</td>
+								<td>2020-10-05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><a class="btn order_record" href="#" title="訂購紀錄">訂購紀錄</a></li>
+										<li><a class="btn edit" href="#" title="修改">修改</a></li>
+										<li><a class="btn delete" href="#" title="刪除">刪除</a></li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="main_content_pageno">
+						<ul>
+							<li class="prev"><a href="#" title="上一頁">上一頁</a></li>
+							<li class="is-active"><a href="#" title="第1頁">1</a></li>
+							<li><a href="#" title="第2頁">2</a></li>
+							<li><a href="#" title="第3頁">3</a></li>
+							<li><a href="#" title="第4頁">5</a></li>
+							<li><a>...</a></li>
+							<li><a href="#" title="第10頁">10</a></li>
+							<li class="next"><a href="#" title="下一頁">下一頁</a></li>
+						</ul>
+						<ul>
+							<li><a href="#" title="第10頁">10</a></li> <!-- 最後一夜 -->
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<ul>
+				<li>© 2020 LA SOLUTION PARFAIT</li>
+				<li>Version: 1.0</li>
+			</ul>
+		</footer>
+	</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jssor-slider/27.1.0/jssor.slider.min.js'></script>
+	<script src='js/script.js'></script>
+	
+</body>
+</html>
