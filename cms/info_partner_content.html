@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+	<title>ARK管理中心  |  修改合作夥伴資料</title>
+	<!--IE integration -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"><!--強迫 IE 在顯示網頁時使用最新的引擎版本-->
+	<!--viewport integration -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Telephone -->
+	<meta name="format-detection" content="telephone=no" />
+	<!--Google font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/global.css" type="text/css">
+	<link rel="stylesheet" href="css/page.css" type="text/css">
+</head><!--/head-->
+<body class="no_js">
+	<div class="wrapper">
+		<header id="header">
+			<nav class="header_menu">
+				<div class="header_menu_logo">
+					<a href="lobby.html" title="回首頁">
+						<h1>ARK  |  La Solution Parfait</h1>
+					</a>
+				</div>
+				<ul class="header_menu_ul">
+					<li><a class="announcement" href="news.html" title="訊息公告">訊息公告</a></li>
+					<li><a class="order_management" href="order_management.html" title="訂單管理">訂單管理</a></li>
+					<li><a class="info_customer" href="info_customer.html" title="客戶資料">客戶資料</a></li>
+					<li><a class="product_management" href="product_management.html" title="商品管理">商品管理</a></li>
+				</ul>
+				<ul class="header_menu_ul">
+					<li><a class="send_sms" href="send_sms.html" title="發送簡訊">發送簡訊</a></li>
+					<li><a class="send_email" href="send_email.html" title="發送電子郵件">發送電子郵件</a></li>
+					<li><a class="coupon" href="coupon.html" title="折扣券">折扣券</a></li>
+				</ul>
+				<ul class="header_menu_ul">
+					<li><a class="info_staff" href="info_staff.html" title="員工資料">員工資料</a></li>
+					<li><a class="info_dealer" href="info_dealer.html" title="經銷商資料">經銷商資料</a></li>
+					<li  class="is-active"><a class="info_partner" href="info_partner.html" title="合作夥伴資料">合作夥伴資料</a></li>
+				</ul>
+			</nav>
+		</header><!--header以上主選單區-->
+		<main id="main">
+			<section class="main_header">
+				<div class="bread_crumbs">
+					<ul>
+						<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
+						<li><a href="info_partner.html" title="合作夥伴資料">合作夥伴資料</a></li>
+						<li>修改合作夥伴資料</li>
+					</ul>
+				</div>
+				<div class="personal">
+					<a href="#">
+						<div class="personal_img">
+							<img src="./images/personal_img.jpg" alt="">
+						</div>
+						<div class="personal_name">陸人甲</div>
+					</a>
+					<div class="personal_functions">
+						<ul>
+							<li><a href="info_personal.html" title="個人資料">個人資料</a></li>
+							<li><a href="#" title="登出">登出</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="main_content">
+				<div class="main_content_title">
+					<h2 class="info_staff">修改合作夥伴資料</h2>
+				</div>
+				<div class="main_content_table">
+					
+					<div class="staff_updata">
+						<div class="staff_updata_img">
+							<img src="./images/staff_img.png" alt="">
+						</div>
+						<ul>
+							<li class="input-send"><a class="btn" href="#">選擇圖片</a></li>
+							<li>檔案大小:最大1MB<br/>檔案限制: .JPEG, .PNG</li>
+						</ul>
+					</div>
+
+					<div class="staff_form">
+						<form>
+						<ul>
+							<li>
+								<label class="title" for="customer">E-mail / 帳號</label>
+								<input type="email" id="customer" name="customer" placeholder="請輸入E-mail" title="請輸入E-mail" value="3eo@mail.com">
+							</li>
+							<li>
+								<label class="title" for="customer">合作夥伴姓名</label>
+								<input type="text" id="customer" name="customer" placeholder="請輸入合作夥伴姓名" title="請輸入合作夥伴姓名" value="陸人甲">>
+							</li>
+							<li>
+								<label class="title" for="job">合作夥伴職稱</label>
+								<input type="text" id="job" name="job" placeholder="請輸入合作夥伴職稱" title="請輸入合作夥伴職稱" value="網紅">
+							</li>
+							<li>
+								<label class="title" for="job">聯絡電話</label>
+								<input type="tel" id="job" name="job" placeholder="請輸入聯絡電話" title="請輸入聯絡電話" value="439472084u">
+							</li>
+							<li>
+								<label class="title" for="job">收件地址</label>
+								<input type="text" id="job" name="job" placeholder="請輸入收件地址" title="請輸入收件地址">
+							</li>
+							<li>
+								<label class="title">性別</label>
+								<label class="control control--radio">男
+									<input type="radio">
+									<div class="control__indicator"></div>
+								</label>
+								<label class="control control--radio">女
+									<input type="radio">
+									<div class="control__indicator checked"></div>
+								</label>
+								<label class="control control--radio">其他
+									<input type="radio">
+									<div class="control__indicator"></div>
+								</label>
+							</li>
+							<li>
+								<label class="title" for="from">生日</label>
+								<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
+							</li>
+							<li>
+								<label class="title" for="from">加入日期</label>
+								<input id="datepick2" type="text" placeholder="YYYY/MM/DD" name="from">
+							</li>
+							<li class="input-send" >
+								<a class="cancel" href="info_staff.html" title="取消返回">
+								<span>取消返回</span>	
+								</a>
+								<a class="confirm" href="#" title="確認送出">
+								<span>確認送出</span>
+								</a>
+							</li>
+						</ul></form>
+					</div>
+						
+				</div>
+			</section>
+		</main>
+		<footer>
+			<ul>
+				<li>© 2020 LA SOLUTION PARFAIT</li>
+				<li>Version: 1.0</li>
+			</ul>
+		</footer>
+	</div>
+	<div id="animatedModal" class="animated-modal fancybox-content" style="display: none;">
+		<div class="animated-modal-flex">
+			<ul>
+				<li>
+					<p>
+						確定刪除此筆員工資料嗎？
+					</p>
+				</li>
+				<li class="input-send" >
+					<a class="cancel" data-fancybox-close href="javascript:void(0)" title="取消">
+					<span>取消</span>	
+					</a>
+					<a class="confirm" href="#" title="確定">
+					<span>確定</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.slider.js"></script>
+    <script src="js/jquery.lightbox.js"></script>
+	<script src='js/effect.js'></script>
+</body>
+</html>

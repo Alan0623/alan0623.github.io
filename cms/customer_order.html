@@ -11,7 +11,6 @@
 	<meta name="format-detection" content="telephone=no" />
 	<!--Google font -->
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" href="css/global.css" type="text/css">
 	<link rel="stylesheet" href="css/page.css" type="text/css">
 </head><!--/head-->
@@ -47,7 +46,8 @@
 				<div class="bread_crumbs">
 					<ul>
 						<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
-						<li>經銷商資料</li>
+						<li><a href="info_customer.html" title="客戶資料">客戶資料</a></li>
+						<li>客戶訂購紀錄</li>
 					</ul>
 				</div>
 				<div class="personal">
@@ -59,8 +59,8 @@
 					</a>
 					<div class="personal_functions">
 						<ul>
-							<li><a href="info_personal.html">個人資料</a></li>
-							<li><a href="#">登出</a></li>
+							<li><a href="info_personal.html" title="個人資料">個人資料</a></li>
+							<li><a href="#" title="登出">登出</a></li>
 						</ul>
 					</div>
 				</div>
@@ -83,7 +83,7 @@
 									<label style="display:none;" for="from">從</label>
 									<input type="text" id="from" placeholder="開始日期" name="from">
 									<label for="to">～</label>
-									<input type="text" id="to" placeholder="結束日期"  name="to">          
+									<input type="text" id="datepick" placeholder="結束日期"  name="to">          
 									<!-- <label for="datepicker"  style="display:none;">日期區間</label>
 									<input type="text" id="datepicker" name="datepicker" placeholder="YYYY/MM/DD ~ YYYY/MM/DD" title="請輸入日期區間"> -->
 									<label for="datepicker_submit" style="display:none;">送出日期區間查詢</label>
@@ -96,7 +96,7 @@
 				<div class="main_content_block">
 					<div class="abgne_tab">
 						<ul class="tabs">
-								<li><a href="#tab1">全部</a></li>
+								<li><a href="#tab1">全部</a></li>  <!-- href="#tab1"  抓 <div id="tab1" -->
 								<li><a href="#tab2">待付款</a></li>
 								<li><a href="#tab1">待出貨</a></li>
 								<li><a href="#tab2">運送中</a></li>
@@ -320,8 +320,10 @@
 			</ul>
 		</footer>
 	</div>
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.slider.js"></script>
+    <script src="js/jquery.lightbox.js"></script>
 	<script src='js/effect.js'></script>
 	
 </body>

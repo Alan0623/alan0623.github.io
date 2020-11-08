@@ -455,3 +455,311 @@
 }
 
 
+/*------------------------------------------------------------------
+客戶資料
+------------------------------------------------------------------*/
+.staff_updata{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 32px;
+	margin-bottom: 32px;
+	@extend %clear;
+	.staff_updata_img{
+		float: left;
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		overflow: hidden;
+		img{
+			width: 120px;
+			border-radius: 50%;
+		}
+	}
+	ul{
+		display: inline-block;
+		padding-top: 20px;
+		padding-left: 24px;
+		li{
+			display: block;
+			&.input-send{
+				margin: 0;
+				padding-bottom: 8px;
+				display: inline-block;
+				a{
+					&:hover, &:focus{
+						background-color: #2D343B;
+						color: #FFF;
+					}
+				}
+			}
+		}
+	}
+	.input-send a:nth-last-child(1){
+		float: left;
+		letter-spacing: 1px;
+	}
+}
+.staff_form{
+	width: 80%;
+	margin: 0 auto;
+	clear: both;
+
+	ul{
+		li{
+			border-bottom: #eee dashed 1px;
+			padding: 20px 0 0 0;
+
+			&.input-send{
+				display: inline-block;
+				margin-top: 0;
+				text-align: center;
+				width: 100%;
+				margin-bottom: 40px;
+				.btn{
+					float: initial;
+					margin: 0 auto;
+				}
+				a{display: inline-block;
+					float: inherit!important;
+					line-height: 44px;
+					margin: 0 16px;
+					&:hover, &:focus{
+						background-color: #2D343B;
+						color: #FFF;
+					}
+				}
+			}
+			&.facebook,
+			&.google{
+				.title{
+					@extend %hide-text;
+					background-image: url('../images/icon/icon_google.svg');
+					background-position: center right;
+					background-repeat: no-repeat;
+					float: left;
+				}
+				p{
+					line-height: 44px;
+					height: 44px;
+					display: inline-block;
+				}
+				a{
+					text-decoration: underline;
+					margin-left: 40px;
+					color: #6F8098;
+					line-height: 44px;
+					height: 44px;
+					display: inline-block;
+					&:hover, &:focus{
+						color: #2D343B;
+					}
+					
+				}
+			}
+			&.facebook{
+				.title{
+					background-image: url('../images/icon/icon_facebook.svg');
+				}
+			}
+
+		}
+	}
+
+	.title{
+		text-align: right;
+		width: 108px;
+		display: inline-block;
+		height: 44px;
+		margin-right: 8px;
+	}
+	
+	
+	
+	label{
+		position: relative;
+		span{
+			box-sizing: border-box;
+			border: #DBE3EF solid 1px;
+			outline-color: #C3D1E4;
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			border-radius: 8px;
+			display: none;
+		}
+	}
+
+	input[type="tel"], input[type="email"], input[type="password"], input[type="text"]{
+		width: 400px;
+	}
+	.input-send a:nth-last-child(1){
+		float: left;
+		letter-spacing: 1px;
+	}
+
+	.info_text{
+		margin-bottom: 20px;
+		padding: 20px;
+		background-color: #F3F6FA;
+		border-radius: 8px;
+		li{
+			line-height: 24px;
+			height: 24px;
+			padding: 0;
+		}
+	}
+}
+
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.control-group {
+  display: inline-block;
+  vertical-align: top;
+  background: #fff;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: 200px;
+  height: 210px;
+  margin: 10px;
+}
+.control {
+//   display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  display: inline-block;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control__indicator {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  border-radius: 8px;
+//   background: #e6e6e6;
+  box-sizing: border-box;
+  border: #DBE3EF solid 1px;
+  outline-color: #C3D1E4;
+}
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc;
+}
+.control input.checked,.control__indicator.checked {
+	background: #2aa1c0;
+}
+.control input:checked ~ .control__indicator {
+  background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #0e647d;
+}
+.control input:disabled ~ .control__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.control--checkbox .control__indicator.checked:after,
+.control--checkbox .control__indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b;
+}
+.control--radio .control__indicator.checked:after,
+.control--radio .control__indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+.control--radio input:disabled ~ .control__indicator:after {
+  background: #7b7b7b;
+}
+.select {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.select select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  background: #e6e6e6;
+  color: #7b7b7b;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.select select::-ms-expand {
+  display: none;
+}
+.select select:hover,
+.select select:focus {
+  color: #000;
+  background: #ccc;
+}
+.select select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.select__arrow {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: #7b7b7b transparent transparent transparent;
+}
+.select select:hover ~ .select__arrow,
+.select select:focus ~ .select__arrow {
+  border-top-color: #000;
+}
+.select select:disabled ~ .select__arrow {
+  border-top-color: #ccc;
+}
+

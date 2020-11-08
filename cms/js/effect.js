@@ -6,19 +6,19 @@ $(document).ready(function() {
 /*------------------------------------------------------------------
 light box
 ------------------------------------------------------------------*/
-$(function() {
-    var imgOpts = $.extend(true, {}, $.fancybox.defaults, {
-        caption : function( instance, item ) {
-            return $(this).next('figcaption').html();
-        }
-    });
+// $(function() {
+//     var imgOpts = $.extend(true, {}, $.fancybox.defaults, {
+//         caption : function( instance, item ) {
+//             return $(this).next('figcaption').html();
+//         }
+//     });
 
-    // Shortcut to apply options to image gallery
-    function applyImgOpts() {
-        $('[data-fancybox="images"]').fancybox(imgOpts);
-    }
-    applyImgOpts();
-});
+//     // Shortcut to apply options to image gallery
+//     function applyImgOpts() {
+//         $('[data-fancybox="images"]').fancybox(imgOpts);
+//     }
+//     applyImgOpts();
+// });
 
 /*------------------------------------------------------------------
 
@@ -68,4 +68,8 @@ $(function(){
         minValue.setDate(minValue.getDate()+1);
         $("#to").datepicker( "option", "minDate", minValue );
     })
+
+    $("#datepick").datepicker({ dateFormat: 'yy-mm-dd' });
+    $("#datepick2").datepicker({ dateFormat: 'yy-mm-dd' });
+    $("#datepick3").datepicker({ dateFormat: 'yy-mm-dd' });
 });

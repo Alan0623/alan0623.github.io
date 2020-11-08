@@ -43,7 +43,7 @@ html, body{
 	background-color: $body-bgc;
 	position: relative;
 	color: $deep;
-	min-width: 375px;
+	min-width: 1600px;
 }
 .sr-only {/*跳到主要內容區塊*/
 	color: $white;
@@ -334,7 +334,11 @@ html, body{
     padding: 32px;
     box-sizing: border-box;
 	padding-bottom: 0;
-	
+	.main_content_search{
+		height: 44px;
+		line-height: 44px;
+		color: #b71010;
+	}
 	.main_content_title{
 		position: relative;
 		height: 44px;
@@ -382,6 +386,34 @@ html, body{
 	}
 }
 //輸入框
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="text"]{
+	line-height: 44px;
+	height: 44px;
+	border-radius: 8px;
+	padding: 16px;
+	font-size: 1em;
+	box-sizing: border-box;
+	border: $light-gray solid 1px;
+	outline-color:$gray;
+	&:hover, &:focus{
+		border: $light-gray solid 1px;
+	}
+}
+input[type="checkbox"]{
+    box-sizing: border-box;
+    border: none!important;
+    outline-color: #C3D1E4;
+    // transform: scale(1.8);
+    // position: absolute;
+	// top: -6px;
+	margin: 0;
+		&:hover, &:focus{
+		border: $light-gray solid 1px;
+	}
+}
 .main_content_title_input{
 	position: absolute;
     right: 0;
@@ -574,6 +606,17 @@ html, body{
 .ui-widget-header{
 	background-color: #fff!important;
 	border-bottom: #DBE3EF solid 1px!important;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span{
+	background-size: contain!important;
+    background-repeat: no-repeat!important;
+}
+.ui-datepicker .ui-datepicker-prev span{
+	background: url('../images/arrow-lefts.png')!important;
+}
+.ui-datepicker .ui-datepicker-next span{
+	background: url('../images/arrow-rights.png')!important;
 }
 .ui-datepicker-calendar{
 	tr{
@@ -792,14 +835,25 @@ html, body{
 		justify-content: center;
 		color: #2D343B;
 		letter-spacing: 2px;
+		cursor: pointer;
+
+
 		&.cancel,
 		&.forget{
 			opacity: 0.6;
+			&:hover, &:focus{
+				opacity: 1;
+				color: #2D343B;
+			}
 		}
 		&.confirm,
 		&.login{
 			span{
 				margin-right: -4px;
+			}
+			&:hover, &:focus{
+				background-color: #2D343B;
+				color: #ffffff;
 			}
 		}
 		&:nth-child(1){
