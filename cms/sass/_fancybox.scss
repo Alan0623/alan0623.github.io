@@ -60,7 +60,7 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-is-open .fancybox-bg {
-    opacity: .9;
+    opacity: .6;
     transition-timing-function: cubic-bezier(.22, .61, .36, 1);
 }
 
@@ -448,7 +448,7 @@ body.compensate-for-scrollbar {
 /* Close button on the top right corner of html content */
 
 .fancybox-close-small {
-    background: #501686;
+    background: #6F8098;
     border: 0;
     border-radius: 0;
     cursor: pointer;
@@ -471,8 +471,9 @@ body.compensate-for-scrollbar {
 .fancybox-slide--html .fancybox-close-small {
     color: currentColor;
     padding: 10px;
-    right: 0;
-    top: 0;
+    right: 16px;
+    top: 16px;
+    border-radius: 50%;
 }
 
 .fancybox-slide--image.fancybox-is-scaling .fancybox-content {
@@ -999,7 +1000,16 @@ a.btn_lightbox{
     // max-width: 550px;
     // border-radius: 4px;
     // overflow: hidden;
-    
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 480px;
+    height: 376px;
+    text-align: center;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgba(188, 188, 188, 0.04), 0 2px 4px 0 rgba(61, 78, 104, 0.4);
+    background-color: #FFF;
     transform: translateY(-50px);
 	transition: all .7s;
 	img{
@@ -1045,7 +1055,20 @@ a.btn_lightbox{
 
 }
   
-
+.animated-modal-flex{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 300px;
+    ul{
+        width: 80%;
+    }
+    p{
+        font-size: 1.1em;
+    }
+}
   
   /* Final state */
   .fancybox-slide--current .animated-modal,

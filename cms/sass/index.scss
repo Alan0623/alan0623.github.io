@@ -1,0 +1,67 @@
+/*------------------------------------------------------------------
+首頁
+------------------------------------------------------------------*/
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_content_title_input{
+    top: calc(50% - 188px);
+    right: calc(50% - 240px);
+    width: 480px;
+    height: 376px;
+    text-align: center;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgba(188, 188, 188, 0.04), 0 2px 4px 0 rgba(61, 78, 104, 0.4);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.83), rgba(255, 255, 255, 0.28));
+ul{
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    li{
+        width: 320px;
+        display: inline-block;
+        position: relative;
+        margin: 8px 80px;
+        &.logo{
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            display: block;
+            margin: 40px 0 24px 0;
+            &::before,
+            &::after{
+                display: none;
+                opacity: 0;
+            }
+            img{
+                width: 180px;
+                
+            }
+        }
+        &.input-account{
+            
+        }
+        &.input-password{
+
+        }
+        &.input-send{
+            margin-top: 40px!important;
+        }
+    }
+}
+    input{
+        width: 320px!important;
+        height: 44px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px 0 rgba(188, 188, 188, 0.04);
+        border: solid 1px #93a4bd!important;
+        background-color: #ffffff;
+    }
+}

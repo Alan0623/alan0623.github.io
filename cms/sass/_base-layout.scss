@@ -26,6 +26,13 @@ audio, canvas, video{display: inline-block; *display: inline; *zoom: 1;}
 audio:not([controls]){display: none;}
 [hidden]{display: none;}
 
+
+/*------------------------------------------------------------------
+placeholder
+------------------------------------------------------------------*/
+::-webkit-input-placeholder {color: #93A4BD;} /* Edge */
+:-ms-input-placeholder {color: #93A4BD;} /* Internet Explorer 10-11 */
+::placeholder {color: #93A4BD;}
 /*------------------------------------------------------------------
 整個網站 首頁 內頁 介面樣式 header
 ------------------------------------------------------------------*/
@@ -165,20 +172,18 @@ html, body{
 內容區塊
 ------------------------------------------------------------------*/
 #main{
-	width: calc( 100% - 250px);
+	// width: calc( 100% - 250px);
+	width: 100%;
 	height: 100%;
 	min-height: 100vh;
 	float: left;
 	padding-left: 248px;
+	box-sizing: border-box;
 }
 .main_header{
 	position: relative;
 	border-bottom: $light-gray solid 1px;
-	&::after{
-		content: "";
-		display: block;
-		clear: both;
-	}
+	@extend %clear;
 	.bread_crumbs{
 		float: left;
 		height: 64px;
@@ -325,8 +330,11 @@ html, body{
 	}
 }
 .main_content{
-	position: relative;
-	padding: 32px;
+    position: relative;
+    padding: 32px;
+    box-sizing: border-box;
+	padding-bottom: 0;
+	
 	.main_content_title{
 		position: relative;
 		height: 44px;
@@ -407,6 +415,9 @@ html, body{
 				z-index: 2;
 				top: 0;
 			}
+			input[type="tel"],
+			input[type="email"],
+			input[type="password"],
 			input[type="text"]{
 				width: 296px;
 				height: 44px;
@@ -499,10 +510,126 @@ html, body{
 					background-image: url('../images/icon/phone.png');
 				}
 			}
+			&.input-orderNo{
+				&::before{
+					background-image: url('../images/icon/order_management.png');
+				}
+			}
+			&.input-date{
+				border: #DBE3EF solid 1px;
+				border-radius: 8px;
+				background-color: #FFF;
+				margin-right: 20px;
+				#to{
+					padding-left: 16px;
+				}
+
+				&::before{
+					background-image: url('../images/icon/calendar.png');
+				}
+				input[type="tel"],
+				input[type="email"],
+				input[type="password"],
+				input[type="text"]{
+					width: 176px;
+					border: none!important
+				}
+				
+			}
+			&.input-account{
+				&::before{
+					background-image: url('../images/icon/name.png');
+				}
+			}
+			&.input-password{
+				&::before{
+					background-image: url('../images/icon/password.png');
+				}
+			}
 		}
 
 		&.info_dealer{
 
+		}
+	}
+}
+
+.ui-datepicker td span, .ui-datepicker td a{
+	text-align: center!important;
+	padding: 10px .2em!important;
+	border-radius: 3px!important;
+    border: none!important;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+	background: url('../images/bg_pink.jpg')!important;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#ui-datepicker-div{
+	box-shadow: rgba(0,0,0,0.2) 1px 1px 6px;
+	border: 1px solid #fff!important;
+	border-radius: 5px!important;
+}
+.ui-widget-header{
+	background-color: #fff!important;
+	border-bottom: #DBE3EF solid 1px!important;
+}
+.ui-datepicker-calendar{
+	tr{
+		th{
+			// @extend %hide-text;
+			height: 20px;
+			span{
+				position: relative;
+			}
+			span::before{
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				background-color: #FFF;
+				height: 20px;
+				top: -2px;
+				line-height: 20px;
+				color: $deep;
+			}
+			&:nth-child(1){
+				span::before{
+					content: "日";
+					color: #b71010;
+				}
+			}
+			&:nth-child(2){
+				span::before{
+					content: "一";
+				}
+			}
+			&:nth-child(3){
+				span::before{
+					content: "二";
+				}
+			}
+			&:nth-child(4){
+				span::before{
+					content: "三";
+				}
+			}
+			&:nth-child(5){
+				span::before{
+					content: "四";
+				}
+			}
+			&:nth-child(6){
+				span::before{
+					content: "五";
+				}
+			}
+			&:nth-child(7){
+				span::before{
+					content: "六";
+					color: #b71010;
+				}
+			}
 		}
 	}
 }
@@ -582,6 +709,7 @@ html, body{
 				border: $gray solid 1px;
 				text-align: center;
 				line-height: 48px;
+				background-color: #fff;
 				&:hover, &:focus{
 					color: $deep;
 					background-color: $light;
@@ -641,3 +769,48 @@ html, body{
 		}
 	}
 }
+
+
+.input-send{
+	margin-top: 40px;
+	&::before,
+	&::after{
+		display: none;
+		opacity: 0;
+	}
+	a{
+		width: 148px;
+		height: 44px;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px 0 rgba(188, 188, 188, 0.04);
+		border: solid 1px #93a4bd;
+		background-color: #ffffff;
+		text-align: center;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #2D343B;
+		letter-spacing: 2px;
+		&.cancel,
+		&.forget{
+			opacity: 0.6;
+		}
+		&.confirm,
+		&.login{
+			span{
+				margin-right: -4px;
+			}
+		}
+		&:nth-child(1){
+			float: left;
+		}
+
+		&:nth-last-child(1){
+			float: right;
+			letter-spacing: 8px;
+		}
+
+	}
+}
+#animatedModal{}
