@@ -64,7 +64,247 @@
 				</div>
 			</section>
 			<section class="main_content">
-					製作中
+					
+				<div class="content_order"><h2>訂單管理</h2>
+					<ul>
+						<li>
+							<span class="title">待付款</span>
+							<span class="count">999<i>筆</i></span>
+						</li>
+						<li>
+							<span class="title">待出貨</span>
+							<span class="count">999<i>筆</i></span>
+						</li>
+						<li>
+							<span class="title">運送中</span>
+							<span class="count">999<i>筆</i></span>
+						</li>
+						<li>
+							<span class="title">退款/退貨</span>
+							<span class="count">999<i>筆</i></span>
+						</li>
+					</ul>
+				</div>
+				<div class="content_coupon"><h2>折扣券</h2>
+					<ul>
+						<li>
+							<span class="title">進行中折扣券</span>
+							<span class="count">999<i>筆</i></span>
+						</li>
+						<li>
+							<span class="title">折扣券總筆數</span>
+							<span class="count">999<i>筆</i></span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="content_data"><h2>銷售數據</h2>
+
+					<div class="abgne_tab">
+						<ul class="tabs">
+							<li><a href="#tab1">TＷ</a></li>  
+							<li><a href="#tab2">EN</a></li>
+							<li><a href="#tab3">FR</a></li>
+						</ul>
+						<div class="tab_container">
+							<div id="tab1" class="tab_content">
+								<ul class="content_data_date">
+									<li class="input-date">
+										<form>         
+											<label style="display:none;" for="from">從</label>
+											<input type="text" id="from" placeholder="開始日期" name="from">
+											<label for="to">～</label>
+											<input type="text" id="datepick" placeholder="結束日期"  name="to">          
+											<!-- <label for="datepicker"  style="display:none;">日期區間</label>
+											<input type="text" id="datepicker" name="datepicker" placeholder="YYYY/MM/DD ~ YYYY/MM/DD" title="請輸入日期區間"> -->
+											<label for="datepicker_submit" style="display:none;">送出日期區間查詢</label>
+											<input type="submit" id="datepicker_submit" name="datepicker_submit" value="送出查詢" title="送出日期區間查詢" >
+										</form>
+									</li>
+								</ul>
+								<ul class="content_data_sales">
+									<li>
+										<span class="title">銷售額</span>
+										<span class="count"><i>NT$</i>123,456,789</span>
+									</li>
+									<li>
+										<span class="title">銷售額</span>
+										<span class="count"><i>NT$</i>123,456,789</span>
+									</li>
+									<li>
+										<span class="title">銷售額</span>
+										<span class="count"><i>NT$</i>123,456,789</span>
+									</li>
+								</ul>
+								<div class="sales_amount">
+									<h3>銷售額 排名</h3>
+									<table class="sales_amount_table">
+										<thead>
+											<tr>
+												<th>排名</th>
+												<th>商品</th>
+												<th>銷售額</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>
+													<div class="product_img">
+														<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+													</div>
+													<div class="product_name">
+														<span class="name">極光膠囊</span>
+														<span class="info">30顆極光盒</span>
+													</div>
+												</td>
+												<td><i>NT$</i>123,456,789</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>
+													<div class="product_img">
+														<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+													</div>
+													<div class="product_name">
+														<span class="name">極光膠囊</span>
+														<span class="info">30顆極光盒</span>
+													</div>
+												</td>
+												<td><i>NT$</i>123,456,789</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>
+													<div class="product_img">
+														<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+													</div>
+													<div class="product_name">
+														<span class="name">極光膠囊</span>
+														<span class="info">30顆極光盒</span>
+													</div>
+												</td>
+												<td><i>NT$</i>123,456,789</td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>
+													<div class="product_img">
+														<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+													</div>
+													<div class="product_name">
+														<span class="name">極光膠囊</span>
+														<span class="info">30顆極光盒</span>
+													</div>
+												</td>
+												<td><i>NT$</i>123,456,789</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>
+													<div class="product_img">
+														<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+													</div>
+													<div class="product_name">
+														<span class="name">極光膠囊</span>
+														<span class="info">30顆極光盒</span>
+													</div>
+												</td>
+												<td><i>NT$</i>123,456,789</td>
+											</tr>
+										</tbody>
+									</table>
+								</div><!--sales_amount-->
+								<div class="sales_volume">
+									<h3>銷售量 排名</h3>
+									<table class="sales_volume_table">
+										<thead>
+											<tr>
+												<th>排名</th>
+												<th>商品</th>
+												<th>銷售額</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>
+													<div class="product_img">
+														<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+													</div>
+													<div class="product_name">
+														<span class="name">極光膠囊</span>
+														<span class="info">30顆極光盒</span>
+													</div>
+												</td>
+												<td><i>NT$</i>123,456,789</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>
+													<div class="product_img">
+														<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+													</div>
+													<div class="product_name">
+														<span class="name">極光膠囊</span>
+														<span class="info">30顆極光盒</span>
+													</div>
+												</td>
+												<td><i>NT$</i>123,456,789</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>
+													<div class="product_img">
+														<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+													</div>
+													<div class="product_name">
+														<span class="name">極光膠囊</span>
+														<span class="info">30顆極光盒</span>
+													</div>
+												</td>
+												<td><i>NT$</i>123,456,789</td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>
+													<div class="product_img">
+														<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+													</div>
+													<div class="product_name">
+														<span class="name">極光膠囊</span>
+														<span class="info">30顆極光盒</span>
+													</div>
+												</td>
+												<td><i>NT$</i>123,456,789</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>
+													<div class="product_img">
+														<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+													</div>
+													<div class="product_name">
+														<span class="name">極光膠囊</span>
+														<span class="info">30顆極光盒</span>
+													</div>
+												</td>
+												<td><i>NT$</i>123,456,789</td>
+											</tr>
+										</tbody>
+									</table>
+								</div><!--sales_volume-->
+							</div>
+							<div id="tab2" class="tab_content">
+
+							</div>
+							<div id="tab3" class="tab_content">
+
+							</div>
+						</div>
+					</div>
+
+				</div>
 			</section>
 		</main>
 		<footer>
@@ -74,8 +314,6 @@
 			</ul>
 		</footer>
 	</div>
-
-
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js'></script>
 	<script src="js/jquery.slider.js"></script>
