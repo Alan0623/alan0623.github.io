@@ -3,15 +3,246 @@
 /*------------------------------------------------------------------
 大廳
 ------------------------------------------------------------------*/
-.content_order{
+.content_data,
+.content_order,
+.content_coupon{
+	width: calc(50% - 18px);
+    margin-bottom: 24px;
+	float: left;
+	// padding: 24px 0;
+	padding-bottom: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+	border: #e5eefa solid 2px;
+	box-shadow: rgba(147, 164, 189, 0.4) 0 2px 4px, rgba(188, 188, 188, 0.4) 0 2px 4px;
+	
+	h2{
+		padding: 16px 12px;
+		box-sizing: border-box;
+		background-color: #e5eefa;
+		margin-bottom: 12px;
+		width: 100%;
+		border-bottom: #DBE3EF solid 1px;
+		font-size: 1.2em;
+		opacity: 0.8;
+	}
 
+	ul{
+		display: inline-block;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0 24px;
+		li{
+			float: left;
+			width: 25%;
+			text-align: center;
+			padding-top: 4px;
+			+ li{
+				width: calc(25% - 1px);
+				text-align: center;
+				border-left: #e1eaf6 solid 1px;
+			}
+
+			span{
+				display: block;
+				padding: 4px 0;
+				line-height: 24px;
+				&.title{
+					letter-spacing: 2px;
+					margin-right: -2px;
+				}
+				&.count{
+					font-size: 1.5em;
+					letter-spacing: 1px;
+					font-weight: bold;
+				}
+				i{
+					font-weight: normal;
+					font-size: 0.7em;
+					padding-left: 4px;
+				}
+			}
+		}
+	}
+}
+.content_order{
+	ul{
+		li:nth-child(2){
+			.count{
+				color: #bb1271;
+				i{
+					color: #2D343B;
+				}
+			}
+		}
+	}
 }
 .content_coupon{
-
+    margin-left: 25px;
+    float: right;
+	ul{
+		li{
+			width: 33.33%;
+			
+		}
+	}
 }
 .content_data{
-	
+	width: 100%;
+	clear: both;
+	.abgne_tab ul.tabs li{
+		width: 20%;
+		&.active{
+			padding: 0;
+			margin-top: -1px;
+			margin-bottom: 0;
+		}
+	}
+	input[type="tel"],
+	input[type="email"],
+	input[type="password"],
+	input[type="text"]{
+		width: 296px;
+		height: 44px;
+		border-radius: 8px;
+		padding: 16px;
+		padding-left: 64px;
+		font-size: 1em;
+		box-sizing: border-box;
+		border: $light-gray solid 1px;
+		outline-color:$gray;
+		&:hover, &:focus{
+			border: $light-gray solid 1px;
+		}
+	}
+	input[type="submit"]{
+		width: 44px;
+		height: 44px;
+		padding: 0;
+		@extend %hide-text;
+		border: none;
+		position: absolute;
+		right: 0;
+		z-index: 2;
+		background-color: transparent;
+		background-image: url('../images/icon/search.svg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		outline-color: transparent;
+		background-size: 50%;
+		&:hover, &:focus{
+			background-image: url('../images/icon/search_b.svg');
+		}
+	}
+	.content_data_date{
+		.input-date{
+			width: auto;
+			display: inline-block;
+			position: relative;
+		}
+	}
+	.content_data_sales{
+		li{
+			float: left;
+			width: 25%;
+			text-align: center;
+			padding-top: 4px;
+			border: #e1eaf6 solid 1px;
+			margin: 16px 0;
+			border-radius: 8px;
+			margin-right: 16px;
+		}
+	}
 }
+.sales_amount,
+.sales_volume{
+	width: 50%;
+	float: left;
+	padding: 0 24px;
+	box-sizing: border-box;
+	h3{
+		font-weight: bold;
+		font-size: 0.9em;
+		color: #6F8098;
+		margin-bottom: 16px;
+		margin-top: 16px;
+	}
+	> table{
+		width: 100%;
+		border: #e1eaf6 solid 1px;
+		border-radius: 8px;
+		thead{
+			tr{
+				background-color: #e5eefa;
+			}
+			th{
+				text-align: left;
+				line-height: 44px;
+				height: 44px;
+				&:nth-child(1){
+					text-align: center;
+					vertical-align: middle;
+				}	
+			}
+		}
+		tbody{
+			tr{
+				border-bottom: #e1eaf6 dashed 1px;
+				&:first-child{
+					.product_img,
+					.product_name{
+						margin-top: 16px;
+					}
+				}
+				&:last-child{
+					.product_img,
+					.product_name{
+						margin-bottom: 16px;
+					}
+				}
+			}
+			td{
+				text-align: left;
+				vertical-align: middle;
+				&:nth-child(1){
+					text-align: center;
+					vertical-align: middle;
+				}	
+			}
+		}
+	}
+	.product_img{
+		display: inline-block;
+		float: left;
+		margin: 8px 0;
+		.img{
+
+			width: 52px;
+			height: 52px;
+			display: inline-block;
+			border-radius: 5px;
+			overflow: hidden;
+			img{
+				width: 52px;
+			}
+		}
+	}
+	.product_name{
+		display: inline-block;
+		float: left;
+		margin: 8px 0;
+		padding: 3px 0;
+		padding-left: 12px;
+		span{
+			display: block;
+			line-height: 24px;
+		}
+	}
+}
+.sales_amount{padding-right: 12px;}
+.sales_volume{padding-left: 12px;}
+
 /*------------------------------------------------------------------
 客戶資料
 ------------------------------------------------------------------*/
@@ -31,15 +262,62 @@
 	border: $light-gray solid 1px;
 	box-shadow: rgba(147, 164, 189, 0.4) 0 2px 4px,
 				rgba(188, 188, 188, 0.4) 0 2px 4px;
-	table{
+	>table{
 		width: 100%;
+		thead{
+			tr{
+				border-bottom: $light-gray solid 1px;
+			}
+			th{
+				color: #6F8098;
+				text-align: left;
+				height: 69px;
+				line-height: 69px;
+				padding: 0 8px;
+				&:nth-child(1){
+					padding-left: 32px;
+					width: 109px;
+					box-sizing: border-box;
+				}
+				&:nth-last-child(1){
+					padding-right: 32px;
+					padding-left: 0;
+				}
+	
+			}
+		}
+	
+		tbody{
+			tr{
+				&:nth-child(even){
+					background-color: $light;
+				}
+				+ tr{
+					// border-top: $light-gray solid 1px;
+				}
+				border-bottom: $light-gray solid 1px;
+			}
+			td{
+				padding: 20px 8px;
+				line-height: 1.4em;
+				position: relative;
+				box-sizing: border-box;
+				&:nth-child(1){
+					padding-left: 32px;
+					padding-left: 0;
+					text-align: center;
+				}
+				&:nth-last-child(1){
+					padding-right: 32px;
+				}
+			}
+		}
 	}
 }
 .info_customer_table,
 .info_staff_table,
 .info_dealer_table,
 .info_partner_table{
-
 	.img{
 		width: 40px;
 		height: 40px;
@@ -57,20 +335,7 @@
 	}
 
 	thead{
-		tr{
-			border-bottom: $light-gray solid 1px;
-		}
 		th{
-			color: #6F8098;
-			text-align: left;
-			height: 69px;
-			line-height: 69px;
-			padding: 0 8px;
-			&:nth-child(1){
-				padding-left: 32px;
-				width: 109px;
-				box-sizing: border-box;
-			}
 			&:nth-child(2){
 				padding-left: 0px;
 			}
@@ -80,43 +345,32 @@
 				min-width: 98px;
 				box-sizing: border-box;
 			}
-			&:nth-last-child(1){
-				padding-right: 32px;
-				padding-left: 0;
-			}
-
-		}
-	}
-
-	tbody{
-		tr{
-			&:nth-child(even){
-				background-color: $light;
-			}
-			+ tr{
-				// border-top: $light-gray solid 1px;
-			}
-			border-bottom: $light-gray solid 1px;
-		}
-		td{
-			padding: 20px 8px;
-			line-height: 1.4em;
-			position: relative;
-			box-sizing: border-box;
-			&:nth-child(1){
-				padding-left: 32px;
-				padding-left: 0;
-				text-align: center;
-			}
-			&:nth-last-child(1){
-				padding-right: 32px;
-			}
 		}
 	}
 }
+
+.info_coupon_table{
+	thead{
+		th{
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4){
+				width: 136px;
+				max-width: 136px;
+				min-width: 136px;
+				box-sizing: border-box;
+			}
+
+		}
+	}
+}
+
 .center{
     padding-left: 0;
     text-align: center;
+}
+.w88{
+	width: 88px;
 }
 .w100{
 	width: 100px;
@@ -137,7 +391,7 @@
 }
 
 /*------------------------------------------------------------------
-
+頁籤
 ------------------------------------------------------------------*/
 .abgne_tab {
 	clear: left;
@@ -187,15 +441,51 @@
 		.tab_content {
 			padding: 20px;
 			padding-bottom: 0;
+			@extend %clear;
 			h2 , h3{
 				margin: 0 0 20px;
 			}
 		}
 	}
 }
-
 /*------------------------------------------------------------------
-
+訊息公告
+------------------------------------------------------------------*/
+.info_news_table{
+	.authority1, .authority2, .authority3{
+		width: auto;
+		border-radius: 50px;
+		padding: 0 8px;
+		margin-bottom: 4px;
+	}
+	tbody{
+		tr{
+			td{
+				&:nth-child(2){
+					width: 20%;
+				}
+				&:nth-child(3){
+					width: 30%;
+					span{
+						// max-height: 112px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						display: -webkit-box;
+						max-height: 64px;
+						-webkit-line-clamp: 3;
+						-webkit-box-orient: vertical;
+					}
+				}
+				&:nth-child(7){
+					width: 132px;
+					min-width: 132px;
+				}
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+訂單管理
 ------------------------------------------------------------------*/
 .main_content_orderTilte{
 	@extend %clear;
@@ -412,7 +702,6 @@
 					}
 					span{
 						font-size: 0.8em;
-						border: #C3D1E4 solid 1px;
 						border: #C3D1E4 solid 1px;
 						padding: 2px 12px;
 						border-radius: 50px;
@@ -772,3 +1061,220 @@
   border-top-color: #ccc;
 }
 
+/*------------------------------------------------------------------
+商品管理
+------------------------------------------------------------------*/
+.product_management_table{
+	background-color: #fff;
+	width: 100%;
+    border: #e1eaf6 solid 1px;
+	thead{
+		background-color: #e5eefa;
+		line-height: 44px;
+		height: 44px;
+		color: #6F8098;
+		tr{
+			th{
+				text-align: left;
+				&:nth-child(1),
+				&:nth-child(2){
+					width: 20%;
+					box-sizing: border-box;
+				}
+
+				&:nth-child(1){
+					padding-left: 24px;
+				}
+				&:nth-child(2){
+					padding-left: 8px;
+				}
+				&:nth-child(3),
+				&:nth-child(5),
+				&:nth-child(7){
+					width: 100px;
+				}
+				&:nth-child(6){
+					width: 88px;
+				}
+			}
+		}
+	}
+	tbody{
+		tr{
+			td{
+				&:nth-child(1){
+					padding-left: 24px;
+					width: 360px;
+					min-width: 360px;
+					box-sizing: border-box;
+					>ul{
+						border-top: #DBE3EF solid 1px;
+						padding-top: 16px;
+						display: inline-block;
+						width: 100%;
+						padding-bottom: 16px;
+						&::after{
+							content: "";
+							display: block;
+							clear: both;
+						}
+						&:first-child{
+							padding-top: 16px;
+							padding-bottom: 16px;
+						}
+					}
+				}
+				&:nth-child(2){
+					padding-left: 8px;
+				}
+			}
+		}
+	}
+	.product_img{
+		display: inline-block;
+		float: left;
+		margin: 8px 0;
+		.img{
+
+			display: block;
+			border-radius: 5px;
+			border: #DBE3EF solid 1px;
+			width: 56px;
+			height: 56px;
+			overflow: hidden;
+			img{
+				width: 56px;
+			}
+		}
+	}
+	.product_name{
+		display: inline-block;
+		float: left;
+		margin: 8px 0;
+		padding: 3px 0;
+		padding-left: 12px;
+		padding: 5px 0px 5px 16px;
+		span{
+			display: block;
+			line-height: 24px;
+			height: 24px;
+		}
+	}
+
+	.functions{
+		position: relative;
+	}
+
+	.price{
+		font-size: 1.1em;
+		font-weight: bold;
+		margin-bottom: 8px;
+		span{
+			border: none !important;
+			padding: 0;
+			font-size: 0.8em;
+			font-weight: lighter;
+			padding-right: 4px;
+		}
+	}
+	.price_del{
+		opacity: 0.6;
+	}
+	.product_quantity{
+		font-size: 1.1em;
+		font-weight: bold;
+		text-align: right;
+		box-sizing: border-box;
+		margin-top: 12px;
+		padding-right: 16px;
+		&::before{
+			content: "x";
+			font-weight: lighter;
+			opacity: 0.8;
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+折扣券
+------------------------------------------------------------------*/
+.info_coupon_table{
+	tbody{
+		tr{
+			td{
+				&:nth-child(2){
+					padding-left: 0;	
+				}
+				&:nth-child(5){
+					span{
+						&:nth-child(1){
+							font-size: 0.8em;
+							border: #C3D1E4 solid 1px;
+							padding: 2px 12px;
+							margin-right: 8px;
+							border-radius: 50px;
+							position: relative;
+							transform: translateY(-1px);
+							display: inline-block;
+						}
+					}
+				}
+				&:nth-child(6){
+					span{
+						&:nth-child(1){
+							&::after{
+								content: "~";
+								margin: 0 8px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.label_title{
+	position: absolute;
+    left: -90px;
+    top: 14px;
+}
+.info_sms_table{
+	tbody{
+		tr{
+			td{
+				&:nth-child(2){
+					// width: 296px;
+				}
+				&:nth-child(3),
+				&:nth-child(4){
+					width: 160px;
+				}
+				&:nth-child(5){
+					width: 88px;
+				}
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+發送電子郵件
+------------------------------------------------------------------*/
+
+.info_email_table{
+	tbody{
+		tr{
+			td{
+				&:nth-child(2){
+					width: 296px;
+				}
+				&:nth-child(5),
+				&:nth-child(4){
+					width: 160px;
+				}
+				&:nth-child(6){
+					width: 88px;
+				}
+			}
+		}
+	}
+}

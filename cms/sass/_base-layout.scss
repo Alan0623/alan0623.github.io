@@ -36,7 +36,7 @@ placeholder
 /*------------------------------------------------------------------
 整個網站 首頁 內頁 介面樣式 header
 ------------------------------------------------------------------*/
-a.hide{
+.hide{
 	display: none!important;
 }
 html, body{
@@ -547,27 +547,7 @@ input[type="checkbox"]{
 					background-image: url('../images/icon/order_management.png');
 				}
 			}
-			&.input-date{
-				border: #DBE3EF solid 1px;
-				border-radius: 8px;
-				background-color: #FFF;
-				margin-right: 20px;
-				#to{
-					padding-left: 16px;
-				}
-
-				&::before{
-					background-image: url('../images/icon/calendar.png');
-				}
-				input[type="tel"],
-				input[type="email"],
-				input[type="password"],
-				input[type="text"]{
-					width: 176px;
-					border: none!important
-				}
-				
-			}
+			
 			&.input-account{
 				&::before{
 					background-image: url('../images/icon/name.png');
@@ -585,7 +565,36 @@ input[type="checkbox"]{
 		}
 	}
 }
+.input-date{
+	border: #DBE3EF solid 1px;
+	border-radius: 8px;
+	background-color: #FFF;
+	margin-right: 0px;
+	#to{
+		padding-left: 16px;
+	}
 
+	&::before{
+		content: "";
+		display: block;
+		position: absolute;
+		left: 16px;
+		top: calc(50% - 12px);
+		width: 24px;
+		height: 24px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: url('../images/icon/calendar.png');
+	}
+	input[type="tel"],
+	input[type="email"],
+	input[type="password"],
+	input[type="text"]{
+		width: 176px;
+		border: none!important
+	}
+	
+}
 .ui-datepicker td span, .ui-datepicker td a{
 	text-align: center!important;
 	padding: 10px .2em!important;
@@ -683,7 +692,8 @@ input[type="checkbox"]{
     position: absolute;
     z-index: 2;
     min-width: 120px;
-    top: calc( 50% - 14px);
+	// top: calc( 50% - 14px);
+	top: 20px;
     left: -4px;
 	li{
 		display: inline-block;
@@ -714,6 +724,24 @@ input[type="checkbox"]{
 		background-image: url('../images/icon/del.png');
 		&:hover, &:focus{
 			background-image: url('../images/icon/del_b.png');
+		}
+	}
+	.open{
+		background-image: url('../images/icon/open.png');
+		&:hover, &:focus{
+			background-image: url('../images/icon/open_b.png');
+		}
+	}
+	.close{
+		background-image: url('../images/icon/close.png');
+		&:hover, &:focus{
+			background-image: url('../images/icon/close_b.png');
+		}
+	}
+	.send{
+		background-image: url('../images/icon/send.png');
+		&:hover, &:focus{
+			background-image: url('../images/icon/send_b.png');
 		}
 	}
 }

@@ -2667,7 +2667,7 @@ placeholder
 整個網站 首頁 內頁 介面樣式 header
 ------------------------------------------------------------------*/
 /* line 39, ../sass/_base-layout.scss */
-a.hide {
+.hide {
   display: none !important;
 }
 
@@ -3306,39 +3306,49 @@ input[type="checkbox"]:hover, input[type="checkbox"]:focus {
 .main_content_title_input ul li.input-orderNo::before {
   background-image: url("../images/icon/order_management.png");
 }
-/* line 550, ../sass/_base-layout.scss */
-.main_content_title_input ul li.input-date {
-  border: #DBE3EF solid 1px;
-  border-radius: 8px;
-  background-color: #FFF;
-  margin-right: 20px;
-}
-/* line 555, ../sass/_base-layout.scss */
-.main_content_title_input ul li.input-date #to {
-  padding-left: 16px;
-}
-/* line 559, ../sass/_base-layout.scss */
-.main_content_title_input ul li.input-date::before {
-  background-image: url("../images/icon/calendar.png");
-}
-/* line 562, ../sass/_base-layout.scss */
-.main_content_title_input ul li.input-date input[type="tel"],
-.main_content_title_input ul li.input-date input[type="email"],
-.main_content_title_input ul li.input-date input[type="password"],
-.main_content_title_input ul li.input-date input[type="text"] {
-  width: 176px;
-  border: none !important;
-}
-/* line 572, ../sass/_base-layout.scss */
+/* line 552, ../sass/_base-layout.scss */
 .main_content_title_input ul li.input-account::before {
   background-image: url("../images/icon/name.png");
 }
-/* line 577, ../sass/_base-layout.scss */
+/* line 557, ../sass/_base-layout.scss */
 .main_content_title_input ul li.input-password::before {
   background-image: url("../images/icon/password.png");
 }
 
+/* line 568, ../sass/_base-layout.scss */
+.input-date {
+  border: #DBE3EF solid 1px;
+  border-radius: 8px;
+  background-color: #FFF;
+  margin-right: 0px;
+}
+/* line 573, ../sass/_base-layout.scss */
+.input-date #to {
+  padding-left: 16px;
+}
+/* line 577, ../sass/_base-layout.scss */
+.input-date::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 16px;
+  top: calc(50% - 12px);
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/icon/calendar.png");
+}
 /* line 589, ../sass/_base-layout.scss */
+.input-date input[type="tel"],
+.input-date input[type="email"],
+.input-date input[type="password"],
+.input-date input[type="text"] {
+  width: 176px;
+  border: none !important;
+}
+
+/* line 598, ../sass/_base-layout.scss */
 .ui-datepicker td span, .ui-datepicker td a {
   text-align: center !important;
   padding: 10px 0.2em !important;
@@ -3346,7 +3356,7 @@ input[type="checkbox"]:hover, input[type="checkbox"]:focus {
   border: none !important;
 }
 
-/* line 595, ../sass/_base-layout.scss */
+/* line 604, ../sass/_base-layout.scss */
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
   background: url("../images/bg_pink.jpg") !important;
   background-position: center center;
@@ -3354,45 +3364,45 @@ input[type="checkbox"]:hover, input[type="checkbox"]:focus {
   background-size: cover;
 }
 
-/* line 601, ../sass/_base-layout.scss */
+/* line 610, ../sass/_base-layout.scss */
 #ui-datepicker-div {
   box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 6px;
   border: 1px solid #fff !important;
   border-radius: 5px !important;
 }
 
-/* line 606, ../sass/_base-layout.scss */
+/* line 615, ../sass/_base-layout.scss */
 .ui-widget-header {
   background-color: #fff !important;
   border-bottom: #DBE3EF solid 1px !important;
 }
 
-/* line 610, ../sass/_base-layout.scss */
+/* line 619, ../sass/_base-layout.scss */
 .ui-datepicker .ui-datepicker-prev span,
 .ui-datepicker .ui-datepicker-next span {
   background-size: contain !important;
   background-repeat: no-repeat !important;
 }
 
-/* line 615, ../sass/_base-layout.scss */
+/* line 624, ../sass/_base-layout.scss */
 .ui-datepicker .ui-datepicker-prev span {
   background: url("../images/arrow-lefts.png") !important;
 }
 
-/* line 618, ../sass/_base-layout.scss */
+/* line 627, ../sass/_base-layout.scss */
 .ui-datepicker .ui-datepicker-next span {
   background: url("../images/arrow-rights.png") !important;
 }
 
-/* line 623, ../sass/_base-layout.scss */
+/* line 632, ../sass/_base-layout.scss */
 .ui-datepicker-calendar tr th {
   height: 20px;
 }
-/* line 626, ../sass/_base-layout.scss */
+/* line 635, ../sass/_base-layout.scss */
 .ui-datepicker-calendar tr th span {
   position: relative;
 }
-/* line 629, ../sass/_base-layout.scss */
+/* line 638, ../sass/_base-layout.scss */
 .ui-datepicker-calendar tr th span::before {
   position: absolute;
   width: 100%;
@@ -3403,32 +3413,32 @@ input[type="checkbox"]:hover, input[type="checkbox"]:focus {
   line-height: 20px;
   color: #2D343B;
 }
-/* line 640, ../sass/_base-layout.scss */
+/* line 649, ../sass/_base-layout.scss */
 .ui-datepicker-calendar tr th:nth-child(1) span::before {
   content: "日";
   color: #b71010;
 }
-/* line 646, ../sass/_base-layout.scss */
+/* line 655, ../sass/_base-layout.scss */
 .ui-datepicker-calendar tr th:nth-child(2) span::before {
   content: "一";
 }
-/* line 651, ../sass/_base-layout.scss */
+/* line 660, ../sass/_base-layout.scss */
 .ui-datepicker-calendar tr th:nth-child(3) span::before {
   content: "二";
 }
-/* line 656, ../sass/_base-layout.scss */
+/* line 665, ../sass/_base-layout.scss */
 .ui-datepicker-calendar tr th:nth-child(4) span::before {
   content: "三";
 }
-/* line 661, ../sass/_base-layout.scss */
+/* line 670, ../sass/_base-layout.scss */
 .ui-datepicker-calendar tr th:nth-child(5) span::before {
   content: "四";
 }
-/* line 666, ../sass/_base-layout.scss */
+/* line 675, ../sass/_base-layout.scss */
 .ui-datepicker-calendar tr th:nth-child(6) span::before {
   content: "五";
 }
-/* line 671, ../sass/_base-layout.scss */
+/* line 680, ../sass/_base-layout.scss */
 .ui-datepicker-calendar tr th:nth-child(7) span::before {
   content: "六";
   color: #b71010;
@@ -3437,21 +3447,21 @@ input[type="checkbox"]:hover, input[type="checkbox"]:focus {
 /*------------------------------------------------------------------
 操作功能
 ------------------------------------------------------------------*/
-/* line 682, ../sass/_base-layout.scss */
+/* line 691, ../sass/_base-layout.scss */
 .functions {
   position: absolute;
   z-index: 2;
   min-width: 120px;
-  top: calc( 50% - 14px);
+  top: 20px;
   left: -4px;
 }
-/* line 688, ../sass/_base-layout.scss */
+/* line 698, ../sass/_base-layout.scss */
 .functions li {
   display: inline-block;
   float: left;
   margin: 0 4px;
 }
-/* line 693, ../sass/_base-layout.scss */
+/* line 703, ../sass/_base-layout.scss */
 .functions .btn {
   display: block;
   width: 32px;
@@ -3459,46 +3469,70 @@ input[type="checkbox"]:hover, input[type="checkbox"]:focus {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 701, ../sass/_base-layout.scss */
+/* line 711, ../sass/_base-layout.scss */
 .functions .order_record {
   background-image: url("../images/icon/box.png");
 }
-/* line 703, ../sass/_base-layout.scss */
+/* line 713, ../sass/_base-layout.scss */
 .functions .order_record:hover, .functions .order_record:focus {
   background-image: url("../images/icon/box_b.png");
 }
-/* line 707, ../sass/_base-layout.scss */
+/* line 717, ../sass/_base-layout.scss */
 .functions .edit {
   background-image: url("../images/icon/pen.png");
 }
-/* line 709, ../sass/_base-layout.scss */
+/* line 719, ../sass/_base-layout.scss */
 .functions .edit:hover, .functions .edit:focus {
   background-image: url("../images/icon/pen_b.png");
 }
-/* line 713, ../sass/_base-layout.scss */
+/* line 723, ../sass/_base-layout.scss */
 .functions .delete {
   background-image: url("../images/icon/del.png");
 }
-/* line 715, ../sass/_base-layout.scss */
+/* line 725, ../sass/_base-layout.scss */
 .functions .delete:hover, .functions .delete:focus {
   background-image: url("../images/icon/del_b.png");
+}
+/* line 729, ../sass/_base-layout.scss */
+.functions .open {
+  background-image: url("../images/icon/open.png");
+}
+/* line 731, ../sass/_base-layout.scss */
+.functions .open:hover, .functions .open:focus {
+  background-image: url("../images/icon/open_b.png");
+}
+/* line 735, ../sass/_base-layout.scss */
+.functions .close {
+  background-image: url("../images/icon/close.png");
+}
+/* line 737, ../sass/_base-layout.scss */
+.functions .close:hover, .functions .close:focus {
+  background-image: url("../images/icon/close_b.png");
+}
+/* line 741, ../sass/_base-layout.scss */
+.functions .send {
+  background-image: url("../images/icon/send.png");
+}
+/* line 743, ../sass/_base-layout.scss */
+.functions .send:hover, .functions .send:focus {
+  background-image: url("../images/icon/send_b.png");
 }
 
 /*------------------------------------------------------------------
 頁碼
 ------------------------------------------------------------------*/
-/* line 723, ../sass/_base-layout.scss */
+/* line 751, ../sass/_base-layout.scss */
 .main_content_pageno {
   text-align: center;
   padding: 32px 0;
 }
-/* line 726, ../sass/_base-layout.scss */
+/* line 754, ../sass/_base-layout.scss */
 .main_content_pageno ul {
   height: 48px;
   display: inline-block;
   margin: 0 8px;
 }
-/* line 731, ../sass/_base-layout.scss */
+/* line 759, ../sass/_base-layout.scss */
 .main_content_pageno ul li {
   height: 48px;
   width: 48px;
@@ -3508,15 +3542,15 @@ input[type="checkbox"]:hover, input[type="checkbox"]:focus {
   float: left;
   margin-left: -1px;
 }
-/* line 739, ../sass/_base-layout.scss */
+/* line 767, ../sass/_base-layout.scss */
 .main_content_pageno ul li:nth-child(1) a {
   border-radius: 8px 0 0 8px;
 }
-/* line 742, ../sass/_base-layout.scss */
+/* line 770, ../sass/_base-layout.scss */
 .main_content_pageno ul li:nth-last-child(1) a {
   border-radius: 0 8px 8px 0;
 }
-/* line 745, ../sass/_base-layout.scss */
+/* line 773, ../sass/_base-layout.scss */
 .main_content_pageno ul li a {
   display: block;
   height: 48px;
@@ -3529,23 +3563,23 @@ input[type="checkbox"]:hover, input[type="checkbox"]:focus {
   line-height: 48px;
   background-color: #fff;
 }
-/* line 756, ../sass/_base-layout.scss */
+/* line 784, ../sass/_base-layout.scss */
 .main_content_pageno ul li a:hover, .main_content_pageno ul li a:focus {
   color: #2D343B;
   background-color: #F3F6FA;
 }
-/* line 762, ../sass/_base-layout.scss */
+/* line 790, ../sass/_base-layout.scss */
 .main_content_pageno ul li.is-active a {
   color: #2D343B;
   background-color: #F3F6FA;
 }
-/* line 769, ../sass/_base-layout.scss */
+/* line 797, ../sass/_base-layout.scss */
 .main_content_pageno ul li.next a, .main_content_pageno ul li.prev a {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/* line 774, ../sass/_base-layout.scss */
+/* line 802, ../sass/_base-layout.scss */
 .main_content_pageno ul li.next a::after, .main_content_pageno ul li.prev a::after {
   display: block;
   content: "";
@@ -3554,37 +3588,37 @@ input[type="checkbox"]:hover, input[type="checkbox"]:focus {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 785, ../sass/_base-layout.scss */
+/* line 813, ../sass/_base-layout.scss */
 .main_content_pageno ul li.next a::after {
   background-image: url("../images/arrow-right.png");
 }
-/* line 789, ../sass/_base-layout.scss */
+/* line 817, ../sass/_base-layout.scss */
 .main_content_pageno ul li.next a:hover::after, .main_content_pageno ul li.next a:focus::after {
   background-image: url("../images/arrow-right_o.png");
 }
-/* line 795, ../sass/_base-layout.scss */
+/* line 823, ../sass/_base-layout.scss */
 .main_content_pageno ul li.prev a::after {
   background-image: url("../images/arrow-left.png");
 }
-/* line 799, ../sass/_base-layout.scss */
+/* line 827, ../sass/_base-layout.scss */
 .main_content_pageno ul li.prev a:hover::after, .main_content_pageno ul li.prev a:focus::after {
   background-image: url("../images/arrow-left_o.png");
 }
-/* line 808, ../sass/_base-layout.scss */
+/* line 836, ../sass/_base-layout.scss */
 .main_content_pageno ul:nth-last-child(1) li a {
   border-radius: 8px;
 }
 
-/* line 817, ../sass/_base-layout.scss */
+/* line 845, ../sass/_base-layout.scss */
 .input-send {
   margin-top: 40px;
 }
-/* line 819, ../sass/_base-layout.scss */
+/* line 847, ../sass/_base-layout.scss */
 .input-send::before, .input-send::after {
   display: none;
   opacity: 0;
 }
-/* line 824, ../sass/_base-layout.scss */
+/* line 852, ../sass/_base-layout.scss */
 .input-send a {
   width: 148px;
   height: 44px;
@@ -3601,29 +3635,29 @@ input[type="checkbox"]:hover, input[type="checkbox"]:focus {
   letter-spacing: 2px;
   cursor: pointer;
 }
-/* line 841, ../sass/_base-layout.scss */
+/* line 869, ../sass/_base-layout.scss */
 .input-send a.cancel, .input-send a.forget {
   opacity: 0.6;
 }
-/* line 844, ../sass/_base-layout.scss */
+/* line 872, ../sass/_base-layout.scss */
 .input-send a.cancel:hover, .input-send a.cancel:focus, .input-send a.forget:hover, .input-send a.forget:focus {
   opacity: 1;
   color: #2D343B;
 }
-/* line 851, ../sass/_base-layout.scss */
+/* line 879, ../sass/_base-layout.scss */
 .input-send a.confirm span, .input-send a.login span {
   margin-right: -4px;
 }
-/* line 854, ../sass/_base-layout.scss */
+/* line 882, ../sass/_base-layout.scss */
 .input-send a.confirm:hover, .input-send a.confirm:focus, .input-send a.login:hover, .input-send a.login:focus {
   background-color: #2D343B;
   color: #ffffff;
 }
-/* line 859, ../sass/_base-layout.scss */
+/* line 887, ../sass/_base-layout.scss */
 .input-send a:nth-child(1) {
   float: left;
 }
-/* line 863, ../sass/_base-layout.scss */
+/* line 891, ../sass/_base-layout.scss */
 .input-send a:nth-last-child(1) {
   float: right;
   letter-spacing: 8px;
