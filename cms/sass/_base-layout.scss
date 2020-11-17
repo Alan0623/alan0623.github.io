@@ -17,7 +17,7 @@ table {border-collapse: collapse;border-spacing: 0;}
 /* Firefox */::-moz-selection {background:$major-color;color: $white;.high_contrast &{background:#fefe00;;color:black;}}
 a{outline: none;}
 a, a:active, a:hover{text-decoration: none;}
-
+button{background-color: transparent;border: none;font-size: 1em;outline: none;}
 /*------------------------------------------------------------------
 Reset HTML5
 ------------------------------------------------------------------*/
@@ -25,8 +25,24 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu,details,figcap
 audio, canvas, video{display: inline-block; *display: inline; *zoom: 1;}
 audio:not([controls]){display: none;}
 [hidden]{display: none;}
-
-
+input[type="submit"],
+input[type="button"],
+button{cursor: pointer;
+border: none;background-color: transparent;outline: none;
+}
+select{
+	line-height: 44px;
+	height: 44px;
+}
+select,
+textarea{
+	border-radius: 8px;
+    padding: 0 16px;
+    font-size: 1em;
+    box-sizing: border-box;
+    border: #DBE3EF solid 1px;
+    outline-color: #C3D1E4;
+}
 /*------------------------------------------------------------------
 placeholder
 ------------------------------------------------------------------*/
@@ -38,6 +54,15 @@ placeholder
 ------------------------------------------------------------------*/
 .hide{
 	display: none!important;
+	opacity: 0;
+}
+.show{
+	display: inline-block!important;
+	opacity: 1;
+}
+.padding0{
+	padding: 0!important;
+	min-height: auto!important;
 }
 html, body{
 	background-color: $body-bgc;
@@ -89,6 +114,7 @@ html, body{
 		height: 64px;
 		justify-content: center;
 		align-items: center;
+		button,
 		a{
 			display: block;
 			width: 124px;
@@ -108,6 +134,7 @@ html, body{
 			width: 100%;
 			height: 48px;
 			line-height: 48px;
+			button,
 			a{
 				position: relative;
 				font-family: $base-font-style;
@@ -121,6 +148,7 @@ html, body{
 				display: block;
 				box-sizing: border-box;
 				transition: all 0.8s;
+				text-align: left;
 				&:hover, &:focus{
 					color: $deep-gray;
 					background-color: rgba(255,255,255,0.8);
@@ -168,6 +196,23 @@ html, body{
 .info_staff::before{background-image: url('../images/icon/info_staff.png');}//員工資料
 .info_dealer::before{background-image: url('../images/icon/info_dealer.png');}//經銷商資料
 .info_partner::before{background-image: url('../images/icon/info_partner.png');}//合作夥伴資料
+
+/*-----------------------------------------------------------------
+頁尾區塊
+------------------------------------------------------------------*/
+footer{
+	width: 248px;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+	bottom: 0;
+	ul{
+		padding: 16px;
+		font-size: 0.8em;
+		line-height: 1.6em;
+		opacity: 0.5;
+	}
+}
 /*-----------------------------------------------------------------
 內容區塊
 ------------------------------------------------------------------*/
@@ -210,8 +255,10 @@ html, body{
 					background-repeat: no-repeat;
 					background-size: cover;
 				}
+				button,
 				a{
 					color: #6F8098;
+
 					&:hover, &:focus{
 						text-decoration: underline;
 						color: $deep;
@@ -241,6 +288,7 @@ html, body{
 		margin-top: 12px;
 		margin-right: 32px;
 		position: relative;
+		button,
 		a{
 			display: flex;
 			align-items: center;	
@@ -300,16 +348,26 @@ html, body{
 					width: 100%;
 					display: inline-block;
 					&:nth-child(1){
+						input[type="submit"],
+						input[type="button"],
+						button,
 						a{
 							border-radius: 5px 5px 0 0;
 						}
 					}
 					&:nth-last-child(1){
+						input[type="submit"],
+						input[type="button"],
+						button,
 						a{
 							border-radius: 0 0 5px 5px;
 						}
 					}
+					input[type="submit"],
+					input[type="button"],
+					button,
 					a{
+						font-size: 1em;
 						padding: 13px 10px;
 						background-color: white;
 						border: $light solid 1px;
@@ -382,6 +440,7 @@ html, body{
 		&.info_staff::before{background-image: url('../images/icon/info_staff_b.png');}//員工資料
 		&.info_dealer::before{background-image: url('../images/icon/info_dealer_b.png');}//經銷商資料
 		&.info_partner::before{background-image: url('../images/icon/info_partner_b.png');}//合作夥伴資料
+		&.info_personal::before{background-image: url('../images/icon/name_b.png');}
 
 	}
 }
@@ -419,12 +478,14 @@ input[type="checkbox"]{
     right: 0;
 	bottom: 8px;
 	z-index: 1;
+	ol,
 	ul{
+		list-style: none;
 		float: right;
 		li{
 			position: relative;
 			float: left;
-			margin-left: 16px;
+			margin-left: 8px;
 			&::before{
 				content: "";
 				display: block;
@@ -464,6 +525,7 @@ input[type="checkbox"]{
 					border: $light-gray solid 1px;
 				}
 			}
+			// button
 			input[type="submit"]{
 				width: 44px;
 				height: 44px;
@@ -479,18 +541,19 @@ input[type="checkbox"]{
 				background-position: center center;
 				outline-color: transparent;
 				background-size: 50%;
+				background-color: #FFF;
+				border: #DBE3EF solid 1px;
 				&:hover, &:focus{
 					background-image: url('../images/icon/search_b.svg');
 				}
 			}
+			&.input-print,
 			&.input-add{
-				position: absolute;
-				top: -56px;
-				right: 0;
-				z-index: 1;
+
 				&::after{
 					display: none!important;
 				}
+				button,
 				a{
 					background-image: url('../images/bg_pink.jpg');
 					background-position: center center;
@@ -527,9 +590,39 @@ input[type="checkbox"]{
 					}
 				}
 			}
+			&.input-print{
+				button,
+				a{
+					padding-left: 38px;
+					background-image: none;
+					background-color: rgba(255,255,255,0.8);
+					&::before{
+						content: "";
+						background-image: url('../images/icon/print.png');
+						background-size: cover;
+						width: 22px;
+						height: 22px;
+						display: inline-block;
+						position: absolute;
+						top: 10px;
+						left: 12px;
+					}
+				}
+
+			}
+			&.input-phone{
+				&::before{
+					background-image: url('../images/icon/phone.png');
+				}
+			}
 			&.input-customer{
 				&::before{
 					background-image: url('../images/icon/name.png');
+				}
+			}
+			&.input-keyword{
+				&::before{
+					background-image: url('../images/icon/keyword.png');
 				}
 			}
 			&.input-email{
@@ -558,10 +651,51 @@ input[type="checkbox"]{
 					background-image: url('../images/icon/password.png');
 				}
 			}
+
 		}
 
 		&.info_dealer{
 
+		}
+	}
+	ol{
+		position: absolute;
+		right: -2px;
+		top: -56px;
+		z-index: 1;
+	}
+}
+.input-more,
+.input-submit{
+	width: 44px;
+	height: 44px;
+	display: inline-block;
+	&::before,
+	&::after{
+		display: none!important;
+		opacity: 0;
+	}
+	button,
+	input[type="submit"]{
+		width: 44px;
+		height: 44px;
+		border-radius: 8px;
+		font-size: 1em;
+		box-sizing: border-box;
+		border: #DBE3EF solid 1px;
+		outline-color: #C3D1E4;
+		background-color: #FFF;
+	}
+}
+.input-more{
+	width: 120px;
+	margin-left: 16px;
+	button,
+	input[type="submit"]{
+	width: 120px;
+	color: #96a3bb;
+		&:hover, &:focus{
+			color: $deep;
 		}
 	}
 }
@@ -570,6 +704,7 @@ input[type="checkbox"]{
 	border-radius: 8px;
 	background-color: #FFF;
 	margin-right: 0px;
+	position: relative;
 	#to{
 		padding-left: 16px;
 	}
@@ -590,11 +725,61 @@ input[type="checkbox"]{
 	input[type="email"],
 	input[type="password"],
 	input[type="text"]{
-		width: 176px;
-		border: none!important
+		width: 176px!important;
+		border: none!important;
+	}
+	#datepick{
+		padding-left: 16px;
 	}
 	
 }
+.input-product{
+	&::before{
+		content: "";
+		display: block;
+		position: absolute;
+		left: 16px;
+		top: calc(50% - 12px);
+		width: 24px;
+		height: 24px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: url('../images/icon/product_management.png');
+	}
+}
+
+//
+.coin-tw,
+.coin-us,
+.coin-fr{
+	position: relative;
+	box-sizing: border-box;
+	input[type="tel"],
+	input[type="email"],
+	input[type="password"],
+	input[type="text"]{
+		padding-left: 56px;
+	}
+	&::before{
+		position: absolute;
+		left: 16px;
+		top: calc( 50% - 7px );
+		z-index: 1;
+		width: 30px;
+		text-align: center;
+	}
+}
+.coin-tw::before{
+	content: "NT$";
+}
+.coin-us::before{
+	content: "US$";
+}
+.coin-fr::before{
+	content: "€";
+}
+
+//選日期
 .ui-datepicker td span, .ui-datepicker td a{
 	text-align: center!important;
 	padding: 10px .2em!important;
@@ -685,6 +870,33 @@ input[type="checkbox"]{
 		}
 	}
 }
+.error{
+	position: absolute;
+    left: 0;
+    text-align: left;
+    top: 44px;
+    font-size: 0.8em;
+    background-color: #FFF;
+    border-radius: 50px;
+    z-index: 2;
+    box-shadow: rgba(0,0,0,0.3)1px 1px 2px;
+    display: inline-block;
+	padding: 8px 16px;
+	color: #b71010;
+	padding-left: 28px;
+	&::before{
+		content: "";
+		position: absolute;
+		left: 10px;
+		top: 11px;
+		display: block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 6px 6px 6px;
+		border-color: transparent transparent #b71010 transparent;
+	}
+}
 /*------------------------------------------------------------------
 操作功能
 ------------------------------------------------------------------*/
@@ -707,11 +919,19 @@ input[type="checkbox"]{
 		@extend %hide-text;
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-color: transparent;
+		border: none;
 	}
 	.order_record{
 		background-image: url('../images/icon/box.png');
 		&:hover, &:focus{
 			background-image: url('../images/icon/box_b.png');
+		}
+	}
+	.authority{
+		background-image: url('../images/icon/authority.png');
+		&:hover, &:focus{
+			background-image: url('../images/icon/authority_b.png');
 		}
 	}
 	.edit{
@@ -744,6 +964,18 @@ input[type="checkbox"]{
 			background-image: url('../images/icon/send_b.png');
 		}
 	}
+	.down{
+		background-image: url('../images/icon/pdown.png');
+		&:hover, &:focus{
+			background-image: url('../images/icon/pdown_b.png');
+		}
+	}
+	.up{
+		background-image: url('../images/icon/up.png');
+		&:hover, &:focus{
+			background-image: url('../images/icon/up_b.png');
+		}
+	}
 }
 /*------------------------------------------------------------------
 頁碼
@@ -764,12 +996,15 @@ input[type="checkbox"]{
 			align-items: center;
 			float: left;
 			margin-left: -1px;
+			&:nth-child(1) button,
 			&:nth-child(1) a{
 				border-radius: 8px 0 0 8px;
 			}
+			&:nth-last-child(1) button,
 			&:nth-last-child(1) a{
 				border-radius: 0 8px 8px 0;
 			}
+			button,
 			a{
 				display: block;
 				height: 48px;
@@ -781,12 +1016,16 @@ input[type="checkbox"]{
 				text-align: center;
 				line-height: 48px;
 				background-color: #fff;
+				cursor: pointer;
 				&:hover, &:focus{
 					color: $deep;
 					background-color: $light;
 				}
 			}
 			&.is-active{
+				input[type="submit"],
+				input[type="button"],
+				button,
 				a{
 					color: $deep;
 					background-color: $light;
@@ -794,6 +1033,9 @@ input[type="checkbox"]{
 			}
 			&.next,
 			&.prev{
+				input[type="submit"],
+				input[type="button"],
+				button,
 				a{
 					display: flex;
 					align-items: center;
@@ -809,6 +1051,7 @@ input[type="checkbox"]{
 					}
 				}
 			}
+			&.next button,
 			&.next a{
 				&::after{
 					background-image: url('../images/arrow-right.png');
@@ -819,6 +1062,7 @@ input[type="checkbox"]{
 					}
 				}
 			}
+			&.prev button,
 			&.prev a{
 				&::after{
 					background-image: url('../images/arrow-left.png');
@@ -833,6 +1077,9 @@ input[type="checkbox"]{
 		}
 		&:nth-last-child(1){
 			li{
+				input[type="submit"],
+				input[type="button"],
+				button,
 				a{
 					border-radius: 8px;
 				}
@@ -849,6 +1096,9 @@ input[type="checkbox"]{
 		display: none;
 		opacity: 0;
 	}
+	input[type="submit"],
+	input[type="button"],
+	button,
 	a{
 		width: 148px;
 		height: 44px;
@@ -876,6 +1126,7 @@ input[type="checkbox"]{
 		}
 		&.confirm,
 		&.login{
+			border-color: #0e1113;
 			span{
 				margin-right: -4px;
 			}

@@ -58,8 +58,8 @@
 					</a>
 					<div class="personal_functions">
 						<ul>
-							<li><a href="info_personal.html" title="個人資料">個人資料</a></li>
-							<li><a href="#" title="登出">登出</a></li>
+							<li><input type="button" value="個人資料" title="個人資料" onclick="location.href='info_personal.html'"></li><li><input type="button" value="更改密碼" title="更改密碼" onclick="location.href='change_password.html'"></li>
+							<li><button title="登出">登出</button></li>
 						</ul>
 					</div>
 				</div>
@@ -68,17 +68,27 @@
 				<div class="main_content_title big">
 					<h2 class="product_management">商品管理</h2>
 					<div class="main_content_title_input product_input">
-						<ul>
-							<li class="input-add">
-								<a href="product_conten_add.html" title="新增產品資料">新增產品資料</a>
+						<ol>
+							<li class="input-print">
+								<button title="列印報表">列印報表</button>
 							</li>
+							<li class="input-add">
+								<button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-add" class="btn delete btn-primary" title="新增商品資料">新增商品資料</button>
+							</li>
+						</ol>
+						<ul>
 							<li class="input-product">
-								<form>                   
-									<label for="customer"  style="display:none;">產品名稱搜尋</label>
-									<input type="text" id="customer" name="customer" placeholder="請輸入產品名稱" title="請輸入產品名稱">
-									<label for="customer_submit" style="display:none;">送出產品名稱查詢</label>
-									<input type="submit" id="customer_submit" name="customer_submit" value="送出查詢" title="送出產品名稱查詢" >
-								</form>
+								                   
+									<label for="customer"  class="hide">商品名稱搜尋</label>
+									<input type="text" id="customer" name="customer" placeholder="請輸入商品名稱" title="請輸入商品名稱">
+								
+							</li>
+							<li class="input-submit">
+								<label for="submit" class="hide">送出查詢</label>
+								<input type="submit" id="submit" name="phone_submit" value="送出查詢" title="送出查詢" >
+							</li>
+							<li class="input-more">
+								<button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-more" class="btn delete btn-primary" title="進階查詢">進階查詢</button>
 							</li>
 						</ul>
 					</div>
@@ -100,7 +110,7 @@
 											<th>商品名稱</th>
 											<th>優惠價</th>
 											<th>商品數量</th>
-											<th>產品說明</th>
+											<th>商品說明</th>
 											<th>上架日期</th>
 											<th>狀態</th>
 											<th class="w100">動作</th>
@@ -125,14 +135,22 @@
 													<li class="price"><span>NT$</span>5,500</li>
 													<li class="price_del"><del><span>NT$</span>5,500</del></li>
 												</ul>
+												<ul>
+													<li class="price"><span>US$</span>5,500</li>
+													<li class="price_del"><del><span>US$</span>5,500</del></li>
+												</ul>
+												<ul>
+													<li class="price"><span>€</span>5,500</li>
+													<li class="price_del"><del><span>€</span>5,500</del></li>
+												</ul>
 											</td>
 											<td>1111</td>
 											<td>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五</td>
 											<td>2020/10/05</td><td>架上商品</td>
 											<td>
 												<ul class="functions">
-													<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
-													<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModaldown" href="javascript:;" class="btn delete btn-primary">下架</a></li>
+													<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal-down" href="javascript:;" class="btn down btn-primary">下架</a></li>
+													<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
 													<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
 												</ul>
 											</td>
@@ -155,14 +173,60 @@
 													<li class="price"><span>NT$</span>5,500</li>
 													<li class="price_del"><del><span>NT$</span>5,500</del></li>
 												</ul>
+												<ul>
+													<li class="price"><span>US$</span>5,500</li>
+													<li class="price_del"><del><span>US$</span>5,500</del></li>
+												</ul>
+												<ul>
+													<li class="price"><span>€</span>5,500</li>
+													<li class="price_del"><del><span>€</span>5,500</del></li>
+												</ul>
 											</td>
 											<td>1111</td>
 											<td>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五</td>
-											<td>2020/10/05</td><td>架上商品</td>
+											<td>2020/10/05</td><td><span class="soldout">已售完</span></td>
 											<td>
 												<ul class="functions">
-													<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
-													<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModaldown" href="javascript:;" class="btn delete btn-primary">下架</a></li>
+													<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal-down" href="javascript:;" class="btn down btn-primary">下架</a></li>
+													<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
+													<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<ul>
+													<li class="product_img">
+														<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+													</li>
+													<li class="product_name">
+														<span class="name">極光膠囊</span>
+														<span class="info">30顆極光盒</span>
+													</li>
+													<li class="product_quantity">1</li>
+												</ul>
+											</td>
+											<td>
+												<ul>
+													<li class="price"><span>NT$</span>5,500</li>
+													<li class="price_del"><del><span>NT$</span>5,500</del></li>
+												</ul>
+												<ul>
+													<li class="price"><span>US$</span>5,500</li>
+													<li class="price_del"><del><span>US$</span>5,500</del></li>
+												</ul>
+												<ul>
+													<li class="price"><span>€</span>5,500</li>
+													<li class="price_del"><del><span>€</span>5,500</del></li>
+												</ul>
+											</td>
+											<td>1111</td>
+											<td>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五</td>
+											<td>2020/10/05</td><td>已下架</td>
+											<td>
+												<ul class="functions">
+													<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal-up" href="javascript:;" class="btn up btn-primary">上架</a></li>
+													<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
 													<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
 												</ul>
 											</td>
@@ -182,11 +246,13 @@
 		<footer>
 			<ul>
 				<li>© 2020 LA SOLUTION PARFAIT</li>
-				<li>Version: 1.0</li>
+				
 			</ul>
 		</footer>
 	</div>
-	<div id="animatedModaldown" class="animated-modal fancybox-content" style="display: none;">
+
+	<!--//////確定下架//////-->
+	<div id="animatedModal-down" class="animated-modal fancybox-content" style="display: none;">
 		<div class="animated-modal-flex">
 			<ul>
 				<li>
@@ -195,16 +261,31 @@
 					</p>
 				</li>
 				<li class="input-send" >
-					<a class="cancel" data-fancybox-close href="javascript:void(0)" title="取消">
-					<span>取消</span>	
-					</a>
-					<a class="confirm" href="#" title="確定">
-					<span>確定</span>
-					</a>
+					<button class="cancel" title="取消">取消</button>
+					<button class="confirm" title="確定">確定</button>
 				</li>
 			</ul>
 		</div>
 	</div>
+
+	<!--//////確定上架//////-->
+	<div id="animatedModal-up" class="animated-modal fancybox-content" style="display: none;">
+		<div class="animated-modal-flex">
+			<ul>
+				<li>
+					<p>
+						確定上架此筆商品資料嗎？
+					</p>
+				</li>
+				<li class="input-send" >
+					<button class="cancel" title="取消">取消</button>
+					<button class="confirm" title="確定">確定</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--//////確定刪除//////-->
 	<div id="animatedModal" class="animated-modal fancybox-content" style="display: none;">
 		<div class="animated-modal-flex">
 			<ul>
@@ -214,16 +295,392 @@
 					</p>
 				</li>
 				<li class="input-send" >
-					<a class="cancel" data-fancybox-close href="javascript:void(0)" title="取消">
-					<span>取消</span>	
-					</a>
-					<a class="confirm" href="#" title="確定">
-					<span>確定</span>
-					</a>
+					<button class="cancel" title="取消">取消</button>
+					<button class="confirm" title="確定">確定</button>
 				</li>
 			</ul>
 		</div>
 	</div>
+
+	<!--//////新增商品//////-->
+	<div id="animatedModal-add" class="animated-modal animated-modal-big fancybox-content" style="display: none;">
+		<div class="animated-modal-block">
+			<main id="main" class="padding0">
+				<section class="main_header">
+					<div class="bread_crumbs">
+						<ul>
+							<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
+							<li><a href="product_management.html" title="商品管理">商品管理</a></li>
+							<li>新增商品</li>
+						</ul>
+					</div>
+				</section>
+				<section class="main_content">
+					<div class="main_content_title">
+						<h2 class="product_management">新增商品</h2>
+					</div>
+					<div class="main_content_table">
+						<h3>商品中文資訊</h3>
+						<div class="product_form_img">
+							<ul>
+								<li class="input-add-img"><button class="btn"></button>選擇圖片1</li>
+								<li class="input-add-img"><button class="btn"></button>選擇圖片2</li>
+								<li class="input-add-img"><button class="btn"></button>選擇圖片3</li>
+								<li class="input-add-img"><button class="btn"></button>選擇圖片4</li>
+								<li class="input-add-img"><button class="btn"></button>選擇圖片5</li>
+							</ul>
+						</div>
+						<div class="product_form">
+							<ul>
+								<li>
+									<label class="title">商品中文名稱</label>
+									<input type="email" placeholder="請輸入商品中文名稱" title="請輸入商品中文名稱">
+								</li>
+								<li>
+									<label class="title">商品中文副標</label>
+									<input type="email" placeholder="請輸入商品中文副標" title="請輸入商品中文副標">
+								</li>
+								<li>
+									<label class="title">商品中文說明</label>
+									<textarea name="" id="" cols="30" rows="10"></textarea>
+								</li>
+								<li>
+									<label class="title">商品定價 (新台幣)</label>
+									<span class="coin-tw">
+										<input type="text" placeholder="請輸入商品定價 (新台幣)" title="請輸入商品定價 (新台幣)">
+									</span>
+								</li>
+								<li>
+									<label class="title">商品優惠價 (新台幣)</label>
+									<span class="coin-tw">
+										<input type="text" placeholder="請輸入商品優惠價 (新台幣)" title="請輸入商品優惠價 (新台幣)">
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section><!---以上 商品中文資訊-->
+
+				<section class="main_content">
+					<div class="main_content_table">
+						<h3>商品英文資訊</h3>
+						<div class="product_form">
+							<ul>
+								<li>
+									<label class="title">商品英文名稱</label>
+									<input type="email" placeholder="請輸入商品英文名稱" title="請輸入商品英文名稱">
+								</li>
+								<li>
+									<label class="title">商品英文副標</label>
+									<input type="email" placeholder="請輸入商品英文副標" title="請輸入商品英文副標">
+								</li>
+								<li>
+									<label class="title">商品英文說明</label>
+									<textarea name="" id="" cols="30" rows="10"></textarea>
+								</li>
+								<li>
+									<label class="title">商品定價 (美金)</label>
+									<span class="coin-us">
+										<input type="text" placeholder="請輸入商品定價 (美金)" title="請輸入商品定價 (美金)">
+									</span>
+								</li>
+								<li>
+									<label class="title">商品優惠價 (美金)</label>
+									<span class="coin-us">
+										<input type="text" placeholder="請輸入商品優惠價 (美金)" title="請輸入商品優惠價 (美金)">
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section><!---以上 商品英文資訊-->
+
+				<section class="main_content">
+					<div class="main_content_table">
+						<h3>商品法文資訊</h3>
+						<div class="product_form">
+							<ul>
+								<li>
+									<label class="title">商品法文名稱</label>
+									<input type="email" placeholder="請輸入商品法文名稱" title="請輸入商品法文名稱">
+								</li>
+								<li>
+									<label class="title">商品法文副標</label>
+									<input type="email" placeholder="請輸入商品法文副標" title="請輸入商品法文副標">
+								</li>
+								<li>
+									<label class="title">商品法文說明</label>
+									<textarea name="" id="" cols="30" rows="10"></textarea>
+								</li>
+								<li>
+									<label class="title">商品定價 (歐元)</label>
+									<span class="coin-fr">
+										<input type="text" placeholder="請輸入商品定價 (歐元)" title="請輸入商品定價 (歐元)">
+									</span>
+								</li>
+								<li>
+									<label class="title">商品優惠價 (歐元)</label>
+									<span class="coin-fr">
+										<input type="text" placeholder="請輸入商品優惠價 (歐元)" title="請輸入商品優惠價 (歐元)">
+									</span>
+								</li>
+								<li>
+									<label class="title">商品類別</label>
+									<ol>
+										<li>
+											<select>
+												<option>請選擇商品類別</option>
+											</select>
+										</li>
+									</ol>
+								</li>
+								<li>
+									<label class="title" for="from">上架日期</label>
+									<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
+								</li>
+								<li class="input-send" >
+									<button class="cancel" title="取消">取消</button>
+									<button class="confirm" title="存為草稿">存為草稿</button>
+									<button class="confirm" title="發布">發布</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section><!---以上 商品法文資訊-->
+			</main>
+		</div>
+	</div><!--animatedModal-add-->
+
+
+	<!--//////修改商品//////-->
+	<div id="animatedModal-edit" class="animated-modal animated-modal-big fancybox-content" style="display: none;">
+		<div class="animated-modal-block">
+			<main id="main" class="padding0">
+				<section class="main_header">
+					<div class="bread_crumbs">
+						<ul>
+							<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
+							<li><a href="product_management.html" title="商品管理">商品管理</a></li>
+							<li>修改商品</li>
+						</ul>
+					</div>
+				</section>
+				<section class="main_content">
+					<div class="main_content_title">
+						<h2 class="product_management">修改商品</h2>
+					</div>
+					<div class="main_content_table">
+						<h3>商品中文資訊</h3>
+						<div class="product_form_img">
+							<ul>
+								<li class="input-remove-img"><button class="btn"></button><img src="./images/product_img.jpg" alt=""></li>
+								<li class="input-add-img"><button class="btn"></button>選擇圖片2</li>
+								<li class="input-add-img"><button class="btn"></button>選擇圖片3</li>
+								<li class="input-add-img"><button class="btn"></button>選擇圖片4</li>
+								<li class="input-add-img"><button class="btn"></button>選擇圖片5</li>
+							</ul>
+						</div>
+						<div class="product_form">
+							<ul>
+								<li>
+									<label class="title">商品中文名稱</label>
+									<input type="email" placeholder="請輸入商品中文名稱" title="請輸入商品中文名稱">
+								</li>
+								<li>
+									<label class="title">商品中文副標</label>
+									<input type="email" placeholder="請輸入商品中文副標" title="請輸入商品中文副標">
+								</li>
+								<li>
+									<label class="title">商品中文說明</label>
+									<textarea name="" id="" cols="30" rows="10"></textarea>
+								</li>
+								<li>
+									<label class="title">商品定價 (新台幣)</label>
+									<span class="coin-tw">
+										<input type="text" placeholder="請輸入商品定價 (新台幣)" title="請輸入商品定價 (新台幣)">
+									</span>
+								</li>
+								<li>
+									<label class="title">商品優惠價 (新台幣)</label>
+									<span class="coin-tw">
+										<input type="text" placeholder="請輸入商品優惠價 (新台幣)" title="請輸入商品優惠價 (新台幣)">
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section><!---以上 商品中文資訊-->
+
+				<section class="main_content">
+					<div class="main_content_table">
+						<h3>商品英文資訊</h3>
+						<div class="product_form">
+							<ul>
+								<li>
+									<label class="title">商品英文名稱</label>
+									<input type="email" placeholder="請輸入商品英文名稱" title="請輸入商品英文名稱">
+								</li>
+								<li>
+									<label class="title">商品英文副標</label>
+									<input type="email" placeholder="請輸入商品英文副標" title="請輸入商品英文副標">
+								</li>
+								<li>
+									<label class="title">商品英文說明</label>
+									<textarea name="" id="" cols="30" rows="10"></textarea>
+								</li>
+								<li>
+									<label class="title">商品定價 (美金)</label>
+									<span class="coin-us">
+										<input type="text" placeholder="請輸入商品定價 (美金)" title="請輸入商品定價 (美金)">
+									</span>
+								</li>
+								<li>
+									<label class="title">商品優惠價 (美金)</label>
+									<span class="coin-us">
+										<input type="text" placeholder="請輸入商品優惠價 (美金)" title="請輸入商品優惠價 (美金)">
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section><!---以上 商品英文資訊-->
+
+				<section class="main_content">
+					<div class="main_content_table">
+						<h3>商品法文資訊</h3>
+						<div class="product_form">
+							<ul>
+								<li>
+									<label class="title">商品法文名稱</label>
+									<input type="email" placeholder="請輸入商品法文名稱" title="請輸入商品法文名稱">
+								</li>
+								<li>
+									<label class="title">商品法文副標</label>
+									<input type="email" placeholder="請輸入商品法文副標" title="請輸入商品法文副標">
+								</li>
+								<li>
+									<label class="title">商品法文說明</label>
+									<textarea name="" id="" cols="30" rows="10"></textarea>
+								</li>
+								<li>
+									<label class="title">商品定價 (歐元)</label>
+									<span class="coin-fr">
+										<input type="text" placeholder="請輸入商品定價 (歐元)" title="請輸入商品定價 (歐元)">
+									</span>
+								</li>
+								<li>
+									<label class="title">商品優惠價 (歐元)</label>
+									<span class="coin-fr">
+										<input type="text" placeholder="請輸入商品優惠價 (歐元)" title="請輸入商品優惠價 (歐元)">
+									</span>
+								</li>
+								<li>
+									<label class="title">商品類別</label>
+									<ol>
+										<li>
+											<select>
+												<option>請選擇商品類別</option>
+											</select>
+										</li>
+									</ol>
+								</li>
+								<li>
+									<label class="title" for="from">上架日期</label>
+									<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
+								</li>
+								<li class="input-send" >
+									<button class="cancel" title="取消">取消</button>
+									<button class="confirm" title="存為草稿">存為草稿</button>
+									<button class="confirm" title="發布">發布</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section><!---以上 商品法文資訊-->
+			</main>
+		</div>
+	</div><!--animatedModal-edit-->
+
+	<!--//////進階查詢//////-->
+	<div id="animatedModal-more" class="animated-modal animated-modal-big fancybox-content" style="display: none;">
+		<div class="animated-modal-block">
+			<main id="main" class="padding0">
+				<section class="main_header">
+					<div class="bread_crumbs">
+						<ul>
+							<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
+							<li><a href="product_management.html" title="商品管理">商品管理</a></li>
+							<li>進階查詢</li>
+						</ul>
+					</div>
+				</section>
+				<section class="main_content">
+					<div class="main_content_title">
+						<h2 class="send_email">進階查詢</h2>
+					</div>
+					<div class="main_content_table">
+						<div class="product_form">
+							<ul>
+								<li>
+									<label class="title">商品名稱</label>
+									<input type="email" placeholder="請輸入關鍵字" title="請輸入關鍵字">
+								</li>
+								<li>
+									<label class="title">商品副標</label>
+									<input type="email" placeholder="請輸入關鍵字" title="請輸入關鍵字">
+								</li>
+								<li>
+									<label class="title">商品說明</label>
+									<input type="text" placeholder="請輸入關鍵字" title="請輸入關鍵字">
+								</li>
+								<li>
+									<label class="title">商品類別</label>
+									<ol>
+										<li>
+											<select>
+												<option>請選擇商品類別</option>
+											</select>
+										</li>
+									</ol>
+								</li>
+								<li>
+									<label class="title" for="from">優惠價 (最低價)</label>
+									<input type="text" placeholder="請輸入優惠價 (最低價)" title="請輸入優惠價 (最低價)">
+								</li>
+								<li>
+									<label class="title" for="from">優惠價 (最高價)</label>
+									<input type="text" placeholder="請輸入優惠價 (最高價)" title="請輸入優惠價 (最高價)">
+								</li>
+								<li>
+									<label class="title" for="from">上架日期 (起)</label>
+									<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
+								</li>
+								<li>
+									<label class="title" for="from">上架日期 (迄)</label>
+									<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
+								</li>
+								<li>
+									<label class="title">狀態</label>
+									<ol>
+										<li>
+											<select>
+												<option>請選擇狀態</option>
+											</select>
+										</li>
+									</ol>
+								</li>
+								<li class="input-send" >
+									<button class="cancel" title="取消">取消</button>
+									<button class="confirm" title="搜尋">搜尋</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</div><!--animatedModal-more-->
+
 	<script src="js/jquery-1.12.4.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/jquery.slider.js"></script>

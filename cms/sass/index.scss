@@ -19,49 +19,79 @@ body{
     border-radius: 8px;
     box-shadow: 0 2px 8px 0 rgba(188, 188, 188, 0.04), 0 2px 4px 0 rgba(61, 78, 104, 0.4);
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.83), rgba(255, 255, 255, 0.28));
-ul{
-    width: 100%;
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    li{
-        width: 320px;
-        display: inline-block;
-        position: relative;
-        margin: 8px 80px;
-        &.logo{
-            width: 100%;
-            text-align: center;
-            box-sizing: border-box;
-            display: block;
-            margin: 40px 0 24px 0;
-            &::before,
-            &::after{
-                display: none;
-                opacity: 0;
-            }
-            img{
-                width: 180px;
-                
-            }
-        }
-        &.input-account{
-            
-        }
-        &.input-password{
-
-        }
-        &.input-send{
-            margin-top: 40px!important;
-        }
-    }
-}
     input{
-        width: 320px!important;
+        width: 320px;
         height: 44px;
         border-radius: 8px;
         box-shadow: 0 2px 4px 0 rgba(188, 188, 188, 0.04);
         border: solid 1px #93a4bd!important;
         background-color: #ffffff;
     }
+    ul{
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        li{
+            width: 320px;
+            display: inline-block;
+            position: relative;
+            margin: 8px 80px;
+            &.logo{
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box;
+                display: block;
+                margin: 40px 0 24px 0;
+                &::before,
+                &::after{
+                    display: none;
+                    opacity: 0;
+                }
+                img{
+                    width: 180px;
+                    
+                }
+            }
+            &.input-account,
+            &.input-password{
+                input[type="tel"],
+                input[type="email"],
+                input[type="password"],
+                input[type="text"]{
+                    width: 320px!important;
+                }
+                
+            }
+            &.input-send{
+                // margin-top: 40px!important;
+                margin-top: 16px;
+            }
+            &.input-checkbox{
+                text-align: left;
+                opacity: 0.8;
+                &::after,
+                &::before{
+                    display: none;
+                }
+                .title{
+                    line-height: 24px;
+                    height: 24px;
+                    color: #2D343B;
+                    letter-spacing: 0;
+                    
+                }
+                .control.control--checkbox{
+                    vertical-align: middle;
+                    float: left;
+                    margin-right: 8px;
+                }
+                input[type="checkbox"]{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
 }

@@ -2,7 +2,11 @@
 /*選單高度*/
 /*選單高度*/
 /* line 562, ../sass/_base-function.scss */
-.content_data input[type="submit"], .staff_form ul li.facebook .title, .staff_form ul li.google .title {
+.content_data input[type="submit"], .info_staff_authority tbody td .control, .product_form ul > li.facebook .title, .product_form ul > li.google .title,
+.coupon_form ul > li.facebook .title,
+.coupon_form ul > li.google .title,
+.staff_form ul > li.facebook .title,
+.staff_form ul > li.google .title {
   text-indent: -9999px;
   font: 0/0 a;
   color: transparent;
@@ -300,7 +304,7 @@
 .content_data input[type="text"]:focus {
   border: #DBE3EF solid 1px;
 }
-/* line 119, ../sass/page.scss */
+/* line 120, ../sass/page.scss */
 .content_data input[type="submit"] {
   width: 44px;
   height: 44px;
@@ -315,18 +319,20 @@
   background-position: center center;
   outline-color: transparent;
   background-size: 50%;
+  background-color: #FFF;
+  border: #DBE3EF solid 1px;
 }
-/* line 134, ../sass/page.scss */
+/* line 137, ../sass/page.scss */
 .content_data input[type="submit"]:hover, .content_data input[type="submit"]:focus {
   background-image: url("../images/icon/search_b.svg");
 }
-/* line 139, ../sass/page.scss */
+/* line 142, ../sass/page.scss */
 .content_data .content_data_date .input-date {
   width: auto;
   display: inline-block;
   position: relative;
 }
-/* line 146, ../sass/page.scss */
+/* line 149, ../sass/page.scss */
 .content_data .content_data_sales li {
   float: left;
   width: 25%;
@@ -338,7 +344,7 @@
   margin-right: 16px;
 }
 
-/* line 158, ../sass/page.scss */
+/* line 161, ../sass/page.scss */
 .sales_amount,
 .sales_volume {
   width: 50%;
@@ -346,7 +352,7 @@
   padding: 0 24px;
   box-sizing: border-box;
 }
-/* line 164, ../sass/page.scss */
+/* line 167, ../sass/page.scss */
 .sales_amount h3,
 .sales_volume h3 {
   font-weight: bold;
@@ -355,70 +361,70 @@
   margin-bottom: 16px;
   margin-top: 16px;
 }
-/* line 171, ../sass/page.scss */
+/* line 174, ../sass/page.scss */
 .sales_amount > table,
 .sales_volume > table {
   width: 100%;
   border: #e1eaf6 solid 1px;
   border-radius: 8px;
 }
-/* line 176, ../sass/page.scss */
+/* line 179, ../sass/page.scss */
 .sales_amount > table thead tr,
 .sales_volume > table thead tr {
   background-color: #e5eefa;
 }
-/* line 179, ../sass/page.scss */
+/* line 182, ../sass/page.scss */
 .sales_amount > table thead th,
 .sales_volume > table thead th {
   text-align: left;
   line-height: 44px;
   height: 44px;
 }
-/* line 183, ../sass/page.scss */
+/* line 186, ../sass/page.scss */
 .sales_amount > table thead th:nth-child(1),
 .sales_volume > table thead th:nth-child(1) {
   text-align: center;
   vertical-align: middle;
 }
-/* line 190, ../sass/page.scss */
+/* line 193, ../sass/page.scss */
 .sales_amount > table tbody tr,
 .sales_volume > table tbody tr {
   border-bottom: #e1eaf6 dashed 1px;
 }
-/* line 193, ../sass/page.scss */
+/* line 196, ../sass/page.scss */
 .sales_amount > table tbody tr:first-child .product_img,
 .sales_amount > table tbody tr:first-child .product_name,
 .sales_volume > table tbody tr:first-child .product_img,
 .sales_volume > table tbody tr:first-child .product_name {
   margin-top: 16px;
 }
-/* line 199, ../sass/page.scss */
+/* line 202, ../sass/page.scss */
 .sales_amount > table tbody tr:last-child .product_img,
 .sales_amount > table tbody tr:last-child .product_name,
 .sales_volume > table tbody tr:last-child .product_img,
 .sales_volume > table tbody tr:last-child .product_name {
   margin-bottom: 16px;
 }
-/* line 205, ../sass/page.scss */
+/* line 208, ../sass/page.scss */
 .sales_amount > table tbody td,
 .sales_volume > table tbody td {
   text-align: left;
   vertical-align: middle;
 }
-/* line 208, ../sass/page.scss */
+/* line 211, ../sass/page.scss */
 .sales_amount > table tbody td:nth-child(1),
 .sales_volume > table tbody td:nth-child(1) {
   text-align: center;
   vertical-align: middle;
 }
-/* line 215, ../sass/page.scss */
+/* line 218, ../sass/page.scss */
 .sales_amount .product_img,
 .sales_volume .product_img {
   display: inline-block;
   float: left;
   margin: 8px 0;
 }
-/* line 219, ../sass/page.scss */
+/* line 222, ../sass/page.scss */
 .sales_amount .product_img .img,
 .sales_volume .product_img .img {
   width: 52px;
@@ -427,12 +433,12 @@
   border-radius: 5px;
   overflow: hidden;
 }
-/* line 226, ../sass/page.scss */
+/* line 229, ../sass/page.scss */
 .sales_amount .product_img .img img,
 .sales_volume .product_img .img img {
   width: 52px;
 }
-/* line 231, ../sass/page.scss */
+/* line 234, ../sass/page.scss */
 .sales_amount .product_name,
 .sales_volume .product_name {
   display: inline-block;
@@ -441,19 +447,19 @@
   padding: 3px 0;
   padding-left: 12px;
 }
-/* line 237, ../sass/page.scss */
+/* line 240, ../sass/page.scss */
 .sales_amount .product_name span,
 .sales_volume .product_name span {
   display: block;
   line-height: 24px;
 }
 
-/* line 243, ../sass/page.scss */
+/* line 246, ../sass/page.scss */
 .sales_amount {
   padding-right: 12px;
 }
 
-/* line 244, ../sass/page.scss */
+/* line 247, ../sass/page.scss */
 .sales_volume {
   padding-left: 12px;
 }
@@ -461,17 +467,17 @@
 /*------------------------------------------------------------------
 客戶資料
 ------------------------------------------------------------------*/
-/* line 249, ../sass/page.scss */
+/* line 252, ../sass/page.scss */
 .good {
   color: #31ad00;
 }
 
-/* line 252, ../sass/page.scss */
+/* line 255, ../sass/page.scss */
 .luck {
   color: #bb1271;
 }
 
-/* line 256, ../sass/page.scss */
+/* line 259, ../sass/page.scss */
 .main_content_table {
   width: 100%;
   padding-bottom: 0px;
@@ -481,15 +487,24 @@
   border: #DBE3EF solid 1px;
   box-shadow: rgba(147, 164, 189, 0.4) 0 2px 4px, rgba(188, 188, 188, 0.4) 0 2px 4px;
 }
-/* line 265, ../sass/page.scss */
+/* line 268, ../sass/page.scss */
+.main_content_table h3 {
+  height: 69px;
+  width: 100%;
+  line-height: 69px;
+  background-color: #F3F6FA;
+  border-bottom: #DBE3EF solid 1px;
+  padding-left: 44px;
+}
+/* line 276, ../sass/page.scss */
 .main_content_table > table {
   width: 100%;
 }
-/* line 268, ../sass/page.scss */
+/* line 279, ../sass/page.scss */
 .main_content_table > table thead tr {
   border-bottom: #DBE3EF solid 1px;
 }
-/* line 271, ../sass/page.scss */
+/* line 282, ../sass/page.scss */
 .main_content_table > table thead th {
   color: #6F8098;
   text-align: left;
@@ -497,44 +512,44 @@
   line-height: 69px;
   padding: 0 8px;
 }
-/* line 277, ../sass/page.scss */
+/* line 288, ../sass/page.scss */
 .main_content_table > table thead th:nth-child(1) {
   padding-left: 32px;
   width: 109px;
   box-sizing: border-box;
 }
-/* line 282, ../sass/page.scss */
+/* line 293, ../sass/page.scss */
 .main_content_table > table thead th:nth-last-child(1) {
   padding-right: 32px;
   padding-left: 0;
 }
-/* line 291, ../sass/page.scss */
+/* line 302, ../sass/page.scss */
 .main_content_table > table tbody tr {
   border-bottom: #DBE3EF solid 1px;
 }
-/* line 292, ../sass/page.scss */
+/* line 303, ../sass/page.scss */
 .main_content_table > table tbody tr:nth-child(even) {
   background-color: #F3F6FA;
 }
-/* line 300, ../sass/page.scss */
+/* line 311, ../sass/page.scss */
 .main_content_table > table tbody td {
   padding: 20px 8px;
   line-height: 1.4em;
   position: relative;
   box-sizing: border-box;
 }
-/* line 305, ../sass/page.scss */
+/* line 316, ../sass/page.scss */
 .main_content_table > table tbody td:nth-child(1) {
   padding-left: 32px;
   padding-left: 0;
   text-align: center;
 }
-/* line 310, ../sass/page.scss */
+/* line 321, ../sass/page.scss */
 .main_content_table > table tbody td:nth-last-child(1) {
   padding-right: 32px;
 }
 
-/* line 321, ../sass/page.scss */
+/* line 332, ../sass/page.scss */
 .info_customer_table .img,
 .info_staff_table .img,
 .info_dealer_table .img,
@@ -548,7 +563,7 @@
   position: absolute;
   left: -1px;
 }
-/* line 330, ../sass/page.scss */
+/* line 341, ../sass/page.scss */
 .info_customer_table .img img,
 .info_staff_table .img img,
 .info_dealer_table .img img,
@@ -556,14 +571,14 @@
   width: 40px;
   height: 40px;
 }
-/* line 339, ../sass/page.scss */
+/* line 350, ../sass/page.scss */
 .info_customer_table thead th:nth-child(2),
 .info_staff_table thead th:nth-child(2),
 .info_dealer_table thead th:nth-child(2),
 .info_partner_table thead th:nth-child(2) {
   padding-left: 0px;
 }
-/* line 342, ../sass/page.scss */
+/* line 353, ../sass/page.scss */
 .info_customer_table thead th:nth-child(3),
 .info_staff_table thead th:nth-child(3),
 .info_dealer_table thead th:nth-child(3),
@@ -574,31 +589,55 @@
   box-sizing: border-box;
 }
 
-/* line 355, ../sass/page.scss */
-.info_coupon_table thead th:nth-child(2), .info_coupon_table thead th:nth-child(3), .info_coupon_table thead th:nth-child(4) {
-  width: 136px;
-  max-width: 136px;
-  min-width: 136px;
-  box-sizing: border-box;
+/* line 365, ../sass/page.scss */
+.info_staff_authority thead th {
+  width: calc(100% / 6);
+}
+/* line 367, ../sass/page.scss */
+.info_staff_authority thead th:last-child {
+  padding-left: 8px !important;
+}
+/* line 374, ../sass/page.scss */
+.info_staff_authority tbody td:first-child {
+  padding-left: 32px !important;
+  text-align: left !important;
+}
+/* line 379, ../sass/page.scss */
+.info_staff_authority tbody td .control {
+  margin: 0;
+}
+/* line 383, ../sass/page.scss */
+.info_staff_authority tbody td .control__indicator {
+  position: absolute;
+  top: -21px;
+  left: 0;
+  height: 32px;
+  width: 32px;
+  border: #c3cad5 solid 1px;
 }
 
-/* line 368, ../sass/page.scss */
+/* line 396, ../sass/page.scss */
 .center {
   padding-left: 0;
   text-align: center;
 }
 
-/* line 372, ../sass/page.scss */
+/* line 400, ../sass/page.scss */
 .w88 {
   width: 88px;
 }
 
-/* line 375, ../sass/page.scss */
+/* line 403, ../sass/page.scss */
 .w100 {
-  width: 100px;
+  width: 96px;
 }
 
-/* line 378, ../sass/page.scss */
+/* line 407, ../sass/page.scss */
+.info_dealer_table .w100 {
+  width: 144px;
+}
+
+/* line 411, ../sass/page.scss */
 .authority1,
 .authority2,
 .authority3 {
@@ -617,18 +656,18 @@
 /*------------------------------------------------------------------
 頁籤
 ------------------------------------------------------------------*/
-/* line 396, ../sass/page.scss */
+/* line 429, ../sass/page.scss */
 .abgne_tab {
   clear: left;
   width: 100%;
 }
-/* line 399, ../sass/page.scss */
+/* line 432, ../sass/page.scss */
 .abgne_tab ul.tabs {
   width: 100%;
   height: 48px;
   border-bottom: 2px solid #C3D1E4;
 }
-/* line 403, ../sass/page.scss */
+/* line 436, ../sass/page.scss */
 .abgne_tab ul.tabs li {
   float: left;
   height: 47px;
@@ -639,7 +678,10 @@
   /* 讓 li 往下移來遮住 ul 的部份 border-bottom */
   border-left: none;
 }
-/* line 412, ../sass/page.scss */
+/* line 444, ../sass/page.scss */
+.abgne_tab ul.tabs li input[type="submit"],
+.abgne_tab ul.tabs li input[type="button"],
+.abgne_tab ul.tabs li button,
 .abgne_tab ul.tabs li a {
   display: block;
   padding: 0 36px;
@@ -649,30 +691,39 @@
   font-family: "Noto Serif TC", sans-serif, "微軟正黑體", "新細明體";
   font-weight: 700;
 }
-/* line 420, ../sass/page.scss */
-.abgne_tab ul.tabs li a:hover, .abgne_tab ul.tabs li a:focus {
+/* line 455, ../sass/page.scss */
+.abgne_tab ul.tabs li input[type="submit"]:hover, .abgne_tab ul.tabs li input[type="submit"]:focus,
+.abgne_tab ul.tabs li input[type="button"]:hover,
+.abgne_tab ul.tabs li input[type="button"]:focus,
+.abgne_tab ul.tabs li button:hover,
+.abgne_tab ul.tabs li button:focus,
+.abgne_tab ul.tabs li a:hover,
+.abgne_tab ul.tabs li a:focus {
   background: #FFF;
 }
-/* line 424, ../sass/page.scss */
+/* line 459, ../sass/page.scss */
 .abgne_tab ul.tabs li.active {
   border-bottom: 2px solid #2D343B;
 }
-/* line 427, ../sass/page.scss */
+/* line 461, ../sass/page.scss */
+.abgne_tab ul.tabs li.active input[type="submit"],
+.abgne_tab ul.tabs li.active input[type="button"],
+.abgne_tab ul.tabs li.active button,
 .abgne_tab ul.tabs li.active a {
   color: #0E1216;
 }
-/* line 437, ../sass/page.scss */
+/* line 474, ../sass/page.scss */
 .abgne_tab div.tab_container {
   clear: left;
   width: 100%;
   border-top: none;
 }
-/* line 441, ../sass/page.scss */
+/* line 478, ../sass/page.scss */
 .abgne_tab div.tab_container .tab_content {
-  padding: 20px;
+  padding: 20px 0;
   padding-bottom: 0;
 }
-/* line 445, ../sass/page.scss */
+/* line 482, ../sass/page.scss */
 .abgne_tab div.tab_container .tab_content h2, .abgne_tab div.tab_container .tab_content h3 {
   margin: 0 0 20px;
 }
@@ -680,22 +731,22 @@
 /*------------------------------------------------------------------
 訊息公告
 ------------------------------------------------------------------*/
-/* line 455, ../sass/page.scss */
+/* line 492, ../sass/page.scss */
 .info_news_table .authority1, .info_news_table .authority2, .info_news_table .authority3 {
   width: auto;
   border-radius: 50px;
   padding: 0 8px;
   margin-bottom: 4px;
 }
-/* line 464, ../sass/page.scss */
+/* line 501, ../sass/page.scss */
 .info_news_table tbody tr td:nth-child(2) {
   width: 20%;
 }
-/* line 467, ../sass/page.scss */
+/* line 504, ../sass/page.scss */
 .info_news_table tbody tr td:nth-child(3) {
   width: 30%;
 }
-/* line 469, ../sass/page.scss */
+/* line 506, ../sass/page.scss */
 .info_news_table tbody tr td:nth-child(3) span {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -704,7 +755,7 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-/* line 479, ../sass/page.scss */
+/* line 516, ../sass/page.scss */
 .info_news_table tbody tr td:nth-child(7) {
   width: 132px;
   min-width: 132px;
@@ -713,7 +764,7 @@
 /*------------------------------------------------------------------
 訂單管理
 ------------------------------------------------------------------*/
-/* line 492, ../sass/page.scss */
+/* line 529, ../sass/page.scss */
 .main_content_orderTilte li {
   float: left;
   font-size: 0.9em;
@@ -721,7 +772,7 @@
   color: #6F8098;
 }
 
-/* line 499, ../sass/page.scss */
+/* line 536, ../sass/page.scss */
 .main_content_orderTilte {
   height: 64px;
   width: 100%;
@@ -731,39 +782,39 @@
   box-sizing: border-box;
   padding-left: 32px;
 }
-/* line 507, ../sass/page.scss */
+/* line 544, ../sass/page.scss */
 .main_content_orderTilte li {
   padding: 0 16px;
   box-sizing: border-box;
 }
-/* line 510, ../sass/page.scss */
+/* line 547, ../sass/page.scss */
 .main_content_orderTilte li:nth-child(1) {
   width: 360px;
 }
-/* line 513, ../sass/page.scss */
+/* line 550, ../sass/page.scss */
 .main_content_orderTilte li:nth-child(2) {
   width: 120px;
   text-align: right;
 }
-/* line 517, ../sass/page.scss */
+/* line 554, ../sass/page.scss */
 .main_content_orderTilte li:nth-child(3), .main_content_orderTilte li:nth-child(4) {
   width: 96px;
   padding: 0 16px;
   box-sizing: border-box;
 }
-/* line 523, ../sass/page.scss */
+/* line 560, ../sass/page.scss */
 .main_content_orderTilte li:nth-child(5) {
   width: 120px;
   padding: 0 16px;
   box-sizing: border-box;
 }
-/* line 528, ../sass/page.scss */
+/* line 565, ../sass/page.scss */
 .main_content_orderTilte li:nth-last-child(1) {
   float: right;
   padding-right: 32px;
 }
 
-/* line 534, ../sass/page.scss */
+/* line 571, ../sass/page.scss */
 .main_content_orderInfo {
   border: #DBE3EF solid 1px;
   background-color: #FFF;
@@ -771,20 +822,20 @@
   overflow: hidden;
   margin: 16px 0;
 }
-/* line 540, ../sass/page.scss */
+/* line 577, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_title {
   padding: 6px 16px;
   height: 44px;
   background-color: #F3F6FA;
   box-sizing: border-box;
 }
-/* line 545, ../sass/page.scss */
+/* line 582, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_title > ul {
   display: inline-block;
   height: 32px;
   line-height: 32px;
 }
-/* line 550, ../sass/page.scss */
+/* line 587, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_title > ul li {
   position: relative;
   float: left;
@@ -792,19 +843,19 @@
   line-height: 32px;
   padding-left: 12px;
 }
-/* line 560, ../sass/page.scss */
+/* line 597, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_title .orderInfo_title_img {
   float: left;
 }
-/* line 565, ../sass/page.scss */
+/* line 602, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_title .orderInfo_title_date {
   float: right;
 }
-/* line 568, ../sass/page.scss */
+/* line 605, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_title .orderInfo_title_date li {
   margin-left: 16px;
 }
-/* line 570, ../sass/page.scss */
+/* line 607, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_title .orderInfo_title_date li::before {
   content: "";
   position: absolute;
@@ -814,19 +865,19 @@
   height: 5px;
   background-color: #93A4BD;
 }
-/* line 581, ../sass/page.scss */
+/* line 618, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_title .order_date {
   display: inline-block;
   height: 32px;
   line-height: 32px;
 }
-/* line 587, ../sass/page.scss */
+/* line 624, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_title .order_no {
   height: 32px;
   line-height: 32px;
   display: inline-block;
 }
-/* line 593, ../sass/page.scss */
+/* line 630, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_title .img {
   display: block;
   border-radius: 50%;
@@ -834,57 +885,62 @@
   height: 32px;
   overflow: hidden;
 }
-/* line 599, ../sass/page.scss */
+/* line 636, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_title .img img {
   width: 32px;
 }
-/* line 604, ../sass/page.scss */
+/* line 641, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content {
   padding: 16px;
   padding-bottom: 0;
 }
-/* line 608, ../sass/page.scss */
+/* line 645, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content > li {
   float: left;
   padding: 10px 16px;
+  line-height: 1.4em;
 }
-/* line 611, ../sass/page.scss */
+/* line 649, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content > li:nth-child(3), .main_content_orderInfo .orderInfo_content > li:nth-child(4) {
   width: 96px;
   box-sizing: border-box;
 }
-/* line 616, ../sass/page.scss */
+/* line 654, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content > li:nth-child(5) {
   width: 120px;
   box-sizing: border-box;
 }
-/* line 621, ../sass/page.scss */
+/* line 658, ../sass/page.scss */
+.main_content_orderInfo .orderInfo_content > li:nth-child(6) {
+  max-width: 320px;
+}
+/* line 662, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .wait {
   color: #b71010;
 }
-/* line 624, ../sass/page.scss */
+/* line 665, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_product {
   width: 360px;
   min-height: 56px;
   box-sizing: border-box;
   padding: 8px 16px;
 }
-/* line 629, ../sass/page.scss */
+/* line 670, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_product > ol {
   display: inline-block;
   width: 100%;
   padding-bottom: 16px;
 }
-/* line 633, ../sass/page.scss */
+/* line 674, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_product > ol + ol {
   border-top: #DBE3EF solid 1px;
   padding-top: 16px;
 }
-/* line 637, ../sass/page.scss */
+/* line 678, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_product > ol > li {
   float: left;
 }
-/* line 643, ../sass/page.scss */
+/* line 684, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_product .product_img .img {
   display: block;
   border-radius: 5px;
@@ -893,53 +949,53 @@
   height: 56px;
   overflow: hidden;
 }
-/* line 650, ../sass/page.scss */
+/* line 691, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_product .product_img .img img {
   width: 56px;
 }
-/* line 655, ../sass/page.scss */
+/* line 696, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_product .product_name {
   padding: 5px 0px 5px 16px;
 }
-/* line 657, ../sass/page.scss */
+/* line 698, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_product .product_name span {
   display: block;
   line-height: 24px;
   height: 24px;
 }
-/* line 665, ../sass/page.scss */
+/* line 706, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_product .product_quantity {
   padding: 5px 0px 5px 16px;
   font-size: 1.1em;
   font-weight: bold;
   float: right;
 }
-/* line 670, ../sass/page.scss */
+/* line 711, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_product .product_quantity::before {
   content: "x";
   font-weight: lighter;
   opacity: 0.8;
 }
-/* line 677, ../sass/page.scss */
+/* line 718, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_price {
   padding: 8px 16px;
   width: 136px;
   box-sizing: border-box;
   text-align: right;
 }
-/* line 683, ../sass/page.scss */
+/* line 724, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_price ol li {
   height: 24px;
   line-height: 24px;
   margin-bottom: 8px;
 }
-/* line 687, ../sass/page.scss */
+/* line 728, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_price ol li.price {
   font-size: 1.1em;
   font-weight: bold;
   margin-bottom: 4px;
 }
-/* line 691, ../sass/page.scss */
+/* line 732, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_price ol li.price span {
   border: none !important;
   padding: 0;
@@ -947,7 +1003,7 @@
   font-weight: lighter;
   padding-right: 4px;
 }
-/* line 703, ../sass/page.scss */
+/* line 744, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_price ol li span {
   font-size: 0.8em;
   border: #C3D1E4 solid 1px;
@@ -956,7 +1012,7 @@
   padding-left: 32px;
   position: relative;
 }
-/* line 711, ../sass/page.scss */
+/* line 752, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_price ol li span::before {
   content: "";
   display: block;
@@ -968,46 +1024,56 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 722, ../sass/page.scss */
+/* line 763, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_price ol li span.coupon_title::before {
   background-image: url("../images/icon/coupon2.png");
 }
-/* line 725, ../sass/page.scss */
+/* line 766, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_price ol li span.credit::before {
   background-image: url("../images/icon/card.png");
 }
-/* line 732, ../sass/page.scss */
+/* line 773, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_product_functions {
   float: right;
   text-align: right;
   padding-right: 8px;
 }
-/* line 736, ../sass/page.scss */
+/* line 777, ../sass/page.scss */
 .main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions {
   position: relative;
   min-width: auto;
+  top: 0;
 }
-/* line 740, ../sass/page.scss */
+/* line 782, ../sass/page.scss */
+.main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions li input[type="submit"],
+.main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions li input[type="button"],
+.main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions li button,
 .main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions li a {
   color: #93A4BD;
   text-decoration: underline;
 }
-/* line 744, ../sass/page.scss */
-.main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions li a:hover, .main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions li a:focus {
+/* line 789, ../sass/page.scss */
+.main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions li input[type="submit"]:hover, .main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions li input[type="submit"]:focus,
+.main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions li input[type="button"]:hover,
+.main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions li input[type="button"]:focus,
+.main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions li button:hover,
+.main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions li button:focus,
+.main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions li a:hover,
+.main_content_orderInfo .orderInfo_content .orderInfo_product_functions .functions li a:focus {
   color: #2D343B;
 }
 
 /*------------------------------------------------------------------
 客戶資料
 ------------------------------------------------------------------*/
-/* line 759, ../sass/page.scss */
+/* line 804, ../sass/page.scss */
 .staff_updata {
   width: 80%;
   margin: 0 auto;
   margin-top: 32px;
   margin-bottom: 32px;
 }
-/* line 765, ../sass/page.scss */
+/* line 810, ../sass/page.scss */
 .staff_updata .staff_updata_img {
   float: left;
   width: 120px;
@@ -1015,117 +1081,288 @@
   border-radius: 50%;
   overflow: hidden;
 }
-/* line 771, ../sass/page.scss */
+/* line 816, ../sass/page.scss */
 .staff_updata .staff_updata_img img {
   width: 120px;
   border-radius: 50%;
 }
-/* line 776, ../sass/page.scss */
+/* line 821, ../sass/page.scss */
 .staff_updata ul {
   display: inline-block;
   padding-top: 20px;
   padding-left: 24px;
 }
-/* line 780, ../sass/page.scss */
+/* line 825, ../sass/page.scss */
 .staff_updata ul li {
   display: block;
 }
-/* line 782, ../sass/page.scss */
+/* line 827, ../sass/page.scss */
 .staff_updata ul li.input-send {
   margin: 0;
   padding-bottom: 8px;
   display: inline-block;
 }
-/* line 787, ../sass/page.scss */
-.staff_updata ul li.input-send a:hover, .staff_updata ul li.input-send a:focus {
+/* line 835, ../sass/page.scss */
+.staff_updata ul li.input-send input[type="submit"]:hover, .staff_updata ul li.input-send input[type="submit"]:focus,
+.staff_updata ul li.input-send input[type="button"]:hover,
+.staff_updata ul li.input-send input[type="button"]:focus,
+.staff_updata ul li.input-send button:hover,
+.staff_updata ul li.input-send button:focus,
+.staff_updata ul li.input-send a:hover,
+.staff_updata ul li.input-send a:focus {
   background-color: #2D343B;
   color: #FFF;
 }
-/* line 795, ../sass/page.scss */
+/* line 843, ../sass/page.scss */
 .staff_updata .input-send a:nth-last-child(1) {
   float: left;
   letter-spacing: 1px;
 }
 
-/* line 800, ../sass/page.scss */
+/* line 848, ../sass/page.scss */
+.product_form,
+.coupon_form,
 .staff_form {
   width: 80%;
   margin: 0 auto;
   clear: both;
+  padding-top: 8px;
 }
-/* line 806, ../sass/page.scss */
-.staff_form ul li {
+/* line 855, ../sass/page.scss */
+.product_form textarea,
+.coupon_form textarea,
+.staff_form textarea {
+  min-width: 400px;
+  max-width: 400px;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 24px;
+}
+/* line 863, ../sass/page.scss */
+.product_form ul > li,
+.coupon_form ul > li,
+.staff_form ul > li {
   border-bottom: #eee dashed 1px;
-  padding: 20px 0 0 0;
+  padding: 10px 0;
 }
-/* line 810, ../sass/page.scss */
-.staff_form ul li.input-send {
+/* line 867, ../sass/page.scss */
+.product_form ul > li.input-send,
+.coupon_form ul > li.input-send,
+.staff_form ul > li.input-send {
   display: inline-block;
   margin-top: 0;
   text-align: center;
   width: 100%;
   margin-bottom: 40px;
 }
-/* line 816, ../sass/page.scss */
-.staff_form ul li.input-send .btn {
+/* line 873, ../sass/page.scss */
+.product_form ul > li.input-send .btn,
+.coupon_form ul > li.input-send .btn,
+.staff_form ul > li.input-send .btn {
   float: initial;
   margin: 0 auto;
 }
-/* line 820, ../sass/page.scss */
-.staff_form ul li.input-send a {
+/* line 877, ../sass/page.scss */
+.product_form ul > li.input-send input[type="submit"],
+.product_form ul > li.input-send input[type="button"],
+.product_form ul > li.input-send button,
+.product_form ul > li.input-send a,
+.coupon_form ul > li.input-send input[type="submit"],
+.coupon_form ul > li.input-send input[type="button"],
+.coupon_form ul > li.input-send button,
+.coupon_form ul > li.input-send a,
+.staff_form ul > li.input-send input[type="submit"],
+.staff_form ul > li.input-send input[type="button"],
+.staff_form ul > li.input-send button,
+.staff_form ul > li.input-send a {
   display: inline-block;
   float: inherit !important;
   line-height: 44px;
   margin: 0 16px;
 }
-/* line 824, ../sass/page.scss */
-.staff_form ul li.input-send a:hover, .staff_form ul li.input-send a:focus {
+/* line 884, ../sass/page.scss */
+.product_form ul > li.input-send input[type="submit"]:hover, .product_form ul > li.input-send input[type="submit"]:focus,
+.product_form ul > li.input-send input[type="button"]:hover,
+.product_form ul > li.input-send input[type="button"]:focus,
+.product_form ul > li.input-send button:hover,
+.product_form ul > li.input-send button:focus,
+.product_form ul > li.input-send a:hover,
+.product_form ul > li.input-send a:focus,
+.coupon_form ul > li.input-send input[type="submit"]:hover,
+.coupon_form ul > li.input-send input[type="submit"]:focus,
+.coupon_form ul > li.input-send input[type="button"]:hover,
+.coupon_form ul > li.input-send input[type="button"]:focus,
+.coupon_form ul > li.input-send button:hover,
+.coupon_form ul > li.input-send button:focus,
+.coupon_form ul > li.input-send a:hover,
+.coupon_form ul > li.input-send a:focus,
+.staff_form ul > li.input-send input[type="submit"]:hover,
+.staff_form ul > li.input-send input[type="submit"]:focus,
+.staff_form ul > li.input-send input[type="button"]:hover,
+.staff_form ul > li.input-send input[type="button"]:focus,
+.staff_form ul > li.input-send button:hover,
+.staff_form ul > li.input-send button:focus,
+.staff_form ul > li.input-send a:hover,
+.staff_form ul > li.input-send a:focus {
   background-color: #2D343B;
   color: #FFF;
 }
-/* line 832, ../sass/page.scss */
-.staff_form ul li.facebook .title, .staff_form ul li.google .title {
+/* line 892, ../sass/page.scss */
+.product_form ul > li.facebook .title, .product_form ul > li.google .title,
+.coupon_form ul > li.facebook .title,
+.coupon_form ul > li.google .title,
+.staff_form ul > li.facebook .title,
+.staff_form ul > li.google .title {
   background-image: url("../images/icon/icon_google.svg");
   background-position: center right;
   background-repeat: no-repeat;
   float: left;
 }
-/* line 839, ../sass/page.scss */
-.staff_form ul li.facebook p, .staff_form ul li.google p {
+/* line 899, ../sass/page.scss */
+.product_form ul > li.facebook p, .product_form ul > li.google p,
+.coupon_form ul > li.facebook p,
+.coupon_form ul > li.google p,
+.staff_form ul > li.facebook p,
+.staff_form ul > li.google p {
   line-height: 44px;
   height: 44px;
   display: inline-block;
 }
-/* line 844, ../sass/page.scss */
-.staff_form ul li.facebook a, .staff_form ul li.google a {
+/* line 904, ../sass/page.scss */
+.product_form ul > li.facebook input[type="submit"],
+.product_form ul > li.facebook input[type="button"],
+.product_form ul > li.facebook button,
+.product_form ul > li.facebook a, .product_form ul > li.google input[type="submit"],
+.product_form ul > li.google input[type="button"],
+.product_form ul > li.google button,
+.product_form ul > li.google a,
+.coupon_form ul > li.facebook input[type="submit"],
+.coupon_form ul > li.facebook input[type="button"],
+.coupon_form ul > li.facebook button,
+.coupon_form ul > li.facebook a,
+.coupon_form ul > li.google input[type="submit"],
+.coupon_form ul > li.google input[type="button"],
+.coupon_form ul > li.google button,
+.coupon_form ul > li.google a,
+.staff_form ul > li.facebook input[type="submit"],
+.staff_form ul > li.facebook input[type="button"],
+.staff_form ul > li.facebook button,
+.staff_form ul > li.facebook a,
+.staff_form ul > li.google input[type="submit"],
+.staff_form ul > li.google input[type="button"],
+.staff_form ul > li.google button,
+.staff_form ul > li.google a {
   text-decoration: underline;
   margin-left: 40px;
   color: #6F8098;
   line-height: 44px;
   height: 44px;
   display: inline-block;
+  background-color: transparent;
+  border: none;
 }
-/* line 851, ../sass/page.scss */
-.staff_form ul li.facebook a:hover, .staff_form ul li.facebook a:focus, .staff_form ul li.google a:hover, .staff_form ul li.google a:focus {
+/* line 916, ../sass/page.scss */
+.product_form ul > li.facebook input[type="submit"]:hover, .product_form ul > li.facebook input[type="submit"]:focus,
+.product_form ul > li.facebook input[type="button"]:hover,
+.product_form ul > li.facebook input[type="button"]:focus,
+.product_form ul > li.facebook button:hover,
+.product_form ul > li.facebook button:focus,
+.product_form ul > li.facebook a:hover,
+.product_form ul > li.facebook a:focus, .product_form ul > li.google input[type="submit"]:hover, .product_form ul > li.google input[type="submit"]:focus,
+.product_form ul > li.google input[type="button"]:hover,
+.product_form ul > li.google input[type="button"]:focus,
+.product_form ul > li.google button:hover,
+.product_form ul > li.google button:focus,
+.product_form ul > li.google a:hover,
+.product_form ul > li.google a:focus,
+.coupon_form ul > li.facebook input[type="submit"]:hover,
+.coupon_form ul > li.facebook input[type="submit"]:focus,
+.coupon_form ul > li.facebook input[type="button"]:hover,
+.coupon_form ul > li.facebook input[type="button"]:focus,
+.coupon_form ul > li.facebook button:hover,
+.coupon_form ul > li.facebook button:focus,
+.coupon_form ul > li.facebook a:hover,
+.coupon_form ul > li.facebook a:focus,
+.coupon_form ul > li.google input[type="submit"]:hover,
+.coupon_form ul > li.google input[type="submit"]:focus,
+.coupon_form ul > li.google input[type="button"]:hover,
+.coupon_form ul > li.google input[type="button"]:focus,
+.coupon_form ul > li.google button:hover,
+.coupon_form ul > li.google button:focus,
+.coupon_form ul > li.google a:hover,
+.coupon_form ul > li.google a:focus,
+.staff_form ul > li.facebook input[type="submit"]:hover,
+.staff_form ul > li.facebook input[type="submit"]:focus,
+.staff_form ul > li.facebook input[type="button"]:hover,
+.staff_form ul > li.facebook input[type="button"]:focus,
+.staff_form ul > li.facebook button:hover,
+.staff_form ul > li.facebook button:focus,
+.staff_form ul > li.facebook a:hover,
+.staff_form ul > li.facebook a:focus,
+.staff_form ul > li.google input[type="submit"]:hover,
+.staff_form ul > li.google input[type="submit"]:focus,
+.staff_form ul > li.google input[type="button"]:hover,
+.staff_form ul > li.google input[type="button"]:focus,
+.staff_form ul > li.google button:hover,
+.staff_form ul > li.google button:focus,
+.staff_form ul > li.google a:hover,
+.staff_form ul > li.google a:focus {
   color: #2D343B;
 }
-/* line 858, ../sass/page.scss */
-.staff_form ul li.facebook .title {
+/* line 923, ../sass/page.scss */
+.product_form ul > li.facebook .title,
+.coupon_form ul > li.facebook .title,
+.staff_form ul > li.facebook .title {
   background-image: url("../images/icon/icon_facebook.svg");
 }
-/* line 866, ../sass/page.scss */
+/* line 930, ../sass/page.scss */
+.product_form ol,
+.coupon_form ol,
+.staff_form ol {
+  display: inline-block;
+  height: 44px;
+}
+/* line 933, ../sass/page.scss */
+.product_form ol::after,
+.coupon_form ol::after,
+.staff_form ol::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* line 938, ../sass/page.scss */
+.product_form ol li,
+.coupon_form ol li,
+.staff_form ol li {
+  float: left;
+  padding: 0;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding-right: 16px;
+}
+/* line 947, ../sass/page.scss */
+.product_form .title,
+.coupon_form .title,
 .staff_form .title {
   text-align: right;
   width: 108px;
-  display: inline-block;
+  display: flex;
   height: 44px;
-  margin-right: 8px;
+  margin-right: 16px;
+  float: left;
+  align-items: center;
+  justify-content: flex-end;
 }
-/* line 876, ../sass/page.scss */
+/* line 958, ../sass/page.scss */
+.product_form label,
+.coupon_form label,
 .staff_form label {
   position: relative;
 }
-/* line 878, ../sass/page.scss */
+/* line 960, ../sass/page.scss */
+.product_form label span,
+.coupon_form label span,
 .staff_form label span {
   box-sizing: border-box;
   border: #DBE3EF solid 1px;
@@ -1136,30 +1373,147 @@
   border-radius: 8px;
   display: none;
 }
-/* line 890, ../sass/page.scss */
-.staff_form input[type="tel"], .staff_form input[type="email"], .staff_form input[type="password"], .staff_form input[type="text"] {
+/* line 972, ../sass/page.scss */
+.product_form input[type="tel"], .product_form input[type="email"], .product_form input[type="password"], .product_form input[type="text"],
+.coupon_form input[type="tel"],
+.coupon_form input[type="email"],
+.coupon_form input[type="password"],
+.coupon_form input[type="text"],
+.staff_form input[type="tel"],
+.staff_form input[type="email"],
+.staff_form input[type="password"],
+.staff_form input[type="text"] {
   width: 400px;
 }
-/* line 893, ../sass/page.scss */
+/* line 975, ../sass/page.scss */
+.product_form .input-send button:nth-last-child(1),
+.product_form .input-send a:nth-last-child(1),
+.coupon_form .input-send button:nth-last-child(1),
+.coupon_form .input-send a:nth-last-child(1),
+.staff_form .input-send button:nth-last-child(1),
 .staff_form .input-send a:nth-last-child(1) {
   float: left;
   letter-spacing: 1px;
 }
-/* line 898, ../sass/page.scss */
+/* line 981, ../sass/page.scss */
+.product_form .info_text,
+.coupon_form .info_text,
 .staff_form .info_text {
   margin-bottom: 20px;
   padding: 20px;
   background-color: #F3F6FA;
   border-radius: 8px;
 }
-/* line 903, ../sass/page.scss */
+/* line 986, ../sass/page.scss */
+.product_form .info_text li,
+.coupon_form .info_text li,
 .staff_form .info_text li {
   line-height: 24px;
   height: 24px;
   padding: 0;
 }
 
-/* line 912, ../sass/page.scss */
+/* line 994, ../sass/page.scss */
+.coupon_form .title,
+.coupon_form label {
+  width: 152px;
+}
+
+/* line 999, ../sass/page.scss */
+.product_form {
+  padding-bottom: 16px;
+}
+/* line 1001, ../sass/page.scss */
+.product_form .title,
+.product_form label {
+  width: 144px;
+}
+
+/* line 1007, ../sass/page.scss */
+.product_form_img ul {
+  margin: 0 120px;
+  margin-top: 16px;
+}
+/* line 1011, ../sass/page.scss */
+.product_form_img ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* line 1016, ../sass/page.scss */
+.product_form_img ul li {
+  display: inline-block;
+  float: left;
+  margin: 16px 8px;
+  width: calc(20% - 16px);
+  max-width: 200px;
+  position: relative;
+  text-align: center;
+  line-height: 32px;
+  color: #6F8098;
+}
+/* line 1027, ../sass/page.scss */
+.product_form_img ul li img {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+/* line 1034, ../sass/page.scss */
+.product_form_img ul li.input-add-img::before {
+  content: "＋";
+  position: absolute;
+  top: calc(50% - 32px);
+  font-size: 4em;
+  color: #FFF;
+  left: calc(50% - 30px);
+}
+/* line 1044, ../sass/page.scss */
+.product_form_img ul li.input-add-img:hover::before, .product_form_img ul li.input-add-img:focus::before {
+  color: #6F8098;
+}
+/* line 1048, ../sass/page.scss */
+.product_form_img ul li.input-add-img button {
+  background-color: #C3D1E4;
+  height: 162.8px;
+  width: 162.8px;
+  line-height: 234px;
+  letter-spacing: 2px;
+  font-size: 1.1em;
+  color: #6F8098;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px;
+}
+/* line 1059, ../sass/page.scss */
+.product_form_img ul li.input-add-img button:hover, .product_form_img ul li.input-add-img button:focus {
+  background-color: #FFF;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 4px;
+  color: #2D343B;
+}
+/* line 1070, ../sass/page.scss */
+.product_form_img ul li.input-remove-img button {
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  border: none;
+  background-image: url("../images/icon/del_w.png");
+  background-color: #6F8098;
+  background-size: 70%;
+  background-position: center;
+  border-radius: 32px;
+  top: -10px;
+  left: -10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2px;
+}
+/* line 1086, ../sass/page.scss */
+.product_form_img ul li.input-remove-img button:hover, .product_form_img ul li.input-remove-img button:focus {
+  background-color: #FFF;
+  background-image: url("../images/icon/del_b.png");
+}
+
+/* line 1095, ../sass/page.scss */
 .container {
   width: 100%;
   height: 100%;
@@ -1169,7 +1523,7 @@
   align-items: center;
 }
 
-/* line 921, ../sass/page.scss */
+/* line 1104, ../sass/page.scss */
 .control-group {
   display: inline-block;
   vertical-align: top;
@@ -1182,27 +1536,27 @@
   margin: 10px;
 }
 
-/* line 932, ../sass/page.scss */
+/* line 1115, ../sass/page.scss */
 .control {
   position: relative;
   padding-left: 30px;
-  margin-bottom: 15px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 1em;
   display: inline-block;
+  margin-right: 16px;
 }
 
-/* line 941, ../sass/page.scss */
+/* line 1125, ../sass/page.scss */
 .control input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
-/* line 946, ../sass/page.scss */
+/* line 1130, ../sass/page.scss */
 .control__indicator {
   position: absolute;
-  top: -2px;
+  top: -3px;
   left: 0;
   height: 24px;
   width: 24px;
@@ -1210,59 +1564,60 @@
   box-sizing: border-box;
   border: #DBE3EF solid 1px;
   outline-color: #C3D1E4;
+  background-color: #fff;
 }
 
-/* line 958, ../sass/page.scss */
+/* line 1143, ../sass/page.scss */
 .control--radio .control__indicator {
   border-radius: 50%;
 }
 
-/* line 961, ../sass/page.scss */
+/* line 1146, ../sass/page.scss */
 .control:hover input ~ .control__indicator,
 .control input:focus ~ .control__indicator {
   background: #ccc;
 }
 
-/* line 965, ../sass/page.scss */
+/* line 1150, ../sass/page.scss */
 .control input.checked, .control__indicator.checked {
   background: #2aa1c0;
 }
 
-/* line 968, ../sass/page.scss */
+/* line 1153, ../sass/page.scss */
 .control input:checked ~ .control__indicator {
   background: #2aa1c0;
 }
 
-/* line 971, ../sass/page.scss */
+/* line 1156, ../sass/page.scss */
 .control:hover input:not([disabled]):checked ~ .control__indicator,
 .control input:checked:focus ~ .control__indicator {
   background: #0e647d;
 }
 
-/* line 975, ../sass/page.scss */
+/* line 1160, ../sass/page.scss */
 .control input:disabled ~ .control__indicator {
   background: #e6e6e6;
   opacity: 0.6;
   pointer-events: none;
 }
 
-/* line 980, ../sass/page.scss */
+/* line 1165, ../sass/page.scss */
 .control__indicator:after {
   content: '';
   position: absolute;
   display: none;
 }
 
-/* line 985, ../sass/page.scss */
+/* line 1170, ../sass/page.scss */
 .control input:checked ~ .control__indicator:after {
   display: block;
 }
 
-/* line 988, ../sass/page.scss */
+/* line 1173, ../sass/page.scss */
 .control--checkbox .control__indicator.checked:after,
 .control--checkbox .control__indicator:after {
-  left: 8px;
-  top: 4px;
+  left: calc(50% - 3px);
+  top: calc(50% - 5px);
   width: 3px;
   height: 8px;
   border: solid #fff;
@@ -1270,12 +1625,12 @@
   transform: rotate(45deg);
 }
 
-/* line 998, ../sass/page.scss */
+/* line 1185, ../sass/page.scss */
 .control--checkbox input:disabled ~ .control__indicator:after {
   border-color: #7b7b7b;
 }
 
-/* line 1001, ../sass/page.scss */
+/* line 1188, ../sass/page.scss */
 .control--radio .control__indicator.checked:after,
 .control--radio .control__indicator:after {
   left: 7px;
@@ -1286,12 +1641,12 @@
   background: #fff;
 }
 
-/* line 1010, ../sass/page.scss */
+/* line 1197, ../sass/page.scss */
 .control--radio input:disabled ~ .control__indicator:after {
   background: #7b7b7b;
 }
 
-/* line 1013, ../sass/page.scss */
+/* line 1200, ../sass/page.scss */
 .select {
   position: relative;
   display: inline-block;
@@ -1299,7 +1654,7 @@
   width: 100%;
 }
 
-/* line 1019, ../sass/page.scss */
+/* line 1206, ../sass/page.scss */
 .select select {
   display: inline-block;
   width: 100%;
@@ -1315,25 +1670,25 @@
   -moz-appearance: none;
 }
 
-/* line 1033, ../sass/page.scss */
+/* line 1220, ../sass/page.scss */
 .select select::-ms-expand {
   display: none;
 }
 
-/* line 1036, ../sass/page.scss */
+/* line 1223, ../sass/page.scss */
 .select select:hover,
 .select select:focus {
   color: #000;
   background: #ccc;
 }
 
-/* line 1041, ../sass/page.scss */
+/* line 1228, ../sass/page.scss */
 .select select:disabled {
   opacity: 0.5;
   pointer-events: none;
 }
 
-/* line 1045, ../sass/page.scss */
+/* line 1232, ../sass/page.scss */
 .select__arrow {
   position: absolute;
   top: 16px;
@@ -1346,13 +1701,13 @@
   border-color: #7b7b7b transparent transparent transparent;
 }
 
-/* line 1056, ../sass/page.scss */
+/* line 1243, ../sass/page.scss */
 .select select:hover ~ .select__arrow,
 .select select:focus ~ .select__arrow {
   border-top-color: #000;
 }
 
-/* line 1060, ../sass/page.scss */
+/* line 1247, ../sass/page.scss */
 .select select:disabled ~ .select__arrow {
   border-top-color: #ccc;
 }
@@ -1360,81 +1715,113 @@
 /*------------------------------------------------------------------
 商品管理
 ------------------------------------------------------------------*/
-/* line 1067, ../sass/page.scss */
+/* line 1254, ../sass/page.scss */
 .product_management_table {
   background-color: #fff;
   width: 100%;
-  border: #e1eaf6 solid 1px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(147, 164, 189, 0.4) 0 2px 4px, rgba(188, 188, 188, 0.4) 0 2px 4px;
 }
-/* line 1071, ../sass/page.scss */
+/* line 1263, ../sass/page.scss */
 .product_management_table thead {
-  background-color: #e5eefa;
+  background-color: #FFF;
   line-height: 44px;
   height: 44px;
   color: #6F8098;
 }
-/* line 1077, ../sass/page.scss */
+/* line 1268, ../sass/page.scss */
+.product_management_table thead tr {
+  border-bottom: #DBE3EF solid 1px;
+}
+/* line 1270, ../sass/page.scss */
 .product_management_table thead tr th {
   text-align: left;
+  color: #6F8098;
+  height: 69px;
+  line-height: 69px;
 }
-/* line 1079, ../sass/page.scss */
+/* line 1275, ../sass/page.scss */
 .product_management_table thead tr th:nth-child(1), .product_management_table thead tr th:nth-child(2) {
   width: 20%;
   box-sizing: border-box;
 }
-/* line 1085, ../sass/page.scss */
+/* line 1281, ../sass/page.scss */
 .product_management_table thead tr th:nth-child(1) {
   padding-left: 24px;
 }
-/* line 1088, ../sass/page.scss */
+/* line 1284, ../sass/page.scss */
 .product_management_table thead tr th:nth-child(2) {
   padding-left: 8px;
 }
-/* line 1091, ../sass/page.scss */
+/* line 1287, ../sass/page.scss */
 .product_management_table thead tr th:nth-child(3), .product_management_table thead tr th:nth-child(5), .product_management_table thead tr th:nth-child(7) {
   width: 100px;
 }
-/* line 1096, ../sass/page.scss */
+/* line 1292, ../sass/page.scss */
 .product_management_table thead tr th:nth-child(6) {
   width: 88px;
 }
-/* line 1105, ../sass/page.scss */
+/* line 1300, ../sass/page.scss */
+.product_management_table tbody tr:nth-child(even) {
+  background-color: #F3F6FA;
+}
+/* line 1303, ../sass/page.scss */
+.product_management_table tbody tr td {
+  vertical-align: top;
+  padding: 16px 8px;
+}
+/* line 1306, ../sass/page.scss */
 .product_management_table tbody tr td:nth-child(1) {
   padding-left: 24px;
   width: 360px;
   min-width: 360px;
   box-sizing: border-box;
 }
-/* line 1110, ../sass/page.scss */
+/* line 1311, ../sass/page.scss */
 .product_management_table tbody tr td:nth-child(1) > ul {
-  border-top: #DBE3EF solid 1px;
-  padding-top: 16px;
   display: inline-block;
   width: 100%;
-  padding-bottom: 16px;
+  height: 58px;
+  padding: 0;
 }
-/* line 1116, ../sass/page.scss */
+/* line 1319, ../sass/page.scss */
+.product_management_table tbody tr td:nth-child(1) > ul + ul {
+  border-top: #DBE3EF solid 1px;
+}
+/* line 1322, ../sass/page.scss */
 .product_management_table tbody tr td:nth-child(1) > ul::after {
   content: "";
   display: block;
   clear: both;
 }
-/* line 1121, ../sass/page.scss */
-.product_management_table tbody tr td:nth-child(1) > ul:first-child {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-/* line 1127, ../sass/page.scss */
+/* line 1333, ../sass/page.scss */
 .product_management_table tbody tr td:nth-child(2) {
   padding-left: 8px;
+  min-width: 320px;
+  box-sizing: border-box;
+  height: 58px;
 }
-/* line 1133, ../sass/page.scss */
+/* line 1338, ../sass/page.scss */
+.product_management_table tbody tr td:nth-child(2)::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* line 1343, ../sass/page.scss */
+.product_management_table tbody tr td:nth-child(2) ul {
+  display: inline-block;
+  float: left;
+  width: 33.33%;
+}
+/* line 1352, ../sass/page.scss */
 .product_management_table .product_img {
   display: inline-block;
   float: left;
-  margin: 8px 0;
+  height: 58px;
 }
-/* line 1137, ../sass/page.scss */
+/* line 1357, ../sass/page.scss */
 .product_management_table .product_img .img {
   display: block;
   border-radius: 5px;
@@ -1443,36 +1830,37 @@
   height: 56px;
   overflow: hidden;
 }
-/* line 1145, ../sass/page.scss */
+/* line 1365, ../sass/page.scss */
 .product_management_table .product_img .img img {
   width: 56px;
 }
-/* line 1150, ../sass/page.scss */
+/* line 1370, ../sass/page.scss */
 .product_management_table .product_name {
   display: inline-block;
   float: left;
-  margin: 8px 0;
-  padding: 3px 0;
-  padding-left: 12px;
   padding: 5px 0px 5px 16px;
+  height: 58px;
+  box-sizing: border-box;
 }
-/* line 1157, ../sass/page.scss */
+/* line 1377, ../sass/page.scss */
 .product_management_table .product_name span {
   display: block;
   line-height: 24px;
   height: 24px;
 }
-/* line 1164, ../sass/page.scss */
+/* line 1384, ../sass/page.scss */
 .product_management_table .functions {
   position: relative;
+  display: inline-block;
+  top: 0;
 }
-/* line 1168, ../sass/page.scss */
+/* line 1390, ../sass/page.scss */
 .product_management_table .price {
   font-size: 1.1em;
   font-weight: bold;
   margin-bottom: 8px;
 }
-/* line 1172, ../sass/page.scss */
+/* line 1394, ../sass/page.scss */
 .product_management_table .price span {
   border: none !important;
   padding: 0;
@@ -1480,34 +1868,48 @@
   font-weight: lighter;
   padding-right: 4px;
 }
-/* line 1180, ../sass/page.scss */
+/* line 1402, ../sass/page.scss */
 .product_management_table .price_del {
   opacity: 0.6;
 }
-/* line 1183, ../sass/page.scss */
+/* line 1405, ../sass/page.scss */
 .product_management_table .product_quantity {
   font-size: 1.1em;
   font-weight: bold;
   text-align: right;
-  box-sizing: border-box;
-  margin-top: 12px;
   padding-right: 16px;
+  height: 58px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding-top: 8px;
+  float: right;
 }
-/* line 1190, ../sass/page.scss */
+/* line 1416, ../sass/page.scss */
 .product_management_table .product_quantity::before {
   content: "x";
   font-weight: lighter;
   opacity: 0.8;
 }
+/* line 1422, ../sass/page.scss */
+.product_management_table .soldout {
+  color: #b71010;
+}
 
 /*------------------------------------------------------------------
 折扣券
 ------------------------------------------------------------------*/
-/* line 1205, ../sass/page.scss */
+/* line 1433, ../sass/page.scss */
+.info_coupon_table thead th:nth-child(2), .info_coupon_table thead th:nth-child(3), .info_coupon_table thead th:nth-child(4) {
+  width: 136px;
+  max-width: 136px;
+  min-width: 136px;
+  box-sizing: border-box;
+}
+/* line 1447, ../sass/page.scss */
 .info_coupon_table tbody tr td:nth-child(2) {
   padding-left: 0;
 }
-/* line 1210, ../sass/page.scss */
+/* line 1452, ../sass/page.scss */
 .info_coupon_table tbody tr td:nth-child(5) span:nth-child(1) {
   font-size: 0.8em;
   border: #C3D1E4 solid 1px;
@@ -1518,24 +1920,106 @@
   transform: translateY(-1px);
   display: inline-block;
 }
-/* line 1225, ../sass/page.scss */
+/* line 1467, ../sass/page.scss */
 .info_coupon_table tbody tr td:nth-child(6) span:nth-child(1)::after {
   content: "~";
   margin: 0 8px;
 }
+/* line 1478, ../sass/page.scss */
+.info_coupon_table .currency {
+  padding: 0;
+  font-size: 0.8em;
+  font-weight: lighter;
+  padding-right: 4px;
+}
 
-/* line 1236, ../sass/page.scss */
+/* line 1485, ../sass/page.scss */
 .label_title {
   position: absolute;
   left: -90px;
   top: 14px;
 }
 
-/* line 1248, ../sass/page.scss */
+/* line 1494, ../sass/page.scss */
+.info_coupon_content_add_table thead {
+  background-color: #F3F6FA;
+}
+/* line 1497, ../sass/page.scss */
+.info_coupon_content_add_table thead tr th {
+  padding-left: 32px !important;
+  box-sizing: border-box;
+}
+/* line 1505, ../sass/page.scss */
+.info_coupon_content_add_table tbody tr td {
+  text-align: left !important;
+  padding-left: 32px !important;
+  background-color: #fff !important;
+}
+/* line 1509, ../sass/page.scss */
+.info_coupon_content_add_table tbody tr td label {
+  min-width: 152px;
+  display: inline-block;
+}
+/* line 1517, ../sass/page.scss */
+.info_coupon_content_add_table ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* line 1523, ../sass/page.scss */
+.info_coupon_content_add_table .input-more,
+.info_coupon_content_add_table .input-orderNo {
+  float: left;
+}
+/* line 1526, ../sass/page.scss */
+.info_coupon_content_add_table .input-more input[type="submit"],
+.info_coupon_content_add_table .input-more input[type="button"],
+.info_coupon_content_add_table .input-more button,
+.info_coupon_content_add_table .input-more a,
+.info_coupon_content_add_table .input-orderNo input[type="submit"],
+.info_coupon_content_add_table .input-orderNo input[type="button"],
+.info_coupon_content_add_table .input-orderNo button,
+.info_coupon_content_add_table .input-orderNo a {
+  color: #2D343B;
+  border-color: #0e1113;
+}
+/* line 1532, ../sass/page.scss */
+.info_coupon_content_add_table .input-more input[type="submit"]:hover, .info_coupon_content_add_table .input-more input[type="submit"]:focus,
+.info_coupon_content_add_table .input-more input[type="button"]:hover,
+.info_coupon_content_add_table .input-more input[type="button"]:focus,
+.info_coupon_content_add_table .input-more button:hover,
+.info_coupon_content_add_table .input-more button:focus,
+.info_coupon_content_add_table .input-more a:hover,
+.info_coupon_content_add_table .input-more a:focus,
+.info_coupon_content_add_table .input-orderNo input[type="submit"]:hover,
+.info_coupon_content_add_table .input-orderNo input[type="submit"]:focus,
+.info_coupon_content_add_table .input-orderNo input[type="button"]:hover,
+.info_coupon_content_add_table .input-orderNo input[type="button"]:focus,
+.info_coupon_content_add_table .input-orderNo button:hover,
+.info_coupon_content_add_table .input-orderNo button:focus,
+.info_coupon_content_add_table .input-orderNo a:hover,
+.info_coupon_content_add_table .input-orderNo a:focus {
+  background-color: #2D343B;
+  color: #ffffff;
+}
+
+/* line 1538, ../sass/page.scss */
+div.input-send {
+  display: block;
+  width: 360px;
+  margin: 0 auto;
+  padding: 16px 0;
+  height: 84px;
+}
+
+/*------------------------------------------------------------------
+發送SMS
+------------------------------------------------------------------*/
+/* line 1556, ../sass/page.scss */
 .info_sms_table tbody tr td:nth-child(3), .info_sms_table tbody tr td:nth-child(4) {
   width: 160px;
 }
-/* line 1252, ../sass/page.scss */
+/* line 1560, ../sass/page.scss */
 .info_sms_table tbody tr td:nth-child(5) {
   width: 88px;
 }
@@ -1543,15 +2027,15 @@
 /*------------------------------------------------------------------
 發送電子郵件
 ------------------------------------------------------------------*/
-/* line 1267, ../sass/page.scss */
+/* line 1575, ../sass/page.scss */
 .info_email_table tbody tr td:nth-child(2) {
   width: 296px;
 }
-/* line 1270, ../sass/page.scss */
+/* line 1578, ../sass/page.scss */
 .info_email_table tbody tr td:nth-child(5), .info_email_table tbody tr td:nth-child(4) {
   width: 160px;
 }
-/* line 1274, ../sass/page.scss */
+/* line 1582, ../sass/page.scss */
 .info_email_table tbody tr td:nth-child(6) {
   width: 88px;
 }

@@ -116,6 +116,7 @@
 			border: $light-gray solid 1px;
 		}
 	}
+	// button,
 	input[type="submit"]{
 		width: 44px;
 		height: 44px;
@@ -131,6 +132,8 @@
 		background-position: center center;
 		outline-color: transparent;
 		background-size: 50%;
+		background-color: #FFF;
+		border: #DBE3EF solid 1px;
 		&:hover, &:focus{
 			background-image: url('../images/icon/search_b.svg');
 		}
@@ -262,6 +265,14 @@
 	border: $light-gray solid 1px;
 	box-shadow: rgba(147, 164, 189, 0.4) 0 2px 4px,
 				rgba(188, 188, 188, 0.4) 0 2px 4px;
+	h3{
+		height: 69px;
+		width: 100%;
+		line-height: 69px;
+		background-color: #F3F6FA;
+		border-bottom: #DBE3EF solid 1px;
+		padding-left: 44px;
+	}
 	>table{
 		width: 100%;
 		thead{
@@ -349,21 +360,38 @@
 	}
 }
 
-.info_coupon_table{
+.info_staff_authority{
 	thead{
 		th{
-			&:nth-child(2),
-			&:nth-child(3),
-			&:nth-child(4){
-				width: 136px;
-				max-width: 136px;
-				min-width: 136px;
-				box-sizing: border-box;
+			width: calc(100% / 6);
+			&:last-child{
+				padding-left: 8px!important;
+			}
+		}
+	}
+	tbody{
+		td{
+			&:first-child{
+				padding-left: 32px!important;
+				text-align: left!important;
 			}
 
+			.control{
+				@extend %hide-text;
+				margin: 0;
+			}
+			.control__indicator{
+				position: absolute;
+				top: -21px;
+				left: 0;
+				height: 32px;
+				width: 32px;
+				border: #c3cad5 solid 1px;
+			}
 		}
 	}
 }
+
 
 .center{
     padding-left: 0;
@@ -373,7 +401,12 @@
 	width: 88px;
 }
 .w100{
-	width: 100px;
+	width: 96px;
+}
+.info_dealer_table{
+	.w100{
+		width: 144px;
+	}
 }
 .authority1,
 .authority2,
@@ -407,8 +440,10 @@
 			overflow: hidden;
 			position: relative;
 			margin-bottom: -1px;       /* 讓 li 往下移來遮住 ul 的部份 border-bottom */
-			
 			border-left: none;
+			input[type="submit"],
+			input[type="button"],
+			button,
 			a {
 				display: block;
 				padding: 0 36px;
@@ -422,8 +457,10 @@
 				}
 			}
 			&.active{
-				
 				border-bottom: 2px solid #2D343B;
+				input[type="submit"],
+				input[type="button"],
+				button,
 				a{
 					color: #0E1216;
 				}
@@ -439,7 +476,7 @@
 		width: 100%;
 		border-top: none;
 		.tab_content {
-			padding: 20px;
+			padding: 20px 0;
 			padding-bottom: 0;
 			@extend %clear;
 			h2 , h3{
@@ -608,6 +645,7 @@
 		>li{
 			float: left;
 			padding: 10px 16px;
+			line-height: 1.4em;
 			&:nth-child(3),
 			&:nth-child(4){
 				width: 96px;
@@ -616,6 +654,9 @@
 			&:nth-child(5){
 				width: 120px;
 				box-sizing: border-box;
+			}
+			&:nth-child(6){
+				max-width: 320px;
 			}
 		}
 		.wait{
@@ -736,7 +777,11 @@
 			.functions{
 				position: relative;
 				min-width: auto;
+				top: 0;
 				li{
+					input[type="submit"],
+					input[type="button"],
+					button,
 					a{
 						color: #93A4BD;
 						text-decoration: underline;
@@ -783,6 +828,9 @@
 				margin: 0;
 				padding-bottom: 8px;
 				display: inline-block;
+				input[type="submit"],
+				input[type="button"],
+				button,
 				a{
 					&:hover, &:focus{
 						background-color: #2D343B;
@@ -797,16 +845,25 @@
 		letter-spacing: 1px;
 	}
 }
+.product_form,
+.coupon_form,
 .staff_form{
 	width: 80%;
 	margin: 0 auto;
 	clear: both;
-
+	padding-top: 8px;
+	textarea{
+		min-width: 400px;
+		max-width: 400px;
+			padding: 16px;
+		font-size: 16px;
+		line-height: 24px;
+	}
 	ul{
-		li{
+		>li{
 			border-bottom: #eee dashed 1px;
-			padding: 20px 0 0 0;
-
+			padding: 10px 0;
+			// height: 64px;
 			&.input-send{
 				display: inline-block;
 				margin-top: 0;
@@ -817,6 +874,9 @@
 					float: initial;
 					margin: 0 auto;
 				}
+				input[type="submit"],
+				input[type="button"],
+				button,
 				a{display: inline-block;
 					float: inherit!important;
 					line-height: 44px;
@@ -841,6 +901,9 @@
 					height: 44px;
 					display: inline-block;
 				}
+				input[type="submit"],
+				input[type="button"],
+				button,
 				a{
 					text-decoration: underline;
 					margin-left: 40px;
@@ -848,6 +911,8 @@
 					line-height: 44px;
 					height: 44px;
 					display: inline-block;
+					background-color: transparent;
+					border: none;
 					&:hover, &:focus{
 						color: #2D343B;
 					}
@@ -862,16 +927,33 @@
 
 		}
 	}
-
+	ol{
+		display: inline-block;
+		height: 44px;
+		&::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		li{
+			float: left;
+			padding: 0;
+			height: 44px;
+			display: flex;
+			align-items: center;
+			padding-right: 16px;
+		}
+	}
 	.title{
 		text-align: right;
 		width: 108px;
-		display: inline-block;
+		display: flex;
 		height: 44px;
-		margin-right: 8px;
+		margin-right: 16px;
+		float: left;
+		align-items: center;
+		justify-content: flex-end;
 	}
-	
-	
 	
 	label{
 		position: relative;
@@ -890,6 +972,7 @@
 	input[type="tel"], input[type="email"], input[type="password"], input[type="text"]{
 		width: 400px;
 	}
+	.input-send button:nth-last-child(1),
 	.input-send a:nth-last-child(1){
 		float: left;
 		letter-spacing: 1px;
@@ -907,8 +990,108 @@
 		}
 	}
 }
+.coupon_form{
+	.title,
+	label{
+		width: 152px;
+	}
+}
+.product_form{
+	padding-bottom: 16px;
+	.title,
+	label{
+		width: 144px;
+	}
+}
+.product_form_img{
+	ul{
+		// margin: 0 8px;
+		margin: 0 120px;
+		margin-top: 16px;
+		&::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		li{
+			display: inline-block;
+			float: left;
+			margin: 16px 8px;
+			width: calc(20% - 16px);
+			// height: 163px;
+			max-width: 200px;
+			position: relative;
+			text-align: center;
+			line-height: 32px;
+			color: #6F8098;
+			img{
+				width: 100%;
+				border-radius: 5px;
+				overflow: hidden;
+			}
+
+			&.input-add-img{
+				&::before{
+					content: "＋";
+					position: absolute;
+					top: calc(50% - 32px);
+					font-size: 4em;
+					color: #FFF;
+					left: calc(50% - 30px);
+					
+				}
+				&:hover, &:focus{
+					&::before{
+						color: #6F8098;
+					}
+				}
+				button{
+					background-color: #C3D1E4;
+					height: 162.8px;
+					width: 162.8px;
+					line-height: 234px;
+					letter-spacing: 2px;
+					font-size: 1.1em;
+					color: #6F8098;
+					border-radius: 5px;
+					overflow: hidden;
+					box-shadow: rgba(0,0,0,0.2) 2px 2px 4px;
+					&:hover, &:focus{
+						background-color: #FFF;
+						box-shadow: rgba(0,0,0,0.3) 2px 2px 4px;
+						color: #2D343B;
+	
+					}
+				}
+			}
 
 
+			&.input-remove-img{
+				button{
+					position: absolute;
+					display: block;
+					width: 32px;
+					height: 32px;
+					background-repeat: no-repeat;
+					border: none;
+					background-image: url('../images/icon/del_w.png');
+					background-color: #6F8098;
+					// background-size: contain;
+					background-size: 70%;
+					background-position: center;
+					border-radius: 32px;
+					top: -10px;
+					left: -10px;
+					box-shadow: rgba(0,0,0,0.2)1px 1px 2px;
+					&:hover, &:focus{
+						background-color: #FFF;
+						background-image: url('../images/icon/del_b.png');
+					}
+				}
+			}
+		}
+	}
+}
 .container {
   width: 100%;
   height: 100%;
@@ -933,10 +1116,11 @@
 //   display: block;
   position: relative;
   padding-left: 30px;
-  margin-bottom: 15px;
+//   margin-bottom: 15px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 1em;
   display: inline-block;
+  margin-right: 16px;
 }
 .control input {
   position: absolute;
@@ -945,7 +1129,7 @@
 }
 .control__indicator {
   position: absolute;
-  top: -2px;
+  top: -3px;
   left: 0;
   height: 24px;
   width: 24px;
@@ -954,6 +1138,7 @@
   box-sizing: border-box;
   border: #DBE3EF solid 1px;
   outline-color: #C3D1E4;
+  background-color: #fff;
 }
 .control--radio .control__indicator {
   border-radius: 50%;
@@ -987,8 +1172,10 @@
 }
 .control--checkbox .control__indicator.checked:after,
 .control--checkbox .control__indicator:after {
-  left: 8px;
-  top: 4px;
+//   left: 8px;
+//   top: 4px;
+left: calc(50% - 3px);
+    top: calc(50% - 5px);
   width: 3px;
   height: 8px;
   border: solid #fff;
@@ -1067,15 +1254,24 @@
 .product_management_table{
 	background-color: #fff;
 	width: 100%;
-    border: #e1eaf6 solid 1px;
+	// border: #e1eaf6 solid 1px;
+	border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    // border: #DBE3EF solid 1px;
+    box-shadow: rgba(147, 164, 189, 0.4) 0 2px 4px, rgba(188, 188, 188, 0.4) 0 2px 4px;
 	thead{
-		background-color: #e5eefa;
+		background-color: #FFF;
 		line-height: 44px;
 		height: 44px;
 		color: #6F8098;
 		tr{
+			border-bottom: #DBE3EF solid 1px;
 			th{
 				text-align: left;
+				color: #6F8098;
+				height: 69px;
+				line-height: 69px;
 				&:nth-child(1),
 				&:nth-child(2){
 					width: 20%;
@@ -1101,31 +1297,54 @@
 	}
 	tbody{
 		tr{
+			&:nth-child(even){
+				background-color: #F3F6FA;
+			}
 			td{
+				vertical-align: top;
+				padding: 16px 8px;
 				&:nth-child(1){
 					padding-left: 24px;
 					width: 360px;
 					min-width: 360px;
 					box-sizing: border-box;
 					>ul{
-						border-top: #DBE3EF solid 1px;
-						padding-top: 16px;
+						
+						// padding-top: 16px;
 						display: inline-block;
 						width: 100%;
-						padding-bottom: 16px;
+						// padding-bottom: 16px;
+						height: 58px;
+    					padding: 0;
+						+ ul{
+							border-top: #DBE3EF solid 1px;
+						}
 						&::after{
 							content: "";
 							display: block;
 							clear: both;
 						}
 						&:first-child{
-							padding-top: 16px;
-							padding-bottom: 16px;
+							// padding-top: 16px;
+							// padding-bottom: 16px;
 						}
 					}
 				}
 				&:nth-child(2){
 					padding-left: 8px;
+					min-width: 320px;
+					box-sizing: border-box;
+					height: 58px;
+					&::after{
+						content: "";
+						display: block;
+						clear: both;
+					}
+					ul{
+						display: inline-block;
+						float: left;
+						width: 33.33%;
+					}
 				}
 			}
 		}
@@ -1133,7 +1352,8 @@
 	.product_img{
 		display: inline-block;
 		float: left;
-		margin: 8px 0;
+		// margin: 8px 0;
+		height: 58px;
 		.img{
 
 			display: block;
@@ -1150,10 +1370,10 @@
 	.product_name{
 		display: inline-block;
 		float: left;
-		margin: 8px 0;
-		padding: 3px 0;
-		padding-left: 12px;
+		// margin: 8px 0;
 		padding: 5px 0px 5px 16px;
+		height: 58px;
+		box-sizing: border-box;
 		span{
 			display: block;
 			line-height: 24px;
@@ -1163,6 +1383,8 @@
 
 	.functions{
 		position: relative;
+		display: inline-block;
+		top: 0;
 	}
 
 	.price{
@@ -1184,14 +1406,21 @@
 		font-size: 1.1em;
 		font-weight: bold;
 		text-align: right;
-		box-sizing: border-box;
-		margin-top: 12px;
 		padding-right: 16px;
+		height: 58px;
+		display: inline-block;
+		box-sizing: border-box;
+		// margin: 8px 0;
+		padding-top: 8px;
+		float: right;
 		&::before{
 			content: "x";
 			font-weight: lighter;
 			opacity: 0.8;
 		}
+	}
+	.soldout{
+		color: #b71010;
 	}
 }
 
@@ -1199,6 +1428,19 @@
 折扣券
 ------------------------------------------------------------------*/
 .info_coupon_table{
+	thead{
+		th{
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4){
+				width: 136px;
+				max-width: 136px;
+				min-width: 136px;
+				box-sizing: border-box;
+			}
+
+		}
+	}
 	tbody{
 		tr{
 			td{
@@ -1232,12 +1474,78 @@
 			}
 		}
 	}
+
+	.currency{
+		padding: 0;
+		font-size: 0.8em;
+		font-weight: lighter;
+		padding-right: 4px;
+	}
 }
 .label_title{
 	position: absolute;
     left: -90px;
     top: 14px;
 }
+
+.info_coupon_content_add_table{
+	// width: 50%;
+	// float: left;
+	thead{
+		background-color: #F3F6FA;
+		tr{
+			th{
+				padding-left: 32px!important;
+				box-sizing: border-box;
+			}
+		}
+	}
+	tbody{
+		tr{
+			td{
+				text-align: left!important;
+				padding-left: 32px!important;
+				background-color: #fff!important;
+				label{
+					min-width: 152px;
+					display: inline-block;
+				}
+			}
+		}
+	}
+	ul{
+		&::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+	}
+	.input-more,
+	.input-orderNo{
+		float: left;
+		input[type="submit"],
+		input[type="button"],
+		button,
+		a{
+			color: #2D343B;
+			border-color: #0e1113;
+			&:hover, &:focus{
+				background-color: #2D343B;color: #ffffff;
+			}
+		}
+	}
+}
+div.input-send{
+	display: block;
+	width: 360px;
+	margin: 0 auto;
+	padding: 16px 0;
+	height: 84px;
+}
+/*------------------------------------------------------------------
+發送SMS
+------------------------------------------------------------------*/
+
 .info_sms_table{
 	tbody{
 		tr{
@@ -1278,3 +1586,4 @@
 		}
 	}
 }
+

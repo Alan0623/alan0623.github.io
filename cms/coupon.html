@@ -58,8 +58,8 @@
 					</a>
 					<div class="personal_functions">
 						<ul>
-							<li><a href="info_personal.html" title="個人資料">個人資料</a></li>
-							<li><a href="#" title="登出">登出</a></li>
+							<li><input type="button" value="個人資料" title="個人資料" onclick="location.href='info_personal.html'"></li><li><input type="button" value="更改密碼" title="更改密碼" onclick="location.href='change_password.html'"></li>
+							<li><button title="登出">登出</button></li>
 						</ul>
 					</div>
 				</div>
@@ -68,21 +68,27 @@
 				<div class="main_content_title big">
 					<h2 class="coupon">折扣券</h2>
 					<div class="main_content_title_input">
-						<ul>
-							<li class="input-add">
-								<a href="coupon_add.html" title="新增員工資料">新增折扣券</a>
+						<ol>
+							<li class="input-print">
+								<button title="列印報表">列印報表</button>
 							</li>
+							<li class="input-add">
+								<button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-add" class="btn delete btn-primary" title="新增折扣券">新增折扣券</button>
+							</li>
+						</ol>
+						<ul>
 							<li class="input-date">
-								<form>         
-									<label class="label_title" for="from">折扣碼期限</label>
-									<input type="text" id="from" placeholder="開始日期" name="from">
-									<label for="to">～</label>
-									<input type="text" id="datepick" placeholder="結束日期"  name="to">          
-									<!-- <label for="datepicker"  style="display:none;">日期區間</label>
-									<input type="text" id="datepicker" name="datepicker" placeholder="YYYY/MM/DD ~ YYYY/MM/DD" title="請輸入日期區間"> -->
-									<label for="datepicker_submit" style="display:none;">送出日期區間查詢</label>
-									<input type="submit" id="datepicker_submit" name="datepicker_submit" value="送出查詢" title="送出日期區間查詢" >
-								</form>
+								<label class="label_title" for="from">折扣碼期限</label>
+								<input type="text" id="from" placeholder="開始日期" name="from">
+								<span>～</span>
+								<input type="text" id="datepick" placeholder="結束日期"  name="to">
+							</li>
+							<li class="input-submit">
+								<label for="submit" class="hide">送出查詢</label>
+								<input type="submit" id="submit" name="phone_submit" value="送出查詢" title="送出查詢" >
+							</li>
+							<li class="input-more">
+								<button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-more" class="btn delete btn-primary" title="進階查詢">進階查詢</button>
 							</li>
 						</ul>
 					</div>
@@ -93,7 +99,7 @@
 							<tr>
 								<th>編號</th>
 								<th>折扣券代碼</th>
-								<th>折扣額度(折)</th>
+								<th>折扣額度 (折)</th>
 								<th>數量</th>
 								<th>抽佣條件</th>
 								<th>折扣碼期限</th>
@@ -106,18 +112,18 @@
 								<td>1</td>
 								<td>123456789012
 								</td>
-								<td>$1,234,567</td>
+								<td><span class="currency">NT$</span>1,234,567</td>
 								<td>1,234,567</td>
 								<td><span>組數</span><span>1,234,567</span></td>
 								<td>
-								<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
+																<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
 								</td>
 								
 								<td><span class="luck">進行中</span></td>
 								<td>
 									<ul class="functions">
 										<li><a class="btn close btn-primary"  data-fancybox="" data-animation-duration="500" data-src="#animatedModal-close" href="javascript:;" title="停用">停用</a></li>
-										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
 										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
 									</ul>
 								</td>
@@ -126,17 +132,15 @@
 								<td>2</td>
 								<td>123456789012
 								</td>
-								<td>$1,234,567</td>
+								<td><span class="currency">NT$</span>1,234,567</td>
 								<td>1,234,567</td>
 								<td><span>組數</span><span>1,234,567</span></td>
-								<td><span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
-								</td>
-								
+								<td><span>2020-10-05   00：00</span><span>2020-10-10   00：00</span></td>
 								<td><span class="good">尚未開始</span></td>
 								<td>
 									<ul class="functions">
 										<li><a class="btn close btn-primary"  data-fancybox="" data-animation-duration="500" data-src="#animatedModal-close" href="javascript:;" title="停用">停用</a></li>
-										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
 										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
 									</ul>
 								</td>
@@ -145,17 +149,15 @@
 								<td>3</td>
 								<td>123456789012
 								</td>
-								<td>$1,234,567</td>
+								<td><span class="currency">NT$</span>1,234,567</td>
 								<td>1,234,567</td>
 								<td><span>組數</span><span>1,234,567</span></td>
-								<td><span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
-								</td>
-
+								<td><span>2020-10-05   00：00</span><span>2020-10-10   00：00</span></td>
 								<td><span class="good">尚未開始</span></td>
 								<td>
 									<ul class="functions">
 										<li><a class="btn close btn-primary"  data-fancybox="" data-animation-duration="500" data-src="#animatedModal-close" href="javascript:;" title="停用">停用</a></li>
-										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
 										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
 									</ul>
 								</td>
@@ -164,18 +166,18 @@
 								<td>4</td>
 								<td>123456789012
 								</td>
-								<td>$1,234,567</td>
+								<td><span class="currency">NT$</span>1,234,567</td>
 								<td>1,234,567</td>
 								<td><span>最低金額</span><span>1,234,567</span></td>
 								<td>
-<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
+								<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
 								</td>
 								
 								<td><span class="good">尚未開始</span></td>
 								<td>
 									<ul class="functions">
 										<li><a class="btn close btn-primary"  data-fancybox="" data-animation-duration="500" data-src="#animatedModal-close" href="javascript:;" title="停用">停用</a></li>
-										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
 										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
 									</ul>
 								</td>
@@ -184,18 +186,18 @@
 								<td>5</td>
 								<td>123456789012
 								</td>
-								<td>$1,234,567</td>
+								<td><span class="currency">NT$</span>1,234,567</td>
 								<td>1,234,567</td>
 								<td><span>組數</span><span>1,234,567</span></td>
 								<td>
-<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
+								<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
 								</td>
 								
 								<td><span class="good">尚未開始</span></td>
 								<td>
 									<ul class="functions">
 										<li><a class="btn close btn-primary"  data-fancybox="" data-animation-duration="500" data-src="#animatedModal-close" href="javascript:;" title="停用">停用</a></li>
-										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
 										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
 									</ul>
 								</td>
@@ -204,18 +206,18 @@
 								<td>6</td>
 								<td>123456789012
 								</td>
-								<td>$1,234,567</td>
+								<td><span class="currency">NT$</span>1,234,567</td>
 								<td>1,234,567</td>
 								<td><span>組數</span><span>1,234,567</span></td>
 								<td>
-<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
+								<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
 								</td>
 								
 								<td><span class="gary">已結束</span></td>
 								<td>
 									<ul class="functions">
 										
-										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
 										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
 									</ul>
 								</td>
@@ -224,18 +226,18 @@
 								<td>7</td>
 								<td>123456789012
 								</td>
-								<td>$1,234,567</td>
+								<td><span class="currency">NT$</span>1,234,567</td>
 								<td>1,234,567</td>
 								<td><span>組數</span><span>1,234,567</span></td>
 								<td>
-<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
+								<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
 								</td>
 								
 								<td><span class="gary">已停用</span></td>
 								<td>
 									<ul class="functions">
 										<li><a class="btn open btn-primary"  data-fancybox="" data-animation-duration="500" data-src="#animatedModal-open" href="javascript:;" title="啟用">啟用</a></li>
-										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
 										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
 									</ul>
 								</td>
@@ -244,18 +246,18 @@
 								<td>8</td>
 								<td>123456789012
 								</td>
-								<td>$1,234,567</td>
+								<td><span class="currency">NT$</span>1,234,567</td>
 								<td>1,234,567</td>
 								<td><span>組數</span><span>1,234,567</span></td>
 								<td>
-<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
+								<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
 								</td>
 								
 								<td><span class="gary">已停用</span></td>
 								<td>
 									<ul class="functions">
 										<li><a class="btn open btn-primary"  data-fancybox="" data-animation-duration="500" data-src="#animatedModal-open" href="javascript:;" title="啟用">啟用</a></li>
-										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
 										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
 									</ul>
 								</td>
@@ -264,18 +266,18 @@
 								<td>9</td>
 								<td>123456789012
 								</td>
-								<td>$1,234,567</td>
+								<td><span class="currency">NT$</span>1,234,567</td>
 								<td>1,234,567</td>
 								<td><span>組數</span><span>1,234,567</span></td>
 								<td>
-<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
+								<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
 								</td>
 								
 								<td><span class="good">尚未開始</span></td>
 								<td>
 									<ul class="functions">
 										<li><a class="btn close btn-primary"  data-fancybox="" data-animation-duration="500" data-src="#animatedModal-close" href="javascript:;" title="停用">停用</a></li>
-										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
 										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
 									</ul>
 								</td>
@@ -284,18 +286,18 @@
 								<td>10</td>
 								<td>123456789012
 								</td>
-								<td>$1,234,567</td>
+								<td><span class="currency">NT$</span>1,234,567</td>
 								<td>1,234,567</td>
 								<td><span>組數</span><span>1,234,567</span></td>
 								<td>
-<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
+								<span>2020-10-05   00：00</span><span>2020-10-10   00：00</span>
 								</td>
 								
 								<td><span class="good">尚未開始</span></td>
 								<td>
 									<ul class="functions">
 										<li><a class="btn close btn-primary"  data-fancybox="" data-animation-duration="500" data-src="#animatedModal-close" href="javascript:;" title="停用">停用</a></li>
-										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
 										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
 									</ul>
 								</td>
@@ -304,17 +306,17 @@
 					</table>
 					<div class="main_content_pageno">
 						<ul>
-							<li class="prev"><a href="#" title="上一頁">上一頁</a></li>
-							<li class="is-active"><a href="#" title="第1頁">1</a></li>
-							<li><a href="#" title="第2頁">2</a></li>
-							<li><a href="#" title="第3頁">3</a></li>
-							<li><a href="#" title="第4頁">5</a></li>
-							<li><a>...</a></li>
-							<li><a href="#" title="第10頁">10</a></li>
-							<li class="next"><a href="#" title="下一頁">下一頁</a></li>
+							<li class="prev"><button title="上一頁">上一頁</button></li>
+							<li class="is-active"><button title="第1頁">1</button></li>
+							<li><button title="第2頁">2</button></li>
+							<li><button title="第3頁">3</button></li>
+							<li><button title="第4頁">5</button></li>
+							<li><button>...</button></li>
+							<li><button title="第10頁">10</button></li>
+							<li class="next"><button title="下一頁">下一頁</button></li>
 						</ul>
 						<ul>
-							<li><a href="#" title="第10頁">10</a></li> <!-- 最後一夜 -->
+							<li><button title="第10頁">10</button></li> <!-- 最後一夜 -->
 						</ul>
 					</div>
 				</div>
@@ -323,10 +325,12 @@
 		<footer>
 			<ul>
 				<li>© 2020 LA SOLUTION PARFAIT</li>
-				<li>Version: 1.0</li>
+				
 			</ul>
 		</footer>
 	</div>
+
+	<!--//////確定刪除//////-->
 	<div id="animatedModal" class="animated-modal fancybox-content" style="display: none;">
 		<div class="animated-modal-flex">
 			<ul>
@@ -335,38 +339,32 @@
 						確定刪除此筆折扣券資料嗎？
 					</p>
 				</li>
-				<li class="input-send" >
-					<a class="cancel" data-fancybox-close href="javascript:void(0)" title="取消">
-					<span>取消</span>	
-					</a>
-					<a class="confirm" href="#" title="確定">
-					<span>確定</span>
-					</a>
+				<li class="input-send">
+					<button class="cancel" title="取消">取消</button>
+					<button class="confirm" title="確定">確定</button>
 				</li>
 			</ul>
 		</div>
 	</div>
 
+	<!--//////確定啟用//////-->
 	<div id="animatedModal-open" class="animated-modal fancybox-content" style="display: none;">
 		<div class="animated-modal-flex">
 			<ul>
 				<li>
 					<p>
-						確定開啟此筆折扣券資料嗎？
+						確定啟用此筆折扣券資料嗎？
 					</p>
 				</li>
 				<li class="input-send" >
-					<a class="cancel" data-fancybox-close href="javascript:void(0)" title="取消">
-					<span>取消</span>	
-					</a>
-					<a class="confirm" href="#" title="確定">
-					<span>確定</span>
-					</a>
+					<button class="cancel" title="取消">取消</button>
+					<button class="confirm" title="確定">確定</button>
 				</li>
 			</ul>
 		</div>
 	</div>
 
+	<!--//////確定停用//////-->
 	<div id="animatedModal-close" class="animated-modal fancybox-content" style="display: none;">
 		<div class="animated-modal-flex">
 			<ul>
@@ -376,16 +374,393 @@
 					</p>
 				</li>
 				<li class="input-send" >
-					<a class="cancel" data-fancybox-close href="javascript:void(0)" title="取消">
-					<span>取消</span>	
-					</a>
-					<a class="confirm" href="#" title="確定">
-					<span>確定</span>
-					</a>
+					<button class="cancel" title="取消">取消</button>
+					<button class="confirm" title="確定">確定</button>
 				</li>
 			</ul>
 		</div>
 	</div>
+
+
+	<!--//////新增折扣券//////-->
+	<div id="animatedModal-add" class="animated-modal animated-modal-big fancybox-content" style="display: none;">
+		<div class="animated-modal-block">
+			<main id="main" class="padding0">
+				<section class="main_header">
+					<div class="bread_crumbs">
+						<ul>
+							<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
+							<li><a href="coupon.html" title="折扣券">折扣券</a></li>
+							<li>新增折扣券</li>
+						</ul>
+					</div>
+				</section>
+				<section class="main_content">
+					<div class="main_content_title">
+						<h2 class="coupon">新增折扣券</h2>
+					</div>
+					<div class="main_content_table">
+
+
+						<table class="info_coupon_content_add_table">
+							<tbody>
+								<tr>
+									<td>
+										<ul>
+											<li class="input-orderNo">
+												<label class="title">折扣券碼</label>
+												<input type="text" placeholder="請輸入折扣券碼" title="請輸入折扣券碼">
+											</li>
+											<li class="input-more">
+												<button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-more" class="btn delete btn-primary" title="隨機產生">隨機產生</button>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>
+												<label class="title" for="from">折扣碼期限</label>
+												<input type="text" id="from" placeholder="開始日期" name="from">
+												<span>～</span>
+												<input type="text" id="datepick" placeholder="結束日期"  name="to">        
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li class="input-orderNo">
+												<label class="title">折扣券數量</label>
+												<input type="text" placeholder="請輸入折扣券數量" title="請輸入折扣券數量">
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="info_coupon_content_add_table">
+							<thead>
+								<tr>
+									<th>折扣額度</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										                
+										<label>折扣額度 (折)</label>
+										<input type="text" placeholder="請輸入折扣額度 (折)" title="請輸入折扣額度 (折)">
+										
+									</td>
+								</tr>
+								<tr>
+									<td>            
+										<label>折扣固定金額 (臺幣)</label>
+										<input type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</td>
+								</tr>
+								<tr>
+									<td>            
+										<label>折扣固定金額 (美金)</label>
+										<input type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</td>
+								</tr>
+								<tr>
+									<td>            
+										<label>折扣固定金額 (歐元)</label>
+										<input type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+	
+						<table class="info_coupon_content_add_table">
+							<thead>
+								<tr>
+									<th>抽佣條件</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>  
+										<label>組數</label>
+										<input type="text" placeholder="請輸入折扣額度 (折)" title="請輸入折扣額度 (折)">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>最低金額 (臺幣)</label>
+										<input class="coin-tw" type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>最低金額 (美金)</label>
+										<input class="coin-us" type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>最低金額 (歐元)</label>
+										<input class="coin-fr" type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="input-send">
+							<button class="cancel" title="取消">取消</button>
+							<button class="confirm" title="確定">確定</button>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</div>
+
+	<!--//////修改折扣券//////-->
+	<div id="animatedModal-edit" class="animated-modal animated-modal-big fancybox-content" style="display: none;">
+		<div class="animated-modal-block">
+			<main id="main" class="padding0">
+				<section class="main_header">
+					<div class="bread_crumbs">
+						<ul>
+							<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
+							<li><a href="coupon.html" title="折扣券">折扣券</a></li>
+							<li>修改折扣券</li>
+						</ul>
+					</div>
+				</section>
+				<section class="main_content">
+					<div class="main_content_title">
+						<h2 class="coupon">修改折扣券</h2>
+					</div>
+					<div class="main_content_table">
+
+
+						<table class="info_coupon_content_add_table">
+							<tbody>
+								<tr>
+									<td>
+										<ul>
+											<li class="input-orderNo">
+												<label class="title">折扣券碼</label>
+												<input type="text" placeholder="請輸入折扣券碼" title="請輸入折扣券碼">
+											</li>
+											<li class="input-more">
+												<button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-more" class="btn delete btn-primary" title="隨機產生">隨機產生</button>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li>
+												<label class="title" for="from">折扣碼期限</label>
+												<input type="text" id="from" placeholder="開始日期" name="from">
+												<span>～</span>
+												<input type="text" id="datepick" placeholder="結束日期"  name="to">        
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<ul>
+											<li class="input-orderNo">
+												<label class="title">折扣券數量</label>
+												<input type="text" placeholder="請輸入折扣券數量" title="請輸入折扣券數量">
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="info_coupon_content_add_table">
+							<thead>
+								<tr>
+									<th>折扣額度</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										                
+										<label>折扣額度 (折)</label>
+										<input type="text" placeholder="請輸入折扣額度 (折)" title="請輸入折扣額度 (折)">
+										
+									</td>
+								</tr>
+								<tr>
+									<td>            
+										<label>折扣固定金額 (臺幣)</label>
+										<input class="coin-tw" type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</td>
+								</tr>
+								<tr>
+									<td>            
+										<label>折扣固定金額 (美金)</label>
+										<input class="coin-us" type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</td>
+								</tr>
+								<tr>
+									<td>            
+										<label>折扣固定金額 (歐元)</label>
+										<input class="coin-fr" type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+	
+						<table class="info_coupon_content_add_table">
+							<thead>
+								<tr>
+									<th>抽佣條件</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>  
+										<label>組數</label>
+										<input type="text" placeholder="請輸入組數" title="請輸入組數">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>最低金額 (臺幣)</label>
+										<span class="coin-tw">
+											<input type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>最低金額 (美金)</label>
+										<span class="coin-us">
+											<input type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>最低金額 (歐元)</label>
+										<span class="coin-fr">
+											<input type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						
+						<div class="input-send">
+							<button class="cancel" title="取消">取消</button>
+							<button class="confirm" title="確定">確定</button>
+						</div>
+						
+					</div>
+				</section>
+			</main>
+		</div>
+	</div>
+
+	<!--//////進階查詢//////-->
+	<div id="animatedModal-more" class="animated-modal animated-modal-big fancybox-content" style="display: none;">
+		<div class="animated-modal-block">
+			<main id="main" class="padding0">
+				<section class="main_header">
+					<div class="bread_crumbs">
+						<ul>
+							<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
+							<li><a href="coupon.html" title="折扣券">折扣券</a></li>
+							<li>進階查詢</li>
+						</ul>
+					</div>
+				</section>
+				<section class="main_content">
+					<div class="main_content_title">
+						<h2 class="coupon">進階查詢</h2>
+					</div>
+					<div class="main_content_table">
+						<div class="coupon_form">
+							
+							<ul>
+								<li>
+									<label class="title">折扣券代碼</label>
+									<input type="email" placeholder="請輸入折扣券代碼" title="請輸入折扣券代碼">
+								</li>
+								<li>
+									<label class="title">折扣額度 (折)</label>
+									<input type="text" placeholder="請輸入折扣額度" title="請輸入折扣額度">
+								</li>
+								<li>
+									<label class="title">折扣固定金額 (臺幣)</label>
+									<span class="coin-tw">
+										<input type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</span>
+								</li>
+								<li>
+									<label class="title">折扣固定金額 (美金)</label>
+									<span class="coin-us">
+										<input type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</span>
+								</li>
+								<li>
+									<label class="title">折扣固定金額 (歐元)</label>
+									<span class="coin-fr">
+										<input type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</span>
+								</li>
+								<li>
+									<label class="title">抽佣條件組數</label>
+									<input type="text" placeholder="請輸入抽佣條件組數" title="請輸入抽佣條件組數">
+								</li>
+								<li>
+									<label class="title">最低金額 (臺幣)</label>
+									<span class="coin-tw">
+										<input type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</span>
+								</li>
+								<li>
+									<label class="title">最低金額 (美金)</label>
+									<span class="coin-tw">
+										<input type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</span>
+								</li>
+								<li>
+									<label class="title">最低金額 (歐元)</label>
+									<span class="coin-fr">
+										<input type="text" placeholder="請輸入折扣固定金額" title="請輸入折扣固定金額">
+									</span>
+								</li>
+								<li>
+									<label class="title" for="from">折扣碼期限 (起)</label>
+									<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
+								</li>
+								<li>
+									<label class="title" for="from">折扣碼期限 (迄)</label>
+									<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
+								</li>
+								<li>
+									<label class="title">狀態</label>
+									<select>
+										<option>請選擇狀態</option>
+									</select>
+								</li>
+								<li class="input-send">
+									<button class="cancel" title="取消">取消</button>
+									<button class="confirm" title="搜尋">搜尋</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</div><!--animatedModal-more-->
+
 	<script src="js/jquery-1.12.4.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/jquery.slider.js"></script>

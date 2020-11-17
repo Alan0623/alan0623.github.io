@@ -58,8 +58,8 @@
 					</a>
 					<div class="personal_functions">
 						<ul>
-							<li><a href="info_personal.html" title="個人資料">個人資料</a></li>
-							<li><a href="#" title="登出">登出</a></li>
+							<li><input type="button" value="個人資料" title="個人資料" onclick="location.href='info_personal.html'"></li><li><input type="button" value="更改密碼" title="更改密碼" onclick="location.href='change_password.html'"></li>
+							<li><button title="登出">登出</button></li>
 						</ul>
 					</div>
 				</div>
@@ -68,40 +68,41 @@
 				<div class="main_content_title big">
 					<h2 class="info_staff">員工資料 搜尋結果</h2>
 					<div class="main_content_title_input">
-						<ul>
+						<ol>
+							<li class="input-print">
+								<button title="列印報表">列印報表</button>
+							</li>
 							<li class="input-add">
-								<a href="info_staff_content_add.html" title="新增員工資料">新增員工資料</a>
+								<button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-add" class="btn delete btn-primary" title="新增員工資料">新增員工資料</button>
 							</li>
+						</ol>
+						<ul>
 							<li class="input-customer">
-								<form>                   
-									<label for="customer"  style="display:none;">員工姓名搜尋</label>
-									<input type="text" id="customer" name="customer" placeholder="請輸入員工姓名" title="請輸入員工姓名">
-									<label for="customer_submit" style="display:none;">送出員工姓名查詢</label>
-									<input type="submit" id="customer_submit" name="customer_submit" value="送出查詢" title="送出員工姓名查詢" >
-								</form>
+								<label for="customer"  class="hide">員工姓名搜尋</label>
+								<input type="text" id="customer" name="customer" placeholder="請輸入員工姓名" title="請輸入員工姓名">
 							</li>
-							<li class="input-email">
-								<form>                   
-									<label for="email"  style="display:none;">請輸入 E-mail / 帳號搜尋</label>
-									<input type="email" id="email" name="email" placeholder="請輸入請輸入 E-mail / 帳號" title="請輸入請輸入 E-mail / 帳號">
-									<label for="email_submit" style="display:none;">送出請輸入 E-mail / 帳號查詢</label>
-									<input type="submit" id="email_submit" name="email_submit" value="送出查詢" title="送出請輸入 E-mail / 帳號查詢" >
-								</form>
+							<li class="input-email">             
+								<label for="email"  class="hide">請輸入 E-mail / 帳號搜尋</label>
+								<input type="email" id="email" name="email" placeholder="請輸入請輸入 E-mail / 帳號" title="請輸入請輸入 E-mail / 帳號">
 							</li>
-							<li class="input-phone" >
-								<form>                   
-									<label for="phone"  style="display:none;">聯絡電話搜尋</label>
-									<input type="text" id="phone" name="phone" placeholder="請輸入聯絡電話" title="請輸入聯絡電話">
-									<label for="phone_submit" style="display:none;">送出聯絡電話查詢</label>
-									<input type="submit" id="phone_submit" name="phone_submit" value="送出查詢" title="送出聯絡電話查詢" >
-								</form>
+							<li class="input-phone">
+								<label for="phone"  class="hide">聯絡電話搜尋</label>
+								<input type="text" id="phone" name="phone" placeholder="請輸入聯絡電話" title="請輸入聯絡電話">
+
+							</li>
+							<li class="input-submit">
+								<label for="submit" class="hide">送出查詢</label>
+								<input type="submit" id="submit" name="phone_submit" value="送出查詢" title="送出查詢" >
+							</li>
+							<li class="input-more">
+								<button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-more" class="btn delete btn-primary" title="進階查詢">進階查詢</button>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<div class="main_content_search">搜尋結果： 共 3 筆資料</div>
+				<div class="main_content_search">搜尋結果： 共 30 筆資料</div>
 				<div class="main_content_table">
-					<table class="info_customer_table">
+					<table class="info_staff_table">
 						<thead>
 							<tr>
 								<th>編號</th>
@@ -132,8 +133,9 @@
 								<td><span class="luck">鎖定</span></td>
 								<td>
 									<ul class="functions">
-										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
-										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-authority" class="btn authority btn-primary" title="權限設定">權限設定</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal" class="btn delete btn-primary" title="刪除">刪除</button></li>
 									</ul>
 								</td>
 							</tr>
@@ -153,9 +155,9 @@
 								<td><span class="good">正常</span></td>
 								<td>
 									<ul class="functions">
-										
-										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
-										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-authority" class="btn authority btn-primary" title="權限設定">權限設定</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal" class="btn delete btn-primary" title="刪除">刪除</button></li>
 									</ul>
 								</td>
 							</tr>
@@ -174,24 +176,195 @@
 								<td><span class="good">正常</span></td>
 								<td>
 									<ul class="functions">
-										
-										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
-										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-authority" class="btn authority btn-primary" title="權限設定">權限設定</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal" class="btn delete btn-primary" title="刪除">刪除</button></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>
+									<span class="authority1">客</span>
+									<span class="authority2">經</span>
+									<span class="authority3">銷</span>
+								</td>
+								<td>2020/10/05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-authority" class="btn authority btn-primary" title="權限設定">權限設定</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal" class="btn delete btn-primary" title="刪除">刪除</button></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>
+									<span class="authority1">客</span>
+									<span class="authority2">經</span>
+									<span class="authority3">銷</span>
+								</td>
+								<td>2020/10/05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-authority" class="btn authority btn-primary" title="權限設定">權限設定</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal" class="btn delete btn-primary" title="刪除">刪除</button></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>
+									<span class="authority1">客</span>
+									<span class="authority2">經</span>
+									<span class="authority3">銷</span>
+								</td>
+								<td>2020/10/05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-authority" class="btn authority btn-primary" title="權限設定">權限設定</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal" class="btn delete btn-primary" title="刪除">刪除</button></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>
+									<span class="authority1">客</span>
+									<span class="authority2">經</span>
+									<span class="authority3">銷</span>
+								</td>
+								<td>2020/10/05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-authority" class="btn authority btn-primary" title="權限設定">權限設定</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal" class="btn delete btn-primary" title="刪除">刪除</button></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>
+									<span class="authority1">客</span>
+									<span class="authority2">經</span>
+									<span class="authority3">銷</span>
+								</td>
+								<td>2020/10/05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-authority" class="btn authority btn-primary" title="權限設定">權限設定</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal" class="btn delete btn-primary" title="刪除">刪除</button></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>
+									<span class="authority1">客</span>
+									<span class="authority2">經</span>
+									<span class="authority3">銷</span>
+								</td>
+								<td>2020/10/05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-authority" class="btn authority btn-primary" title="權限設定">權限設定</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal" class="btn delete btn-primary" title="刪除">刪除</button></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>
+									<span class="authority1">客</span>
+									<span class="authority2">經</span>
+									<span class="authority3">銷</span>
+								</td>
+								<td>2020/10/05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-authority" class="btn authority btn-primary" title="權限設定">權限設定</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-edit" class="btn edit btn-primary" title="修改">修改</button></li>
+										<li><button data-fancybox="" data-animation-duration="500" data-src="#animatedModal" class="btn delete btn-primary" title="刪除">刪除</button></li>
 									</ul>
 								</td>
 							</tr>
 						</tbody>
 					</table>
+					<div class="main_content_pageno">
+						<ul>
+							<li class="prev"><button title="上一頁">上一頁</button></li>
+							<li class="is-active"><button title="第1頁">1</button></li>
+							<li><button title="第2頁">2</button></li>
+							<li><button title="第3頁">3</button></li>
+							<li><button title="第4頁">5</button></li>
+							<li><button>...</button></li>
+							<li><button title="第10頁">10</button></li>
+							<li class="next"><button title="下一頁">下一頁</button></li>
+						</ul>
+						<ul>
+							<li><button title="第10頁">10</button></li> <!-- 最後一夜 -->
+						</ul>
+					</div>
 				</div>
 			</section>
 		</main>
 		<footer>
 			<ul>
 				<li>© 2020 LA SOLUTION PARFAIT</li>
-				<li>Version: 1.0</li>
+				
 			</ul>
 		</footer>
 	</div>
+	
+	<!--//////確定刪除//////-->
 	<div id="animatedModal" class="animated-modal fancybox-content" style="display: none;">
 		<div class="animated-modal-flex">
 			<ul>
@@ -201,16 +374,612 @@
 					</p>
 				</li>
 				<li class="input-send" >
-					<a class="cancel" data-fancybox-close href="javascript:void(0)" title="取消">
-					<span>取消</span>	
-					</a>
-					<a class="confirm" href="#" title="確定">
-					<span>確定</span>
-					</a>
+					<button class="cancel" title="取消">取消</button>
+					<button class="confirm" title="確定">確定</button>
 				</li>
 			</ul>
 		</div>
 	</div>
+
+	<!--//////新增員工資料//////-->
+	<div id="animatedModal-add" class="animated-modal animated-modal-big fancybox-content" style="display: none;">
+		<div class="animated-modal-block">
+			<main id="main" class="padding0">
+				<section class="main_header">
+					<div class="bread_crumbs">
+						<ul>
+							<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
+							<li><a href="info_staff.html" title="員工資料">員工資料</a></li>
+							<li>新增員工資料</li>
+						</ul>
+					</div>
+				</section>
+				<section class="main_content">
+					<div class="main_content_title">
+						<h2 class="info_staff">新增員工資料</h2>
+					</div>
+					<div class="main_content_table">
+						
+						<div class="staff_updata">
+							<div class="staff_updata_img">
+								<img src="./images/staff_img.png" alt="">
+							</div>
+							<ul>
+								<li class="input-send"><button class="btn">選擇圖片</button></li>
+								<li>檔案大小:最大1MB<br/>檔案限制: .JPEG, .PNG</li>
+							</ul>
+						</div>
+
+						<div class="staff_form">
+							
+							<ul>
+								<li>
+									<label class="title">員工編號</label>
+									<input type="text" placeholder="請輸入員工編號" title="請輸入員工編號">
+								</li>
+								<li>
+									<label class="title" for="customer">E-mail / 帳號</label>
+									<input type="text" id="customer" name="customer" placeholder="請輸入E-mail" title="請輸入E-mail">
+								</li>
+								<li>
+									<label class="title" for="customer">員工姓名</label>
+									<input type="text" id="customer" name="customer" placeholder="請輸入員工姓名" title="請輸入員工姓名">
+								</li>
+								<li>
+									<label class="title" for="job">員工職稱</label>
+									<input type="text" id="job" name="job" placeholder="請輸入員工職稱" title="請輸入員工職稱">
+								</li>
+								<li>
+									<label class="title" for="job">聯絡電話</label>
+									<input type="text" id="job" name="job" placeholder="請輸入聯絡電話" title="請輸入聯絡電話">
+								</li>
+								<li>
+									<label class="title" for="job">收件地址</label>
+									<input type="text" id="job" name="job" placeholder="請輸入收件地址" title="請輸入收件地址">
+								</li>
+								<li>
+									<label class="title">性別</label>
+									<label class="control control--radio">男
+										<input type="radio">
+										<div class="control__indicator"></div>
+									</label>
+									<label class="control control--radio">女
+										<input type="radio">
+										<div class="control__indicator"></div>
+									</label>
+									<label class="control control--radio">其他
+										<input type="radio">
+										<div class="control__indicator"></div>
+									</label>
+								</li>
+								<li>
+									<label class="title" for="from">生日</label>
+									<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
+								</li>
+								<li>
+									<label class="title" for="from">到職日期</label>
+									<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
+								</li>
+								<li>
+									<label class="title">審閱權限</label>
+									<label class="control control--checkbox">銷售資訊
+										<input type="checkbox">
+										<div class="control__indicator"></div>
+									</label>
+									<label class="control control--checkbox">經銷資訊
+										<input type="checkbox">
+										<div class="control__indicator"></div>
+									</label>
+									<label class="control control--checkbox">客戶資訊
+										<input type="checkbox">
+										<div class="control__indicator"></div>
+									</label>
+								</li>
+								<li>
+									<div class="info_text">
+										<ul>
+											<li>審閱銷售資訊權：銷售額、銷售量、訂單情況</li>
+											<li>審閱經銷資訊權：折扣碼增減、抽佣情況、合作夥伴資訊</li>
+											<li>審閱客戶資訊權：客戶個資</li>
+										</ul>
+									</div>
+								</li>
+								<li class="input-send" >
+									<button class="cancel" title="取消">取消</button>
+									<button class="confirm" title="確認">確認</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</div><!--animatedModal-add-->
+
+
+	<!--//////修改員工資料//////-->
+	<div id="animatedModal-edit" class="animated-modal animated-modal-big fancybox-content" style="display: none;">
+		<div class="animated-modal-block">
+			<main id="main" class="padding0">
+				<section class="main_header">
+					<div class="bread_crumbs">
+						<ul>
+							<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
+							<li><a href="info_staff.html" title="員工資料">員工資料</a></li>
+							<li>修改員工資料</li>
+						</ul>
+					</div>
+				</section>
+				<section class="main_content">
+					<div class="main_content_title">
+						<h2 class="info_staff">修改員工資料</h2>
+					</div>
+					<div class="main_content_table">
+						
+						<div class="staff_updata">
+							<div class="staff_updata_img">
+								<img src="./images/staff_img.png" alt="">
+							</div>
+							<ul>
+								<li class="input-send"><button class="btn">選擇圖片</button></li>
+								<li>檔案大小:最大1MB<br/>檔案限制: .JPEG, .PNG</li>
+							</ul>
+						</div>
+
+						<div class="staff_form">
+							
+							<ul>
+								<li>
+									<label class="title">員工編號</label>
+									<input type="text" placeholder="請輸入員工編號" title="請輸入員工編號">
+								</li>
+								<li>
+									<label class="title" for="customer">E-mail / 帳號</label>
+									<input type="email" id="customer" name="customer" placeholder="請輸入E-mail" title="請輸入E-mail" value="3eo@mail.com">
+								</li>
+								<li>
+									<label class="title" for="customer">員工姓名</label>
+									<input type="text" id="customer" name="customer" placeholder="請輸入員工姓名" title="請輸入員工姓名" value="陸人甲">
+								</li>
+								<li>
+									<label class="title" for="job">員工職稱</label>
+									<input type="text" id="job" name="job" placeholder="請輸入員工職稱" title="請輸入員工職稱" value="一般職員">
+								</li>
+								<li>
+									<label class="title" for="job">聯絡電話</label>
+									<input type="tel" id="job" name="job" placeholder="請輸入聯絡電話" title="請輸入聯絡電話" value="439472084u">
+								</li>
+								<li>
+									<label class="title" for="job">收件地址</label>
+									<input type="text" id="job" name="job" placeholder="請輸入收件地址" title="請輸入收件地址">
+								</li>
+								<li>
+									<label class="title">性別</label>
+									<label class="control control--radio">男
+										<input type="radio">
+										<div class="control__indicator"></div>
+									</label>
+									<label class="control control--radio">女
+										<input type="radio">
+										<div class="control__indicator"></div>
+									</label>
+									<label class="control control--radio">其他
+										<input type="radio">
+										<div class="control__indicator"></div>
+									</label>
+								</li>
+								<li>
+									<label class="title" for="from">生日</label>
+									<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
+								</li>
+								<li>
+									<label class="title" for="from">到職日期</label>
+									<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
+								</li>
+								<li>
+									<label class="title">審閱權限</label>
+									<label class="control control--checkbox">銷售資訊
+										<input type="checkbox">
+										<div class="control__indicator"></div>
+									</label>
+									<label class="control control--checkbox">經銷資訊
+										<input type="checkbox">
+										<div class="control__indicator"></div>
+									</label>
+									<label class="control control--checkbox">客戶資訊
+										<input type="checkbox">
+										<div class="control__indicator"></div>
+									</label>
+								</li>
+								<li>
+									<div class="info_text">
+										<ul>
+											<li>審閱銷售資訊權：銷售額、銷售量、訂單情況</li>
+											<li>審閱經銷資訊權：折扣碼增減、抽佣情況、合作夥伴資訊</li>
+											<li>審閱客戶資訊權：客戶個資</li>
+										</ul>
+									</div>
+								</li>
+								<li class="input-send" >
+									<button class="cancel" title="取消">取消</button>
+									<button class="confirm" title="確認">確認</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</div><!--animatedModal-edit-->
+
+	<!--//////權限設定//////-->
+	<div id="animatedModal-authority" class="animated-modal animated-modal-big fancybox-content" style="display: none;">
+		<div class="animated-modal-block">
+			<main id="main" class="padding0">
+				<section class="main_header">
+					<div class="bread_crumbs">
+						<ul>
+							<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
+							<li><a href="info_staff.html" title="員工資料">員工資料</a></li>
+							<li>權限設定</li>
+						</ul>
+					</div>
+				</section>
+				<section class="main_content">
+					<div class="main_content_title">
+						<h2 class="info_staff">權限設定</h2>
+					</div>
+					<div class="main_content_table">
+						<table class="info_staff_authority">
+							<thead>
+								<tr>
+									<th>功能名稱</th>
+									<th>使用</th>
+									<th>修改</th>
+									<th>新增</th>
+									<th>刪除</th>
+									<th>列印</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>訂單管理</td>
+									<td>
+										<label class="control control--checkbox">使用
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">修改
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">新增
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">刪除
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">列印
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td>訊息公告</td>
+									<td>
+										<label class="control control--checkbox">使用
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">修改
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">新增
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">刪除
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">列印
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td>客戶資料</td>
+									<td>
+										<label class="control control--checkbox">使用
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">修改
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">新增
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">刪除
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">列印
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td>商品管理</td>
+									<td>
+										<label class="control control--checkbox">使用
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">修改
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">新增
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">刪除
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">列印
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td>發送簡訊</td>
+									<td>
+										<label class="control control--checkbox">使用
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">修改
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">新增
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">刪除
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">列印
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td>發送電子郵件</td>
+									<td>
+										<label class="control control--checkbox">使用
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">修改
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">新增
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">刪除
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">列印
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td>折扣券</td>
+									<td>
+										<label class="control control--checkbox">使用
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">修改
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">新增
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">刪除
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">列印
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td>員工資料</td>
+									<td>
+										<label class="control control--checkbox">使用
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">修改
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">新增
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">刪除
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">列印
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td>經銷商資料</td>
+									<td>
+										<label class="control control--checkbox">使用
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">修改
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">新增
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">刪除
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">列印
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td>合作夥伴資料</td>
+									<td>
+										<label class="control control--checkbox">使用
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">修改
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">新增
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">刪除
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+									<td>
+										<label class="control control--checkbox">列印
+											<input type="checkbox">
+											<div class="control__indicator"></div>
+										</label>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</main>
+		</div>
+	</div><!--animatedModal-edit-->
+
 	<script src="js/jquery-1.12.4.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/jquery.slider.js"></script>

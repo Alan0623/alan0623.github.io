@@ -24,20 +24,29 @@ body {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.83), rgba(255, 255, 255, 0.28));
 }
 /* line 22, ../sass/index.scss */
+.main_content_title_input input {
+  width: 320px;
+  height: 44px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(188, 188, 188, 0.04);
+  border: solid 1px #93a4bd !important;
+  background-color: #ffffff;
+}
+/* line 30, ../sass/index.scss */
 .main_content_title_input ul {
   width: 100%;
   display: block;
   text-align: center;
   margin: 0 auto;
 }
-/* line 27, ../sass/index.scss */
+/* line 35, ../sass/index.scss */
 .main_content_title_input ul li {
   width: 320px;
   display: inline-block;
   position: relative;
   margin: 8px 80px;
 }
-/* line 32, ../sass/index.scss */
+/* line 40, ../sass/index.scss */
 .main_content_title_input ul li.logo {
   width: 100%;
   text-align: center;
@@ -45,25 +54,53 @@ body {
   display: block;
   margin: 40px 0 24px 0;
 }
-/* line 38, ../sass/index.scss */
+/* line 46, ../sass/index.scss */
 .main_content_title_input ul li.logo::before, .main_content_title_input ul li.logo::after {
   display: none;
   opacity: 0;
 }
-/* line 43, ../sass/index.scss */
+/* line 51, ../sass/index.scss */
 .main_content_title_input ul li.logo img {
   width: 180px;
 }
-/* line 54, ../sass/index.scss */
-.main_content_title_input ul li.input-send {
-  margin-top: 40px !important;
-}
-/* line 59, ../sass/index.scss */
-.main_content_title_input input {
+/* line 58, ../sass/index.scss */
+.main_content_title_input ul li.input-account input[type="tel"],
+.main_content_title_input ul li.input-account input[type="email"],
+.main_content_title_input ul li.input-account input[type="password"],
+.main_content_title_input ul li.input-account input[type="text"], .main_content_title_input ul li.input-password input[type="tel"],
+.main_content_title_input ul li.input-password input[type="email"],
+.main_content_title_input ul li.input-password input[type="password"],
+.main_content_title_input ul li.input-password input[type="text"] {
   width: 320px !important;
-  height: 44px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px 0 rgba(188, 188, 188, 0.04);
-  border: solid 1px #93a4bd !important;
-  background-color: #ffffff;
+}
+/* line 66, ../sass/index.scss */
+.main_content_title_input ul li.input-send {
+  margin-top: 16px;
+}
+/* line 70, ../sass/index.scss */
+.main_content_title_input ul li.input-checkbox {
+  text-align: left;
+  opacity: 0.8;
+}
+/* line 73, ../sass/index.scss */
+.main_content_title_input ul li.input-checkbox::after, .main_content_title_input ul li.input-checkbox::before {
+  display: none;
+}
+/* line 77, ../sass/index.scss */
+.main_content_title_input ul li.input-checkbox .title {
+  line-height: 24px;
+  height: 24px;
+  color: #2D343B;
+  letter-spacing: 0;
+}
+/* line 84, ../sass/index.scss */
+.main_content_title_input ul li.input-checkbox .control.control--checkbox {
+  vertical-align: middle;
+  float: left;
+  margin-right: 8px;
+}
+/* line 89, ../sass/index.scss */
+.main_content_title_input ul li.input-checkbox input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
 }

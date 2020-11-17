@@ -39,6 +39,10 @@
 					<li><a class="info_dealer" href="info_dealer.html" title="經銷商資料">經銷商資料</a></li>
 					<li><a class="info_partner" href="info_partner.html" title="合作夥伴資料">合作夥伴資料</a></li>
 				</ul>
+				<ul class="header_menu_ul">
+					<li><a class="info_staff" href="info_staff.html" title="員工資料">員工資料</a></li>
+					<li><a class="info_dealer" href="info_dealer.html" title="經銷商資料">經銷商資料</a></li>
+				</ul>
 			</nav>
 		</header><!--header以上主選單區-->
 		<main id="main">
@@ -57,8 +61,8 @@
 					</a>
 					<div class="personal_functions">
 						<ul>
-							<li><a href="info_personal.html">個人資料</a></li>
-							<li><a href="#">登出</a></li>
+							<li><input type="button" value="個人資料" title="個人資料" onclick="location.href='info_personal.html'"></li><li><input type="button" value="更改密碼" title="更改密碼" onclick="location.href='change_password.html'"></li>
+							<li><button title="登出">登出</button></li>
 						</ul>
 					</div>
 				</div>
@@ -110,16 +114,16 @@
 							<div id="tab1" class="tab_content">
 								<ul class="content_data_date">
 									<li class="input-date">
-										<form>         
-											<label style="display:none;" for="from">從</label>
+										         
+											<label class="hide" for="from">從</label>
 											<input type="text" id="from" placeholder="開始日期" name="from">
-											<label for="to">～</label>
+											<span>～</span>
 											<input type="text" id="datepick" placeholder="結束日期"  name="to">          
-											<!-- <label for="datepicker"  style="display:none;">日期區間</label>
+											<!-- <label for="datepicker"  class="hide">日期區間</label>
 											<input type="text" id="datepicker" name="datepicker" placeholder="YYYY/MM/DD ~ YYYY/MM/DD" title="請輸入日期區間"> -->
-											<label for="datepicker_submit" style="display:none;">送出日期區間查詢</label>
+											<label for="datepicker_submit" class="hide">送出日期區間查詢</label>
 											<input type="submit" id="datepicker_submit" name="datepicker_submit" value="送出查詢" title="送出日期區間查詢" >
-										</form>
+										
 									</li>
 								</ul>
 								<ul class="content_data_sales">
@@ -310,7 +314,7 @@
 		<footer>
 			<ul>
 				<li>© 2020 LA SOLUTION PARFAIT</li>
-				<li>Version: 1.0</li>
+				
 			</ul>
 		</footer>
 	</div>

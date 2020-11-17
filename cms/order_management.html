@@ -58,8 +58,9 @@
 					</a>
 					<div class="personal_functions">
 						<ul>
-							<li><a href="info_personal.html" title="個人資料">個人資料</a></li>
-							<li><a href="#" title="登出">登出</a></li>
+							<li><input type="button" value="個人資料" title="個人資料" onclick="location.href='info_personal.html'"></li>
+							<li><input type="button" value="更改密碼" title="更改密碼" onclick="location.href='change_password.html'"></li>
+							<li><button title="登出">登出</button></li>
 						</ul>
 					</div>
 				</div>
@@ -70,24 +71,24 @@
 					<div class="main_content_title_input">
 						<ul>
 							<li class="input-orderNo">
-								<form>                   
-									<label for="orderNo"  style="display:none;">訂單編號</label>
-									<input type="text" id="orderNo" name="orderNo" placeholder="請輸入訂單編號" title="請輸入訂單編號">
-									<label for="orderNo_submit" style="display:none;">送出訂單編號查詢</label>
-									<input type="submit" id="orderNo_submit" name="orderNo_submit" value="送出查詢" title="送出訂單編號查詢" >
-								</form>
+								<label for="orderNo"  class="hide">訂單編號</label>
+								<input type="text" id="orderNo" name="orderNo" placeholder="請輸入訂單編號" title="請輸入訂單編號">
 							</li>
 							<li class="input-date">
-								<form>         
-									<label style="display:none;" for="from">從</label>
-									<input type="text" id="from" placeholder="開始日期" name="from">
-									<label for="to">～</label>
-									<input type="text" id="datepick" placeholder="結束日期"  name="to">          
-									<!-- <label for="datepicker"  style="display:none;">日期區間</label>
-									<input type="text" id="datepicker" name="datepicker" placeholder="YYYY/MM/DD ~ YYYY/MM/DD" title="請輸入日期區間"> -->
-									<label for="datepicker_submit" style="display:none;">送出日期區間查詢</label>
-									<input type="submit" id="datepicker_submit" name="datepicker_submit" value="送出查詢" title="送出日期區間查詢" >
-								</form>
+								<label class="hide" for="from">從</label>
+								<input type="text" id="from" placeholder="開始日期" name="from">
+								<span>～</span>
+								<input type="text" id="datepick" placeholder="結束日期"  name="to">
+							</li>
+							<li class="input-submit">
+								<label for="submit" class="hide">送出查詢</label>
+								<input type="submit" id="submit" name="phone_submit" value="送出查詢" title="送出查詢" >
+							</li>
+							<li class="input-more">
+								<button data-fancybox="" data-animation-duration="500" data-src="#animatedModal-more" class="btn delete btn-primary" title="進階查詢">進階查詢</button>
+							</li>
+							<li class="input-print">
+								<button title="列印報表">列印報表</button>
 							</li>
 						</ul>
 					</div>
@@ -230,20 +231,19 @@
 											</ul>
 										</div><!-- main_content_orderInfo  為一筆資料 -->
 
-
 										<div class="main_content_pageno">
 											<ul>
-												<li class="prev"><a href="#" title="上一頁">上一頁</a></li>
-												<li class="is-active"><a href="#" title="第1頁">1</a></li>
-												<li><a href="#" title="第2頁">2</a></li>
-												<li><a href="#" title="第3頁">3</a></li>
-												<li><a href="#" title="第4頁">5</a></li>
-												<li><a>...</a></li>
-												<li><a href="#" title="第10頁">10</a></li>
-												<li class="next"><a href="#" title="下一頁">下一頁</a></li>
+												<li class="prev"><button title="上一頁">上一頁</button></li>
+												<li class="is-active"><button title="第1頁">1</button></li>
+												<li><button title="第2頁">2</button></li>
+												<li><button title="第3頁">3</button></li>
+												<li><button title="第4頁">5</button></li>
+												<li><button>...</button></li>
+												<li><button title="第10頁">10</button></li>
+												<li class="next"><button title="下一頁">下一頁</button></li>
 											</ul>
 											<ul>
-												<li><a href="#" title="第10頁">10</a></li> <!-- 最後一夜 -->
+												<li><button title="第10頁">10</button></li> <!-- 最後一夜 -->
 											</ul>
 										</div>
 								</div>
@@ -315,10 +315,104 @@
 		<footer>
 			<ul>
 				<li>© 2020 LA SOLUTION PARFAIT</li>
-				<li>Version: 1.0</li>
 			</ul>
 		</footer>
 	</div>
+
+	<!--//////進階查詢//////-->
+	<div id="animatedModal-more" class="animated-modal animated-modal-big fancybox-content" style="display: none;">
+		<div class="animated-modal-block">
+			<main id="main" class="padding0">
+				<section class="main_header">
+					<div class="bread_crumbs">
+						<ul>
+							<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
+							<li><a href="order_management" title="商品管理">訂單管理</a></li>
+							<li>進階查詢</li>
+						</ul>
+					</div>
+				</section>
+				<section class="main_content">
+					<div class="main_content_title">
+						<h2 class="send_email">進階查詢</h2>
+					</div>
+					<div class="main_content_table">
+						<div class="product_form">
+							<ul>
+								<li>
+									<label class="title">訂單編號</label>
+									<input type="text" placeholder="請輸入訂單編號" title="請輸入訂單編號">
+								</li>
+								<li>
+									<label class="title">商品名稱</label>
+									<input type="text" placeholder="請輸入關鍵字" title="請輸入關鍵字">
+								</li>
+								<li>
+									<label class="title">商品副標</label>
+									<input type="text" placeholder="請輸入關鍵字" title="請輸入關鍵字">
+								</li>
+								<li>
+									<label class="title">商品說明</label>
+									<input type="text" placeholder="請輸入關鍵字" title="請輸入關鍵字">
+								</li>
+								<li>
+									<label class="title">商品類別</label>
+									<ol>
+										<li>
+											<select>
+												<option>請選擇商品類別</option>
+											</select>
+										</li>
+									</ol>
+								</li>
+								<li>
+									<label class="title" for="from">總金額 (最低價)</label>
+									<input type="text" placeholder="請輸入總金額 (最低價)" title="請輸入總金額 (最低價)">
+								</li>
+								<li>
+									<label class="title" for="from">總金額 (最高價)</label>
+									<input type="text" placeholder="請輸入總金額 (最高價)" title="請輸入總金額 (最高價)">
+								</li>
+								<li>
+									<label class="title" for="from">訂單建立日期 (起)</label>
+									<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
+								</li>
+								<li>
+									<label class="title" for="from">訂單建立日期 (迄)</label>
+									<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
+								</li>
+								<li>
+									<label class="title">處理狀態</label>
+									<ol>
+										<li>
+											<select>
+												<option>請選擇處理狀態</option>
+											</select>
+										</li>
+									</ol>
+								</li>
+								<li>
+									<label class="title">運送方式</label>
+									<ol>
+										<li>
+											<select>
+												<option>請選擇運送方式</option>
+											</select>
+										</li>
+									</ol>
+								</li>
+								<li class="input-send" >
+									<button class="cancel" title="取消">取消</button>
+									<button class="confirm" title="搜尋">搜尋</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</div><!--animatedModal-more-->
+
 	<script src="js/jquery-1.12.4.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/jquery.slider.js"></script>
