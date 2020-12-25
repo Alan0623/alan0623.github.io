@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>ARK管理中心  |  員工資料</title>
 	<!--IE integration -->
 	<meta http-equiv="X-UA-Compatible" content="ie=edge"><!--強迫 IE 在顯示網頁時使用最新的引擎版本-->
 	<!--viewport integration -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta id="myViewport" name="viewport" content="width = 1600">
 	<!--Telephone -->
 	<meta name="format-detection" content="telephone=no" />
 	<!--Google font -->
@@ -28,16 +28,23 @@
 					<li><a class="order_management" href="order_management.html" title="訂單管理">訂單管理</a></li>
 					<li><a class="info_customer" href="info_customer.html" title="客戶資料">客戶資料</a></li>
 					<li><a class="product_management" href="product_management.html" title="商品管理">商品管理</a></li>
+					<li><a class="product_stock" href="product_stock.html" title="備貨管理">備貨管理</a></li>
 				</ul>
 				<ul class="header_menu_ul">
 					<li><a class="send_sms" href="send_sms.html" title="發送簡訊">發送簡訊</a></li>
-					<li><a class="send_email" href="send_email.html" title="發送電子郵件">發送電子郵件</a></li>
+					<!--li><a class="send_email" href="send_email.html" title="發送電子郵件">發送電子郵件</a></li-->
 					<li><a class="coupon" href="coupon.html" title="折扣券">折扣券</a></li>
 				</ul>
 				<ul class="header_menu_ul">
 					<li class="is-active"><a class="info_staff" href="info_staff.html" title="員工資料">員工資料</a></li>
 					<li><a class="info_dealer" href="info_dealer.html" title="經銷商資料">經銷商資料</a></li>
 					<li><a class="info_partner" href="info_partner.html" title="合作夥伴資料">合作夥伴資料</a></li>
+				</ul>
+				<ul class="header_menu_ul">
+					<li><a class="info_bonus" href="info_bonus.html" title="獎金資料">獎金資料</a></li>
+					<li><a class="record_data" href="record_data.html" title="資料異動記錄">資料異動記錄</a></li>
+					<li><a class="record_account" href="record_account.html" title="帳號使用記錄">帳號使用記錄</a></li>
+					<li><a class="info_system" href="system.html" title="系統設定">系統設定</a></li>
 				</ul>
 			</nav>
 		</header><!--header以上主選單區-->
@@ -511,7 +518,7 @@
 								</li>
 								<li>
 									<label class="title">身分證字號</label>
-									<input type="text" placeholder="請輸入身分證字號" title="請輸入身分證字號">
+									<input type="text" placeholder="請輸入身分證字號" title="請輸入身分證字號" value="A123456789"  disabled>
 								</li>
 								<li>
 									<label class="title">員工姓名</label>

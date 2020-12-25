@@ -28,7 +28,7 @@ audio:not([controls]){display: none;}
 input[type="submit"],
 input[type="button"],
 button{cursor: pointer;
-border: none;background-color: transparent;outline: none;
+border: none;background-color: transparent;outline: none;font-size: 1em;
 }
 select{
 	line-height: 44px;
@@ -68,7 +68,8 @@ html, body{
 	background-color: $body-bgc;
 	position: relative;
 	color: $deep;
-	min-width: 1600px;
+	min-width: 1440px;
+	min-height: 800px;
 }
 .sr-only {/*跳到主要內容區塊*/
 	color: $white;
@@ -104,7 +105,20 @@ html, body{
 	border-right: $light-gray solid 1px;
 	float: left;
 	position: fixed;
-    z-index: 1;
+	z-index: 3;
+	&::after{
+		content: "© 2020 LA SOLUTION PARFAIT";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 4;
+		padding: 16px;
+		font-size: 0.8em;
+		line-height: 1.6em;
+		opacity: 0.5;
+	}
+
+
 	.header_menu{
 
 	}
@@ -196,11 +210,16 @@ html, body{
 .info_staff::before{background-image: url('../images/icon/info_staff.png');}//員工資料
 .info_dealer::before{background-image: url('../images/icon/info_dealer.png');}//經銷商資料
 .info_partner::before{background-image: url('../images/icon/info_partner.png');}//合作夥伴資料
-
+.info_bonus::before{background-image: url('../images/icon/info_bonus.png');}
+.record_data::before{background-image: url('../images/icon/record_data.png');}
+.record_account::before{background-image: url('../images/icon/record_account.png');}
+.info_system::before{background-image: url('../images/icon/info_system.png');}
+.product_stock::before{background-image: url('../images/icon/product_stock.png');}
 /*-----------------------------------------------------------------
 頁尾區塊
 ------------------------------------------------------------------*/
 footer{
+	display: none;
 	width: 248px;
     left: 0;
     position: fixed;
@@ -430,7 +449,7 @@ footer{
 			background-size: cover;
 		}
 		
-		&.announcement::before{background-image: url('../images/icon/announcement_b.png');}//訊息公告
+		&.news::before{background-image: url('../images/icon/news_b.png');}//訊息公告
 		&.order_management::before{background-image: url('../images/icon/order_management_b.png');}//訂單管理
 		&.info_customer::before{background-image: url('../images/icon/info_customer_b.png');}//客戶資料
 		&.product_management::before{background-image: url('../images/icon/product_management_b.png');}//商品管理
@@ -441,6 +460,11 @@ footer{
 		&.info_dealer::before{background-image: url('../images/icon/info_dealer_b.png');}//經銷商資料
 		&.info_partner::before{background-image: url('../images/icon/info_partner_b.png');}//合作夥伴資料
 		&.info_personal::before{background-image: url('../images/icon/name_b.png');}
+		&.info_bonus::before{background-image: url('../images/icon/info_bonus_b.png');}
+		&.record_data::before{background-image: url('../images/icon/record_data_b.png');}
+		&.record_account::before{background-image: url('../images/icon/record_account_b.png');}
+		&.info_system::before{background-image: url('../images/icon/info_system_b.png');}
+		&.product_stock::before{background-image: url('../images/icon/product_stock_b.png');}
 
 	}
 }
@@ -548,11 +572,14 @@ input[type="checkbox"]{
 				}
 			}
 			&.input-print,
+			&.input-atm,
+			&.input-refresh,
 			&.input-add{
 
 				&::after{
 					display: none!important;
 				}
+				input[type="button"],
 				button,
 				a{
 					background-image: url('../images/bg_pink.jpg');
@@ -590,7 +617,9 @@ input[type="checkbox"]{
 					}
 				}
 			}
-			&.input-print{
+			&.input-print,
+			&.input-atm,
+			&.input-refresh{
 				button,
 				a{
 					padding-left: 38px;
@@ -608,7 +637,6 @@ input[type="checkbox"]{
 						left: 12px;
 					}
 				}
-
 			}
 			&.input-phone{
 				&::before{
@@ -623,6 +651,11 @@ input[type="checkbox"]{
 			&.input-keyword{
 				&::before{
 					background-image: url('../images/icon/keyword.png');
+				}
+			}
+			&.input-staff{
+				&::before{
+					background-image: url('../images/icon/info_staff.png');
 				}
 			}
 			&.input-email{
@@ -650,6 +683,20 @@ input[type="checkbox"]{
 				&::before{
 					background-image: url('../images/icon/password.png');
 				}
+			}
+			&.input-atm{
+				button,
+				a{
+				&::before{
+					background-image: url('../images/icon/atms.png');
+				}}
+			}
+			&.input-refresh{
+				button,
+				a{
+				&::before{
+					background-image: url('../images/icon/refresh.png');
+				}}
 			}
 
 		}
@@ -732,6 +779,38 @@ input[type="checkbox"]{
 		padding-left: 16px;
 	}
 	
+}
+.input-month{
+	border: #DBE3EF solid 1px;
+	border-radius: 8px;
+	background-color: #FFF;
+	margin-right: 0px;
+	position: relative;
+	&::before{
+		content: "";
+		display: block;
+		position: absolute;
+		left: 16px;
+		top: calc(50% - 12px);
+		width: 24px;
+		height: 24px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: url('../images/icon/calendar.png');
+	}
+	.title{
+		position: absolute;
+		top: 14px;
+		left: -80px;
+		z-index: 1;
+	}
+	input[type="tel"],
+	input[type="email"],
+	input[type="password"],
+	input[type="text"]{
+		width: 144px!important;
+		border: none!important;
+	}
 }
 .input-product{
 	&::before{

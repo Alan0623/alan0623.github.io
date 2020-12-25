@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>ARK管理中心  |  修改個人資料</title>
+	<title>ARK管理中心  |  系統設定</title>
 	<!--IE integration -->
 	<meta http-equiv="X-UA-Compatible" content="ie=edge"><!--強迫 IE 在顯示網頁時使用最新的引擎版本-->
 	<!--viewport integration -->
@@ -44,7 +44,7 @@
 					<li><a class="info_bonus" href="info_bonus.html" title="獎金資料">獎金資料</a></li>
 					<li><a class="record_data" href="record_data.html" title="資料異動記錄">資料異動記錄</a></li>
 					<li><a class="record_account" href="record_account.html" title="帳號使用記錄">帳號使用記錄</a></li>
-					<li><a class="info_system" href="system.html" title="系統設定">系統設定</a></li>
+					<li class="is-active"><a class="info_system" href="system.html" title="系統設定">系統設定</a></li>
 				</ul>
 			</nav>
 		</header><!--header以上主選單區-->
@@ -53,7 +53,7 @@
 				<div class="bread_crumbs">
 					<ul>
 						<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
-						<li>修改個人資料</li>
+						<li>系統設定</li>
 					</ul>
 				</div>
 				<div class="personal">
@@ -73,115 +73,151 @@
 			</section>
 			<section class="main_content">
 				<div class="main_content_title">
-					<h2 class="info_personal">修改個人資料</h2>
+					<h2 class="info_system">系統設定</h2>
 				</div>
 				<div class="main_content_table">
 					
-					<div class="staff_updata">
-						<div class="staff_updata_img">
-							<img src="./images/staff_img.png" alt="">
+					<div class="system_form">
+						<ul>
+							<li>
+								<label class="title">系統用戶</label>
+								<input type="text" placeholder="請輸入系統用戶" title="請輸入系統用戶">
+							</li> 
+							<li>
+								<label class="title">系統Email</label>
+								<input type="text" placeholder="請輸入系統Email" title="請輸入系統Email">
+							</li>
+							<li>
+								<label class="title">簡訊帳號</label>
+								<input type="text" placeholder="請輸入簡訊帳號" title="請輸入簡訊帳號">
+							</li> 
+							<li>
+								<label class="title">簡訊密碼</label>
+								<input type="text" placeholder="請輸入簡訊密碼" title="請輸入簡訊密碼">
+							</li> 
+							<li>
+								<label class="title">二代健保費率</label>
+								<input type="text" placeholder="請輸入二代健保費率" title="請輸入二代健保費率">
+							</li> 
+							<li>
+								<label class="title">二代健保金額</label>
+								<input type="text" placeholder="請輸入二代健保金額" title="請輸入二代健保金額">
+							</li> 
+							<li>
+								<label class="title">退換貨最大天數</label>
+								<input type="text" placeholder="請輸入退換貨最大天數" title="請輸入退換貨最大天數">
+							</li> 
+							<li>
+								<label class="title">連線回報(分鐘)</label>
+								<input type="text" placeholder="請輸入連線回報(分鐘)" title="請輸入連線回報(分鐘)">
+							</li> 
+							<li>
+								<label class="title">離線判斷(分鐘)</label>
+								<input type="text" placeholder="請輸入離線判斷(分鐘)" title="請輸入離線判斷(分鐘)">
+							</li> 
+							<li>
+								<label class="title">員工編號長度 &lt; 20 </label>
+								<input type="text" placeholder="請輸入員工編號長度 &lt; 20 " title="請輸入員工編號長度 &lt; 20 ">
+							</li> 
+						</ul>
+						<ul>
+							<li>
+								<label class="title">新增日誌</label>
+								<ol>
+									<li>
+										<label class="control control--radio">是
+											<input type="radio">
+											<div class="control__indicator"></div>
+										</label>
+									</li>
+									<li>
+										<label class="control control--radio">否
+											<input type="radio">
+											<div class="control__indicator"></div>
+										</label>
+									</li>
+								</ol>
+							</li> 
+							<li>
+								<label class="title">刪除日誌</label>
+								<ol>
+									<li>
+										<label class="control control--radio">是
+											<input type="radio">
+											<div class="control__indicator"></div>
+										</label>
+									</li>
+									<li>
+										<label class="control control--radio">否
+											<input type="radio">
+											<div class="control__indicator"></div>
+										</label>
+									</li>
+								</ol>
+							</li> 
+							<li>
+								<label class="title">修改日誌</label>
+								<ol>
+									<li>
+										<label class="control control--radio">是
+											<input type="radio">
+											<div class="control__indicator"></div>
+										</label>
+									</li>
+									<li>
+										<label class="control control--radio">否
+											<input type="radio">
+											<div class="control__indicator"></div>
+										</label>
+									</li>
+								</ol>
+							</li> 
+							<li>
+								<label class="title">訂單完成代碼</label>
+								<input type="text" placeholder="請輸入訂單完成代碼" title="請輸入訂單完成代碼">
+							</li> 
+							<li>
+								<label class="title">訂單取消代碼</label>
+								<input type="text" placeholder="請輸入訂單取消代碼" title="請輸入訂單取消代碼">
+							</li> 
+							<li>
+								<label class="title">新訂單代碼</label>
+								<input type="text" placeholder="請輸入新訂單代碼" title="請輸入新訂單代碼">
+							</li> 
+							<li>
+								<label class="title">金流測試</label>
+								<ol>
+									<li>
+										<label class="control control--radio">是
+											<input type="radio">
+											<div class="control__indicator"></div>
+										</label>
+									</li>
+									<li>
+										<label class="control control--radio">否
+											<input type="radio">
+											<div class="control__indicator"></div>
+										</label>
+									</li>
+								</ol>
+							</li> 
+							<li>
+								<label class="title">金流帳號</label>
+								<input type="text" placeholder="請輸入金流帳號" title="請輸入金流帳號">
+							</li> 
+							<li>
+								<label class="title">金流Hash Key</label>
+								<input type="text" placeholder="請輸入金流Hash Key" title="請輸入金流Hash Key">
+							</li>
+							<li>
+								<label class="title">金流Hash IV</label>
+								<input type="text" placeholder="請輸入金流Hash IV" title="請輸入金流Hash IV">
+							</li> 
+						</ul>
+						<div class="input-send">
+							<button class="cancel" title="取消">取消</button>
+							<button class="confirm" title="確定">確定</button>
 						</div>
-						<ul>
-							<li class="input-send"><button class="btn">選擇圖片</button></li>
-							<li>檔案大小:最大1MB<br/>檔案限制: .JPEG, .PNG</li>
-						</ul>
-					</div>
-
-					<div class="staff_form">
-						<ul>
-							<li>
-								<label class="title">員工編號</label>
-								<input type="text" placeholder="請輸入員工編號" title="請輸入員工編號" value="001">
-							</li>
-							<li>
-								<label class="title">帳號狀態</label>
-								<ol>
-									<li>
-										<label class="control control--radio">啟用
-											<input type="radio">
-											<div class="control__indicator"></div>
-										</label>
-									</li>
-									<li>
-										<label class="control control--radio">鎖定
-											<input type="radio">
-											<div class="control__indicator"></div>
-										</label>
-									</li>
-								</ol>
-							</li>
-							<li>
-								<label class="title">E-mail / 帳號</label>
-								<input type="email" placeholder="請輸入E-mail" title="請輸入E-mail" value="3eo@mail.com">
-							</li>
-							<li>
-								<label class="title">身分證字號</label>
-								<input type="text" placeholder="請輸入身分證字號" title="請輸入身分證字號">
-							</li>
-							<li>
-								<label class="title">姓名</label>
-								<input type="text" placeholder="請輸入姓名" title="請輸入姓名" value="陸人甲">
-							</li>
-							<li>
-								<label class="title">職稱</label>
-								<input type="text" placeholder="請輸入職稱" title="請輸入職稱" value="一般職員">
-							</li>
-							<li>
-								<label class="title">聯絡電話</label>
-								<input type="tel" placeholder="請輸入聯絡電話" title="請輸入聯絡電話" value="439472084u">
-							</li>
-							<li>
-								<label class="title">收件地址</label>
-								<ol>
-									<li>
-										<select>
-											<option>請選擇縣市</option>
-										</select>
-									</li>
-									<li>
-										<select>
-											<option>請選擇鄉鎮</option>
-										</select>
-									</li>
-									<li>
-										<input type="text" placeholder="請輸入收件地址" title="請輸入收件地址">
-									</li>
-								</ol>
-							</li>
-							<li>
-								<label class="title">性別</label>
-								<ol>
-									<li>
-										<label class="control control--radio">男
-											<input type="radio">
-											<div class="control__indicator"></div>
-										</label>
-									</li>
-									<li>
-										<label class="control control--radio">女
-											<input type="radio">
-											<div class="control__indicator"></div>
-										</label>
-									</li>
-								</ol>
-							</li>
-							<li>
-								<label class="title" for="from">生日</label>
-								<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
-							</li>
-							<li>
-								<label class="title" for="from">到職日期</label>
-								<input id="datepick" type="text" placeholder="YYYY/MM/DD" name="from">
-							</li>
-							<li>
-								<label class="title">備註</label>
-								<textarea name="" id="" cols="30" rows="10"></textarea>
-							</li>
-							<li class="input-send" >
-								<button class="cancel" title="取消">取消</button>
-								<button class="confirm" title="確認">確認</button>
-							</li>
-						</ul>
 					</div>
 				</div>
 			</section>
@@ -189,7 +225,6 @@
 		<footer>
 			<ul>
 				<li>© 2020 LA SOLUTION PARFAIT</li>
-				
 			</ul>
 		</footer>
 	</div>
