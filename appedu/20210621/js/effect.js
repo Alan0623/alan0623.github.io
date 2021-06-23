@@ -1,10 +1,11 @@
 //================================================================
-jQuery(window).load(function () {
-  $("body").removeClass("no_js");
-});
+// jQuery(window).load(function () {
+//   $("body").removeClass("no_js");
+// });
 $(function(){
+  $("body").removeClass("no_js");
   console.log("Hello!! Nice to see you.(\u30fb\u2200\u30fb)."), 
-  console.log("Front-end programming By Alan Lin");
+  console.log("Front-end programming By Ｗei-Ching Lin");
 /*------------------------------------------------------------------
 checkbox
 ------------------------------------------------------------------*/
@@ -194,31 +195,4 @@ $(function() {
           $(this).height(maxHeight);
       });
   });
-});
-
-
-// $(function() {
-//   var maxHeight = 0;
-//   $('.content_lecture_list').find(".class").each(function() {
-//       $(this).height('auto');
-//       if (maxHeight < $(this).height()) { maxHeight = $(this).height() }
-//   });
-//   $('.content_lecture_list').find(".class").each(function() {
-//       $(this).height(maxHeight);
-//   });
-//   $(window).resize(function() {
-//       var maxHeight = 0;
-//       $('.content_lecture_list').find(".class").each(function() {
-//           $(this).height('auto');
-//           if (maxHeight < $(this).height()) { maxHeight = $(this).height() }
-//       });
-//       $('.content_lecture_list').find(".class").each(function() {
-//           $(this).height(maxHeight);
-//       });
-//   });
-// });
-
-$(".checkbox").on("click",function(){
-  $(".checkbox").removeClass("selected");
-  $(this).addClass("selected");
 });
