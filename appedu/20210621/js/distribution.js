@@ -46,15 +46,9 @@ function LoadCityData(ObjectName) {
 
 //地區資料
 function LoadAreaData(ObjectName,CityID) {
-
-
-
 	$(ObjectName + " #selLiveArea").empty();
 	$(ObjectName + " #selLiveArea").append($("<option></option>").val("").text("請選擇地區"));
 	$(ObjectName + " #selLiveArea").change();
-
-
-
 
 	$.ajax({
 		url: "/Librarys/_ajax/Address.php",
@@ -73,16 +67,8 @@ function LoadAreaData(ObjectName,CityID) {
 				});
 
 			}
-
-
-
 		}
-
-
 	});
-
-
-
 
 }			
 

@@ -41,7 +41,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/global.css">
     
-    <!-- Facebook追蹤碼 Facebook Pixel Code -->
+    <!-- Facebook追蹤碼 Facebook Pixel Code
     <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
@@ -57,9 +57,9 @@
         fbq('init', '1694829620628427');
         fbq('track', 'PageView');
     </script>
-    <!-- End Facebook Pixel Code -->
+    End Facebook Pixel Code -->
 
-    <!-- GA代碼 Global site tag (gtag.js) - Google Analytics -->
+    <!-- GA代碼 Global site tag (gtag.js) - Google Analytics 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68890793-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -67,17 +67,15 @@
     gtag('js', new Date());
     gtag('config', 'UA-68890793-1');
     </script>
-
-    <!-- GTM代碼 Google Tag Manager -->
+    -->
+    <!-- GTM代碼 Google Tag Manager 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-K56ZZM');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Line_追蹤碼 LINE Tag Base Code -->
-    <!-- Do Not Modify -->
+    Line_追蹤碼 LINE Tag Base Code -->
+    <!-- 
     <script>
         (function (g, d, o) {
             g._ltq = g._ltq || []; g._lt = g._lt || function () { g._ltq.push(arguments) };
@@ -92,7 +90,7 @@
         });
         _lt('send', 'pv', ['a8c14f6a-37c9-45c4-8771-efe71625e2d4']);
     </script>
-    <!-- End LINE Tag Base Code -->
+    -->
 
 </head>
 <!--/head-->
@@ -283,51 +281,50 @@
                     <div class="content_form_class">
                         <div class="content_form_class_lecture">
                             <h3>設計講座</h3>
-                            <div class="label">
-                                <label>
-                                    <input type="checkbox"/>
+                            <div class="label" name="remark">
+                                <label for="course1">
+                                    <input id="course1" class="checkbox" type="checkbox" value="06/20 Hammer-平面設計講座"/>
                                     <span>06/20 Hammer-平面設計講座</span>
                                 </label>
-                                <label>
-                                    <input type="checkbox"/>
+                                <label for="course2">
+                                    <input id="course2" class="checkbox" type="checkbox" value="06/29 Hammer-平面設計講座"/>
                                     <span>06/29 Hammer-平面設計講座</span>
                                 </label>
-                                <label>
-                                    <input type="checkbox"/>
+                                <label for="course3">
+                                    <input id="course3" class="checkbox" type="checkbox" value="06/26 小幡公春-日本動畫講座"/>
                                     <span>06/26 小幡公春-日本動畫講座</span>
                                 </label>
-                                <label>
-                                    <input type="checkbox"/>
-                                    <span>06/27 淺井香織-日本漫畫講座 </span>
+                                <label for="course4">
+                                    <input id="course4" class="checkbox" type="checkbox" value="06/27 淺井香織-日本漫畫講座"/>
+                                    <span>06/27 淺井香織-日本漫畫講座</span>
                                 </label>
- 
                             </div>
                         </div>
                         <div class="content_form_class_topic">
                             <h3>專題課程</h3>
-                            <div class="label">
-                                <label>
-                                    <input type="checkbox"/>
+                            <div class="label" name="remark">
+                                <label for="course5">
+                                    <input id="course5" class="checkbox" type="checkbox" value="06/21 龍和設計-室內設計課程"/>
                                     <span>06/21 龍和設計-室內設計課程</span>
                                 </label>
-                                <label>
-                                    <input type="checkbox"/>
+                                <label for="course6">
+                                    <input id="course6" class="checkbox" type="checkbox" value="06/22 金田豐-手機攝影課程"/>
                                     <span>06/22 金田豐-手機攝影課程</span>
                                 </label>
-                                <label>
-                                    <input type="checkbox"/>
+                                <label for="course7">
+                                    <input id="course7" class="checkbox" type="checkbox" value="06/24 KID-遊戲動畫設計課程"/>
                                     <span>06/24 KID-遊戲動畫設計課程</span>
                                 </label>
-                                <label>
-                                    <input type="checkbox"/>
+                                <label for="course8">
+                                    <input id="course8" class="checkbox" type="checkbox" value="06/28 陳亞立-點心插畫課程"/>
                                     <span>06/28 陳亞立-點心插畫課程</span>
                                 </label>
-                                <label>
-                                    <input type="checkbox"/>
+                                <label for="course9">
+                                    <input id="course9" class="checkbox" type="checkbox" value="06/29 劉更始-動畫混音課程"/>
                                     <span>06/29 劉更始-動畫混音課程</span>
                                 </label>
-                                <label>
-                                    <input type="checkbox"/>
+                                <label for="course10">
+                                    <input id="course10" class="checkbox" type="checkbox" value="06/30 游瑞銘-網路行銷課程"/>
                                     <span>06/30 游瑞銘-網路行銷課程</span>
                                 </label>
                             </div>
@@ -463,8 +460,13 @@
                 cellphone: { required: true, cellphone: true },
                 city: "required",
                 area: "required",
-                remark: "required",
-                course: "required",
+                distribution: "4",
+                outletSub: "213",
+                mediaSub: "739",
+                type: "Event",
+                remark: "06/20 Hammer-平面設計講座 & 06/29 Hammer-平面設計講座 & 06/26 小幡公春-日本動畫講座 & 06/27 淺井香織-日本漫畫講座 & 06/21 龍和設計-室內設計課程 ＆ 06/22 金田豐-手機攝影課程 ＆ 06/24 KID-遊戲動畫設計課程 ＆ 06/28 陳亞立-點心插畫課程 ＆ 06/29 劉更始-動畫混音課程 ＆ 06/30 游瑞銘-網路行銷課程",
+                course: "線上真人講座",
+                gift: "線上真人講座試聽",
                 agreement: "required"
               },
               messages: {

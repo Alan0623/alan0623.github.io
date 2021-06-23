@@ -217,3 +217,8 @@ $(function() {
 //       });
 //   });
 // });
+
+$(".checkbox").on("click",function(){
+  $(".checkbox").removeClass("selected");
+  $(this).addClass("selected");
+});
