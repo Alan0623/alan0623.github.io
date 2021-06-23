@@ -8,8 +8,21 @@ $(function(){
     //Form
     $(".checkbox").on("click",function(){
         $(".checkbox").removeClass("selected");
-        $(this).addClass("selected");
+        $(".checkbox:checked").addClass("selected");
     });
+
+    //當checkbox為透明 以before 當做假checkbox
+    //出現.error訊息後 再次點擊checkbox 出現before
+    $("#course1").on("click",function(){
+        $("input#course1.error").parents("label").addClass("selected");
+        $("input#course1[aria-invalid=false]").parent("label").removeClass("selected");
+    });
+    $(".form-check-input").on("click",function(){
+        $("input.form-check-input.error").parents("label").addClass("selected");
+        $("input.form-check-input[aria-invalid=false]").parent("label").removeClass("selected");
+    });
+
+    //關lightbox
     $(".gopage,.close_lightbox").on("click",function(){
         $("body").removeClass("lightbox");
     });
@@ -160,7 +173,7 @@ $(function(){
             },
             city:"請選擇縣市",
             area:"請選擇地區",
-            remark:"",
+            remark:"您尚未選擇想學課程",
             course:"請選擇想學課程",
             agreement:"您尚未接受隱私權使用條款"
         }
