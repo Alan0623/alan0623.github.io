@@ -7,9 +7,11 @@ $(function(){
 
     //Form
     $(".checkbox").on("click",function(){
+        // $(this).data("value", $(".checkbox").val());
         $(".checkbox").removeClass("selected");
         $(".checkbox:checked").addClass("selected");
     });
+
 
     //當checkbox為透明 以before 當做假checkbox
     //出現.error訊息後 再次點擊checkbox 出現before
@@ -94,9 +96,19 @@ $(function(){
 
     function distributionSubmitHandler(options){
         return function(form){
-            let $checkbox = $(".checkbox.selected");
-            let $message_area = $("#message_area");
-            let remark_text = "我"+$checkbox.data('value')+"參與攝影講座。"+"我想詢問:"+$message_area.val();
+            let $checkbox1 = $("#course1.selected").val();
+            let $checkbox2 = $("#course2.selected").val();
+            let $checkbox3 = $("#course3.selected").val();
+            let $checkbox4 = $("#course4.selected").val();
+            let $checkbox5 = $("#course5.selected").val();
+            let $checkbox6 = $("#course6.selected").val();
+            let $checkbox7 = $("#course7.selected").val();
+            let $checkbox8 = $("#course8.selected").val();
+            let $checkbox9 = $("#course9.selected").val();
+            let $checkbox10 = $("#course10.selected").val();
+            let $checkbox = $checkbox1+$checkbox2+$checkbox3+$checkbox4+$checkbox5+$checkbox6+$checkbox7+$checkbox8+$checkbox9+$checkbox10;
+            // let $message_area = $("#message_area");
+            let remark_text = "我想參與"+$checkbox;
             $.ajax({
                 url: DISTRIBUTION_ENDPOINT,
                 type: "POST",
