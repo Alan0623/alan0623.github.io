@@ -1,51 +1,33 @@
-<html>
-    <head>
-        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">          
-        
-        <!-- jQuery -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" type="text/javascript"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+            <!-- jQuery -->
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" type="text/javascript"></script>
       
-        <!-- nanogallery2 -->
-        <link  href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
-        <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
-    </head>
-    <body>
-        <style>
-            .nGY2NavFilterSelectAll,
-            .nGY2GalleryBottom,
-            .nGY2NavPagination{
-                display: none!important;
-                opacity: 0!important;
-            }
-        </style>
+            <!-- nanogallery2 -->
+            <link  href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+            <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+</head>
+<body>
+    <style>
+        .nGY2NavFilterSelectAll,
+        .nGY2GalleryBottom,
+        .nGY2NavPagination{
+            display: none!important;
+            opacity: 0!important;
+        }
+    </style>
 
-          <!-- ### position of the gallery ### -->
-          <div id="nanogallery2" style="overflow: visible;max-width: 1200px;margin: 0 auto;">gallery_made_with_nanogallery2</div>
-        
-          <script>
-             $(document).ready(function () {
-                $("#nanogallery2").nanogallery2( {
-
-// CONTENT SOURCE
-// The optional add-on nanoPhotosProvider is used for this example - this is not mandatory and can easily be replaced by a list of medias
-// kind: 'nano_photos_provider2',
-// dataProvider: 'https://nano.gallery/ngy2/demo5/nano_photos_provider2/nano_photos_provider2.php',
-// album: 'people',
-
-// // GALLERY AND THUMBNAIL LAYOUT
-// thumbnailHeight: '250', thumbnailWidth: 'auto',
-// galleryDisplayMode: 'pagination',                 // gallery pagination mode
-// galleryMaxRows: 3,                                // gallery with max 3 rows
-// gallerySorting: 'random',
-// thumbnailAlignment: 'fillWidth',
-// thumbnailL1GutterWidth: 20,
-// thumbnailL1GutterHeight: 20,
-// thumbnailBorderHorizontal: 1,
-// thumbnailBorderVertical: 1,
-
-// // THUMBNAIL TOOLS & LABEL
-// thumbnailL1Label: { display: true, position:'overImageOnTop', hideIcons: true, titleFontSize: '1.5em', align: 'left'},
-// thumbnailToolbarImage :  { topLeft: 'select', bottomRight : 'featured,display,download,info,cart' },
+      <!-- ### position of the gallery ### -->
+      <div id="nanogallery2" style="overflow: visible;max-width: 1200px;margin: 0 auto;">gallery_made_with_nanogallery2</div>
+    
+      <script>
+         $(document).ready(function () {
+            $("#nanogallery2").nanogallery2( {
 
 // DISPLAY ANIMATION
 thumbnailDisplayTransition: 'flipUp',       // thumbnail display animation
@@ -60,63 +42,45 @@ touchAutoOpenDelay: -1,
 
 // GALLERY THEME
 galleryTheme : { 
-  thumbnail: { titleShadow : 'none', descriptionShadow : 'none', titleColor: '#fff', borderColor: '#fff' },
-  navigationPagination :  { background: '#3C4B5B', color: '#fff', colorHover: '#aaa', borderRadius: '4px' },
+thumbnail: { titleShadow : 'none', descriptionShadow : 'none', titleColor: '#fff', borderColor: '#fff' },
+navigationPagination :  { background: '#3C4B5B', color: '#fff', colorHover: '#aaa', borderRadius: '4px' },
 },
+                thumbnailHeight: '250', thumbnailWidth: 'auto',
+                galleryDisplayMode: 'pagination',                 // gallery pagination mode
+                galleryMaxRows: 3,                                // gallery with max 3 rows
+                gallerySorting: 'random',
+                thumbnailAlignment: 'fillWidth',
+                thumbnailL1GutterWidth: 20,
+                thumbnailL1GutterHeight: 20,
+                thumbnailBorderHorizontal: 1,
+                thumbnailBorderVertical: 1,
+                // thumbnailWidth:     '300',
+                // thumbnailHeight:    'auto',
+                itemsBaseURL:     'student/',
+                galleryFilterTags: true,
+                galleryFilterTagsMode: 'multiple',
+                // ### gallery content ### 
+                items: [
+                    { src: '01.jpg', srct: '01.jpg', title: '學員 林宛真' ,tags:'婚紗/婚禮攝影'},
+                    { src: '02.jpg', srct: '02.jpg', title: '學員 蔡麒遠' ,tags:'婚紗/婚禮攝影' },
+                    { src: '03.jpg', srct: '03.jpg', title: '學員 楊瀚丞' ,tags:'棚拍/外拍攝影' },
+                    { src: '04.jpg', srct: '04.jpg', title: '學員 吳政融' ,tags:'婚紗/婚禮攝影' },
+                    { src: '05.jpg', srct: '05.jpg', title: '學員 黃心旑' ,tags:'婚紗/婚禮攝影' },
+                    { src: '06.jpg', srct: '06.jpg', title: '學員 陳奕瑞' ,tags:'婚紗/婚禮攝影' },
+                    { src: '07.jpg', srct: '07.jpg', title: '學員 呂健穩' ,tags:'婚紗/婚禮攝影' },
+                    { src: '08.jpg', srct: '08.jpg', title: '學員 潘俊愷' ,tags:'婚紗/婚禮攝影' },
+                    { src: '09.jpg', srct: '09.jpg', title: '學員 楊瀚丞' ,tags:'婚紗/婚禮攝影' },
+                    { src: '10.jpg', srct: '10.jpg', title: '學員 林倢伃' ,tags:'棚拍/外拍攝影' },
+                    { src: '11.jpg', srct: '11.jpg', title: '學員 蔡念勳' ,tags:'婚紗/婚禮攝影' },
+                    { src: '12.jpg', srct: '12.jpg', title: '學員 林威廷' ,tags:'婚紗/婚禮攝影' },
+                    { src: '13.jpg', srct: '13.jpg', title: '學員 謝奕愷' ,tags:'婚紗/婚禮攝影' },
+                    { src: '14.jpg', srct: '14.jpg', title: '學員 李方' ,tags:'婚紗/婚禮攝影' },
+                    { src: '15.jpg', srct: '15.jpg', title: '學員 吳政融' ,tags:'棚拍/外拍攝影' },
+                  ]
 
-// callback to customize the content of the media info popup
-// fnPopupMediaInfo: my_popup_info,
-
-// DEEP LINKING
-// locationHash: false,
-// });
-
-// // Function called before the popup for media info is displayed
-// // Content and title can be changed
-// function my_popup_info(item, title, content){
-// var my_title = title + ' <b>nanogallery2</b>';
-// var my_content = content + '<br><br>[The content of this popup can be customized with some javascript.]';
-// return {title: my_title, content: my_content};
-// }
-
-
-                    thumbnailHeight: '250', thumbnailWidth: 'auto',
-                    galleryDisplayMode: 'pagination',                 // gallery pagination mode
-                    galleryMaxRows: 3,                                // gallery with max 3 rows
-                    gallerySorting: 'random',
-                    thumbnailAlignment: 'fillWidth',
-                    thumbnailL1GutterWidth: 20,
-                    thumbnailL1GutterHeight: 20,
-                    thumbnailBorderHorizontal: 1,
-                    thumbnailBorderVertical: 1,
-                    // thumbnailWidth:     '300',
-                    // thumbnailHeight:    'auto',
-                    itemsBaseURL:     '/student/',
-                    galleryFilterTags: true,
-                    galleryFilterTagsMode: 'multiple',
-                    // ### gallery content ### 
-                    items: [
-                        { src: '01.jpg', srct: '01.jpg', title: '學員 林宛真' ,tags:'婚紗/婚禮攝影'},
-                        { src: '02.jpg', srct: '02.jpg', title: '學員 蔡麒遠' ,tags:'婚紗/婚禮攝影' },
-                        { src: '03.jpg', srct: '03.jpg', title: '學員 楊瀚丞' ,tags:'棚拍/外拍攝影' },
-                        { src: '04.jpg', srct: '04.jpg', title: '學員 吳政融' ,tags:'婚紗/婚禮攝影' },
-                        { src: '05.jpg', srct: '05.jpg', title: '學員 黃心旑' ,tags:'婚紗/婚禮攝影' },
-                        { src: '06.jpg', srct: '06.jpg', title: '學員 陳奕瑞' ,tags:'婚紗/婚禮攝影' },
-                        { src: '07.jpg', srct: '07.jpg', title: '學員 呂健穩' ,tags:'婚紗/婚禮攝影' },
-                        { src: '08.jpg', srct: '08.jpg', title: '學員 潘俊愷' ,tags:'婚紗/婚禮攝影' },
-                        { src: '09.jpg', srct: '09.jpg', title: '學員 楊瀚丞' ,tags:'婚紗/婚禮攝影' },
-                        { src: '10.jpg', srct: '10.jpg', title: '學員 林倢伃' ,tags:'棚拍/外拍攝影' },
-                        { src: '11.jpg', srct: '11.jpg', title: '學員 蔡念勳' ,tags:'婚紗/婚禮攝影' },
-                        { src: '12.jpg', srct: '12.jpg', title: '學員 林威廷' ,tags:'婚紗/婚禮攝影' },
-                        { src: '13.jpg', srct: '13.jpg', title: '學員 謝奕愷' ,tags:'婚紗/婚禮攝影' },
-                        { src: '14.jpg', srct: '14.jpg', title: '學員 李方' ,tags:'婚紗/婚禮攝影' },
-                        { src: '15.jpg', srct: '15.jpg', title: '學員 吳政融' ,tags:'棚拍/外拍攝影' },
-                      ]
-
-                    
-                  });
+                
               });
-          </script>
-
-      </body>
-  </html>
+          });
+      </script>
+</body>
+</html>
