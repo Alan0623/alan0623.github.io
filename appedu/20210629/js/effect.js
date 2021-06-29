@@ -34,7 +34,7 @@ $("#nanogallery1").nanogallery2( {
   thumbnailBorderVertical: 1,
   // thumbnailWidth:     '300',
   // thumbnailHeight:    'auto',
-  itemsBaseURL:     '../images/teacher/',
+  itemsBaseURL:     'images/teacher/',
   galleryFilterTags: true,
   galleryFilterTagsMode: 'multiple',
   // ### gallery content ### 
@@ -109,7 +109,7 @@ $("#nanogallery2").nanogallery2( {
   thumbnailBorderVertical: 1,
   // thumbnailWidth:     '300',
   // thumbnailHeight:    'auto',
-  itemsBaseURL:     '../images/student/',
+  itemsBaseURL:     'images/student/',
   galleryFilterTags: true,
   galleryFilterTagsMode: 'multiple',
   // ### gallery content ### 
