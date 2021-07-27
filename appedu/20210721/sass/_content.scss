@@ -1,0 +1,2457 @@
+%btn-more { 
+	content: "";
+	display: block;
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+	border: #979797 solid 1px;
+	background-color: white;
+	background-image: url('../images/arrow_b.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	&:hover, &:focus{
+		border-color: #903F41;
+		background-color: #903F41;
+		background-image: url('../images/arrow_w.svg');
+	}
+}
+/*------------------------------------------------------------------
+class="content"
+------------------------------------------------------------------*/
+.content {
+	// background-color: #F5F5F5;
+	padding-top: 0px;
+	@include media('mobile') {
+		// padding-top: 64px;
+	}
+	>section{
+		padding-top: 136px;
+		padding-bottom: 136px;
+		position: relative;
+		max-width: 100%;
+		overflow: hidden;
+		clear: both;
+		box-sizing: border-box;
+		padding-left: 24px;
+		padding-right: 24px;
+		// @include media('center') {
+		// 	padding-top: 80px;
+		// 	padding-bottom: 80px;
+		// }
+		@include rwd(1024){
+			padding-top: 88px;
+			padding-bottom: 88px;
+		}
+		@include media('mobile') {
+			padding-top: 44px;
+			padding-bottom: 44px;
+		}
+		@include media('phone') {
+			padding-top: 32px;
+			padding-bottom: 0px;
+			padding-left: 8px;
+			padding-right: 8px;
+		}
+	}
+	h2{
+		font-size: 2em;
+		padding: 0 16px;
+		padding-bottom: 56px;
+		transition: $transition;
+		padding-top: 40px;
+		@include media('mobile') {
+			transition: all 0s ease-out;
+			padding-bottom: 44px;
+		}
+		@include media('phone') {
+			font-size: 1.6em;
+			padding-bottom: 24px;
+		}
+		&::after,
+		&::before{
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		b{
+			font-weight: 500;
+			color: #903F41;
+			letter-spacing: 1px;
+			&::before{
+				font-family: 'Jost', sans-serif;
+				position: absolute;
+				color: #333;
+				letter-spacing: 4px;
+				top: -40px;
+				font-size: 0.5em;
+				font-weight: lighter;
+				padding-left: 2px;
+			}
+		}
+		p{
+			font-weight: normal;
+			color: $black;
+			font-size: 0.6em;
+			letter-spacing: 1px;
+			padding-top: 16px;
+			@include media('mobile') {
+				padding-top: 8px;
+			}
+		}
+	}
+}
+.center{
+	@extend %center;
+}
+/*------------------------------------------------------------------
+.content_main 主視覺
+------------------------------------------------------------------*/
+.content_main{ //主視覺
+	overflow: hidden;
+	// background-image: url(./images/mainVisualbg.jpg);
+	background-repeat: repeat;
+	background-size: cover;
+	width: 100%;
+	// height: 100vh;
+
+	.content_main_Visual{
+		text-align: center;
+		position: relative;
+		left: 0;
+		top: 0;
+		>ol>li,
+		>b,
+		>p,
+		>h2{
+			@extend %hide-text;
+			padding: 0;
+			height: 0;
+			position: absolute;
+			top: 0;
+		}
+		.img{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 2;
+			top: -4px;
+			&::after{
+				@extend %clear;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background-color: #000;
+				opacity: 0.4;
+				z-index: 1;
+			}
+			img{
+			max-width: 610px;
+			width: 100%;
+			float: left;
+			}
+		}
+		.title{
+			position: relative;
+			max-width: 60vw;
+			margin: 0 auto;
+			z-index: 2;
+			transition: $transition;
+			margin-top: -80px;
+			@include media('mobile') {
+				transition: all 0s ease-out;
+			}
+			@include media('phone') {
+				margin-top: -24px;
+				max-width: 80vw;
+			}
+			&.ready-animate{
+				transform: scale(2);
+			}
+			&.run-animate{
+				transform: scale(1);
+			}
+			&::before{
+				display: block;
+				// content: "";
+				position: absolute;
+				top: -27px;
+				right: 0;
+				width: 25%;
+				height: 0;
+				padding-bottom: 25%;
+				// background-image: url('../images/title_icon.svg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center top;
+				animation: move_bg_nav_img 2s linear infinite;
+			}
+		}
+		.date{
+			background-image: url('../images/bg_time.svg');
+			background-repeat: no-repeat;
+			background-size: 90%;
+			background-position: center 80%;
+			animation: move_UpDown .71s infinite alternate;
+			padding-bottom: 64px;
+			@include media('phone') {
+				background-image: none;
+				padding-bottom: 0;
+				animation: none;
+			}
+
+		}
+		.time{
+			position: absolute;
+			z-index: 2;
+			color: #FFF;
+			
+			bottom: 72px;
+			font-size: 1.75em;
+			letter-spacing: 1px;
+			font-family: 'Jost', sans-serif;
+			@include rwd(1360){
+				transform: scale(0.9);
+				bottom: 24px;
+			}
+			@include rwd(1090){
+				transform: scale(0.8);
+				bottom: 0;
+			}
+			@include rwd(800){
+				transform: scale(0.8);
+				bottom: 24px;
+			}
+			@include media('phone') {
+				transform: scale(0.6);
+				bottom: 2px;
+			}
+			b{
+				display: block;
+				text-shadow: #000 3px 3px;
+			}
+		}
+	}
+	.videoContainer{
+		// z-index: -1;
+		// position: absolute;
+		// width: 100%;
+		// height: 100%;
+		// top: 0;
+		// left: 0;
+		// bottom: 0;
+		// right: 0;
+		// overflow: hidden;
+		.iframe{
+			position: relative;
+			padding-bottom: 56.25%;
+			padding-top: 30px;
+			height: 0;
+			overflow: hidden;
+		}
+		iframe, object, embed {
+			position: absolute;
+			top: 0;left: 0;
+			width: 100%;
+			height: 100%;}
+		video{
+			height: 100%;
+			width: 100%;
+			@include media('mobile') {
+				width: 150%;
+			}
+			@include media('phone') {
+				width: 160%;
+			}
+		}
+	}
+}
+@-webkit-keyframes move_UpDown {
+    0% {
+        transform: translateY(5px)
+    }
+
+    100% {
+        transform: translateY(-10px)
+    }
+}
+@keyframes move_UpDown {
+    0% {
+        transform: translateY(5px)
+    }
+
+    100% {
+        transform: translateY(-10px)
+    }
+}
+
+
+
+/*------------------------------------------------------------------
+.content_questions 你對攝影也有這些疑問嗎
+------------------------------------------------------------------*/
+.content_questions{
+	position: relative;
+	background-image: url('../images/bg_questions.svg');
+	background-repeat: no-repeat;
+	background-position: 7vw center;
+	h2{
+		b{
+			position: relative;
+			&::before{
+				content: "QUESTION";
+			}
+		}
+		&::after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: -48px;
+			left: 400px;
+			width: 104px;
+			height: 78px;
+			background-image: url('../images/bg_title1.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			@include rwd(980){
+				top: 0;
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+	.center{
+		position: relative;
+		z-index: 2;
+
+		&::before{
+			content: "";
+			display: block;
+			width: 588px;
+			height: 220px;
+			background-size: contain;
+			position: absolute;
+			right: -5vw;
+			top: -35px;
+			background-image: url('../images/Do_you_have_these_questions.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			z-index: 1;
+			transition: all 1.2s ease-out;
+			transition-delay: .5s;
+			@include rwd(980){
+				display: none;
+				opacity: 0;
+			}
+			@include media('mobile') {
+				transition: all 0s ease-out;
+				transition-delay: 0s;
+			}
+		}
+	}
+	ul{
+		@include rwd(980){
+			padding: 0 16px;
+		}
+		&::after{
+			@extend %clear;
+		}
+		>li{
+			float: left;
+			width: 33.33%;
+			box-sizing: border-box;
+			padding: 0 16px;
+			transition: $transition;
+			@include media('mobile') {
+				transition: all 0s ease-out;
+			}
+			@include rwd(980){
+				width: 100%;
+				padding: 0;
+				margin-bottom: 16px;
+			}
+		}
+	}
+	.a{
+		overflow: hidden;
+		border-radius: 20px;
+		border: 1px solid #979797;
+		background-color: white;
+	}
+	.img{
+		display: inline-block;
+		float: left;
+	
+		img{
+			width: 100%;
+			float: left;
+			@include rwd(980){
+				width: 50%;
+			}
+			@include rwd(780){
+				width: 48%;
+			}
+			@include rwd(760){
+				width: 47%;
+			}
+			@include rwd(750){
+				width: 100%;
+			}
+		}
+	}
+	.text{
+		display: inline-block;
+		clear: both;
+		padding: 24px 18px;
+		padding-right: 0;
+		@include rwd(1200){
+			padding-right: 18px;
+		}
+		@include rwd(1030){
+			padding: 22px 10px;
+		}
+		h3{
+			font-size: 1.25em;
+			letter-spacing: 1px;
+			padding-bottom: 32px;
+			font-weight: 500;
+			padding-left: 10px;
+		}
+		ol{
+			>li{
+				display: block;
+				width: 100%;
+				line-height: 1.6em;
+			}
+		}
+	}
+	.questions1{}
+	.questions2{
+		transition-delay: .3s;
+		ol{
+			>li{
+				&:nth-last-child(1){
+					padding-left: 10px;
+				}
+			}
+		}
+	}
+	.questions3{
+		transition-delay: .6s;
+		ol{
+			>li{
+				padding-left: 10px;
+			}
+		}
+	}
+
+	&.ready-animate{
+		h2{
+			opacity: 0;
+			transform: translateY(-200px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+		ul > li{
+			opacity: 0;
+			transform: translateY(200px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+		.center::before{
+			opacity: 0;
+			@include media('mobile') {
+				opacity: 1;
+			}
+		}
+	}
+	&.run-animate{
+		.center::before,
+		h2,
+		ul > li{
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+.content_teacher 攝影大師經典攝影作品
+------------------------------------------------------------------*/
+.content_teacher{
+	padding-top: 136px;
+	background-color: #F3F2F0;
+	position: relative;
+	background-image: url('../images/bg_teacher.svg');
+	background-repeat: no-repeat;
+	background-position: 7vw 830px;
+
+	@include rwd(1024){
+		background-position: -15vw 680px;
+	}
+	h2{
+		position: relative;
+		@extend %center;
+		b{
+			position: relative;
+			&::before{
+				content: "PHOTOGRAPHY";
+			}
+		}
+		&::before{
+			content: "";
+			display: block;
+			width: 460px;
+			height: 180px;
+			background-size: contain;
+			position: absolute;
+			right: -5vw;
+			top: -35px;
+			background-image: url('../images/Master_Photographers.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			z-index: 1;
+			transition: all 1.2s ease-out;
+			transition-delay: 1s;
+			@include rwd(980){
+				display: none;
+				opacity: 0;
+			}
+			@include media('mobile') {
+				transition: all 0s ease-out;
+				transition-delay: 0s;
+			}
+		}
+		&::after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: -48px;
+			left: 360px;
+			width: 66px;
+			height: 66px;
+			background-image: url('../images/bg_title2.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			@include rwd(1000){
+				top: 0;
+			}
+		}
+	}
+	&.ready-animate{
+		h2{
+			opacity: 0;
+			transform: translateY(-200px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+		.teacher_img .title{
+			opacity: 0;
+			transform: translateY(200px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+		h2::before{
+			opacity: 0;
+			@include media('mobile') {
+				opacity: 1;
+			}
+		}
+		.intro{
+			opacity: 0;
+			transform: translateY(400px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+	}
+	&.run-animate{
+		.intro,
+		.teacher_img .title,
+		h2{
+			opacity: 1;
+			transform: translateY(0px);
+		}
+		h2::before{
+			opacity: 1;
+			
+		}
+	}
+}
+.teacher_img {
+	// width: 600px;
+	position: relative;
+    margin: 0 auto;
+    // max-width: 1200px;
+	@extend %center;
+	.controls {
+		position: absolute;
+		top: 0;
+		display: block;
+		z-index: 10;
+		width: 24vw;
+		height: 640px;
+		outline: none;
+		// background-color: black;
+		@include rwd(1450){
+			width: 25.5vw;
+		}
+		@include rwd(1400){
+			width: 26.5vw;
+		}
+		@include rwd(1340){
+			width: 27.5vw;
+		}
+		@include rwd(1300){
+			width: 28.5vw;
+		}
+		@include rwd(1150){
+			width: 29.5vw;
+		}
+		@include rwd(1090){
+			width: 30.5vw;
+			height: 550px;
+			top: -20px;
+		}
+		@include rwd(910){
+			height: 480px;
+			top: 30px;
+		}
+		@include rwd(800){
+			width: 31.5vw;
+		}
+		@include rwd(700){
+			width: 30vw;
+		}
+		@include rwd(700){
+			width: 29vw;
+		}
+		@include rwd(500){
+			width: 21vw;	
+			height: 450px;
+			top: -20px;
+		}
+		@include rwd(460){
+			width: 20vw;
+		}
+		@include rwd(400){
+			width: 10vw;
+		}
+		&::after{
+			@extend %btn-more;
+			position: absolute;
+			z-index: 3;
+			top: calc( 50% - 23px);
+		}
+	}
+	.previous {
+		left: 0;
+		background-position: -4px 0;
+		@include rwd(800){
+			left: -24px;
+		}
+		@include rwd(500){
+			left: -8px;
+		}
+		&::after{
+			transform: rotate(180deg);
+			left: -12px;
+			@include rwd(800){
+				left: 16px;
+			}
+			@include rwd(500){
+				left: 0;
+			}
+		}
+	}
+	.next {
+		right: 0;
+		background-position: -49px 0;
+		@include rwd(800){
+			right: -24px;
+		}
+		@include rwd(500){
+			right: -8px;
+		}
+		&::after{
+			right: -12px;
+			@include rwd(800){
+				right: 16px;
+			}
+			@include rwd(500){
+				right: 0;
+			}
+		}
+	}
+}
+.teacher_img .info {
+	display: none;
+	transition: all 1.2s ease-out;
+	&.on {
+		display: block;
+	}
+}
+.teacher_img .title{
+	transition: all 1.2s ease;
+	transition-delay: .5s;
+	@include rwd(1090){
+		height: 550px;
+	}
+	@include rwd(910){
+		height: 500px;
+	}
+	@include rwd(500){
+		height: 450px;
+	}
+}
+.teacher_img .title ul{
+	width: 1160px;
+    height: 640px;
+    position: relative;
+    overflow: visible;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+	@include rwd(1200){
+		transform: scale(0.95);
+	}
+	@include rwd(1180){
+		transform: scale(0.95) translateX(-24px);
+	}
+	@include rwd(1160){
+		transform: scale(0.93) translateX(-24px);
+	}
+	@include rwd(1140){
+		transform: scale(0.92) translateX(-40px);
+	}
+	@include rwd(1130){
+		transform: scale(0.9) translateX(-46px);
+	}
+	@include rwd(1100){
+		transform: scale(0.9) translateX(-62px);
+	}
+	@include rwd(1090){
+		transform: scale(0.85) translateX(-69px) translateY(-69px);
+	}
+	@include rwd(1060){
+		transform: scale(0.84) translateX(-88px) translateY(-69px);
+	}
+	@include rwd(1040){
+		transform: scale(0.83) translateX(-103px) translateY(-69px);
+	}
+	@include rwd(1024){
+		transform: scale(0.82) translateX(-112px) translateY(-69px);
+	}
+	@include rwd(1000){
+		transform: scale(0.8) translateX(-131px) translateY(-69px);
+	}
+	@include rwd(980){
+		transform: scale(0.78) translateX(-144px) translateY(-69px);
+	}
+	@include rwd(960){
+		transform: scale(0.76) translateX(-163px) translateY(-69px);
+	}
+	@include rwd(930){
+		transform: scale(0.74) translateX(-186px) translateY(-69px);
+	}
+	@include rwd(910){
+		transform: scale(0.72) translateX(-205px) translateY(-69px);
+	}
+	@include rwd(880){
+		transform: scale(0.69) translateX(-237px) translateY(-69px);
+	}
+	@include rwd(860){
+		transform: scale(0.68) translateX(-255px) translateY(-69px);
+	}
+	@include rwd(850){
+		transform: scale(0.65) translateX(-275px) translateY(-69px);
+	}
+	@include rwd(830){
+		transform: scale(0.65) translateX(-293px) translateY(-69px);
+	}
+	@include rwd(820){
+		transform: scale(0.65) translateX(-301px) translateY(-69px);
+	}
+	@include rwd(800){
+		transform: scale(0.65) translateX(-316px) translateY(-69px);
+	}
+	@include rwd(780){
+		transform: scale(0.65) translateX(-332px) translateY(-69px);
+	}
+	@include rwd(768){
+		transform: scale(0.65) translateX(-339px) translateY(-69px);
+	}
+	@include rwd(720){
+		transform: scale(0.65) translateX(-368px) translateY(-69px);
+	}
+	@include rwd(700){
+		transform: scale(0.65) translateX(-381px) translateY(-69px);
+	}
+	@include rwd(650){
+		transform: scale(0.65) translateX(-414px) translateY(-69px);
+	}
+	@include rwd(620){
+		transform: scale(0.65) translateX(-440px) translateY(-69px);
+	}
+	@include rwd(600){
+		transform: scale(0.65) translateX(-459px) translateY(-69px);
+	}
+	@include rwd(580){
+    	transform: scale(0.65) translateX(-475px) translateY(-69px);
+	}
+	@include rwd(560){
+		transform: scale(0.65) translateX(-487px) translateY(-69px);
+	}
+	@include rwd(550){
+		transform: scale(0.65) translateX(-503px) translateY(-69px);
+	}
+	@include rwd(520){
+		transform: scale(0.65) translateX(-523px) translateY(-69px);
+	}
+	@include rwd(500){
+		transform: scale(0.65) translateX(-520px) translateY(-165px);
+	}
+	@include rwd(400){
+		transform: scale(0.65) translateX(-596px) translateY(-165px);
+	}
+	@include rwd(375){
+		transform: scale(0.7) translateX(-575px) translateY(-165px);
+	}
+	li {
+		cursor: pointer;
+		float: left;
+		// width: 135px;
+		// background-color: #3e3e3e;
+		// border-right: 1px solid #000;
+		height: 54px;
+		padding: 0px;
+		border-radius: 20px;
+		overflow: hidden;
+		&.on{
+			display: block;
+
+			a{
+				border: #ED7A45 solid 4px!important;
+			}
+		}
+	}
+	a {
+		border-radius: 20px;
+		overflow: hidden;
+		outline: none;
+		display: inline-block;
+		position: relative;
+		.text{
+			position: absolute;
+			bottom: 40px;
+			left: 40px;
+			color: white;
+			h2,h3,b,i{
+				color: white;
+				display: block;
+			}
+			h2,h3{
+				font-size: 2em;
+				margin-bottom: 10px;
+			}
+			b{
+				font-weight: 500;
+			}
+			i{
+				font-style: normal;
+				line-height: 1.6em;
+			}
+		}
+	}
+	img {
+		vertical-align: middle;
+		border: none;
+	}
+}
+.teacher_img .intro{
+	margin-top: 128px;
+	transition: all 1.2s ease-out;
+	transition-delay: 1.2s;
+	@include rwd(1090){
+		margin-top: 80px;
+	}
+	@include media('phone') {
+		margin-top: 44px;
+	}
+	&::after{
+		@extend %clear;
+	}
+	.text{
+		width: 43%;
+    	float: left;
+		padding-right: 8px;
+		box-sizing: border-box;
+		@include rwd(1070){
+			width: 50%;
+		}
+		@include rwd(1000){
+			width: 100%;
+			clear: both;
+		}
+	}
+	.album{
+		width: 57%;
+		float: left;
+		@include rwd(1070){
+			width: 50%;
+		}
+		@include rwd(1000){
+			width: 100%;
+			clear: both;
+		}
+		@include rwd(500){
+			padding: 0 12px;
+		}
+		&::after{
+			@extend %clear;
+		}
+		li{
+			width: 33.33%;
+			float: left;
+			box-sizing: border-box;
+    		padding: 8px;
+			@include rwd(1050){
+				width: 50%;
+			}
+			@include rwd(1000){
+				width: 33.33%;
+			}
+			@include rwd(700){
+				width: 50%;
+			}
+			@include media('phone') {
+				padding: 4px;
+			}
+			&:nth-child(1),
+			&:nth-child(2){
+				width: 50%;
+				padding-bottom: 0;
+				@include rwd(1000){
+					width: 33.33%;
+				}
+				@include rwd(700){
+					width: 50%;
+				}
+			}
+
+		}
+		a{
+			display: inline-block;
+			border-radius: 20px;
+			overflow: hidden;
+			cursor: zoom-in;
+			@include media('mobile') {
+				border-radius: 15px;
+			}
+			@include media('phone') {
+				border-radius: 10px;
+			}
+			img{
+				float: left;
+				width: 100%;
+				transition: $transition;
+		
+			}
+			&:hover, &:focus{
+				img{
+					transform: scale(1.25);
+				}
+			}
+		}
+	}
+	.info{
+		&:nth-child(1),
+		&:nth-child(3){
+			.album{
+				li:nth-child(3){
+					clear: both;
+				}
+				@include rwd(700){
+					li:nth-child(5){
+						clear: both;
+					}
+				}
+			}
+		}
+		.text{
+			h3{
+				font-size: 2em;
+				padding: 0 16px;
+				padding-bottom: 8px;
+				position: relative;
+				@include media('phone') {
+					font-size: 1.6em;
+				}
+				&::before{
+					display: block;
+					content: "TEACHER";
+					font-family: 'Jost', sans-serif;
+					position: absolute;
+					color: #333;
+					letter-spacing: 4px;
+					top: -40px;
+					font-size: 0.5em;
+					font-weight: lighter;
+					padding-left: 2px;
+				}
+				b{
+					display: block;
+					font-weight: 500;
+					color: #903F41;
+					letter-spacing: 1px;
+				}
+			}
+			i{
+				font-size: 0.9em;
+				font-style: normal;
+				padding-left: 16px;
+			}
+			>b{
+				font-size: 1.125em;
+				letter-spacing: 2px;
+				font-weight: 500;
+				padding-left: 16px;
+				@include media('phone') {
+					font-size: 1em;
+				}
+			}
+			p{
+				font-size: 1.125em;
+				line-height: 1.8em;
+				padding: 20px 15px;
+				text-align: justify;
+				font-weight: normal;
+				@include media('phone') {
+					font-size: 1em;
+				}
+				&.sub_txt{
+					padding-top: 4px;
+				}
+			}
+			ol{
+				>li{
+					display: inline-block;
+				}
+			}
+		}
+	} 
+}
+
+/*------------------------------------------------------------------
+.content_tips 大師攝影六大秘訣
+------------------------------------------------------------------*/
+.content_tips{
+	position: relative;
+	padding-bottom: 0!important;
+	h2{
+		position: relative;
+		@extend %center;
+		padding-top: 48px;
+		i{
+			display: block;
+			font-weight: normal;
+			font-style: normal;
+			font-size: 0.5em;
+			color: #903F41;
+		}
+		b{
+			position: relative;
+			&::before{
+				content: "PHOTOGRAPHY TIPS";
+				top: -64px;
+			}
+		}
+		&::before{
+			content: "";
+			display: block;
+			width: 542px;
+			height: 408px;
+			background-size: contain;
+			position: absolute;
+			right: -5vw;
+			top: -55px;
+			background-image: url('../images/6_Tips_for_Improving_Your_Photography.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			z-index: 1;
+			transition: all 1.2s ease-out;
+			transition-delay: .8s;
+			@include rwd(1160){
+				top: -150px;
+			}
+			@include rwd(1000){
+				top: -120px;
+			}
+			@include rwd(980){
+				display: none;
+				opacity: 0;
+			}
+		}
+		&::after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 80px;
+			left: 285px;
+			width: 77px;
+			height: 78px;
+			background-image: url('../images/bg_title3.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+	&.ready-animate{
+		h2::before{
+			opacity: 0;
+			transform: translateY(10px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+		h2{
+			opacity: 0;
+			transform: translateY(-200px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+		.ol_animate li{
+			opacity: 0;
+			transform: translateY(200px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+	}
+	&.run-animate{
+		h2::before,
+		.ol_animate li,
+		h2{
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+}
+.block_tips {
+	width: 100%;
+	position: relative;
+	z-index: 2;
+	@include rwd(910){
+
+	}
+	.tabs{
+		padding-left: 16px;
+		@include media('phone') {
+			padding-left: 8px;
+			font-size: .8em;
+		}
+	}
+}
+.block_tips .tabs a {
+	float: left;
+	color: #333;
+	border: 1px solid #333;
+	background: #fafafa;
+	cursor: pointer;
+	line-height: 56px;
+    height: 56px;
+    padding: 0 32px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    font-size: 1.25em;
+	@include rwd(760){
+		font-size: 1em;
+		padding: 0 24px;
+		height: 44px;
+		line-height: 44px;
+	}
+	@include rwd(630){
+	margin-right: 8px;
+    margin-bottom: 8px;
+	}
+	@include media('phone') {
+		line-height: 44px;
+		height: 44px;
+		padding: 0 16px;
+	}
+	+ a{
+		margin-left: 14px;
+		@include rwd(630){
+			margin-left: 0px;
+		}
+	}
+	&.active {
+		background: #333;
+		color: white;
+		padding-bottom: 1px;
+		border-bottom: none;
+		&:hover,&:focus{
+			background: #903F41; 
+			color: white;
+		}
+	}
+	&:hover,&:focus{
+		background: #903F41; 
+		color: white;
+	}
+}
+
+
+.tab_container {
+	clear: both;
+	overflow: hidden;
+	border-radius: 5px;
+	ul {
+		position: relative;
+		// height: 0;
+		// overflow: hidden;
+		// padding-bottom: 90%;
+		// @include rwd(1100){
+		// 	padding-bottom: 100%;
+		// }
+		// @include rwd(810){
+		// 	padding-bottom: 110%;
+		// }
+		// @include rwd(680){
+		// 	padding-bottom: 190%;
+		// }
+		// @include rwd(620){
+		// 	padding-bottom: 230%;
+		// }
+		// @include rwd(500){
+		// 	padding-bottom: 216%;
+		// }
+		>li {
+			position: absolute;
+			width: 100%;
+			padding: 15px 0;
+			margin-top: 10px;
+			box-sizing: border-box;
+			opacity: 0;
+			// display: none;
+			// transition: $transition;	
+			&.active {
+				opacity: 1;
+				display: inline-block;
+				position: relative;
+			}
+			&:nth-child(2){
+				ol > li .text b{
+					// font-size: 1em!important;
+				}
+			}
+			&:nth-child(1){
+    			// position: relative;
+			}
+		}
+	}
+	ol{
+		@include rwd(900){
+			padding: 0 12px;
+		}
+		&.ol_animate{
+			>li{
+				transition: $transition;
+				&:nth-child(1){
+					transition-delay: .3s;
+				}
+				&:nth-child(2){
+					transition-delay: .6s;
+				}
+				&:nth-child(3){
+					transition-delay: .9s;
+				}
+				&:nth-child(4){
+					transition-delay: 1.2s;
+				}
+				&:nth-child(5){
+					transition-delay: 1.5s;
+				}
+				&:nth-child(6){
+					transition-delay: 1.8s;
+				}
+				@include media('mobile') {
+					transition: all 0s ease-out;
+					transition-delay: 0s!important;
+				}
+			}
+		}
+		>li{
+			width: 33.33%;
+			float: left;
+			padding: 0 16px;
+			box-sizing: border-box;
+			padding-bottom: 24px;
+			@include rwd(980){
+				padding: 0 8px;
+				padding-bottom: 16px;
+			}
+			@include rwd(745){
+				width: 50%;
+				padding: 0 4px;
+				padding-bottom: 8px;
+			}
+			&:nth-child(4){
+				content: "";
+				clear: both;
+				@include rwd(745){
+					clear: none;
+				}
+			}
+			.img{
+				border: #979797 solid 1px;
+				border-radius: 20px;
+				overflow: hidden;
+				position: relative;
+				@include media('mobile') {
+					border-radius: 15px;
+				}
+				@include media('phone') {
+					border-radius: 10px;
+				}
+				.photo{
+					position: relative;
+					display: inline-block;
+					span{
+						color: white;
+						font-size: 0.9em;
+						background-color: rgba(0,0,0,0.5);
+						padding: 2px 6px;
+						position: absolute;
+						@include rwd(500){
+							font-size: 0.6em;
+						}
+						&.top{
+							top: calc(50% - 26px);
+						}
+						&.down{
+							bottom: 0;
+						}
+						&.top,
+						&.down{
+							left: 44px;
+							@include rwd(1200){
+								left: 42px;
+							}
+							@include rwd(1120){
+								left: 40px;
+							}
+							@include rwd(1024){
+								left: 36px;
+							}
+							@include rwd(900){
+								left: 32px;
+							}
+							@include rwd(800){
+								left: 28px;
+							}
+							@include rwd(750){
+								left: 25px;
+							}
+							@include rwd(500){
+								left: 28px;
+							}
+						}
+						&.left{
+							left: 0;
+						}
+						&.right{
+							left: calc(50% - 6px);
+
+						}
+						&.left,
+						&.right{
+							bottom: 45px;
+							@include rwd(1200){
+								bottom: 42px;
+							}
+							@include rwd(1120){
+								bottom: 40px;
+							}
+							@include rwd(1024){
+								bottom: 36px;
+							}
+							@include rwd(900){
+								bottom: 32px;
+							}
+							@include rwd(800){
+								bottom: 28px;
+							}
+							@include rwd(750){
+								bottom: 25px;
+							}
+							@include rwd(500){
+								bottom: 0px;
+							}
+						}
+					}
+				}
+
+				img{
+					width: 100%;
+					float: left;
+				}
+			}
+			.text{
+				clear: both;
+				padding: 20px 24px;
+				@include media('phone') {
+					padding: 8px;
+				}
+				i,b{
+					display: block;
+				}
+				i{
+					font-style: normal;
+					font-family: 'Jost', sans-serif;
+					color: #333;
+					letter-spacing: 4px;
+					font-size: 0.5em;
+					font-weight: lighter;
+				}
+
+				b{
+					font-size: 1.125em;
+					font-weight: 500;
+					letter-spacing: 1px;
+					@include media('phone') {
+						font-size: 1em;
+					}
+					@include rwd(375){
+						font-size: 0.9em;
+					}
+				}
+				u{
+					text-decoration: none;
+					border: #333 solid 1px;
+					padding: 4px 8px;
+					font-size: 0.9em;
+					margin-bottom: 8px;
+					display: inline-block;
+				}
+			}
+		}
+
+	}
+}
+
+/*------------------------------------------------------------------
+.content_download  攝影師私藏外掛調色軟體
+------------------------------------------------------------------*/
+.content_download {
+	position: relative;
+	@include rwd(1175){
+		padding-bottom: 0!important;
+	}
+	.center{
+		background-color: #F3F2F0;
+		position: relative;
+		border-radius: 20px;
+		box-sizing: border-box;
+		padding: 64px;
+		transition: $transition;
+		@include rwd(1200){
+			padding: 32px;
+		}
+		@include media('mobile') {
+			transition: all 0s ease-out;
+			border-radius: 15px;
+		}
+		@include media('phone') {
+			border-radius: 10px;
+		}
+		&::after{
+			content: "";
+			display: block;
+			width: 119px;
+			height: 138px;
+			background-size: contain;
+			position: absolute;
+			right: 40px;
+			bottom: 40px;
+			background-image: url('../images/bg_download.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			z-index: 3;
+			@include rwd(375){
+				right: 20px;
+				bottom: 80px;
+				background-position: right bottom;
+				
+				background-size: 50%;
+			}
+		}
+	}
+	h2{
+		padding-left: 0;
+		position: relative;
+		@extend %center;
+		@include rwd(1200){
+			padding: 0;
+			padding-bottom: 44px;
+		}
+		@include media('mobile') {
+			
+		}
+		@include rwd(900){
+			padding-bottom: 64vw;
+		}
+		b{
+			display: block;
+			position: relative;
+			&:nth-child(1){
+				font-weight: 600;
+			}
+			&::before{
+				display: none;
+			}
+		}
+		&::before{
+			content: "";
+			display: block;
+			width: 530px;
+			height: 230px;
+			background-size: contain;
+			position: absolute;
+			left: -10vw;
+			top: -193px;
+			background-image: url('../images/Free_Download.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			z-index: 1;
+			transition: all 1.2s ease-out;
+			transition-delay: .3s;
+			@include rwd(1200){
+				left: -80px;
+			}
+			@include rwd(1024){
+				display: none;
+				opacity: 0;
+			}
+			@include media('mobile') {
+				transition: all 0s ease-out;
+				transition-delay: 0s;
+			}
+		}
+
+	}
+	a{
+		color: #333;
+		font-size: 1.125em;
+		letter-spacing: 1px;
+		font-weight: 500;
+		position: relative;
+		height: 48px;
+		line-height: 48px;
+		padding-right: 56px;
+		display: inline-block;
+		animation: move_UpDown .71s infinite alternate;
+		@include media('phone') {
+			font-size: 1em;
+		}
+		&::after{
+			@extend %btn-more;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transform: rotate(90deg)
+		}
+		&:hover, &:focus{
+			color: #903F41;
+			text-decoration: underline;
+			&::after{
+				background-color: #903F41;
+				background-image: url('../images/arrow_w.svg');
+			}
+		}
+	}
+	.img{
+		
+	}
+	img{
+		position: absolute;
+		max-width: 544px;
+		top: -64px;
+		right: 64px;
+		z-index: 2;
+		@include rwd(1200){
+			right: 32px;
+		}
+		@include rwd(1030){
+			max-width: calc(100vw - 500px);
+		}
+		@include rwd(900){
+			max-width: calc(100vw - 114px);
+			top: 169px;
+			left: 32px;
+		}
+		@include rwd(500){
+			max-width: calc(100vw - 80px);
+			top: 161px;
+			left: 32px;
+		}
+		&.Photoshop1{
+			animation: move_opacity 1.4s infinite alternate;
+		}
+		&.Photoshop2{
+			z-index: 1;
+		}
+	}
+	&.ready-animate{
+		h2::before,
+		h2{
+			opacity: 0;
+			transform: translateY(-200px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+		.center{
+			opacity: 0;
+			transform: translateY(200px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+	}
+	&.run-animate{
+		h2::before,
+		.center,
+		h2{
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+}
+@-webkit-keyframes move_opacity {
+    0% {
+		opacity: 0;
+    }
+    10% {
+		opacity: 0;
+    }
+    90% {
+		opacity: 1;
+    }
+	100% {
+		opacity: 1;
+    }
+}
+@keyframes move_opacity {
+    0% {
+		opacity: 0;
+    }
+    10% {
+		opacity: 0;
+    }
+    90% {
+		opacity: 1;
+    }
+	100% {
+		opacity: 1;
+    }
+}
+
+/*------------------------------------------------------------------
+.content_lottery 攝影大師經典攝影作品
+------------------------------------------------------------------*/
+.content_lottery{
+	overflow: visible!important;
+	position: relative;
+	&::after{
+		@extend %clear;
+	}
+	.center{
+		position: relative;
+		// display: inline-block;
+		&::after{
+			@extend %clear;
+		}
+		&::before{
+			content: "";
+			display: block;
+			position: absolute;
+			width: 273px;
+			height: 215px;
+			background-image: url('../images/bg_lottery.svg');
+			background-repeat: no-repeat;
+			bottom: -24px;
+			// transition: $transition;
+			transition: all 1.2s ease-out;
+			transition-delay: .8s;
+			@include rwd(1175){
+				display: none;
+				opacity: 0;
+			}
+			@include media('mobile') {
+				transition: all 0s ease-out;
+				transition-delay: 0s;
+			}
+		}
+	}
+	h2{
+		padding-top: 48px;
+		position: relative;
+		@extend %center;
+		width: 25%;
+		float: left;
+		@include rwd(1175){
+			width: 100%;
+			padding-bottom: 40px;
+		}
+		b{  
+			display: block;
+			position: relative;
+			@include rwd(1175){
+				width: auto;
+				display: inline-block;
+			}
+			&:nth-child(1){
+				&::before{
+					content: "LOTTERY";
+				}
+			}
+		}
+		&::before{
+			content: "";
+			display: block;
+			width: 336px;
+			height: 242px;
+			background-size: contain;
+			position: absolute;
+			left: 100px;
+			top: -155px;
+			background-image: url('../images/Reading_Books.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			z-index: 1;
+			transition: all 1.2s ease-out;
+			transition-delay: .8s;
+			@include rwd(1175){
+				left: auto;
+				right: 0;
+				top: -40px;
+			}
+			@include rwd(980){
+				display: none;
+				opacity: 0;
+			}
+			@include media('mobile') {
+				transition: all 0s ease-out;
+				transition-delay: 0s;
+			}
+		}
+		&::after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 56px;
+			left: 172px;
+			width: 67px;
+			height: 71px;
+			background-image: url('../images/bg_title4.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			@include rwd(1170){
+				left: 340px;
+			}
+		}
+	}
+	ul{
+		width: 75%;
+		float: left;
+		@include rwd(1175){
+			width: 100%;
+		}
+		&::after{
+			@extend %clear;
+		}
+		>li{
+			width: 33.33%;
+			float: left;
+			box-sizing: border-box;
+			padding: 0 16px;
+			text-align: center;
+			line-height: 1.8em;
+			font-size: 1.125em;
+			transition: $transition;
+			@include rwd(1120){
+				padding: 0 8px;
+			}
+			@include rwd(805){
+				width: 50%;
+			}
+			@include media('mobile') {
+				transition: all 0s ease-out;
+			}
+			@include media('phone') {
+				width: 100%;
+				margin-bottom: 16px;
+			}
+			@include rwd(400){
+				font-size: 1em;
+			}
+			h3{
+				font-weight: 500;
+				line-height: 1.8em;
+				font-size: 1.125em;
+				@include media('phone') {
+					font-size: 1em;
+				}
+			}
+			.img{
+				border: #979797 solid 1px;
+				border-radius: 20px;
+				padding: 24px 0;
+				@include media('mobile') {
+					border-radius: 15px;
+				}
+				@include media('phone') {
+					border-radius: 10px;
+					padding: 24px;
+				}
+				img{
+					width: auto;
+					max-height: 267px;
+					@include media('phone') {
+						width: 40%;
+						height: auto;
+						float: left;
+					}
+				}
+				&::after{
+					@extend %clear;
+				}
+			}
+			.text{
+				@include media('phone') {
+					text-align: left;
+					padding-left: 8px;
+					display: inline-block;
+					width: 60%;
+				}
+			}
+			p{
+				line-height: 1.8em;
+				u{
+					display: block;
+					@include media('phone') {
+						display: inline-block;
+					}
+				}
+			}
+			&:nth-child(1){
+				transition-delay: .3s;
+				@include rwd(805){
+					width: 100%;
+					margin-bottom: 16px;
+				}
+			}
+			&:nth-child(2){
+				transition-delay: .6s;
+			}
+			&:nth-child(3){
+				transition-delay: .9s;
+			}
+		}
+	}
+	&.ready-animate{
+		h2{
+			opacity: 0;
+			transform: translateY(-200px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+
+		}
+		h2::before{
+			opacity: 0;
+			transform: translateY(10px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+		ul > li{
+			opacity: 0;
+			transform: translateY(200px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+		.center::before{
+			opacity: 0;
+			transform: translateX(-100px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateX(0px);
+			}
+		}
+		
+	}
+	&.run-animate{
+		h2::before,
+		h2,
+		ul > li{
+			opacity: 1;
+			transform: translateY(0px);
+		}
+		.center::before{
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	}
+}
+/*------------------------------------------------------------------
+.content_form 第一次學攝影就上手！
+------------------------------------------------------------------*/
+.content_form{
+	background-color: #F3F2F0;
+	.center{
+		&::after{
+			@extend %clear;
+		}
+	}
+	.form_info{
+		width: 43%;
+		float: left;
+		position: relative;
+		@include rwd(950){
+			width: 100%;
+			height: auto!important;
+		}
+		&::before{
+			content: "";
+			display: block;
+			width: 518px;
+			height: 366px;
+			background-size: contain;
+			position: absolute;
+			left: 0;
+			bottom: -110px;
+			background-image: url('../images/Free_Online_Photography_Course.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			z-index: 1;
+			transition: all 1.2s ease-out;
+			transition-delay: .8s;
+			@include rwd(1100){
+				left: -30px;
+			}
+			@include rwd(1040){
+				left: -40px;
+			}
+			@include rwd(1024){
+				left: -56px;
+				bottom: -90px;
+			}
+			@include rwd(950){
+				display: none;
+				opacity: 0;
+			}
+			@include media('mobile') {
+				transition: all 0s ease-out;
+				transition-delay: 0s;
+			}
+		}
+		h2{
+			position: relative;
+			@extend %center;
+			b{
+				position: relative;
+				&::before{
+					content: "GIFT";
+				}
+			}
+
+			&::after{
+				content: "";
+				display: block;
+				position: absolute;
+				top: -48px;
+				left: 360px;
+				width: 124px;
+				height: 106px;
+				background-image: url('../images/bg_title5.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+				transition: all 1.2s ease-out;
+				transition-delay: .8s;
+				@include media('mobile') {
+					transition: all 0s ease-out;
+					transition-delay: 0s;
+				}
+				@include rwd(1175){
+					top: 0;
+				}
+			}
+		}
+	
+		ol{
+			padding-left: 16px;
+			@include rwd(1025){
+				padding-left: 0px;
+			}
+			@include rwd(950){
+				margin-bottom: 24px;
+				display: inline-block;
+				width: 100%;
+				box-sizing: border-box;
+				padding: 0 16px;
+			}
+			li{
+				font-size: 1.5em;
+				margin-bottom: 40px;
+				position: relative;
+				padding-left: 152px;
+    			margin-left: 16px;
+				transition: $transition;
+				@include rwd(1000){
+					font-size: 1.3em;
+				}
+				@include media('mobile') {
+					transition: all 0s ease-out;
+				}
+				&:nth-child(2){
+					transition-delay: .2s;
+				}
+				@include rwd(950){
+					width: 50%;
+					float: left;
+					margin: 0;
+				}
+				@include rwd(790){
+					width: 100%;
+					&:nth-child(1){
+						margin-bottom: 24px;
+					}
+				}
+				@include rwd(500){
+					padding-left: 100px;
+				}
+				i,b,p{
+					display: block;
+				}
+				i{
+					padding: 8px 16px;
+					font-style: normal;
+					border: #333 solid 1px;
+					display: inline-block;
+					font-size: 0.7em;
+					margin-bottom: 8px;
+				}
+				b{
+					font-size: 1.4em;
+					letter-spacing: 2px;
+					font-weight: 600;
+					line-height: 1.6em;
+				}
+				&::before{
+					content: "";
+					display: block;
+					position: absolute;
+					width: 125px;
+					height: 125px;
+					left: 0;
+					top: 0;
+					background-repeat: no-repeat;
+					background-size: contain;
+					@include rwd(500){
+						width: 90px;
+					}
+				}
+				&:nth-child(1){
+					&::before{
+						background-image: url('../images/gift1.svg');
+					}
+				}
+				&:nth-child(2){
+					&::before{
+						background-image: url('../images/gift2.svg');
+					}
+				}
+			}
+		}
+	}
+	.form_list{
+		width: 57%;
+		float: left;
+		background-color: white;
+		box-sizing: border-box;
+		border: #979797 solid 1px;
+		position: relative;
+		z-index: 2;
+		@include rwd(950){
+			width: 100%;
+			height: auto!important;
+		}
+		h2{
+			font-size: 2em;
+			padding: 28px 32px;
+			padding-bottom: 0;
+			position: relative;
+    		z-index: 2;
+			@include media('phone') {
+				font-size: 1.6em;
+			}
+			b{
+				@include media('phone') {
+					font-size: 0.9em;
+				}
+				&::before,
+				&::after{
+					display: none;
+				}
+			}
+			&::before,
+			&::after{
+				display: none;
+			}
+		}
+	}
+	&.ready-animate{
+		h2{
+			opacity: 0;
+			transform: translateY(-200px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+		h2::after{
+			opacity: 0;
+			transform: translateY(10px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+		.form_info::before{
+			opacity: 0;
+			transform: translateY(200px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+		.form_info ol > li{
+			opacity: 0;
+			transform: translateX(-200px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateX(0px);
+			}
+		}
+		.form_list{
+			opacity: 0;
+			transform: translateY(200px);
+			@include media('mobile') {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+		
+	}
+	&.run-animate{
+		h2::after,
+		.form_list,
+		.form_info::before,
+		h2{
+			opacity: 1;
+			transform: translateY(0px);
+		}
+		.form_info ol > li{
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	}
+}
+
+.form-distribution{
+	margin-top: -20px;
+}
+.content_form_llst{
+	// position: absolute;
+    top: 0;
+    left: 0;
+	border-radius: 0px;
+	// color: #fff;
+	// background-color: $lesser3-color;
+	display: inline-block;
+	width: 100%;
+    box-sizing: border-box;
+    // padding: 32px;
+	// box-shadow: $box-shadow;
+	background-color: white;
+	@include rwd(840){
+		position: relative;
+		height: auto!important;
+	}
+	ol{
+		padding: 32px;
+		@include media('phone') {
+			padding: 28px;
+		}
+	}
+	li{
+		width: 50%;
+		float: left;
+		margin: 12px 0;
+		&:nth-child(1),
+		&:nth-child(4),
+		&:nth-child(6) {
+			padding-right: 10px;
+			@include rwd(540){
+				padding-right: 0;
+				width: 100%;
+				margin: 8px 0;
+			}
+		}
+		&:nth-child(8),
+		&:nth-child(7),
+		&:nth-child(6){
+			width: 100%;
+		}
+		&:nth-child(2),
+		&:nth-child(5){
+			padding-left: 10px;
+			@include rwd(540){
+				padding-left: 0;
+				width: 100%;
+				margin: 8px 0;
+			}
+		}
+		&:nth-child(3){
+			//margin: 24px 0;
+			@include rwd(540){
+				margin: 8px 0;
+			}
+		}
+		&:nth-child(3){
+			width: 100%;
+			clear: both;
+		}
+		&.check{
+			display: inline-block;
+			float: left;
+			width: auto;
+			@include rwd(550){
+				width: 100%;
+			}
+			.form-check{
+				display: inline-block;
+				// margin: 20px auto;
+				position: relative;
+				height: 38px;
+				@media screen and (max-width: 400px) {
+					width: 100%;
+					font-size: 0.9em;
+				}
+			}
+		}
+		&.submit{
+			width: auto;
+			float: right;
+			@include rwd(550){
+				width: 100%;
+			}
+		}
+		a{
+			color: $black;
+			text-decoration: underline;
+		}
+	}
+	select,
+	input[type="tel"],
+	input[type="email"],
+	input[type="text"]{
+		height: 52px;
+		width: 100%;
+		font-size: 1.125em;
+		background-clip: padding-box;
+		border: none;
+		outline: none;
+		padding-left: 16px;
+		background-color: #F5F5F5;
+		border: #D6D6D6 solid 1px;
+		border-radius: 10px;
+		@include media('phone') {
+			font-size: 1em;
+		}
+	}
+	select{cursor: pointer;}
+	label{
+		position: relative;
+		cursor: pointer;
+		&#remark-error,
+		&#agreement-error{
+			position: absolute;
+			margin-top: 23px;
+			text-align: center;
+			width: 200px;
+			left: 0;
+			margin-left: -3px;
+			@include media('phone') {
+				position: relative;
+				margin-top: 0;
+			}
+		}
+		&#remark-error{
+			word-break: keep-all;
+		}
+		&#remark2-error{
+			position: absolute;
+			width: 100%;
+			word-break: keep-all;
+			top: 24px;
+			left: -18px;
+		}
+		&.form-check-label.text-white.selected{
+			span{
+				&::before{
+					background-color: #FF9336;
+				}
+			}
+		}
+	}
+	input[type=checkbox],
+	input[type=radio] {
+		// display: none;
+		position: absolute;
+		transform: scale(2);
+		left: 5px;
+		margin-top: 4px;
+		z-index: 2;
+		opacity: 0;
+		cursor: pointer;
+	}
+	textarea{
+		height: 144px;
+		width: 100%;
+		font-size: 1.4em;
+		padding: 16px;
+		border: none;
+		outline: none;
+		padding-left: 16px;
+		background-color: #F5F5F5;
+		border: #D6D6D6 solid 1px;
+		border-radius: 10px;
+	}
+	label span {
+		display: inline-block;
+		padding-left: 26px;
+		line-height: 20px;
+		// background: url(cbx-off.svg) no-repeat;
+		user-select: none;
+		position: relative;
+		padding-left: 32px;
+		line-height: 24px;
+		word-break: keep-all;
+		cursor: pointer;
+		@include media('phone') {
+			font-size: 1.1em;
+			margin: 2px 0;
+		}
+		&::before{
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			width: 22px;
+			height: 22px;
+			background-color: #F5F5F5;
+			border: #D6D6D6 solid 1px;
+			border-radius: 6px;
+			cursor: pointer;
+		}
+	}
+	label.selected span
+	input[type=checkbox].selected + span,
+	input[type=checkbox]:checked + span,
+	input[type=radio].selected + span,
+	input[type=radio]:checked + span{
+		&::before{
+			background-color: #FF9336;
+		}
+	
+	}
+	input[type=checkbox].selected + label + span,
+	input[type=radio].selected + label + span{
+		&::before{
+			background-color: #FF9336;
+		}
+	}
+	.label{
+		&::after{
+			@extend %clear;
+		}
+		label,
+		b{
+			float: left;
+		}
+		label{
+			margin-left: 16px;
+			@include rwd(510){
+				margin-left: 0;
+				margin-right: 16px;
+			}
+		}
+		b{
+			margin-right: 5px;
+			font-weight: normal;
+			@include rwd(510){
+				display: block;
+				width: 100%;
+				margin-bottom: 8px;
+			}
+		}
+	}
+	.form__submit-btn,
+	.btn-submit{
+		display: block;
+		color: white;
+		background-color: #903F41;
+		border: #999 solid 1px;
+		line-height: 54px;
+		font-size: 1.25em;
+		letter-spacing: 3px;
+		font-weight: bold;
+		width: 214px;
+		margin: 0 auto;
+		border-radius: 60px;
+		margin-bottom: 24px;
+		@extend %btn;
+		&:hover,&:focus{
+			background-color: $black;
+			color: white;
+		}
+		@include media('phone') {
+			width: 100%;
+		}
+	}
+}
