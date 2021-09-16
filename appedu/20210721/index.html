@@ -90,7 +90,7 @@
             <a class="close_lightbox" href="avascript:void(0)" title="關閉彈跳視窗">關閉彈跳視窗</a>
             <p>資料已送出<br/>將安排專人與您聯絡</p>
             <a class="gopage" href="avascript:void(0)" title="繼續填寫表單">繼續填寫表單</a>
-            <a class="gohome" href="https://www.accupass.com/event/2107210750421118163672" title="設計講座｜用手機影出質感美照，經驗你的視覺感官！">前往學院首頁</a>
+            <a class="gohome" href="https://www.appedu.com.tw/" title="赫綵設計學院">前往學院首頁</a>
         </article>
     </div>
     <div class="wrapper">
@@ -779,7 +779,7 @@
                             <input name="course" type="text" hidden value="單眼攝影課程">
                             <input name="gift" type="text" hidden value="線上課程+實體講座">
                             <div class="content_form_llst">
-                                <ol class="input_box">
+                                <ol>
                                     <li>
                                         <input type="text" class="form-control" placeholder="真實姓名" name="name">
                                     </li>
@@ -795,48 +795,38 @@
                                     <li>
                                         <select name="area" class="form-control"> </select>
                                     </li>
-                                    <li class="form_speech_box level">
-                                        <p class="attend_speech"><span class="title_bar">【</span>您對攝影的熟悉程度<span class="title_bar">】</span></p>
-                                        <ul class="form_check_box clearfix">
-                                            <li>
-                                                <label for="yes">無基礎
-                                                    <input type="radio" name="level_checkbox" id="yes" value="無基礎" class="checkbox_hide">
-                                                    <span class="checkbox level_checkbox"></span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label for="no">初學者
-                                                    <input type="radio" id="no" name="level_checkbox" value="初學者" class="checkbox_hide">
-                                                    <span class="checkbox level_checkbox"></span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label for="god">小神級
-                                                    <input type="radio" id="god" name="level_checkbox" value="小神級" class="checkbox_hide">
-                                                    <span class="checkbox level_checkbox"></span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="form_speech_box attend no_m">
-                                        <p class="attend_speech"><span class="title_bar">【</span>您想參加攝影的講座活動嗎？<span class="title_bar">】</span></p>
-                                        <ul class="form_check_box clearfix">
-                                            <li>
-                                                <label for="attend_yes">想參加
-                                                    <input type="radio" name="attended" id="attend_yes" value="想參加" class="checkbox_hide">
-                                                    <span class="checkbox attend_checkbox"></span>
-                                                </label>
-                                            </li>
-                                            <li class="mobile_attend_no">
-                                                <label for="attend_no">不想參加
-                                                    <input type="radio" name="attended" id="attend_no" value="不想參加" class="checkbox_hide">
-                                                    <span class="checkbox attend_checkbox"></span>
-                                                </label>
-                                            </li>
-                                        </ul>
+                                    <li>
+                                        <div class="label">
+                                            <b>您對攝影的熟悉程度</b>
+                                            <label for="level1">
+                                                <input id="level1" name="remark" class="radio" type="radio" value="零基礎" />
+                                                <span>零基礎</span>
+                                            </label>
+                                            <label for="level2">
+                                                <input id="level2" name="remark" class="radio" type="radio" value="初學者" />
+                                                <span>初學者</span>
+                                            </label>
+                                            <label for="level3">
+                                                <input id="level3" name="remark" class="radio" type="radio" value="專業級" />
+                                                <span>小神級</span>
+                                            </label>
+                                        </div>
                                     </li>
                                     <li>
-                                        <textarea id="message_area" class="message_area" name="message_area" cols="30" rows="10" placeholder="想詢問逐格動畫創作相關問題..."></textarea>
+                                        <div class="label">
+                                            <b>您想參加攝影的講座活動嗎？</b>
+                                            <label for="join">
+                                                <input id="join" name="remark2" class="radio2" type="radio" value="想參加" />
+                                                <span>想參加</span>
+                                            </label>
+                                            <label for="NOTjoin">
+                                                <input id="NOTjoin" name="remark2" class="radio2" type="radio" value="不想參加" />
+                                                <span>不想參加</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <textarea id="message_area" class="message_area" name="message_area" cols="30" rows="10" placeholder="想詢問攝影相關問題"></textarea>
                                     </li>
                                     <li class="check">
                                         <div class="form-check">
@@ -848,8 +838,8 @@
                                             </label>
                                         </div>
                                     </li>
-                                    <li>
-                                        <button class="submit_btn btn-submit" name="btnsubmit" id="btnsubmit" value="填寫完成" type="submit" onclick="gtag('event','send',{'event_category':'Portrait-photography'})">填寫完成</button>
+                                    <li class="submit">
+                                        <button onclick='gtag("send","event",{event_category:"Interiordesign"})' class="btn-submit form__submit-btn" name="btnsubmit" id="btnsubmit" value="填寫完成" type="submit">填寫完成</button>
                                     </li>
                                 </ol>
                             </div>

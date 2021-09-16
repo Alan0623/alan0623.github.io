@@ -1,4 +1,4 @@
-//JavaScript Document
+// JavaScript Document
 $(function(){
 
     const $form = $(".form-distribution");
@@ -130,8 +130,9 @@ $(function(){
             })
             .done(function(response){
                 if(response.result == "true"){
-                    alert(options.successMessage);
+                    // alert(options.successMessage);
                     $("body").addClass("lightbox");
+                    // top.location.href = "https://bit.ly/3dqYVhD";
                 }else{
                     console.error(response);
                     // alert("資料送出失敗，請聯絡我們或再試一次");

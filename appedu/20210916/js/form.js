@@ -1,41 +1,13 @@
-//JavaScript Document
+//Form
 $(function(){
 
     const $form = $(".form-distribution");
     const GET_LOCATION_ENDPOINT = "https://www.appedu.com.tw/Librarys/_ajax/Address.php";
     const DISTRIBUTION_ENDPOINT = "https://www.appedu.com.tw/Librarys/_ajax/Distribution.php";
 
-    //Form
     $(".checkbox").on("click",function(){
-        // $(this).data("value", $(".checkbox").val());
         $(".checkbox").removeClass("selected");
-        $(".checkbox:checked").addClass("selected");
-    });
-
-    $(".radio").on("click",function(){
-        $(".radio").removeClass("selected");
         $(this).addClass("selected");
-    });
-
-    $(".radio2").on("click",function(){
-        $(".radio2").removeClass("selected");
-        $(this).addClass("selected");
-    });
-    
-    //當checkbox為透明 以before 當做假checkbox
-    //出現.error訊息後 再次點擊checkbox 出現before
-    $("#level1").on("click",function(){
-        $("input#course1.error").parents("label").addClass("selected");
-        $("input#course1[aria-invalid=false]").parent("label").removeClass("selected");
-    });
-    $(".form-check-input").on("click",function(){
-        $("input.form-check-input.error").parents("label").addClass("selected");
-        $("input.form-check-input[aria-invalid=false]").parent("label").removeClass("selected");
-    });
-
-    //關lightbox
-    $(".gopage,.close_lightbox").on("click",function(){
-        $("body").removeClass("lightbox");
     });
     function loadLocation(options){
         let $cityElement = options.city.element;
@@ -93,7 +65,7 @@ $(function(){
             });
         });
     }
-    
+
     $.validator.addMethod(
         "cellphone",
         function(value,element){
@@ -105,9 +77,10 @@ $(function(){
 
     function distributionSubmitHandler(options){
         return function(form){
-            // let $checkbox = $(".checkbox.selected");
-            // let $message_area = $("#message_area");
-            let remark_text = "我的攝影程度是"+$(".radio.selected").data('value')+"。我"+$(".radio2.selected").data('value')+"攝影的講座活動。"+"我想詢問:"+$("#message_area").val();
+            let $attended = $(form).find(".attend :checked");
+            let $level_checkbox = $(form).find(".level :checked");
+            let $message_area = $("#message_area");
+            let $eip_remark_text = "我對UI介面設計的熟悉程度是:"+$level_checkbox.val()+"，是否參與講座活動:"+$attended.val()+"，我想詢問:"+$message_area.val();
             $.ajax({
                 url: DISTRIBUTION_ENDPOINT,
                 type: "POST",
@@ -123,27 +96,31 @@ $(function(){
                     cellphone: form.cellphone.value,
                     email: form.email.value,
                     zip_id: form.area.value,
-                    remark: remark_text,
-                    remark2: remark2_text,
+                    remark: $eip_remark_text,
                     gift: form.gift && form.gift.value
                 }
             })
             .done(function(response){
+                if($attended.val() == "想參加"){
+                    window.location.href="https://www.accupass.com/event/2109150326502129819220";
+                }else if($attended.val() == "不想參加"){
+                    window.location.href="https://www.facebook.com/events/882436036000543/?acontext=%7B%22event_action_history%22%3A[%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22page_admin_bar%22%2C%22surface%22%3A%22page%22%7D%2C%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22events_admin_tool%22%2C%22surface%22%3A%22page%22%7D%2C%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22surface%22%2C%22surface%22%3A%22create_dialog%22%7D]%2C%22ref_notif_type%22%3Anull%7D&onload_action=online_event_upsell_dialog";
+                }
                 if(response.result == "true"){
                     alert(options.successMessage);
-                    $("body").addClass("lightbox");
+                    // $("body").addClass("lightbox");
                 }else{
                     console.error(response);
-                    // alert("資料送出失敗，請聯絡我們或再試一次");
-                    $(".lightbox_article p").text("資料送出失敗，請聯絡我們或再試一次");
-                    $("body").addClass("lightbox");
+                    alert("資料送出失敗，請聯絡我們或再試一次");
+                    // $(".lightbox_article p").text("資料送出失敗，請聯絡我們或再試一次");
+                    // $("body").addClass("lightbox");
                 }
             })
             .fail(function(error){
-                console.error(error);
-                // alert("網路問題無法傳送資料，請聯絡我們或再試一次");
-                $(".lightbox_article p").text("網路問題無法傳送資料，請聯絡我們或再試一次");
-                $("body").addClass("lightbox");
+                console.error(error)
+                alert("網路問題無法傳送資料，請聯絡我們或再試一次");
+                // $(".lightbox_article p").text("網路問題無法傳送資料，請聯絡我們或再試一次");
+                // $("body").addClass("lightbox");
             });
             return false;
         };
@@ -152,12 +129,12 @@ $(function(){
     loadLocation({
         city:{
             element:$form.find("[name=city]"),
-            defaultLabel:"選擇縣市",
+            defaultLabel:"請選縣市",
             errorMessage:"無法載入縣市資料"
         },
         area:{
             element:$form.find("[name=area]"),
-            defaultLabel:"選擇地區",
+            defaultLabel:"請選地區",
             errorMessage:"無法載入地區資料"
         }
     });
@@ -173,7 +150,8 @@ $(function(){
             city:"required",
             area:"required",
             remark:"required",
-            remark2:"required",
+            level_checkbox:"required",
+            attended:"required",
             course:"required",
             agreement:"required"
         },
@@ -190,7 +168,8 @@ $(function(){
             city:"請選擇縣市",
             area:"請選擇地區",
             remark:"您尚未選擇您對攝影的熟悉程度",
-            remark2:"您尚未選擇您想參加攝影的講座活動嗎",
+            level_checkbox:"此選項必須勾選一個",
+            attended:"此選項必須勾選一個",
             course:"請選擇想學課程",
             agreement:"您尚未接受隱私權使用條款"
         }

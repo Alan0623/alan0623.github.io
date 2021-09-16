@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <title>赫啦跟大師學-翻轉UI使用者介面 剖析UI架構 快速掌握網頁設計技巧｜赫綵設計學院 Appedu Design Institute</title>
+    <!-- IE integration 強迫 IE 在顯示網頁時使用最新的引擎版本-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- End IE integration-->
+    <!-- viewport integration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- End viewport integration -->
+    <!-- Google integration -->
+    <meta name="description" content="獨家直播教學，UI設計製作全破解，六個步驟開創你的UI設計思維。UI/UX講座 火熱報名中，設計師必知UI設計新趨勢。" />
+    <meta name="keywords" content="花魁, Photoshop, Illustrator, 平面設計, 前端網頁設計, UI介面設計, Photoshop, 電繪, Painter, 數位繪畫, AutoCAD, SketchUp, 3ds Max, 3D空間, 室內設計, 室內設計乙級認證, Toonboom2D動畫, Maya3D動畫, 遊戲美術企劃, AfterEffects, 影視動畫特效, 商業攝影, 手機攝影, Unity, 3D遊戲, App製作, Autodesk, Adobe ACA, 國際認證" />
+    <meta name="author" content="Appedu Design Institute"/>
+    <meta name="copyright" content="Appedu Design Institute"/>
+    <!-- End Google integration -->
+    <!-- Facebook integration -->
+    <meta property="og:title" content="獨家直播教學，UI設計製作全破解，六個步驟開創你的UI設計思維。UI/UX講座 火熱報名中，設計師必知UI設計新趨勢。" />
+    <meta property="og:type" content='website' />
+    <meta property="og:image" content="images/og_image.jpg" />
+    <meta property="og:url" content="https://www.appedu.com.tw" />
+    <meta property="og:site_name" content="獨家直播教學，UI設計製作全破解，六個步驟開創你的UI設計思維。UI/UX講座 火熱報名中，設計師必知UI設計新趨勢。" />
+    <meta property="og:description" content="獨家直播教學，UI設計製作全破解，六個步驟開創你的UI設計思維。UI/UX講座 火熱報名中，設計師必知UI設計新趨勢。" />
+    <!-- End Facebook integration -->
+    <!-- Facebook Places -->
+    <meta property="og:email" content="appedu@appedu.com.tw"/> 
+    <meta property="og:phone_number" content="+886800885222"/> 
+    <!-- End Facebook Places -->
+    <!-- Twitter integration -->
+    <meta name="twitter:title" content="獨家直播教學，UI設計製作全破解，六個步驟開創你的UI設計思維。UI/UX講座 火熱報名中，設計師必知UI設計新趨勢。" />
+    <meta name="twitter:image" content="images/og_image.jpg" />
+    <meta name="twitter:url" content="https://www.appedu.com.tw" />
+    <meta name="twitter:card" content="獨家直播教學，UI設計製作全破解，六個步驟開創你的UI設計思維。UI/UX講座 火熱報名中，設計師必知UI設計新趨勢。" />
+    <!-- End Twitter integration -->
+    <!-- Telephone -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- End Telephone -->
+    <!-- favicon.ico and apple-touch-icon.png -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="images/apple-icon-57x57.png" sizes="57x57" />
+    <link rel="apple-touch-icon-precomposed" href="images/apple-icon-72x72.png" sizes="72x72" />
+    <link rel="apple-touch-icon-precomposed" href="images/apple-icon-114x114.png" sizes="114x114" />
+    <link rel="apple-touch-icon-precomposed" href="images/apple-icon-144x144.png" sizes="144x144" />
+    <!-- End favicon.ico and apple-touch-icon.png -->
+    <!-- stylesheet -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+ <!-- End stylesheet -->
+
+
+    <script type="text/javascript" src="js/arr/jquery.min.js"></script>
+    <script type="text/javascript" src="js/arr/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/arr/jquery-progresspiesvg-min.js"></script>
+    <script type="text/javascript" src="js/arr/main.js"></script>
+    <!-- 引入串接腳本 -->
+    <!--cript type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>
+    <!--script src="js/jquery.nanogallery2.min.js"></script-->
+    <script type="text/javascript" src="js/jquery.lightbox.js"></script>
+    <script type="text/javascript" src="js/effect.js"></script>
+    <script type="text/javascript" src="js/form.js"></script>
+   
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68890793-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-68890793-1');
+    </script>
+    <!-- End Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K56ZZM');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+<!--/head-->
+<body class="no_js">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K56ZZM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- <div class="lightbox_block">
+        <article class="lightbox_article">
+            <a class="close_lightbox" href="avascript:void(0)" title="關閉彈跳視窗">關閉彈跳視窗</a>
+            <p>資料已送出<br/>將安排專人與您聯絡</p>
+            <a class="gopage" href="https://www.appedu.com.tw/" title="赫綵設計學院">前往學院首頁</a>
+            <a class="gohome" href="https://www.facebook.com/events/503665377371676/?acontext=%7B%22ref%22%3A%2252%22%2C%22action_history%22%3A%22[%7B%5C%22surface%5C%22%3A%5C%22share_link%5C%22%2C%5C%22mechanism%5C%22%3A%5C%22share_link%5C%22%2C%5C%22extra_data%5C%22%3A%7B%5C%22invite_link_id%5C%22%3A176065577846158%7D%7D]%22%7D" title="【直播攝影教學】超強三位師資團隊聯手出擊｜帶你掌握棚拍技巧，征服人像攝影">直播攝影教學</a>
+            
+        </article>
+    </div> -->
+    
+    <div class="wrapper">
+        <a href="#" class="gotop">gotop</a>
+        <noscript>
+            您的瀏覽器似乎不支援JavaScript語法，但沒關係，這裡的JavaScript語法並不會影響到內容的陳述， 如需要選擇字級大小，IE6請利用鍵盤按住ALT鍵+ V → X → (G)最大(L)較大(M)中(S)較小(A)小，來選擇適合您的文字大小， 而IE7或Firefox瀏覽器則可利用鍵盤 Ctrl + (+)放大(-)縮小來改變字型大小，如需要回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能，列印可使用瀏覽器提供的(Ctrl+P)功能；如需觀看新聞內容或是申請表單下載，建議您由more頁進入並選取符合您之相關資訊內容。若要點選子選單內容，可點選下方選單列表。  
+        </noscript>
+        <!--.header 以下 主選單-->
+        <header class="header logo_white">
+            <!-- <a href="javascript:void(0)" title="主要選單" class="open_nav">
+                <div class="icon">
+                    <h2 title="主要選單">主要選單</h2>
+                </div>
+            </a> -->
+            <div class="header_center">
+                <div class="mark_appedu">
+                    <b>HOLA!</b>
+                    <p>Learning With Master</p>
+                </div>
+            </div>
+        </header>
+        <div id="mouseStoker" >
+        </div>
+        <!--.content 以下 主要內容區-->
+        <main id="top" class="loaded loadingEnd content">
+            <section class="content_main_Visual ready-animate">
+                <div class="center">
+                    <div class="video">
+                        <div class="video_s">
+                            <div class="videoContainer">
+                                <video loop="true" id="main_video" src="./video/od-fire.mov" autoplay="" muted="”true”"></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <div class="date">
+                            <span>2021.10.13</span>
+                            <span> 19:25</span>
+                        </div>
+                        <p>請鎖定【赫綵Facebook粉絲專頁直播活動】</p>
+                        <h1>
+                            <b>翻轉UI使用者介面</b>
+                            <span>剖析UI架構 快速掌握網頁設計技巧</span>
+                        </h1>
+
+                        <ol>
+                            <li>資訊架構</li>
+                            <li>視覺設計技巧</li>
+                            <li>情境模擬</li>
+                            <li>互動設計</li>
+                        </ol>
+                        <a href="https://www.facebook.com/events/882436036000543/?acontext=%7B%22event_action_history%22%3A[%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22page_admin_bar%22%2C%22surface%22%3A%22page%22%7D%2C%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22events_admin_tool%22%2C%22surface%22%3A%22page%22%7D%2C%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22surface%22%2C%22surface%22%3A%22create_dialog%22%7D]%2C%22ref_notif_type%22%3Anull%7D&onload_action=online_event_upsell_dialog" target="_blank" title="預約觀看直播" >預約觀看直播</a>
+                    </div>
+
+                </div>
+            </section>
+            <section class="content_questions ready-animate">
+                <div class="center">
+                    <h2>
+                        <b>你對UI設計也有這些疑問嗎？</b>
+                        <p>從入門到精通 一次解鎖UI設計</p>
+                    </h2>
+                    <ul>
+                        <li class="questions1">
+                            <div class="a">
+                                <figure class="img">
+                                    <img src="./images/q1.png" alt="成為UI設計師需要會寫程式嗎？">
+                                    <figcaption class="text">
+                                        <h3>
+                                            <span>成為UI設計師</span>
+                                            <span>需要會寫程式嗎？</span>
+                                        </h3>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </li>
+                        <li class="questions2">
+                            <div class="a">
+                                <figure class="img">
+                                    <img src="./images/q2.png" alt="UI設計初學者應該從何開始學習？">
+                                    <figcaption class="text">
+                                        <h3>
+                                            <span>UI設計初學者</span>
+                                            <span>應該從何開始學習？</span>
+                                        </h3>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </li>
+                        <li class="questions3">
+                            <div class="a">
+                                <figure class="img">
+                                    <img src="./images/q3.png" alt="非本科系轉職UI設計有何差異與建議？">
+                                    <figcaption class="text">
+                                        <h3>
+                                            <span>非本科系轉職UI設計</span>
+                                            <span>有何差異與建議？</span>
+                                        </h3>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="content_teacher ready-animate">
+                <div class="center">
+                    <div class="teacher_img">
+                        <div class="img">
+                            <img src="./images/Rex.jpg" alt="曾靖宇 Rex">
+                        </div>
+                    </div>
+                    <div class="teacher_info">
+                        <h2>
+                            <b>實戰派UI設計講師</b>
+                            <p>曾靖宇 Rex</p>
+                            <span>/ UIUX Designer</span>
+                        </h2>
+                        <div class="text">
+                            <p>　　橫跨了教育科技以及虛擬貨幣等不同領域以及多次的產品從 ０到 １的開發經驗，擅長利用動畫以及 Prototype 來協助溝通以及對焦，設計執行之外也追求專案流程的優化以及協作管理的建立。</p>
+                            <p>　　在工作之餘也致力於知識傳承，經營生產力工具以及區塊鏈相關知識分享Youtube頻道「設計師 Rex The Designer」</p>
+                        </div>
+                    </div>
+                    <div class="teaching_experience">
+                        <h3>教學經歷</h3>
+                        <ul>
+                            <li>Change 互聯網大學計畫 PM Coach</li>
+                            <li>As A Product Designer 合作作者</li>
+                            <li>線上教學平台諮詢業師 ＆課程講師</li>
+                            <li>104 履歷診療室 Giver</li>
+                            <li>Linkedin 職場時間捐贈計畫導師</li>
+                        </ul>
+                    </div>
+                    <div class="work_experience">
+                        <h3>工作經歷</h3>
+                        <ul>
+                            <li>香港商保險金融新創 資深設計師 </li>
+                            <li>百萬用戶產品 VoiceTube Product Designer </li>
+                            <li>臺灣虛擬貨幣項目 MITH 資深 UI/UX Designer </li>
+                            <li>音樂版權代幣交易所ＭachiX Product Designer</li>
+                        </ul>
+                    </div>
+                    <ul class="link">
+                        <li><a href="https://www.youtube.com/channel/UC5kLuROP5xGdsUKZC7I11Xg/about" target="_blank" title="Youtube">Youtube</a></li>
+                        <li><a href="https://medium.com/@mdzeng" target="_blank" title="Medium">Medium</a></li>
+                        <li><a href="https://dribbble.com/mdZeng/likes" target="_blank" title="Dribbble">Dribbble</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="content_album ready-animate">
+                <div class="center">
+                    <h2>
+                        <b>UI大師作品精選</b>
+                        <p>設計除了有美感，更要有理性邏輯</p>
+                    </h2>
+                    <ul class="album">
+                        <li>
+                            <a data-fancybox data-animation-duration="700" data-src="#album1" href="javascript:;" class="btn_lightbox" title="">
+                                <img src="./images/p1.jpg" alt="">
+                                <div class="text">
+                                    <div class="pop">
+                                        <b>VoiceTube App Redesign</b>
+                                        <p>Mobile App UI Design</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <figure style="display: none;" id="album1" class="animated-modal">
+                                <img class="img-fluid" src="./images/p1.jpg">
+                            </figure>
+                        </li>
+                        <li>
+                            <a data-fancybox data-animation-duration="700" data-src="#album2" href="javascript:;" class="btn_lightbox" title="">
+                                <img src="./images/p2s.jpg" alt="">
+                                <div class="text">
+                                    <div class="pop">
+                                        <b>Melegant</b>
+                                        <p>Mobile App UI Design</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <figure style="display: none;" id="album2" class="animated-modal">
+                                <img class="img-fluid" src="./images/p2.jpg">
+                            </figure>
+                        </li>
+                        <li>
+                            <a data-fancybox data-animation-duration="700" data-src="#album3" href="javascript:;" class="btn_lightbox" title="">
+                                <img src="./images/p3s.jpg" alt="">
+                                <div class="text">
+                                    <div class="pop">
+                                        <b>Melegant</b>
+                                        <p>Mobile App UI Design</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <figure style="display: none;" id="album3" class="animated-modal">
+                                <img class="img-fluid" src="./images/p3.jpg">
+                            </figure>
+                        </li>
+                        <li>
+                            <a data-fancybox data-animation-duration="700" data-src="#album4" href="javascript:;" class="btn_lightbox" title="">
+                                <img src="./images/p4s.jpg" alt="">
+                                <div class="text">
+                                    <div class="pop">
+                                        <b>Vault</b>
+                                        <p>Web UI/UX Design</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <figure style="display: none;" id="album4" class="animated-modal">
+                                <img class="img-fluid" src="./images/p4.jpg">
+                            </figure>
+                        </li>
+                        <li>
+                            <a data-fancybox data-animation-duration="700" data-src="#album5" href="javascript:;" class="btn_lightbox" title="">
+                                <img src="./images/p5.gif" alt="">
+                                <div class="text">
+                                    <div class="pop">
+                                        <b>Vault</b>
+                                        <p>Web UI/UX Design</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <figure style="display: none;" id="album5" class="animated-modal">
+                                <img class="img-fluid" src="./images/p5.gif">
+                            </figure>
+                        </li>
+                        <li>
+                            <a data-fancybox data-animation-duration="700" data-src="#album6" href="javascript:;" class="btn_lightbox" title="">
+                                <img src="./images/p6s.jpg" alt="">
+                                <div class="text">
+                                    <div class="pop">
+                                        <b>Vault</b>
+                                        <p>Web UI/UX Design</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <figure style="display: none;" id="album6" class="animated-modal">
+                                <img class="img-fluid" src="./images/p6.jpg">
+                            </figure>
+                        </li>
+                        <li>
+                            <a data-fancybox data-animation-duration="700" data-src="#album7" href="javascript:;" class="btn_lightbox" title="">
+                                <img src="./images/p7s.jpg" alt="">
+                                <div class="text">
+                                    <div class="pop">
+                                        <b>Onedegree</b>
+                                        <p>Web UI/UX Design</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <figure style="display: none;" id="album7" class="animated-modal">
+                                <img class="img-fluid" src="./images/p7.jpg">
+                            </figure>
+                        </li>
+                        <li>
+                            <a data-fancybox data-animation-duration="700" data-src="#album8" href="javascript:;" class="btn_lightbox" title="">
+                                <img src="./images/p8s.jpg" alt="">
+                                <div class="text">
+                                    <div class="pop">
+                                        <b>Onedegree</b>
+                                        <p>Web UI/UX Design</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <figure style="display: none;" id="album8" class="animated-modal">
+                                <img class="img-fluid" src="./images/p8.jpg">
+                            </figure>
+                        </li>
+                        <li>
+                            <div class="more">
+                                <div class="flex">
+                                    <b>查看更多大師作品</b>
+                                    <p>快來累積自己的美感實力！</p>
+                                    <a href="https://rex-tseng.github.io/portfolio/index.html" target="_blank" title="觀看更多">觀看更多</a>
+                                </div>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="content_step ready-animate">
+                <div class="center">
+                    <h2>
+                        <div class="tag">
+                            <span>獨家直播教學</span>
+                        </div>
+                        <b>UI設計製作全破解</b>
+                        <p>六個步驟開創你的UI設計思維</p>
+                    </h2>
+                    <ul class="step">
+                        <li>
+                            <a data-fancybox data-animation-duration="700" data-src="#step1" href="javascript:;" class="btn_lightbox" title="">
+                                <div class="img">
+                                    <img src="./images/step1s.jpg" alt="">
+                                    <div class="text">
+                                    </div>
+                                </div>
+                                <h3>先問為什麼</h3>
+                            </a>
+                            <figure style="display: none;" id="step1" class="animated-modal">
+                                <img class="img-fluid" src="./images/step1.jpg">
+
+                            </figure>
+                        </li>
+                        <li>
+                            <a data-fancybox data-animation-duration="700" data-src="#step2" href="javascript:;" class="btn_lightbox" title="">
+                                <div class="img">
+                                    <img src="./images/step2s.jpg" alt="">
+                                    <div class="text">
+                                    </div>
+                                </div>
+                                <h3>紙筆好朋友</h3>
+                            </a>
+                            <figure style="display: none;" id="step2" class="animated-modal">
+                                <img class="img-fluid" src="./images/step2.jpg">
+                            </figure>
+                        </li>
+                        <li>
+                            <a data-fancybox data-animation-duration="700" data-src="#step3" href="javascript:;" class="btn_lightbox" title="">
+                                <div class="img">
+                                    <img src="./images/step3s.jpg" alt="">
+                                    <div class="text">
+                                    </div>
+                                </div>
+                                <h3>準備好顏色與字級</h3>
+                            </a>
+                            <figure style="display: none;" id="step3" class="animated-modal">
+                                <img class="img-fluid" src="./images/step3.jpg">
+                            </figure>
+                        </li>
+                        <li>
+                            <a data-fancybox data-animation-duration="700" data-src="#step4" href="javascript:;" class="btn_lightbox" title="">
+                                <div class="img">
+                                    <img src="./images/step4s.jpg" alt="">
+                                    <div class="text">
+                                    </div>
+                                </div>
+                                <h3>建立元件</h3>
+                            </a>
+                            <figure style="display: none;" id="step4" class="animated-modal">
+                                <img class="img-fluid" src="./images/step4.jpg">
+                            </figure>
+                        </li>
+                        <li>
+                            <a data-fancybox data-animation-duration="700" data-src="#step5" href="javascript:;" class="btn_lightbox" title="">
+                                <div class="img">
+                                    <img src="./images/step5s.jpg" alt="">
+                                    <div class="text">
+                                    </div>
+                                </div>
+                                <h3>動手設計畫面</h3>
+                            </a>
+                            <figure style="display: none;" id="step5" class="animated-modal">
+                                <img class="img-fluid" src="./images/step5.jpg">
+                            </figure>
+                        </li>
+                        <li>
+                            <a data-fancybox data-animation-duration="700" data-src="#step6" href="javascript:;" class="btn_lightbox" title="">
+                                <div class="img">
+                                    <img src="./images/step6s.jpg" alt="">
+                                    <div class="text">
+                                    </div>
+                                </div>
+                                <h3>帶入情境</h3>
+                            </a>
+                            <figure style="display: none;" id="step6" class="animated-modal">
+                                <img class="img-fluid" src="./images/step6.jpg">
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content_price ready-animate">
+                <div class="center">
+                    <div class="title">
+                        <h2>
+                            <div class="tag">
+                                <span>限額<b>35</b>名</span>
+                            </div>
+                            <b>UI/UX講座 火熱報名中</b>
+                            <p>設計師必知UI設計新趨勢</p>
+                        </h2>
+                        <ul>
+                            <li>資訊架構</li>
+                            <li>設計趨勢分析</li>
+                            <li>情境模擬</li>
+                            <li>互動設計</li>
+                        </ul>
+                    </div>
+                    <div class="price sameHeight">
+                        <ul>
+                            <li>
+                                <b>原始票價</b>
+                                <p>千萬別錯過的UI大師講座</p>
+                                <span>$ 300</span>
+                            </li>
+                            <li>
+                                <b>早鳥票價</b>
+                                <p>即日起至 2021.10.05</p>
+                                <span>$ 250</span>
+                            </li>
+                            <li>
+                                <b>學員票價</b>
+                                <p>給赫綵學員特別優惠票價</p>
+                                <span>$ 200</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more sameHeight">
+                        <div class="date">
+                            <b>2021.10.31</b>
+                            <p>SUN.</p>
+                        </div>
+                        <div class="address">台北市大安區中孝東路四段<br/>
+                            183號5樓之2｜赫綵東區學院</div>
+                        <p>專業能力養成！成為UI/UX設計師的必備特質＆技能
+                            讓老師帶著你現場上機實作！</p>
+                        <a href="https://www.accupass.com/event/2109150326502129819220" title="了解更多資訊" target="_blank">了解更多資訊</a>
+                    </div>
+                </div>
+            </section>     
+            <section class="content_downlond ready-animate"> 
+                <div class="center">
+                    <div class="downlond">
+                        <h2>
+                            <b>大師私藏素材網站免費領取</b>
+                            <p>給使用者最完美的體驗，打造屬於自己的視覺風格</p>
+                        </h2>
+                        <a href="https://drive.google.com/drive/folders/1vAPQl-ZqgUg6O1Xd0U_vKPndtfkMt-w8" target="_blank" title="下載素材網站">下載素材網站</a>
+                    </div>
+                </div>
+            </section>      
+            <section class="content_book"> 
+                <div class="center">
+                    <h2>
+                        <b>設計書籍好禮大方抽</b>
+                        <p>設計師必看設計書籍首選書單</p>
+                    </h2>
+                    <ul>
+                        <li>
+                            <figure>
+                                <img src="./images/b1.png" alt="從0到1：打開世界運作的未知祕密 在意想不到之處發現價值">
+                                <figcaption>
+                                    <h3>
+                                        <span>從0到1：打開世界運作的未知祕密</span>
+                                        <span>在意想不到之處發現價值</span>
+                                    </h3>
+                                    <p>作者:Peter Thiel／Blake Masters</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="./images/b2.png" alt="設計的方法：100個分析難題 跟成功商品取經，讓設計更棒、更好的有效方法">
+                                <figcaption>
+                                    <h3>
+                                        <span>設計的方法：100個分析難題</span>
+                                        <span>跟成功商品取經，讓設計更棒、更好的有效方法</span>
+                                    </h3>
+                                    <p>作者:Bruce Hanington／Bella Martin</p>
+                                </figcaption>
+                            </figure>
+
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="./images/b3.png" alt="使用者故事對照User Story Mapping">
+                                <figcaption>
+                                    <h3>
+                                        <span>使用者故事對照</span>
+                                        <span>User Story Mapping</span>
+                                    </h3>
+                                    <p>作者:Jeff Patton </p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </section>      
+            <section class="content_form ready-animate">
+                <div class="center">
+                    <article class="form_info">
+                        <h2>
+                            <div class="tag">
+                                <span>僅限50份</span>
+                            </div>
+                            <b>火熱加開UI介面設計速成班</b>
+                            <p>不用挑選，線上線下一起送！</p>
+                        </h2>
+                        <ol class="free">
+                            <li>
+                                <figure>
+                                    <div class="tag">
+                                        <span>免費贈送</span>
+                                    </div>
+                                    <img src="./images/f1.jpg" alt="初學者必學 線上180堂全方位課程">
+                                    <figcaption class="text">
+
+                                        <h3>初學者必學</h3>
+                                        <p>線上180堂全方位課程</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <div class="tag">
+                                        <span>免費贈送</span>
+                                    </div>
+                                    <img src="./images/f2.jpg" alt="UI介面設計講座 線下 3 小時精華講座">
+                                    <figcaption class="text">
+                                        <h3>UI介面設計講座</h3>
+                                        <p>線下 3 小時精華講座</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ol>
+                    </article>
+                    <article class="form_list">
+                        <div class="form">
+                            <h2>
+                                <b>填寫資料領取免費課程</b>
+                            </h2>
+                        <form class="form-distribution">
+                            <input name="distribution" type="text" hidden value="15" />
+                            <input name="outletSub" type="text" hidden value="487" />
+                            <input name="mediaSub" type="text" hidden value="599" />
+                            <input name="type" type="text" hidden value="Event" />
+                            <input name="course" type="text" hidden value="單眼攝影課程">
+                            <input name="gift" type="text" hidden value="線上課程+實體講座">
+                            <div class="content_form_list">
+                                <div class="form_block info">
+                                    <ol>
+                                        <li>
+                                            <input type="text" class="form-control" placeholder="真實姓名" name="name">
+                                        </li>
+                                        <li>
+                                            <input type="tel" class="form-control" placeholder="手機號碼" name="cellphone">
+                                        </li>
+                                    </ol>
+                                    <ol>
+                                        <li>
+                                            <select name="city" class="form-control"> </select>
+                                        </li>
+                                        <li>
+                                            <select name="area" class="form-control"> </select>
+                                        </li>
+                                        <li>
+                                            <input type="email" placeholder="電子信箱" name="email">
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="form_block q1">
+                                    <ol>
+                                        <li class="form_speech_box level">
+                                            <p class="attend_speech"><span class="title_bar"></span>您對UI介面設計的熟悉程度？<span class="title_bar"></span></p>
+                                            <ul class="form_check_box clearfix">
+                                                <li>
+                                                    <label for="yes">
+                                                        <u>無基礎</u>
+                                                        <input type="radio" name="level_checkbox" id="yes" value="無基礎" class="checkbox_hide">
+                                                        <span class="checkbox level_checkbox selected1"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label for="no">
+                                                        <u>初學者</u>
+                                                        <input type="radio" id="no" name="level_checkbox" value="初學者" class="checkbox_hide">
+                                                        <span class="checkbox level_checkbox selected2"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label for="god">
+                                                        <u>小神級</u>
+                                                        <input type="radio" id="god" name="level_checkbox" value="小神級" class="checkbox_hide">
+                                                        <span class="checkbox level_checkbox selected3"></span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                    <ol>
+                                        <li class="form_speech_box attend no_m">
+                                            <p class="attend_speech"><span class="title_bar"></span>您想參加UI/UX講座的講座活動嗎？<span class="title_bar"></span></p>
+                                            <ul class="form_check_box clearfix">
+                                                <li>
+                                                    <label for="attend_yes">
+                                                        <u>想參加</u>
+                                                        <input type="radio" name="attended" id="attend_yes" value="想參加" class="checkbox_hide">
+                                                        <span class="checkbox attend_checkbox selected4"></span>
+                                                        
+                                                    </label>
+                                                </li>
+                                                <li class="mobile_attend_no">
+                                                    <label for="attend_no">
+                                                        <u>不想參加</u>
+                                                        <input type="radio" name="attended" id="attend_no" value="不想參加" class="checkbox_hide">
+                                                        <span class="checkbox attend_checkbox selected5"></span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ol> 
+                                </div>
+                                <div class="form_block q2">
+                                    <ol class="sameHeight2">
+                                        <li>
+                                            <textarea id="message_area" class="message_area" name="message_area" cols="30" rows="10" placeholder="想詢問UI介面設計相關問題......"></textarea>
+                                        </li>
+                                    </ol>
+                                    <ol class="sameHeight2">
+                                        <li>
+                                        <label class="form-check-label clearfix">
+                                            <input name="agreement" type="checkbox" class="form-check-input mt24" />
+                                            <span class="agree_rule">我已詳細閱讀並同意<a href="https://www.appedu.com.tw/frame-privacy" target="_blank">隱私權使用條款</a></span>
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <button class="submit_btn btn-submit" name="btnsubmit" id="btnsubmit" value="填寫完成" type="submit" onclick="gtag('event','send',{'event_category':'Portrait-photography'})">填寫完成</button>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                    </article>
+                </div>
+            </section><!-- content_form -->
+            <section class="content_live">
+                <div class="center">
+                    <ul>
+                        <li>打開預告通知收看直播</li>
+                        <li>UI 迅速上手指南大公開 </li>
+                    </ul>
+                    <a class="viewAllCirle" target="_blank" href="https://www.facebook.com/events/882436036000543/?acontext=%7B%22event_action_history%22%3A[%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22page_admin_bar%22%2C%22surface%22%3A%22page%22%7D%2C%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22events_admin_tool%22%2C%22surface%22%3A%22page%22%7D%2C%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22surface%22%2C%22surface%22%3A%22create_dialog%22%7D]%2C%22ref_notif_type%22%3Anull%7D&onload_action=online_event_upsell_dialog">
+                        <span class="arr">
+                            NOTICE
+                        </span>
+                    </a>
+ 
+                    <h2>
+                        10/13 晚上19:25<br/>
+                        鎖定赫綵粉絲專頁直播活動 
+                    </h2>
+                    <a class="open" target="_blank" href="https://www.facebook.com/events/882436036000543/?acontext=%7B%22event_action_history%22%3A[%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22page_admin_bar%22%2C%22surface%22%3A%22page%22%7D%2C%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22events_admin_tool%22%2C%22surface%22%3A%22page%22%7D%2C%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22surface%22%2C%22surface%22%3A%22create_dialog%22%7D]%2C%22ref_notif_type%22%3Anull%7D&onload_action=online_event_upsell_dialog">
+                        開啟通知
+                    </a>
+                </div>
+            </section><!-- content_live -->
+        </main><!--.content 以上內容區-->
+
+        <footer>
+            <div class="footer">
+                <div class="footer_container">
+                    <a href="https://www.appedu.com.tw/" target="_blank" title="赫綵設計學院">
+                        <img src="images/logo2.svg" alt="赫綵設計學院" width="192px">
+                    </a>
+                </div>
+                <div class="footer_tel">
+                    <a href="tel:0800885222" target="_blank" title="電話0800885222">
+                        <img src="images/phone.svg" alt="電話0800885222" width="195px">
+                    </a>
+                </div>
+                <div class="footer_social">
+                    <a href="https://www.facebook.com/appedu/" target="_blank" title="赫綵設計學院 臉書社群"><img src="images/facebook.svg"  alt="facebook 標誌"></a>
+                    <a href="https://line.me/ti/p/%40ksn8716p" target="_blank" title="赫綵設計學院 LINE"><img src="images/line.svg" alt="line 標誌"></a>
+                    <a href="https://www.youtube.com/user/AppeduDesignTraining" title="赫綵設計學院 youtube" target="_blank"><img src="images/youtube.svg" alt="youtube 標誌"></a>
+                    <a href="https://www.instagram.com/appedudesign/" title="赫綵設計學院 instagram" target="_blank"><img src="images/instagram.svg" alt="instagram 標誌"></a>
+                </div>
+
+                <div class="footer_copyright">
+                    <p>
+                        <span>Copyright©Appedu.All rights reserved. </br>
+                        主辦單位保留活動與課程大綱異動之權利，最新資訊以活動網站為主。</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>  
+
+</body>
+</html>
