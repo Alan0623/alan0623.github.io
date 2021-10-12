@@ -48,7 +48,7 @@ Reset HTML5
 		color: $black;
 		min-height: 100vh;
 		position: relative;
-		background-image: image-url('section2/bg_section2.jpg', false, false);
+		background-image: url('../images/section2/bg_section2.jpg');
 		background-position: center;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
@@ -207,7 +207,7 @@ header class="head"
 							&::before{
 								width: 27px;
 								height: 9px;
-								background-image: image-url('icon-pic/nike_plus.png', false, false);
+								background-image: url('../images/icon-pic/nike_plus.png');
 							}
 
 						}
@@ -216,7 +216,7 @@ header class="head"
 							&::before{
 								width: 18px;
 								height: 17px;
-								background-image: image-url('icon-pic/jordan_logo.png', false, false);
+								background-image: url('../images/icon-pic/jordan_logo.png');
 							}
 						}
 						&:hover, &:focus{
@@ -249,7 +249,7 @@ header class="head"
 								position: absolute;
 								z-index: 1;
 								top: calc(50% - 6px);
-								background-image: image-url('icon-pic/location.png', false, false);
+								background-image: url('../images/icon-pic/location.png');
 								@extend %bg-cover;
 							}
 						}
@@ -290,7 +290,7 @@ header class="head"
 					margin-left: 38px;
 					@extend %hide-text;
 					@extend %bg-cover;
-					background-image: image-url('icon-pic/logo.png', false, false);
+					background-image: url('../images/icon-pic/logo.png');
 					background-size: contain;
 					
 				}
@@ -383,22 +383,22 @@ header class="head"
 						&.search{
 							width: 44px;
 							&::before{
-								background-image: image-url('icon-pic/seach.png', false, false);
+								background-image: url('../images/icon-pic/seach.png');
 							}
 							&:hover, &:focus{
 								&::before{
-									background-image: image-url('icon-pic/seach_o.png', false, false);
+									background-image: url('../images/icon-pic/seach_o.png');
 								}
 							}
 						}
 						&.shopping_cart{
 							width: 44px;
 							&::before{
-								background-image: image-url('icon-pic/shopping.png', false, false);
+								background-image: url('../images/icon-pic/shopping.png');
 							}
 							&:hover, &:focus{
 								&::before{
-									background-image: image-url('icon-pic/shopping_o.png', false, false);
+									background-image: url('../images/icon-pic/shopping_o.png');
 								}
 							}
 						}
@@ -455,7 +455,7 @@ footer class="fatfooter"
 				height: 40px;
 				@extend %hide-text;
 				@extend %bg-cover;
-				background-image: image-url('icon-pic/logo_w.png', false, false);
+				background-image: url('../images/icon-pic/logo_w.png');
 				background-size: contain;
 
 			}
@@ -564,16 +564,16 @@ footer class="fatfooter"
 					border: $white solid 2px;
 					border-radius: 32px;
 					&.twitter{
-						background-image: image-url('icon-pic/twitter.png', false, false);
+						background-image: url('../images/icon-pic/twitter.png');
 					}
 					&.facebook{
-						background-image: image-url('icon-pic/facebook.png', false, false);
+						background-image: url('../images/icon-pic/facebook.png');
 					}
 					&.youtube{
-						background-image: image-url('icon-pic/you.png', false, false);
+						background-image: url('../images/icon-pic/you.png');
 					}
 					&.instagram{
-						background-image: image-url('icon-pic/ig.png', false, false);
+						background-image: url('../images/icon-pic/ig.png');
 					}
 
 					&:hover, &:focus{
