@@ -46,7 +46,7 @@
     <!-- stylesheet -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -105,9 +105,9 @@
                             <a href="/frame-course" title="設計課程">設計課程</a>
                             <div class="sub_menu">
                                 <ol>
-                                    <li><a href="/lecture#normalDesign" title="正式課程介紹">正式課程介紹</a></li>
-                                    <li><a href="/lecture#heheDesign" title="赫赫設計講堂">赫赫設計講堂</a></li>
-                                    <li><a href="/lecture#walileDesign" title="哇哩咧全方位達人">哇哩咧全方位達人</a></li>
+                                    <li><a href="/lecture#normalDesign" title="最新開課介紹">最新開課介紹</a></li>
+                                    <li><a href="/lecture#heheDesign" title="3小時設計講堂">3小時設計講堂</a></li>
+                                    <li><a href="/lecture#walileDesign" title="6小時精選課程">6小時精選課程</a></li>
                                     <li><a href="/frame-course#Class_learning_box5" title="職人養成系咧">職人養成系咧</a></li>
                                     <li><a href="/frame-course#Class_learning_box1" title="商業視覺系列">商業視覺系列</a></li>
                                     <li><a href="/frame-course#Class_learning_box2" title="影視特效系列">影視特效系列</a></li>
@@ -158,10 +158,10 @@
                     <h2>完整轉化夢想為現實</h2>
                     <p><u>為什麼我們能幫助你學</u><i><b></b></i></p>
                 </div>
-                <div class="swiper-container">
+                <div class="swiper-container swiper-container1">
                     <div class="center">
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <a href="javascript:void(0)" class="swiper-button-prev swiper-button-prev1" title="上一則">上一則</a>
+                        <a href="javascript:void(0)" class="swiper-button-next swiper-button-next1" title="下一則">下一則</a>
                     </div>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -221,7 +221,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-pagination swiper-pagination1"></div>
                 </div><!--swiper-container-->
                 <div class="title_our_promise">our promise</div>
             </section>
@@ -298,9 +298,10 @@
                             <li class="event">
                                 <ol class="hot_event"><!--本日熱門 最少6筆-->
                                     <li>
-                                        <a href="javascript:void(0)" class="text" title="人像插畫風格，動手畫出自己的大頭照">
+                                        <a data-fancybox data-animation-duration="700" data-src="#hot_event1" href="javascript:;" class="text btn_lightbox" title="人像插畫風格，動手畫出自己的大頭照">
+    
                                             <figure class="img">
-                                                <img src="./images/system_event.jpg" alt="人像插畫風格，動手畫出自己的大頭照">
+                                                <img src="./images/system/system_event.jpg" alt="人像插畫風格，動手畫出自己的大頭照">
                                                 <figcaption>
                                                     <span class="tag color_business">試測試測試測試測試測試測試測試</span>
                                                     <div class="hour">999999999 HR</div>
@@ -313,6 +314,64 @@
                                                 <div class="a">了解更多</div>
                                             </div>
                                         </a>
+                                        <figure style="display: none;" id="hot_event1" class="animated-modal">
+                                            <div class="hot_event_course">
+                                                <figure class="img">
+                                                    <img src="./images/system/system_event.jpg" alt="人像插畫風格，動手畫出自己的大頭照">
+                                                </figure>
+                                                <div class="text">
+                                                    <h3>人像插畫風格，動手畫出自己的大頭照</h3>
+                                                    <ul>
+                                                        <li class="time"><span>60</span>小時</li>
+                                                        <li class="tag">室內設計系列</li>
+                                                    </ul>
+                                                    <h4>你可以學到</h4>
+                                                    <p>產品設計創意思考/ 設計方法與趨勢/ 設計與生活/ 提昇創意力的十個法則品設計創 測試測 試測試 測試測試 測試測 測試測 試測試 測試測試 測試測 測試測 試測試 測試測試 測試測 測試測 試測試 測試測試 測試測 測試測 試測試 測試測試 測試測 測試測 試測試 測試測試 測試測 </p>
+                                                    <div class="form">
+                                                        <form id="audit_form" action="/audit" class="auditForm interactive_form" autocomplete="off">
+                        
+                                                            <div class="form_content">
+                                                                <ol><!-- label for="" 要對應 input id="" 點擊label會focus對應的input --->
+                                                                    <li>
+                                                                        <label for="name">真實姓名</label>
+                                                                        <input id="name" class="name" type="text" name="name" placeholder="請輸入真實姓名" autocomplete="off">
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="phone">手機號碼</label>
+                                                                        <input id="phone" class="phone" type="tel" name="cellphone" placeholder="請輸入手機號碼" autocomplete="off">
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="email">電子信箱</label>
+                                                                        <input id="email" class="email" type="email" name="email" placeholder="請輸入電子信箱" autocomplete="off">
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="city">居住地區</label>
+                                                                        <select id="city" name="city" class="cities">
+                                                                            <option value="">請選擇居住地區</option>
+                                                                        <option value="1">臺北市</option><option value="2">基隆市</option><option value="3">新北市</option><option value="4">宜蘭縣</option><option value="5">新竹市</option><option value="6">新竹縣</option><option value="7">桃園市</option><option value="8">苗栗縣</option><option value="9">臺中市</option><option value="10">彰化縣</option><option value="11">南投縣</option><option value="12">嘉義市</option><option value="13">嘉義縣</option><option value="14">雲林縣</option><option value="15">臺南市</option><option value="16">高雄市</option><option value="17">澎湖縣</option><option value="18">屏東縣</option><option value="19">臺東縣</option><option value="20">花蓮縣</option><option value="21">金門縣</option><option value="22">連江縣</option></select>
+        
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="zips">居住地區</label>
+                                                                        <select id="zips" name="zip" class="zips">
+                                                                            <option value="">請選擇居住地區</option>
+                                                                        </select>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="courses">選擇課堂 時間/據點</label>
+                                                                        <select id="courses" name="course" class="courses">
+                                                                            <option value="">請選擇時間/據點</option>
+                                                                        </select>
+                                                                    </li>
+                                                                </ol>
+                                                                <button type="submit" class="form_submit_btn" disabled>送出表單</button>
+                                                                <a class="link_to_privacy" href="/frame-privacy" target="_blank" >服務條款與隱私政策</a>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div><!-- text --->
+                                            </div>
+                                        </figure>
                                         <div class="people">
                                             已有 <span>999+</span>人報名
                                         </div>
@@ -323,7 +382,7 @@
                                     <li>
                                         <a href="javascript:void(0)" class="text" title="人像插畫風格，動手畫出自己的大頭照">
                                             <figure class="img">
-                                                <img src="./images/system_event.jpg" alt="人像插畫風格，動手畫出自己的大頭照">
+                                                <img src="./images/system/system_event.jpg" alt="人像插畫風格，動手畫出自己的大頭照">
                                                 <figcaption>
                                                     <span class="tag color_Interior">室內設計系列</span>
                                                     <div class="hour">999 HR</div>
@@ -346,7 +405,7 @@
                                     <li>
                                         <a href="javascript:void(0)" class="text" title="人像插畫風格，動手畫出自己的大頭照">
                                             <figure class="img">
-                                                <img src="./images/system_event.jpg" alt="人像插畫風格，動手畫出自己的大頭照">
+                                                <img src="./images/system/system_event.jpg" alt="人像插畫風格，動手畫出自己的大頭照">
                                                 <figcaption>
                                                     <span class="tag color_game">遊戲動畫系列</span>
                                                     <div class="hour">60 HR</div>
@@ -369,7 +428,7 @@
                                     <li>
                                         <a href="javascript:void(0)" class="text" title="人像插畫風格，動手畫出自己的大頭照">
                                             <figure class="img">
-                                                <img src="./images/system_event.jpg" alt="人像插畫風格，動手畫出自己的大頭照">
+                                                <img src="./images/system/system_event.jpg" alt="人像插畫風格，動手畫出自己的大頭照">
                                                 <figcaption>
                                                     <span class="tag color_video">影視特效系列</span>
                                                     <div class="hour">60 HR</div>
@@ -392,7 +451,7 @@
                                     <li>
                                         <a href="javascript:void(0)" class="text" title="人像插畫風格，動手畫出自己的大頭照">
                                             <figure class="img">
-                                                <img src="./images/system_event.jpg" alt="人像插畫風格，動手畫出自己的大頭照">
+                                                <img src="./images/system/system_event.jpg" alt="人像插畫風格，動手畫出自己的大頭照">
                                                 <figcaption>
                                                     <span class="tag color_business">商業視覺系列</span>
                                                     <div class="hour">60 HR</div>
@@ -415,7 +474,7 @@
                                     <li>
                                         <a href="javascript:void(0)" class="text" title="人像插畫風格，動手畫出自己的大頭照">
                                             <figure class="img">
-                                                <img src="./images/system_event.jpg" alt="人像插畫風格，動手畫出自己的大頭照">
+                                                <img src="./images/system/system_event.jpg" alt="人像插畫風格，動手畫出自己的大頭照">
                                                 <figcaption>
                                                     <span class="tag color_business">商業視覺系列</span>
                                                     <div class="hour">60 HR</div>
@@ -442,7 +501,7 @@
                                     <li>
                                         <a href="javascript:void(0)" class="text" title="室內設計專班校外參訪材質挑選課堂練習">
                                             <figure class="img">
-                                                <img src="./images/system_event2.jpg" alt="室內設計專班校外參訪材質挑選課堂練習">
+                                                <img src="./images/system/system_event2.jpg" alt="室內設計專班校外參訪材質挑選課堂練習">
                                                 <figcaption>
                                                     <span class="tag">試測試測試測試 測試測試測試測</span>
                                                 </figcaption>
@@ -458,7 +517,7 @@
                                     <li>
                                         <a href="javascript:void(0)" class="text" title="室內設計專班校外參訪材質挑選課堂練習">
                                             <figure class="img">
-                                                <img src="./images/system_event2.jpg" alt="室內設計專班校外參訪材質挑選課堂練習">
+                                                <img src="./images/system/system_event2.jpg" alt="室內設計專班校外參訪材質挑選課堂練習">
                                                 <figcaption>
                                                     <span class="tag">校外參訪</span>
                                                 </figcaption>
@@ -474,7 +533,7 @@
                                     <li>
                                         <a href="javascript:void(0)" class="text" title="室內設計專班校外參訪材質挑選課堂練習">
                                             <figure class="img">
-                                                <img src="./images/system_event2.jpg" alt="室內設計專班校外參訪材質挑選課堂練習">
+                                                <img src="./images/system/system_event2.jpg" alt="室內設計專班校外參訪材質挑選課堂練習">
                                                 <figcaption>
                                                     <span class="tag">校外參訪</span>
                                                 </figcaption>
@@ -490,7 +549,7 @@
                                     <li>
                                         <a href="javascript:void(0)" class="text" title="室內設計專班校外參訪材質挑選課堂練習">
                                             <figure class="img">
-                                                <img src="./images/system_event2.jpg" alt="室內設計專班校外參訪材質挑選課堂練習">
+                                                <img src="./images/system/system_event2.jpg" alt="室內設計專班校外參訪材質挑選課堂練習">
                                                 <figcaption>
                                                     <span class="tag">校外參訪</span>
                                                 </figcaption>
@@ -682,7 +741,7 @@
                 </a>
                 <figure style="display: none;" id="album1" class="animated-modal">
                     <div class="video-container">
-                        <iframe width="800" height="450" src="https://www.youtube.com/embed/k5IVNzNna8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="800" height="450" src="https://www.youtube.com/embed/k5IVNzNna8E" title="Who are we？赫綵設計學院，帶你學好設計！" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </figure>
             </section>
@@ -763,10 +822,10 @@
                                     <div class="jcarousel" data-jcarousel="true">
                                         <ul>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
-                                                        <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event3.jpg" alt="ROSELILYCIS & ROSELI">
+                                                        <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、陳哈哈、魯小小、陳哈哈、林俊廷</span></div>
+                                                            <img src="./images/system/system_event3.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>TEST TESTTESTTESTTESTTESTTESTTEST TEST TESTTESTTEST</b>
@@ -776,10 +835,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
-                                                        <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event3.jpg" alt="ROSELILYCIS & ROSELI">
+                                                        <div class="img"><div class="author"><span>魯小小</span></div>
+                                                            <img src="./images/system/system_event3.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -789,10 +848,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event3.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event3.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -802,10 +861,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event3.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event3.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -815,10 +874,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event3.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event3.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -828,10 +887,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event3.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event3.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -842,8 +901,8 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true">‹</a>
-                                    <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">›</a>
+                                    <a href="javascript:void(0)" class="jcarousel-control-prev" data-jcarouselcontrol="true" title="上一則">上一則</a>
+                                    <a href="javascript:void(0)" class="jcarousel-control-next" data-jcarouselcontrol="true" title="下一則">下一則</a>
             
                                     <p class="jcarousel-pagination" data-jcarouselpagination="true"><a href="#1" class="active">1</a><a href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a><a href="#6">6</a></p>
                                 </div>
@@ -854,10 +913,10 @@
                                     <div class="jcarousel" data-jcarousel="true">
                                         <ul>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event4.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event4.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -867,10 +926,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event4.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event4.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -880,10 +939,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event4.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event4.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -893,10 +952,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event4.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event4.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -906,10 +965,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event4.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event4.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -919,10 +978,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event4.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event4.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -933,8 +992,8 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true">‹</a>
-                                    <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">›</a>
+                                    <a href="javascript:void(0)" class="jcarousel-control-prev" data-jcarouselcontrol="true" title="上一則">上一則</a>
+                                    <a href="javascript:void(0)" class="jcarousel-control-next" data-jcarouselcontrol="true" title="下一則">下一則</a>
             
                                     <p class="jcarousel-pagination" data-jcarouselpagination="true"><a href="#1" class="active">1</a><a href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a><a href="#6">6</a></p>
                                 </div>
@@ -945,10 +1004,10 @@
                                     <div class="jcarousel" data-jcarousel="true">
                                         <ul>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event5.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event5.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -958,10 +1017,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event5.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event5.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -971,10 +1030,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event5.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event5.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -984,10 +1043,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event5.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event5.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -997,10 +1056,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event5.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event5.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -1010,10 +1069,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event5.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event5.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -1024,10 +1083,9 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true">‹</a>
-                                    <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">›</a>
+                                    <a href="javascript:void(0)" class="jcarousel-control-prev" data-jcarouselcontrol="true" title="上一則">上一則</a>
+                                    <a href="javascript:void(0)" class="jcarousel-control-next" data-jcarouselcontrol="true" title="下一則">下一則</a>
             
-                                    <p class="jcarousel-pagination" data-jcarouselpagination="true"><a href="#1" class="active">1</a><a href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a><a href="#6">6</a></p>
                                 </div>
                             </li>
                             <!--// 室內空間設計 //-->
@@ -1036,10 +1094,10 @@
                                     <div class="jcarousel" data-jcarousel="true">
                                         <ul>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event6.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event6.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -1049,10 +1107,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event6.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event6.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -1062,10 +1120,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event6.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event6.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -1075,10 +1133,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event6.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event6.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -1088,10 +1146,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event6.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event6.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -1101,10 +1159,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.appedu.com.tw/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
+                                                <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
                                                     <figure class="figure">
                                                         <div class="img"><div class="author"><span>林俊廷、陳哈哈、吳嘿嘿、葉喔蕾、魯小小</span></div>
-                                                            <img src="./images/system_event6.jpg" alt="ROSELILYCIS & ROSELI">
+                                                            <img src="./images/system/system_event6.jpg" alt="ROSELILYCIS & ROSELI">
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
@@ -1115,8 +1173,8 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true">‹</a>
-                                    <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">›</a>
+                                    <a href="javascript:void(0)" class="jcarousel-control-prev jcarousel-control-prev1" data-jcarouselcontrol="true" title="上一則">上一則</a>
+                                    <a href="javascript:void(0)" class="jcarousel-control-next jcarousel-control-next1" data-jcarouselcontrol="true" title="下一則">下一則</a>
             
                                     <p class="jcarousel-pagination" data-jcarouselpagination="true"><a href="#1" class="active">1</a><a href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a><a href="#6">6</a></p>
                                 </div>
@@ -1124,9 +1182,246 @@
                         </ul>
                     </div>
             </section>
+            <section class="block_story">
+                <div id="load_sec" style="opacity: 0;">
+                </div>
+                <section class="student_story cf">
+                    <div class="student_story_height" id="student_story_01"></div>
+                    <div class="student_story_height" id="student_story_02"></div>
+                    <div class="student_story_height" id="student_story_03"></div>
+                    <div class="student_story_inner js_height">
+                        <div class="student_story_cont">
+                            <div class="txt">
+                                <div class="student_story_txt_01">
+                                    <a id="student_story_txt_01_img" data-fancybox data-animation-duration="700" data-src="#story1" href="javascript:;" class="btn_lightbox done" title="">
+                                        <img src="images/homepage/story/paper01.png" alt="" class="hover-no">
+                                        <img src="images/homepage/story/paper01_hover.png" alt="" class="hover-on">
+                                    </a>
+                                    <figure style="display: none;" id="story1" class="animated-modal">
+                                        <div class="video-container">
+                                            <iframe width="800" height="450" src="https://www.youtube.com/embed/wuM8j2R3JNY" title="設計獨有的人生經驗-李京諺" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="student_story_txt_02">
+                                    <a id="student_story_txt_02_img" data-fancybox data-animation-duration="700" data-src="#story2" href="javascript:;" class="btn_lightbox" title="">
+                                        <img src="images/homepage/story/paper02.png" alt="" class="hover-no">
+                                        <img src="images/homepage/story/paper02_hover.png" alt="" class="hover-on">
+                                    </a>
+                                    <figure style="display: none;" id="story2" class="animated-modal">
+                                        <div class="video-container">
+                                            <iframe width="800" height="450" src="https://www.youtube.com/embed/zPnaCDkrR00" title="丹麥滑板男孩的設計探索之旅" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="student_story_txt_03">
+                                    <a id="student_story_txt_03_img" data-fancybox data-animation-duration="700" data-src="#story3" href="javascript:;" class="btn_lightbox" title="">
+                                        <img src="images/homepage/story/paper03.png" alt="" class="hover-no">
+                                        <img src="images/homepage/story/paper03_hover.png" alt="" class="hover-on">
+                                    </a>
+                                    <figure style="display: none;" id="story3" class="animated-modal">
+                                        <div class="video-container">
+                                            <iframe width="800" height="450" src="https://www.youtube.com/embed/-8CLqqTD0sA" title="勇敢轉職,小護士畫出設計夢" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="img">
+
+                                <div class="text">
+                                    <p class="p">成功的第一步都是從加入赫綵開始</p>
+                                    <h2>學員們的動人故事</h2>
+                                </div>
+                                <img src="images/homepage/story/story1.png" alt="" id="student_story_txt_01_img02" class="done">
+                                <img src="images/homepage/story/story2.png" alt="" id="student_story_txt_02_img02">
+                                <img src="images/homepage/story/story3.png" alt="" id="student_story_txt_03_img02">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+            <section class="block_event">
+                <div class="center">
+                    <h2><span>在赫綵，不只學習</span></h2>
+                    <ul class="block_event_list">
+                        <li>
+                            <div class="a sameHeight">
+                                <div class="figure">
+                                    <div class="figcaption">
+                                        <h3>在赫綵，不只學習</h3>
+                                        <p>赫綵每年定期會舉辦各種與課程相結合的講座及活動，致力邀請在設計圈具有影響力的知名設計師，一同分享經驗</p>
+                                        <p>不斷給予學員們學習上的鼓勵，同時也能為學員拓展視野，強化設計職能，提升對新技術的掌握能力</p>
+                                        <a class="more" href="/feature" title="查看更多"><span>查看更多</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a class="sameHeight" href="/article/detail/id-16" title="跨國交流｜國際姐妹校">
+                            <figure class="figure">
+                                <div class="hover_info">
+                                    <h3>跨國交流｜國際姐妹校</h3>
+                                    <p>超強設計師資帶你一同遨遊國際，邊學邊玩激發創意靈感，提供最專業的海外設計課程，成功與世界交流，藉此不僅能開拓國際視野、了解各地的設計趨勢，也能讓創意更加多元，養成獨立思考的強大技能</p>
+                                    <div class="more">查看更多</div>
+                                </div>
+                                <div class="img">
+                                    <img src="./images/homepage/event/event1.jpg" alt="跨國交流｜國際姐妹校">
+                                </div>
+                                <figcaption class="figcaption">
+                                    <h3>跨國交流｜國際姐妹校</h3>
+                                    <p>學設計不設限，赫綵帶你飛出國際</p>
+                                </figcaption>
+
+                            </figure></a>
+                        </li>
+                        <li><a href="/feature/lecture" title="名人講座">
+                            <figure class="figure">
+                                <div class="img">
+                                    <img src="./images/homepage/event/event2.jpg" alt="名人講座">
+                                </div>
+                                <figcaption class="figcaption">
+                                    <h3>名人講座</h3>
+                                    <p>赫綵帶你探討職人心路歷程</p>
+                                </figcaption>
+                                <div class="hover_info">
+                                    <h3>名人講座</h3>
+                                    <p>每年定期舉辦大型名人講座，致力邀請設計圈中極具名氣及影響力的知名設計師，一同分享心路歷程以及專業技術，豐富的經驗成為學員學習道路上最有價值的寶藏，同時也給予信心及鼓勵，成功拓展學員視野，強化設計職能，提升對新技術的掌握能力</p>
+                                    <div class="more">查看更多</div>
+                                </div>
+                            </figure></a>
+                        </li>
+                        <li><a href="/feature/intern" title="校外實習">
+                            <figure class="figure">
+                                <div class="img">
+                                    <img src="./images/homepage/event/event3.jpg" alt="校外實習">
+                                </div>
+                                <figcaption class="figcaption">
+                                    <h3>校外實習</h3>
+                                    <p>依不同課程打照專屬實習活動</p>
+                                </figcaption>
+                                <div class="hover_info">
+                                    <h3>校外實習</h3>
+                                    <p>設計職涯中，不光只需要學習技術層面的技能，也要注重進入業界後實際工作上會碰到的各類細節，透過實際的校外參訪與實習，讓學員能夠更加了解未來職場生態及環境，也能透過此舉學習到更多課程以外的實際操作知識</p>
+                                    <div class="more">查看更多</div>
+                                </div>
+                            </figure></a>
+                        </li>
+                        <li><a href="/feature/movie" title="電影借鏡">
+                            <figure class="figure">
+                                <div class="img">
+                                    <img src="./images/homepage/event/event4.jpg" alt="電影借鏡">
+                                </div>
+                                <figcaption class="figcaption">
+                                    <h3>電影借鏡</h3>
+                                    <p>走進電影院感受最新視覺盛宴</p>
+                                </figcaption>
+                                <div class="hover_info">
+                                    <h3>電影借鏡</h3>
+                                    <p>每年都會舉辦多場電影欣賞活動，邀請喜歡動畫及特效電影的學員一起同樂，從觀賞電影中學習，後續更特別為學員規劃一系列電影製作課程，並邀請曾參與多部知名電影的專業動畫師及特效師親自演示，再次重現電影中的經典畫面，一起來體驗電影製作的超強魅力吧！</p>
+                                    <div class="more">查看更多</div>
+                                </div>
+                            </figure></a>
+                        </li>
+                        <li><a href="https://gda.appedu.com.tw/" target="_blank" title="金赫獎 年度設計競賽">
+                            <figure class="figure">
+                                <div class="img">
+                                    <img src="./images/homepage/event/event5.jpg" alt="金赫獎 年度設計競賽">
+                                </div>
+                                <figcaption class="figcaption">
+                                    <h3>金赫獎 年度設計競賽</h3>
+                                    <p>台灣設計圈競賽新指標，用創作為自己爭取最高榮耀</p>
+                                </figcaption>
+                                <div class="hover_info">
+                                    <h3>金赫獎 年度設計競賽</h3>
+                                    <p>每年學員皆累積無數優質設計作品，為此我們特別開辦『金赫獎』不僅鼓勵學員踴躍投稿，所有入圍作品皆可以收錄至當年度的赫綵設計作品年鑑內，優選以上作品更有機會可以獲得藝文特區展出機會。藉由參與競賽的過程讓學員實踐自己另一個里程碑並且成功挑戰自我，讓所有優秀及得獎作品能被大眾看見，繼而提升新秀設計師們的知名度及曝光度，增加設計師接案機會！</p>
+                                    <div class="more">查看更多</div>
+                                </div>
+                            </figure></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+            <section class="block_news">
+                <h2><span>最新消息</span></h2>
+                <p>- 第一手掌握最新資訊，升級專業超輕鬆！ -</p>
+                <div class="jcarousel-wrapper">
+                    <div class="jcarousel3" data-jcarousel="true">
+                        <ul>
+                            <li>
+                                <a href="https://www.appedu.com.tw/Event/UI-design-Rex-Livechat/" target="_blank" title="OSELILYCIS & ROSELI">
+                                    <img src="./images/system/news1.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.appedu.com.tw/Event/UI-design-Rex-Livechat/" target="_blank" title="OSELILYCIS & ROSELI">
+                                    <img src="./images/system/news1.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.appedu.com.tw/Event/UI-design-Rex-Livechat/" target="_blank" title="OSELILYCIS & ROSELI">
+                                    <img src="./images/system/news1.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.appedu.com.tw/Event/UI-design-Rex-Livechat/" target="_blank" title="OSELILYCIS & ROSELI">
+                                    <img src="./images/system/news1.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.appedu.com.tw/Event/UI-design-Rex-Livechat/" target="_blank" title="OSELILYCIS & ROSELI">
+                                    <img src="./images/system/news1.jpg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="control">
+                    <a href="javascript:void(0)" class="jcarousel-control-prev jcarousel-control-prev3" data-jcarouselcontrol="true" title="上一則">上一則</a>
+                    <a href="javascript:void(0)" class="jcarousel-control-next jcarousel-control-next3" data-jcarouselcontrol="true" title="下一則">下一則</a>
+                    </div>
+                </div>
+            </section>
+            <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+            <section class="block_links">
+                <div class="jcarousel-wrapper">
+                    <div class="jcarousel2" data-jcarousel="true">
+                        <ul>
+                            <li>
+                                <a href="https://www.appedu.com.tw/Event/UI-design-Rex-Livechat/" target="_blank" title="OSELILYCIS & ROSELI">
+                                    <img src="./images/system/block_links1.jpg" alt="ROSELILYCIS & ROSELI">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.appedu.com.tw/Event/UI-design-Rex-Livechat/" target="_blank" title="OSELILYCIS & ROSELI">
+                                    <img src="./images/system/block_links2.jpg" alt="ROSELILYCIS & ROSELI">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.appedu.com.tw/Event/UI-design-Rex-Livechat/" target="_blank" title="OSELILYCIS & ROSELI">
+                                    <img src="./images/system/block_links3.jpg" alt="ROSELILYCIS & ROSELI">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.appedu.com.tw/Event/UI-design-Rex-Livechat/" target="_blank" title="OSELILYCIS & ROSELI">
+                                    <img src="./images/system/block_links1.jpg" alt="ROSELILYCIS & ROSELI">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.appedu.com.tw/Event/UI-design-Rex-Livechat/" target="_blank" title="OSELILYCIS & ROSELI">
+                                    <img src="./images/system/block_links2.jpg" alt="ROSELILYCIS & ROSELI">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0)" class="jcarousel-control-prev jcarousel-control-prev2" data-jcarouselcontrol="true" title="上一則">上一則</a>
+                    <a href="javascript:void(0)" class="jcarousel-control-next jcarousel-control-next2" data-jcarouselcontrol="true" title="下一則">下一則</a>
+                    <p class="jcarousel-pagination" data-jcarouselpagination="true"><a href="#1" class="active">1</a><a href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a><a href="#6">6</a></p>
+                </div>
+            </section>
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
         </main>
         <footer class="footer">
+            <div class="footer_center">
             <div class="footer_title"><h2>趕緊加入赫綵的設計體驗之旅吧！</h2></div>
             <section class="footer_content">
                 <div class="footer_go_top_btn"></div>
@@ -1186,7 +1481,7 @@
                     </a>
                 </div>
                 <p class="deep_green">Copyright © 2021 Appedu Inc. All rights reserved</p>
-            </section>
+            </section></div>
         </footer>
         <div class="footer_line_content"></div>
     </div>  

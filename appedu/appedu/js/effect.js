@@ -1,4 +1,16 @@
+/*------------------------------------------------------------------
+fancybox
+------------------------------------------------------------------*/
+$(document).keydown(function(event){
+  if(event.keyCode == 27){
+    $('.fancybox-close-small').click();
+  }else if (event.keyCode == 39){
+  //do somethings;
+  }
+});
 $(function() {
+
+
   var o = $.extend(!0, {}, $.fancybox.defaults, {
       caption: function(o, n) {
           return $(this).next("figcaption").html()
@@ -19,32 +31,24 @@ $(function(){
         $('.header').removeClass('fixed');
     }
   });
-
-
-    $("body").removeClass("no_js");
-    console.log("Hello!! Nice to see you.(\u30fb\u2200\u30fb)."), 
-    console.log("Front-end programming By Ｗei-Ching Lin");
-    $(".open_nav").click(function () {
-        $(this).toggleClass("open"),
-        $(".menu").toggleClass("open_menu");
-        window.addEventListener("resize", function () {
-          $(window).width() > 768 && ($(".menu").removeAttr("style").removeClass("open_menu"),
-            $(".open_nav").removeClass("open"))
-        })
-    });
-
-
-
-
-    $(".sub_menu_title,sub_menu").on('mouseenter', function() {
-      $(this).addClass("open");
-      $(".sub_menu,.main_menu").addClass("open");
-    }).on('mouseleave', function() {
-      $(this).removeClass("open");
-      $(".sub_menu,.main_menu").removeClass("open");
-    });
-
-
+  $("body").removeClass("no_js");
+  console.log("Hello!! Nice to see you.(\u30fb\u2200\u30fb)."), 
+  console.log("Front-end programming By Ｗei-Ching Lin");
+  $(".open_nav").click(function () {
+      $(this).toggleClass("open"),
+      $(".menu").toggleClass("open_menu");
+      window.addEventListener("resize", function () {
+        $(window).width() > 768 && ($(".menu").removeAttr("style").removeClass("open_menu"),
+          $(".open_nav").removeClass("open"))
+      })
+  });
+  $(".sub_menu_title,sub_menu").on('mouseenter', function() {
+    $(this).addClass("open");
+    $(".sub_menu,.main_menu").addClass("open");
+  }).on('mouseleave', function() {
+    $(this).removeClass("open");
+    $(".sub_menu,.main_menu").removeClass("open");
+  });
 });
 
 /*------------------------------------------------------------------
@@ -68,8 +72,6 @@ $(function(){
     $(".audit_fixed").removeClass("selected");
     $(".audit_btn").removeClass("open");
   }, 3000);
-  
-
   $(".audit_btn").click(function () {
     $(this).toggleClass("open"),
     $(".audit_fixed").toggleClass("selected");
@@ -108,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
 主廣告輪播
 ------------------------------------------------------------------*/
 $(function(){
-  var swiper = new Swiper('.swiper-container', {
+  var swiper = new Swiper('.swiper-container1', {
     slidesPerView: 3,
     // spaceBetween: 180,
     centeredSlides: true,
@@ -119,9 +121,52 @@ $(function(){
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next1',
+      prevEl: '.swiper-button-prev1',
     }
+  });
+});
+/*------------------------------------------------------------------
+
+------------------------------------------------------------------*/
+$(function(){
+  var appendNumber = 4;
+  var prependNumber = 1;
+  var swiper = new Swiper('.swiper-container2', {
+    slidesPerView: 4,
+    centeredSlides: true,
+    spaceBetween: 32,
+    autoplay:true,
+    pagination: {
+      el: '.swiper-pagination2',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next2',
+      prevEl: '.swiper-button-prev2',
+    },
+  });
+  document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
+    e.preventDefault();
+    swiper.prependSlide([
+      '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>',
+      '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>'
+    ]);
+  });
+  document.querySelector('.prepend-slide').addEventListener('click', function (e) {
+    e.preventDefault();
+    swiper.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
+  });
+  document.querySelector('.append-slide').addEventListener('click', function (e) {
+    e.preventDefault();
+    swiper.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
+  });
+  document.querySelector('.append-2-slides').addEventListener('click', function (e) {
+    e.preventDefault();
+    swiper.appendSlide([
+      '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
+      '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
+    ]);
   });
 });
 /*------------------------------------------------------------------
@@ -176,10 +221,8 @@ $(function(){
 	// 啟動計時器
 	timer = setTimeout(move, speed);
 });
-
-
 /*------------------------------------------------------------------
-//block_system
+//block_system 頁籤
 ------------------------------------------------------------------*/
 $(function(){
   // 預設顯示第一個頁籤
@@ -302,12 +345,59 @@ $(function() {
           wrap: 'circular'
       });
 
-  $('.jcarousel-control-prev')
+  $('.jcarousel-control-prev1')
       .jcarouselControl({
           target: '-=1'
       });
 
-  $('.jcarousel-control-next')
+  $('.jcarousel-control-next1')
+      .jcarouselControl({
+          target: '+=1'
+      });
+
+  $('.jcarousel-pagination')
+      .on('jcarouselpagination:active', 'a', function() {
+          $(this).addClass('active');
+      })
+      .on('jcarouselpagination:inactive', 'a', function() {
+          $(this).removeClass('active');
+      })
+      .on('click', function(e) {
+          e.preventDefault();
+      })
+});
+
+/*------------------------------------------------------------------
+//block_links
+------------------------------------------------------------------*/
+$(function() {
+  var jcarousel = $('.jcarousel2');
+
+  jcarousel
+      .on('jcarousel:reload jcarousel:create', function () {
+          var carousel = $(this),
+              width = carousel.innerWidth();
+
+          if (width >= 1000) {
+              width = width / 3;
+          } else if (width >= 700) {
+              width = width / 3;
+          } else if (width >= 350) {
+              width = width / 1;
+          }
+
+          carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+      })
+      .jcarousel({
+          wrap: 'circular'
+      });
+
+  $('.jcarousel-control-prev2')
+      .jcarouselControl({
+          target: '-=1'
+      });
+
+  $('.jcarousel-control-next2')
       .jcarouselControl({
           target: '+=1'
       });
@@ -328,4 +418,192 @@ $(function() {
               return '<a href="#' + page + '">' + page + '</a>';
           }
       });
+});
+
+/*------------------------------------------------------------------
+//block_news
+------------------------------------------------------------------*/
+$(function() {
+  var jcarousel = $('.jcarousel3');
+
+  jcarousel
+      .on('jcarousel:reload jcarousel:create', function () {
+          var carousel = $(this),
+              width = carousel.innerWidth();
+
+          if (width >= 1000) {
+              width = width / 3;
+          } else if (width >= 700) {
+              width = width / 3;
+          } else if (width >= 350) {
+              width = width / 1;
+          }
+
+          carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+      })
+      .jcarousel({
+          wrap: 'circular'
+      });
+
+  $('.jcarousel-control-prev3')
+      .jcarouselControl({
+          target: '-=1'
+      });
+
+  $('.jcarousel-control-next3')
+      .jcarouselControl({
+          target: '+=1'
+      });
+
+  $('.jcarousel-pagination')
+      .on('jcarouselpagination:active', 'a', function() {
+          $(this).addClass('active');
+      })
+      .on('jcarouselpagination:inactive', 'a', function() {
+          $(this).removeClass('active');
+      })
+      .on('click', function(e) {
+          e.preventDefault();
+      })
+      .jcarouselPagination({
+          perPage: 1,
+          item: function(page) {
+              return '<a href="#' + page + '">' + page + '</a>';
+          }
+      });
+});
+
+
+/*------------------------------------------------------------------
+//block_story
+------------------------------------------------------------------*/
+function loadStart() {
+  "use strict";
+  (new TimelineMax).to("#load_sec .load_logo", 1, {
+      autoAlpha: 1
+      
+  }, .1)
+}
+
+function stopload() {
+  "use strict";
+  var e = new TimelineMax;
+  e.to("#load_sec .load_logo", 1, {
+      autoAlpha: 0
+      
+  }, 1.5), e.to("#load_sec", 1, {
+      autoAlpha: 0
+      
+  }, 2), e.eventCallback("onComplete", stopfin)
+}
+
+
+function stopfin() {
+  "use strict";
+  $("#load_sec").remove()
+}
+
+function stopfinbottom() {
+  "use strict";
+  $("body").removeClass("fixed"), svgAnime(), jsSplitTxt(), fadeImage()
+}
+$(window).on("load", function() {
+  if ($("#load_sec").length) {
+      stopload();
+
+      var e = new ScrollMagic.Controller,
+          t = function(e, t) {
+              var o, s, a = Date.now();
+              return 100,
+                  function(e) {
+                      (o = a + 100 - Date.now()) < 0 ? (e(), a = Date.now()) : (clearTimeout(s), s = setTimeout(function() {
+                          e()
+                      }, 100 - o + 16))
+                  }
+          }();
+      new ScrollMagic.Scene({
+          triggerHook: "onLeave",
+          triggerElement: "#student_story_01",
+          duration: "100%",
+          offset: 0
+      }).on("progress", function(e) {
+          var o = Math.floor(100 * e.progress);
+          t(function() {
+              TweenMax.to("#student_story_txt_01_img", 2, {
+                  y: "-" + o,
+                  ease: Power4.easeOut
+              })
+          })
+      }).addTo(e), new ScrollMagic.Scene({
+          triggerHook: "onLeave",
+          triggerElement: "#student_story_02",
+          duration: 0,
+          offset: 0
+      }).on("enter", function(e) {
+          $(".student_story_txt_01").stop().addClass("img_done"), $("#student_story_txt_01_ttl").stop().removeClass("done"), $("#student_story_txt_02_ttl").stop().addClass("done"), $("#student_story_txt_01_img02").stop().removeClass("done"), $("#student_story_txt_02_img02").stop().addClass("done")
+      }).on("leave", function(e) {
+          $(".student_story_txt_01").stop().removeClass("img_done"), $("#student_story_txt_01_ttl").stop().addClass("done"), $("#student_story_txt_02_ttl").stop().removeClass("done"), $("#student_story_txt_01_img02").stop().addClass("done"), $("#student_story_txt_02_img02").stop().removeClass("done")
+      }).addTo(e), new ScrollMagic.Scene({
+          triggerHook: "onLeave",
+          triggerElement: "#student_story_02",
+          duration: "100%",
+          offset: 0
+      }).on("progress", function(e) {
+          var o = Math.floor(100 * e.progress);
+          t(function() {
+              TweenMax.to("#student_story_txt_02_img", 2, {
+                  y: "-" + o,
+                  ease: Power4.easeOut
+              })
+          })
+      }).addTo(e), new ScrollMagic.Scene({
+          triggerHook: "onLeave",
+          triggerElement: "#student_story_03",
+          duration: 0,
+          offset: 0
+      }).on("enter", function(e) {
+          $(".student_story_txt_02").stop().addClass("img_done"), $("#student_story_txt_02_ttl").stop().removeClass("done"), $("#student_story_txt_03_ttl").stop().addClass("done"), $("#student_story_txt_02_img02").stop().removeClass("done"), $("#student_story_txt_03_img02").stop().addClass("done")
+      }).on("leave", function(e) {
+          $(".student_story_txt_02").stop().removeClass("img_done"), $("#student_story_txt_02_ttl").stop().addClass("done"), $("#student_story_txt_03_ttl").stop().removeClass("done"), $("#student_story_txt_02_img02").stop().addClass("done"), $("#student_story_txt_03_img02").stop().removeClass("done")
+      }).addTo(e), new ScrollMagic.Scene({
+          triggerHook: "onLeave",
+          triggerElement: "#student_story_03",
+          duration: "100%",
+          offset: 0
+      }).on("progress", function(e) {
+          var o = Math.floor(100 * e.progress);
+          t(function() {
+              TweenMax.to("#student_story_txt_03_img", 2, {
+                  y: "-" + o,
+                  ease: Power4.easeOut
+              })
+          })
+      }).addTo(e)
+  }
+});
+/*------------------------------------------------------------------
+//sameHeight
+------------------------------------------------------------------*/
+$(function(){
+
+    $("body").removeClass("no_js");
+    var maxHeight = 0;
+    $('.sameHeight').each(function() {
+        $(this).height('auto');
+        if (maxHeight < $(this).height()) { maxHeight = $(this).height() }
+    });
+    $('.sameHeight').each(function() {
+        $(this).height(maxHeight);
+    });
+  
+    $(window).resize(function() {
+        var maxHeight = 0;
+        $('.sameHeight').each(function() {
+            $(this).height('auto');
+            if (maxHeight < $(this).height()) { maxHeight = $(this).height() }
+        });
+        $('.sameHeight').each(function() {
+            $(this).height(maxHeight);
+        });
+    });
 });
