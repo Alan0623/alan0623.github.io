@@ -1,6 +1,16 @@
 /*------------------------------------------------------------------
 fancybox
 ------------------------------------------------------------------*/
+$.preload( '../images/icon/social_links/social_links1_o.svg',
+  '../images/icon/social_links/social_links2_o.svg',
+  '../images/icon/social_links/social_links3_o.svg',
+  '../images/icon/social_links/social_links4_o.svg',
+  '../images/icon/icon_lock_o.svg',
+  '../images/icon/icon_Arrow_hover.svg'
+);
+/*------------------------------------------------------------------
+fancybox
+------------------------------------------------------------------*/
 $(document).keydown(function(event){
   if(event.keyCode == 27){
     $('.fancybox-close-small').click();
@@ -606,4 +616,48 @@ $(function(){
             $(this).height(maxHeight);
         });
     });
+});
+
+
+/*------------------------------------------------------------------
+數字自動跳動
+------------------------------------------------------------------*/
+(function($) {
+  $.fn.animateNumbers = function(stop, commas, duration, ease) {
+      return this.each(function() {
+          var $this = $(this);
+          var start = parseInt($this.text().replace(/,/g, ""));
+          commas = (commas === undefined) ? true : commas;
+          $({value: start}).animate({value: stop}, {
+              duration: duration == undefined ? 1000 : duration,
+              easing: ease == undefined ? "swing" : ease,
+              step: function() {
+                  $this.text(Math.floor(this.value));
+                  if (commas) { $this.text($this.text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")); }
+              },
+              complete: function() {
+                 if (parseInt($this.text()) !== stop) {
+                     $this.text(stop);
+                     if (commas) { $this.text($this.text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")); }
+                 }
+              }
+          });
+      });
+  };
+})(jQuery);
+
+$(function(){
+  $('.teacher_team_box').addClass('ready-animate');
+	$(window).on('scroll', function(){
+		var $WH = $(window).height() * 0.6;
+		var $WS = $(window).scrollTop() + $WH;
+		var $RO = $('.teacher_team_box').offset().top;
+		if(  $WS >  $RO ) {
+			$('.teacher_team_box').removeClass('ready-animate').addClass('run-animate');
+      $(".pageLoad1").animateNumbers($(".pageLoad1").attr("value"), true, 1000);
+      $(".pageLoad2").animateNumbers($(".pageLoad2").attr("value"), true, 1000);
+      $(".pageLoad3").animateNumbers($(".pageLoad3").attr("value"), true, 4000);
+      $(".pageLoad4").animateNumbers($(".pageLoad4").attr("value"), true, 4000);
+		}
+	}).scroll();
 });
