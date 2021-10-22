@@ -76,55 +76,52 @@
                             <option value="">選擇地區</option>
                         </select>
                     </div>
-                    
-                    <button type="submit" class="form_submit_btn" disabled>確認送出</button>
-                    
-                    <a class="link_to_privacy" href="/frame-privacy" target="_blank" >服務條款與隱私政策</a>
+                    <button type="submit" class="form_submit_btn" disabled title="確認送出">確認送出</button>
+                    <a class="link_to_privacy" href="/frame-privacy" target="_blank" title="服務條款與隱私政策" >服務條款與隱私政策</a>
                 </div>
                 <img class="mobile_modal_close_btn" src="./images/icon/mobile_modal_close_btn.svg" alt="彈窗關閉">
             </form>
         </div>
-        <!--.mobile_top_bar_box 以下 行動版主選單-->
+        <!--.mobile_top_bar_box 以下 行動版主選單 移植-->
         <header class="mobile_top_bar_box">
             <div class="mobile_logo">
-                <a href="/"><img src="/images/mobile_logo.svg" alt="行動網頁-赫綵設計學院商標" title="赫綵設計學院" /></a>
+                <a href="/" title="赫綵設計學院"><img src="/images/logo.svg" alt="行動網頁-赫綵設計學院商標"/></a>
             </div>
-            <div id="mobile_menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a id="mobile_menu" href="javascript:void(0)" title="手機版選單"><span>手機版選單</span></a>
+            <div id="mobile_scroll_menu">
+                <nav class="mobile_scroll_menu_center">
+                    <ul class="social_icon clearfix">
+                        <li><a target="_blank" href="https://www.youtube.com/user/AppeduDesignTraining" title="Youtube">Youtube</a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/appedu/" title="Facebook">Facebook</a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/appedudesign/" title="instagram">instagram</a></li>
+                        <li><a target="_blank" href="https://line.me/ti/p/%40ksn8716p" title="LINE">LINE</a></li>
+                    </ul>
+                    <ul class="menu">
+                        <li><a href="/frame-about" title="關於赫綵">關於赫綵</a></li>
+                        <li><a href="/frame-teacher" title="師資陣容">師資陣容</a></li>
+                        <li class="design_class_menu">
+                            <a class="main_menu_a" href="javascript:void(0)" title="設計課程">設計課程</a>
+                            <div class="sub_menu">
+                                <ul>
+                                    <li><a href="/course" class="selected" title="最新開課介紹">最新開課介紹</a></li>
+                                    <li><a href="/course#hehe" title="3 小時設計講堂">3 小時設計講堂</a></li>
+                                    <li><a href="/course#walile" title="6 小時精選課程">6 小時精選課程</a></li>
+                                    <li><a href="/frame-course#Class_learning_box5" title="職人養成系咧">職人養成系咧</a></li>
+                                    <li><a href="/frame-course#Class_learning_box1" title="商業視覺系列">商業視覺系列</a></li>
+                                    <li><a href="/frame-course#Class_learning_box2" title="影視特效系列">影視特效系列</a></li>
+                                    <li><a href="/frame-course#Class_learning_box3" title="遊戲動畫系列">遊戲動畫系列</a></li>
+                                    <li><a href="/frame-course#Class_learning_box4" title="室內設計系列">室內設計系列</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="/frame-place" title="學院據點">學院據點</a></li>
+                        <li><a href="/gallery/list" title="學員作品">學員作品</a></li>
+                        <li><a href="/article/list" title="設計專欄">設計專欄</a></li>
+                        <li><a href="https://www.okbom.com.tw/" target="_blank" title="設計OK繃">設計OK繃</a></li>
+                    </ul>
+                    <div class="contact_btn"><a href="/consultation" title="免費諮詢">免費諮詢</a></div>
+                </nav>
             </div>
-            <nav id="mobile_scroll_menu" class="menu">
-                <ul class="social_icon clearfix">
-                    <li onclick="window.open('https://www.youtube.com/user/AppeduDesignTraining');">Youtube</li>
-                    <li onclick="window.open('https://www.facebook.com/appedu/');">FB</li>
-                    <li onclick="window.open('https://www.instagram.com/appedudesign/');">IG</li>
-                    <li onclick="window.open('https://line.me/ti/p/%40ksn8716p');">LINE</li>
-                </ul>
-                <ul class="menu">
-                    <li><a href="/frame-about">關於赫綵</a></li>
-                    <li><a href="/frame-teacher">師資陣容</a></li>
-                    <li class="design_class_menu">
-                        <a class="main_menu_a" href="/frame-course">設計課程</a>
-                        <div class="mobile_menu_arrow_icon"><span></span></div>
-                        <ul class="sub_menu clearfix">
-                            <li><a href="/course" class="selected">最新開課介紹<span class="circle"><i class="fas fa-arrow-right"></i></span></a></li>
-                            <li><a href="/course#hehe">3 小時設計講堂<span class="circle"><i class="fas fa-arrow-right"></i></span></a></li>
-                            <li><a href="/course#walile">6 小時精選課程<span class="circle"><i class="fas fa-arrow-right"></i></span></a></li>
-                            <li><a href="/frame-course#Class_learning_box5">職人養成系咧<span class="circle"><i class="fas fa-arrow-right"></i></span></a></li>
-                            <li><a href="/frame-course#Class_learning_box1">商業視覺系列<span class="circle"><i class="fas fa-arrow-right"></i></span></a></li>
-                            <li><a href="/frame-course#Class_learning_box2">影視特效系列<span class="circle"><i class="fas fa-arrow-right"></i></span></a></li>
-                            <li><a href="/frame-course#Class_learning_box3">遊戲動畫系列<span class="circle"><i class="fas fa-arrow-right"></i></span></a></li>
-                            <li><a href="/frame-course#Class_learning_box4">室內設計系列<span class="circle"><i class="fas fa-arrow-right"></i></span></a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/frame-place">學院據點</a></li>
-                    <li><a href="/gallery/list">學員作品</a></li>
-                    <li><a href="/article/list">設計專欄</a></li>
-                    <li><a href="https://www.okbom.com.tw/" target="_blank">設計OK繃</a></li>
-                </ul>
-                <div class="contact_btn"><a href="/consultation" title="免費諮詢">免費諮詢</a></div>
-            </nav>
         </header>
         <!--.header 以下 電腦版主選單-->
         <header class="header logo_dark_color">
@@ -273,10 +270,10 @@
                     <div class="bd">
                         <nav class="title">
                             <ul>
-                                <li class="on"><a href="javascript:void(0)">師資專業保證</a></li>
-                                <li><a href="javascript:void(0)">課程學習保證</a></li>
-                                <li><a href="javascript:void(0)">官方原廠認證</a></li>
-                                <li><a href="javascript:void(0)">接案就業保證</a></li>
+                                <li class="on"><a href="javascript:void(0)" title="師資專業保證">師資專業保證</a></li>
+                                <li><a href="javascript:void(0)" title="課程學習保證">課程學習保證</a></li>
+                                <li><a href="javascript:void(0)" title="官方原廠認證">官方原廠認證</a></li>
+                                <li><a href="javascript:void(0)" title="接案就業保證">接案就業保證</a></li>
                             </ul>
                         </nav>
                         <div class="info on">
@@ -617,92 +614,96 @@
                 </div>
             </section>
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-            <section class="block_teacher">
+            <section class="block_master">
                 <h2><span>赫啦！來跟大師學設計</span></h2>
                 <p><span>名人講座</span>，邀你一起來<span>突破自我</span></p>
-                <div class="teacher_list">
-                    <ul>
-                        <li>
-                            <a href="javascript:void(0)" title="提摩西" style="background-image:url(./images/homepage/teacher/teacher1_o.jpg)">
-                                <figure class="figure">
-                                    <div class="img">
-                                        <img src="./images/homepage/teacher/teacher1.jpg" alt="提摩西">
-                                    </div>
-                                    <figcaption>
-                                        <div class="name">
-                                            <p>金鐘54動態設計師</p>
-                                            <b>提摩西</b>
+                <div class="jcarousel-wrapper master_list_wrapper">
+                    <div class="master_list">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)" title="提摩西" style="background-image:url(./images/homepage/teacher/teacher1_o.jpg)">
+                                    <figure class="figure">
+                                        <div class="img">
+                                            <img src="./images/homepage/teacher/teacher1.jpg" alt="提摩西">
                                         </div>
-                                        <div class="date">2020 / 12 / 17</div>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/article/detail/id-17" title="施博瀚" style="background-image:url(./images/homepage/teacher/teacher2_o.jpg)">
-                                <figure class="figure">
-                                    <div class="img">
-                                        <img src="./images/homepage/teacher/teacher2.jpg" alt="施博瀚">
-                                    </div>
-                                    <figcaption>
-                                        <div class="name">
-                                            <p>凝書體設計師</p>
-                                            <b>施博瀚</b>
+                                        <figcaption>
+                                            <div class="name">
+                                                <p>金鐘54動態設計師</p>
+                                                <b>提摩西</b>
+                                            </div>
+                                            <div class="date">2020 / 12 / 17</div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/article/detail/id-17" title="施博瀚" style="background-image:url(./images/homepage/teacher/teacher2_o.jpg)">
+                                    <figure class="figure">
+                                        <div class="img">
+                                            <img src="./images/homepage/teacher/teacher2.jpg" alt="施博瀚">
                                         </div>
-                                        <div class="date">2020 / 09 / 17</div>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/article/detail/id-34" title="曲家瑞" style="background-image:url(./images/homepage/teacher/teacher3_o.jpg)">
-                                <figure class="figure">
-                                    <div class="img">
-                                        <img src="./images/homepage/teacher/teacher3.jpg" alt="曲家瑞">
-                                    </div>
-                                    <figcaption>
-                                        <div class="name">
-                                            <p>設計系明星教授</p>
-                                            <b>曲家瑞</b>
+                                        <figcaption>
+                                            <div class="name">
+                                                <p>凝書體設計師</p>
+                                                <b>施博瀚</b>
+                                            </div>
+                                            <div class="date">2020 / 09 / 17</div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/article/detail/id-34" title="曲家瑞" style="background-image:url(./images/homepage/teacher/teacher3_o.jpg)">
+                                    <figure class="figure">
+                                        <div class="img">
+                                            <img src="./images/homepage/teacher/teacher3.jpg" alt="曲家瑞">
                                         </div>
-                                        <div class="date">2017 / 11 / 25</div>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/article/detail/id-17" title="顏伯駿" style="background-image:url(./images/homepage/teacher/teacher4_o.jpg)">
-                                <figure class="figure">
-                                    <div class="img">
-                                        <img src="./images/homepage/teacher/teacher4.jpg" alt="顏伯駿">
-                                    </div>
-                                    <figcaption>
-                                        <div class="name">
-                                            <p>金曲獎視覺統籌</p>
-                                            <b>顏伯駿</b>
+                                        <figcaption>
+                                            <div class="name">
+                                                <p>設計系明星教授</p>
+                                                <b>曲家瑞</b>
+                                            </div>
+                                            <div class="date">2017 / 11 / 25</div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/article/detail/id-17" title="顏伯駿" style="background-image:url(./images/homepage/teacher/teacher4_o.jpg)">
+                                    <figure class="figure">
+                                        <div class="img">
+                                            <img src="./images/homepage/teacher/teacher4.jpg" alt="顏伯駿">
                                         </div>
-                                        <div class="date">2018 / 11 / 10</div>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/article/detail/id-11" title="淺井香織" style="background-image:url(./images/homepage/teacher/teacher5_o.jpg)">
-                                <figure class="figure">
-                                    <div class="img">
-                                        <img src="./images/homepage/teacher/teacher5.jpg" alt="淺井香織">
-                                    </div>
-                                    <figcaption>
-                                        <div class="name">
-                                            <p>知名日本漫畫家</p>
-                                            <b>淺井香織</b>
+                                        <figcaption>
+                                            <div class="name">
+                                                <p>金曲獎視覺統籌</p>
+                                                <b>顏伯駿</b>
+                                            </div>
+                                            <div class="date">2018 / 11 / 10</div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/article/detail/id-11" title="淺井香織" style="background-image:url(./images/homepage/teacher/teacher5_o.jpg)">
+                                    <figure class="figure">
+                                        <div class="img">
+                                            <img src="./images/homepage/teacher/teacher5.jpg" alt="淺井香織">
                                         </div>
-                                        <div class="date">2018 / 10 / 21</div>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </li>
-                    </ul>
+                                        <figcaption>
+                                            <div class="name">
+                                                <p>知名日本漫畫家</p>
+                                                <b>淺井香織</b>
+                                            </div>
+                                            <div class="date">2018 / 10 / 21</div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="javascript:void(0)" class="jcarousel-control-prev master_list_prev" data-jcarouselcontrol="true" title="上一則">上一則</a>
+                        <a href="javascript:void(0)" class="jcarousel-control-next master_list_next" data-jcarouselcontrol="true" title="下一則">下一則</a>
+                    </div>
                 </div>
             </section>
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -853,7 +854,7 @@
             <section class="block_result">
                 <h2><span>來看看學員們的學習成果</span></h2>
                 <p>打造<span>專屬學習規劃</span>，輕鬆達成<span>高效學習</span></p>
-                <div class="tabs_list result_list">
+                <div class="tabs_list result_tabs_list">
                     <ul class="tabs">
                         <li class="active"><a href="javascript:void(0)">商業視覺設計</a></li>
                         <li><a href="javascript:void(0)">影視特效設計</a></li>
@@ -867,7 +868,7 @@
                             <!--// 商業視覺設計 //-->
                             <li class="event">
                                 <div class="jcarousel-wrapper result_event">
-                                    <div class="jcarousel" data-jcarousel="true">
+                                    <div class="result_event_list" data-jcarousel="true">
                                         <ul>
                                             <li>
                                                 <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
@@ -890,7 +891,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>商業攝影</span>
+                                                            <span>測試2</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -903,7 +904,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>商業攝影</span>
+                                                            <span>測試3</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -916,7 +917,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>商業攝影</span>
+                                                            <span>商業攝影4</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -929,7 +930,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>商業攝影</span>
+                                                            <span>商業攝影5</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -942,23 +943,21 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>商業攝影</span>
+                                                            <span>商業攝影6</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="javascript:void(0)" class="jcarousel-control-prev" data-jcarouselcontrol="true" title="上一則">上一則</a>
-                                    <a href="javascript:void(0)" class="jcarousel-control-next" data-jcarouselcontrol="true" title="下一則">下一則</a>
-            
-                                    <p class="jcarousel-pagination" data-jcarouselpagination="true"><a href="#1" class="active">1</a><a href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a><a href="#6">6</a></p>
+                                    <a href="javascript:void(0)" class="jcarousel-control-prev result_event_list_prev" data-jcarouselcontrol="true" title="上一則">上一則</a>
+                                    <a href="javascript:void(0)" class="jcarousel-control-next result_event_list_next" data-jcarouselcontrol="true" title="下一則">下一則</a>
                                 </div>
                             </li>
                             <!--// 影視特效設計 //-->
                             <li class="event">
                                 <div class="jcarousel-wrapper result_event">
-                                    <div class="jcarousel" data-jcarousel="true">
+                                    <div class="result_event_list" data-jcarousel="true">
                                         <ul>
                                             <li>
                                                 <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
@@ -968,7 +967,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>影視特效</span>
+                                                            <span>影視特效測試1</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -981,7 +980,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>影視特效</span>
+                                                            <span>影視特效測試2</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -994,7 +993,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>影視特效</span>
+                                                            <span>影視特效3</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -1007,7 +1006,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>影視特效</span>
+                                                            <span>影視特效4</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -1020,7 +1019,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>影視特效</span>
+                                                            <span>影視特效5</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -1033,23 +1032,21 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>影視特效</span>
+                                                            <span>影視特效6</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="javascript:void(0)" class="jcarousel-control-prev" data-jcarouselcontrol="true" title="上一則">上一則</a>
-                                    <a href="javascript:void(0)" class="jcarousel-control-next" data-jcarouselcontrol="true" title="下一則">下一則</a>
-            
-                                    <p class="jcarousel-pagination" data-jcarouselpagination="true"><a href="#1" class="active">1</a><a href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a><a href="#6">6</a></p>
+                                    <a href="javascript:void(0)" class="jcarousel-control-prev result_event_list_prev" data-jcarouselcontrol="true" title="上一則">上一則</a>
+                                    <a href="javascript:void(0)" class="jcarousel-control-next result_event_list_next" data-jcarouselcontrol="true" title="下一則">下一則</a>
                                 </div>
                             </li>
                             <!--// 遊戲動畫設計 //-->
                             <li class="event">
                                 <div class="jcarousel-wrapper result_event">
-                                    <div class="jcarousel" data-jcarousel="true">
+                                    <div class="result_event_list" data-jcarousel="true">
                                         <ul>
                                             <li>
                                                 <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
@@ -1059,7 +1056,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>遊戲動畫</span>
+                                                            <span>遊戲動畫1</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -1072,7 +1069,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>遊戲動畫</span>
+                                                            <span>遊戲動畫2</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -1085,7 +1082,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>遊戲動畫</span>
+                                                            <span>遊戲動畫3</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -1131,15 +1128,14 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="javascript:void(0)" class="jcarousel-control-prev" data-jcarouselcontrol="true" title="上一則">上一則</a>
-                                    <a href="javascript:void(0)" class="jcarousel-control-next" data-jcarouselcontrol="true" title="下一則">下一則</a>
-            
+                                    <a href="javascript:void(0)" class="jcarousel-control-prev result_event_list_prev" data-jcarouselcontrol="true" title="上一則">上一則</a>
+                                    <a href="javascript:void(0)" class="jcarousel-control-next result_event_list_next" data-jcarouselcontrol="true" title="下一則">下一則</a>
                                 </div>
                             </li>
                             <!--// 室內空間設計 //-->
                             <li class="event">
                                 <div class="jcarousel-wrapper result_event">
-                                    <div class="jcarousel" data-jcarousel="true">
+                                    <div class="result_event_list" data-jcarousel="true">
                                         <ul>
                                             <li>
                                                 <a href="/gallery/detail/id-371" title="OSELILYCIS & ROSELI">
@@ -1149,7 +1145,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>室內空間</span>
+                                                            <span>室內空間1</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -1162,7 +1158,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>室內空間</span>
+                                                            <span>室內空間2</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -1175,7 +1171,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>室內空間</span>
+                                                            <span>室內空間3</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -1188,7 +1184,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>室內空間</span>
+                                                            <span>室內空間4</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -1201,7 +1197,7 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>室內空間</span>
+                                                            <span>室內空間5</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
@@ -1214,17 +1210,15 @@
                                                         </div>
                                                         <figcaption class="figcaption">
                                                             <b>ROSELILYCIS & ROSELI</b>
-                                                            <span>室內空間</span>
+                                                            <span>室內空間6</span>
                                                         </figcaption>
                                                     </figure>
                                                 </a>
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="javascript:void(0)" class="jcarousel-control-prev jcarousel-control-prev1" data-jcarouselcontrol="true" title="上一則">上一則</a>
-                                    <a href="javascript:void(0)" class="jcarousel-control-next jcarousel-control-next1" data-jcarouselcontrol="true" title="下一則">下一則</a>
-            
-                                    <p class="jcarousel-pagination" data-jcarouselpagination="true"><a href="#1" class="active">1</a><a href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a><a href="#6">6</a></p>
+                                    <a href="javascript:void(0)" class="jcarousel-control-prev result_event_list_prev" data-jcarouselcontrol="true" title="上一則">上一則</a>
+                                    <a href="javascript:void(0)" class="jcarousel-control-next result_event_list_next" data-jcarouselcontrol="true" title="下一則">下一則</a>
                                 </div>
                             </li>
                         </ul>
@@ -1434,13 +1428,13 @@
                     </li>
                     <li>
                         <div class="center">
-                            <div class="num"><span class="pageLoad3" value="80000">0</span>位</div>
+                            <div class="num"><span class="pageLoad3" value="6000">0</span>位</div>
                             <p>熱愛設計的畢業學員</p>
                         </div>
                     </li>
                     <li>
                         <div class="center">
-                            <div class="num"><span class="pageLoad4" value="134236">0</span>份</div>
+                            <div class="num"><span class="pageLoad4" value="23423">0</span>份</div>
                             <p>優秀的學員作品</p>
                         </div>
                     </li>
@@ -1452,7 +1446,7 @@
                 <h2><span>最新消息</span></h2>
                 <p>- 第一手掌握最新資訊，升級專業超輕鬆！ -</p>
                 <div class="jcarousel-wrapper">
-                    <div class="jcarousel3" data-jcarousel="true">
+                    <div class="news_list" data-jcarousel="true">
                         <ul class="news_event_list"><!--本日熱門 最少6筆-->
                             <li>
                                 <a href="javascript:void(0)" class="text" title="室內設計專班校外參訪材質挑選課堂練習">
@@ -1525,15 +1519,15 @@
                         </ol>
                     </div>
                     <div class="control">
-                    <a href="javascript:void(0)" class="jcarousel-control-prev jcarousel-control-prev3" data-jcarouselcontrol="true" title="上一則">上一則</a>
-                    <a href="javascript:void(0)" class="jcarousel-control-next jcarousel-control-next3" data-jcarouselcontrol="true" title="下一則">下一則</a>
+                    <a href="javascript:void(0)" class="jcarousel-control-prev news_list_prev" data-jcarouselcontrol="true" title="上一則">上一則</a>
+                    <a href="javascript:void(0)" class="jcarousel-control-next news_list_next" data-jcarouselcontrol="true" title="下一則">下一則</a>
                     </div>
                 </div>
             </section>
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
             <section class="block_links">
                 <div class="jcarousel-wrapper">
-                    <div class="jcarousel2" data-jcarousel="true">
+                    <div class="links_list" data-jcarousel="true">
                         <ul>
                             <li>
                                 <a href="https://www.appedu.com.tw/Event/UI-design-Rex-Livechat/" target="_blank" title="OSELILYCIS & ROSELI">
@@ -1562,81 +1556,81 @@
                             </li>
                         </ul>
                     </div>
-                    <a href="javascript:void(0)" class="jcarousel-control-prev jcarousel-control-prev2" data-jcarouselcontrol="true" title="上一則">上一則</a>
-                    <a href="javascript:void(0)" class="jcarousel-control-next jcarousel-control-next2" data-jcarouselcontrol="true" title="下一則">下一則</a>
-                    <p class="jcarousel-pagination" data-jcarouselpagination="true"><a href="#1" class="active">1</a><a href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a><a href="#6">6</a></p>
+                    <a href="javascript:void(0)" class="jcarousel-control-prev links_list_prev" data-jcarouselcontrol="true" title="上一則">上一則</a>
+                    <a href="javascript:void(0)" class="jcarousel-control-next links_list_next" data-jcarouselcontrol="true" title="下一則">下一則</a>
+                    <p class="jcarousel-pagination links_list_pagination" data-jcarouselpagination="true"><a href="#1" class="active">1</a><a href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a><a href="#6">6</a></p>
                 </div>
             </section>
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
         </main>
         <footer class="footer">
             <div class="footer_center">
-            <div class="footer_title"><h2>趕緊加入赫綵的設計體驗之旅吧！</h2></div>
-            <section class="footer_content">
-                <div class="footer_go_top_btn"></div>
-                <a class="footer_logo" href="index.html" title="赫綵設計學院[回到首頁]">
-                    <img src="images/logo.svg" alt="赫綵設計學院標誌">
-                    <div class="text">
-
-                    </div>
-                </a>
-                <ul class="footer_menu">
-                    <li><a href="/frame-about" title="關於赫綵"><h3>關於赫綵</h3></a></li>
-                    <li><a href="/frame-teacher" title="師資陣容"><h3>師資陣容</h3></a></li>
-                    <li><a href="/frame-place" title="學院據點"><h3>學院據點</h3></a></li>
-                    <li><a href="/gallery/list" title="學員作品"><h3>學員作品</h3></a></li>
-                    
-                    <li><a href="/article/list" title="設計專欄"><h3>設計專欄</h3></a></li>
-                    
-                    <li>
-                        <a href="https://www.okbom.com.tw/" title="學員專區"><h3>學員專區</h3></a>
-                        <ul class="footer_side_menu">
-                            <li><a href="/frame-apply">- 如何報名</a></li>
-                            <li><a href="/frame-appdownload">- App下載</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="/frame-course"><h3>設計課程</h3></a>
-                        <ul class="footer_side_menu">
-                            <li><a href="/lecture">- 最新開課</a></li>
-                            <li><a href="/frame-course#Class_learning_box1">- 商業視覺系列</a></li>
-                            <li><a href="/frame-course#Class_learning_box2">- 影視特效系列</a></li>
-                            <li><a href="/frame-course#Class_learning_box3">- 遊戲動畫系列</a></li>
-                            <li><a href="/frame-course#Class_learning_box4">- 室內設計系列</a></li>
-                            <li><a href="/frame-course#Class_learning_box5">- 職人養成系列</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/consultation"><h3>聯絡我們</h3></a>
-                        <ul class="footer_side_menu">
-                            <li><a href="javascript:void(0)">- 免費諮詢</a></li>
-                            <li><a href="javascript:void(0)">- 領取免費簡章</a></li>
-                            <li><a href="/frame-spaceRental_imac">- 場地租借</a></li>
-                            <li><a href="/frame-sponsor">- 贊助合作</a></li>
-                            <li><a href="/frame-training">- 企業專班</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="footer_social_icon">
-                    <ul class="footer_social_detail">
-                        <li><a target="_blank" href="https://www.facebook.com/appedu/" title="Facebook">Facebook</a></li>
-                        <li><a target="_blank" href="https://www.youtube.com/user/AppeduDesignTraining" title="Youtube">Youtube</a></li>
-                        <li><a target="_blank" href="https://www.instagram.com/appedudesign/" title="instagram">instagram</a></li>
-                        <li><a target="_blank" href="https://line.me/ti/p/%40ksn8716p" title="LINE">LINE</a></li>
-                    </ul>
-                    <a class="phone_number" href="tel:0800-885-222" title="聯絡電話0800-885-222">
-                        <img src="./images/footer/phone.svg" alt="聯絡電話0800-885-222">
+                <div class="footer_title"><h2>趕緊加入赫綵的設計體驗之旅吧！</h2></div>
+                <section class="footer_content">
+                    <div class="footer_go_top_btn"></div>
+                    <a class="footer_logo" href="index.html" title="赫綵設計學院[回到首頁]">
+                        <img src="images/logo.svg" alt="赫綵設計學院標誌">
+                        <div class="text change1">
+                            <i>C</i><i>o</i><i>l</i><i>o</i><i>r</i><i>&ensp;</i><i>Y</i><i>o</i><i>u</i><i>r</i><i>&ensp;</i><i>L</i><i>i</i><i>f</i><i>e</i><i>&emsp;</i><i>!</i>
+                        </div>
+                        <div class="text change2">
+                            <i>為</i><i>你</i><i>學</i><i>習</i><i>的</i><i>成</i><i>就</i><i>赫</i><i>綵</i><i>!</i>
+                        </div>
                     </a>
-                </div>
-                <p class="deep_green">Copyright © 2021 Appedu Inc. All rights reserved</p>
-            </section></div>
+                    <ul class="footer_menu">
+                        <li><a href="/frame-about" title="關於赫綵"><h3>關於赫綵</h3></a></li>
+                        <li><a href="/frame-teacher" title="師資陣容"><h3>師資陣容</h3></a></li>
+                        <li><a href="/frame-place" title="學院據點"><h3>學院據點</h3></a></li>
+                        <li><a href="/gallery/list" title="學員作品"><h3>學員作品</h3></a></li>
+                        <li><a href="/article/list" title="設計專欄"><h3>設計專欄</h3></a></li>
+                        <li>
+                            <a href="https://www.okbom.com.tw/" title="學員專區"><h3>學員專區</h3></a>
+                            <ul class="footer_side_menu">
+                                <li><a href="/frame-apply">- 如何報名</a></li>
+                                <li><a href="/frame-appdownload">- App下載</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/frame-course"><h3>設計課程</h3></a>
+                            <ul class="footer_side_menu">
+                                <li><a href="/lecture">- 最新開課</a></li>
+                                <li><a href="/frame-course#Class_learning_box1">- 商業視覺系列</a></li>
+                                <li><a href="/frame-course#Class_learning_box2">- 影視特效系列</a></li>
+                                <li><a href="/frame-course#Class_learning_box3">- 遊戲動畫系列</a></li>
+                                <li><a href="/frame-course#Class_learning_box4">- 室內設計系列</a></li>
+                                <li><a href="/frame-course#Class_learning_box5">- 職人養成系列</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/consultation"><h3>聯絡我們</h3></a>
+                            <ul class="footer_side_menu">
+                                <li><a href="javascript:void(0)">- 免費諮詢</a></li>
+                                <li><a href="javascript:void(0)">- 領取免費簡章</a></li>
+                                <li><a href="/frame-spaceRental_imac">- 場地租借</a></li>
+                                <li><a href="/frame-sponsor">- 贊助合作</a></li>
+                                <li><a href="/frame-training">- 企業專班</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="footer_social_icon">
+                        <ul class="footer_social_detail">
+                            <li><a target="_blank" href="https://www.facebook.com/appedu/" title="Facebook">Facebook</a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/user/AppeduDesignTraining" title="Youtube">Youtube</a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/appedudesign/" title="instagram">instagram</a></li>
+                            <li><a target="_blank" href="https://line.me/ti/p/%40ksn8716p" title="LINE">LINE</a></li>
+                        </ul>
+                        <a class="phone_number" href="tel:0800-885-222" title="聯絡電話0800-885-222">
+                            <img src="./images/footer/phone.svg" alt="聯絡電話0800-885-222">
+                        </a>
+                    </div>
+                    <p class="deep_green">Copyright © 2021 Appedu Inc. All rights reserved</p>
+                </section>
+            </div>
         </footer>
-        <div class="footer_line_content"></div>
     </div>  
-   <!-- 引入串接腳本 -->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
     <script type="text/javascript" src="js/effect.js"></script>
 </body>
 </html>

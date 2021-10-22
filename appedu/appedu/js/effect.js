@@ -1,11 +1,12 @@
 /*------------------------------------------------------------------
-fancybox
+preload 預先載圖
 ------------------------------------------------------------------*/
 $.preload( '../images/icon/social_links/social_links1_o.svg',
   '../images/icon/social_links/social_links2_o.svg',
   '../images/icon/social_links/social_links3_o.svg',
   '../images/icon/social_links/social_links4_o.svg',
   '../images/icon/icon_lock_o.svg',
+  '../images/icon/icon_close.svg',
   '../images/icon/icon_Arrow_hover.svg'
 );
 /*------------------------------------------------------------------
@@ -19,79 +20,12 @@ $(document).keydown(function(event){
   }
 });
 $(function() {
-
-
   var o = $.extend(!0, {}, $.fancybox.defaults, {
       caption: function(o, n) {
           return $(this).next("figcaption").html()
       }
   });
   $('[data-fancybox="images"]').fancybox(o)
-});
-/*------------------------------------------------------------------
-主選單
-------------------------------------------------------------------*/
-$(function(){
-  $(window).scroll(function() {
-    if ( $(this).scrollTop() > 34){
-        $('.header').addClass('fixed');
-        $(".audit_fixed").removeClass("selected"),
-        $(".audit_btn").removeClass("open");
-    } else {
-        $('.header').removeClass('fixed');
-    }
-  });
-  $("body").removeClass("no_js");
-  console.log("Hello!! Nice to see you.(\u30fb\u2200\u30fb)."), 
-  console.log("Front-end programming By Ｗei-Ching Lin");
-  $(".open_nav").click(function () {
-      $(this).toggleClass("open"),
-      $(".menu").toggleClass("open_menu");
-      window.addEventListener("resize", function () {
-        $(window).width() > 768 && ($(".menu").removeAttr("style").removeClass("open_menu"),
-          $(".open_nav").removeClass("open"))
-      })
-  });
-  $(".sub_menu_title,sub_menu").on('mouseenter', function() {
-    $(this).addClass("open");
-    $(".sub_menu,.main_menu").addClass("open");
-  }).on('mouseleave', function() {
-    $(this).removeClass("open");
-    $(".sub_menu,.main_menu").removeClass("open");
-  });
-});
-
-/*------------------------------------------------------------------
-社群
-------------------------------------------------------------------*/
-$(function(){
-  $(window).scroll(function() {
-    if ( $(this).scrollTop() > 800){
-        $('.social_links').addClass('show');
-    } else {
-        $('.social_links').removeClass('show');
-    }
-  });
-});
-
-/*------------------------------------------------------------------
-預約諮詢
-------------------------------------------------------------------*/
-$(function(){
-  setTimeout(function(){ 
-    $(".audit_fixed").removeClass("selected");
-    $(".audit_btn").removeClass("open");
-  }, 3000);
-  $(".audit_btn").click(function () {
-    $(this).toggleClass("open"),
-    $(".audit_fixed").toggleClass("selected");
-    window.addEventListener("resize", function () {
-      $(window).width() > 768 && (
-        $(".audit_fixed").removeClass("selected"),
-        $(".audit_btn").removeClass("open")
-      )
-    })
-  });
 });
 /*------------------------------------------------------------------
 換字
@@ -138,7 +72,7 @@ $(function(){
 });
 /*------------------------------------------------------------------
 
-------------------------------------------------------------------*/
+
 $(function(){
   var appendNumber = 4;
   var prependNumber = 1;
@@ -179,17 +113,11 @@ $(function(){
     ]);
   });
 });
-/*------------------------------------------------------------------
-//回最上面
 ------------------------------------------------------------------*/
-$(".base-footer .simple-text.btn .ct a").click(function() {
-    $('html,body').animate({ scrollTop: 0 }, 'slow');   /* 返回到最頂上 */
-    $(".for_accessibility > a").focus();
-    return false;
-});
+
 
 /*------------------------------------------------------------------
-//block_promise
+//block_promise 看見赫綵的最強保證，保證包你會
 ------------------------------------------------------------------*/
 $(function(){
 	// 先取得 .promise_list , 必要參數及輪播間隔
@@ -232,7 +160,7 @@ $(function(){
 	timer = setTimeout(move, speed);
 });
 /*------------------------------------------------------------------
-//block_system 頁籤
+//block_system 頁籤  系統化教學，為你的需求量身打造
 ------------------------------------------------------------------*/
 $(function(){
   // 預設顯示第一個頁籤
@@ -277,19 +205,53 @@ $(function(){
   // 先把預設要顯示的頁籤加上 .active 樣式及顯示相對應的內容
   $tabsLi.eq(_default).addClass('active');
   $tab_contentLi.eq(_default).siblings().css({
-    left: _width
+    left: '100%'
   });
 });
-
 /*------------------------------------------------------------------
-//block_system
+//block_master 赫啦！來跟大師學設計
+------------------------------------------------------------------*/
+$(function() {
+  var jcarousel = $('.master_list');
+
+  jcarousel
+      .on('jcarousel:reload jcarousel:create', function () {
+          var carousel = $(this),
+              width = carousel.innerWidth();
+
+          if (width >= 1000) {
+              width = width / 5;
+          } else if (width >= 600) {
+              width = width / 3;
+          } else if (width >= 350) {
+              width = width / 1;
+          }
+
+          carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+      })
+      .jcarousel({
+          wrap: 'circular'
+      });
+
+  $('.master_list_prev')
+      .jcarouselControl({
+          target: '-=1'
+      });
+
+  $('.master_list_next')
+      .jcarouselControl({
+          target: '+=1'
+      });
+});
+/*------------------------------------------------------------------
+//block_result 來看看學員們的學習成果
 ------------------------------------------------------------------*/
 $(function(){
   // 預設顯示第一個頁籤
   // 並先把 .tabs, .tabs li 及 .tab_content, .tab_content li 等元素取出
   // 同時也要取得 .tab_content 的寬
   var _default = 0, 
-    $block = $('.result_list'), 
+    $block = $('.result_tabs_list'), 
     $tabs = $block.find('.tabs'), 
     $tabsLi = $tabs.find('li'), 
     $tab_content = $block.find('.tab_content'), 
@@ -327,14 +289,15 @@ $(function(){
   // 先把預設要顯示的頁籤加上 .active 樣式及顯示相對應的內容
   $tabsLi.eq(_default).addClass('active');
   $tab_contentLi.eq(_default).siblings().css({
-    left: _width
+    // left: _width
+    left: '100%'
   });
 });
 /*------------------------------------------------------------------
-//block_system
+//block_result 來看看學員們的學習成果
 ------------------------------------------------------------------*/
 $(function() {
-  var jcarousel = $('.jcarousel');
+  var jcarousel = $('.result_event_list');
 
   jcarousel
       .on('jcarousel:reload jcarousel:create', function () {
@@ -345,8 +308,59 @@ $(function() {
               width = width / 4;
           } else if (width >= 700) {
               width = width / 4;
+          } else if (width >= 350) {
+              width = width / 3;
+          } else if (width >= 300) {
+            width = width / 2;
+        }
+
+          carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+      })
+      .jcarousel({
+          wrap: 'circular'
+      });
+
+  $('.result_event_list_prev')
+      .jcarouselControl({
+          target: '-=1'
+      });
+
+  $('.result_event_list_next')
+      .jcarouselControl({
+          target: '+=1'
+      });
+
+  // $('.jcarousel-pagination')
+  //     .on('jcarouselpagination:active', 'a', function() {
+  //         $(this).addClass('active');
+  //     })
+  //     .on('jcarouselpagination:inactive', 'a', function() {
+  //         $(this).removeClass('active');
+  //     })
+  //     .on('click', function(e) {
+  //         e.preventDefault();
+  //     })
+});
+
+/*------------------------------------------------------------------
+//block_links 舊活動
+------------------------------------------------------------------*/
+$(function() {
+  var jcarousel = $('.links_list');
+
+  jcarousel
+      .on('jcarousel:reload jcarousel:create', function () {
+          var carousel = $(this),
+              width = carousel.innerWidth();
+
+          if (width >= 1000) {
+              width = width / 3;
+          } else if (width >= 700) {
+              width = width / 3;
           } else if (width >= 350) {
               width = width / 2;
+          } else if (width >= 300) {
+              width = width / 1;
           }
 
           carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
@@ -355,17 +369,17 @@ $(function() {
           wrap: 'circular'
       });
 
-  $('.jcarousel-control-prev1')
+  $('.links_list_prev')
       .jcarouselControl({
           target: '-=1'
       });
 
-  $('.jcarousel-control-next1')
+  $('.links_list_next')
       .jcarouselControl({
           target: '+=1'
       });
 
-  $('.jcarousel-pagination')
+  $('.links_list_pagination')
       .on('jcarouselpagination:active', 'a', function() {
           $(this).addClass('active');
       })
@@ -375,13 +389,19 @@ $(function() {
       .on('click', function(e) {
           e.preventDefault();
       })
+      .jcarouselPagination({
+          perPage: 1,
+          item: function(page) {
+              return '<a href="#' + page + '">' + page + '</a>';
+          }
+      });
 });
 
 /*------------------------------------------------------------------
-//block_links
+//block_news 第一手掌握最新資訊，升級專業超輕鬆！
 ------------------------------------------------------------------*/
 $(function() {
-  var jcarousel = $('.jcarousel2');
+  var jcarousel = $('.news_list');
 
   jcarousel
       .on('jcarousel:reload jcarousel:create', function () {
@@ -402,90 +422,35 @@ $(function() {
           wrap: 'circular'
       });
 
-  $('.jcarousel-control-prev2')
+  $('.news_list_prev')
       .jcarouselControl({
           target: '-=1'
       });
 
-  $('.jcarousel-control-next2')
+  $('.news_list_next')
       .jcarouselControl({
           target: '+=1'
       });
 
-  $('.jcarousel-pagination')
-      .on('jcarouselpagination:active', 'a', function() {
-          $(this).addClass('active');
-      })
-      .on('jcarouselpagination:inactive', 'a', function() {
-          $(this).removeClass('active');
-      })
-      .on('click', function(e) {
-          e.preventDefault();
-      })
-      .jcarouselPagination({
-          perPage: 1,
-          item: function(page) {
-              return '<a href="#' + page + '">' + page + '</a>';
-          }
-      });
+  // $('.jcarousel-pagination')
+  //     .on('jcarouselpagination:active', 'a', function() {
+  //         $(this).addClass('active');
+  //     })
+  //     .on('jcarouselpagination:inactive', 'a', function() {
+  //         $(this).removeClass('active');
+  //     })
+  //     .on('click', function(e) {
+  //         e.preventDefault();
+  //     })
+  //     .jcarouselPagination({
+  //         perPage: 1,
+  //         item: function(page) {
+  //             return '<a href="#' + page + '">' + page + '</a>';
+  //         }
+  //     });
 });
-
 /*------------------------------------------------------------------
-//block_news
-------------------------------------------------------------------*/
-$(function() {
-  var jcarousel = $('.jcarousel3');
-
-  jcarousel
-      .on('jcarousel:reload jcarousel:create', function () {
-          var carousel = $(this),
-              width = carousel.innerWidth();
-
-          if (width >= 1000) {
-              width = width / 3;
-          } else if (width >= 700) {
-              width = width / 3;
-          } else if (width >= 350) {
-              width = width / 1;
-          }
-
-          carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
-      })
-      .jcarousel({
-          wrap: 'circular'
-      });
-
-  $('.jcarousel-control-prev3')
-      .jcarouselControl({
-          target: '-=1'
-      });
-
-  $('.jcarousel-control-next3')
-      .jcarouselControl({
-          target: '+=1'
-      });
-
-  $('.jcarousel-pagination')
-      .on('jcarouselpagination:active', 'a', function() {
-          $(this).addClass('active');
-      })
-      .on('jcarouselpagination:inactive', 'a', function() {
-          $(this).removeClass('active');
-      })
-      .on('click', function(e) {
-          e.preventDefault();
-      })
-      .jcarouselPagination({
-          perPage: 1,
-          item: function(page) {
-              return '<a href="#' + page + '">' + page + '</a>';
-          }
-      });
-});
-
-
-/*------------------------------------------------------------------
-//block_story
+//block_story 學員們的動人故事
 ------------------------------------------------------------------*/
 function loadStart() {
   "use strict";
@@ -592,7 +557,7 @@ $(window).on("load", function() {
   }
 });
 /*------------------------------------------------------------------
-//sameHeight
+//sameHeight 等高     在赫綵，不只學習
 ------------------------------------------------------------------*/
 $(function(){
 
@@ -617,10 +582,8 @@ $(function(){
         });
     });
 });
-
-
 /*------------------------------------------------------------------
-數字自動跳動
+.block_event 數字自動跳動  實戰派講師團隊
 ------------------------------------------------------------------*/
 (function($) {
   $.fn.animateNumbers = function(stop, commas, duration, ease) {
@@ -656,8 +619,9 @@ $(function(){
 			$('.teacher_team_box').removeClass('ready-animate').addClass('run-animate');
       $(".pageLoad1").animateNumbers($(".pageLoad1").attr("value"), true, 1000);
       $(".pageLoad2").animateNumbers($(".pageLoad2").attr("value"), true, 1000);
-      $(".pageLoad3").animateNumbers($(".pageLoad3").attr("value"), true, 4000);
-      $(".pageLoad4").animateNumbers($(".pageLoad4").attr("value"), true, 4000);
+      $(".pageLoad3").animateNumbers($(".pageLoad3").attr("value"), true, 700);
+      $(".pageLoad4").animateNumbers($(".pageLoad4").attr("value"), true, 700);
 		}
 	}).scroll();
 });
+

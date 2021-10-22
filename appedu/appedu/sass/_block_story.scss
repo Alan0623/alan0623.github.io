@@ -1,0 +1,368 @@
+/*------------------------------------------------------------------
+.block_story 學員們的動人故事
+------------------------------------------------------------------*/
+.block_story{
+	position: relative;
+	background: linear-gradient(#FFF 50%, #FDFDFF 50%);
+    background-size: 100% 28px;
+    background-attachment: fixed;
+	.text{
+		position: absolute;
+		right: 0;
+		top: -88px;
+		text-align: right;
+        @media screen and (max-width:800px) {
+            top: -200px;
+            font-size: 0.8em;
+        }
+		>.p{
+			color: #00515D;
+			font-weight: lighter;
+			letter-spacing: 1px;
+			position: relative;
+			z-index: 2;
+			padding-right: 4px;
+		}
+		>h2{
+			color: $minor-color;
+			font-size: 2.25em;
+			letter-spacing: 3px;
+			font-family: 'Noto Serif TC', serif;
+			position: relative;
+			z-index: 2;
+		}
+		&::after{
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: -20px;
+			right: -35px;
+			width: 100px;
+			height: 100px;
+			background-color: #FFD89D;
+			border-radius: 100px;
+		}
+	}
+}
+.student_story img{
+    width: 100%;
+    max-width: 100%;
+}
+#wrapper,
+.container {
+    position: relative;
+    width: 100%
+}
+.container {
+    padding-top: 130px;
+    margin: 0 0 440px;
+    z-index: 10;
+    background-color: #f6f6ee
+}
+@media screen and (max-width:768px) {
+    .container {
+        padding-top: 55px;
+        margin: 0
+    }
+}
+.student_story::before,
+.student_story_inner .student_story_cont::before,
+.sec_top03 a .sec_top03_inner::after,
+.sec_top03 a .sec_top03_inner::before,
+.sec_top04::before,
+.ttl_01 .en::after {
+    content: ''
+}
+
+.student_story,
+.student_story_inner .student_story_cont::before,
+.sec_top03 a .sec_top03_bg,
+.sec_top04_inner {
+    background-position: center center
+}
+.student_story_inner .student_story_cont .ttl p#student_story_txt_01_ttl {
+    opacity: 0
+}
+
+.student_story {
+    width: 100%;
+    height: 350vh;
+    background-repeat: repeat;
+    background-size: 15px 15px;
+    position: relative
+}
+
+.student_story .student_story_inner::before {
+	content: "";
+	display: block;
+    width: 100%;
+    height: 230px;
+    max-width: 1200px;
+    position: absolute;
+    left: 50%;
+    top: calc(50vh - 115px);
+    transform: translateX(-50%);
+    background-color: #FFF3D9;
+}
+
+.student_story .student_story_height {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+    left: 0
+}
+
+.student_story .student_story_height#student_story_01 {
+    top: 0
+}
+
+.student_story .student_story_height#student_story_02 {
+    top: 100vh
+}
+
+.student_story .student_story_height#student_story_03 {
+    top: 200vh;
+    height: 150vh
+}
+
+.student_story_inner {
+    width: 100%;
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 10
+}
+
+.student_story_inner .student_story_cont {
+    width: 100%;
+    max-width: 1300px;
+    height: 470px;
+    position: relative
+}
+
+.student_story_inner .student_story_cont::before {
+    width: calc(100% - 60px);
+    height: 100%;
+    position: absolute;
+    left: 30px;
+    top: 0;
+    background-repeat: repeat;
+    background-size: 200px 200px;
+}
+
+.student_story_inner .student_story_cont .ttl {
+    width: 640px;
+    height: 70px;
+    position: absolute;
+    top: -160px;
+    left: 5px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    transform-origin: bottom left
+}
+
+.student_story_inner .student_story_cont .ttl p {
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+    font-size: 90px;
+    font-size: 9rem;
+    letter-spacing: .12em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s
+}
+
+.student_story_inner .student_story_cont .ttl p#student_story_txt_01_ttl.done {
+    opacity: 1
+}
+
+.student_story_inner .student_story_cont .ttl p#student_story_txt_02_ttl {
+    opacity: 0
+}
+
+.student_story_inner .student_story_cont .ttl p#student_story_txt_02_ttl.done {
+    opacity: 1
+}
+
+.student_story_inner .student_story_cont .ttl p#student_story_txt_03_ttl {
+    opacity: 0
+}
+
+.student_story_inner .student_story_cont .ttl p#student_story_txt_03_ttl.done {
+    opacity: 1
+}
+
+.student_story_inner .student_story_cont .img {
+    width: 48.380797%;
+    max-width: 600px;
+    position: absolute;
+    left: 47.33738%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s
+}
+
+.student_story_inner .student_story_cont .img #student_story_txt_01_img02 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 20
+}
+
+.student_story_inner .student_story_cont .img #student_story_txt_01_img02.done {
+    opacity: 1
+}
+
+.student_story_inner .student_story_cont .img #student_story_txt_02_img02 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 10
+}
+
+.student_story_inner .student_story_cont .img #student_story_txt_02_img02.done {
+    opacity: 1
+}
+
+.student_story_inner .student_story_cont .img #student_story_txt_03_img02 {
+    position: relative;
+    opacity: 0;
+    z-index: 0
+}
+
+.student_story_inner .student_story_cont .img #student_story_txt_03_img02.done {
+    opacity: 1
+}
+
+.student_story_inner .student_story_cont .txt {
+    width: 44.677419%;
+    max-width: 554px;
+    position: absolute;
+    left: 9.677419%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.student_story_inner .student_story_cont .txt .student_story_txt_01 {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    -webkit-transition: -webkit-transform .8s;
+    transition: -webkit-transform .8s;
+    transition: transform .8s;
+    transition: transform .8s, -webkit-transform .8s
+}
+
+.student_story_inner .student_story_cont .txt .student_story_txt_01.img_done {
+    -webkit-transform: translateY(-100vh);
+    -ms-transform: translateY(-100vh);
+    transform: translateY(-100vh)
+}
+
+.student_story_inner .student_story_cont .txt .student_story_txt_02 {
+    width: 110%;
+    position: absolute;
+    top: -5%;
+    right: -5%;
+    z-index: 10;
+    -webkit-transition: -webkit-transform .8s;
+    transition: -webkit-transform .8s;
+    transition: transform .8s;
+    transition: transform .8s, -webkit-transform .8s
+}
+
+.student_story_inner .student_story_cont .txt .student_story_txt_02.img_done {
+    -webkit-transform: translateY(-100vh);
+    -ms-transform: translateY(-100vh);
+    transform: translateY(-100vh)
+}
+
+.student_story_inner .student_story_cont .txt .student_story_txt_03 {
+    width: 100%;
+    position: relative;
+    z-index: 0
+}
+
+.student_story_inner .student_story_cont .txt a {
+    display: block;
+    position: relative
+}
+
+
+.student_story_inner .student_story_cont .txt a .hover-no {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s
+}
+
+.student_story_inner .student_story_cont .txt a .hover-on {
+    position: relative;
+    z-index: 0
+}
+
+.student_story_inner .student_story_cont .txt a:hover .hover-no {
+    opacity: 0
+}
+@media screen and (max-width:800px) {
+    .student_story::before {
+        width: 90%
+    }
+
+    .student_story_inner .student_story_cont::before {
+        width: 100%;
+        left: 0
+    }
+
+    .student_story_inner .student_story_cont .ttl {
+        visibility: hidden;
+        opacity: 0
+    }
+
+    .student_story_inner .student_story_cont .img {
+        width: 80%;
+        max-width: 500px;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-40%)
+    }
+
+    .student_story_inner .student_story_cont .txt {
+        width: 100%;
+        max-width: 400px;
+        top: auto;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-90%)
+    }
+}

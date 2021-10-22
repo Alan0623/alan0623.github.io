@@ -1,0 +1,683 @@
+/*------------------------------------------------------------------
+.block_system 系統化教學，為你的需求量身打造
+------------------------------------------------------------------*/
+.block_system{
+	margin: 0 auto;
+    // max-width: 940px;
+	// max-width: 964px;
+	max-width: 1108px;
+	position: relative;
+	z-index: 1;
+	padding: 0 72px;
+	>h2{
+		color: $minor-color;
+		font-family: 'Noto Serif TC', serif;
+		font-size: 2.75em;
+		font-weight: 700;
+
+		@include rwd(800){
+			font-size: 2em;
+		}
+
+		span{
+			position: relative;
+			z-index: 2;
+		}
+		&::before{
+			content: "";
+			position: absolute;
+			top: -30px;
+			left: 80px;
+			transform: rotateZ(180deg);
+			z-index: 3;
+			display: block;
+			width: 26px;
+			height: 18px;
+			background-image: url('../images/icon/icon_title_dot.svg');
+		}
+		&::after{
+			content: "";
+			position: absolute;
+			top: -30px;
+    		left: 32px;
+			z-index: 1;
+			display: block;
+			width: 100px;
+			height: 100px;
+			background-color: #FFF3D9;
+			border-radius: 100px;
+		}
+	}
+	>p{color: $minor-color;
+		font-size: 1.375em;
+		font-weight: 500;
+		letter-spacing: 2px;
+		margin-bottom: 40px;
+		z-index: 2;
+		position: relative;
+		span{
+			font-size: 1.3em;
+			color: $major-color;
+		}
+	}
+}
+
+.tabs_list{
+	position: relative;
+	.more{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 149px;
+		height: 54px;
+		line-height: 54px;
+		color: $minor-color;
+		text-align: center;
+		padding-left: 40px;
+		span{
+			position: relative;
+			&::after{
+				right: -30px;
+				@extend %t50;
+				width: 40px;
+				height: 40px;
+				background-image: url(../images/icon/icon_swiper_arrow_g.svg);
+				background-position: center;
+			}
+		}
+		&:hover, &:focus{
+			&::after{
+				opacity: 1;
+			}
+			
+		}
+
+		&::after{
+			opacity: 0;
+			@extend %t50;
+			z-index: 2;
+			top: auto;
+			right: 0;
+			top: auto;
+			bottom: -5px;
+			height: 5px;
+			width: 126px;
+			border-radius: 10px;
+			transition: $transition;
+			background-color: $minor-color;
+		}
+
+	}
+	.tabs{//頁籤
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		height: 54px;
+
+		&::after{
+			@extend %clear;
+			position: absolute;
+			z-index: 1;
+			bottom: -1px;
+			height: 1px;
+			width: 100%;
+			left: 0;
+			background-color: #D8D8D8;
+		}
+		>li{
+			position: relative;
+			z-index: 2;
+			display: block;
+			float: left;
+			&.active{
+				a{
+					color: #F9C270;
+					position: relative;
+					background-color: #FFF9EE;
+					&::after{
+						content: "";
+						position: absolute;
+						height: 5px;
+						width: 100%;
+						border-radius: 10px;
+						background-color: #F9C270;
+						left: 0;
+						bottom: -3px;
+						z-index: 3;
+					}
+				}
+			}
+			a{
+				display: block;
+				text-align: center;
+				// width: 149px;
+				height: 54px;
+				line-height: 54px;
+				border-radius: 10px 10px 0 0;
+				// padding-left: 40px;
+				&::before{
+					@extend %t50;
+					display: block;
+					width: 40px;
+					height: 40px;
+					left: 16px;
+					
+				}
+				&:hover, &:focus{
+					color: #F9C270;
+				}
+			}
+		}
+		
+		a{
+			color: #D8D8D8;
+		}
+	}
+	.tab_container {//內容框架
+		clear: both;
+		overflow: hidden;
+		margin-top: 0px;
+		ul {
+			position: relative;
+			// height: 1200px;
+			overflow: hidden;
+			>li.event {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				padding: 0px;
+				margin-top: 10px;
+			}
+		}
+	}
+}
+.hot_event{//本日熱門
+	clear: both;
+	// opacity: 0;
+	transition: $transition;
+
+	&::after{
+		@extend %clear;
+	}
+	>li{
+		width: 33.33%;
+		float: left;
+		padding: 40px 12px;
+		@include rwd(1080){
+			width: 50%;
+			&:nth-child(2n+1){
+				clear: both!important;
+			}
+		}
+		&:nth-child(3n+1){
+			clear: both;
+			@include rwd(1080){
+				clear: none;
+			}
+		}
+		.img{
+			overflow: hidden;
+			img{
+				width: 100%;
+			}
+		}
+		&:nth-child(5),
+		&:nth-child(6){
+			@include rwd(1080){
+				display: none;
+			}
+		}
+		@for $i from 1 through 7 {
+			&:nth-child(#{$i}) .img{
+				&::before{
+					content: "0#{$i}";
+					color: #FFF3D9;
+					position: absolute;
+					z-index: 2;
+					top: 6px;
+					right: 7px;
+					font-size: 1.8em;
+					font-family: 'Roboto';
+					font-weight: 500;
+					font-style: italic;
+				}		
+				&::after{
+					content: "";
+					position: absolute;
+					z-index: 1;
+					top: -54px;
+					right: -54px;
+					width: 108px;
+					height: 108px;
+					position: absolute;
+					background-color: #F9C270;
+					border-radius: 200px;
+				}	
+			}
+		}
+	}
+
+	figcaption{
+		padding: 0 16px;	
+		padding-top: 4px;
+		&::after{
+			@extend %clear;
+		}
+		.tag{
+			color: #B567CB;
+			float: left;
+			max-width: 160px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		
+			&.color_business{
+				color: #B567CB;
+			}
+			&.color_Interior{
+				color: #65A0A6;
+			}
+			&.color_game{
+				color: #DC6969;
+			}
+			&.color_video{
+				color: #6EB92B;
+			}
+
+		}
+		.hour{
+			color: $minor-color;
+			background-color: #FFF3D9;
+			border-radius: 4px;
+			font-weight: bold;
+			float: right;
+			padding: 0 16px;
+			text-align: center;
+			max-width: 90px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+
+	.text{
+		display: block;
+		border-radius: 10px;
+		overflow: hidden;
+		padding-bottom: 16px;
+		position: relative;
+		transition: $transition;
+		&:hover, &:focus{
+			box-shadow: rgba(0,0,0,0.1) 0 10px 12px;
+			&::after{
+				background-image: url(../images/icon/icon_award_c.svg);
+			}
+			.botton>span{
+				color: $major-color;
+				&::before,
+				&::after{
+					opacity: 1;
+				}
+			}
+		}
+		&::after{
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 16px;
+			left: 16px;
+			width: 75px;
+			height: 77px;
+			background-image: url(../images/icon/icon_award.svg);
+			transition: $transition;
+		}
+		h3{
+			padding: 0 16px;
+			color: $minor-color;
+			font-size: 1.25em;
+			letter-spacing: 1px;
+			line-height: 1.4em;
+			padding-top: 3px;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			max-height: 72px;
+			overflow: hidden;
+			padding-bottom: 0;
+			margin-bottom: 12px;
+		}
+		p{
+			padding: 0;
+			margin: 0 16px;
+			color: #AAAAAA;
+			font-size: $f14px;
+			border-bottom: #E6E7E6 solid 1px;
+			font-weight: lighter;
+			padding-bottom: 8px;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+			max-height: 50px;
+		}
+		.botton{
+			float: right;
+			padding-right: 16px;
+			padding-top: 4px;
+			>span{
+				display: block;
+				width: 100%;
+				font-weight: 500;
+				color: #A9ADB1;
+				text-align: center;
+				line-height: 36px;
+				font-weight: normal;
+				position: relative;
+				&::before,
+				&::after{
+					opacity: 0;
+					position: absolute;
+					content: "";
+					width: 18px;
+					height: 18px;
+					bottom: 11px;
+					background-image: url('../images/icon/icon_fire.png');
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+				&::before{
+					left: 20px;
+				}
+				&::after{
+					right: 20px;
+				}
+				
+			}
+			>.a{
+				display: block;
+				text-align: center;
+				width: 176px;
+				height: 47px;
+				line-height: 47px;
+				border-radius: 5px;
+				color: white;
+				background-color: $major-color;
+				font-size: 1.125em;
+				letter-spacing: 1px;
+				margin: 0 auto;
+			}
+		}
+
+	}
+
+	.people{
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 6px;
+		color: $major-color;
+		letter-spacing: 1px;
+		span{
+			color: $minor-color;
+			font-size: 1.125em;
+			font-weight: 500;
+		}
+	}
+
+	.bg_bar{
+		width: calc(100% - 32px);
+		height: 7px;
+		background-color: #FFF3D9;
+		border-radius: 10px;
+		overflow: hidden;
+		margin: 0 16px;
+		.bar{
+			transition: $transition;
+			height: 7px;
+			background-color: $minor-color;
+		}
+	}
+}
+//本日熱門------------------------------------------------------------------------------------
+.hot_event_course{
+	background-color: #fff;
+	width: 638px;
+	text-align: left;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1);
+	.img{
+		width: 100%;
+		img{
+			width: 100%;
+			height: 138px;
+			object-fit: cover;
+			object-position: center;
+			display: block;
+		}
+	}
+	.text{
+		padding: 15px 48px;
+	}
+	h3{
+		font-size: 1.185em;
+		letter-spacing: 1px;
+		color: $minor-color;
+		padding:14px 0;
+	}
+	h4{
+		font-size: 0.9375em;
+		letter-spacing: 1px;
+		color: $minor-color;
+		padding-top: 10px;
+		padding-bottom: 8px;
+		transform: translateY(0);
+    	opacity: 1;
+	}
+	.tag,
+	.time{
+		display: inline-block;	
+		font-size: 0.8125em;
+		position: relative;
+		padding-left: 24px;
+		color: $minor-color;
+		font-weight: normal;
+		margin-right: 10px;
+		&::before{
+			@extend %t50;
+			left: 0;
+			width: 22px;
+			height: 22px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+	.tag{
+		&::before{
+			background-image: url('../images/icon/hot_event_pen.svg');
+			
+		}
+	}
+	.time{
+		&::before{
+			background-image: url('../images/icon/hot_event_time.svg');
+		}
+	}
+	p{
+		font-size: 0.775em;
+		letter-spacing: 2px;
+		color: #aaaaaa;
+		transform: translateY(0);
+    opacity: 1;
+	}
+	.auditForm{
+
+	}
+	.form_content{
+		ol{
+			margin: 0 -8px;
+			>li{
+				float: left;
+				width: 50%;
+				padding: 0 8px;
+			}
+		}
+		label{
+			display: block;
+			margin-bottom: 4px;
+			text-align: left;
+			color: $minor-color;
+			font-size: 0.65px;
+			font-weight: 500;
+			font-stretch: normal;
+			letter-spacing: 0.74px;
+		}
+	}
+	.form_submit_btn{
+		border-radius: 4.8px;
+		color: white;
+		background-color: $major-color;
+	}
+}
+
+//最新活動------------------------------------------------------------------------------------
+.news_event_list{
+	padding: 0 46px;
+	>li{
+		// width: 50%;
+		float: left;
+		padding: 40px 16px;
+	}
+	a{
+		border-radius: 5px;
+		display: inline-block;
+		padding-bottom: 20px;
+		width: 100%;
+		border-radius: 5px;
+    	overflow: hidden;
+		&:hover, &:focus{
+			box-shadow: rgba(0,0,0,0.1)0 5px 12px;
+			img{
+				transform: scale(1.2);
+			}
+		}
+	}
+	.img{
+		display: inline-block;
+		overflow: hidden;
+		position: relative;
+		img{
+			width: 100%;
+			transition: $transition;
+		}
+		figcaption{
+			padding-top: 8px;
+		}
+	}
+	.tag{
+		color: $major-color;
+		position: relative;
+		padding-left: 46px;
+		&::before{
+			display: block;
+			@extend %t50;
+			left: 22px;
+			width: 20px;
+			height: 20px;
+			background-image: url('../images/icon/icon_file.svg');
+		}
+	}
+	h3{
+		font-size: 1.375em;
+		color: $minor-color;
+		padding: 0 22px;
+		padding-top: 8px;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		max-height: 72px;
+		overflow: hidden;
+		text-align: left;
+	}
+	p{
+		font-size: $f14px;
+		font-weight: lighter;
+		color: #6D7278;
+		border-bottom: #DCD9DB solid 1px;
+		margin: 0 22px;
+		padding-bottom: 16px;
+		padding-top: 10px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		text-align: left;
+	}
+	.date{
+		margin-top: 14px;
+		font-size: 1.875em;
+		font-weight: lighter;
+		color: $minor-color;
+		position: relative;
+		padding-left: 62px;
+		text-align: left;
+		font-weight: 700;
+		&::before{
+			display: block;
+			@extend %t50;
+			left: 22px;
+			width: 34px;
+			height: 34px;
+			background-image: url('../images/icon/icon_clock.svg');
+		}
+	}
+}
+
+//頁籤------------------------------------------------------------------------------------
+.system_list{
+	.tabs{
+		>li{
+			a{
+				padding: 0 26px;
+				padding-left: 64px;
+			}
+			@for $i from 1 through 6 {
+				&:nth-child(#{$i}){
+					a{
+						&:hover, &:focus{
+							&::before{
+								background-image: url('../images/icon/icon_tab#{$i}_h.svg');
+							}
+						}
+						&::before{
+							background-image: url('../images/icon/icon_tab#{$i}_n.svg');
+						}
+					}
+					&.active{
+						a::before{
+							background-image: url('../images/icon/icon_tab#{$i}_p.svg');
+						}
+					}
+				}
+			}
+		}
+	}
+	.tab_content{
+		height: 1200px;
+		.news_event_list > li{
+			width: 50%;
+		}
+	}
+	.more{
+		&::before{
+			left: 24px;
+			@extend %t50;
+			width: 40px;
+			height: 40px;
+			background-image: url(../images/icon/icon_tab3.svg);
+		}
+	}
+}
