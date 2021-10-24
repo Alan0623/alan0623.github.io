@@ -6,6 +6,9 @@
 	background: linear-gradient(#FFF 50%, #FDFDFF 50%);
     background-size: 100% 28px;
     background-attachment: fixed;
+    @media screen and (max-width:700px) {
+        display: none;
+    }
 	.text{
 		position: absolute;
 		right: 0;
@@ -149,7 +152,11 @@
     width: 100%;
     max-width: 1300px;
     height: 470px;
-    position: relative
+    position: relative;
+    transform: translateY(40px);
+    @include media('mobile2'){
+        transform: translateY(0px);
+    }
 }
 
 .student_story_inner .student_story_cont::before {

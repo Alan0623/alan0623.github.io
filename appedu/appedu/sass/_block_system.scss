@@ -18,7 +18,9 @@
 		@include rwd(800){
 			font-size: 2em;
 		}
-
+		@include rwd(500){
+			font-size: 1.6em;
+		}
 		span{
 			position: relative;
 			z-index: 2;
@@ -58,6 +60,9 @@
 		span{
 			font-size: 1.3em;
 			color: $major-color;
+		}
+		@include rwd(500){
+			font-size: 1.2em;
 		}
 	}
 }

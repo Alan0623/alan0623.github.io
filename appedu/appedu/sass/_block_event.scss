@@ -8,6 +8,10 @@
     background-repeat: repeat;
     background-size: 4%;
 	background-attachment: fixed;
+	overflow: hidden;
+	@include rwd(700){
+		background-image: none;
+	}
 	h2{
 		// @extend %hide-text;
 	}
@@ -16,6 +20,18 @@
 		margin: 0 auto;
 		padding-bottom: 112px;
 		padding-top: 96px;
+		@include rwd(1100){
+			padding-bottom: 64px;
+		}
+		@include rwd(1030){
+			padding-bottom: 34px;
+		}
+		@include rwd(800){
+			padding-bottom: 0px;
+		}
+		@include rwd(700){
+			display: none;
+		}
 	}
 	.block_event_list{
 		padding: 0 64px;
@@ -25,6 +41,9 @@
 		li{
 			padding: 8px;
 			float: left;
+			@include rwd(800){
+				padding: 6px;
+			}
 			.img{
 				display: inline-block;
 				float: left;
@@ -63,6 +82,9 @@
 					position: relative;
 					display: inline-block;
 					overflow: hidden;
+					@include media('mobile2'){
+						padding: 16px;
+					}
 				}
 				.figcaption{
 
@@ -72,6 +94,22 @@
 					font-size: 1.3125em;
 					padding-bottom: 52px;
 					position: relative;
+					&::after{
+						content: "";
+						position: absolute;
+						top: 50px;
+						left: 0;
+						background-color: #EFB85C;
+						width: 12px;
+						height: 2px;
+					}
+					@include media('mobile2'){
+						padding-bottom: 24px;
+						font-size: 1.1em;
+						&::after{
+							top: 36px;
+						}
+					}
 				}
 				p{
 					color: #6D7278;
@@ -91,6 +129,10 @@
 					position: absolute;
 					bottom: 0;
 					right: 0;
+					@include media('mobile2'){
+						font-size: 0.9em;
+						
+					}
 					span{
 						position: relative;
 						&::after{
@@ -134,6 +176,9 @@
 					padding: 28px 23px;
 					// display: inline-block;
 					top: 0;
+					@include media('mobile2'){
+						padding: 16px;
+					}
 				}
 				.hover_info{
 					// transform: rotate3d(0.5, -1, 1, 
@@ -146,18 +191,37 @@
 					top: 0;
 					padding: 28px 23px;
 					z-index: 3;
+					@include media('mobile2'){
+						padding: 16px;
+					}
 					h3{
 						margin-bottom: 16px;
+						@include media('mobile2'){
+							margin-bottom: 8px;
+							font-size: 1em;
+						}
 					}
 					p{
 						font-size: 0.875em;
 						line-height: 1.6em;
+						text-align: justify;
+
+						@include rwd(1000){
+							overflow: hidden;
+    						height: 130px;
+						}
+
 					}
 					.more{
 						position: absolute;
 						bottom: 28px;
 						right: 23px;
 						padding: 0 32px 0 16px;
+						@include media('mobile2'){
+							font-size: 0.9em;
+							bottom: 8px;
+							right: 16px;
+						}
 						&::after{
 							right: 0px;
 							@extend %t50;
@@ -193,6 +257,11 @@
 			}
 			&:nth-child(2){
 				width: 50%;
+				img,
+				.img,
+				.figure{
+					height: 100%;
+				}
 				.figure::before,
 				.hover_info{
 					background-color: #FF7050;
@@ -241,6 +310,9 @@
     margin-top: 60px;
     position: relative;
     width: 100%;
+	@include rwd(700){
+		height: 550px;
+	}
 }
 .teacher_team_box:after {
     content: "";
@@ -256,11 +328,11 @@
 	@include rwd(1550px){
         background: url(../images/homepage/teacher/ipad_landscape_teacher_team_bg.jpg) center bottom / cover no-repeat;
 	}
-	@include rwd(700px){
-        background: url(../images/homepage/teacher/mobile_b_teacher_team_bg.jpg) center bottom / cover no-repeat;
+	@include rwd(1440px){
+		background-size: contain;
 	}
-	@include rwd(500px){
-        background: url(../images/homepage/teacher/mobile_teacher_team_bg.jpg) center bottom / cover no-repeat;
+	@include rwd(700px){
+        background: url(../images/homepage/teacher/mobile_teacher_team_bg.jpg) center bottom / contain no-repeat;
 	}
 }
 .teacher_team_box .teacher_team_box_text {
@@ -270,43 +342,63 @@
     margin: -8% auto 0 auto;
     max-width: 522px;
     padding: 42px 66px 58px 66px;
-    position: relative;
+    position: absolute;
     z-index: 2;
+	@include rwd(1030){
+		font-size: 0.8em;
+		padding: 24px 48px 32px 48px;
+	}
+	@include rwd(840){
+		font-size: 0.7em;
+	}
+	@include rwd(700){
+		top: 0;
+		margin-top: 0;
+	}
+	h2 {
+		color: $minor-color;
+		font-size: 3.25em;
+		letter-spacing: 2px;
+		text-align: center;
+		@include rwd(1030){
+			font-size: 2.8em;
+		}
+	}
+	h3 {
+		color: #efb85c;
+		font-size: 1.5625em;
+		letter-spacing: 3px;
+		padding: 24px 0 50px 0;
+		text-align: center;
+		@include rwd(1030){
+			padding: 8px 0 24px 0;
+		}
+	}
+	p {
+		color: #efb85c;
+		font-size: 1.75em;
+		font-weight: 400;
+		letter-spacing: 2px;
+		position: relative;
+		text-align: center;
+		&:before {
+			position: absolute;
+			z-index: 3;
+			top: -25px;
+			left: 50%;
+			transform: translateX(-50%);
+			content: "";
+			width: 62px;
+			height: 5px;
+			background-image: url('../images/homepage/bg_dot_o.svg');
+			background-repeat: repeat-x;
+			@include rwd(1030){
+				top: -12px;
+			}
+		}
+	}
 }
-.teacher_team_box .teacher_team_box_text h2 {
-    color: $minor-color;
 
-    font-size: 52px;
-    letter-spacing: 2px;
-    text-align: center;
-}
-.teacher_team_box .teacher_team_box_text h3 {
-    color: #efb85c;
-    font-size: 25px;
-    letter-spacing: 3px;
-    padding: 24px 0 50px 0;
-    text-align: center;
-}
-.teacher_team_box .teacher_team_box_text p {
-    color: #efb85c;
-    font-size: 28px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    position: relative;
-    text-align: center;
-}
-.teacher_team_box .teacher_team_box_text p:before {
-	position: absolute;
-	z-index: 3;
-	top: -25px;
-	left: 50%;
-	transform: translateX(-50%);
-	content: "";
-	width: 62px;
-	height: 5px;
-	background-image: url('../images/homepage/bg_dot_o.svg');
-	background-repeat: repeat-x;
-}
 .teacher_team_box_text_btn a {text-decoration: none;}
 .teacher_team_box_text_btn .teacher_consultation_btn,.teacher_team_box_text_btn .teacher_course_btn {
     border-radius: 6px;
@@ -323,6 +415,9 @@
     outline: none;
     text-align: center;
     width: 252px;
+	@include rwd(1030){
+		margin-top: 24px;
+	}
 	&::after{
 		content: "";
 		display: block;
@@ -350,65 +445,232 @@
     margin: 0 auto;
     max-width: 1250px;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     width: 100%;
-	figure{
-		img{
-			transform: translateY(100%);
-			opacity: 0;
-			@include js(false) {
-				transform: translateY(0);
-				opacity: 1;
+	min-width: 1250px;
+	li{
+		transform: translateY(100%);
+		opacity: 0;
+		width: 320px;
+		height: 320px;
+		position: absolute;
+		z-index: 2;
+		background-repeat: no-repeat;
+		bottom: 0;
+		background-position: bottom center;
+		background-size: contain;
+		transition: $transition;
+		@include rwd(1090){
+			width: 300px;
+			height: 300px;
+		}
+		@include rwd(940){
+			width: 260px;
+			height: 260px;
+		}
+		@include rwd(840){
+			width: 240px;
+			height: 240px;
+		}
+		@include rwd(550){
+			width: 200px;
+			height: 200px;
+		}
+		@include js(false) {
+			transform: translateY(0);
+			opacity: 1;
+		}
+		@for $i from 1 through 7 {
+			&:nth-child(#{$i}){
+				background-image: url('../images/homepage/teacher/teacher_team_teacher#{$i}.png');
+			}
+		}
+		h3{
+			@extend %hide-text;
+		}
+		&:nth-child(1){
+			left: -4%;
+			transition-delay: .2s; 
+			@include rwd(1200){
+				left: -2%;
+			}
+			@include rwd(1090){
+				left: 0;
+			}
+			@include rwd(1030){
+				left: 3%;
+			}
+			@include rwd(940){
+				left: 8%;
+			}
+			@include rwd(830){
+				left: 12%;
+			}
+			@include rwd(700){
+				left: 20%;
+			}
+			@include rwd(550){
+				left: 27%;
+			}
+		}
+		&:nth-child(2){
+			left: 12%;
+			transition-delay: .4s;
+			@include rwd(1200){
+				left: 13%;
+			}
+			@include rwd(1090){
+				left: 14%;
+			}
+			@include rwd(1030){
+				left: 16%;
+			}
+			@include rwd(940){
+				left: 20%;
+			}
+			@include rwd(830){
+				left: 23%;
+			}
+			@include rwd(700){
+				left: 32%;
+			}
+			@include rwd(550){
+				left: 36%;
+			}
+		}
+		&:nth-child(3){
+			right: 12%;
+			transition-delay: .2s; 
+			@include rwd(1200){
+				right: 13%;
+			}
+			@include rwd(1090){
+				right: 14%;
+			}
+			@include rwd(1030){
+				right: 16%;
+			}
+			@include rwd(940){
+				right: 20%;
+			}
+			@include rwd(830){
+				right: 24%;
+			}
+			@include rwd(700){
+				right: 34%;
+			}
+			@include rwd(550){
+				right: 38%;
+			}
+			&::before{
+				content: "";
+				position: absolute;
+				z-index: 2;
+				top: -80px;
+				right: 0;
+				width: 120px;
+				height: 120px;
+				background-image: url('../images/homepage/teacher/teacher_word1.png');
+				background-repeat: no-repeat;
+				// bottom: 0;
+				background-position: bottom center;
+				background-size: contain;
+				@include rwd(1030){
+					width: 110px;
+					height: 110px;
+				}
+				@include rwd(770){
+					width: 80px;
+					height: 80px;
+					top: -40px;
+					left: 130px;
+				}
+				@include rwd(700){
+					top: -20px;
+					left: 160px;
+				}
+				@include rwd(550){
+					width: 60px;
+					height: 60px;
+					top: -20px;
+					left: 118px;
+				}
+			}
+		}
+		&:nth-child(4){
+			right: -4%;
+			transition-delay: .5s;
+			@include rwd(1200){
+				right: 1%;
+			}
+			@include rwd(1090){
+				right: 3%;
+			}
+			@include rwd(1030){
+				right: 6%;
+			}
+			@include rwd(940){
+				right: 11%;
+			}
+			@include rwd(830){
+				right: 14%;
+			}
+			@include rwd(770){
+				right: 16%;
+			}
+			@include rwd(700){
+				right: 22%;
+			}
+			@include rwd(550){
+				right: 29%;
 			}
 		}
 	}
 	.run-animate &{
-		figure{
-			img{
-				transform: translateY(0);
-				opacity: 1;
-			}
+		li{
+			transform: translateY(0);
+			opacity: 1;
 		}
 	}
 }
-.teacher_team_box .teacher_left {bottom: 0; left: 0; position: absolute; width: 33%;}
-.teacher_team_box .teacher_right {bottom: 0; position: absolute; right: 0; width: 33%; height: 310px;}
-.teacher_team_box .teacher_left img.teacher_team_teacher1,.teacher_team_box .teacher_left img.teacher_team_teacher2,
-.teacher_team_box .teacher_right img.teacher_team_teacher3,.teacher_team_box .teacher_right img.teacher_team_teacher4,
-.teacher_team_box .teacher_right img.teacher_word1 {
-    // animation: teacher_offset_effect .5s ease-in-out forwards;
-    bottom: 0;
-    height: auto;
-    position: absolute;
-	transition: $transition;
-}
-.teacher_team_box .teacher_left img.teacher_team_teacher1 {
-	transition-delay: .2s; 
-	left: 0; max-width: 238px; z-index: 2;
-}
-.teacher_team_box .teacher_left img.teacher_team_teacher2 {
-	transition-delay: .4s; 
-	left: 174px; max-width: 292px; z-index: 3;
-}
-.teacher_team_box .teacher_right figure {padding: 0; margin: 0;}
-.teacher_team_box .teacher_right img.teacher_team_teacher3 {
-    transition-delay: .2s;
-    bottom: -3px;
-    max-width: 212px;
-    z-index: 3;
-}
-.teacher_team_box .teacher_right img.teacher_team_teacher4 {
-	transition-delay: .4s; 
-	max-width: 202px; right: 40px; z-index: 2;
-}
-.teacher_team_box .teacher_right img.teacher_word1 {
-  	transition-delay: .5s;
-    right: 45%;
-    max-width: 118px;
-    top: -24%;
-    z-index: 3;
-    width: 26%;
-}
+// .teacher_team_box .teacher_left {bottom: 0; left: 0; position: absolute; width: 33%;}
+// .teacher_team_box .teacher_right {bottom: 0; position: absolute; right: 0; width: 33%; height: 310px;}
+// .teacher_team_box .teacher_left img.teacher_team_teacher1,.teacher_team_box .teacher_left img.teacher_team_teacher2,
+// .teacher_team_box .teacher_right img.teacher_team_teacher3,.teacher_team_box .teacher_right img.teacher_team_teacher4,
+// .teacher_team_box .teacher_right img.teacher_word1 {
+//     // animation: teacher_offset_effect .5s ease-in-out forwards;
+//     bottom: 0;
+//     height: auto;
+//     position: absolute;
+// 	transition: $transition;
+// }
+// .teacher_team_box .teacher_left img.teacher_team_teacher1 {
+// 	transition-delay: .2s; 
+// 	left: 0; max-width: 238px; z-index: 2;
+// }
+// .teacher_team_box .teacher_left img.teacher_team_teacher2 {
+// 	transition-delay: .4s; 
+// 	left: 174px; max-width: 292px; z-index: 3;
+// }
+// .teacher_team_box .teacher_right figure {padding: 0; margin: 0;}
+// .teacher_team_box .teacher_right img.teacher_team_teacher3 {
+//     transition-delay: .2s;
+//     bottom: -3px;
+//     max-width: 212px;
+//     z-index: 3;
+// }
+// .teacher_team_box .teacher_right img.teacher_team_teacher4 {
+// 	transition-delay: .4s; 
+// 	max-width: 202px; right: 40px; z-index: 2;
+// }
+// .teacher_team_box .teacher_right img.teacher_word1 {
+//   	transition-delay: .5s;
+//     right: 45%;
+//     max-width: 118px;
+//     top: -24%;
+//     z-index: 3;
+//     width: 26%;
+// }
 .teacher_instruction_describe {float: right; margin-top: 130px; width: 80%;}
 .teacher_instruction_describe .teacher_describe_photo {
     float: left;
@@ -663,8 +925,17 @@
 //10年教育品牌口碑
 .run_numbers{
 	background-color: white;
-	padding: 33px 84PX;
+	padding: 33px 84px;
 	box-shadow: $box-shadow;
+	@include rwd(1130){
+		padding: 33px 24px;
+	}
+	@include rwd(1000){
+		padding: 8px 0;
+	}
+	@include rwd(470){
+		font-size: 0.8em;
+	}
 	&::after{
 		@extend %clear;
 	}
@@ -676,12 +947,19 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		@include rwd(1000){
+			width: 50%;
+			margin: 8px 0;
+		}
 		+ li{
 			border-left: #DCD9DB solid 1px;
 		}
 		.center{
 			padding-left: 82px;
 			position: relative;
+			@include rwd(470){
+				padding-left: 64px;
+			}
 			&::before{
 				@extend %t50;
 				left: 0;
@@ -691,6 +969,13 @@
 				background-position: center;
 				background-repeat: no-repeat;
 				// background-image: url(../images/homepage/teacher/icon_run_numbers1.svg);
+				@include rwd(470){
+					width: 64px;
+					height: 64px;
+				}
+				@include rwd(390){
+					padding-left: 64px;
+				}
 			}
 		}
 		.num{
@@ -727,7 +1012,26 @@
 					}
 				}
 			}
-			
+		}
+		&:nth-child(2),
+		&:nth-child(4){
+			@include rwd(1000){
+				justify-content: left;
+				padding-left: 32px;
+			}
+			@include rwd(520){
+				padding-left: 8px;
+			}
+		}
+		&:nth-child(1),
+		&:nth-child(3){
+			@include rwd(1000){
+				justify-content: right;
+				padding-right: 32px;
+			}
+			@include rwd(520){
+				padding-right: 8px;
+			}
 		}
 	}
 }

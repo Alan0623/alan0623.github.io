@@ -326,6 +326,9 @@
 			// display: inline-block;
     		// overflow: hidden;
 			// padding: 0px;
+			@include rwd(577){
+				margin-left: calc(50% - 138px);
+			}
 			&::after{
 				@extend %clear;
 			}
@@ -439,6 +442,10 @@
 		color: $minor-color;
 		font-family: 'Noto Serif TC', serif;
 		position: relative;
+		@include rwd(800){
+			font-size: 2em;
+		}
+
 		&::before{
 			content: "";
 			position: absolute;
@@ -470,6 +477,13 @@
 		font-weight: lighter;
 		@include rwd(600){
 			text-align: left;
+			padding: 0 48px;
+		}
+		@include rwd(560){
+			padding: 0 24px;
+		}
+		@include rwd(510){
+			padding: 0 16px;
 		}
 		span{
 			display: block;
@@ -480,11 +494,21 @@
 		}
 	}
 	.block_future_list{
-		max-width:  1122px;
+		// max-width:  1122px;
+		max-width: 1250px;
 		margin: 0 auto;
 		// padding: 0 48px;
 		padding: 0 64px;
 		margin-top: 55px;
+		@include rwd(730){
+			padding: 0 48px;
+		}
+		@include rwd(560){
+			padding: 0 24px;
+		}
+		@include rwd(510){
+			padding: 0 16px;
+		}
 		&::after{
 			@extend %clear;
 		}
@@ -535,6 +559,9 @@
 						content: "03";
 					}
 				}
+				img{
+					object-position: left center!important;
+				}
 			}
 		}
 		.figure{
@@ -553,6 +580,16 @@
 					width: 50%;
 					float: left;
 				}
+				@include rwd(800){
+					width: 45%;
+				}
+				@include rwd(700){
+					width: 40%;
+				}
+				@include rwd(625){
+					width: 35%;
+					height: 100%;
+				}
 				img{
 					width: 100%;
 					
@@ -561,6 +598,9 @@
 						max-height: 240px;
 						object-fit: cover;
 						object-position: center;
+					}
+					@include rwd(625){
+						min-height: 210px;
 					}
 				}
 			}
@@ -571,6 +611,12 @@
 			@include rwd(1195){
 				width: 50%;
 				float: left;
+			}
+			@include rwd(700){
+				width: 60%;
+			}
+			@include rwd(625){
+				width: 65%;
 			}
 			&::before{
 				position: absolute;
@@ -656,6 +702,9 @@
 		text-align: center;
 		padding-top: 0;
 	}
+	@include rwd(730){
+		padding: 0;
+	}
 	&::after{
 		@extend %clear;
 	}
@@ -734,6 +783,9 @@
 				background-image: url('../images/homepage/bg_dot_o.svg');
 				background-repeat: repeat-x;
 				transition: all .3s ease-in-out;
+				@include rwd(730){
+					display: none;
+				}
 			}
 			&::before{
 				top: 36px;
@@ -793,6 +845,9 @@
 			@include media('mobile'){
 				right: -50px;
 			}
+			@include rwd(730){
+				display: none;
+			}
 		}
 		&::after{
 			position: absolute;
@@ -809,6 +864,9 @@
 				background-position: bottom;
 				background-repeat: no-repeat;
 				left: -90px;
+			}
+			@include rwd(730){
+				display: none;
 			}
 		}
 		&:hover, &:focus{
@@ -830,7 +888,11 @@
 			overflow: hidden;
 			padding-top: 57px;
 			position: relative;
-			
+			@include rwd(730){
+				padding: 0;
+				border-radius: 0;
+				box-shadow: none;
+			}
 			&::before{
 				content: "";
 				position: absolute;
@@ -841,6 +903,9 @@
 				background-image: url('../images/icon/white_dot.svg');
 				background-size: cover;
 				z-index: 3;
+				@include rwd(730){
+					display: none;
+				}
 			}
 			&::after{
 				content: "";
@@ -851,6 +916,9 @@
 				height: 30px;
 				background-color: $major-color;
 				z-index: 2;
+				@include rwd(730){
+					display: none;
+				}
 			}
 			.img{
 				display: inline-block;
@@ -866,6 +934,9 @@
 					right: calc(50% - 62px);
 					opacity: 0;
 					transition: $transition;
+					@include rwd(730){
+						opacity: 1;
+					}
 				}
 			}
 			img{
@@ -882,14 +953,36 @@
 .block_newspaper
 ------------------------------------------------------------------*/
 .block_newspaper{
+	overflow: hidden;
 	text-align: center;
 	padding-bottom: 120px;
 	@extend %bigtitle;
+	@include rwd(730){
+		padding-top: 120px;
+	}
+	>p{
+		>span{
+			&:nth-child(2){
+				@include rwd(760){
+					display: none;
+				}
+			}
+		}
+	}
 	.newspaper_list{
 		max-width: 1052px;
 		width: 100%;
 		display: inline-block;
 		padding: 0 56px;
+		@include rwd(600){
+			padding: 0 32px;
+		}
+		@include rwd(500){
+			padding: 0 24px;
+		}
+		@include rwd(400){
+			padding: 0 16px;
+		}
 		li{
 			&::after{
 				@extend %clear;
@@ -900,13 +993,26 @@
 				width: 68%;
 				float: left;
 				padding: 8px;
+				@include rwd(1020){
+					width: 67%;
+				}
+				@include rwd(760){
+					width: 100%;
+				}
 				.figcaption{
 					top: 33px;
 					left: 38px;
+					@include rwd(800){
+						top: 16px;
+						left: 16px;
+					}
 				}
 				.hover_info{
 					background-color: #F9C270;
 					padding: 32px 39px;
+					@include rwd(800){
+						padding: 16px;
+					}
 					h3{
 						margin-bottom: 16px;
 						font-size: 1.375em;
@@ -926,18 +1032,38 @@
 				float: left;
 				padding: 8px;
 				padding-bottom: 3px;
+
+				@include rwd(1020){
+					width: 32.8%;
+				}
+				@include rwd(760){
+					width: 100%;
+				}
 				.figcaption{
 					left: 21px;
+					@include rwd(800){
+						left: 16px;
+					}
 				}
 			}
 			&:nth-child(2){
 				.hover_info{
 				background-color: #65A0A6;
+					>p{
+						@include rwd(1000,760){
+							display: none;
+						}
+					}
 				}
 			}
 			&:nth-child(3){
 				.hover_info{
 				background-color: #6EB92B;
+					>p{
+						@include rwd(1000,760){
+							display: none;
+						}
+					}
 				}
 			}
 			.img{
@@ -959,6 +1085,10 @@
 				color: white;
 				text-align: left;
 				text-shadow: $text-shadow;
+				@include rwd(800){
+					top: 14px;
+					left: 16px;
+				}
 			}
 			a{
 				position: relative;
@@ -1046,9 +1176,13 @@
 .block_result
 ------------------------------------------------------------------*/
 .block_result{
+	overflow: hidden;
 	text-align: center;
 	padding-bottom: 120px;
 	@extend %bigtitle;
+	@include rwd(700){
+		padding-bottom: 0;
+	}
 	.result_tabs_list{
 		// max-width: 940px;
 		max-width: 1084px;
@@ -1064,9 +1198,24 @@
 .result_tabs_list{
 	.tabs{
 		width: calc(100% - 146px);
-		> li a{
-			padding: 0 32px;
+		@include rwd(630){
+			width: calc(100% - 32px);
 		}
+		> li{
+			@include rwd(630){
+				width: 25%;
+			}
+			a{
+				padding: 0 32px;
+	
+				@include rwd(800){
+					padding: 0 16px;
+				}
+				@include rwd(630){
+					padding: 0;
+				}
+			}
+		} 
 	} 
 	.tab_container{
 		padding-top: 32px;
@@ -1084,6 +1233,12 @@
 		width: auto;
 		padding: 0 32px 0 16px;
 		right: 72px;
+		@include rwd(750){
+			top: auto;
+			bottom: -20px;
+			right: 16px;
+			z-index: 2;
+		}
 	}
 }
 .jcarousel-wrapper {
@@ -1093,6 +1248,9 @@
     padding: 0 64px;
     box-sizing: border-box;
 	width: 100%;
+	@include rwd(630){
+		padding: 0 24px;
+	}
 }
 /** Carousel **/
 .master_list,
@@ -1241,6 +1399,14 @@
 	position: relative;
 	overflow: hidden;
 	margin-left: 170px;
+
+	@include rwd(699){
+		margin-left: calc(50% - 220px);
+	}
+	@include rwd(460){
+		margin-left: calc(50% - 150px);
+	}
+	
 	&::before{
 		content: "";
 		position: absolute;
@@ -1250,6 +1416,9 @@
 		width: 40%;
 		height: 100%;
 		background: linear-gradient(90deg, rgba(255, 255, 255, 0)0%, rgba(255, 255, 255, 0.7)40%);
+		@include rwd(700,460){
+			display: none;
+		}
 	}
 	.figcaption{
 		margin-top: 4px;
@@ -1270,6 +1439,10 @@
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
             padding: 0 8px;
+			@include rwd(460){
+				max-width: 300px;
+			}
+
             a{
                 display: inline-block;
                 float: left;
@@ -1322,6 +1495,9 @@
                     max-width: 100%;
                     height: auto !important;
 					max-width: 420px;
+					@include rwd(460){
+						max-width: 300px;
+					}
                 }
                 &:hover, &:focus{
                     color: $major-color;
@@ -1392,6 +1568,7 @@
 						overflow: hidden;
 						text-overflow: ellipsis;
 						white-space: nowrap;
+						
                     }
                 }
                 .img{
@@ -1419,6 +1596,10 @@
 						position: relative;
 						padding-top: 44px;
 						letter-spacing: 1px;
+						overflow: hidden;
+						@include rwd(730){
+							font-size: 0.8em;
+						}
 						&::before{
 							position: absolute;
 							content: "作者";

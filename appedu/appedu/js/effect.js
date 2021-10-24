@@ -221,11 +221,9 @@ $(function() {
 
           if (width >= 1000) {
               width = width / 5;
-          } else if (width >= 600) {
+          } else if (width >= 450) {
               width = width / 3;
-          } else if (width >= 350) {
-              width = width / 1;
-          }
+          } 
 
           carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
       })
@@ -306,10 +304,10 @@ $(function() {
 
           if (width >= 1000) {
               width = width / 4;
-          } else if (width >= 700) {
-              width = width / 4;
-          } else if (width >= 350) {
+          } else if (width >= 500) {
               width = width / 3;
+          } else if (width >= 400) {
+              width = width / 2;
           } else if (width >= 300) {
             width = width / 2;
         }
