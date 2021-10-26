@@ -36,6 +36,9 @@ ul,li{list-style: none;padding: 0;margin: 0;}
 		height: 20px;
 		width: 100%;
 		clear: both;
+		@include rwd(500){
+			height: 8px;
+		}
 	}
 }
 
@@ -778,7 +781,7 @@ header class="header"
     position: fixed;
     left: 32px;
 	top: 162px;
-    z-index: 12;
+    z-index: 10;
 	opacity: 0;
 	transition: $transition;
 	transform: translateY(-200px);
@@ -855,7 +858,7 @@ header class="header"
     position: fixed;
     right: 0;
     top: 162px;
-    z-index: 998;
+    z-index: 10;
     transition: all .4s ease-out 0s;
 	transform: translateX(300px);
 	&.selected{
@@ -1189,8 +1192,11 @@ footer
 			font-size: 1em;
 		}
 		@include rwd(500){
-			font-size: 1.2em;
+			font-size: 1.4em;
 			transform: translateX(16px);
+		}
+		@include rwd(350){
+			font-size: 1.2em;
 		}
 		&::after,
 		&::before{
@@ -1327,6 +1333,7 @@ footer
 				.text_change{
 					border-color: $major-color;
 					color: $major-color;
+					width: 173px;
 					&::after{
 						border-color: transparent transparent $major-color transparent;
 					}
@@ -1363,7 +1370,7 @@ footer
 				&:nth-child(3){
 					margin-bottom: 22px;
 				}
-				&:nth-last-child(1){
+				&:last-child{
 					transform: translateX(30px);
 				}
 			}
@@ -1584,4 +1591,51 @@ footer
     88.59% {transform: matrix3d(1.1,0,0,0,0,1.1,0,0,0,0,1,0,0,0,0,1);}
     96% {transform: matrix3d(1.1,0,0,0,0,1.1,0,0,0,0,1,0,0,0,0,1);}
     100% {transform: matrix3d(1.1,0,0,0,0,1.1,0,0,0,0,1,0,0,0,0,1);}
+}
+
+.gotop{
+	position: absolute;
+	z-index: 8;
+	top: 10px;
+	right: 16px;
+	display: block;
+	width: 65px;
+	height: 65px;
+	border-radius: 65px;
+	background-color: #F9C270;
+	@extend %hide-text;
+	@include rwd(700){
+		top: 110px;
+		width: 48px;
+		height: 48px;
+	}
+	@include rwd(400){
+		width: 38px;
+		height: 38px;
+	}
+	&::before{
+		position: absolute;
+		z-index: 3;
+		content: "";
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 14px 18px 14px;
+		border-color: transparent transparent #FFF3D9 transparent;
+		top: 22px;
+    	left: 18px;
+		@include rwd(700){
+			border-width: 0 12px 16px 12px;
+			top: 16px;
+			left: 13px;
+		}
+		@include rwd(400){
+			top: 10px;
+			left: 7px;
+		}
+	}
+	&:hover, &:focus{
+		opacity: 0.7;
+		animation: btn_pluse_effect 1200ms linear 2 alternate;
+	}
 }

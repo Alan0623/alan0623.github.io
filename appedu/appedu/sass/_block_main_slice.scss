@@ -18,6 +18,11 @@
 		max-height: 600px;
 		height: 600px;
 	}
+	@include rwd(500){
+		max-height: 500px;
+		height: 500px;
+	}
+	
 	&::before,
 	&::after{
 		content: "";
@@ -33,6 +38,9 @@
 	&::before{
 		top: 0px;
 		left: 0px;
+		@include media('center'){
+			top: 56px;
+		}
 		// background: linear-gradient(0deg, #FDFCFA 0%, #FFF3DA 100%);
 	}
 	&::after{
@@ -77,6 +85,10 @@
 		@include rwd(550){
 			font-size: 0.8em;
 		}
+		@include rwd(450){
+			font-size: 0.7em;
+			left: 0;
+		}
 		h2{
 			font-size: 1.125em;
     		font-weight: 500;
@@ -88,6 +100,9 @@
 			font-weight: 700;
 			color: $minor-color;
 			letter-spacing: 2px;
+			@include rwd(350){
+				font-size: 1.2em;
+			}
 			&::after{
 				content: "";
 			}
@@ -109,6 +124,9 @@
 				word-break: keep-all;
 				float: left;
     			display: block;
+				@include rwd(350){
+					margin-top: 4px;
+				}
 				&::before{
 					content: "";
 					position: absolute;
@@ -148,6 +166,9 @@
 			font-size: 1.41em;
 			word-break: keep-all;
 			// padding: 0 4px;
+			@include rwd(350){
+				font-size: 1em;
+			}
 		}
 	}
 	.center{
@@ -192,6 +213,10 @@
 		padding-top: 56px;
 		height: 600px;
 	}
+	@include rwd(500){
+		padding-top: 56px;
+		height: 500px;
+	}
 }
 .swiper-slide {
 	text-align: center;
@@ -214,6 +239,7 @@
 	transition: 300ms;
 	// transform: scale(0.8);
 	opacity: 0.5;
+	// min-width: 300px;
 	a{
 		display: inline-block;
 		border-radius: 12px;
@@ -251,9 +277,14 @@
 	background-image: url('../images/icon/icon_swiper_arrow_g.svg');
 	background-size: contain;
 	transition: $transition;
+	z-index: 2;
 	&:hover{
 		background-color: #FFF3D9;
 		background-image: url('../images/icon/icon_swiper_arrow_o.svg');
+	}
+	@include rwd(400){
+		width: 38px;
+		height: 38px;
 	}
 }
 .swiper-button-prev{

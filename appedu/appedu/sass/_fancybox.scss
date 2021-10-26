@@ -31,6 +31,7 @@ body.compensate-for-scrollbar {
 
 .fancybox-container * {
     box-sizing: border-box;
+    width: 100%;
 }
 
 .fancybox-outer,
@@ -183,7 +184,7 @@ body.compensate-for-scrollbar {
     // text-align: left;
 	vertical-align: middle;
 	// width: 100%;
-    max-width: 1280px;
+    max-width: 800px;
     padding: 24px;
 
 	figure{
@@ -191,10 +192,15 @@ body.compensate-for-scrollbar {
         margin: 0 auto;
         // padding: 22px;
         // width: calc(100% - 22px);
+        text-align: center;
         img{
             // width: 100%;
             margin: 0 auto;
             display: block;
+        }
+        .video-container{
+            max-width: 800px;
+            margin: 0 auto;
         }
 		figcaption{
 			position: absolute;

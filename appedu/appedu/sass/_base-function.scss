@@ -1651,6 +1651,11 @@
 		font-weight: 700;
 		margin-bottom: 16px;
 		position: relative;
+		z-index: 2;
+		@include rwd(450){
+			font-size: 1.4em;
+		}
+
 		span{
 			position: relative;
 			z-index: 2;
@@ -1689,8 +1694,17 @@
 		font-weight: 700;
 		font-size: 1.5em;
 		margin-bottom: 48px;
+		position: relative;
+		z-index: 2;
 		@include media('mobile2'){
 			font-size: 1.375em;
+		}
+		@include rwd(450){
+			font-size: 1em;
+			margin-bottom: 24px;
+		}
+		i{
+			font-style: normal;
 		}
 		span{
 			color: $major-color;

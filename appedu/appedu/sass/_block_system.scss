@@ -9,6 +9,10 @@
 	position: relative;
 	z-index: 1;
 	padding: 0 72px;
+	
+	@include rwd(760){
+		padding: 0px;
+	}
 	>h2{
 		color: $minor-color;
 		font-family: 'Noto Serif TC', serif;
@@ -18,8 +22,14 @@
 		@include rwd(800){
 			font-size: 2em;
 		}
+		@include rwd(760){
+			padding: 0 32px;
+		}
 		@include rwd(500){
 			font-size: 1.6em;
+		}
+		@include rwd(450){
+			font-size: 1.4em;
 		}
 		span{
 			position: relative;
@@ -64,6 +74,9 @@
 		@include rwd(500){
 			font-size: 1.2em;
 		}
+		@include rwd(760){
+			padding: 0 32px;
+		}
 	}
 }
 
@@ -79,6 +92,9 @@
 		color: $minor-color;
 		text-align: center;
 		padding-left: 40px;
+		@include rwd(760){
+			right: 16px;
+		}
 		span{
 			position: relative;
 			&::after{
@@ -88,6 +104,10 @@
 				height: 40px;
 				background-image: url(../images/icon/icon_swiper_arrow_g.svg);
 				background-position: center;
+				@include rwd(400){
+					width: 38px;
+					height: 38px;
+				}
 			}
 		}
 		&:hover, &:focus{
@@ -118,7 +138,10 @@
 		display: inline-block;
 		width: 100%;
 		height: 54px;
-
+		@include rwd(760){
+			width: calc(100% - 32px);
+			margin-left: 16px;
+		}
 		&::after{
 			@extend %clear;
 			position: absolute;
@@ -196,6 +219,41 @@
 		}
 	}
 }
+.news_event_list,
+.hot_event_list {
+	@include rwd(760){
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+		ol {
+			
+			width: 10000em;
+			position: relative;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			// margin-left: calc(50% - 210px);
+			left: 0;
+			li {
+				width: 200px;
+				float: left;
+				border: 1px solid #fff;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				padding: 0 32px;
+			}
+		}
+	}
+}
+.news_event_list{
+	@include rwd(320){
+		max-width: 320px;
+		>li{
+			max-width: 320px;
+		}
+	}
+}
 .hot_event{//本日熱門
 	clear: both;
 	// opacity: 0;
@@ -211,8 +269,20 @@
 		@include rwd(1080){
 			width: 50%;
 			&:nth-child(2n+1){
-				clear: both!important;
+				clear: both;
 			}
+		}
+		@include rwd(760){
+			width: 100%;
+			min-width: 300px;
+			max-width: 420px;
+			// width: 420px!important;
+			&:nth-child(2n+1){
+				clear: none;
+			}
+		}
+		@include rwd(450){
+			max-width: 380px;
 		}
 		&:nth-child(3n+1){
 			clear: both;
@@ -224,12 +294,19 @@
 			overflow: hidden;
 			img{
 				width: 100%;
+				max-width: 420px;
+				@include rwd(450){
+					max-width: 380px;
+				}
 			}
 		}
 		&:nth-child(5),
 		&:nth-child(6){
 			@include rwd(1080){
 				display: none;
+			}
+			@include rwd(760){
+				display: block;
 			}
 		}
 		@for $i from 1 through 7 {
@@ -359,7 +436,7 @@
 			font-size: $f14px;
 			border-bottom: #E6E7E6 solid 1px;
 			font-weight: lighter;
-			padding-bottom: 8px;
+			padding-bottom: 4px;
 			text-overflow: ellipsis;
 			display: -webkit-box;
 			-webkit-box-orient: vertical;
@@ -442,6 +519,57 @@
 			transition: $transition;
 			height: 7px;
 			background-color: $minor-color;
+		}
+	}
+}
+@media screen and (min-width:761px) {
+	.block_system{
+		.news_event,
+		.hot_event{
+			width: 100%!important;
+			display: inline-block;
+			// padding: 0;
+		}
+		.news_event{
+			padding: 0 46px;
+		}
+		.hot_event{
+			padding: 0;
+		}
+		.news_event_list_prev,
+		.news_event_list_next,
+		.hot_event_list_prev,
+		.hot_event_list_next{
+			display: none;
+			opacity: 0;
+		}
+
+		.news_event_list_prev,
+		.hot_event_list_prev{
+			left: 4px;
+		}
+
+		.news_event_list_next,
+		.hot_event_list_next{
+			right: 4px;
+		}
+
+		.news_event > li{
+			width: 50%!important;
+		}
+	}
+}
+@media screen and (min-width:1080px) {
+	.block_system{
+		.hot_event li{
+			width: 33.33%!important;
+		}
+	}
+}
+@media screen and (max-width:1081px) and (min-width:761px) {
+	.block_system{
+		.hot_event li{
+			width: 50%!important;
 		}
 	}
 }
@@ -549,7 +677,7 @@
 }
 
 //最新活動------------------------------------------------------------------------------------
-.news_event_list{
+.news_event{
 	padding: 0 46px;
 	>li{
 		// width: 50%;
@@ -638,16 +766,39 @@
 			height: 34px;
 			background-image: url('../images/icon/icon_clock.svg');
 		}
+		@include rwd(350){
+			font-size: 1.4em;
+		}
+		span{
+			&:nth-child(2){
+				position: relative;
+				padding-left: 20px;
+				&::before{
+					@extend %t50;
+					content: "-";
+					left: 0;
+				}
+			}
+		}
 	}
 }
 
 //頁籤------------------------------------------------------------------------------------
 .system_list{
+	overflow: hidden;
 	.tabs{
 		>li{
+			@include rwd(440){
+				width: 50%;
+			}
 			a{
 				padding: 0 26px;
 				padding-left: 64px;
+				position: relative;
+				@include rwd(440){
+					padding: 0 16px;
+					padding-left: 56px;
+				}
 			}
 			@for $i from 1 through 6 {
 				&:nth-child(#{$i}){
@@ -670,13 +821,79 @@
 			}
 		}
 	}
+	.tab_container{
+		@include rwd(760){
+			width: 420px;
+			margin: 0 auto;
+		}
+		@include rwd(450){
+			width: 380px;
+		}
+		@include rwd(400){
+			width: 100%;
+			max-width: 330px;
+		}
+		@include rwd(350){
+			max-width: 300px;
+		}
+
+	}
 	.tab_content{
 		height: 1200px;
-		.news_event_list > li{
+		padding: 0;
+		@include rwd(760){
+			height: 600px;
+		}
+		.news_event > li{
 			width: 50%;
+			max-width: 404px;
 		}
 	}
 	.more{
+		@include rwd(440){
+			top: auto;
+			bottom: 16px;
+			right: calc(50% - 126px);
+			z-index: 2;
+			display: block;
+			border-radius: 5px;
+			font-size: $f14px;
+			letter-spacing: 2px;
+			color: white;
+			background-color: $major-color;
+			// padding: 18px;
+			width: 252px;
+			text-align: center;
+			z-index: 2;
+			padding: 0;
+			span{
+				&::after{
+					display: none;
+				}
+			}
+			&::before{
+				display: none;
+			}
+			&::after{
+				content: "";
+				display: block;
+				position: absolute;
+				right: 16px;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 1;
+				background-size: contain;
+				width: 10px;
+				height: 10px;
+				background-image: url('../images/icon/icon_btn_more_arrow_w.svg');
+				background-color: transparent;
+				opacity: 1;
+			}
+			&:hover, &:focus{
+				opacity: 0.7;
+				animation: btn_pluse_effect 1200ms linear 2 alternate;
+			}
+		}
 		&::before{
 			left: 24px;
 			@extend %t50;

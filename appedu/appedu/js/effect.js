@@ -242,6 +242,137 @@ $(function() {
       });
 });
 /*------------------------------------------------------------------
+//hot_event_list 本日熱門
+------------------------------------------------------------------*/
+$(function() {
+  if ($(window).width() < 760) {
+    var jcarousel = $('.hot_event_list');
+    jcarousel
+        .on('jcarousel:reload jcarousel:create', function () {
+            var carousel = $(this),
+                width = carousel.innerWidth();
+            if (width >= 1000) {
+                width = width / 2;
+            } else if (width >= 450) {
+                width = width / 1;
+            } 
+            carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+        })
+        .jcarousel({
+            wrap: 'circular'
+        });
+
+    $('.hot_event_list_prev')
+        .jcarouselControl({
+            target: '-=1'
+        });
+
+    $('.hot_event_list_next')
+        .jcarouselControl({
+            target: '+=1'
+        });
+        $('.hot_event').removeAttr("style");
+  }
+  $(window).resize(function() {
+    if ($(window).width() < 760) {
+      var jcarousel = $('.hot_event_list');
+      jcarousel
+          .on('jcarousel:reload jcarousel:create', function () {
+              var carousel = $(this),
+                  width = carousel.innerWidth();
+              if (width >= 1000) {
+                  width = width / 2;
+              } else if (width >= 450) {
+                  width = width / 1;
+              } 
+              carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+          })
+          .jcarousel({
+              wrap: 'circular'
+          });
+
+      $('.hot_event_list_prev')
+          .jcarouselControl({
+              target: '-=1'
+          });
+
+      $('.hot_event_list_next')
+          .jcarouselControl({
+              target: '+=1'
+          });
+          $('.hot_event').removeAttr("style");
+    } else {
+      $('.hot_event').removeAttr("style");
+    }
+  });
+});
+/*------------------------------------------------------------------
+//news_event_list 最新活動
+------------------------------------------------------------------*/
+$(function() {
+  
+  if ($(window).width() < 760) {
+    var jcarousel = $('.system_list .news_event_list');
+    jcarousel
+        .on('jcarousel:reload jcarousel:create', function () {
+            var carousel = $(this),
+                width = carousel.innerWidth();
+            if (width >= 1000) {
+                width = width / 2;
+            } else if (width >= 450) {
+                width = width / 1;
+            } 
+            carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+        })
+        .jcarousel({
+            wrap: 'circular'
+        });
+
+    $('.news_event_list_prev')
+        .jcarouselControl({
+            target: '-=1'
+        });
+
+    $('.news_event_list_next')
+        .jcarouselControl({
+            target: '+=1'
+        });
+        $('.system_list .news_event').removeAttr("style");
+  }
+  $(window).resize(function() {
+    if ($(window).width() < 760) {
+      var jcarousel = $('.system_list .news_event_list');
+      jcarousel
+          .on('jcarousel:reload jcarousel:create', function () {
+              var carousel = $(this),
+                  width = carousel.innerWidth();
+              if (width >= 1000) {
+                  width = width / 2;
+              } else if (width >= 450) {
+                  width = width / 1;
+              } 
+              carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+          })
+          .jcarousel({
+              wrap: 'circular'
+          });
+
+      $('.news_event_list_prev')
+          .jcarouselControl({
+              target: '-=1'
+          });
+
+      $('.news_event_list_next')
+          .jcarouselControl({
+              target: '+=1'
+          });
+          $('.system_list .news_event').removeAttr("style");
+    } else {
+      $('.system_list .news_event').removeAttr("style");
+    }
+  });
+});
+/*------------------------------------------------------------------
 //block_result 來看看學員們的學習成果
 ------------------------------------------------------------------*/
 $(function(){
@@ -304,12 +435,14 @@ $(function() {
 
           if (width >= 1000) {
               width = width / 4;
+          } else if (width >= 800) {
+              width = width / 4;
           } else if (width >= 500) {
               width = width / 3;
           } else if (width >= 400) {
               width = width / 2;
           } else if (width >= 300) {
-            width = width / 2;
+            width = width / 1;
         }
 
           carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
@@ -338,6 +471,21 @@ $(function() {
   //     .on('click', function(e) {
   //         e.preventDefault();
   //     })
+  $('.result_event_list').swipe({
+    swipeLeft: function (event, direction, distance, duration, fingerCount) {
+       $('.result_event_list_next').trigger('click');
+    },
+    swipeRight: function (event, direction, distance, duration, fingerCount) {
+       $('.result_event_list_prev').trigger('click');
+    },
+    //Default is 75px+ set to 0 for demo so any distance triggers swipe
+    threshold: 90,
+    maxTimeThreshold:500,
+    triggerOnTouchEnd:false,
+    triggerOnTouchLeave:true,
+    excludedElements: "label, button, input, select, textarea, .noSwipe",
+    allowPageScroll:"vertical"
+  });
 });
 
 /*------------------------------------------------------------------
@@ -355,7 +503,7 @@ $(function() {
               width = width / 3;
           } else if (width >= 700) {
               width = width / 3;
-          } else if (width >= 350) {
+          } else if (width >= 550) {
               width = width / 2;
           } else if (width >= 300) {
               width = width / 1;
@@ -393,13 +541,29 @@ $(function() {
               return '<a href="#' + page + '">' + page + '</a>';
           }
       });
+      $('.links_list').swipe({
+        swipeLeft: function (event, direction, distance, duration, fingerCount) {
+           $('.links_list_next').trigger('click');
+        },
+        swipeRight: function (event, direction, distance, duration, fingerCount) {
+           $('.links_list_prev').trigger('click');
+        },
+        //Default is 75px+ set to 0 for demo so any distance triggers swipe
+        threshold: 90,
+        maxTimeThreshold:500,
+        triggerOnTouchEnd:false,
+        triggerOnTouchLeave:true,
+        excludedElements: "label, button, input, select, textarea, .noSwipe",
+        allowPageScroll:"vertical"
+      });
 });
 
 /*------------------------------------------------------------------
 //block_news 第一手掌握最新資訊，升級專業超輕鬆！
 ------------------------------------------------------------------*/
 $(function() {
-  var jcarousel = $('.news_list');
+
+  var jcarousel = $('.block_news .news_list');
 
   jcarousel
       .on('jcarousel:reload jcarousel:create', function () {
@@ -446,6 +610,21 @@ $(function() {
   //             return '<a href="#' + page + '">' + page + '</a>';
   //         }
   //     });
+  $('.block_news .news_list').swipe({
+    swipeLeft: function (event, direction, distance, duration, fingerCount) {
+       $('.news_list_next').trigger('click');
+    },
+    swipeRight: function (event, direction, distance, duration, fingerCount) {
+       $('.news_list_prev').trigger('click');
+    },
+    //Default is 75px+ set to 0 for demo so any distance triggers swipe
+    threshold: 90,
+    maxTimeThreshold:500,
+    triggerOnTouchEnd:false,
+    triggerOnTouchLeave:true,
+    excludedElements: "label, button, input, select, textarea, .noSwipe",
+    allowPageScroll:"vertical"
+  });
 });
 /*------------------------------------------------------------------
 //block_story 學員們的動人故事
