@@ -1475,6 +1475,9 @@
 /** Carousel **/
 .master_list,
 .links_list,
+.result_event_list1,
+.result_event_list2,
+.result_event_list3,
 .result_event_list,
 .jcarousel2,
 .jcarousel {
@@ -1616,6 +1619,9 @@
 
 @include rwd(447){
 	.block_result{
+		.result_event_list1,
+		.result_event_list2,
+		.result_event_list3,
 		.result_event_list{
 			ul{
 				li{
@@ -1945,6 +1951,12 @@
 	}
 	.news_list{
 		margin-left: 170px;
+		.news_event{
+			>li{
+				max-width: 404px;
+			}
+		}
+		
 		@include rwd(1245){
 			margin-left: 150px;
 		}
