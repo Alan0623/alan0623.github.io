@@ -1001,6 +1001,13 @@ header class="header"
 	  }
 	.area_box{
 		display: inline-block;
+		width: 100%;
+		>.ui-select{
+			float: left;
+			&:nth-child(2){
+				margin-left: 4px;
+			}
+		}
 		select {
 			background: white;
 			border: solid 1px #d8d8d8;
@@ -1037,6 +1044,12 @@ header class="header"
 			color: white;
 			background-color: $major-color;
 		}
+	}
+	span.zips,
+	span.cities,
+	span.courses{
+		@extend %hide-text;
+		height: 0;
 	}
 }
 
@@ -1638,4 +1651,8 @@ footer
 		opacity: 0.7;
 		animation: btn_pluse_effect 1200ms linear 2 alternate;
 	}
+}
+
+.ui-loader{
+	display: none;
 }

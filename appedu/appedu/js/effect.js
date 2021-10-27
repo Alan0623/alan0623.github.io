@@ -7,6 +7,8 @@ $.preload( '../images/icon/social_links/social_links1_o.svg',
   '../images/icon/social_links/social_links4_o.svg',
   '../images/icon/icon_lock_o.svg',
   '../images/icon/icon_close.svg',
+  '../images/icon/icon_tab1_h.svg',
+  '../images/icon/icon_tab2_h.svg',
   '../images/icon/icon_Arrow_hover.svg'
 );
 /*------------------------------------------------------------------
@@ -478,7 +480,6 @@ $(function() {
     swipeRight: function (event, direction, distance, duration, fingerCount) {
        $('.result_event_list_prev').trigger('click');
     },
-    //Default is 75px+ set to 0 for demo so any distance triggers swipe
     threshold: 90,
     maxTimeThreshold:500,
     triggerOnTouchEnd:false,
