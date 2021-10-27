@@ -124,6 +124,9 @@
 				word-break: keep-all;
 				float: left;
     			display: block;
+				@include rwd(400){
+					margin-top: -7px;
+				}
 				@include rwd(350){
 					margin-top: 4px;
 				}
@@ -271,6 +274,10 @@
 		transform: scale(1);
 		min-width: 300px;
 		margin-left: -55px;
+		&[data-swiper-slide-index="4"],
+		&[data-swiper-slide-index="5"]{
+			margin-left: -85px;
+		}
 	}
 }
 .jcarousel-control-prev,

@@ -428,67 +428,61 @@ $(function(){
 //block_result 來看看學員們的學習成果
 ------------------------------------------------------------------*/
 $(function() {
-  var jcarousel = $('.result_event_list');
+    var jcarousel = $('.result_event_list');
 
-  jcarousel
-      .on('jcarousel:reload jcarousel:create', function () {
-          var carousel = $(this),
-              width = carousel.innerWidth();
+    jcarousel
+        .on('jcarousel:reload jcarousel:create', function () {
+            var carousel = $(this),
+                width = carousel.innerWidth();
 
-          if (width >= 1000) {
-              width = width / 4;
-          } else if (width >= 800) {
-              width = width / 4;
-          } else if (width >= 500) {
-              width = width / 3;
-          } else if (width >= 400) {
-              width = width / 2;
-          } else if (width >= 300) {
-            width = width / 1;
-        }
+            if (width >= 1000) {
+                width = width / 4;
+            } else if (width >= 800) {
+                width = width / 4;
+            } else if (width >= 500) {
+                width = width / 3;
+            } else if (width >= 400) {
+                width = width / 2;
+            } else if (width >= 300) {
+                width = width / 1;
+            }
 
-          carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
-      })
-      .jcarousel({
-          wrap: 'circular'
-      });
+            carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+        })
+        .jcarousel({
+            wrap: 'circular'
+        })
+        .jcarouselSwipe({
+            perSwipe: 3
+        });
 
-  $('.result_event_list_prev')
-      .jcarouselControl({
-          target: '-=1'
-      });
+    $('.result_event_list_prev')
+        .jcarouselControl({
+            target: '-=1'
+        });
 
-  $('.result_event_list_next')
-      .jcarouselControl({
-          target: '+=1'
-      });
+    $('.result_event_list_next')
+        .jcarouselControl({
+            target: '+=1'
+        });
 
-  // $('.jcarousel-pagination')
-  //     .on('jcarouselpagination:active', 'a', function() {
-  //         $(this).addClass('active');
-  //     })
-  //     .on('jcarouselpagination:inactive', 'a', function() {
-  //         $(this).removeClass('active');
-  //     })
-  //     .on('click', function(e) {
-  //         e.preventDefault();
-  //     })
-  $('.result_event_list').swipe({
-    swipeLeft: function (event, direction, distance, duration, fingerCount) {
-       $('.result_event_list_next').trigger('click');
-    },
-    swipeRight: function (event, direction, distance, duration, fingerCount) {
-       $('.result_event_list_prev').trigger('click');
-    },
-    threshold: 90,
-    maxTimeThreshold:500,
-    triggerOnTouchEnd:false,
-    triggerOnTouchLeave:true,
-    excludedElements: "label, button, input, select, textarea, .noSwipe",
-    allowPageScroll:"vertical"
-  });
+    $('.jcarousel-pagination')
+        .on('jcarouselpagination:active', 'a', function() {
+            $(this).addClass('active');
+        })
+        .on('jcarouselpagination:inactive', 'a', function() {
+            $(this).removeClass('active');
+        })
+        .on('click', function(e) {
+            e.preventDefault();
+        })
+        .jcarouselPagination({
+            perPage: 1,
+            item: function(page) {
+                return '<a href="#' + page + '">' + page + '</a>';
+            }
+        });
 });
-
 /*------------------------------------------------------------------
 //block_links 舊活動
 ------------------------------------------------------------------*/
