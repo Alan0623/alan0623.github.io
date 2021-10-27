@@ -1566,6 +1566,10 @@
 							left: 0;
 							right: 0;
 							font-size: 0.75em;
+							transform: translateX(2px);
+							@include rwd(730){
+								top: -28px;
+							}
 							
 						}
 						&::after{
@@ -1579,6 +1583,9 @@
 							width: 12px;
 							height: 1px;
 							background-color: #fff;
+							@include rwd(730){
+								top: -6px;
+							}
 						}
 					}
 				}

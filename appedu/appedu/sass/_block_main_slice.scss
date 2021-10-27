@@ -263,6 +263,10 @@
 	opacity: 1;
 	position: relative;
 	z-index: 9;
+	// min-width: 300px
+	@include rwd(400){
+		transform: scale(1.8);
+	}
 }
 .jcarousel-control-prev,
 .jcarousel-control-next,
