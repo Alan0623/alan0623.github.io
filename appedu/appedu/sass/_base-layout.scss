@@ -247,9 +247,10 @@ header class="mobile_top_bar_box"
 	top: 0;
 	width: 100%;
 	z-index: 18;
-	display: none;
+	height: 0;
 	@include rwd(1199){
 		display: block;
+		height: 56px;
 	}
 
 	.contact_btn{
@@ -272,7 +273,6 @@ header class="mobile_top_bar_box"
 			height: 50px;
 			letter-spacing: 2px;
 			line-height: 50px;
-			
 			position: relative;
 			outline: none;
 			text-align: center;
@@ -281,15 +281,21 @@ header class="mobile_top_bar_box"
 		}
 	}
 
-	.mobile_logo img {
-		display: block;
-		float: left;
-		left: 16px;
-		margin-top: 13.5px;
-		max-width: 160px;
-		position: fixed;
-		z-index: 2;
-	}
+	.mobile_logo{
+			display: none;
+		@include rwd(1199){
+			display: block;
+		}
+		img {
+			display: block;
+			float: left;
+			left: 16px;
+			margin-top: 13.5px;
+			max-width: 160px;
+			position: fixed;
+			z-index: 2;
+		}
+	} 
 }
 
 
@@ -299,9 +305,13 @@ header class="mobile_top_bar_box"
 	right: 15px;
 	width: 20px;
 	height: 20px;
-	z-index: 1000;
+	z-index: 19;
 	@extend %hide-text;
 	color: #F8C170;
+	display: none;
+	@include rwd(1199){
+		display: block;
+	}
 	&::before,
 	&::after,
 	span {
@@ -335,7 +345,7 @@ header class="mobile_top_bar_box"
 	height: 100vh;
 	position: fixed;
 	width: 100%;
-	z-index: 50;
+	z-index: 17;
     right: 0;
 	// display: none;
 	opacity: 0;
@@ -851,8 +861,32 @@ header class="header"
 /*------------------------------------------------------------------
 社群
 ------------------------------------------------------------------*/
-.mobile_modal_close_btn{
+.mobile_modal_close_btn{ /*預約諮詢*/
 	display: none;
+	@extend  %hide-text;
+	@include rwd(500){
+		
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		background-color: #F9C270;
+		width: 44px;
+		height: 44px;
+		border-radius: 100px;
+		top: -22px;
+		right: -24px;
+	}
+	svg{
+		width: 24px;
+		height: 24px;
+	}
+	path{
+		fill: white;
+	}
+	&:hover, &:focus{
+		background-color: #ffd597;
+	}
 }
 .audit_fixed {
     position: fixed;
@@ -861,8 +895,29 @@ header class="header"
     z-index: 10;
     transition: all .4s ease-out 0s;
 	transform: translateX(300px);
+
+	@include rwd(500){
+		transform: translateX(0px);
+		width: 100%;
+		height: 0;
+		top: 0;
+		z-index: 16;
+		// opacity: 0;
+	}
+
 	&.selected{
 		transform: translateX(0px);
+		z-index: 22;
+		@include rwd(500){
+			background-color: rgba(0,0,0,0.5);
+			height: 100%;
+			opacity: 1;
+		}
+		.auditForm{
+			@include rwd(500){
+				transform: translateY(-50%) translateX(-50%);
+			}
+		}
 	}
 
 	.auditForm{
@@ -873,26 +928,20 @@ header class="header"
 		position: relative;
 		width: 300px;
 		border-radius: 0 0 0 15px;
-		@include rwd(1199){
-			// border-radius: 10px;
-			// margin: auto;
-			// position: fixed;
-			// top: 50%;
-			// right: 0;
-			// left: 0;
-			// z-index: 1400;
-			// transform: translateY(-50%);
-			// transition: all .5s ease;
+		@include rwd(500){
+			position: fixed;
+			top: 50%;
+			z-index: 22;
+			left: 50%;
+			border-radius: 15px;
+			// transform: translateY(-50%) translateX(-50%);
+			transform: translateY(-220%) translateX(-50%);
+			
 		}
 		h2 {
 			color: $minor-color; 
 			font-size: 20px;    
 			text-align: center;
-			// &::before,
-			// &::after{
-			// 	display: block;
-			// 	@extend %t50;
-			// }
 		}
 	}
 }
@@ -917,6 +966,32 @@ header class="header"
 	border-radius: 10px 0 0 10px;
 	box-shadow: rgba(0,0,0,0.1) -5px 4px 8px;
 	transition: all .2s ease-in-out;
+	@include media('mobile2'){
+		width: 40px;
+		font-size: 0.8em;
+		height: 200px;
+		left: -40px;
+	}
+
+	@include rwd(500){
+		color: #f9c270;
+		background-color: #fff3d9;
+		width: 92px!important;
+  		height: 28px;
+		border-radius: 28px;
+		line-height: 28px;
+		writing-mode: horizontal-tb;
+		position: absolute;
+		right: 48px;
+		left: auto!important;
+		padding: 0;
+		letter-spacing: 1px;
+		display: block;
+		top: 14px;
+		transform: none;
+		text-align: center;
+		box-shadow: none;
+	}
 	&::before{
 		display: block;
 		content: "";
@@ -925,16 +1000,43 @@ header class="header"
 		top: 36px;
 		width: 40px;
 		height: 40px;
-		background-image: url('../images/icon/icon_close.svg');
 		background-image: url('../images/icon/icon_pan.svg');
 		background-repeat: no-repeat;
 		background-size: contain;
+		@include rwd(500){
+			content: "Hot";
+			color: white;
+			background-color: #aa2d2d;
+			width: 34px;
+			height: 20px;
+			line-height: 20px;
+			padding: 0;
+			background-image: none;
+			border-radius: 50px;
+			top: -4px;
+			left: -30px;
+			font-size: 0.8em;
+		}
 	}
-	@include media('mobile2'){
-		width: 40px;
-		font-size: 0.8em;
-		height: 200px;
-		left: -40px;
+	&::after{
+		display: none;
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 6px 6px 0;
+		border-color: transparent #aa2d2d transparent transparent;
+		top: 15px;
+		left: -5px;
+		@include rwd(500){
+			display: block;
+		}
+	}
+	&.open{
+		@include rwd(500){
+			opacity: 0.4;
+		}
 	}
 	.selected &{
 		&::before{

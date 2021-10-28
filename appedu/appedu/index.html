@@ -56,39 +56,13 @@
         <noscript>
             您的瀏覽器似乎不支援JavaScript語法，但沒關係，這裡的JavaScript語法並不會影響到內容的陳述， 如需要選擇字級大小，IE6請利用鍵盤按住ALT鍵+ V → X → (G)最大(L)較大(M)中(S)較小(A)小，來選擇適合您的文字大小， 而IE7或Firefox瀏覽器則可利用鍵盤 Ctrl + (+)放大(-)縮小來改變字型大小，如需要回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能，列印可使用瀏覽器提供的(Ctrl+P)功能；如需觀看新聞內容或是申請表單下載，建議您由more頁進入並選取符合您之相關資訊內容。若要點選子選單內容，可點選下方選單列表。  
         </noscript>
-
-        <div class="audit_fixed selected">
-            <a class="audit_btn" title="預約諮詢">預約諮詢</a>
-            <form id="audit_form" action="/audit" class="auditForm interactive_form" autocomplete="off">
-                <h2>- 立即報名試聽 -</h2>
-                <div class="form_content">
-                    <input class="name" type="text" name="name" placeholder="真實姓名" autocomplete="off">
-                    <input class="phone" type="tel" name="cellphone" placeholder="手機號碼" autocomplete="off">
-                    <input class="email" type="email" name="email" placeholder="電子信箱" autocomplete="off">
-                    <select name="course" class="courses">
-                        <option value="">請選擇您想了解的課程</option>
-                    <option>商業視覺平面設計</option><option>前端網頁設計</option><option>UI視覺介面設計</option><option>數位繪畫</option><option>創意工業產品設計</option><option>商業攝影</option><option>微電影導演</option><option>AE影視特效實戰</option><option>數位成音</option><option>2D動畫製作</option><option>遊戲角色美術企劃</option><option>Unity3D遊戲設計</option><option>4D動態影像設計</option><option>AutoCad設計實務</option><option>室內設計實務</option><option>SketchUp空間建模</option><option>室內設計乙級認證班</option><option>網路行銷玩起來</option><option>Keynote創意簡報製作</option><option>創意Line貼圖製作</option><option>創意插畫實用技法</option><option>手機也能玩出單眼樂趣</option><option>Final Cut Pro風格影片剪輯</option><option>職場生涯規劃</option><option>個人作品集製作</option></select>
-                    <div class="area_box zones">
-                        <select name="city" class="cities">
-                            <option value="">選擇縣市</option>
-                        <option value="1">臺北市</option><option value="2">基隆市</option><option value="3">新北市</option><option value="4">宜蘭縣</option><option value="5">新竹市</option><option value="6">新竹縣</option><option value="7">桃園市</option><option value="8">苗栗縣</option><option value="9">臺中市</option><option value="10">彰化縣</option><option value="11">南投縣</option><option value="12">嘉義市</option><option value="13">嘉義縣</option><option value="14">雲林縣</option><option value="15">臺南市</option><option value="16">高雄市</option><option value="17">澎湖縣</option><option value="18">屏東縣</option><option value="19">臺東縣</option><option value="20">花蓮縣</option><option value="21">金門縣</option><option value="22">連江縣</option></select>
-                        <select name="zip" class="zips">
-                            <option value="">選擇地區</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="form_submit_btn" disabled title="確認送出">確認送出</button>
-                    <a class="link_to_privacy" href="/frame-privacy" target="_blank" title="服務條款與隱私政策" >服務條款與隱私政策</a>
-                </div>
-                <img class="mobile_modal_close_btn" src="./images/icon/mobile_modal_close_btn.svg" alt="彈窗關閉">
-            </form>
-        </div>
         <!--.mobile_top_bar_box 以下 行動版主選單 移植-->
         <header class="mobile_top_bar_box">
             <div class="mobile_logo">
                 <a href="/" title="赫綵設計學院"><img src="./images/logo.svg" alt="行動網頁-赫綵設計學院商標"/></a>
             </div>
             <a id="mobile_menu" href="javascript:void(0)" title="手機版選單"><span>手機版選單</span></a>
-            <div id="mobile_scroll_menu">
+            <div id="mobile_scroll_menu"><!--手機版選單-->
                 <nav class="mobile_scroll_menu_center">
                     <ul class="social_icon clearfix">
                         <li><a target="_blank" href="https://www.youtube.com/user/AppeduDesignTraining" title="Youtube">Youtube</a></li>
@@ -121,6 +95,31 @@
                     </ul>
                     <div class="contact_btn"><a href="/consultation" title="免費諮詢">免費諮詢</a></div>
                 </nav>
+            </div>
+            <div class="audit_fixed selected"><!--預約諮詢-->
+                <a class="audit_btn" title="預約諮詢">預約諮詢</a>
+                <form id="audit_form" action="/audit" class="auditForm interactive_form" autocomplete="off">
+                    <h2>- 立即報名試聽 -</h2>
+                    <div class="form_content">
+                        <input class="name" type="text" name="name" placeholder="真實姓名" autocomplete="off">
+                        <input class="phone" type="tel" name="cellphone" placeholder="手機號碼" autocomplete="off">
+                        <input class="email" type="email" name="email" placeholder="電子信箱" autocomplete="off">
+                        <select name="course" class="courses">
+                            <option value="">請選擇您想了解的課程</option>
+                        <option>商業視覺平面設計</option><option>前端網頁設計</option><option>UI視覺介面設計</option><option>數位繪畫</option><option>創意工業產品設計</option><option>商業攝影</option><option>微電影導演</option><option>AE影視特效實戰</option><option>數位成音</option><option>2D動畫製作</option><option>遊戲角色美術企劃</option><option>Unity3D遊戲設計</option><option>4D動態影像設計</option><option>AutoCad設計實務</option><option>室內設計實務</option><option>SketchUp空間建模</option><option>室內設計乙級認證班</option><option>網路行銷玩起來</option><option>Keynote創意簡報製作</option><option>創意Line貼圖製作</option><option>創意插畫實用技法</option><option>手機也能玩出單眼樂趣</option><option>Final Cut Pro風格影片剪輯</option><option>職場生涯規劃</option><option>個人作品集製作</option></select>
+                        <div class="area_box zones">
+                            <select name="city" class="cities">
+                                <option value="">選擇縣市</option>
+                            <option value="1">臺北市</option><option value="2">基隆市</option><option value="3">新北市</option><option value="4">宜蘭縣</option><option value="5">新竹市</option><option value="6">新竹縣</option><option value="7">桃園市</option><option value="8">苗栗縣</option><option value="9">臺中市</option><option value="10">彰化縣</option><option value="11">南投縣</option><option value="12">嘉義市</option><option value="13">嘉義縣</option><option value="14">雲林縣</option><option value="15">臺南市</option><option value="16">高雄市</option><option value="17">澎湖縣</option><option value="18">屏東縣</option><option value="19">臺東縣</option><option value="20">花蓮縣</option><option value="21">金門縣</option><option value="22">連江縣</option></select>
+                            <select name="zip" class="zips">
+                                <option value="">選擇地區</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="form_submit_btn" disabled title="確認送出">確認送出</button>
+                        <a class="link_to_privacy" href="/frame-privacy" target="_blank" title="服務條款與隱私政策" >服務條款與隱私政策</a>
+                    </div>
+                    <a class="mobile_modal_close_btn" href="javascript:void(0)" title="彈窗關閉"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"/></svg>彈窗關閉</a>
+                </form>
             </div>
         </header>
         <!--.header 以下 電腦版主選單-->
