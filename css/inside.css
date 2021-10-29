@@ -19,7 +19,7 @@
 }
 /* line 539, ../sass/_base-function.scss */
 .page_no ul::after, .page_content .article_tab ul::after,
-.news_list .article_tab ul::after, .news_list .center > ul::after, .next_news ul::after, .most_read ul::after, .catalogue_input .password_submit, .catalogue_list ul::after, .catalogue_content_list .center .article .list::after, .catalogue_content_list .center .article .list .figure::after {
+.news_list .article_tab ul::after, .news_list .center > ul::after, .next_news ul::after, .most_read ul::after, .catalogue_input .password_submit, .catalogue_list ul::after, .catalogue_content_list .center .article .list::after, .catalogue_content_list .center .article .list .figure::after, .breadcrumb ul::after, .products_brand .list::after, .products_brand .list ul::after {
   content: "​";
   display: block;
   height: 0;
@@ -82,7 +82,7 @@
   }
 }
 /* line 1637, ../sass/_base-function.scss */
-.page_banner .figcaption, .page_title .slogan, .catalogue_list ul li a .figcaption::after, .bread_crumbs ul li::after, .bread_crumbs ul li:first-child a::before, .hot_tag h2, .hot_tag ul li a::after, .catalogue_content_list .center .article .list .figcaption .tag h5::before, .ready_fixed ul.jump {
+.page_banner .figcaption, .page_title .slogan, .catalogue_list ul li a .figcaption::after, .bread_crumbs ul li::after, .bread_crumbs ul li:first-child a::before, .hot_tag h2, .hot_tag ul li a::after, .catalogue_content_list .center .article .list .figcaption .tag h5::before, .ready_fixed ul.jump, .breadcrumb ul li::before, .breadcrumb ul li:nth-child(1) a::before, .products_brand .list ul li a::before {
   top: 50%;
   transform: translateY(-50%);
   content: "";
@@ -1683,4 +1683,162 @@ catalogue
 /* line 1370, ../sass/inside.scss */
 .ready_fixed.fixed .hot_tag ul li a {
   font-size: 1em;
+}
+
+/* line 1376, ../sass/inside.scss */
+.breadcrumb {
+  position: absolute;
+  width: 100%;
+  top: 94px;
+}
+/* line 1380, ../sass/inside.scss */
+.breadcrumb ul {
+  width: 100%;
+}
+/* line 1385, ../sass/inside.scss */
+.breadcrumb ul li {
+  float: left;
+  color: white;
+  font-size: 1em;
+  line-height: 36px;
+  position: relative;
+  padding-left: 28px;
+}
+/* line 1392, ../sass/inside.scss */
+.breadcrumb ul li::before {
+  left: 8px;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/icon/icon_arrow_o2.svg");
+}
+/* line 1399, ../sass/inside.scss */
+.breadcrumb ul li a {
+  color: white;
+  font-size: 1em !important;
+}
+/* line 1404, ../sass/inside.scss */
+.breadcrumb ul li:nth-child(1) {
+  padding-left: 0;
+}
+/* line 1406, ../sass/inside.scss */
+.breadcrumb ul li:nth-child(1)::before {
+  display: none;
+  background-image: none;
+}
+/* line 1410, ../sass/inside.scss */
+.breadcrumb ul li:nth-child(1) a {
+  padding-left: 20px;
+}
+/* line 1412, ../sass/inside.scss */
+.breadcrumb ul li:nth-child(1) a::before {
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-color: #EC8225;
+  background-image: none;
+}
+
+/* line 1425, ../sass/inside.scss */
+.products_brand {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: calc(100vh - 126px);
+  overflow: hidden;
+  min-height: 700px;
+}
+/* line 1434, ../sass/inside.scss */
+.products_brand::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* line 1444, ../sass/inside.scss */
+.products_brand.bg_engine_parts {
+  background-image: url("../images/products/bg_products_big1.jpg");
+}
+/* line 1448, ../sass/inside.scss */
+.products_brand .center {
+  position: relative;
+  z-index: 2;
+  padding: 0 40px;
+  padding-top: 86px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-height: 700px;
+}
+/* line 1458, ../sass/inside.scss */
+.products_brand .list {
+  padding-top: 56px;
+  width: 100%;
+  position: relative;
+}
+/* line 1465, ../sass/inside.scss */
+.products_brand .list ul {
+  float: left;
+  width: 100%;
+  display: flex;
+  height: 620px;
+  max-width: 1392px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+/* line 1475, ../sass/inside.scss */
+.products_brand .list ul.brand_title {
+  width: 33.33%;
+}
+/* line 1481, ../sass/inside.scss */
+.products_brand .list ul h3 {
+  font-size: 2em;
+  color: white;
+  padding-bottom: 24px;
+}
+/* line 1486, ../sass/inside.scss */
+.products_brand .list ul li {
+  width: 33.33%;
+  padding: 4px 0;
+}
+/* line 1489, ../sass/inside.scss */
+.products_brand .list ul li a {
+  color: white;
+  font-size: 1.5em;
+  line-height: 2.25em;
+  position: relative;
+  padding-left: 28px;
+  position: relative;
+  padding-top: 24px;
+  letter-spacing: 1px;
+}
+/* line 1498, ../sass/inside.scss */
+.products_brand .list ul li a:hover, .products_brand .list ul li a:focus {
+  color: #EC8225;
+}
+/* line 1501, ../sass/inside.scss */
+.products_brand .list ul li a::after {
+  content: "Suitablt to";
+  position: absolute;
+  top: -6px;
+  font-size: 0.4em;
+  width: 100%;
+  left: 29px;
+  letter-spacing: 0px;
+}
+/* line 1510, ../sass/inside.scss */
+.products_brand .list ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 4px;
+  background-color: #EC8225;
 }

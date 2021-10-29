@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
     <link rel="stylesheet" href="css/global.css"><!--全域共用樣式-->
     <link rel="stylesheet" href="css/index.css"><!--只有首頁載入index.css ； 只有內頁載入inside.css --->
-    <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+
 </head>
 <body>
     <div id="wrapper">
@@ -183,11 +183,9 @@
         <!-- ABOVE .header ////////////////////////////////////////////////////////////////-->     
         <!-- BELOW .main////////////////////////////////////////////////////////////////-->
         <main class="main">
-            <section class="cookies">
-                <div class="center">
-                    <p>We use cookies to offer you a better browsing experience, personalize content, and improve our websites. To find out more about what cookies are, how we use them and how you can control them, see ourCookie statement. If you continue to use this site, you consent to our use of cookies.</p>
-                    <a href="javascript:void(0)" title="Accept Cookies From This Website">Accept Cookies From This Website</a>
-                    <a class="close_cookies" href="javascript:void(0)">close</a>
+            <section class="block-cookie">
+                <div class="cookies-container">
+                    <a class="btn-accept" href="javascript:void(0)" title="Accept Cookies From This Website">Accept Cookies From This Website</a>
                 </div>
             </section>
             <section class="mainvisual">
@@ -322,9 +320,11 @@
                     <article>
                         <b>WHICH ONE IS STRONGER ?</b>
                         <p>Click and Find out !</p>
-                        <div class="pic">
-                            <ul>
-                                <li>
+
+
+                        <div class="quality_center_pic">
+                            <div class="bd">
+                                <div class="info on">
                                     <div class="img">
                                         <a data-fancybox data-animation-duration="700" data-src="#quality1" href="javascript:;" class="btn_lightbox" title="">
                                             <img src="./images/index/q1.jpg" alt="">
@@ -341,8 +341,8 @@
                                     </div>
                                     <div class="nav"></div>
                                     <div class="bar"><p></p></div>
-                                </li>
-                                <li style="display: none;">
+                                </div>
+                                <div class="info">
                                     <div class="img">
                                         <a data-fancybox data-animation-duration="700" data-src="#quality3" href="javascript:;" class="btn_lightbox" title="">
                                             <img src="./images/index/q3.jpg" alt="">
@@ -359,8 +359,8 @@
                                     </div>
                                     <div class="nav"></div>
                                     <div class="bar"><p></p></div>
-                                </li>
-                                <li style="display: none;">
+                                </div>
+                                <div class="info">
                                     <div class="img">
                                         <a data-fancybox data-animation-duration="700" data-src="#quality5" href="javascript:;" class="btn_lightbox" title="">
                                             <img src="./images/index/q5.jpg" alt="">
@@ -377,8 +377,15 @@
                                     </div>
                                     <div class="nav"></div>
                                     <div class="bar"><p></p></div>
-                                </li>
-                            </ul>
+                                </div>
+                                <div class="title">
+                                    <ul>
+                                        <li class="on">1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </article>
                     <div class="centermore">
@@ -513,9 +520,9 @@
             </div>
         </footer>
     </div>
-    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
-    <script type="text/javascript" src="js/jcarousel.responsive.js"></script>
-    <script type="text/javascript" src="js/jquery.lightbox.js"></script>
-    <script type="text/javascript" src="js/effect.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

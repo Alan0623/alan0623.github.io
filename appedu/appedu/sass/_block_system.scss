@@ -30,10 +30,22 @@
 		}
 		@include rwd(450){
 			font-size: 1.4em;
+			padding: 0 24px;
 		}
 		span{
 			position: relative;
 			z-index: 2;
+			i{
+				font-style: normal;
+				position: relative;
+				z-index: 2;
+				@include rwd(1023){
+					display: block;
+				}
+				@include rwd(370){
+					display: contents;
+				}
+			}
 		}
 		&::before{
 			content: "";
@@ -71,12 +83,16 @@
 			font-size: 1.3em;
 			color: $major-color;
 		}
-		@include rwd(500){
-			font-size: 1.2em;
-		}
 		@include rwd(760){
 			padding: 0 32px;
 		}
+		@include rwd(500){
+			font-size: 1.2em;
+		}
+		@include rwd(450){
+			padding: 0 24px;
+		}
+
 	}
 }
 
@@ -262,7 +278,7 @@
 .hot_event{//本日熱門
 	clear: both;
 	// opacity: 0;
-	transition: $transition;
+	// transition: $transition;
 
 	&::after{
 		@extend %clear;
@@ -271,6 +287,7 @@
 		width: 33.33%;
 		float: left;
 		padding: 40px 12px;
+		display: block;
 		@include rwd(1080){
 			width: 50%;
 			&:nth-child(2n+1){
@@ -282,6 +299,7 @@
 			min-width: 300px;
 			max-width: 420px;
 			// width: 420px!important;
+			cursor: pointer;
 			&:nth-child(2n+1){
 				clear: none;
 			}
@@ -433,6 +451,7 @@
 			overflow: hidden;
 			padding-bottom: 0;
 			margin-bottom: 12px;
+			min-height: 60px;
 		}
 		p{
 			padding: 0;
@@ -495,6 +514,9 @@
 				font-size: 1.125em;
 				letter-spacing: 1px;
 				margin: 0 auto;
+				@include rwd(500){
+					font-size: 1em;
+				}
 			}
 		}
 
@@ -847,6 +869,9 @@
 	.tab_content{
 		height: 1200px;
 		padding: 0;
+		@include rwd(1024,1000){
+			height: 1300px;
+		}
 		@include rwd(760){
 			height: 600px;
 		}

@@ -4,7 +4,7 @@
 
 @import 'base-function'; //方法與涵式
 
-@import 'block_main_slice'; //完整轉化夢想為現實
+@import 'block_main_slice'; //讓興趣轉為專長，夢想變成職業
 
 @import 'block_story'; //學員們的動人故事
 
@@ -16,7 +16,7 @@
 /*------------------------------------------------------------------
 .block_promise
 ------------------------------------------------------------------*/
-.block_promise{	//看見赫綵的最強保證，保證包你會
+.block_promise{	//跟著赫綵一起挖掘出你的最高潛力
 	padding-top: 35px;
 	margin: 0 auto;
 	padding-bottom: 36px;
@@ -282,6 +282,12 @@
 			color: $minor-color;
 			margin-bottom: 48px;
 			position: relative;
+			@include rwd(560){
+				text-align: center;
+				&::before{
+					left: calc(50% - 25px)!important;
+				}
+			}
 			&::before{
 				position: absolute;
 				bottom: -33px;
@@ -303,6 +309,9 @@
 			margin-bottom: 42px;
 			@include rwd(800){
 				font-size: 1em;
+			}
+			@include rwd(560){
+				text-align: center;
 			}
 		}
 		>a{
@@ -360,6 +369,13 @@
 	padding-top: 44px;
 	@extend %bigtitle;
 	overflow: hidden;
+	>p{
+		span:nth-child(2){
+			@include rwd(400){
+				display: block;
+			}
+		}
+	}
 	.master_list{
 		// margin-bottom: 120px;
 		position: relative;
@@ -532,6 +548,12 @@
 		@include rwd(450){
 			font-size: 1.2em;
 		}
+		i{
+			font-style: normal;
+			@include rwd(350){
+				display: block;
+			}
+		}
 	}
 	p{
 		color: #6D7278;
@@ -661,6 +683,9 @@
 					width: 35%;
 					height: 100%;
 				}
+				@include rwd(400){
+					width: 30%;
+				}
 				img{
 					width: 100%;
 					
@@ -691,6 +716,9 @@
 			}
 			@include rwd(625){
 				width: 65%;
+			}
+			@include rwd(400){
+				width: 70%;
 			}
 			&::before{
 				position: absolute;
@@ -732,9 +760,21 @@
 				margin-top: 16px;
 				display: inline-block;
 				text-align: left;
-				@include rwd(450){
-					margin-top: 4px;
+				float: left;
+				margin-left: 12px;
+				margin-bottom: 12px;
+				@include rwd(500){
+					font-size: 0.95em;
+					margin-left: 12px;
+					margin-bottom: 12px;
+					
 				}
+				@include rwd(400){
+					font-size: 0.8em;
+					margin-left: 2px;
+				}
+
+
 				span{
 					position: relative;
 					z-index: 2;
@@ -749,22 +789,20 @@
 					bottom: -5px;
 					background-color: #FFF3D9;
 				}	
-				@include rwd(500){
-					font-size: 0.9em;
-					margin-left: -28px;
-				}
-				@include rwd(450){
-					font-size: 0.8em;
-					margin-left: -8px;
-				}
+
 			}
 			ol{
+				clear: both;
 				text-align: left;
 				margin-top: 20px;
 				margin-left: 32px;
 				@include rwd(450){
 					margin-top: 8px;
 					margin-left: 28px;
+				}
+				@include rwd(450){
+					margin-left: 16px;
+					font-size: 0.9em;
 				}
 				li{
 					position: relative;
@@ -838,6 +876,7 @@
 			@include media('center'){
 				width: 100%;
 			}
+			
 		}
 		>h2{
 			color: $minor-color;
@@ -854,9 +893,6 @@
 			}
 			>span{
 				display: block;
-				@include media('center'){
-					display: inline-block;
-				}
 			}
 		}
 		>p{
@@ -868,10 +904,13 @@
 				width: 340px;
 				margin: 0 auto;
 			}
+			>span{
+				display: block;
+			}
 		}
 		.title{
 			color: $major-color;
-			font-size: 1.5625em;
+			font-size: 1.5em;
 			letter-spacing: 1px;
 			font-weight: 500;
 			padding: 44px 0;
@@ -1475,9 +1514,6 @@
 /** Carousel **/
 .master_list,
 .links_list,
-.result_event_list1,
-.result_event_list2,
-.result_event_list3,
 .result_event_list,
 .jcarousel2,
 .jcarousel {
@@ -1495,7 +1531,7 @@
         li {
             width: 200px;
             float: left;
-            border: 1px solid #fff;
+            // border: 1px solid #fff;
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1616,12 +1652,13 @@
         }
     }
 }
-
+.result_event_list ul li a .figcaption span{
+	display: block;
+	-webkit-line-clamp: 1;
+	height: 20px;
+}
 @include rwd(447){
 	.block_result{
-		.result_event_list1,
-		.result_event_list2,
-		.result_event_list3,
 		.result_event_list{
 			ul{
 				li{

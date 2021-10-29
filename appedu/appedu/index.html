@@ -49,8 +49,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
+    <!-- End stylesheet -->
+    <!-- LINE追蹤碼 -->
+    <script>
+    (function(g,d,o){
+        g._ltq=g._ltq||[];g._lt=g._lt||function(){g._ltq.push(arguments)};
+        var h=location.protocol==='https:'?'https://d.line-scdn.net':'http://d.line-cdn.net';
+        var s=d.createElement('script');s.async=1;
+        s.src=o||h+'/n/line_tag/public/release/v1/lt.js';
+        var t=d.getElementsByTagName('script')[0];t.parentNode.insertBefore(s,t);
+        })(window, document);
+    _lt('init', {
+        customerType: 'lap',
+        tagId: 'a8c14f6a-37c9-45c4-8771-efe71625e2d4'
+    });
+    _lt('send', 'pv', ['a8c14f6a-37c9-45c4-8771-efe71625e2d4']);
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://tr.line.me/tag.gif?c_t=lap&t_id=a8c14f6a-37c9-45c4-8771-efe71625e2d4&e=pv&noscript=1" />
+    </noscript>
+    <script>
+        _lt('send', 'cv', {
+          type: 'Conversion'
+        },['a8c14f6a-37c9-45c4-8771-efe71625e2d4']);
+    </script>
+    <!-- End LINE Tag Base Code -->
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1694829620628427');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1694829620628427&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68890793-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-68890793-1');
+    </script>
+    <!-- End Global site tag -->
+    <!-- insider追蹤碼 -->
+    <script src="//appedutw.api.useinsider.com/ins.js?id=10004259"></script>
+    <!-- End insider追蹤碼 -->
 </head>
-<!--/head-->
 <body class="no_js">
     <div class="wrapper">
         <noscript>
@@ -191,8 +245,8 @@
 
             <section class="block_main_slice">
                 <div class="typed">
-                    <h2>完整轉化夢想為現實</h2>
-                    <p><u>為什麼我們能幫助你學</u><i><b></b></i></p>
+                    <h2>讓興趣轉為專長，夢想變成職業</h2>
+                    <p><u>為什麼我們能幫助你學好</u><i><b></b></i></p>
                 </div>
                 <div class="swiper-container swiper-container1">
                     <div class="center">
@@ -263,8 +317,8 @@
             </section>
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
             <section class="block_promise">
-                <h2><span><i>看見赫綵的最強保證，</i><i>保證包你會</i></span></h2>
-                <p><i>全心投入設計教育體系，</i><i>幫助學員順利走上設計師之路</i></p>
+                <h2><span><i>跟著赫綵一起</i><i>挖掘出你的最高潛力</i></span></h2>
+                <p><i>初學者也能在赫綵蛻變專業的理由，</i><i>四大學習保證！</i></p>
                 <div class="promise_list">
                     <div class="bd">
                         <nav class="title">
@@ -320,24 +374,24 @@
             </section>
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
             <section class="block_system">
-                <h2><span>系統化教學，為你的需求量身打造</span></h2>
-                <p>濃縮 <span>業界團隊20年經驗</span>，職場缺一不可<span>必備技能</span></p>
+                <h2><span><i>課程從無背景新手到進階專業，</i><i>全方位掌握！</i></span></h2>
+                <p><span>系統化教學</span>，學習職場必備的<span>知識技能</span></p>
                 <div class="tabs_list system_list">
                     <ul class="tabs">
-                        <li><a href="javascript:void(0)" title="本日熱門">本日熱門</a></li>
-                        <li><a href="javascript:void(0)" title="最新活動">最新活動</a></li>
+                        <li><a href="#tab_hot" title="本日熱門">本日熱門</a></li>
+                        <li><a href="#tab_news" title="最新活動">最新活動</a></li>
                     </ul>
                     <a class="more" href="javascript:void(0)" title="查看更多"><span>查看更多</span></a>
                     <div class="tab_container">
                         <ul class="tab_content jcarousel-wrapper">
-                            <li class="event hot_event_list" data-jcarousel="true">
+                            <li id="tab_hot" class="event hot_event_list" data-jcarousel="true">
                                 <ol class="hot_event"><!--本日熱門 最少6筆-->
                                     <li>
                                         <a href="javascript:void(0)" class="text" title="人像插畫風格，動手畫出自己的大頭照">
                                             <figure class="img">
                                                 <img src="./images/system/system_event.jpg" alt="人像插畫風格，動手畫出自己的大頭照">
                                                 <figcaption>
-                                                    <span class="tag color_business">試測試測試</span>
+                                                    <span class="tag color_business">1試測試測試</span>
                                                     <div class="hour">999 HR</div>
                                                 </figcaption>
                                             </figure>
@@ -364,7 +418,7 @@
                                                     <div class="hour">999 HR</div>
                                                 </figcaption>
                                             </figure>
-                                            <h3>人像插畫風格，動手畫出自己的大頭照</h3>
+                                            <h3>人2像插畫風格，動手畫出自己的大頭照</h3>
                                             <p>產品設計創意思考/ 設計方法與趨勢/ 設計與生活/ 提昇創意力的十個法則品設計創</p>
                                             <div class="botton">
                                                 <span>火熱報名中！</span>
@@ -387,7 +441,7 @@
                                                     <div class="hour">60 HR</div>
                                                 </figcaption>
                                             </figure>
-                                            <h3>人像插畫風格，動手畫出自己的大頭照</h3>
+                                            <h3>人像3插畫風格，動手畫出自己的大頭照</h3>
                                             <p>產品設計創意思考/ 設計方法與趨勢/ 設計與生活/ 提昇創意力的十個法則品設計創</p>
                                             <div class="botton">
                                                 <span>火熱報名中！</span>
@@ -410,7 +464,7 @@
                                                     <div class="hour">60 HR</div>
                                                 </figcaption>
                                             </figure>
-                                            <h3>人像插畫風格，動手畫出自己的大頭照</h3>
+                                            <h3>人像4插畫風格，動手畫出自己的大頭照</h3>
                                             <p>產品設計創意思考/ 設計方法與趨勢/ 設計與生活/ 提昇創意力的十個法則品設計創</p>
                                             <div class="botton">
                                                 <span>火熱報名中！</span>
@@ -433,7 +487,7 @@
                                                     <div class="hour">60 HR</div>
                                                 </figcaption>
                                             </figure>
-                                            <h3>人像插畫風格，動手畫出自己的大頭照</h3>
+                                            <h3>人5像插畫風格，動手畫出自己的大頭照</h3>
                                             <p>產品設計創意思考/ 設計方法與趨勢/ 設計與生活/ 提昇創意力的十個法則品設計創</p>
                                             <div class="botton">
                                                 <span>火熱報名中！</span>
@@ -456,7 +510,7 @@
                                                     <div class="hour">60 HR</div>
                                                 </figcaption>
                                             </figure>
-                                            <h3>人像插畫風格，動手畫出自己的大頭照</h3>
+                                            <h3>人像插6畫風格，動手畫出自己的大頭照</h3>
                                             <p>產品設計創意思考/ 設計方法與趨勢/ 設計與生活/ 提昇創意力的十個法則品設計創</p>
                                             <div class="botton">
                                                 <span>火熱報名中！</span>
@@ -474,7 +528,7 @@
                                 <a href="javascript:void(0)" class="jcarousel-control-prev hot_event_list_prev" data-jcarouselcontrol="true" title="上一則">上一則</a>
                                 <a href="javascript:void(0)" class="jcarousel-control-next hot_event_list_next" data-jcarouselcontrol="true" title="下一則">下一則</a>
                             </li>
-                            <li class="event news_event_list">
+                            <li id="tab_news" class="event news_event_list">
                                 <ol class="news_event"><!--本日熱門 最少6筆-->
                                     <li>
                                         <a href="javascript:void(0)" class="text" title="室內設計專班校外參訪材質挑選課堂練習">
@@ -486,7 +540,7 @@
                                                     <span class="tag">校外參訪</span>
                                                 </figcaption>
                                             </figure>
-                                            <h3>室內設計專班校外參訪材質挑選課堂練習</h3>
+                                            <h3>室1內設計專班校外參訪材質挑選課堂練習</h3>
                                             <p>線上活動、要來要快喔！票很快就沒有了！！！！</p>
                                             <div class="date">
                                                 <span>05.15</span>
@@ -504,7 +558,7 @@
                                                     <span class="tag">校外參訪</span>
                                                 </figcaption>
                                             </figure>
-                                            <h3>室內設計專班校外參訪材質挑選課堂練習</h3>
+                                            <h3>室內2設計專班校外參訪材質挑選課堂練習</h3>
                                             <p>線上活動、要來要快喔！票很快就沒有了！！！！</p>
                                             <div class="date">
                                                 <span>05.15</span>
@@ -522,7 +576,7 @@
                                                     <span class="tag">校外參訪</span>
                                                 </figcaption>
                                             </figure>
-                                            <h3>室內設計專班校外參訪材質挑選課堂練習</h3>
+                                            <h3>室內3設計專班校外參訪材質挑選課堂練習</h3>
                                             <p>線上活動、要來要快喔！票很快就沒有了！！！！</p>
                                             <div class="date">
                                                 <span>05.15</span>
@@ -540,7 +594,7 @@
                                                     <span class="tag">校外參訪</span>
                                                 </figcaption>
                                             </figure>
-                                            <h3>室內設計專班校外參訪材質挑選課堂練習</h3>
+                                            <h3>室4內設計專班校外參訪材質挑選課堂練習</h3>
                                             <p>線上活動、要來要快喔！票很快就沒有了！！！！</p>
                                             <div class="date">
                                                 <span>05.15</span>
@@ -559,7 +613,7 @@
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
             <section class="block_master">
                 <h2><span>赫啦！來跟大師學設計</span></h2>
-                <p><span>名人講座</span>，邀你一起來<span>突破自我</span></p>
+                <p><span>活躍於設計圈</span>一流業界師資<span>親自指導</span></p>
                 <div class="jcarousel-wrapper master_list_wrapper">
                     <div class="master_list">
                         <ul>
@@ -652,12 +706,12 @@
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
             <section class="block_future">
                 <h2><span>你未來是</span><i>【</i><b></b><i>】</i></h2>
-                <div class="title">人與設計，隱藏著無限的可能性</div>
+                <div class="title"><i>進入設計界最難的一步，</i><i>我們牽著你走</i></div>
                 <p>
-                    <span>會軟體的、不一定會設計、會設計的、不一定會提案、會提案的、不一定能說服</span>
-                    <span>從單純的設計到獨當一面，是有一段不算短的路要走，如何創造自我价值</span>
-                    <span>除了軟體能力提升以外，將自我能力提升，並有效率的往下紮根是絕對相當重要的</span>
-                    <span>每個階段都必須一步一步穩穩的經營才能活躍未來的形狀</span>
+                    <span>我們確信：人與設計，隱藏著無限的可能性。</span>
+                    <span>打造創意多元的設計學習，搭配高規格的教育環境。</span>
+                    <span>手把手帶領學員一步步邁向專業設計師之路。</span>
+                    <span>不論你是任何背景都能成為炙手可熱的人才。</span>
                 </p>
                 <ul class="block_future_list">
                     <li>
@@ -670,10 +724,10 @@
                                     <b>技術力</b>
                                     <span>Technical</span>
                                 </div>
-                                <h3><span>【讓設計基礎的知識成為你自己的】</span></h3>
+                                <h3><span>【為你的學習品質專業把關】</span></h3>
                                 <ol>
-                                    <li>顧問會根據你的職涯規劃推薦設計課程</li>
-                                    <li>高品質的設備環境，讓設計更加順利</li>
+                                    <li>課程內容規劃貼合產業需求及最新趨勢</li>
+                                    <li>完成高水準作品集提升職場競爭力</li>
                                 </ol>
                             </figcaption>
                         </figure>
@@ -690,8 +744,8 @@
                                 </div>
                                 <h3><span>【團隊合作一同成長、累積人脈】</span></h3>
                                 <ol>
-                                    <li>提前佈屬學員業界所需的協作能力</li>
-                                    <li>與共同目標的學員一起專心成長學習</li>
+                                    <li>提前佈屬學員在業界所需的協作能力</li>
+                                    <li>與共同目標的同學們一起成長學習</li>
                                 </ol>
                             </figcaption>
                         </figure>
@@ -703,13 +757,13 @@
                             </div>
                             <figcaption class="figcaption">
                                 <div class="title">
-                                    <b>提案力</b>
-                                    <span>Proposal</span>
+                                    <b>競爭力</b>
+                                    <span>Competition</span>
                                 </div>
-                                <h3><span>【赫綵你是求職時最堅強的後盾】</span></h3>
+                                <h3><span>【求職接案輔導，做你最堅強的後盾】</span></h3>
                                 <ol>
-                                    <li>赫綵的專業業師教你增加提案成功率</li>
-                                    <li>提升自己的職場競爭力或獨立接案能力</li>
+                                    <li>專業設計公司團隊輔導增加提案成功率</li>
+                                    <li>企業單位爭相選擇赫綵培育的設計人才</li>
                                 </ol>
                             </figcaption>
                         </figure>
@@ -719,10 +773,14 @@
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
             <section class="block_video">
                 <div class="text">
-                    <p class="p">頂級設備強化學習品質</p>
-                    <h2><span>為什麼你要找赫綵</span><span>學設計？</span></h2>
-                    <div class="title">趕緊加入赫綵的設計體驗之旅！</div>
-                    <p>嚴選教學地點座落核心地帶，打造便利學習的生活圈！歡迎預約參觀學院環境或諮詢設計相關課程資訊</p>
+                    <p class="p">這些設計新秀都來自APPEDU！</p>
+                    <h2><span>成功培育超過千位</span><span>設計師學員的秘密？</span></h2>
+                    <div class="title">實現就業、轉職、接案的理想目標</div>
+                    <p>
+                        <span>我們堅持美感，打造獨特學院環境提升靈感。</span>
+                        <span>我們在乎溫度，教室設備規格升級無微不至。</span>
+                        <span>因為在乎使我們堅持提供最全面的支援服務。</span>
+                    </p>
                 </div>
                 <a data-fancybox data-animation-duration="700" data-src="#album1" href="javascript:;" class="btn_lightbox" title="">
                     <div class="window">
@@ -740,7 +798,7 @@
             </section>
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
             <section class="block_newspaper">
-                <h2><span>赫綵！熱搜報導</span></h2>
+                <h2><span>媒體獨家報導</span></h2>
                 <p><span>推廣設計教育</span>不遺餘力，讓世界看見<span>台灣設計軟實力！</span></p>
                 <ul class="newspaper_list">
                     <li>
@@ -796,9 +854,9 @@
             </section>
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
             <section class="block_result">
-                <h2><span>來看看學員們的學習成果</span></h2>
-                <p><i>打造<span>專屬學習規劃</span>，</i>
-                    <i>輕鬆達成<span>高效學習</span></i></p>
+                <h2><span>學員們的優秀學習成果</span></h2>
+                <p><i>培養<span>設計即戰力</span>，</i>
+                    <i>達成<span>結業即就業</span></i></p>
                 <div class="tabs_list result_tabs_list">
                     <ul class="tabs">
                         <li class="active"><a href="#tab1">商業視覺設計</a></li>
@@ -1220,7 +1278,7 @@
 
                                 <div class="text">
                                     <p class="p">成功的第一步都是從加入赫綵開始</p>
-                                    <h2>學員們的動人故事</h2>
+                                    <h2>學員們的成功故事</h2>
                                 </div>
                                 <img src="images/homepage/story/story1.png" alt="" id="student_story_txt_01_img02" class="done">
                                 <img src="images/homepage/story/story2.png" alt="" id="student_story_txt_02_img02">
@@ -1334,7 +1392,7 @@
                 <div class="teacher_team_box">
                     <div class="teacher_team_box_text">
                         <h2>實戰派講師團隊</h2>
-                        <h3>精選百位優良業師</h3>
+                        <h3>精選超過百位業師</h3>
                         <p>對課程有疑問嗎？快來聊一聊</p>
                         <div class="teacher_team_box_text_btn">
                             <a href="/consultation"><button class="teacher_consultation_btn" title="免費諮詢按鈕">免費諮詢</button></a>
@@ -1378,8 +1436,8 @@
             </section>
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
             <section class="block_news">
-                <h2><span>最新消息</span></h2>
-                <p>- 第一手掌握最新資訊，升級專業超輕鬆！ -</p>
+                <h2><span>延伸閱讀</span></h2>
+                <p>- 掌握最新業界動態，補充滿滿知識能量！ -</p>
                 <div class="jcarousel-wrapper">
                     <div class="news_list" data-jcarousel="true">
                         <ul class="news_event"><!--本日熱門 最少6筆-->
@@ -1501,7 +1559,7 @@
         <footer class="footer">
             <div class="footer_center">
                 <a href="#" class="gotop" title="回置頂">回置頂</a>
-                <div class="footer_title"><h2>趕緊加入赫綵的設計體驗之旅吧！</h2></div>
+                <div class="footer_title"><h2>一起加入赫綵的設計學習之旅吧！</h2></div>
                 <section class="footer_content">
                     <div class="footer_go_top_btn"></div>
                     <a class="footer_logo" href="index.html" title="赫綵設計學院[回到首頁]">
@@ -1570,6 +1628,14 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
     <script type="text/javascript" src="js/effect.js"></script>
+    <script type="text/javascript">
+        //POPIN 追蹤碼
+        (function() {
+            var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.charset = "utf-8"; pa.async = true;
+            pa.src = window.location.protocol + "//api.popin.cc/ads/CPG_Arwin_36335@A.js";
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+        })(); 
+    </script>    
 </body>
 </html>
 

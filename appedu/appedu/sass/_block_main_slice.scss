@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------
-.block_main_slice{ //完整轉化夢想為現實
+.block_main_slice{ //讓興趣轉為專長，夢想變成職業
 ------------------------------------------------------------------*/
-.block_main_slice{ //完整轉化夢想為現實
+.block_main_slice{ //讓興趣轉為專長，夢想變成職業
 	position: relative;
 	background-color: #FFF3DA;
 	background-image: url('../images/homepage/bg_block_main_slice.png');
@@ -140,6 +140,9 @@
 					width: 100%;
 					height: 25px;
 					background-color: $major-color;
+					@include rwd(400){
+						height: 18px;
+					}
 				}
 				&::after{
 					content: "?";
@@ -169,6 +172,9 @@
 			font-size: 1.41em;
 			word-break: keep-all;
 			// padding: 0 4px;
+			@include rwd(400){
+				font-size: 1.2em;
+			}
 			@include rwd(350){
 				font-size: 1em;
 			}

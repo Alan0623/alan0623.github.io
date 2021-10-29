@@ -119,7 +119,7 @@ $(function(){
 
 
 /*------------------------------------------------------------------
-//block_promise 看見赫綵的最強保證，保證包你會
+//block_promise 跟著赫綵一起挖掘出你的最高潛力
 ------------------------------------------------------------------*/
 $(function(){
 	// 先取得 .promise_list , 必要參數及輪播間隔
@@ -163,7 +163,7 @@ $(function(){
 });
 /*------------------------------------------------------------------
 //block_system 頁籤  系統化教學，為你的需求量身打造
-------------------------------------------------------------------*/
+------------------------------------------------------------------
 $(function(){
   // 預設顯示第一個頁籤
   // 並先把 .tabs, .tabs li 及 .tab_content, .tab_content li 等元素取出
@@ -210,6 +210,37 @@ $(function(){
     left: '100%'
   });
 });
+------------------------------------------------------------------*/
+
+$(function(){
+	// 預設顯示第一個 Tab
+	var _showTab = 0;
+	$('.system_list').each(function(){
+		// 目前的頁籤區塊
+		var $tab = $(this);
+ 
+		var $defaultLi = $('ul.tabs li', $tab).eq(_showTab).addClass('active');
+		$($defaultLi.find('a').attr('href')).removeClass('hide_list').siblings().addClass('hide_list');
+ 
+		// 當 li 頁籤被點擊時...
+		// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+		$('ul.tabs li', $tab).click(function() {
+			// 找出 li 中的超連結 href(#id)
+			var $this = $(this),
+				_clickTab = $this.find('a').attr('href');
+			// 把目前點擊到的 li 頁籤加上 .active
+			// 並把兄弟元素中有 .active 的都移除 class
+			$this.addClass('active').siblings('.active').removeClass('active');
+			// 淡入相對應的內容並隱藏兄弟元素
+			$(_clickTab).stop(false, true).fadeIn().removeClass('hide_list').siblings().addClass('hide_list');
+ 
+			return false;
+		}).find('a').focus(function(){
+			this.blur();
+		});
+	});
+});
+
 /*------------------------------------------------------------------
 //block_master 赫啦！來跟大師學設計
 ------------------------------------------------------------------*/
@@ -250,7 +281,7 @@ $(function() {
 ------------------------------------------------------------------*/
 $(function() {
   if ($(window).width() < 760) {
-    var jcarousel = $('.hot_event_list');
+    var jcarousel = $('.system_list .hot_event_list');
     jcarousel
         .on('jcarousel:reload jcarousel:create', function () {
             var carousel = $(this),
@@ -277,7 +308,7 @@ $(function() {
         .jcarouselControl({
             target: '+=1'
         });
-        $('.hot_event').removeAttr("style");
+        $('.system_list .hot_event').removeAttr("style");
   }
   $(window).resize(function() {
     if ($(window).width() < 760) {
@@ -308,9 +339,9 @@ $(function() {
           .jcarouselControl({
               target: '+=1'
           });
-          $('.hot_event').removeAttr("style");
+          $('.system_list .hot_event').removeAttr("style");
     } else {
-      $('.hot_event').removeAttr("style");
+      $('.system_list .hot_event').removeAttr("style");
     }
   });
 });
