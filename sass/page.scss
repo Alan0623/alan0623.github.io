@@ -765,6 +765,9 @@
                 line-height: 48px;
                 left: 24px;
             }
+            @include media('phone'){
+                left: 16px;
+            }
         }
     }
     &.open{
@@ -796,6 +799,9 @@
             border-radius: 5px;
             @include media('mobile'){
                 right: 16px;
+            }
+            @include media('phone'){
+                width: 24px;
             }
         }
         a{
@@ -850,6 +856,9 @@
                 border-radius: 5px;
                 @include media('mobile'){
                     right: 16px;
+                }
+                @include media('phone'){
+                    width: 24px;
                 }
             }
         }

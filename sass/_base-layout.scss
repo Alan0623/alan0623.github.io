@@ -324,7 +324,7 @@ transform: translate3d(0, 0, 0);
 .header{
 	position: fixed;
     width: 100%;
-    z-index: 5;	
+    z-index: 10;	
 	// height: 80px;
 	&.bg_black,
 	&.fixed{
@@ -1116,6 +1116,7 @@ transform: translate3d(0, 0, 0);
 		width: 100%;
 		display: block;
 		margin: 0 auto;
+		padding: 0 24px;
 		li{
 			position: relative;
 		}
@@ -1129,6 +1130,7 @@ transform: translate3d(0, 0, 0);
 		font-size: 1.1em;
 		font-family: 'Open Sans', Helvetica;
 		border: none;
+		padding-right: 64px
 	}
 	.btn_close{
 		@extend %hide-text;
@@ -1585,7 +1587,7 @@ cookies
     bottom: 0;
     display: block;
     width: 100%;
-    z-index: 2;
+    z-index: 5;
     color: white;
     background-color: rgba(0,0,0,0.7);
     transition: $transition;
@@ -1596,12 +1598,22 @@ cookies
     &.close{
         transform: translateY(100%);
     }
+	.cookie-content{
+		@include media('phone'){
+			font-size: 0.9em;
+			line-height: 1.6em;
+		}
+	}
     .cookies-container{
         max-width: 1410px;
         margin: 0 auto;
         padding: 48px 24px;
         box-sizing: border-box;
         position: relative;
+		@include media('phone'){
+			padding: 28px 24px;
+			padding-bottom: 48px;
+		}
     }
     a{
         color: white;
