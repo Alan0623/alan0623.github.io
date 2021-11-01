@@ -59,6 +59,9 @@ $(function(){
   主選單
   ------------------------------------------------------------------*/
   $(function(){
+    $(".pop_inquiry").addClass("transition"),
+    $(".pop_language").addClass("transition"),
+    $(".menu").addClass("transition");
       $(".open_nav").click(function () {
         $(this).toggleClass("open"),
         $(".pop_inquiry").removeClass("open"),
@@ -99,45 +102,57 @@ $(function() {
 pop_inquiry
 ------------------------------------------------------------------*/
 $(function(){
-  $(".header .header_center .tool2").click(function () {
+  $(".header .header_center .tool2,.menu .tool li a.tool2").click(function () {
+    $(".main").removeClass("pop_active2").addClass("pop_active");
+    $(".menu").removeClass("open_menu"),
+    $(".open_nav").removeClass("open"),
     $(".pop_language").removeClass("open"),
+    $(".pop_search").removeClass("open");
     $(".pop_inquiry").toggleClass("open");
-    window.addEventListener("resize", function () {
-      $(window).width() > 768 && (
-        $(".pop_inquiry").removeClass("open"));
-    })
+    // window.addEventListener("resize", function () {
+    //   $(window).width() > 768 && (
+    //     $(".pop_inquiry").removeClass("open"));
+    // })
   });
-  $(".header .header_center .tool3").click(function () {
+  $(".header .header_center .tool3,.menu .tool li a.tool3").click(function () {
+    
+    $(".main").removeClass("pop_active").addClass("pop_active2");
+    $(".menu").removeClass("open_menu"),
+    $(".open_nav").removeClass("open"),
     $(".pop_inquiry").removeClass("open"),
+    $(".pop_search").removeClass("open");
     $(".pop_language").toggleClass("open");
-    window.addEventListener("resize", function () {
-      $(window).width() > 768 && (
-        $(".pop_language").removeClass("open")
-      );
-    })
+    // window.addEventListener("resize", function () {
+    //   $(window).width() > 768 && (
+    //     $(".pop_language").removeClass("open")
+    //   );
+    // })
   });
 
-  $(".header .header_center .tool1").click(function () {
+  $(".header .header_center .tool1,.menu .tool li a.tool1").click(function () {
+    $(".menu").removeClass("open_menu"),
+    $(".open_nav").removeClass("open"),
     $(".pop_inquiry").removeClass("open"),
     $(".pop_language").removeClass("open"),
-    $(".pop_search").addClass("open"),
-    window.addEventListener("resize", function () {
-      $(window).width() > 768 && (
-        $(".pop_search").addClass("open")
-      );
-    })
+    $(".pop_search").addClass("open");
+    // window.addEventListener("resize", function () {
+    //   $(window).width() > 768 && (
+    //     $(".pop_search").addClass("open")
+    //   );
+    // })
   });
 
 
   $(".btn_close").click(function () {
+    $(".main").removeClass("pop_active").removeClass("pop_active2"),
     $(".pop_inquiry").removeClass("open"),
     $(".pop_language").removeClass("open"),
-    $(".pop_search").removeClass("open"),
-    window.addEventListener("resize", function () {
-      $(window).width() > 768 && (
-        $(".pop_search").removeClass("open")
-      );
-    })
+    $(".pop_search").removeClass("open");
+    // window.addEventListener("resize", function () {
+    //   $(window).width() > 768 && (
+    //     $(".pop_search").removeClass("open")
+    //   );
+    // })
   });
 
   $(document).keydown(function(event){

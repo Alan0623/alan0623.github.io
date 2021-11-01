@@ -82,7 +82,7 @@
   }
 }
 /* line 1637, ../sass/_base-function.scss */
-.page_banner .figcaption, .page_title .slogan, .catalogue_list ul li a .figcaption::after, .bread_crumbs ul li::after, .bread_crumbs ul li:first-child a::before, .hot_tag h2, .hot_tag ul li a::after, .catalogue_content_list .center .article .list .figcaption .tag h5::before, .ready_fixed ul.jump, .breadcrumb ul li::before, .breadcrumb ul li:nth-child(1) a::before, .products_brand .list ul li a::before {
+.page_banner .figcaption, .page_title .slogan, .catalogue_list ul li a .figcaption::after, .bread_crumbs ul li::after, .bread_crumbs ul li:first-child a::before, .hot_tag h2, .hot_tag ul li a::after, .catalogue_content_list .center .article .list .figcaption .tag h5::before, .ready_fixed ul.jump, .breadcrumb ul li::before, .breadcrumb ul li:nth-child(1) a::before, .products_brand .list ul > li a::before {
   top: 50%;
   transform: translateY(-50%);
   content: "";
@@ -1710,11 +1710,17 @@ catalogue
   width: 100%;
   top: 94px;
 }
-/* line 1389, ../sass/page.scss */
+@media screen and (max-width: 800px) {
+  /* line 1385, ../sass/page.scss */
+  .breadcrumb {
+    width: 50%;
+  }
+}
+/* line 1393, ../sass/page.scss */
 .breadcrumb ul {
   width: 100%;
 }
-/* line 1394, ../sass/page.scss */
+/* line 1398, ../sass/page.scss */
 .breadcrumb ul li {
   float: left;
   color: white;
@@ -1723,32 +1729,32 @@ catalogue
   position: relative;
   padding-left: 28px;
 }
-/* line 1401, ../sass/page.scss */
+/* line 1405, ../sass/page.scss */
 .breadcrumb ul li::before {
   left: 8px;
   width: 12px;
   height: 12px;
   background-image: url("../images/icon/icon_arrow_o2.svg");
 }
-/* line 1408, ../sass/page.scss */
+/* line 1412, ../sass/page.scss */
 .breadcrumb ul li a {
   color: white;
   font-size: 1em !important;
 }
-/* line 1413, ../sass/page.scss */
+/* line 1417, ../sass/page.scss */
 .breadcrumb ul li:nth-child(1) {
   padding-left: 0;
 }
-/* line 1415, ../sass/page.scss */
+/* line 1419, ../sass/page.scss */
 .breadcrumb ul li:nth-child(1)::before {
   display: none;
   background-image: none;
 }
-/* line 1419, ../sass/page.scss */
+/* line 1423, ../sass/page.scss */
 .breadcrumb ul li:nth-child(1) a {
   padding-left: 20px;
 }
-/* line 1421, ../sass/page.scss */
+/* line 1425, ../sass/page.scss */
 .breadcrumb ul li:nth-child(1) a::before {
   left: 0;
   width: 14px;
@@ -1757,7 +1763,7 @@ catalogue
   background-image: none;
 }
 
-/* line 1434, ../sass/page.scss */
+/* line 1438, ../sass/page.scss */
 .products_brand {
   position: relative;
   background-size: cover;
@@ -1768,7 +1774,7 @@ catalogue
   overflow: hidden;
   min-height: 700px;
 }
-/* line 1443, ../sass/page.scss */
+/* line 1447, ../sass/page.scss */
 .products_brand::after {
   content: "";
   display: block;
@@ -1779,28 +1785,121 @@ catalogue
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 }
-/* line 1453, ../sass/page.scss */
+/* line 1457, ../sass/page.scss */
 .products_brand.bg_engine_parts {
   background-image: url("../images/products/bg_products_big1.jpg");
 }
-/* line 1457, ../sass/page.scss */
+/* line 1461, ../sass/page.scss */
 .products_brand .center {
   position: relative;
   z-index: 2;
   padding: 0 40px;
-  padding-top: 86px;
+  padding-top: 142px;
   display: flex;
   align-items: center;
   height: 100%;
   min-height: 700px;
 }
-/* line 1467, ../sass/page.scss */
+/* line 1471, ../sass/page.scss */
 .products_brand .list {
-  padding-top: 56px;
+  padding-top: 0px;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
-/* line 1474, ../sass/page.scss */
+/* line 1479, ../sass/page.scss */
+.products_brand .list ol {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+/* line 1484, ../sass/page.scss */
+.products_brand .list ol > li {
+  position: relative;
+  width: 33.33%;
+  padding-right: 16px;
+}
+@media screen and (max-width: 800px) {
+  /* line 1484, ../sass/page.scss */
+  .products_brand .list ol > li {
+    width: 50%;
+  }
+}
+/* line 1491, ../sass/page.scss */
+.products_brand .list ol > li .bar {
+  position: absolute;
+  z-index: 2;
+  top: 56px;
+  right: 16px;
+  width: 4px;
+  height: 50%;
+  animation: move_UpDown 1.71s infinite linear;
+  border-radius: 20px;
+}
+@media screen and (max-width: 800px) {
+  /* line 1491, ../sass/page.scss */
+  .products_brand .list ol > li .bar {
+    width: 3px;
+  }
+}
+/* line 1503, ../sass/page.scss */
+.products_brand .list ol > li .bar::before {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  width: 4px;
+  height: 20%;
+  background-color: #fff000;
+  box-shadow: rgba(255, 255, 255, 0.8) 1px 1px 10px, rgba(255, 255, 255, 0.6) 2px 2px 6px, rgba(255, 255, 0, 0.2) 1px 1px 2px;
+  border-radius: 20px;
+}
+@media screen and (max-width: 800px) {
+  /* line 1503, ../sass/page.scss */
+  .products_brand .list ol > li .bar::before {
+    width: 3px;
+  }
+}
+/* line 1518, ../sass/page.scss */
+.products_brand .list ol > li .bar::after {
+  content: "";
+  position: absolute;
+  top: 56px;
+  right: 0px;
+  width: 4px;
+  height: 80%;
+  background: linear-gradient(0deg, #fff000 0%, rgba(255, 240, 0, 0) 100%);
+  z-index: 2;
+  border-radius: 20px;
+}
+@media screen and (max-width: 800px) {
+  /* line 1518, ../sass/page.scss */
+  .products_brand .list ol > li .bar::after {
+    width: 3px;
+  }
+}
+/* line 1536, ../sass/page.scss */
+.products_brand .list ol > li::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 16px;
+  width: 4px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+}
+@media screen and (max-width: 800px) {
+  /* line 1546, ../sass/page.scss */
+  .products_brand .list ol > li:nth-child(2) {
+    display: none;
+  }
+}
+/* line 1550, ../sass/page.scss */
+.products_brand .list ol > li:nth-child(2) .bar {
+  animation-delay: 1s;
+}
+/* line 1556, ../sass/page.scss */
 .products_brand .list ul {
   float: left;
   width: 100%;
@@ -1812,38 +1911,63 @@ catalogue
   justify-content: flex-start;
   align-content: flex-start;
 }
-/* line 1484, ../sass/page.scss */
+/* line 1566, ../sass/page.scss */
 .products_brand .list ul.brand_title {
   width: 33.33%;
 }
-/* line 1490, ../sass/page.scss */
+/* line 1572, ../sass/page.scss */
 .products_brand .list ul h3 {
   font-size: 2em;
   color: white;
   padding-bottom: 24px;
 }
-/* line 1495, ../sass/page.scss */
-.products_brand .list ul li {
+/* line 1577, ../sass/page.scss */
+.products_brand .list ul > li {
   width: 33.33%;
-  padding: 4px 0;
+  padding: 4px 3%;
 }
-/* line 1498, ../sass/page.scss */
-.products_brand .list ul li a {
+@media screen and (max-width: 800px) {
+  /* line 1577, ../sass/page.scss */
+  .products_brand .list ul > li {
+    width: 50%;
+    padding: 4px 0%;
+  }
+}
+/* line 1584, ../sass/page.scss */
+.products_brand .list ul > li a {
   color: white;
   font-size: 1.5em;
   line-height: 2.25em;
   position: relative;
   padding-left: 28px;
   position: relative;
-  padding-top: 24px;
   letter-spacing: 1px;
 }
-/* line 1507, ../sass/page.scss */
-.products_brand .list ul li a:hover, .products_brand .list ul li a:focus {
+@media screen and (max-width: 800px) {
+  /* line 1584, ../sass/page.scss */
+  .products_brand .list ul > li a {
+    font-size: 1.2em;
+  }
+}
+/* line 1596, ../sass/page.scss */
+.products_brand .list ul > li a:hover, .products_brand .list ul > li a:focus {
   color: #EC8225;
 }
-/* line 1510, ../sass/page.scss */
-.products_brand .list ul li a::after {
+/* line 1600, ../sass/page.scss */
+.products_brand .list ul > li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 4px;
+  background-color: #EC8225;
+}
+/* line 1615, ../sass/page.scss */
+.products_brand .list.brand li a {
+  padding-top: 24px;
+}
+/* line 1617, ../sass/page.scss */
+.products_brand .list.brand li a::after {
   content: "Suitablt to";
   position: absolute;
   top: -6px;
@@ -1852,12 +1976,12 @@ catalogue
   left: 29px;
   letter-spacing: 0px;
 }
-/* line 1519, ../sass/page.scss */
-.products_brand .list ul li a::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 16px;
-  height: 4px;
-  background-color: #EC8225;
+
+@keyframes move_UpDown {
+  0% {
+    transform: translateY(-50vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
 }

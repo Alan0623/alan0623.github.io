@@ -556,13 +556,15 @@ transform: translate3d(0, 0, 0);
 .menu 手機選單
 ------------------------------------------------------------------*/
 .menu{
-	transition: $transition;
 	position: fixed;
 	height: 100vh;
 	width: 345px;
 	background-color: #EDEDED;
 	z-index: 112;
 	transform: translateX(-400px);
+	&.transition{
+		transition: $transition;
+	}
 	&.open_menu{
 		transform: translateX(0px);
 	}
@@ -901,10 +903,28 @@ transform: translate3d(0, 0, 0);
     box-sizing: border-box;
 	padding-bottom: 16px;
 	// display: none;
-	transition: $transition;
 	transform: translateY(-115%);
 	opacity: 0;
 	box-shadow: $box-shadow;
+	width: calc(100% - 32px);
+	.btn_close{
+		display: none;
+	}
+	@include rwd(730){
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: calc(50vh - 220px);
+		z-index: 3;
+		padding: 16px;
+		.btn_close{
+			display: block;
+		}
+	}
+
+	&.transition{
+		transition: $transition;
+	}
 	&.open{
 		transform: translateY(0px);
 		display: block;
@@ -922,6 +942,9 @@ transform: translate3d(0, 0, 0);
 		border-style: solid;
 		border-width: 0 14px 14px 14px;
 		border-color: transparent transparent #FFF transparent;
+		@include rwd(730){
+			display: none;
+		}
 	}
 	.img{
 		float: left;
@@ -986,6 +1009,9 @@ transform: translate3d(0, 0, 0);
 			display: inline-block;
 			width: 100%;
 			padding: 8px 0;
+			@include rwd(730){
+				padding: 2px 0;
+			}
 			&::after{
 				@extend %clear;
 			}
@@ -1023,6 +1049,12 @@ transform: translate3d(0, 0, 0);
 			right: 0;
 			color: #FFF;
 			padding-right: 32px;
+			@include rwd(730){
+				width: 100%;
+				display: block;
+				text-align: center;
+				position: relative;
+			}
 			&::after{
 				display: block;
 				position: absolute;
@@ -1049,11 +1081,26 @@ transform: translate3d(0, 0, 0);
     padding: 20px 24px;
     box-sizing: border-box;
 	// display: none;
-	transition: $transition;
 	transform: translateY(-200%);
 	opacity: 0;
 	box-shadow: $box-shadow;
 	z-index: 2;
+	width: calc(100% - 32px);
+	.btn_close{
+		display: none;
+	}
+	@include rwd(730){
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: calc(50vh - 60px);
+		.btn_close{
+			display: block;
+		}
+	}
+	&.transition{
+		transition: $transition;
+	}
 	&.open{
 		transform: translateY(0px);
 		display: block;
@@ -1070,6 +1117,9 @@ transform: translate3d(0, 0, 0);
 		border-style: solid;
 		border-width: 0 14px 14px 14px;
 		border-color: transparent transparent #FFF transparent;
+		@include rwd(730){
+			display: none;
+		}
 	}
 	ul{
 		li{
@@ -1085,6 +1135,58 @@ transform: translate3d(0, 0, 0);
 }
 ::-webkit-input-placeholder { /* Chrome, Safari */
 	color: #333333;
+}
+.btn_close{
+	@extend %hide-text;
+	position: absolute;
+	z-index: 4;
+	left: 0;
+	top: -72px;
+	width: 56px;
+	height: 56px;
+	@include rwd(730){
+		width: 48px;
+		height: 48px;
+		border: white solid 1px;
+		border-radius: 48px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		background-color: rgba(0,0,0,0.2);
+	}
+
+	&:before, &:after{
+		transition-duration: 0.5s;
+		background-color: #FFF;
+		position: absolute;
+		content: "";
+		width: 42px;
+		height: 5px;
+		border-radius: 5px;
+		left: 9px;
+		top: 22px;
+
+		@include rwd(730){
+			width: 28px;
+			height: 3px;
+		}
+	}
+	&:before{
+		transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+	}      
+	&:after{
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+	}
+	&:hover, &:focus{
+		@include rwd(730){
+			border-color: $major-color;
+		}
+		&:before, &:after{
+			background-color: $major-color;
+		}
+	}
 }
 .pop_search{
 	position: fixed;
@@ -1109,6 +1211,13 @@ transform: translate3d(0, 0, 0);
 		padding-left: 28px;
 		font-size: 2em;
 		margin-bottom: 8px;
+		@include rwd(730){
+			font-size: 1.6em;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+			margin-bottom: 8px;
+		}
 	}
 	ul{
 		position: relative;
@@ -1130,40 +1239,12 @@ transform: translate3d(0, 0, 0);
 		font-size: 1.1em;
 		font-family: 'Open Sans', Helvetica;
 		border: none;
-		padding-right: 64px
-	}
-	.btn_close{
-		@extend %hide-text;
-		position: absolute;
-		left: 0;
-		top: -72px;
-		width: 56px;
-		height: 56px;
-		&:before, &:after{
-			transition-duration: 0.5s;
-			background-color: #FFF;
-			position: absolute;
-			content: "";
-			width: 42px;
-			height: 5px;
-			border-radius: 5px;
-			left: 9px;
-			top: 26px;
-		}
-		&:before{
-			transform: rotate(-45deg);
-			-webkit-transform: rotate(-45deg);
-		}      
-		&:after{
-			transform: rotate(45deg);
-			-webkit-transform: rotate(45deg);
-		}
-		&:hover, &:focus{
-			&:before, &:after{
-				background-color: $major-color;
-			}
+		padding-right: 64px;
+		@include rwd(730){
+			font-size: 0.9em
 		}
 	}
+
 	.btn_submit{
 		cursor: pointer;
 		@extend %hide-text;
@@ -1326,7 +1407,9 @@ footer
 		@include rwd(710){
 			padding-right: 98px;
 		}
-
+		@include rwd(604){
+			padding-right: 0px;
+		}
 		.logo{
 			@extend %hide-text;
 			display: block;
@@ -1495,6 +1578,7 @@ footer
 				text-align: center;
 				width: 100%;
 				padding-top: 8px;
+				padding-left: 0;
 			}
 		}
 		ul{
@@ -1545,6 +1629,21 @@ footer
 	display: block;
 	width: 100%;
 	position: relative;
+	&.pop_active2,
+	&.pop_active{
+		&::before{
+			@include rwd(730){
+			content: "";
+			position: fixed;
+			z-index: 2;
+			width: 100%;
+			height: 100vh;
+			top: 0;
+			left: 0;
+			background-color: rgba(0,0,0,0.5);
+			}
+		}
+	}
 }
 .more{
     display: block;

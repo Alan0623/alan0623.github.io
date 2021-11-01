@@ -203,7 +203,7 @@ quality_center
 
         .more{
             color: white;
-            bottom: 80px;
+            bottom: 94px;
             margin: 0 24px;
         }
     }
@@ -336,7 +336,10 @@ quality_center
         right: 0;
         .img{ 
             display: inline-block;
-            margin-bottom: 136px;
+            margin-bottom: 152px;
+            @include rwd(780){
+                margin-bottom: 192px;
+            }
             &::after{
                 @extend %clear;
             }
@@ -355,8 +358,11 @@ quality_center
     .title {
         display: inline-block;
         position: absolute;
-        bottom: 80px;
+        bottom: 104px;
         left: calc(50% - 69px);
+        @include rwd(780){
+            bottom: 152px;
+        }
         li {
             cursor: pointer;
             float: left;
