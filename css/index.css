@@ -236,6 +236,7 @@ PRODUCTS
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  transition: all 0.8s ease-out;
 }
 /* line 138, ../sass/index.scss */
 .jcarousel-control-prev:hover, .jcarousel-control-prev:focus,
@@ -247,13 +248,13 @@ PRODUCTS
 
 /* line 144, ../sass/index.scss */
 .jcarousel-control-prev {
-  left: 16px;
+  left: 0px;
   transform: rotateY(180deg);
 }
 
 /* line 149, ../sass/index.scss */
 .jcarousel-control-next {
-  right: 16px;
+  right: 0px;
 }
 
 /** Carousel Pagination **/
@@ -662,22 +663,22 @@ news
 .news > .center {
   position: relative;
   z-index: 2;
-  margin: 0 24px;
-  max-width: calc(100% - 48px);
+  margin: 0 auto;
+  max-width: 1440px;
 }
-/* line 481, ../sass/index.scss */
+/* line 483, ../sass/index.scss */
 .news ul {
   max-width: 1440px;
   margin: 0 auto;
   margin-bottom: 64px;
 }
 @media screen and (max-width: 500px) {
-  /* line 481, ../sass/index.scss */
+  /* line 483, ../sass/index.scss */
   .news ul {
     margin-bottom: 16px;
   }
 }
-/* line 491, ../sass/index.scss */
+/* line 493, ../sass/index.scss */
 .news ul li {
   width: 33.33%;
   float: left;
@@ -686,53 +687,53 @@ news
   overflow: hidden;
 }
 @media screen and (max-width: 800px) and (min-width: 501px) {
-  /* line 491, ../sass/index.scss */
+  /* line 493, ../sass/index.scss */
   .news ul li {
     width: 50%;
   }
-  /* line 499, ../sass/index.scss */
+  /* line 501, ../sass/index.scss */
   .news ul li:last-child {
     display: none;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 491, ../sass/index.scss */
+  /* line 493, ../sass/index.scss */
   .news ul li {
     width: 100%;
     margin-bottom: 16px;
   }
 }
-/* line 507, ../sass/index.scss */
+/* line 509, ../sass/index.scss */
 .news ul li a {
   display: inline-block;
   overflow: hidden;
 }
-/* line 510, ../sass/index.scss */
+/* line 512, ../sass/index.scss */
 .news ul li a:hover, .news ul li a:focus {
   border-color: #EC8225;
 }
-/* line 512, ../sass/index.scss */
+/* line 514, ../sass/index.scss */
 .news ul li a:hover img, .news ul li a:focus img {
   transform: scale(1.1);
 }
-/* line 516, ../sass/index.scss */
+/* line 518, ../sass/index.scss */
 .news ul li a:hover figcaption, .news ul li a:focus figcaption {
   transform: translateY(100%);
   transition: all .8s;
 }
-/* line 522, ../sass/index.scss */
+/* line 524, ../sass/index.scss */
 .news ul li figure {
   display: inline-block;
   position: relative;
   float: left;
 }
-/* line 527, ../sass/index.scss */
+/* line 529, ../sass/index.scss */
 .news ul li figure img {
   width: 100%;
   float: left;
   transition: all .8s ease-in-out;
 }
-/* line 533, ../sass/index.scss */
+/* line 535, ../sass/index.scss */
 .news ul li figcaption {
   color: white;
   position: absolute;
@@ -741,11 +742,11 @@ news
   background-color: rgba(0, 0, 0, 0.6);
   padding: 18px;
 }
-/* line 540, ../sass/index.scss */
+/* line 542, ../sass/index.scss */
 .news ul li figcaption span {
   font-size: 1.125em;
 }
-/* line 544, ../sass/index.scss */
+/* line 546, ../sass/index.scss */
 .news ul li figcaption h3 {
   font-size: 1.5em;
   font-weight: 600;
@@ -758,16 +759,20 @@ news
   overflow: hidden;
 }
 @media screen and (max-width: 800px) {
-  /* line 544, ../sass/index.scss */
+  /* line 546, ../sass/index.scss */
   .news ul li figcaption h3 {
     font-size: 1.4em;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 544, ../sass/index.scss */
+  /* line 546, ../sass/index.scss */
   .news ul li figcaption h3 {
     height: 44px;
     overflow: hidden;
     font-size: 1em;
   }
+}
+/* line 569, ../sass/index.scss */
+.news .more {
+  margin-right: 16px;
 }

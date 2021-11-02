@@ -65,7 +65,7 @@ overflow: hidden;
 	height: 100vh;
 	overflow: hidden;
 	@include media('mobile'){
-		height: 800px;
+		height: 680px;
 	}
 	@include media('phone'){
 		height: 400px;
@@ -141,7 +141,7 @@ overflow: hidden;
 	left: 0;
 	overflow: hidden;
 	@include media("mobile"){
-		height: 800px!important;
+		height: 680px!important;
 	}
 	@include media("phone"){
 		height: 400px!important;
@@ -431,6 +431,9 @@ transform: translate3d(0, 0, 0);
 		padding: 10px 32px;
 		position: relative;
 		z-index: 9;
+		@include media('mobile'){
+			padding: 8px 32px 10px 32px;
+		}
 		&::after{
 			@extend %clear;
 		}
@@ -452,6 +455,9 @@ transform: translate3d(0, 0, 0);
 			li{
 				float: left;
 				padding: 0 4px;
+				@include media('mobile'){
+					padding: 0 8px;
+				}
 				a{
 					color: white;
 					width: 64px;
@@ -461,6 +467,10 @@ transform: translate3d(0, 0, 0);
 					text-align: center;
 					align-items: end;
 					justify-content: center;
+					@include media('mobile'){
+						width: 36px;
+						height: 36px;
+					}
 					&::before{
 						content: "";
 						display: block;
@@ -475,6 +485,11 @@ transform: translate3d(0, 0, 0);
 						background-size: contain;
 						border-radius: 50px;
 						border: #FFF solid 2px;
+						@include media('mobile'){
+							width: 36px;
+							height: 36px;
+							border: #FFF solid 1px;
+						}
 					}
 					&:hover, &:focus{
 						&::before{
@@ -514,6 +529,11 @@ transform: translate3d(0, 0, 0);
 							}
 						}
 					}
+					span{
+						@include media('mobile'){
+							display: none;
+						}
+					}
 				}
 			}
 		}
@@ -538,8 +558,12 @@ transform: translate3d(0, 0, 0);
 			background-repeat: no-repeat;
 			background-size: contain;
 			margin:  0;
+			@include media('mobile'){
+				height: 36px;
+			}
 			@include rwd(730){
 				margin: 0 auto;
+				background-position: center;
 			}
 			@include media('phone'){
 				width: 70%;
@@ -709,6 +733,9 @@ transform: translate3d(0, 0, 0);
 	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 	cursor: pointer;
 	border-radius: 3px;
+	@include media('mobile'){
+		top: 0;
+	}
 	@include media('phone'){
 		left: 20px;
 		top: 4px;
@@ -754,6 +781,10 @@ transform: translate3d(0, 0, 0);
 		top: 25px;
 		left: 8px;
 		border-radius: 5px;
+		@include media('mobile'){
+			width: 36px;
+			height: 4px;
+		}
 		@include media('phone'){
 			width: 32px;
 			height: 3px;
@@ -768,6 +799,10 @@ transform: translate3d(0, 0, 0);
 		height: 5px;
 		border-radius: 5px;
 		left: 0px;
+		@include media('mobile'){
+			width: 36px;
+			height: 4px;
+		}
 		@include media('phone'){
 			width: 32px;
 			height: 3px;
@@ -775,12 +810,18 @@ transform: translate3d(0, 0, 0);
 	  }
 	  &:before{
 		top: -16px;
+		@include media('mobile'){
+			top: -14px;
+		}
 		@include media('phone'){
 			top: -12px;
 		}
 	  }    
 	  &:after{
 		top: 16px;
+		@include media('mobile'){
+			top: 14px;
+		}
 		@include media('phone'){
 			top: 12px;
 		}
@@ -1073,7 +1114,7 @@ transform: translate3d(0, 0, 0);
 .pop_language{
 	background-color: #fff;
     border-radius: 10px;
-    max-width: 448px;
+    max-width: 112px;
     position: absolute;
 	right: 14px;
     top: 88px;
@@ -1090,6 +1131,7 @@ transform: translate3d(0, 0, 0);
 		display: none;
 	}
 	@include rwd(730){
+		max-width: 448px;
 		left: 0;
 		right: 0;
 		margin: 0 auto;

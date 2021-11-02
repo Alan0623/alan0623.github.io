@@ -134,7 +134,7 @@ PRODUCTS
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-
+    transition: $transition;
     &:hover, &:focus{
         background-color: $major-color;
         background-image: url('../images/icon/icon_arrow_ow.svg');
@@ -142,12 +142,12 @@ PRODUCTS
 }
 
 .jcarousel-control-prev {
-    left: 16px;
+    left: 0px;
     transform: rotateY(180deg);
 }
 
 .jcarousel-control-next {
-    right: 16px;
+    right: 0px;
 }
 
 /** Carousel Pagination **/
@@ -475,8 +475,10 @@ news
     >.center{
         position: relative;
         z-index: 2;
-        margin: 0 24px;
-        max-width: calc(100% - 48px);
+        margin: 0 auto;
+        // max-width: calc(100% - 48px);
+        max-width: 1440px;
+
     }
     ul{
         max-width: 1440px;
@@ -563,6 +565,9 @@ news
                 }
             }
         }
+    }
+    .more{
+        margin-right: 16px;
     }
 }
 

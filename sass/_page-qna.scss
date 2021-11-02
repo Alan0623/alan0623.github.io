@@ -1,0 +1,151 @@
+/*------------------------------------------------------------------
+qna
+------------------------------------------------------------------*/
+.block_qna{
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.6em;
+    color: #333;
+    margin-bottom: 32px;
+    // max-height: 124px;
+    @include media('mobile'){
+        margin-bottom: 16px;
+    }
+    .question a,
+    .answer{
+        &::before{
+            position: absolute;
+            width: 56px;
+            height: 56px;
+            border-radius: 56px;
+            line-height: 56px;
+            text-align: center;
+            font-weight: 700;
+            color: white;
+            left: 32px;
+            @include media('mobile'){
+                width: 48px;
+                height: 48px;
+                border-radius: 48px;
+                line-height: 48px;
+                left: 24px;
+            }
+            @include media('phone'){
+                left: 16px;
+            }
+        }
+    }
+    &.open{
+        .question a{
+            &::after{
+                transform: rotateZ(0deg);
+            }
+        }
+        .answer{
+            padding: 88px 0;
+            padding-left: 112px;
+            transform: translateY(0) rotateX(0);
+            height: auto;
+            opacity: 1;
+        }
+    }
+    .question{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            right: 32px;
+            z-index: 4;
+            top: calc(50% - 2px);
+            display: block;
+            width: 32px;
+            height: 4px;
+            background-color: $major-color; 
+            border-radius: 5px;
+            @include media('mobile'){
+                right: 16px;
+            }
+            @include media('phone'){
+                width: 24px;
+            }
+        }
+        a{
+            padding: 24px 0;
+            padding-left: 112px;
+            padding-right: 80px;
+            position: relative;
+            display: block;
+            z-index: 3;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: $box-shadow;
+            color: $black;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            // -webkit-box-orient: vertical;
+            // -webkit-line-clamp: 2;
+            // max-height: 128px;
+            // overflow: hidden;
+            @include media('mobile'){
+                padding: 16px;
+                padding-left: 88px;
+                padding-right: 32px;
+                -webkit-line-clamp: 99;
+                max-height: none;
+            }
+            &:hover, &:focus{
+                background-color: $major-color;
+                color: white;
+                &::before{
+                    color: $major-color;
+                    background-color: white;
+                }
+            }
+            &::before{
+                content: "Q";
+                background-color: $major-color;
+                top: 20px;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                right: 32px;
+                z-index: 4;
+                top: calc(50% - 2px);
+                display: block;
+                width: 32px;
+                height: 4px;
+                background-color: $major-color; 
+                transition: $transition;
+                transform: rotateZ(90deg);
+                border-radius: 5px;
+                @include media('mobile'){
+                    right: 16px;
+                }
+                @include media('phone'){
+                    width: 24px;
+                }
+            }
+        }
+
+    }
+    .answer{
+        transform: translateY(-50%) rotateX(90deg);
+        transition: $transition;
+        opacity: 0;
+        height: 1px;
+        position: relative;
+        margin-top: -20px;
+        z-index: 1;
+        padding: 16px 0;
+        padding-left: 112px;
+        padding-right: 88px;
+        background-color: #F9F9F9;
+        border-radius: 0 0 16px 16px;
+        &::before{
+            content: "A";
+            background-color: #A69C9C;
+            top: 84px;
+        }
+    }
+}
