@@ -1,0 +1,125 @@
+/*------------------------------------------------------------------
+contact
+------------------------------------------------------------------*/
+.page_contact{
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.6em;
+    color: #333;
+    padding: 0 32px;
+}
+.page_contact_products{
+    display: inline-block;
+    width: 100%;
+    padding: 0 32px;
+    h3{
+        color: #56585A;
+        font-size: 2.375em;
+        margin-bottom: 32px;
+    }
+    ul{
+        li{
+            width: 50%;
+            float: left;
+            border-bottom: #979797 dashed 1px;
+            padding: 34px 16px;
+            box-sizing: border-box;
+            position: relative;
+            &::after{
+                @extend %clear;
+            }
+            .img{
+                width: 140px;
+                height: 140px;
+                float: left;
+                img{
+                    width: 100%;
+                }
+            }
+            .info{
+                width: calc(100% - 140px);
+                height: 140px;
+                float: left;
+                span{
+                    display: block;
+                }
+                .no{
+                    font-size: 1.25em;
+                    padding: 6px 24px;
+                    &::before{
+                        content: "RPC NO.";
+                    }
+                }
+
+                .products_name{
+                    display: block;
+                    padding: 6px 24px;
+                    width: calc(100% - 180px);
+                    box-sizing: border-box;
+                    .name{
+                        font-size: 1.5em;
+                    }
+                }
+            }
+            .select_quantity{
+                display: inline-block;
+                position: absolute;
+                bottom: 34px;
+                right: 24px;
+                input[type="button"]{
+                    display: block;
+                    width: 48px;
+                    height: 48px;
+                    float: left;
+                   
+                }
+                input[type="text"]{
+                    display: block;
+                    width: 72px;
+                    height: 48px;
+                    float: left;
+                    border: none;
+                    background-color: #F5F5F5;
+                    box-shadow: inset #747474 1px 1px 3px;
+                    text-align: center;
+                    font-size: 1.25em;
+                    color: #333;
+                }
+                .reduce,
+                .increase{
+                    background-color: $major-color;
+                    background-size: cover;
+                    border: none;
+                    &:hover{
+                        opacity: 0.9;
+                    }
+                }
+                .increase{
+                    background-image: url('../images/icon/icon_increase.svg');
+                    border-radius: 5px 0 0 5px;
+                }
+                .reduce{
+                    background-image: url('../images/icon/icon_reduce.svg');
+                    border-radius: 0 5px 5px 0;
+                }
+                .delete{
+                    border: #C5C5C5 solid 1px;
+                    background-image: url('../images/icon/icon_delete_g.svg');
+                    border-radius: 5px;
+                    transition: $transition;
+                    margin-left: 12px;
+                    &:hover{
+                        background-color: $major-color;
+                        background-image: url('../images/icon/icon_delete_w.svg');
+                    }
+                }
+            }
+        }
+    }
+}
+
+.article_questions_list{
+    display: block;
+    width: 100%;
+    clear: both;
+}

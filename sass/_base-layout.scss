@@ -445,7 +445,7 @@ transform: translate3d(0, 0, 0);
     		z-index: 3;
 			float: right;
 
-			@include rwd(730){
+			@include media('mobile'){
 				display: none;
 			}
 
@@ -541,7 +541,7 @@ transform: translate3d(0, 0, 0);
 	.logo{
 		display: inline-block;
 		margin-left: 65px;
-		@include rwd(730){
+		@include media('mobile'){
 			margin-left: 45px;
 			float: left;
     		width: 100%;
@@ -561,7 +561,7 @@ transform: translate3d(0, 0, 0);
 			@include media('mobile'){
 				height: 36px;
 			}
-			@include rwd(730){
+			@include media('mobile'){
 				margin: 0 auto;
 				background-position: center;
 			}
@@ -951,7 +951,7 @@ transform: translate3d(0, 0, 0);
 	.btn_close{
 		display: none;
 	}
-	@include rwd(730){
+	@include media('mobile'){
 		left: 0;
 		right: 0;
 		margin: 0 auto;
@@ -983,7 +983,7 @@ transform: translate3d(0, 0, 0);
 		border-style: solid;
 		border-width: 0 14px 14px 14px;
 		border-color: transparent transparent #FFF transparent;
-		@include rwd(730){
+		@include media('mobile'){
 			display: none;
 		}
 	}
@@ -1050,7 +1050,7 @@ transform: translate3d(0, 0, 0);
 			display: inline-block;
 			width: 100%;
 			padding: 8px 0;
-			@include rwd(730){
+			@include media('mobile'){
 				padding: 2px 0;
 			}
 			&::after{
@@ -1090,7 +1090,7 @@ transform: translate3d(0, 0, 0);
 			right: 0;
 			color: #FFF;
 			padding-right: 32px;
-			@include rwd(730){
+			@include media('mobile'){
 				width: 100%;
 				display: block;
 				text-align: center;
@@ -1130,7 +1130,7 @@ transform: translate3d(0, 0, 0);
 	.btn_close{
 		display: none;
 	}
-	@include rwd(730){
+	@include media('mobile'){
 		max-width: 448px;
 		left: 0;
 		right: 0;
@@ -1159,7 +1159,7 @@ transform: translate3d(0, 0, 0);
 		border-style: solid;
 		border-width: 0 14px 14px 14px;
 		border-color: transparent transparent #FFF transparent;
-		@include rwd(730){
+		@include media('mobile'){
 			display: none;
 		}
 	}
@@ -1186,7 +1186,7 @@ transform: translate3d(0, 0, 0);
 	top: -72px;
 	width: 56px;
 	height: 56px;
-	@include rwd(730){
+	@include media('mobile'){
 		width: 48px;
 		height: 48px;
 		border: white solid 1px;
@@ -1208,7 +1208,7 @@ transform: translate3d(0, 0, 0);
 		left: 9px;
 		top: 22px;
 
-		@include rwd(730){
+		@include media('mobile'){
 			width: 28px;
 			height: 3px;
 		}
@@ -1222,7 +1222,7 @@ transform: translate3d(0, 0, 0);
 		-webkit-transform: rotate(45deg);
 	}
 	&:hover, &:focus{
-		@include rwd(730){
+		@include media('mobile'){
 			border-color: $major-color;
 		}
 		&:before, &:after{
@@ -1253,7 +1253,7 @@ transform: translate3d(0, 0, 0);
 		padding-left: 28px;
 		font-size: 2em;
 		margin-bottom: 8px;
-		@include rwd(730){
+		@include media('mobile'){
 			font-size: 1.6em;
 			text-align: center;
 			padding: 0;
@@ -1282,7 +1282,7 @@ transform: translate3d(0, 0, 0);
 		font-family: 'Open Sans', Helvetica;
 		border: none;
 		padding-right: 64px;
-		@include rwd(730){
+		@include media('mobile'){
 			font-size: 0.9em
 		}
 	}
@@ -1674,10 +1674,10 @@ footer
 	&.pop_active2,
 	&.pop_active{
 		&::before{
-			@include rwd(730){
+			@include media('mobile'){
 			content: "";
 			position: fixed;
-			z-index: 2;
+			z-index: 3;
 			width: 100%;
 			height: 100vh;
 			top: 0;
@@ -1723,7 +1723,7 @@ footer
 /*------------------------------------------------------------------
 cookies
 ------------------------------------------------------------------*/
-.block-cookie{
+.block_cookie{
     position: fixed;
     bottom: 0;
     display: block;
@@ -1745,7 +1745,7 @@ cookies
 			line-height: 1.6em;
 		}
 	}
-    .cookies-container{
+    .cookies_container{
         max-width: 1410px;
         margin: 0 auto;
         padding: 48px 24px;
@@ -1761,7 +1761,7 @@ cookies
         &:hover, &:focus{
             color: $major-color;
         }
-        &.btn-accept{
+        &.btn_accept{
             display: block;
             @extend %hide-text;
             position: absolute;

@@ -8,9 +8,9 @@ products
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    height: calc(100vh - 126px);
+    // height: calc(100vh - 126px);
     overflow: hidden;
-    min-height: 800px;
+    // min-height: 800px;
     @include media('mobile'){
         height: auto;
     }
@@ -31,13 +31,13 @@ products
     .center{
         position: relative;
         z-index: 2;
-        padding: 0 40px;
+        padding: 0 34px;
         padding-top: 142px;
         display: block;
         align-items: center;
         height: 100%;
-        min-height: 800px;
-        height: 100vh;
+        // min-height: 800px;
+        min-height: calc(100vh - 142px);
         @include media('mobile'){
             height: auto;
             padding-top: 104px;
@@ -54,6 +54,9 @@ products
             padding: 0;
             left: 36px;
             top: 68px;
+        }
+        @include media('phone'){
+            font-size: 0.8em;
         }
         li{
             color: white;
@@ -171,6 +174,10 @@ products
                 font-size: 2em;
                 color: white;
                 padding-bottom: 24px;
+                padding-right: 24px;
+                @include media('mobile'){
+                    font-size: 1.6em;
+                }
             }
             >li{
                 width: 33.33%;
@@ -179,6 +186,9 @@ products
                     width: 50%;
                     padding: 4px 0%;
                     float: left;
+                }
+                @include media('phone'){
+                    width: 100%;
                 }
                 a{
                     color: white;
@@ -210,11 +220,26 @@ products
         }
 
         &.brand_list{
+            >ol{
+                @include media('mobile'){
+                    display: none;
+                }
+            }
             >ul{
                 display: block;
                 width: 33.33%;
+                @include media('mobile'){
+                    width: 100%;
+                    margin-bottom: 32px;
+                }
                 >li{
                     width: 100%;
+                    @include media('mobile'){
+                        width: 50%;
+                    }
+                    @include media('phone'){
+                        width: 100%;
+                    }
                     a{
                         padding-top: 24px;
                         &::after{
@@ -232,7 +257,22 @@ products
 
         }
     }
-
+    .brand_name{
+        h2{
+            font-size: 3em;
+            color: white;
+            letter-spacing: 1px;
+            margin: 64px 0 24px 0;
+            font-weight: 600;
+            @include media('mobile'){
+                margin: 48px 0 24px 0;
+            }
+            @include media('phone'){
+                margin: 32px 0 24px 0;
+                font-size: 1.6em;
+            }
+        }
+    }
 }
 @keyframes move_UpDown {
     0% {
@@ -241,4 +281,8 @@ products
     100% {
         transform: translateY(100vh);
     }
+}
+
+.products_detail_list{
+
 }

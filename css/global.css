@@ -26,7 +26,7 @@
 }
 
 /* line 548, ../sass/_base-function.scss */
-.header .logo a, .menu .menu_logo > a, .open_nav h2, .btn_close, .pop_search .btn_submit, .footer > .center h2, .footer .info .logo, .footer .info > ul.icon .fb a, .block-cookie a.btn-accept {
+.header .logo a, .menu .menu_logo > a, .open_nav h2, .btn_close, .pop_search .btn_submit, .footer > .center h2, .footer .info .logo, .footer .info > ul.icon .fb a, .block_cookie a.btn_accept {
   font: 0/0 a;
   color: transparent;
 }
@@ -618,7 +618,7 @@ ul, li {
   z-index: 3;
   float: right;
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 443, ../sass/_base-layout.scss */
   .header .header_center .tool {
     display: none;
@@ -726,7 +726,7 @@ ul, li {
   display: inline-block;
   margin-left: 65px;
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 541, ../sass/_base-layout.scss */
   .header .logo {
     margin-left: 45px;
@@ -756,7 +756,7 @@ ul, li {
     height: 36px;
   }
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 552, ../sass/_base-layout.scss */
   .header .logo a {
     margin: 0 auto;
@@ -1208,7 +1208,7 @@ ul, li {
 .pop_inquiry .btn_close {
   display: none;
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 935, ../sass/_base-layout.scss */
   .pop_inquiry {
     left: 0;
@@ -1246,7 +1246,7 @@ ul, li {
   border-width: 0 14px 14px 14px;
   border-color: transparent transparent #FFF transparent;
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 975, ../sass/_base-layout.scss */
   .pop_inquiry::before {
     display: none;
@@ -1324,7 +1324,7 @@ ul, li {
   width: 100%;
   padding: 8px 0;
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 1049, ../sass/_base-layout.scss */
   .pop_inquiry ul li {
     padding: 2px 0;
@@ -1366,7 +1366,7 @@ ul, li {
   color: #FFF;
   padding-right: 32px;
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 1080, ../sass/_base-layout.scss */
   .pop_inquiry .pop_inquiry_footer a {
     width: 100%;
@@ -1407,7 +1407,7 @@ ul, li {
 .pop_language .btn_close {
   display: none;
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 1114, ../sass/_base-layout.scss */
   .pop_language {
     max-width: 448px;
@@ -1444,7 +1444,7 @@ ul, li {
   border-width: 0 14px 14px 14px;
   border-color: transparent transparent #FFF transparent;
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 1151, ../sass/_base-layout.scss */
   .pop_language::before {
     display: none;
@@ -1478,7 +1478,7 @@ ul, li {
   width: 56px;
   height: 56px;
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 1181, ../sass/_base-layout.scss */
   .btn_close {
     width: 48px;
@@ -1503,7 +1503,7 @@ ul, li {
   left: 9px;
   top: 22px;
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 1200, ../sass/_base-layout.scss */
   .btn_close:before, .btn_close:after {
     width: 28px;
@@ -1520,7 +1520,7 @@ ul, li {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 1224, ../sass/_base-layout.scss */
   .btn_close:hover, .btn_close:focus {
     border-color: #EC8225;
@@ -1559,7 +1559,7 @@ ul, li {
   font-size: 2em;
   margin-bottom: 8px;
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 1249, ../sass/_base-layout.scss */
   .pop_search h2 {
     font-size: 1.6em;
@@ -1594,7 +1594,7 @@ ul, li {
   border: none;
   padding-right: 64px;
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 1275, ../sass/_base-layout.scss */
   .pop_search input[type="text"] {
     font-size: 0.9em;
@@ -2028,12 +2028,12 @@ footer
   width: 100%;
   position: relative;
 }
-@media screen and (max-width: 730px) and (min-width: 1px) {
+@media screen and (max-width: 800px) {
   /* line 1676, ../sass/_base-layout.scss */
   .main.pop_active2::before, .main.pop_active::before {
     content: "";
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     height: 100vh;
     top: 0;
@@ -2084,7 +2084,7 @@ footer
 cookies
 ------------------------------------------------------------------*/
 /* line 1726, ../sass/_base-layout.scss */
-.block-cookie {
+.block_cookie {
   position: fixed;
   bottom: 0;
   display: block;
@@ -2096,22 +2096,22 @@ cookies
   transform: translateY(0%);
 }
 /* line 1736, ../sass/_base-layout.scss */
-.block-cookie.close-block {
+.block_cookie.close-block {
   display: none;
 }
 /* line 1739, ../sass/_base-layout.scss */
-.block-cookie.close {
+.block_cookie.close {
   transform: translateY(100%);
 }
 @media screen and (max-width: 500px) {
   /* line 1742, ../sass/_base-layout.scss */
-  .block-cookie .cookie-content {
+  .block_cookie .cookie-content {
     font-size: 0.9em;
     line-height: 1.6em;
   }
 }
 /* line 1748, ../sass/_base-layout.scss */
-.block-cookie .cookies-container {
+.block_cookie .cookies_container {
   max-width: 1410px;
   margin: 0 auto;
   padding: 48px 24px;
@@ -2120,21 +2120,21 @@ cookies
 }
 @media screen and (max-width: 500px) {
   /* line 1748, ../sass/_base-layout.scss */
-  .block-cookie .cookies-container {
+  .block_cookie .cookies_container {
     padding: 28px 24px;
     padding-bottom: 48px;
   }
 }
 /* line 1759, ../sass/_base-layout.scss */
-.block-cookie a {
+.block_cookie a {
   color: white;
 }
 /* line 1761, ../sass/_base-layout.scss */
-.block-cookie a:hover, .block-cookie a:focus {
+.block_cookie a:hover, .block_cookie a:focus {
   color: #EC8225;
 }
 /* line 1764, ../sass/_base-layout.scss */
-.block-cookie a.btn-accept {
+.block_cookie a.btn_accept {
   display: block;
   position: absolute;
   right: 16px;
@@ -2148,7 +2148,7 @@ cookies
   border-radius: 100px;
 }
 /* line 1777, ../sass/_base-layout.scss */
-.block-cookie a.btn-accept:hover, .block-cookie a.btn-accept:focus {
+.block_cookie a.btn_accept:hover, .block_cookie a.btn_accept:focus {
   background-image: url("../images/icon/icon_more_b.svg");
   background-color: white;
 }

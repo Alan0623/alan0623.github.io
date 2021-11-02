@@ -10,14 +10,14 @@ $(function(){
   }
 
 
-    var a = storage.cookieINFO || "no";"yes" == a ? ($(".block-cookie").addClass("close-block")
-    ) : ($(".cookies-container").append('<p class="cookie-content">We use cookies to offer you a better browsing experience, personalize content, and improve our websites. To find out more about what cookies are, how we use them and how you can control them, see our<a class="btn-statement" href="https://en.cpc.com.tw/cp.aspx?n=2725" title="Cookie statement">Cookie statement</a>. If you continue to use this site, you consent to our use of cookies.</p><a class="btn-accept" title="Accept Cookies From This Website">Accept Cookies From This Website</a>')
+    var a = storage.cookieINFO || "no";"yes" == a ? ($(".block_cookie").addClass("close-block")
+    ) : ($(".cookies_container").append('<p class="cookie-content">We use cookies to offer you a better browsing experience, personalize content, and improve our websites. To find out more about what cookies are, how we use them and how you can control them, see our<a class="btn-statement" href="https://en.cpc.com.tw/cp.aspx?n=2725" title="Cookie statement">Cookie statement</a>. If you continue to use this site, you consent to our use of cookies.</p><a class="btn_accept" title="Accept Cookies From This Website">Accept Cookies From This Website</a>')
     )
   
 
-  $(".btn-accept").click(function() {
-    $(".block-cookie").slideToggle(),
-    $(".block-cookie").addClass('close-block'),
+  $(".btn_accept").click(function() {
+    $(".block_cookie").slideToggle(),
+    $(".block_cookie").addClass('close-block'),
     storage.cookieINFO = "no" == a ? "yes" : "no",
     window.location.reload();
   })
