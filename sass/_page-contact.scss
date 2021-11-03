@@ -6,7 +6,8 @@ contact
     font-weight: 300;
     line-height: 1.6em;
     color: #333;
-    padding: 0 32px;
+    // padding: 0 32px;
+    padding: 0;
 }
 .page_contact_products{
     display: inline-block;
@@ -54,7 +55,7 @@ contact
                 .products_name{
                     display: block;
                     padding: 6px 24px;
-                    width: calc(100% - 180px);
+                    width: calc(100% - 200px);
                     box-sizing: border-box;
                     .name{
                         font-size: 1.5em;
@@ -119,7 +120,109 @@ contact
 }
 
 .article_questions_list{
+    padding-top: 48px;
+    padding-bottom: 64px;
     display: block;
     width: 100%;
     clear: both;
+    background-color: #F4F4F4;
+    margin-top: 44px;
+    .center{
+        padding: 0 32px;
+    }
+    h3{
+        display: block;
+        clear: both;
+        color: #56585A;
+        font-size: 2.375em;
+    }
+}
+.progress_bar{
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 1em;
+    height: 32px;
+    >p{
+        float: left;
+        height: 32px;
+        line-height: 32px;
+    }
+    ul{
+        float: left;
+        width: 184px;
+        height: 32px;
+        padding: 13px 0;
+        margin-left: 8px;
+        li{
+            @extend %hide-text;
+            background-color: #D8D8D8;
+            width: 25%;
+            height: 6px;
+            float: left;
+            &.active{
+                background-color: $major-color;
+            }
+        }
+    }
+}
+.questions_list{
+    padding-top: 48px;
+    li{
+        position: relative;
+        height: 64px;
+        padding: 10px 0;
+        padding-left: 26px;
+        &::before{
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            z-index: 2;
+            background-color: $major-color;
+            top: 22px;
+            left: 2px;
+        }
+        a{
+            color: #333;
+            font-size: 1.5em;
+            position: relative;
+            &::before{
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: 2;
+                width: 100%;
+                height: 1px;
+                background-color: #2d2d2d;
+                bottom: -8px;
+            }
+            &::after{
+                display: block;
+                content: "";
+                position: absolute;
+                right: -44px;
+                top: 0;
+                width: 36px;
+                height: 36px;
+                background-image: url('../images/icon/icon_more_b.svg');
+                border: #2D2D2D solid 1px;
+                background-position: center;
+                border-radius: 50px;
+                background-color: white;
+            }
+            &:hover,&:focus{
+                color: #EA7000;
+                &::before{
+                    background-color: #EA7000;
+                }
+                &::after{
+                    background-image: url('../images/icon/icon_more_w.svg');
+                    background-color: #EA7000;
+                    border-color: #EA7000;
+                }
+            }
+        }
+    }    
 }
