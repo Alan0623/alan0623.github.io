@@ -17,6 +17,10 @@ contact
         color: #56585A;
         font-size: 2.375em;
         margin-bottom: 32px;
+        @include media('phone'){
+            font-size: 2em;
+            margin-bottom: 4px;
+        }
     }
     ul{
         li{
@@ -52,8 +56,14 @@ contact
                     padding: 6px 24px;
                     width: calc(100% - 200px);
                     box-sizing: border-box;
+                    @include rwd(1430){
+                        width: 100%;
+                    }
                     .name{
                         font-size: 1.5em;
+                        @include rwd(920){
+                            font-size: 1.25em;
+                        }
                     }
                 }
             }
@@ -62,6 +72,14 @@ contact
                 position: absolute;
                 bottom: 34px;
                 right: 24px;
+                min-width: 232px;
+                @include rwd(1430){
+                    position: relative;
+                    bottom: auto;
+                    right: auto;
+                    left: auto;
+                    margin-left: 164px;
+                }
             }
         }
     }
@@ -72,7 +90,10 @@ contact
         width: 48px;
         height: 48px;
         float: left;
-       
+        @include media('phone'){
+            width: 40px;
+            height: 40px;
+        }
     }
     input[type="text"]{
         display: block;
@@ -85,6 +106,9 @@ contact
         text-align: center;
         font-size: 1.25em;
         color: #333;
+        @include media('phone'){
+            height: 40px;
+        }
     }
     .reduce,
     .increase{
@@ -111,6 +135,7 @@ contact
         border-radius: 5px;
         transition: $transition;
         margin-left: 15px;
+        background-position: center;
         &:hover{
             background-color: $major-color;
             background-image: url('../images/icon/icon_delete_w.svg');
@@ -134,6 +159,11 @@ contact
 .page_contact_products{
     padding: 0 32px;
     width: 100%;
+    overflow: hidden;
+    @include rwd(490){
+        width: 100%;
+        padding: 0 24px;
+    }
     ul{
         li{
             width: 50%;
@@ -142,6 +172,10 @@ contact
             padding: 34px 16px;
             box-sizing: border-box;
             position: relative;
+
+            @include rwd(905){
+                width: 100%;
+            }
         }
     }
 }
@@ -161,6 +195,10 @@ contact
         clear: both;
         color: #56585A;
         font-size: 2.375em;
+        line-height: 1.3em;
+        @include media('phone'){
+            font-size: 1.8em;
+        }
     }
 }
 .progress_bar{
@@ -194,11 +232,18 @@ contact
 }
 .questions_list{
     padding-top: 48px;
+    @include media('phone'){
+        padding-top: 24px;
+    }
     li{
         position: relative;
         height: 64px;
         padding: 10px 0;
         padding-left: 26px;
+        @include media('phone'){
+            height: 48px;
+            padding-left: 20px;
+        }
         &::before{
             content: "";
             display: block;
@@ -209,11 +254,18 @@ contact
             background-color: $major-color;
             top: 22px;
             left: 2px;
+            @include media('phone'){
+                width: 6px;
+                height: 6px;
+            }
         }
         a{
             color: #333;
             font-size: 1.5em;
             position: relative;
+            @include media('phone'){
+                font-size: 1.2em;
+            }
             &::before{
                 content: "";
                 display: block;
@@ -223,6 +275,9 @@ contact
                 height: 1px;
                 background-color: #2d2d2d;
                 bottom: -8px;
+                @include media('phone'){
+                    bottom: -3px;
+                }
             }
             &::after{
                 display: block;
@@ -237,6 +292,11 @@ contact
                 background-position: center;
                 border-radius: 50px;
                 background-color: white;
+                background-size: cover;
+                @include media('phone'){
+                    width: 28px;
+                    height: 28px;
+                }
             }
             &:hover,&:focus{
                 color: #EA7000;

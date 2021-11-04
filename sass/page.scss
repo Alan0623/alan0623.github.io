@@ -131,6 +131,17 @@
             top: 24px;
             font-size: 1.2em;
         }
+        @include rwd(740){
+            position: relative;
+            top: auto;
+            display: inline-block;
+            width: 100%;
+            border-bottom: #EC8225 solid 3px;
+            right: auto;
+            background-color: white;
+            margin-top: -16px;
+            
+        }
         a{
             color: #333;
         }
@@ -138,11 +149,10 @@
         li.mail{
             position: relative;
             float: left;
-            padding-left: 40px;
-            margin-left: 48px;
-            @include rwd(1030){
-                padding-left: 32px;
-                margin-left: 32px;
+            @include rwd(520){
+                margin-left: 0;
+                display: block;
+                float: none;
             }
             &::before{
                 content: "";
@@ -151,6 +161,7 @@
                 height: 40px;
                 background-position: center;
                 background-repeat: no-repeat;
+                background-size: cover;
                 position: absolute;
                 left: 0;
                 z-index: 2;
@@ -159,14 +170,39 @@
                     height: 32px;
                     top: 4px;
                 }
+                @include rwd(520){
+                    width: 24px;
+                    height: 24px;
+                    top: 8px;
+                }
             }
         }
         li.phone{
+            padding-left: 40px;
+            margin-left: 48px;
+            @include rwd(1030){
+                padding-left: 32px;
+                margin-left: 32px;
+            }
+            @include rwd(740){
+            margin-left: 0;
+            }
             &::before{
                 background-image: url('../images/icon/icon_phone.svg');
             }
         }
         li.mail{
+            padding-left: 42px;
+            margin-left: 48px;
+            @include rwd(1030){
+                padding-left: 34px;
+                margin-left: 32px;
+            }
+            @include rwd(520){
+                margin-left: 0;
+                display: block;
+                float: none;
+            }
             &::before{
                 background-image: url('../images/icon/icon_mail.svg');
             }
