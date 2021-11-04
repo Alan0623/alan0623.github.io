@@ -1,4 +1,15 @@
 /*------------------------------------------------------------------
+preload 預先載圖
+------------------------------------------------------------------*/
+$.preload( 
+'../images/news_title1.jpg',
+'../images/products/bg_products_big1.jpg',
+'../images/products/bg_products_big2.jpg',
+'../images/products/bg_products_big3.jpg',
+'../images/products/bg_products_big4.jpg',
+'../images/page_banner.jpg'
+);
+/*------------------------------------------------------------------
 localStorage
 ------------------------------------------------------------------*/
 $(function(){

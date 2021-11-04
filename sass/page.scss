@@ -1,10 +1,11 @@
 @import 'base-variable'; //變數
 @import 'base-function'; //方法與涵式
 @import 'page-news'; 
-@import 'page-products'; 
+
 @import 'page-catalogue'; 
 @import 'page-qna'; 
 @import 'page-contact'; 
+@import 'page-products'; 
 /*------------------------------------------------------------------
 共用
 ------------------------------------------------------------------*/
@@ -60,6 +61,7 @@
 
 .page_title{
     padding-bottom: 64px;
+   
     @include rwd(1030){
         padding-bottom: 48px;
     }
@@ -93,6 +95,7 @@
     .center{
         padding: 0 32px;
         position: relative;
+        text-align: left;
     }
     .slogan{
         font-size: 1.125em;
@@ -362,8 +365,9 @@
     clear: both;
     @extend %center;
     padding: 0 32px;
-    padding-top: 136px;
+    // padding-top: 136px;
     padding-bottom: 32px;
+    padding-top: 94px;
     h2{
 
     }

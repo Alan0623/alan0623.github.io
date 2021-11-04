@@ -9,10 +9,10 @@ contact
     // padding: 0 32px;
     padding: 0;
 }
+.page_detail_list_products,
 .page_contact_products{
     display: inline-block;
-    width: 100%;
-    padding: 0 32px;
+    
     h3{
         color: #56585A;
         font-size: 2.375em;
@@ -20,12 +20,7 @@ contact
     }
     ul{
         li{
-            width: 50%;
-            float: left;
-            border-bottom: #979797 dashed 1px;
-            padding: 34px 16px;
-            box-sizing: border-box;
-            position: relative;
+
             &::after{
                 @extend %clear;
             }
@@ -67,58 +62,89 @@ contact
                 position: absolute;
                 bottom: 34px;
                 right: 24px;
-                input[type="button"]{
-                    display: block;
-                    width: 48px;
-                    height: 48px;
-                    float: left;
-                   
-                }
-                input[type="text"]{
-                    display: block;
-                    width: 72px;
-                    height: 48px;
-                    float: left;
-                    border: none;
-                    background-color: #F5F5F5;
-                    box-shadow: inset #747474 1px 1px 3px;
-                    text-align: center;
-                    font-size: 1.25em;
-                    color: #333;
-                }
-                .reduce,
-                .increase{
-                    background-color: $major-color;
-                    background-size: cover;
-                    border: none;
-                    &:hover{
-                        opacity: 0.9;
-                    }
-                }
-                .increase{
-                    background-image: url('../images/icon/icon_increase.svg');
-                    border-radius: 5px 0 0 5px;
-                }
-                .reduce{
-                    background-image: url('../images/icon/icon_reduce.svg');
-                    border-radius: 0 5px 5px 0;
-                }
-                .delete{
-                    border: #C5C5C5 solid 1px;
-                    background-image: url('../images/icon/icon_delete_g.svg');
-                    border-radius: 5px;
-                    transition: $transition;
-                    margin-left: 12px;
-                    &:hover{
-                        background-color: $major-color;
-                        background-image: url('../images/icon/icon_delete_w.svg');
-                    }
-                }
             }
         }
     }
 }
-
+.select_quantity{
+    input[type="button"]{
+        display: block;
+        width: 48px;
+        height: 48px;
+        float: left;
+       
+    }
+    input[type="text"]{
+        display: block;
+        width: 72px;
+        height: 48px;
+        float: left;
+        border: none;
+        background-color: #F5F5F5;
+        box-shadow: inset #747474 1px 1px 3px;
+        text-align: center;
+        font-size: 1.25em;
+        color: #333;
+    }
+    .reduce,
+    .increase{
+        cursor: pointer;
+        background-color: $major-color;
+        background-size: cover;
+        border: none;
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+    .increase{
+        background-image: url('../images/icon/icon_increase.svg');
+        border-radius: 5px 0 0 5px;
+    }
+    .reduce{
+        background-image: url('../images/icon/icon_reduce.svg');
+        border-radius: 0 5px 5px 0;
+    }
+    .delete{
+        cursor: pointer;
+        border: #C5C5C5 solid 1px;
+        background-image: url('../images/icon/icon_delete_g.svg');
+        border-radius: 5px;
+        transition: $transition;
+        margin-left: 15px;
+        &:hover{
+            background-color: $major-color;
+            background-image: url('../images/icon/icon_delete_w.svg');
+        }
+    }
+    .cart{
+        cursor: pointer;
+        border: $major-color solid 1px;
+        background-image: url('../images/icon/icon_cart_w.svg');
+        border-radius: 5px;
+        transition: $transition;
+        margin-left: 15px;
+        background-color: $major-color;
+        &:hover{
+            border: #C5C5C5 solid 1px;
+            background-color: white;
+            background-image: url('../images/icon/icon_cart_g.svg');
+        }
+    }
+}
+.page_contact_products{
+    padding: 0 32px;
+    width: 100%;
+    ul{
+        li{
+            width: 50%;
+            float: left;
+            border-bottom: #979797 dashed 1px;
+            padding: 34px 16px;
+            box-sizing: border-box;
+            position: relative;
+        }
+    }
+}
 .article_questions_list{
     padding-top: 48px;
     padding-bottom: 64px;
