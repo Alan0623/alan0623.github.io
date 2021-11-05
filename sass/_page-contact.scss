@@ -24,7 +24,9 @@ contact
     }
     ul{
         li{
-
+            @include rwd(420){
+                text-align: center;
+            }
             &::after{
                 @extend %clear;
             }
@@ -32,6 +34,11 @@ contact
                 width: 140px;
                 height: 140px;
                 float: left;
+                @include rwd(420){
+                    width: 100%;
+                    height: auto;
+                    float: none;
+                }
                 img{
                     width: 100%;
                 }
@@ -40,12 +47,26 @@ contact
                 width: calc(100% - 140px);
                 height: 140px;
                 float: left;
+                @include rwd(420){
+                    width: 100%;
+                    height: auto;
+                    float: none;
+                    margin-bottom: 8px;
+                }
                 span{
                     display: block;
                 }
                 .no{
                     font-size: 1.25em;
                     padding: 6px 24px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    text-align: left;
+                    @include media('phone'){
+                        font-size: 1em;
+                        padding: 2px 16px;
+                    }
                     &::before{
                         content: "RPC NO.";
                     }
@@ -56,8 +77,17 @@ contact
                     padding: 6px 24px;
                     width: calc(100% - 200px);
                     box-sizing: border-box;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+                    text-align: left;
                     @include rwd(1430){
                         width: 100%;
+                    }
+                    @include media('phone'){
+                        padding: 2px 16px;
                     }
                     .name{
                         font-size: 1.5em;
@@ -79,6 +109,13 @@ contact
                     right: auto;
                     left: auto;
                     margin-left: 164px;
+                }
+                @include media('phone'){
+                    margin-left: 157px;
+                }
+                @include rwd(420){
+                    margin: 0 auto;
+                    min-width: 200px;
                 }
             }
         }
@@ -175,6 +212,9 @@ contact
 
             @include rwd(905){
                 width: 100%;
+            }
+            @include rwd(420){
+                padding: 24px 0;
             }
         }
     }
