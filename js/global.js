@@ -7,6 +7,7 @@ $.preload(
 '../images/products/bg_products_big2.jpg',
 '../images/products/bg_products_big3.jpg',
 '../images/products/bg_products_big4.jpg',
+'../images/catalogue/bg_catalogue_default.jpg',
 '../images/page_banner.jpg'
 );
 /*------------------------------------------------------------------

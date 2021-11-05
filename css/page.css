@@ -84,7 +84,7 @@
   }
 }
 /* line 1637, ../sass/_base-function.scss */
-.catalogue_list ul li a .figcaption::after, .catalogue_content_list .center .article .list .figcaption .tag h5::before, .ready_fixed ul.jump, .products_brand .list ul > li a::before, .page_banner .figcaption, .page_title .slogan, .bread_crumbs ul li::after, .bread_crumbs ul li:first-child a::before, .hot_tag h2, .hot_tag ul li a::after {
+.catalogue_list ul li a .figcaption::after, .catalogue_content_list .center .article .list .figcaption .tag h5::before, .ready_fixed ul.jump, .products_brand .list ul > li a::before, .page_banner .figcaption, .page_title .slogan, .bread_crumbs ul li::after, .bread_crumbs ul li:first-child a::before, .hot_tag h2, .hot_tag ul li a::after, .sitemap_list ul li h3::before, .sitemap_list ul li a::before, .system_page ul li::before {
   top: 50%;
   transform: translateY(-50%);
   content: "";
@@ -634,7 +634,7 @@ catalogue
 .catalogue_input {
   width: 100%;
   height: calc(100vh - 126px);
-  background-image: url("../images/catalogue/bg_catalogue_ default.jpg");
+  background-image: url("../images/catalogue/bg_catalogue_default.jpg");
   background-size: cover;
 }
 /* line 10, ../sass/_page-catalogue.scss */
@@ -3105,4 +3105,134 @@ products
 /* line 519, ../sass/page.scss */
 .hot_tag ul li a:hover::after, .hot_tag ul li a:focus::after {
   background-image: url("../images/icon/icon_arrow_ow.svg");
+}
+
+/* line 527, ../sass/page.scss */
+.sitemap_list {
+  padding: 0 32px;
+  display: inline-block;
+  width: 100%;
+}
+/* line 531, ../sass/page.scss */
+.sitemap_list::after {
+  clear: both;
+}
+/* line 534, ../sass/page.scss */
+.sitemap_list ul {
+  width: calc(25% - 32px);
+  float: left;
+  box-sizing: border-box;
+  margin: 0 16px;
+  margin-bottom: 24px;
+}
+/* line 540, ../sass/page.scss */
+.sitemap_list ul li {
+  line-height: 56px;
+  border-bottom: #979797 dashed 1px;
+}
+/* line 543, ../sass/page.scss */
+.sitemap_list ul li.title {
+  border-bottom: none;
+}
+/* line 545, ../sass/page.scss */
+.sitemap_list ul li.title a {
+  padding-left: 0px;
+}
+/* line 547, ../sass/page.scss */
+.sitemap_list ul li.title a::before {
+  display: none;
+}
+/* line 552, ../sass/page.scss */
+.sitemap_list ul li h3 {
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+  padding-left: 32px;
+}
+/* line 558, ../sass/page.scss */
+.sitemap_list ul li h3::before {
+  left: 14px;
+  width: 4px;
+  height: 32px;
+  background-color: #EC8225;
+}
+/* line 565, ../sass/page.scss */
+.sitemap_list ul li h3::after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: #56585A solid 1px;
+}
+/* line 575, ../sass/page.scss */
+.sitemap_list ul li a {
+  width: 100%;
+  display: block;
+  color: #56585A;
+  font-size: 1.5em;
+  position: relative;
+  line-height: 56px;
+  padding-left: 32px;
+}
+/* line 583, ../sass/page.scss */
+.sitemap_list ul li a::before {
+  left: 14px;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #EC8225;
+}
+/* line 591, ../sass/page.scss */
+.sitemap_list ul li a:hover, .sitemap_list ul li a:focus {
+  color: #EC8225;
+}
+
+/* line 599, ../sass/page.scss */
+.system_page {
+  padding: 0 32px;
+  display: inline-block;
+  width: 100%;
+  font-size: 1.8em;
+  font-weight: 300;
+  line-height: 1.6em;
+  color: #333;
+}
+/* line 608, ../sass/page.scss */
+.system_page h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+/* line 613, ../sass/page.scss */
+.system_page p {
+  padding-bottom: 24px;
+}
+/* line 616, ../sass/page.scss */
+.system_page::after {
+  clear: both;
+}
+/* line 619, ../sass/page.scss */
+.system_page ul {
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+/* line 626, ../sass/page.scss */
+.system_page ul li {
+  position: relative;
+}
+/* line 628, ../sass/page.scss */
+.system_page ul li::before {
+  top: 24px;
+  left: -24px;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #EC8225;
 }
