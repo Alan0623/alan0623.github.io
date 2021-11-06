@@ -301,6 +301,7 @@ products
 
 
 .products_detail_list{
+    overflow: hidden;
     &::before{
         content: "";
         display: block;
@@ -311,6 +312,9 @@ products
         height: 100%;
         right: 0;
         background-color: white;
+        @include rwd(1090){
+            display: none;
+        }
     }
     &::after{
         content: "";
@@ -356,11 +360,20 @@ products
         position: relative;
         z-index: 2;
         margin-top: -5px;
+        @include rwd(1030){
+            height: 86px;
+        }
     }
 }
 .block_brand{
     width: 26%;
     float: left;
+    @include rwd(1400, 1300){
+        width: 22%;
+    }
+    @include rwd(1090){
+        width: 100%;
+    }
     h3{
         position: absolute;
         bottom: 40px;
@@ -369,6 +382,14 @@ products
         text-align: left;
         left: 32px;
         font-weight: 600;
+        @include rwd(1400){
+            font-size: 2.2em;
+        }
+        @include rwd(1090){
+            bottom: auto;
+            position: relative;
+            margin-bottom: 24px;
+        }
         &::after{
             content: "Suitablt to";
             position: absolute;
@@ -387,11 +408,24 @@ products
     background-color: #fff;
     padding: 0 32px;
     padding-top: 150px;
-
+    @include rwd(1400, 1300){
+        width: 78%;
+    }
+    @include rwd(1090){
+        width: 100%;
+        padding-top: 48px;
+        position: relative;
+    }
     ol.change_display{
         position: absolute;
         right: 32px;
         top: 129px;
+        @include rwd(1090){
+            top: 32px;
+        }
+        @include rwd(420){
+            display: none;
+        }
         >li{
             display: inline-block;
             padding: 0 8px;
@@ -416,6 +450,7 @@ products
         }
         .display_list{
             background-image: url('../images/icon/icon_display_list_g.svg');
+            &.active,
             &:hover, &:focus{
                 background-image: url('../images/icon/icon_display_list_w.svg');
             }
@@ -434,19 +469,57 @@ products
                 padding: 32px;
                 margin: 0;
                 position: relative;
+                @include rwd(740){
+                    height: auto;
+                    text-align: center;
+                }
+                @include rwd(420){
+                    width: 100%;
+                    padding: 0;
+                    margin: 24px 0px;
+                    padding-bottom: 32px;
+                }
                 .img{
                     width: 140px;
                     height: 140px;   
                     float: left;
+                    @include rwd(420){
+                        max-width: 230px;
+                        width: auto;
+                        height: auto;
+                    }
                 }
                 .info{
                     float: left;
+                    margin-left: 16px;
+                    @include rwd(420){
+                        margin: 0;
+                    }
                 }
                 .select_quantity{
                     position: absolute;
                     text-align: right;
                     bottom: 32px;
                     right: 32px;
+                    @include rwd(740){
+                        position: relative;
+                        text-align: left;
+                        bottom: auto;
+                        right: auto;
+                        margin: 0;
+                        display: inline-block;
+                        clear: both;
+                        margin-left: 156px;
+                        width: auto;
+                        float: left;
+                    }
+                    @include rwd(420){
+                        float: none;
+                        margin: 0;
+                        width: 230px;
+                        display: block;
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -454,9 +527,24 @@ products
             >li{
                 width: 25%;
                 float: left;
+                @include rwd(1300){
+                    width: 33.33%;
+                }
+                @include rwd(810){
+                    width: 50%;
+                }
+                @include rwd(540){
+                    width: 100%;
+                }
+                @include rwd(420){
+                    padding-bottom: 32px;
+                    border-bottom: #979797 dashed 1px;
+                }
                 .img{
-                    width: 230px;
-                    height: 230px;   
+                    max-width: 230px;
+                    // height: 230px;
+                    width: auto;
+                    height: auto;
                 }
             }
         }
@@ -469,6 +557,15 @@ products
             margin:  24px 0;
             a{
                 color: #333;
+                width: 100%;
+                @include rwd(740){
+                    width: auto;
+                    display: inline-block;
+                    margin: 0 auto;
+                }
+                @include rwd(420){
+                    width: 230px;
+                }
                 &:hover, &:focus{
                     color: $major-color;
                     img{
@@ -493,7 +590,9 @@ products
                 height: auto;
                 max-width: 230px;
                 margin: 0 auto;
+                padding-bottom: 8px;
                 .no{
+                    @extend %ellipsis;
                     width: 100%;
                     text-align: left;
                     padding: 0;
@@ -504,6 +603,9 @@ products
                     text-align: left;
                     padding: 0;
                     padding-bottom: 32px;
+                    @include rwd(1400){
+                        padding-bottom: 16px;
+                    }
                     .name{
                         font-size: 1.4em;
                     }
@@ -517,6 +619,7 @@ products
                 width: 100%;
                 height: 48px;
                 text-align: center;
+                margin: 0;
                 form{
                     margin: 0 auto;
                     display: inline-block;
@@ -532,6 +635,13 @@ products
         position: absolute;
         bottom: 0;
         margin-left: 16px;
+        @include rwd(630){
+            position: relative;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 16px;
+            float: none;
+        }
         select{
             height: 48px;
             min-width: 48px;
@@ -548,6 +658,9 @@ products
 .page_products_detail{
     .article{
         padding: 0 36px;
+        @include rwd(500){
+            padding: 0 24px;
+        }
     }
     .block_products_detail{
         position: relative;
@@ -558,6 +671,11 @@ products
             width: 40%;
             float: left;
             margin-bottom: 88px;
+            @include rwd(500){
+                width: 100%;
+                margin-bottom: 0;
+                height: auto!important;
+            }
             img{
                 width: 100%;
                 max-width: 480px;
@@ -569,9 +687,18 @@ products
             height: 100%;
             float: left;
             padding-left: 32px;
+            @include rwd(500){
+                width: 100%;
+                height: auto!important;
+                padding: 0;
+                padding-top: 32px;
+                padding-bottom: 32px;
+            }
             .no{
+                text-align: left;
                 font-size: 1.25em;
                 padding: 6px 0px;
+                @extend %ellipsis;
                 &::before{
                     content: "RPC NO.";
                 }
@@ -585,12 +712,20 @@ products
                 &::before{
                     content: "OE REF：";
                 }
+                @include rwd(600){
+                    position: relative;
+                    bottom: auto;
+                }
             }
             .products_name{
+                text-align: left;
                 display: block;
                 padding: 6px 0px;
                 width: calc(100% - 200px);
                 box-sizing: border-box;
+                @include media('mobile'){
+                    width: auto;
+                }
                 .name{
                     font-size: 1.5em;
                 }
@@ -598,6 +733,11 @@ products
             .select_quantity{
                 position: absolute;
                 bottom: 3px;
+                @include rwd(600){
+                    position: relative;
+                    bottom: auto;
+                    margin-top: 8px
+                }
             }
         }
         .detail{
@@ -607,9 +747,23 @@ products
             background-color: #F4F4F4;
             padding: 32px;
             margin-bottom: 88px;
+            @include rwd(500){
+                margin-bottom: 40px;
+                padding: 24px;
+            }
             h3{
                 font-size: 2.375em;
                 color: #56585A;
+                @include rwd(1110){
+                    font-size: 2em;
+                }
+                @include media('mobile'){
+                    font-size: 1.8em;
+                    margin-bottom: 4px;
+                }
+                @include rwd(500){
+                    font-size: 1.4em;
+                }
             }
             ul{
                 &::after{
@@ -621,6 +775,20 @@ products
                     font-size: 1.75em;
                     line-height: 1.8em;
                     font-weight: lighter;
+                    @extend %ellipsis;
+                    @include rwd(1110){
+                        font-size: 1.4em;
+                    }
+                    @include rwd(950){
+                        width: 50%;
+                    }
+                    @include media('mobile'){
+                        font-size: 1.1em;
+                        line-height: 1.8em;
+                    }
+                    @include rwd(500){
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -628,23 +796,59 @@ products
     .interested{
         padding: 88px 0;
         background-color: #F4F4F4;
-        
+        @include rwd(500){
+            padding: 40px 0;
+        }
         .center{
-            padding: 0 32px;
+            padding: 0 24px;
+            @include rwd(500){
+                padding: 0 20px;
+            }
             h3{
                 font-size: 2.375em;
                 color: #56585A;
                 margin-bottom: 64px;
+                padding: 0 12px;
+                @include media('mobile'){
+                    font-size: 1.8em;
+                    margin-bottom: 32px;
+                }
+                @include rwd(500){
+                    font-size: 1.4em;
+                }
             }
             ul{
                 &::after{
                     @extend %clear;
                 }
                 li{
-                    width: 20%;
+                    width: 16.66666%;
                     float: left;
+                    padding: 0 12px;
+                    box-sizing: border-box;
+                    text-align: center;
+                    @include rwd(1240){
+                        width: 33.33%;
+                    }
+                    @include rwd(630){
+                        width: 50%;
+                        padding: 0 4px;
+                    }
+                    &:nth-last-child(1),
+                    &:nth-last-child(2){
+                        @include rwd(400){
+                            display: none;
+                        }
+                    }
                     a{
                         color: #333;
+                        display: inline-block;
+                        margin: 0 auto;
+                        margin-bottom: 48px;
+                        // width: 100%;
+                        @include rwd(500){
+                            width: 100%;
+                        }
                         &:hover, &:focus{
                             color: $major-color;
                             img{
@@ -668,16 +872,27 @@ products
             .info{
 
                 .no{
+                    @extend %ellipsis;
                     display: block;
-                    font-size: 1.125em;
+                    font-size: 1em;
                     padding: 0 8px;
+                    text-align: left;
                     &::before{
                         content: "RPC NO.";
+                        @include rwd(400){
+                            position: absolute;
+                            top: 0;
+                        }
+                    }
+                    @include rwd(400){
+                        padding-top: 22px;
+                        position: relative;
                     }
                 }
                 .products_name{
                     display: block;
-                    font-size: 1.25em;
+                    text-align: left;
+                    font-size: 1.125em;
                     font-weight: 400;
                     padding: 0 8px;
                 }

@@ -218,7 +218,9 @@
     height: 48px;
     position: relative;
     z-index: 2;
-
+    @include rwd(630){
+        text-align: center;
+    }
     @include rwd(520){
         padding: 0 4px;
         height: 34px;
@@ -227,6 +229,11 @@
     ul{
         float: right;
         display: block;
+        @include rwd(630){
+            float: none;
+            display: inline-block;
+            margin: 0 auto;
+        }
         &::after{
             @extend %clear;
         }
@@ -400,10 +407,15 @@
 .bread_crumbs{
     clear: both;
     @extend %center;
-    padding: 0 32px;
+    padding: 94px 32px 32px 32px;
     // padding-top: 136px;
     padding-bottom: 32px;
     padding-top: 94px;
+
+    @include rwd(500){
+        padding: 64px 24px 24px 24px;
+    }
+
     h2{
 
     }

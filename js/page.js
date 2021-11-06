@@ -80,3 +80,28 @@ $(function(){
       });
   });
 });
+
+/*------------------------------------------------------------------
+//products_detail.html 等高
+------------------------------------------------------------------*/
+$(function(){
+  var maxHeight = 0;
+  $('.products_show>li .products_name').each(function() {
+      $(this).height('auto');
+      if (maxHeight < $(this).height()) { maxHeight = $(this).height() }
+  });
+  $('.products_show>li .products_name').each(function() {
+      $(this).height(maxHeight);
+  });
+
+  $(window).resize(function() {
+      var maxHeight = 0;
+      $('.products_show>li .products_name').each(function() {
+          $(this).height('auto');
+          if (maxHeight < $(this).height()) { maxHeight = $(this).height() }
+      });
+      $('.products_show>li .products_name').each(function() {
+          $(this).height(maxHeight);
+      });
+  });
+});

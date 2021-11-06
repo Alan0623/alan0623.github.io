@@ -1001,6 +1001,8 @@ transform: translate3d(0, 0, 0);
 		position: relative;
 		padding-left: 8px;
 		.no{
+			text-align: left;
+			@extend %ellipsis;
 			display: block;
 			line-height: 24px;
 			padding-top: 5px;
@@ -1009,6 +1011,7 @@ transform: translate3d(0, 0, 0);
 			}
 		}
 		.products_name{
+			text-align: left;
 			display: block;
 			line-height: 24px;
 			padding-bottom: 5px;
@@ -1496,8 +1499,12 @@ footer
 
 				&.add{
 					// margin-left: 48px;
-					max-width: 340px;
+					// max-width: 340px;
+					width: 340px;
 					display: flex;
+					@include media('mobile'){
+						width: 100%;
+					}
 					p{
 						// width: 54%;
 					}

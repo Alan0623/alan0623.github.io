@@ -21,6 +21,9 @@ contact
             font-size: 2em;
             margin-bottom: 4px;
         }
+        @include rwd(420){
+            font-size: 1.4em;
+        }
     }
     ul{
         li{
@@ -41,6 +44,7 @@ contact
                 }
                 img{
                     width: 100%;
+                    max-width: 230px;
                 }
             }
             .info{
@@ -51,7 +55,9 @@ contact
                     width: 100%;
                     height: auto;
                     float: none;
+                    margin: 0 auto;
                     margin-bottom: 8px;
+                    max-width: 230px;
                 }
                 span{
                     display: block;
@@ -59,13 +65,17 @@ contact
                 .no{
                     font-size: 1.25em;
                     padding: 6px 24px;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
+                    @extend %ellipsis;
                     text-align: left;
                     @include media('phone'){
                         font-size: 1em;
                         padding: 2px 16px;
+                    }
+                    @include rwd(420){
+                        width: 100%;
+                        text-align: left;
+                        padding: 0;
+                        padding-bottom: 14px;
                     }
                     &::before{
                         content: "RPC NO.";
@@ -89,10 +99,17 @@ contact
                     @include media('phone'){
                         padding: 2px 16px;
                     }
+                    @include rwd(420){
+                        padding: 0;
+                        padding-bottom: 16px;
+                    }
                     .name{
                         font-size: 1.5em;
                         @include rwd(920){
                             font-size: 1.25em;
+                        }
+                        @include rwd(420){
+                            font-size: 1.4em;
                         }
                     }
                 }
@@ -127,7 +144,7 @@ contact
         width: 48px;
         height: 48px;
         float: left;
-        @include media('phone'){
+        @include rwd(520){
             width: 40px;
             height: 40px;
         }
@@ -143,7 +160,7 @@ contact
         text-align: center;
         font-size: 1.25em;
         color: #333;
-        @include media('phone'){
+        @include rwd(520){
             height: 40px;
         }
     }
@@ -173,6 +190,7 @@ contact
         transition: $transition;
         margin-left: 15px;
         background-position: center;
+        background-size: cover;
         &:hover{
             background-color: $major-color;
             background-image: url('../images/icon/icon_delete_w.svg');
@@ -186,6 +204,8 @@ contact
         transition: $transition;
         margin-left: 15px;
         background-color: $major-color;
+        background-position: center;
+        background-size: cover;
         &:hover{
             border: #C5C5C5 solid 1px;
             background-color: white;
