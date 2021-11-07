@@ -390,6 +390,11 @@ products
             position: relative;
             margin-bottom: 24px;
         }
+        &.no_sub{
+            &::after{
+                display: none;
+            }
+        }
         &::after{
             content: "Suitablt to";
             position: absolute;

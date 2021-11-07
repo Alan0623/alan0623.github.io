@@ -110,7 +110,8 @@ catalogue
 .catalogue_list{
     width: 100%;
     height: calc(100vh - 126px);
-    @include media('mobile'){
+
+    @include rwd(1044){
         padding-top: 46px;
         background-color: black;
         height: auto;
@@ -126,7 +127,7 @@ catalogue
             height: 100%;
             overflow: hidden;
             // padding-right: 24px;
-            @include media('mobile'){
+            @include rwd(1044){
                 width: 50%;
                 height: 400px;
             }
@@ -156,6 +157,12 @@ catalogue
                     justify-content: center;
                     align-items: end;
                     overflow: hidden;
+                    @include rwd(1044){
+                        height: 50vh;
+                    }
+                    @include rwd(500){
+                        height: 328px;
+                    }
                     img{
                         float: left;
                         width: 100%;
