@@ -20,7 +20,7 @@ products
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    // height: calc(100vh - 126px);
+    // height: calc(100vh - 101px);
     overflow: hidden;
     // min-height: 800px;
     @include media('mobile'){
@@ -302,6 +302,35 @@ products
 
 .products_detail_list{
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    &.body_parts_detail_list{
+        &::before{
+            display: none;
+        }
+        .page_detail_list_products{
+            background-color: transparent;
+            color: white;
+            padding-bottom: 48px;
+            .show_select{
+                bottom: 48px;
+            }
+        }
+        ul.products_show{
+            padding-top: 0;
+            > li{
+                margin: 0;
+                a{
+                    color: white;
+                }
+            } 
+        } 
+        .bread_crumbs{
+            width: 100vh;
+        }
+    }
     &::before{
         content: "";
         display: block;
@@ -354,11 +383,11 @@ products
 
     .page_title.only_title{
         width: 100%;
-        height: 123px;
+        // height: 123px;
         clear: both;
-        background-color: white;
-        position: relative;
-        z-index: 2;
+        // background-color: white;
+        // position: relative;
+        // z-index: 2;
         margin-top: -5px;
         @include rwd(1030){
             height: 86px;
@@ -413,6 +442,7 @@ products
     background-color: #fff;
     padding: 0 32px;
     padding-top: 150px;
+    
     @include rwd(1400, 1300){
         width: 78%;
     }
@@ -715,7 +745,7 @@ products
                 padding: 6px 0px;
                 font-weight: lighter;
                 &::before{
-                    content: "OE REF：";
+                    content: "OEM No.：";
                 }
                 @include rwd(600){
                     position: relative;
@@ -775,7 +805,7 @@ products
                     @extend %clear;
                 }
                 li{
-                    width: 33.33%;
+                    width: 50%;
                     float: left;
                     font-size: 1.75em;
                     line-height: 1.8em;

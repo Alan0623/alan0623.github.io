@@ -192,3 +192,34 @@ $(function() {
   });
   $('[data-fancybox="images"]').fancybox(o)
 });
+/*------------------------------------------------------------------
+page_title
+------------------------------------------------------------------*/
+$(function(){
+  $('.page_title').addClass('fixed');
+	$(window).on('scroll', function(){
+		var $WH = $(window).height();
+		var $WS = $(window).scrollTop() + $WH;
+		var $RO = $('.footer').offset().top;
+		if(  $WS >  $RO ) {
+			$('.page_title').removeClass('fixed')
+		} else {
+      $('.page_title').addClass('fixed');
+    }
+	}).scroll();
+});
+
+
+$(function(){
+  $('.page_title2').addClass('fixed');
+	$(window).on('scroll', function(){
+		var $WH2 = $(window).height();
+		var $WS2 = $(window).scrollTop() + $WH2;
+		var $RO2= $('.page_content').offset().top;
+		if(  $WS2 >  $RO2 ) {
+			$('.page_title2').removeClass('fixed')
+		} else {
+      $('.page_title2').addClass('fixed');
+    }
+	}).scroll();
+});
