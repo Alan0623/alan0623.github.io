@@ -52,6 +52,10 @@ products
             height: auto;
             padding-top: 104px;
         }
+        @include media('phone'){
+            padding: 0 16px;
+            padding-top: 104px;
+        }
     }
 
     .bread_crumbs{
@@ -67,6 +71,7 @@ products
         }
         @include media('phone'){
             font-size: 0.8em;
+            left: 12px;
         }
         li{
             color: white;

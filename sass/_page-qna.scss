@@ -13,7 +13,7 @@ qna
         font-size: 1.4em;
     }
     @include media('phone'){
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     .question a,
     .answer{
@@ -35,7 +35,11 @@ qna
                 left: 24px;
             }
             @include media('phone'){
-                left: 16px;
+                width: 20px;
+                height: 20px;
+                border-radius: 20px;
+                line-height: 20px;
+                left: 8px;
             }
         }
     }
@@ -70,7 +74,9 @@ qna
                 right: 16px;
             }
             @include media('phone'){
-                width: 24px;
+                width: 12px;
+                right: 8px;
+                height: 2px;
             }
         }
         a{
@@ -96,6 +102,11 @@ qna
                 padding-right: 40px;
                 -webkit-line-clamp: 99;
                 max-height: none;
+            }
+            @include media('phone'){
+                padding: 6px;
+                padding-left: 36px;
+                padding-right: 20px;
             }
             &:hover, &:focus{
                 background-color: $major-color;
@@ -127,7 +138,9 @@ qna
                     right: 16px;
                 }
                 @include media('phone'){
-                    width: 24px;
+                    right: 8px;
+                    width: 12px;
+                    height: 2px;
                 }
             }
         }

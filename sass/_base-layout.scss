@@ -1456,6 +1456,9 @@ footer
 		@include rwd(604){
 			padding-right: 0px;
 		}
+		@include media('phone'){
+            padding: 0 16px;
+        }
 		.logo{
 			@extend %hide-text;
 			display: block;

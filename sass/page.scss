@@ -139,6 +139,9 @@
         padding: 0 32px;
         position: relative;
         text-align: left;
+        @include media('phone'){
+            padding: 0 16px;
+        }
     }
     .slogan{
         font-size: 1.125em;

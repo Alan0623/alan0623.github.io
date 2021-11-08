@@ -95,6 +95,9 @@
     padding-bottom: 80px;
     .center{
         padding: 0 32px;
+        @include media('phone'){
+            padding: 0 16px;
+        }
     }
     .article_tab{
         width: 100%;
