@@ -50,6 +50,9 @@
         z-index: 1;
         .center{
             padding: 0 32px;
+            @include media('phone'){
+                padding: 0 16px;
+            }
         }
         h2{
             font-size: 3em;
@@ -460,7 +463,7 @@
     padding-top: 94px;
 
     @include rwd(500){
-        padding: 64px 24px 24px 24px;
+        padding: 64px 16px 24px 16px;
     }
 
     h2{

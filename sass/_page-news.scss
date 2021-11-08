@@ -93,6 +93,12 @@
 .page_content,
 .news_list{
     padding-bottom: 80px;
+    @include media('mobile'){
+        padding-bottom: 48px;
+    }
+    @include media('phone'){
+        padding-bottom: 24px!important;  
+    }
     .center{
         padding: 0 32px;
         @include media('phone'){
@@ -219,13 +225,6 @@
     }
 }
 .news_list{
-    padding-bottom: 80px;
-    @include media('mobile'){
-        padding-bottom: 48px;
-    }
-    @include media('phone'){
-        padding-bottom: 32px;   
-    }
     
     .err{
         .figure{

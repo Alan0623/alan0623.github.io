@@ -424,6 +424,9 @@ products
             position: relative;
             margin-bottom: 24px;
         }
+        @include media('phone'){
+            left: 16px;
+        }
         &.no_sub{
             &::after{
                 display: none;
@@ -455,6 +458,10 @@ products
         width: 100%;
         padding-top: 48px;
         position: relative;
+    }
+    @include media('phone'){
+        padding: 0 16px;
+        padding-top: 24px;
     }
     .figure{
         padding: 24px 0;
