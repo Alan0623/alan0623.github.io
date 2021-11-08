@@ -6,6 +6,7 @@
     height: calc(100vh - 101px);
     position: relative;
     padding-bottom: 80px;
+    min-height: 450px;
     @include media('mobile'){
         height: auto;
         display: inline-block;
@@ -207,8 +208,22 @@
 }
 .news_list{
     padding-bottom: 80px;
+    
     @include media('phone'){
         padding-bottom: 48px;   
+    }
+    .figure{
+        text-align: center;
+        padding: 24px 0;
+        img{
+            width: 100%;
+            max-width: 880px;
+        }
+        .figcaption{
+            font-size: 1.6em;
+            text-align: center;
+            margin-bottom: 32px;
+        }
     }
     .article_header{
         color: $minor-color;
