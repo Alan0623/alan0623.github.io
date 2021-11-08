@@ -171,6 +171,7 @@ $(function(){
     //判斷當event.keyCode 為37時（即左方面鍵），執行函數to_left();
     //判斷當event.keyCode 為39時（即右方面鍵），執行函數to_right();
     if(event.keyCode == 27){
+      $(".main").removeClass("pop_active").removeClass("pop_active2");
       $(".menu").removeAttr("style").removeClass("open_menu"),
       $(".open_nav").removeClass("open"),
       $(".pop_inquiry").removeClass("open"),
