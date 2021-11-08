@@ -515,12 +515,22 @@
     height: 44px;
     display: block;
     position: relative;
+    margin-bottom: 12px;
+    @include rwd(1000){
+        min-height: 32px;
+        height: auto;
+        display: inline-block;
+    }
     h2{
         font-weight: normal;
         color: #ABACAD;
         font-size: 1.125em;
         padding-left: 24px;
         position: absolute;
+        top: 20px;
+        @include rwd(1000){
+            top: 14px;
+        }
         @extend %t50;
         &::before{
             position: absolute;
@@ -541,6 +551,7 @@
             float: left;
             color: #2D2D2D;
             margin-right: 12px;
+            margin-bottom: 12px;
             &:first-child{
                 a::before{
                     display: none;
@@ -574,6 +585,14 @@
                     background-color: $major-color;
                     &::after{
                         background-image: url('../images/icon/icon_arrow_ow.svg');
+                    }
+                }
+                @include rwd(1000){
+                    padding: 4px 16px;
+                    font-size: 1em;
+                    padding-right: 32px;
+                    &::after{
+                        right: 8px;
                     }
                 }
             }

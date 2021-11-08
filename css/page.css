@@ -19,7 +19,7 @@
 }
 /* line 539, ../sass/_base-function.scss */
 .page_content .article_tab ul::after,
-.news_list .article_tab ul::after, .news_list .center > ul::after, .next_news ul::after, .catalogue_input .password_submit, .catalogue_list ul::after, .catalogue_content_list .center .article .list::after, .catalogue_content_list .center .article .list .figure::after, .page_detail_list_products ul li::after,
+.news_list .article_tab ul::after, .news_list .center > ul::after, .next_news ul::after, .catalogue_input .password_submit, .catalogue_list ul::after, .catalogue_content_list .center .article .list::after, .catalogue_content_list .center .article .list .figure::after, .ready_fixed ul.jump::after, .page_detail_list_products ul li::after,
 .page_contact_products ul li::after, .products_brand .list::after, .products_brand .list ul::after, .page_products_detail .block_products_detail .detail ul::after, .page_products_detail .interested .center ul::after, .page_no ul::after, .most_read ul::after {
   content: "​";
   display: block;
@@ -1008,27 +1008,39 @@ catalogue
   margin-bottom: 40px;
   padding-right: 24px;
 }
-/* line 265, ../sass/_page-catalogue.scss */
+@media screen and (max-width: 940px) and (min-width: 1px) {
+  /* line 259, ../sass/_page-catalogue.scss */
+  .catalogue_content_list .center .article .list > li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 640px) and (min-width: 1px) {
+  /* line 259, ../sass/_page-catalogue.scss */
+  .catalogue_content_list .center .article .list > li {
+    width: 100%;
+  }
+}
+/* line 271, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figure {
   position: relative;
 }
-/* line 270, ../sass/_page-catalogue.scss */
+/* line 276, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figure .img {
   float: left;
   width: 50%;
   max-width: 210px;
 }
-/* line 274, ../sass/_page-catalogue.scss */
+/* line 280, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figure .img img {
   width: 100%;
 }
-/* line 280, ../sass/_page-catalogue.scss */
+/* line 286, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figcaption {
   float: left;
   width: 50%;
   padding-left: 20px;
 }
-/* line 284, ../sass/_page-catalogue.scss */
+/* line 290, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figcaption .title {
   color: #333;
   font-size: 1.25em;
@@ -1036,33 +1048,33 @@ catalogue
   line-height: 1.4em;
   margin-bottom: 32px;
 }
-/* line 291, ../sass/_page-catalogue.scss */
+/* line 297, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figcaption .tag {
   color: #2D2D2D;
   position: relative;
 }
-/* line 294, ../sass/_page-catalogue.scss */
+/* line 300, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figcaption .tag ul {
   line-height: 1.6em;
 }
-/* line 296, ../sass/_page-catalogue.scss */
+/* line 302, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figcaption .tag ul li {
   float: left;
   padding-right: 8px;
 }
-/* line 299, ../sass/_page-catalogue.scss */
+/* line 305, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figcaption .tag ul li::before {
   content: "#";
 }
-/* line 302, ../sass/_page-catalogue.scss */
+/* line 308, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figcaption .tag ul li::after {
   content: ",";
 }
-/* line 306, ../sass/_page-catalogue.scss */
+/* line 312, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figcaption .tag ul li:last-child::after {
   display: none;
 }
-/* line 312, ../sass/_page-catalogue.scss */
+/* line 318, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figcaption .tag h5 {
   padding-left: 24px;
   font-weight: normal;
@@ -1070,7 +1082,7 @@ catalogue
   font-size: 1.125em;
   margin-bottom: 8px;
 }
-/* line 318, ../sass/_page-catalogue.scss */
+/* line 324, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figcaption .tag h5::before {
   content: "";
   display: block;
@@ -1080,7 +1092,7 @@ catalogue
   background-image: url("../images/icon/icon_tag.svg");
   background-size: contain;
 }
-/* line 330, ../sass/_page-catalogue.scss */
+/* line 336, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figcaption > a {
   position: absolute;
   left: calc(50% + 9px);
@@ -1092,7 +1104,14 @@ catalogue
   color: #56585A;
   border: #EC8225 solid 1px;
 }
-/* line 341, ../sass/_page-catalogue.scss */
+@media screen and (max-width: 1100px) and (min-width: 1px) {
+  /* line 336, ../sass/_page-catalogue.scss */
+  .catalogue_content_list .center .article .list .figcaption > a {
+    padding: 12px 8px;
+    padding-left: 40px;
+  }
+}
+/* line 350, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figcaption > a::before {
   content: "";
   display: block;
@@ -1103,49 +1122,92 @@ catalogue
   background-image: url("../images/icon/icon_download.svg");
   background-size: contain;
 }
-/* line 352, ../sass/_page-catalogue.scss */
+@media screen and (max-width: 1100px) and (min-width: 1px) {
+  /* line 350, ../sass/_page-catalogue.scss */
+  .catalogue_content_list .center .article .list .figcaption > a::before {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    left: 12px;
+  }
+}
+/* line 367, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figcaption > a:hover, .catalogue_content_list .center .article .list .figcaption > a:focus {
   color: white;
   background-color: #EC8225;
 }
-/* line 355, ../sass/_page-catalogue.scss */
+/* line 370, ../sass/_page-catalogue.scss */
 .catalogue_content_list .center .article .list .figcaption > a:hover::before, .catalogue_content_list .center .article .list .figcaption > a:focus::before {
   background-image: url("../images/icon/icon_download_w.svg");
 }
 
-/* line 365, ../sass/_page-catalogue.scss */
+/* line 380, ../sass/_page-catalogue.scss */
 .fiex_h {
   min-height: 128px;
+  display: inline-block;
+  width: 100%;
 }
 
-/* line 369, ../sass/_page-catalogue.scss */
+/* line 386, ../sass/_page-catalogue.scss */
 .ready_fixed {
+  display: inline-block;
   padding: 10px 0;
+  width: 100%;
 }
-/* line 371, ../sass/_page-catalogue.scss */
+/* line 390, ../sass/_page-catalogue.scss */
 .ready_fixed ul.jump {
   right: 32px;
   font-size: 1.125em;
+  bottom: 0;
 }
-/* line 375, ../sass/_page-catalogue.scss */
+@media screen and (max-width: 1100px) and (min-width: 1px) {
+  /* line 390, ../sass/_page-catalogue.scss */
+  .ready_fixed ul.jump {
+    position: relative;
+    margin-left: -16px;
+    margin-top: 32px;
+    top: auto;
+    right: auto;
+    display: block;
+    height: 34px;
+    width: 100%;
+    transform: none;
+  }
+}
+/* line 410, ../sass/_page-catalogue.scss */
 .ready_fixed ul.jump li {
   float: left;
   margin-left: 16px;
+  display: block;
+  min-height: 48px;
+  margin-bottom: 12px;
 }
-/* line 379, ../sass/_page-catalogue.scss */
+@media screen and (max-width: 1100px) and (min-width: 1px) {
+  /* line 410, ../sass/_page-catalogue.scss */
+  .ready_fixed ul.jump li {
+    min-height: 34px;
+  }
+}
+/* line 420, ../sass/_page-catalogue.scss */
 .ready_fixed ul.jump a {
   color: #2d2d2d;
   background-color: white;
   border: #56585A solid 1px;
   padding: 11px 24px;
 }
-/* line 384, ../sass/_page-catalogue.scss */
+@media screen and (max-width: 1100px) and (min-width: 1px) {
+  /* line 420, ../sass/_page-catalogue.scss */
+  .ready_fixed ul.jump a {
+    padding: 4px 12px;
+  }
+}
+/* line 429, ../sass/_page-catalogue.scss */
 .ready_fixed ul.jump a:hover, .ready_fixed ul.jump a:focus {
   color: white;
   background-color: #EC8225;
   border-color: #EC8225;
 }
-/* line 392, ../sass/_page-catalogue.scss */
+/* line 437, ../sass/_page-catalogue.scss */
 .ready_fixed.fixed {
   position: fixed;
   z-index: 4;
@@ -1154,17 +1216,25 @@ catalogue
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px, rgba(0, 0, 0, 0.14) 0px 8px 10px -1px;
 }
-/* line 399, ../sass/_page-catalogue.scss */
+@media screen and (max-width: 800px) {
+  /* line 437, ../sass/_page-catalogue.scss */
+  .ready_fixed.fixed {
+    position: relative;
+    top: auto;
+    box-shadow: none;
+  }
+}
+/* line 449, ../sass/_page-catalogue.scss */
 .ready_fixed.fixed .page_title {
   padding-bottom: 0;
 }
-/* line 401, ../sass/_page-catalogue.scss */
+/* line 451, ../sass/_page-catalogue.scss */
 .ready_fixed.fixed .page_title h2 {
   font-size: 2em;
   border-bottom: none;
   padding: 2px 0;
 }
-/* line 407, ../sass/_page-catalogue.scss */
+/* line 457, ../sass/_page-catalogue.scss */
 .ready_fixed.fixed .hot_tag ul li a {
   font-size: 1em;
 }
@@ -1488,7 +1558,7 @@ contact
 /* line 90, ../sass/_page-contact.scss */
 .page_detail_list_products ul li .info .no::before,
 .page_contact_products ul li .info .no::before {
-  content: "RPC NO.";
+  content: "RICH NO.";
 }
 /* line 95, ../sass/_page-contact.scss */
 .page_detail_list_products ul li .info .products_name,
@@ -2816,7 +2886,7 @@ products
 }
 /* line 749, ../sass/_page-products.scss */
 .page_products_detail .block_products_detail .info .no::before {
-  content: "RPC NO.";
+  content: "RICH NO.";
 }
 /* line 753, ../sass/_page-products.scss */
 .page_products_detail .block_products_detail .info .ref {
@@ -2828,7 +2898,7 @@ products
 }
 /* line 759, ../sass/_page-products.scss */
 .page_products_detail .block_products_detail .info .ref::before {
-  content: "OEM No.：";
+  content: "OE REF.：";
 }
 @media screen and (max-width: 600px) and (min-width: 1px) {
   /* line 753, ../sass/_page-products.scss */
@@ -3051,7 +3121,7 @@ products
 }
 /* line 927, ../sass/_page-products.scss */
 .page_products_detail .interested .center .info .no::before {
-  content: "RPC NO.";
+  content: "RICH NO.";
 }
 @media screen and (max-width: 400px) and (min-width: 1px) {
   /* line 927, ../sass/_page-products.scss */
@@ -3769,16 +3839,32 @@ products
   height: 44px;
   display: block;
   position: relative;
+  margin-bottom: 12px;
 }
-/* line 518, ../sass/page.scss */
+@media screen and (max-width: 1000px) and (min-width: 1px) {
+  /* line 510, ../sass/page.scss */
+  .hot_tag {
+    min-height: 32px;
+    height: auto;
+    display: inline-block;
+  }
+}
+/* line 524, ../sass/page.scss */
 .hot_tag h2 {
   font-weight: normal;
   color: #ABACAD;
   font-size: 1.125em;
   padding-left: 24px;
   position: absolute;
+  top: 20px;
 }
-/* line 525, ../sass/page.scss */
+@media screen and (max-width: 1000px) and (min-width: 1px) {
+  /* line 524, ../sass/page.scss */
+  .hot_tag h2 {
+    top: 14px;
+  }
+}
+/* line 535, ../sass/page.scss */
 .hot_tag h2::before {
   position: absolute;
   left: 0;
@@ -3789,23 +3875,24 @@ products
   background-image: url("../images/icon/icon_tag.svg");
   background-size: cover;
 }
-/* line 536, ../sass/page.scss */
+/* line 546, ../sass/page.scss */
 .hot_tag ul {
   margin-left: 72px;
   position: relative;
 }
-/* line 539, ../sass/page.scss */
+/* line 549, ../sass/page.scss */
 .hot_tag ul li {
   display: inline-block;
   float: left;
   color: #2D2D2D;
   margin-right: 12px;
+  margin-bottom: 12px;
 }
-/* line 545, ../sass/page.scss */
+/* line 556, ../sass/page.scss */
 .hot_tag ul li:first-child a::before {
   display: none;
 }
-/* line 549, ../sass/page.scss */
+/* line 560, ../sass/page.scss */
 .hot_tag ul li a {
   display: block;
   border: #EC8225 solid 1px;
@@ -3816,11 +3903,11 @@ products
   position: relative;
   padding-right: 44px;
 }
-/* line 558, ../sass/page.scss */
+/* line 569, ../sass/page.scss */
 .hot_tag ul li a::before {
   content: "#";
 }
-/* line 561, ../sass/page.scss */
+/* line 572, ../sass/page.scss */
 .hot_tag ul li a::after {
   display: block;
   right: 20px;
@@ -3830,32 +3917,44 @@ products
   background-size: contain;
   background-repeat: no-repeat;
 }
-/* line 572, ../sass/page.scss */
+/* line 583, ../sass/page.scss */
 .hot_tag ul li a:hover, .hot_tag ul li a:focus {
   color: white;
   background-color: #EC8225;
 }
-/* line 575, ../sass/page.scss */
+/* line 586, ../sass/page.scss */
 .hot_tag ul li a:hover::after, .hot_tag ul li a:focus::after {
   background-image: url("../images/icon/icon_arrow_ow.svg");
 }
+@media screen and (max-width: 1000px) and (min-width: 1px) {
+  /* line 560, ../sass/page.scss */
+  .hot_tag ul li a {
+    padding: 4px 16px;
+    font-size: 1em;
+    padding-right: 32px;
+  }
+  /* line 594, ../sass/page.scss */
+  .hot_tag ul li a::after {
+    right: 8px;
+  }
+}
 
-/* line 583, ../sass/page.scss */
+/* line 602, ../sass/page.scss */
 .sitemap_list {
   display: inline-block;
   width: 100%;
 }
-/* line 587, ../sass/page.scss */
+/* line 606, ../sass/page.scss */
 .sitemap_list::after {
   clear: both;
 }
 @media screen and (max-width: 800px) {
-  /* line 583, ../sass/page.scss */
+  /* line 602, ../sass/page.scss */
   .sitemap_list {
     font-size: 0.8em;
   }
 }
-/* line 593, ../sass/page.scss */
+/* line 612, ../sass/page.scss */
 .sitemap_list ul {
   width: calc(25% - 32px);
   float: left;
@@ -3864,45 +3963,45 @@ products
   margin-bottom: 24px;
 }
 @media screen and (max-width: 1180px) and (min-width: 1px) {
-  /* line 593, ../sass/page.scss */
+  /* line 612, ../sass/page.scss */
   .sitemap_list ul {
     width: calc(33.333% - 16px);
     margin: 0 8px;
   }
 }
 @media screen and (max-width: 800px) {
-  /* line 593, ../sass/page.scss */
+  /* line 612, ../sass/page.scss */
   .sitemap_list ul {
     width: calc(50% - 16px);
     margin: 0 8px;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 593, ../sass/page.scss */
+  /* line 612, ../sass/page.scss */
   .sitemap_list ul {
     width: calc(100% - 16px);
     margin: 0 8px;
   }
 }
-/* line 611, ../sass/page.scss */
+/* line 630, ../sass/page.scss */
 .sitemap_list ul li {
   padding: 11px 0;
   border-bottom: #979797 dashed 1px;
 }
-/* line 615, ../sass/page.scss */
+/* line 634, ../sass/page.scss */
 .sitemap_list ul li.title {
   border-bottom: none;
   padding: 0;
 }
-/* line 618, ../sass/page.scss */
+/* line 637, ../sass/page.scss */
 .sitemap_list ul li.title a {
   padding-left: 0px;
 }
-/* line 620, ../sass/page.scss */
+/* line 639, ../sass/page.scss */
 .sitemap_list ul li.title a::before {
   display: none;
 }
-/* line 625, ../sass/page.scss */
+/* line 644, ../sass/page.scss */
 .sitemap_list ul li h3 {
   font-size: 1.1em;
   letter-spacing: 1px;
@@ -3910,14 +4009,14 @@ products
   position: relative;
   padding-left: 32px;
 }
-/* line 631, ../sass/page.scss */
+/* line 650, ../sass/page.scss */
 .sitemap_list ul li h3::before {
   left: 14px;
   width: 4px;
   height: 32px;
   background-color: #EC8225;
 }
-/* line 638, ../sass/page.scss */
+/* line 657, ../sass/page.scss */
 .sitemap_list ul li h3::after {
   content: "";
   display: block;
@@ -3927,12 +4026,12 @@ products
   left: 0;
   border-bottom: #56585A solid 1px;
 }
-/* line 647, ../sass/page.scss */
+/* line 666, ../sass/page.scss */
 .sitemap_list ul li h3 span {
   display: block;
   padding: 16px 0;
 }
-/* line 652, ../sass/page.scss */
+/* line 671, ../sass/page.scss */
 .sitemap_list ul li a {
   width: 100%;
   display: block;
@@ -3941,7 +4040,7 @@ products
   position: relative;
   padding-left: 32px;
 }
-/* line 660, ../sass/page.scss */
+/* line 679, ../sass/page.scss */
 .sitemap_list ul li a::before {
   left: 14px;
   width: 6px;
@@ -3949,16 +4048,16 @@ products
   border-radius: 6px;
   background-color: #EC8225;
 }
-/* line 668, ../sass/page.scss */
+/* line 687, ../sass/page.scss */
 .sitemap_list ul li a:hover, .sitemap_list ul li a:focus {
   color: #EC8225;
 }
-/* line 671, ../sass/page.scss */
+/* line 690, ../sass/page.scss */
 .sitemap_list ul li a p {
   padding: 0;
 }
 
-/* line 679, ../sass/page.scss */
+/* line 698, ../sass/page.scss */
 .system_page {
   padding: 0 32px;
   display: inline-block;
@@ -3968,21 +4067,21 @@ products
   line-height: 1.6em;
   color: #333;
 }
-/* line 688, ../sass/page.scss */
+/* line 707, ../sass/page.scss */
 .system_page h3 {
   font-size: 1.2em;
   font-weight: 600;
   margin-bottom: 6px;
 }
-/* line 693, ../sass/page.scss */
+/* line 712, ../sass/page.scss */
 .system_page p {
   padding-bottom: 24px;
 }
-/* line 696, ../sass/page.scss */
+/* line 715, ../sass/page.scss */
 .system_page::after {
   clear: both;
 }
-/* line 699, ../sass/page.scss */
+/* line 718, ../sass/page.scss */
 .system_page ul {
   list-style-type: disc;
   margin-block-start: 1em;
@@ -3991,11 +4090,11 @@ products
   margin-inline-end: 0px;
   padding-inline-start: 40px;
 }
-/* line 706, ../sass/page.scss */
+/* line 725, ../sass/page.scss */
 .system_page ul li {
   position: relative;
 }
-/* line 708, ../sass/page.scss */
+/* line 727, ../sass/page.scss */
 .system_page ul li::before {
   top: 24px;
   left: -24px;
