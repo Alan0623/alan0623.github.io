@@ -26,6 +26,7 @@
             height: calc(100vh - 101px);
             @include media('mobile'){
                 height: auto;
+                max-height: 320px;
             }
 
             img{
@@ -36,6 +37,9 @@
                 @include rwd(700){
                     width: auto;
                     height: 300px;
+                }
+                @include media('mobile'){
+                    max-height: 320px;
                 }
             }
         }
@@ -100,6 +104,9 @@
     }
     &.no_banner{
         padding-top: 160px;
+        @include media('mobile'){
+            padding-top: 56px;
+        }
         @include media('phone'){
             padding-top: 60px;
         }
@@ -574,11 +581,14 @@
     }
 }
 .sitemap_list{
-    padding: 0 32px;
+    // padding: 0 32px;
     display: inline-block;
     width: 100%;
     &::after{
         clear: both;
+    }
+    @include media('mobile'){
+        font-size: 0.8em;
     }
     ul{
         width: calc(25% - 32px);
@@ -586,11 +596,25 @@
         box-sizing: border-box;
         margin: 0 16px;
         margin-bottom: 24px;
+        @include rwd(1180){
+            width: calc(33.333% - 16px);
+            margin: 0 8px;
+        }
+        @include media('mobile'){
+            width: calc(50% - 16px);
+            margin: 0 8px;
+        }
+        @include media('phone'){
+            width: calc(100% - 16px);
+            margin: 0 8px;
+        }
         li{
-            line-height: 56px;
+            // line-height: 56px;
+            padding: 11px 0;
             border-bottom: #979797 dashed 1px;
             &.title{
                 border-bottom: none;
+                padding: 0;
                 a{
                     padding-left: 0px;
                     &::before{
@@ -620,6 +644,10 @@
                     left: 0;
                     border-bottom: #56585A solid 1px;
                 }
+                span{
+                    display: block;
+                    padding: 16px 0;
+                }
             }
             a{
                 width: 100%;
@@ -627,7 +655,7 @@
                 color: #56585A;
                 font-size: 1.5em;
                 position: relative;
-                line-height: 56px;
+                // line-height: 56px;
                 padding-left: 32px;
                 &::before{
                     @extend %t50;
@@ -639,6 +667,9 @@
                 }
                 &:hover, &:focus{
                     color: $major-color;
+                }
+                p{
+                    padding: 0;
                 }
             }
         }

@@ -2,7 +2,7 @@
 qna
 ------------------------------------------------------------------*/
 .block_qna{
-    font-size: 1em;
+    font-size: 1.6em;
     font-weight: 300;
     line-height: 1.6em;
     color: #333;
@@ -10,6 +10,10 @@ qna
     // max-height: 124px;
     @include media('mobile'){
         margin-bottom: 16px;
+        font-size: 1.4em;
+    }
+    @include media('phone'){
+        font-size: 1.2em;
     }
     .question a,
     .answer{
@@ -89,7 +93,7 @@ qna
             @include media('mobile'){
                 padding: 16px;
                 padding-left: 88px;
-                padding-right: 32px;
+                padding-right: 40px;
                 -webkit-line-clamp: 99;
                 max-height: none;
             }
@@ -104,7 +108,7 @@ qna
             &::before{
                 content: "Q";
                 background-color: $major-color;
-                top: 20px;
+                top: 11px;
             }
             &::after{
                 content: "";

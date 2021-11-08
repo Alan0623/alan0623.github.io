@@ -138,19 +138,22 @@
         }
     }
     .article_content{
-        font-size: 1.8em;
-        font-weight: 300;
-        line-height: 1.6em;
         color: #333;
-        // margin-bottom: 136px;
-        @include media('mobile'){
-            font-size: 1.6em;
-            margin-bottom: 64px;
+        &.article_content_text{
+            font-size: 1.8em;
+            font-weight: 300;
+            line-height: 1.6em;
+            
+            @include media('mobile'){
+                font-size: 1.6em;
+                margin-bottom: 64px;
+            }
+            @include media('phone'){
+                font-size: 1.2em;
+                margin-bottom: 32px;
+            }
         }
-        @include media('phone'){
-            font-size: 1.2em;
-            margin-bottom: 32px;
-        }
+
     }
     h2{
         padding-top: 44px;
@@ -182,6 +185,9 @@
 }
 .page_content{
     padding-top: 64px;
+    @include media('mobile'){
+        padding-top: 48px;
+    }
     .center{
         position: relative;
         .article_content{
@@ -196,6 +202,9 @@
                 background-color: $major-color;
                 z-index: 3;
                 left: 0;
+                @include media('mobile'){
+                    top: -48px;
+                }
             }
         }
     }
@@ -208,23 +217,29 @@
 }
 .news_list{
     padding-bottom: 80px;
-    
+    @include media('mobile'){
+        padding-bottom: 48px;
+    }
     @include media('phone'){
-        padding-bottom: 48px;   
+        padding-bottom: 32px;   
     }
-    .figure{
-        text-align: center;
-        padding: 24px 0;
-        img{
-            width: 100%;
-            max-width: 880px;
-        }
-        .figcaption{
-            font-size: 1.6em;
+    
+    .err{
+        .figure{
             text-align: center;
-            margin-bottom: 32px;
+            padding: 24px 0;
+            img{
+                width: 100%;
+                max-width: 880px;
+            }
+            .figcaption{
+                font-size: 1.6em;
+                text-align: center;
+                margin-bottom: 32px;
+            }
         }
     }
+
     .article_header{
         color: $minor-color;
         margin-bottom: 80px;
