@@ -1544,6 +1544,8 @@ footer
 				@include media('mobile'){
 					display: none;
 				}
+
+				
 				.fb{
 					// position: absolute;
 					// right: 212px;
@@ -1614,6 +1616,34 @@ footer
 		color: #FFF;
 	}
 }
+
+a.gotop{
+	@extend %hide-text;
+	display: block;
+	position: absolute;
+	right: 32px;
+	top: -8px;
+	z-index: 2;
+	content: "";
+	width: 48px;
+	height: 48px;
+	background-repeat: no-repeat;
+	border: #FFF solid 1px;
+	border-radius: 50px;
+	transition: $transition;
+	background-image: url('../images/icon/icon_arrow_ow.svg');
+	background-size: 25%;
+	background-position: center;
+	transform: rotateZ(-90deg);
+	margin: 0;
+	&:hover, &:focus{
+		background-color: $major-color;
+		color: black;
+		border-color: $major-color;
+	}
+}
+
+
 .Copyright{
 	border-top: #979797 solid 1px;
 	.center{
