@@ -72,51 +72,6 @@ $(function(){
     }
   });
 });
-/*------------------------------------------------------------------
-
-
-$(function(){
-  var appendNumber = 4;
-  var prependNumber = 1;
-  var swiper = new Swiper('.swiper-container2', {
-    slidesPerView: 4,
-    centeredSlides: true,
-    spaceBetween: 32,
-    autoplay:true,
-    pagination: {
-      el: '.swiper-pagination2',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next2',
-      prevEl: '.swiper-button-prev2',
-    },
-  });
-  document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
-    e.preventDefault();
-    swiper.prependSlide([
-      '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>',
-      '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>'
-    ]);
-  });
-  document.querySelector('.prepend-slide').addEventListener('click', function (e) {
-    e.preventDefault();
-    swiper.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
-  });
-  document.querySelector('.append-slide').addEventListener('click', function (e) {
-    e.preventDefault();
-    swiper.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
-  });
-  document.querySelector('.append-2-slides').addEventListener('click', function (e) {
-    e.preventDefault();
-    swiper.appendSlide([
-      '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
-      '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
-    ]);
-  });
-});
-------------------------------------------------------------------*/
-
 
 /*------------------------------------------------------------------
 //block_promise 跟著赫綵一起挖掘出你的最高潛力
@@ -467,7 +422,7 @@ $(function() {
               width = width / 2;
           } else if (width >= 300) {
             width = width / 1;
-        }
+            }
 
           carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
       })
@@ -477,15 +432,35 @@ $(function() {
         perSwipe: 1
     });
 
-  $('.result_event_list_prev')
-      .jcarouselControl({
-          target: '-=1'
-      });
 
-  $('.result_event_list_next')
-      .jcarouselControl({
-          target: '+=1'
-      });
+    if ($(window).width() > 928) {
+        $('.result_event_list_prev').jcarouselControl({target: '-=4'});
+        $('.result_event_list_next').jcarouselControl({target: '+=4'});
+    } else if ($(window).width() > 547) {
+        $('.result_event_list_prev').jcarouselControl({target: '-=3'});
+        $('.result_event_list_next').jcarouselControl({target: '+=3'});
+    } else if ($(window).width() > 449) {
+        $('.result_event_list_prev').jcarouselControl({target: '-=2'});
+        $('.result_event_list_next').jcarouselControl({target: '+=2'});
+    } else if ($(window).width() > 300) {
+        $('.result_event_list_prev').jcarouselControl({target: '-=1'});
+        $('.result_event_list_next').jcarouselControl({target: '+=1'});
+    }
+    $(window).resize(function() {
+        if ($(window).width() > 928) {
+            $('.result_event_list_prev').jcarouselControl({target: '-=4'});
+            $('.result_event_list_next').jcarouselControl({target: '+=4'});
+        } else if ($(window).width() > 547) {
+            $('.result_event_list_prev').jcarouselControl({target: '-=3'});
+            $('.result_event_list_next').jcarouselControl({target: '+=3'});
+        } else if ($(window).width() > 449) {
+            $('.result_event_list_prev').jcarouselControl({target: '-=2'});
+            $('.result_event_list_next').jcarouselControl({target: '+=2'});
+        } else if ($(window).width() > 300) {
+            $('.result_event_list_prev').jcarouselControl({target: '-=1'});
+            $('.result_event_list_next').jcarouselControl({target: '+=1'});
+        }
+    });
 });
 /*------------------------------------------------------------------
 //block_links 舊活動
@@ -516,15 +491,28 @@ $(function() {
         perSwipe: 1
     });
 
-  $('.links_list_prev')
-      .jcarouselControl({
-          target: '-=1'
-      });
-
-  $('.links_list_next')
-      .jcarouselControl({
-          target: '+=1'
-      });
+    if ($(window).width() > 828) {
+        $('.links_list_prev').jcarouselControl({target: '-=3'});
+        $('.links_list_next').jcarouselControl({target: '+=3'});
+    } else if ($(window).width() > 598) {
+        $('.links_list_prev').jcarouselControl({target: '-=2'});
+        $('.links_list_next').jcarouselControl({target: '+=2'});
+    } else if ($(window).width() > 300) {
+        $('.links_list_prev').jcarouselControl({target: '-=1'});
+        $('.links_list_next').jcarouselControl({target: '+=1'});
+    }
+    $(window).resize(function() {
+        if ($(window).width() > 828) {
+            $('.links_list_prev').jcarouselControl({target: '-=3'});
+            $('.links_list_next').jcarouselControl({target: '+=3'});
+        } else if ($(window).width() > 598) {
+            $('.links_list_prev').jcarouselControl({target: '-=2'});
+            $('.links_list_next').jcarouselControl({target: '+=2'});
+        } else if ($(window).width() > 300) {
+            $('.links_list_prev').jcarouselControl({target: '-=1'});
+            $('.links_list_next').jcarouselControl({target: '+=1'});
+        }
+    });
 
   $('.links_list_pagination')
       .on('jcarouselpagination:active', 'a', function() {

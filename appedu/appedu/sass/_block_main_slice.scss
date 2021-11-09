@@ -12,17 +12,23 @@
 	overflow: hidden;
 	min-height: 757px;
 	@include rwd(1200){
-		min-height: auto;
+		// min-height: auto;
 	}
 	@include rwd(800){
 		max-height: 600px;
+		min-height: 600px;
 		height: 600px;
 	}
 	@include rwd(500){
 		max-height: 500px;
+		min-height: 500px;
 		height: 500px;
 	}
-	
+	@include rwd(400){
+		max-height: 480px;
+		min-height: 480px;
+		height: 480px;
+	}
 	&::before,
 	&::after{
 		content: "";
@@ -310,7 +316,7 @@
 	}
 }
 .swiper-button-prev{
-	transform: rotateY(180deg);
+	transform: rotateZ(180deg);
 }
 .swiper-pagination-bullets{
 	top: auto!important;

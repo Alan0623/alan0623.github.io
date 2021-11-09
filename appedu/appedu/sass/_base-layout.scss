@@ -23,6 +23,45 @@ ul,li{list-style: none;padding: 0;margin: 0;}
 	@extend %clear;
 }
 /*------------------------------------------------------------------
+scrollbar
+------------------------------------------------------------------*/
+::-webkit-scrollbar {
+    background: #ddd;
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar:hover {
+    background: #ccc;
+}
+::-webkit-scrollbar-thumb {
+    background: #999;
+    min-width: 36px;
+    min-height: 36px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+body *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+body *::-webkit-scrollbar:hover {
+    background: #d8d8d8;
+}
+body *::-webkit-scrollbar-thumb {
+    background: #f9c270;
+    border-radius: 6px;
+}
+body *::-webkit-scrollbar-thumb:hover {
+    background: #ff9800;
+}
+@media screen and (min-width:768px){
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+}
+/*------------------------------------------------------------------
 #wrapper
 ------------------------------------------------------------------*/
 .wrapper{
@@ -41,8 +80,9 @@ ul,li{list-style: none;padding: 0;margin: 0;}
 		}
 	}
 }
-
+/*------------------------------------------------------------------
 //漢堡
+------------------------------------------------------------------*/
 .open_nav{
 	display: none;
 	position: absolute;
@@ -1295,11 +1335,12 @@ footer
 	h2{
 		font-size: 1.5625em;
 		letter-spacing: 1px;
-		margin: 0 auto;
+		// margin: 0 auto;
 		max-width: 940px;
 		color: $minor-color;
 		position: relative;
 		top: 0;
+		margin-left: 24px;
 		@include rwd(660){
 			font-size: 1.4em;
 		}
@@ -1316,28 +1357,18 @@ footer
 		@include rwd(350){
 			font-size: 1.2em;
 		}
-		&::after,
 		&::before{
-			position: absolute;
-			z-index: 1;
-			transform: translateX(-50%);
 			content: "";
-			width: 62px;
-			height: 5px;
-			background-image: url('../images/homepage/bg_dot_o.svg');
-			background-repeat: repeat-x;
-			@include rwd(690){
-				transform: scale(0.8);
-			}
+			display: block;
+			position: absolute;
+			left: -20px;
+			top: 30px;
+			width: 1px;
+			height: 34px;
+			transform: rotateZ(45deg);
+			background-color: #21505B;
 		}
-		&::before{
-			top: -10px;
-			left: 91px;
-		}
-		&::after{
-			bottom: -10px;
-    		left: 240px;
-		}
+
 	}
 	.footer_content{
 		height: 230px;

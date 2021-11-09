@@ -48,11 +48,72 @@
 			border-radius: 100px;
 		}
 	}
+    .btn{
+        position: absolute;
+        right: 16%;
+        bottom: -10%;
+        z-index: 2;
+        @include rwd(990){
+            right: 14%;
+            bottom: 0;
+        }
+        @include rwd(880,799){
+            right: auto;
+            left: 55%;
+            bottom: 0;
+        }
+        @include rwd(800){
+            right: auto;
+            bottom: 524px;
+            left: 76%;
+        }
+        >a{
+			display: block;
+			border-radius: 5px;
+			font-size: $f14px;
+			letter-spacing: 2px;
+			color: white;
+			background-color: $major-color;
+			padding: 18px;
+			width: 252px;
+			position: relative;
+			text-align: center;
+			position: relative;
+			z-index: 2;
+			@include rwd(800){
+				position: absolute;
+				left: calc(50% - 126px);
+				z-index: 2;
+				top: 240px;
+			}
+			@include rwd(560){
+				position: relative;
+				left: auto;
+				top: 0;
+				margin: 0 auto;
+			}
+			&::after{
+				content: "";
+				display: block;
+				position: absolute;
+				right: 16px;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 1;
+				background-size: contain;
+				width: 10px;
+				height: 10px;
+				background-image: url('../images/icon/icon_btn_more_arrow_w.svg');
+			}
+			&:hover, &:focus{
+				opacity: 1;
+				animation: btn_pluse_effect 1200ms linear 2 alternate;
+			}
+		}
+    }
 }
-.student_story img{
-    width: 100%;
-    max-width: 100%;
-}
+
+
 #wrapper,
 .container {
     position: relative;
@@ -94,7 +155,12 @@
     height: 350vh;
     background-repeat: repeat;
     background-size: 15px 15px;
-    position: relative
+    position: relative;
+    // overflow: hidden;
+    img{
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 .student_story .student_story_inner::before {
@@ -222,7 +288,8 @@
     width: 48.380797%;
     max-width: 600px;
     position: absolute;
-    left: 47.33738%;
+    // left: 47.33738%;
+    left: 47%;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
