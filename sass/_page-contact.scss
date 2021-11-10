@@ -269,29 +269,33 @@ contact
         color: #56585A;
         font-size: 2.375em;
         line-height: 1.3em;
+        margin-bottom: 16px;
         @include media('phone'){
             font-size: 1.8em;
         }
     }
+}
+.form{
+    clear: both;
 }
 .progress_bar{
     display: block;
     width: 100%;
     margin-bottom: 16px;
     font-size: 1em;
-    height: 32px;
+    // height: 32px;
     >p{
         float: left;
         height: 32px;
         line-height: 32px;
     }
-    ul{
+    ul.step_bar{
         float: left;
         width: 184px;
         height: 32px;
         padding: 13px 0;
         margin-left: 8px;
-        li{
+        >li{
             @extend %hide-text;
             background-color: #D8D8D8;
             width: 25%;
@@ -304,9 +308,9 @@ contact
     }
 }
 .questions_list{
-    padding-top: 48px;
+    // padding-top: 48px;
     @include media('phone'){
-        padding-top: 24px;
+        // padding-top: 24px;
     }
     li{
         position: relative;
@@ -384,4 +388,331 @@ contact
             }
         }
     }    
+}
+.questions_form{
+    .hide{
+        display: none;
+    }
+    .tab_content{
+        position: relative;
+        fieldset{
+            position: relative;
+            clear: both;
+            border: none;
+            font-size: 1.25em;
+            color: #333;
+            margin-bottom: 16px;
+        }
+        h4{
+            font-weight: normal;
+            position: relative;
+            padding: 8px 0px;
+            &::before{
+                content: "*";
+                color: $major-color;
+            }
+            span{
+                color: $major-color;
+                padding: 0 8px;
+                font-size: 0.8em;
+            }
+        }
+        h5{
+            font-size: 1em;
+            font-weight: 400;
+            padding: 8px 0px;
+            margin-top: 5px;
+            padding-left: 8px;
+        }
+        >li{
+            &.hide_list{
+                display: none!important;
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+    .fieldset_ul{
+        >li{
+            display: inline-block;
+            line-height: 32px;
+            padding-left: 38px;
+            margin: 8px;
+            position: relative;
+            
+        }
+        &.ul1{
+            >li{
+                width: calc(33.33% - 24px);
+            }
+        }
+        &.ul2{
+            >li{
+                width: calc(20% - 24px);
+
+            }
+        }
+        &.ul3{
+            >li{
+                width: calc(25% - 16px);
+                float: left;
+                &:nth-last-child(1){
+                    width: 100%;
+                }
+                .Others_country_text{
+                    max-width: 198px;
+                }
+            }
+            
+        }
+        &.ul5,
+        &.ul4{
+            >li{
+                width: calc(25% - 16px);
+                float: left;
+            }
+        }
+        &.ul6{
+            >li{
+                width: calc(20% - 16px);
+            }
+        }
+        &.ul_info1,
+        &.ul_info2,
+        &.ul_info3,
+        &.ul_info4{
+            &::after{
+                @extend %clear;
+            }
+            >li{
+                width: calc(25% - 24px);
+                padding-left: 0;
+                float: left;
+            }
+            label{
+                width: 100%;
+                display: block;
+            }
+            input[type=email],
+            input[type=tel],
+            input[type=text]{
+                margin: 0;
+                width: 100%;
+            }
+            select{
+                float: left;
+            }
+            .Messanging_Apps,
+            .Contact_Person{
+                width: calc(100% - 136px)!important;
+                float: left;
+                margin-left: 16px!important;
+            }
+        }
+        &.ul_info1{
+            select{
+                min-width: 100%;
+            }
+        }
+        &.ul_info2{
+            >li{
+                &::after{
+                    @extend %clear;
+                }
+            }
+        }
+        &.ul_info3{
+            >li{
+                display: inline-block;
+                float: left;
+                &:nth-child(2){
+                    // margin-left: 12px;
+                }
+
+            }
+        }
+        &.ul_info4{
+            position: absolute;
+            width: 100%;
+            right: 23px;
+            top: 82px;
+            display: inline-block;
+            z-index: 2;
+            >li{
+                width: calc(50% - 24px);
+                float: right;
+            }
+            textarea{
+                height: 117px;
+            }
+
+        }
+        .Others_country_text,
+        .Europe_text{
+            width: calc(100% - 100px);
+            margin: 0;
+        }
+        .business_Others_text,
+        .supplier_Others_text{
+            margin: 0;
+            width: calc(100% - 70px);
+        }
+    }
+    select{
+        height: 34px;
+        border: #979797 solid 1px;
+        border-radius: 5px;
+        font-size: 1.05em;
+        max-width: 274px;
+        color: #333;
+        min-width: 120px;
+    }
+    input[type=checkbox],
+	input[type=radio] {
+		// display: none;
+		position: absolute;
+		transform: scale(2);
+		left: 5px;
+		margin-top: 4px;
+		z-index: 2;
+		opacity: 0;
+		cursor: pointer;
+	}
+    input[type=email],
+    input[type=tel],
+    input[type=text]{
+        line-height: 32px;
+        height: 33px;
+        border: none;
+		outline: none;
+        border: #979797 solid 1px;
+		border-radius: 5px;
+        padding: 0 8px;
+        // margin: 0 16px;
+        font-size: 1.05em;
+    }
+	textarea{
+		height: 144px;
+		width: 100%;
+		padding: 16px;
+		border: none;
+		outline: none;
+		padding-left: 16px;
+		background-color: #FFF;
+		border: #979797 solid 1px;
+		border-radius: 5px;
+	}
+	label span {
+		display: inline-block;
+		padding-left: 26px;
+		line-height: 20px;
+		// background: url(cbx-off.svg) no-repeat;
+		user-select: none;
+		position: relative;
+		padding-left: 32px;
+		height: 32px;
+		line-height: 24px;
+		word-break: keep-all;
+		cursor: pointer;
+		position: absolute;
+		left: 0;
+		@include media('phone') {
+			font-size: 1.1em;
+			margin: 2px 0;
+		}
+		&::before{
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			width: 32px;
+			height: 32px;
+			background-color: #FFF;
+			border: #979797 solid 1px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	}
+
+    label span.radio::before{
+        border-radius: 100px;
+    }
+	label.selected span
+	input[type=checkbox].selected + span,
+	input[type=checkbox]:checked + span,
+	input[type=radio].selected + span,
+	input[type=radio]:checked + span{
+		&::before{
+			background-color: #FF9336;
+		}
+	
+	}
+	input[type=checkbox].selected + label + span,
+	input[type=checkbox]:checked + label + span,
+	input[type=radio].selected + label + span,
+	input[type=radio]:checked + label + span{
+		&::before{
+			background-color: #FF9336;
+		}
+	}
+    .btn.tabs{
+        margin-top: 24px;
+        text-align: center;
+        width: 100%;
+        height: 56px;
+        >li{
+           display: inline-block;
+           padding: 0 5%;
+        }
+    }
+    .prev,
+    .next{
+        width: 390px;
+        height: 56px;
+        display: block;
+        text-align: center;
+        line-height: 56px;
+        border-radius: 100px;
+        font-size: 1.25em;
+        color: white;
+        font-weight: 400;
+        letter-spacing: 2px;
+        padding: 0 5%;
+        span{
+            position: relative;
+            &::before{
+                display: block;
+                content: "";
+                position: absolute;
+                
+                background-image: url('../images/icon/icon_arrow_ow.svg');
+                background-size: contain;
+                width: 13px;
+                height: 28px;
+                background-repeat: no-repeat;
+                background-position: center;
+                top: 0;
+            }
+        }
+    }
+    .prev{
+        background-color: #aaa;
+        span{
+            padding-left: 32px;
+            &::before{
+                left: 0;
+                transform: rotateZ(180deg);
+            }
+            
+        }
+    }
+    .next{
+        background-color: $major-color;
+        span{
+            padding-right: 32px;
+            &::before{
+                right: 0;
+            }
+        }
+    }
 }

@@ -12,6 +12,16 @@ $.preload( '../images/icon/social_links/social_links1_o.svg',
   '../images/icon/icon_Arrow_hover.svg'
 );
 /*------------------------------------------------------------------
+loading
+------------------------------------------------------------------*/
+$(function(){
+    // index loading
+    setTimeout(() => {
+        $(".index_loading_content").fadeOut(700);
+        $(".index_loading_box").addClass("close");
+    }, 800);
+});
+/*------------------------------------------------------------------
 fancybox
 ------------------------------------------------------------------*/
 $(document).keydown(function(event){
@@ -753,7 +763,9 @@ $(function(){
       });
   };
 })(jQuery);
-
+/*------------------------------------------------------------------
+//teacher_team_box 出現老師  實戰派講師團隊
+------------------------------------------------------------------*/
 $(function(){
   $('.teacher_team_box').addClass('ready-animate');
 	$(window).on('scroll', function(){
