@@ -1932,6 +1932,7 @@ contact
 
 /* line 252, ../sass/_page-contact.scss */
 .article_questions_list {
+  overflow: hidden;
   padding-top: 48px;
   padding-bottom: 64px;
   display: block;
@@ -1940,17 +1941,17 @@ contact
   background-color: #F4F4F4;
   margin-top: 44px;
 }
-/* line 260, ../sass/_page-contact.scss */
+/* line 261, ../sass/_page-contact.scss */
 .article_questions_list .center {
   padding: 0 32px;
 }
 @media screen and (max-width: 500px) {
-  /* line 260, ../sass/_page-contact.scss */
+  /* line 261, ../sass/_page-contact.scss */
   .article_questions_list .center {
     padding: 0 16px;
   }
 }
-/* line 266, ../sass/_page-contact.scss */
+/* line 267, ../sass/_page-contact.scss */
 .article_questions_list h3 {
   display: block;
   clear: both;
@@ -1960,31 +1961,31 @@ contact
   margin-bottom: 16px;
 }
 @media screen and (max-width: 500px) {
-  /* line 266, ../sass/_page-contact.scss */
+  /* line 267, ../sass/_page-contact.scss */
   .article_questions_list h3 {
     font-size: 1.8em;
   }
 }
 
-/* line 278, ../sass/_page-contact.scss */
+/* line 279, ../sass/_page-contact.scss */
 .form {
   clear: both;
 }
 
-/* line 281, ../sass/_page-contact.scss */
+/* line 282, ../sass/_page-contact.scss */
 .progress_bar {
   display: block;
   width: 100%;
   margin-bottom: 16px;
   font-size: 1em;
 }
-/* line 287, ../sass/_page-contact.scss */
+/* line 288, ../sass/_page-contact.scss */
 .progress_bar > p {
   float: left;
   height: 32px;
   line-height: 32px;
 }
-/* line 292, ../sass/_page-contact.scss */
+/* line 293, ../sass/_page-contact.scss */
 .progress_bar ul.step_bar {
   float: left;
   width: 184px;
@@ -1992,19 +1993,19 @@ contact
   padding: 13px 0;
   margin-left: 8px;
 }
-/* line 298, ../sass/_page-contact.scss */
+/* line 299, ../sass/_page-contact.scss */
 .progress_bar ul.step_bar > li {
   background-color: #D8D8D8;
   width: 25%;
   height: 6px;
   float: left;
 }
-/* line 304, ../sass/_page-contact.scss */
+/* line 305, ../sass/_page-contact.scss */
 .progress_bar ul.step_bar > li.active {
   background-color: #EC8225;
 }
 
-/* line 315, ../sass/_page-contact.scss */
+/* line 316, ../sass/_page-contact.scss */
 .questions_list li {
   position: relative;
   height: 64px;
@@ -2012,13 +2013,13 @@ contact
   padding-left: 26px;
 }
 @media screen and (max-width: 500px) {
-  /* line 315, ../sass/_page-contact.scss */
+  /* line 316, ../sass/_page-contact.scss */
   .questions_list li {
     height: 48px;
     padding-left: 20px;
   }
 }
-/* line 324, ../sass/_page-contact.scss */
+/* line 325, ../sass/_page-contact.scss */
 .questions_list li::before {
   content: "";
   display: block;
@@ -2031,25 +2032,25 @@ contact
   left: 2px;
 }
 @media screen and (max-width: 500px) {
-  /* line 324, ../sass/_page-contact.scss */
+  /* line 325, ../sass/_page-contact.scss */
   .questions_list li::before {
     width: 6px;
     height: 6px;
   }
 }
-/* line 339, ../sass/_page-contact.scss */
+/* line 340, ../sass/_page-contact.scss */
 .questions_list li a {
   color: #333;
   font-size: 1.5em;
   position: relative;
 }
 @media screen and (max-width: 500px) {
-  /* line 339, ../sass/_page-contact.scss */
+  /* line 340, ../sass/_page-contact.scss */
   .questions_list li a {
     font-size: 1.2em;
   }
 }
-/* line 346, ../sass/_page-contact.scss */
+/* line 347, ../sass/_page-contact.scss */
 .questions_list li a::before {
   content: "";
   display: block;
@@ -2061,12 +2062,12 @@ contact
   bottom: -8px;
 }
 @media screen and (max-width: 500px) {
-  /* line 346, ../sass/_page-contact.scss */
+  /* line 347, ../sass/_page-contact.scss */
   .questions_list li a::before {
     bottom: -3px;
   }
 }
-/* line 359, ../sass/_page-contact.scss */
+/* line 360, ../sass/_page-contact.scss */
 .questions_list li a::after {
   display: block;
   content: "";
@@ -2083,36 +2084,36 @@ contact
   background-size: cover;
 }
 @media screen and (max-width: 500px) {
-  /* line 359, ../sass/_page-contact.scss */
+  /* line 360, ../sass/_page-contact.scss */
   .questions_list li a::after {
     width: 28px;
     height: 28px;
   }
 }
-/* line 378, ../sass/_page-contact.scss */
+/* line 379, ../sass/_page-contact.scss */
 .questions_list li a:hover, .questions_list li a:focus {
   color: #EA7000;
 }
-/* line 380, ../sass/_page-contact.scss */
+/* line 381, ../sass/_page-contact.scss */
 .questions_list li a:hover::before, .questions_list li a:focus::before {
   background-color: #EA7000;
 }
-/* line 383, ../sass/_page-contact.scss */
+/* line 384, ../sass/_page-contact.scss */
 .questions_list li a:hover::after, .questions_list li a:focus::after {
   background-image: url("../images/icon/icon_more_w.svg");
   background-color: #EA7000;
   border-color: #EA7000;
 }
 
-/* line 393, ../sass/_page-contact.scss */
+/* line 394, ../sass/_page-contact.scss */
 .questions_form .hide {
   display: none;
 }
-/* line 396, ../sass/_page-contact.scss */
+/* line 397, ../sass/_page-contact.scss */
 .questions_form .tab_content {
   position: relative;
 }
-/* line 398, ../sass/_page-contact.scss */
+/* line 399, ../sass/_page-contact.scss */
 .questions_form .tab_content fieldset {
   position: relative;
   clear: both;
@@ -2121,24 +2122,30 @@ contact
   color: #333;
   margin-bottom: 16px;
 }
-/* line 406, ../sass/_page-contact.scss */
+@media screen and (max-width: 500px) {
+  /* line 399, ../sass/_page-contact.scss */
+  .questions_form .tab_content fieldset {
+    font-size: 1em;
+  }
+}
+/* line 410, ../sass/_page-contact.scss */
 .questions_form .tab_content h4 {
   font-weight: normal;
   position: relative;
   padding: 8px 0px;
 }
-/* line 410, ../sass/_page-contact.scss */
+/* line 414, ../sass/_page-contact.scss */
 .questions_form .tab_content h4::before {
   content: "*";
   color: #EC8225;
 }
-/* line 414, ../sass/_page-contact.scss */
+/* line 418, ../sass/_page-contact.scss */
 .questions_form .tab_content h4 span {
   color: #EC8225;
   padding: 0 8px;
   font-size: 0.8em;
 }
-/* line 420, ../sass/_page-contact.scss */
+/* line 424, ../sass/_page-contact.scss */
 .questions_form .tab_content h5 {
   font-size: 1em;
   font-weight: 400;
@@ -2146,13 +2153,13 @@ contact
   margin-top: 5px;
   padding-left: 8px;
 }
-/* line 428, ../sass/_page-contact.scss */
+/* line 432, ../sass/_page-contact.scss */
 .questions_form .tab_content > li.hide_list {
   display: none !important;
   position: absolute;
   top: 0;
 }
-/* line 436, ../sass/_page-contact.scss */
+/* line 440, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul > li {
   display: inline-block;
   line-height: 32px;
@@ -2160,48 +2167,226 @@ contact
   margin: 8px;
   position: relative;
 }
-/* line 445, ../sass/_page-contact.scss */
+@media screen and (max-width: 500px) {
+  /* line 440, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul > li {
+    line-height: 24px;
+    padding-left: 30px;
+  }
+}
+/* line 452, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul1 > li {
   width: calc(33.33% - 24px);
 }
-/* line 450, ../sass/_page-contact.scss */
+@media screen and (max-width: 1210px) and (min-width: 1px) {
+  /* line 452, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul1 > li {
+    width: calc(30% - 24px);
+  }
+  /* line 456, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul1 > li:nth-last-child(1) {
+    width: calc(40% - 24px);
+  }
+}
+@media screen and (max-width: 1005px) and (min-width: 1px) {
+  /* line 452, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul1 > li {
+    width: calc(25% - 24px);
+  }
+  /* line 462, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul1 > li:nth-last-child(1) {
+    width: calc(75% - 24px);
+  }
+}
+@media screen and (max-width: 787px) and (min-width: 1px) {
+  /* line 452, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul1 > li {
+    width: calc(50% - 24px);
+  }
+  /* line 468, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul1 > li:nth-last-child(1) {
+    width: calc(100% - 24px);
+  }
+}
+@media screen and (max-width: 470px) and (min-width: 1px) {
+  /* line 452, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul1 > li {
+    width: calc(100% - 24px);
+  }
+}
+/* line 478, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul2 > li {
   width: calc(20% - 24px);
 }
-/* line 456, ../sass/_page-contact.scss */
-.questions_form .fieldset_ul.ul3 > li {
-  width: calc(25% - 16px);
-  float: left;
+@media screen and (max-width: 1110px) and (min-width: 1px) {
+  /* line 478, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul2 > li {
+    width: calc(25% - 24px);
+  }
 }
-/* line 459, ../sass/_page-contact.scss */
-.questions_form .fieldset_ul.ul3 > li:nth-last-child(1) {
+@media screen and (max-width: 930px) and (min-width: 1px) {
+  /* line 478, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul2 > li {
+    width: calc(33.33% - 24px);
+  }
+}
+@media screen and (max-width: 740px) and (min-width: 1px) {
+  /* line 478, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul2 > li {
+    width: calc(50% - 24px);
+  }
+}
+@media screen and (max-width: 470px) and (min-width: 1px) {
+  /* line 478, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul2 > li {
+    width: calc(100% - 24px);
+  }
+}
+/* line 494, ../sass/_page-contact.scss */
+.questions_form .fieldset_ul.ul3 {
+  position: relative;
+  display: inline-block;
   width: 100%;
 }
-/* line 462, ../sass/_page-contact.scss */
+/* line 498, ../sass/_page-contact.scss */
+.questions_form .fieldset_ul.ul3 input {
+  max-width: 198px;
+}
+/* line 501, ../sass/_page-contact.scss */
+.questions_form .fieldset_ul.ul3 > li {
+  width: calc(25% - 16px);
+}
+@media screen and (max-width: 550px) and (min-width: 1px) {
+  /* line 501, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul3 > li {
+    width: calc(33.33% - 16px);
+  }
+}
+@media screen and (max-width: 420px) and (min-width: 1px) {
+  /* line 501, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul3 > li {
+    width: calc(100% - 16px);
+  }
+}
+/* line 510, ../sass/_page-contact.scss */
+.questions_form .fieldset_ul.ul3 > li:nth-child(1) {
+  min-width: 336px;
+}
+/* line 513, ../sass/_page-contact.scss */
+.questions_form .fieldset_ul.ul3 > li:nth-child(4) {
+  position: absolute;
+  z-index: 2;
+}
+@media screen and (max-width: 980px) and (min-width: 1px) {
+  /* line 513, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul3 > li:nth-child(4) {
+    left: 357px;
+    top: 49px;
+  }
+}
+@media screen and (max-width: 550px) and (min-width: 1px) {
+  /* line 513, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul3 > li:nth-child(4) {
+    left: auto;
+    top: auto;
+  }
+}
+@media screen and (max-width: 420px) and (min-width: 1px) {
+  /* line 513, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul3 > li:nth-child(4) {
+    position: relative;
+  }
+}
+/* line 528, ../sass/_page-contact.scss */
+.questions_form .fieldset_ul.ul3 > li:nth-last-child(1) {
+  width: 100%;
+  min-width: 336px;
+}
+/* line 532, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul3 > li .Others_country_text {
   max-width: 198px;
 }
-/* line 470, ../sass/_page-contact.scss */
+/* line 536, ../sass/_page-contact.scss */
+.questions_form .fieldset_ul.ul3 .w70 {
+  display: inline-block;
+  width: 70px;
+}
+/* line 544, ../sass/_page-contact.scss */
+.questions_form .fieldset_ul.ul5 input, .questions_form .fieldset_ul.ul4 input {
+  max-width: 198px;
+}
+/* line 547, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul5 > li, .questions_form .fieldset_ul.ul4 > li {
   width: calc(25% - 16px);
   float: left;
 }
-/* line 476, ../sass/_page-contact.scss */
+@media screen and (max-width: 1020px) and (min-width: 1px) {
+  /* line 547, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul5 > li, .questions_form .fieldset_ul.ul4 > li {
+    width: calc(33.33% - 16px);
+  }
+}
+@media screen and (max-width: 660px) and (min-width: 1px) {
+  /* line 547, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul5 > li, .questions_form .fieldset_ul.ul4 > li {
+    width: calc(50% - 16px);
+  }
+}
+/* line 558, ../sass/_page-contact.scss */
+.questions_form .fieldset_ul.ul5 .w70, .questions_form .fieldset_ul.ul4 .w70 {
+  display: inline-block;
+  width: 70px;
+}
+/* line 565, ../sass/_page-contact.scss */
+.questions_form .fieldset_ul.ul4 > li:nth-last-child(1) {
+  min-width: 336px;
+}
+@media screen and (max-width: 470px) and (min-width: 1px) {
+  /* line 564, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul4 > li {
+    width: calc(100% - 16px);
+  }
+}
+/* line 578, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul6 > li {
   width: calc(20% - 16px);
 }
-/* line 487, ../sass/_page-contact.scss */
+@media screen and (max-width: 1180px) and (min-width: 1px) {
+  /* line 578, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul6 > li {
+    width: calc(33.33% - 20px);
+  }
+}
+@media screen and (max-width: 870px) and (min-width: 1px) {
+  /* line 578, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul6 > li {
+    width: calc(50% - 28px);
+  }
+}
+@media screen and (max-width: 620px) and (min-width: 1px) {
+  /* line 578, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul6 > li {
+    width: calc(100% - 28px);
+  }
+}
+/* line 598, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info1 > li, .questions_form .fieldset_ul.ul_info2 > li, .questions_form .fieldset_ul.ul_info3 > li, .questions_form .fieldset_ul.ul_info4 > li {
   width: calc(25% - 24px);
   padding-left: 0;
   float: left;
 }
-/* line 492, ../sass/_page-contact.scss */
+@media screen and (max-width: 1000px) and (min-width: 1px) {
+  /* line 598, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul_info1 > li, .questions_form .fieldset_ul.ul_info2 > li, .questions_form .fieldset_ul.ul_info3 > li, .questions_form .fieldset_ul.ul_info4 > li {
+    width: calc(33.33% - 24px);
+  }
+}
+/* line 606, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info1 label, .questions_form .fieldset_ul.ul_info2 label, .questions_form .fieldset_ul.ul_info3 label, .questions_form .fieldset_ul.ul_info4 label {
   width: 100%;
   display: block;
 }
-/* line 496, ../sass/_page-contact.scss */
+/* line 610, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info1 input[type=email],
 .questions_form .fieldset_ul.ul_info1 input[type=tel],
 .questions_form .fieldset_ul.ul_info1 input[type=text], .questions_form .fieldset_ul.ul_info2 input[type=email],
@@ -2214,11 +2399,11 @@ contact
   margin: 0;
   width: 100%;
 }
-/* line 502, ../sass/_page-contact.scss */
+/* line 616, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info1 select, .questions_form .fieldset_ul.ul_info2 select, .questions_form .fieldset_ul.ul_info3 select, .questions_form .fieldset_ul.ul_info4 select {
   float: left;
 }
-/* line 505, ../sass/_page-contact.scss */
+/* line 624, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info1 .Messanging_Apps,
 .questions_form .fieldset_ul.ul_info1 .Contact_Person, .questions_form .fieldset_ul.ul_info2 .Messanging_Apps,
 .questions_form .fieldset_ul.ul_info2 .Contact_Person, .questions_form .fieldset_ul.ul_info3 .Messanging_Apps,
@@ -2228,16 +2413,61 @@ contact
   float: left;
   margin-left: 16px !important;
 }
-/* line 513, ../sass/_page-contact.scss */
+/* line 632, ../sass/_page-contact.scss */
+.questions_form .fieldset_ul.ul_info1 > li {
+  width: calc(25% - 24px);
+}
+@media screen and (max-width: 1000px) and (min-width: 1px) {
+  /* line 632, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul_info1 > li {
+    width: calc(50% - 24px);
+  }
+}
+@media screen and (max-width: 620px) and (min-width: 1px) {
+  /* line 632, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul_info1 > li {
+    width: calc(100% - 28px);
+  }
+}
+/* line 641, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info1 select {
   min-width: 100%;
 }
-/* line 525, ../sass/_page-contact.scss */
+/* line 646, ../sass/_page-contact.scss */
+.questions_form .fieldset_ul.ul_info2 > li {
+  width: calc(25% - 24px);
+}
+@media screen and (max-width: 1000px) and (min-width: 1px) {
+  /* line 646, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul_info2 > li {
+    width: calc(50% - 24px);
+  }
+}
+@media screen and (max-width: 620px) and (min-width: 1px) {
+  /* line 646, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul_info2 > li {
+    width: calc(100% - 28px);
+  }
+}
+/* line 660, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info3 > li {
   display: inline-block;
   float: left;
+  width: calc(25% - 24px);
 }
-/* line 534, ../sass/_page-contact.scss */
+@media screen and (max-width: 1000px) and (min-width: 1px) {
+  /* line 660, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul_info3 > li {
+    width: calc(50% - 24px);
+  }
+}
+@media screen and (max-width: 620px) and (min-width: 1px) {
+  /* line 660, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul_info3 > li {
+    width: calc(100% - 28px);
+  }
+}
+/* line 676, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info4 {
   position: absolute;
   width: 100%;
@@ -2246,28 +2476,43 @@ contact
   display: inline-block;
   z-index: 2;
 }
-/* line 541, ../sass/_page-contact.scss */
+@media screen and (max-width: 1000px) and (min-width: 1px) {
+  /* line 676, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul_info4 {
+    position: relative;
+    right: auto;
+    top: auto;
+  }
+}
+/* line 688, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info4 > li {
   width: calc(50% - 24px);
   float: right;
 }
-/* line 545, ../sass/_page-contact.scss */
+@media screen and (max-width: 1000px) and (min-width: 1px) {
+  /* line 688, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul_info4 > li {
+    width: calc(100% - 32px);
+    float: left;
+  }
+}
+/* line 696, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info4 textarea {
   height: 117px;
 }
-/* line 550, ../sass/_page-contact.scss */
+/* line 701, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul .Others_country_text,
 .questions_form .fieldset_ul .Europe_text {
   width: calc(100% - 100px);
   margin: 0;
 }
-/* line 555, ../sass/_page-contact.scss */
+/* line 706, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul .business_Others_text,
 .questions_form .fieldset_ul .supplier_Others_text {
   margin: 0;
   width: calc(100% - 70px);
 }
-/* line 561, ../sass/_page-contact.scss */
+/* line 712, ../sass/_page-contact.scss */
 .questions_form select {
   height: 34px;
   border: #979797 solid 1px;
@@ -2277,7 +2522,13 @@ contact
   color: #333;
   min-width: 120px;
 }
-/* line 570, ../sass/_page-contact.scss */
+@media screen and (max-width: 530px) and (min-width: 1px) {
+  /* line 712, ../sass/_page-contact.scss */
+  .questions_form select {
+    max-width: auto;
+  }
+}
+/* line 724, ../sass/_page-contact.scss */
 .questions_form input[type=checkbox],
 .questions_form input[type=radio] {
   position: absolute;
@@ -2288,7 +2539,7 @@ contact
   opacity: 0;
   cursor: pointer;
 }
-/* line 581, ../sass/_page-contact.scss */
+/* line 735, ../sass/_page-contact.scss */
 .questions_form input[type=email],
 .questions_form input[type=tel],
 .questions_form input[type=text] {
@@ -2301,7 +2552,7 @@ contact
   padding: 0 8px;
   font-size: 1.05em;
 }
-/* line 594, ../sass/_page-contact.scss */
+/* line 748, ../sass/_page-contact.scss */
 .questions_form textarea {
   height: 144px;
   width: 100%;
@@ -2313,7 +2564,7 @@ contact
   border: #979797 solid 1px;
   border-radius: 5px;
 }
-/* line 605, ../sass/_page-contact.scss */
+/* line 759, ../sass/_page-contact.scss */
 .questions_form label span {
   display: inline-block;
   padding-left: 26px;
@@ -2329,13 +2580,15 @@ contact
   left: 0;
 }
 @media screen and (max-width: 500px) {
-  /* line 605, ../sass/_page-contact.scss */
+  /* line 759, ../sass/_page-contact.scss */
   .questions_form label span {
     font-size: 1.1em;
     margin: 2px 0;
+    padding-left: 24px;
+    height: 24px;
   }
 }
-/* line 623, ../sass/_page-contact.scss */
+/* line 779, ../sass/_page-contact.scss */
 .questions_form label span::before {
   content: "";
   display: block;
@@ -2348,11 +2601,18 @@ contact
   border-radius: 5px;
   cursor: pointer;
 }
-/* line 637, ../sass/_page-contact.scss */
+@media screen and (max-width: 500px) {
+  /* line 779, ../sass/_page-contact.scss */
+  .questions_form label span::before {
+    width: 24px;
+    height: 24px;
+  }
+}
+/* line 797, ../sass/_page-contact.scss */
 .questions_form label span.radio::before {
   border-radius: 100px;
 }
-/* line 645, ../sass/_page-contact.scss */
+/* line 805, ../sass/_page-contact.scss */
 .questions_form label.selected span
 input[type=checkbox].selected + span::before,
 .questions_form input[type=checkbox]:checked + span::before,
@@ -2360,29 +2620,43 @@ input[type=checkbox].selected + span::before,
 .questions_form input[type=radio]:checked + span::before {
   background-color: #FF9336;
 }
-/* line 654, ../sass/_page-contact.scss */
+/* line 814, ../sass/_page-contact.scss */
 .questions_form input[type=checkbox].selected + label + span::before,
 .questions_form input[type=checkbox]:checked + label + span::before,
 .questions_form input[type=radio].selected + label + span::before,
 .questions_form input[type=radio]:checked + label + span::before {
   background-color: #FF9336;
 }
-/* line 658, ../sass/_page-contact.scss */
+/* line 818, ../sass/_page-contact.scss */
 .questions_form .btn.tabs {
   margin-top: 24px;
   text-align: center;
   width: 100%;
   height: 56px;
 }
-/* line 663, ../sass/_page-contact.scss */
+/* line 823, ../sass/_page-contact.scss */
 .questions_form .btn.tabs > li {
   display: inline-block;
   padding: 0 5%;
+  width: 50%;
+  float: left;
 }
-/* line 668, ../sass/_page-contact.scss */
+@media screen and (max-width: 800px) {
+  /* line 823, ../sass/_page-contact.scss */
+  .questions_form .btn.tabs > li {
+    padding: 0 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 823, ../sass/_page-contact.scss */
+  .questions_form .btn.tabs > li {
+    padding: 0 8px;
+  }
+}
+/* line 836, ../sass/_page-contact.scss */
 .questions_form .prev,
 .questions_form .next {
-  width: 390px;
+  width: 100%;
   height: 56px;
   display: block;
   text-align: center;
@@ -2393,13 +2667,28 @@ input[type=checkbox].selected + span::before,
   font-weight: 400;
   letter-spacing: 2px;
   padding: 0 5%;
+  max-width: 390px;
 }
-/* line 681, ../sass/_page-contact.scss */
+@media screen and (max-width: 500px) {
+  /* line 836, ../sass/_page-contact.scss */
+  .questions_form .prev,
+  .questions_form .next {
+    font-size: 1em;
+  }
+}
+/* line 853, ../sass/_page-contact.scss */
+.questions_form .prev:hover, .questions_form .prev:focus,
+.questions_form .next:hover,
+.questions_form .next:focus {
+  opacity: 0.7;
+  animation: btn_pluse_effect 1200ms linear 2 alternate;
+}
+/* line 857, ../sass/_page-contact.scss */
 .questions_form .prev span,
 .questions_form .next span {
   position: relative;
 }
-/* line 683, ../sass/_page-contact.scss */
+/* line 859, ../sass/_page-contact.scss */
 .questions_form .prev span::before,
 .questions_form .next span::before {
   display: block;
@@ -2413,32 +2702,164 @@ input[type=checkbox].selected + span::before,
   background-position: center;
   top: 0;
 }
-/* line 698, ../sass/_page-contact.scss */
+@media screen and (max-width: 500px) {
+  /* line 859, ../sass/_page-contact.scss */
+  .questions_form .prev span::before,
+  .questions_form .next span::before {
+    width: 7px;
+    height: 23px;
+  }
+}
+/* line 878, ../sass/_page-contact.scss */
 .questions_form .prev {
   background-color: #aaa;
+  float: right;
 }
-/* line 700, ../sass/_page-contact.scss */
+/* line 881, ../sass/_page-contact.scss */
 .questions_form .prev span {
   padding-left: 32px;
 }
-/* line 702, ../sass/_page-contact.scss */
+@media screen and (max-width: 500px) {
+  /* line 881, ../sass/_page-contact.scss */
+  .questions_form .prev span {
+    padding-left: 14px;
+  }
+}
+/* line 886, ../sass/_page-contact.scss */
 .questions_form .prev span::before {
   left: 0;
   transform: rotateZ(180deg);
 }
-/* line 709, ../sass/_page-contact.scss */
+/* line 893, ../sass/_page-contact.scss */
 .questions_form .next {
   background-color: #EC8225;
+  float: left;
 }
-/* line 711, ../sass/_page-contact.scss */
+/* line 896, ../sass/_page-contact.scss */
 .questions_form .next span {
   padding-right: 32px;
 }
-/* line 713, ../sass/_page-contact.scss */
+@media screen and (max-width: 500px) {
+  /* line 896, ../sass/_page-contact.scss */
+  .questions_form .next span {
+    padding-right: 14px;
+  }
+}
+/* line 901, ../sass/_page-contact.scss */
 .questions_form .next span::before {
   right: 0;
 }
 
+@keyframes btn_pluse_effect {
+  0% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  1.8% {
+    transform: matrix3d(1.016, 0, 0, 0, 0, 1.037, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  3.5% {
+    transform: matrix3d(1.033, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  4.7% {
+    transform: matrix3d(1.045, 0, 0, 0, 0, 1.129, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  5.31% {
+    transform: matrix3d(1.051, 0, 0, 0, 0, 1.142, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  7.01% {
+    transform: matrix3d(1.068, 0, 0, 0, 0, 1.158, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  8.91% {
+    transform: matrix3d(1.084, 0, 0, 0, 0, 1.141, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  9.41% {
+    transform: matrix3d(1.088, 0, 0, 0, 0, 1.132, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  10.71% {
+    transform: matrix3d(1.097, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  12.61% {
+    transform: matrix3d(1.108, 0, 0, 0, 0, 1.077, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  14.11% {
+    transform: matrix3d(1.114, 0, 0, 0, 0, 1.067, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  14.41% {
+    transform: matrix3d(1.115, 0, 0, 0, 0, 1.067, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  16.32% {
+    transform: matrix3d(1.119, 0, 0, 0, 0, 1.077, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  18.12% {
+    transform: matrix3d(1.121, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  18.72% {
+    transform: matrix3d(1.121, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  20.02% {
+    transform: matrix3d(1.121, 0, 0, 0, 0, 1.113, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  21.82% {
+    transform: matrix3d(1.119, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  24.32% {
+    transform: matrix3d(1.115, 0, 0, 0, 0, 1.11, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  25.53% {
+    transform: matrix3d(1.113, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  29.23% {
+    transform: matrix3d(1.106, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  29.93% {
+    transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  35.54% {
+    transform: matrix3d(1.098, 0, 0, 0, 0, 1.105, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  36.64% {
+    transform: matrix3d(1.097, 0, 0, 0, 0, 1.106, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  41.04% {
+    transform: matrix3d(1.096, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  44.04% {
+    transform: matrix3d(1.096, 0, 0, 0, 0, 1.097, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  51.45% {
+    transform: matrix3d(1.099, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  52.15% {
+    transform: matrix3d(1.099, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  58.86% {
+    transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  63.26% {
+    transform: matrix3d(1.101, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  66.27% {
+    transform: matrix3d(1.101, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  73.77% {
+    transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  81.18% {
+    transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  85.49% {
+    transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  88.59% {
+    transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  96% {
+    transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  100% {
+    transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
 /*------------------------------------------------------------------
 products
 ------------------------------------------------------------------*/
