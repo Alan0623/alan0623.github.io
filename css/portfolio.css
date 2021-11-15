@@ -1,0 +1,677 @@
+/* line 1, ../sass/portfolio.scss */
+main#content {
+  min-height: 550px;
+  padding-bottom: 183px;
+}
+@media screen and (max-width: 602px) {
+  /* line 1, ../sass/portfolio.scss */
+  main#content {
+    padding-bottom: 257px;
+  }
+}
+@media screen and (max-width: 449px) {
+  /* line 1, ../sass/portfolio.scss */
+  main#content {
+    padding-bottom: 379px;
+  }
+}
+
+/* line 11, ../sass/portfolio.scss */
+#my_portfolio {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 10px;
+  padding-top: 200px;
+  position: relative;
+}
+/* line 18, ../sass/portfolio.scss */
+#my_portfolio h2 {
+  font-weight: normal;
+  position: absolute;
+  top: 100px;
+  margin-top: 0px;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin-left: 0px;
+}
+/* line 22, ../sass/portfolio.scss */
+#my_portfolio h2 b {
+  color: #DFDFDF;
+  float: left;
+  font-size: 2.6em;
+}
+/* line 23, ../sass/portfolio.scss */
+#my_portfolio h2 i {
+  font-style: normal;
+  display: block;
+  position: absolute;
+  width: 300px;
+  padding-left: 87px;
+  margin-top: -13px;
+}
+/* line 24, ../sass/portfolio.scss */
+#my_portfolio h2 u {
+  width: 300px;
+  text-decoration: none;
+  display: block;
+  position: absolute;
+  padding-left: 87px;
+  top: 15px;
+}
+/* line 25, ../sass/portfolio.scss */
+#my_portfolio h2:after {
+  position: absolute;
+  content: "";
+  top: 47px;
+  left: 0;
+  width: 220px;
+  height: 3px;
+  background-color: #71C1DD;
+}
+/* line 36, ../sass/portfolio.scss */
+#my_portfolio h2.w280:after {
+  width: 280px;
+}
+/* line 41, ../sass/portfolio.scss */
+.high_contrast #my_portfolio h2 b {
+  color: #fefe00;
+  opacity: .5;
+}
+/* line 42, ../sass/portfolio.scss */
+.high_contrast #my_portfolio h2:after {
+  background-color: #fefe00;
+}
+
+/* line 48, ../sass/portfolio.scss */
+.portfolio-items,
+.catalogue-filter {
+  list-style: none;
+  padding: 0;
+  margin: 0 0px 40px 0;
+}
+
+/* line 54, ../sass/portfolio.scss */
+.catalogue-filter {
+  text-align: center;
+}
+
+/* line 57, ../sass/portfolio.scss */
+.catalogue-filter > li {
+  display: inline-block;
+  margin: 25px 2px;
+  font-size: .8em;
+  letter-spacing: .15em;
+}
+/* line 62, ../sass/portfolio.scss */
+.catalogue-filter > li a {
+  padding: 15px 12px;
+  border: #71C1DD solid 1px;
+  border-radius: 3px;
+  color: #000;
+}
+/* line 64, ../sass/portfolio.scss */
+.catalogue-filter > li a:focus, .catalogue-filter > li a:hover {
+  background-color: #71C1DD;
+  color: #fff;
+}
+/* line 69, ../sass/portfolio.scss */
+.catalogue-filter > li a.active {
+  background-color: #499CB9;
+  color: #fff;
+  position: relative;
+}
+/* line 73, ../sass/portfolio.scss */
+.catalogue-filter > li a.active:before, .catalogue-filter > li a.active:after {
+  position: absolute;
+  left: 36%;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 13px 0 13px;
+  border-color: #71C1DD transparent transparent transparent;
+}
+/* line 84, ../sass/portfolio.scss */
+.catalogue-filter > li a.active:before {
+  display: none;
+}
+/* line 87, ../sass/portfolio.scss */
+.catalogue-filter > li a.active:after {
+  left: 36%;
+  bottom: -8px;
+  border-color: #499CB9 transparent transparent transparent;
+  z-index: 1;
+}
+/* line 94, ../sass/portfolio.scss */
+.high_contrast .catalogue-filter > li a {
+  color: #fefe00;
+  border-color: #fefe00;
+}
+/* line 95, ../sass/portfolio.scss */
+.high_contrast .catalogue-filter > li a:focus, .high_contrast .catalogue-filter > li a:hover {
+  background-color: #fefe00;
+  color: black;
+}
+/* line 100, ../sass/portfolio.scss */
+.high_contrast .catalogue-filter > li a.active {
+  background-color: #fefe00;
+  color: black;
+}
+/* line 103, ../sass/portfolio.scss */
+.high_contrast .catalogue-filter > li a.active:before, .high_contrast .catalogue-filter > li a.active:after {
+  border-color: #fefe00 transparent transparent transparent;
+}
+
+@media screen and (min-width: 940px) {
+  /* line 112, ../sass/portfolio.scss */
+  .catalogue-filter > li {
+    display: inline-block;
+    margin: 15px 20px;
+    font-size: .85em;
+    letter-spacing: .2em;
+  }
+  /* line 117, ../sass/portfolio.scss */
+  .catalogue-filter > li a {
+    padding: 0 5px;
+    padding-bottom: 5px;
+    color: #000;
+    border: none;
+  }
+  /* line 121, ../sass/portfolio.scss */
+  .catalogue-filter > li a:focus, .catalogue-filter > li a:hover, .catalogue-filter > li a.active {
+    background: none;
+    color: #71C1DD;
+  }
+  /* line 127, ../sass/portfolio.scss */
+  .high_contrast .catalogue-filter > li a {
+    color: #fefe00;
+  }
+  /* line 128, ../sass/portfolio.scss */
+  .high_contrast .catalogue-filter > li a:focus, .high_contrast .catalogue-filter > li a:hover, .high_contrast .catalogue-filter > li a.active {
+    background: none;
+    color: #fefe00;
+  }
+  /* line 135, ../sass/portfolio.scss */
+  .catalogue-filter > li a.active {
+    border-bottom: #71C1DD solid 3px;
+    position: relative;
+  }
+  /* line 138, ../sass/portfolio.scss */
+  .catalogue-filter > li a.active:before {
+    display: block;
+    left: 36%;
+    bottom: -6px;
+    border-color: #fff transparent transparent transparent;
+    z-index: 2;
+  }
+  /* line 146, ../sass/portfolio.scss */
+  .catalogue-filter > li a.active:after {
+    bottom: -10px;
+    border-color: #71C1DD transparent transparent transparent;
+  }
+  /* line 153, ../sass/portfolio.scss */
+  .high_contrast .catalogue-filter > li a.active {
+    border-bottom: #fefe00 solid 3px;
+  }
+  /* line 155, ../sass/portfolio.scss */
+  .high_contrast .catalogue-filter > li a.active:before {
+    border-color: black transparent transparent transparent;
+  }
+  /* line 158, ../sass/portfolio.scss */
+  .high_contrast .catalogue-filter > li a.active:after {
+    border-color: #fefe00 transparent transparent transparent;
+  }
+}
+/* line 167, ../sass/portfolio.scss */
+.portfolio-items > li {
+  float: left;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 174, ../sass/portfolio.scss */
+.portfolio-items.col-2 > li {
+  width: 50%;
+}
+
+/* line 177, ../sass/portfolio.scss */
+.portfolio-items.col-3 > li {
+  width: 33%;
+}
+
+/* line 180, ../sass/portfolio.scss */
+.portfolio-items.col-4 > li {
+  width: 25%;
+}
+
+/* line 183, ../sass/portfolio.scss */
+.portfolio-items.col-5 > li {
+  width: 20%;
+}
+
+/* line 186, ../sass/portfolio.scss */
+.portfolio-items.col-6 > li {
+  width: 16%;
+}
+
+/* line 189, ../sass/portfolio.scss */
+.portfolio-item {
+  padding: 0;
+  margin: 0;
+}
+/* line 192, ../sass/portfolio.scss */
+.portfolio-item .item-inner {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 0;
+  margin: 0 10px 20px 10px;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+@media screen and (min-width: 641px) {
+  /* line 192, ../sass/portfolio.scss */
+  .portfolio-item .item-inner {
+    margin: 0 20px 20px 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 192, ../sass/portfolio.scss */
+  .portfolio-item .item-inner {
+    margin: 0 30px 30px 0;
+  }
+}
+/* line 207, ../sass/portfolio.scss */
+.high_contrast .portfolio-item .item-inner {
+  background: black;
+  border-color: #fefe00;
+}
+/* line 211, ../sass/portfolio.scss */
+.portfolio-item .item-inner a {
+  visibility: hidden;
+  display: none;
+}
+/* line 212, ../sass/portfolio.scss */
+.portfolio-item .item-inner .weblink {
+  background-image: url("../images/web_link.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+  visibility: visible;
+  position: absolute;
+  overflow: hidden;
+  font: 0/0 a;
+  color: transparent;
+  right: 10px;
+  bottom: 10px;
+  z-index: 9999;
+  opacity: .5;
+}
+/* line 228, ../sass/portfolio.scss */
+.portfolio-item .item-inner .weblink:focus, .portfolio-item .item-inner .weblink:hover {
+  background-image: url("../images/web_link_b.png");
+  opacity: 1;
+}
+/* line 233, ../sass/portfolio.scss */
+.high_contrast .portfolio-item .item-inner .weblink {
+  background-image: url("../images/web_link_y.png");
+  opacity: 1;
+}
+/* line 239, ../sass/portfolio.scss */
+.portfolio-item .item-inner:hover .weblink {
+  background-image: url("../images/web_link_o.png");
+  opacity: 1;
+}
+/* line 242, ../sass/portfolio.scss */
+.high_contrast .portfolio-item .item-inner:hover .weblink {
+  background-image: url("../images/web_link_b.png");
+}
+/* line 247, ../sass/portfolio.scss */
+.portfolio-item .item-inner .overlay2,
+.portfolio-item .item-inner .overlay {
+  display: block;
+  visibility: visible;
+  cursor: pointer;
+  border-radius: 50px;
+  height: 201px;
+}
+/* line 255, ../sass/portfolio.scss */
+.portfolio-item .item-inner .overlay2:before,
+.portfolio-item .item-inner .overlay:before {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 101%;
+  height: 300px;
+  content: "";
+  opacity: 0;
+  background: #206c87;
+}
+/* line 267, ../sass/portfolio.scss */
+.portfolio-item .item-inner .overlay2:after,
+.portfolio-item .item-inner .overlay:after {
+  position: absolute;
+  font-style: normal;
+  content: "READ MORE";
+  bottom: 45%;
+  right: 26%;
+  font-size: .8em;
+  font-family: "Ubuntu", Helvetica, "Heiti TC", "Microsoft Sans Serif", "Microsoft Sans Serif", "Helvetica", "Geneva", "sans-serif";
+  font-weight: normal;
+  letter-spacing: 2px;
+  visibility: visible;
+  z-index: 1;
+  color: #fff;
+  opacity: 0;
+  padding: 10px 20px;
+  border: #fff solid thin;
+  border-radius: 40px;
+}
+/* line 286, ../sass/portfolio.scss */
+.high_contrast .portfolio-item .item-inner .overlay2:before, .high_contrast
+.portfolio-item .item-inner .overlay:before {
+  background: #fefe00;
+}
+/* line 289, ../sass/portfolio.scss */
+.high_contrast .portfolio-item .item-inner .overlay2:after, .high_contrast
+.portfolio-item .item-inner .overlay:after {
+  color: black;
+  border: black solid 2px;
+}
+/* line 294, ../sass/portfolio.scss */
+.portfolio-item .item-inner .overlay2 a,
+.portfolio-item .item-inner .overlay a {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-transition: opacity 300ms;
+  -moz-transition: opacity 300ms;
+  -o-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+/* line 314, ../sass/portfolio.scss */
+.portfolio-item .item-inner .overlay2:focus:before,
+.portfolio-item .item-inner .overlay2:hover:before,
+.portfolio-item .item-inner .overlay:focus:before,
+.portfolio-item .item-inner .overlay:hover:before {
+  opacity: 0.8;
+}
+/* line 317, ../sass/portfolio.scss */
+.portfolio-item .item-inner .overlay2:focus:after,
+.portfolio-item .item-inner .overlay2:hover:after,
+.portfolio-item .item-inner .overlay:focus:after,
+.portfolio-item .item-inner .overlay:hover:after {
+  opacity: 0.8;
+}
+/* line 320, ../sass/portfolio.scss */
+.portfolio-item .item-inner .overlay2:focus span,
+.portfolio-item .item-inner .overlay2:hover span,
+.portfolio-item .item-inner .overlay:focus span,
+.portfolio-item .item-inner .overlay:hover span {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  left: 0;
+  bottom: 0px;
+}
+/* line 326, ../sass/portfolio.scss */
+.portfolio-item .item-inner .overlay2:focus span u,
+.portfolio-item .item-inner .overlay2:focus span b,
+.portfolio-item .item-inner .overlay2:hover span u,
+.portfolio-item .item-inner .overlay2:hover span b,
+.portfolio-item .item-inner .overlay:focus span u,
+.portfolio-item .item-inner .overlay:focus span b,
+.portfolio-item .item-inner .overlay:hover span u,
+.portfolio-item .item-inner .overlay:hover span b {
+  color: #eee;
+  background-color: transparent;
+}
+/* line 330, ../sass/portfolio.scss */
+.portfolio-item .item-inner .overlay2:focus span u,
+.portfolio-item .item-inner .overlay2:hover span u,
+.portfolio-item .item-inner .overlay:focus span u,
+.portfolio-item .item-inner .overlay:hover span u {
+  border-top: none;
+}
+/* line 334, ../sass/portfolio.scss */
+.high_contrast .portfolio-item .item-inner .overlay2:focus span u, .high_contrast .portfolio-item .item-inner .overlay2:focus span b, .high_contrast
+.portfolio-item .item-inner .overlay2:hover span u, .high_contrast
+.portfolio-item .item-inner .overlay2:hover span b, .high_contrast
+.portfolio-item .item-inner .overlay:focus span u, .high_contrast
+.portfolio-item .item-inner .overlay:focus span b, .high_contrast
+.portfolio-item .item-inner .overlay:hover span u, .high_contrast
+.portfolio-item .item-inner .overlay:hover span b {
+  color: black;
+}
+/* line 337, ../sass/portfolio.scss */
+.portfolio-item .item-inner .overlay2:focus img,
+.portfolio-item .item-inner .overlay2:hover img,
+.portfolio-item .item-inner .overlay:focus img,
+.portfolio-item .item-inner .overlay:hover img {
+  -moz-transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
+}
+/* line 344, ../sass/portfolio.scss */
+.portfolio-item .item-inner .overlay2:focus i,
+.portfolio-item .item-inner .overlay2:hover i,
+.portfolio-item .item-inner .overlay:focus i,
+.portfolio-item .item-inner .overlay:hover i {
+  visibility: visible;
+}
+/* line 350, ../sass/portfolio.scss */
+.portfolio-item .item-inner span {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  left: 0;
+  bottom: 0px;
+}
+/* line 356, ../sass/portfolio.scss */
+.portfolio-item .item-inner span u {
+  display: block;
+  text-decoration: none;
+  padding-left: 8px;
+  padding-top: 8px;
+  font-size: .8em;
+  color: #999999;
+  background-color: white;
+  border-top: 1px solid #eee;
+}
+/* line 365, ../sass/portfolio.scss */
+.high_contrast .portfolio-item .item-inner span u {
+  color: #fefe00;
+  background-color: black;
+  border-top: 1px solid black;
+}
+/* line 367, ../sass/portfolio.scss */
+.portfolio-item .item-inner span b {
+  color: #000;
+  display: block;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  font-size: .95em;
+  line-height: 1.3em;
+  font-weight: normal;
+  background-color: white;
+}
+/* line 368, ../sass/portfolio.scss */
+.high_contrast .portfolio-item .item-inner span b {
+  color: #fefe00;
+  background-color: black;
+}
+/* line 378, ../sass/portfolio.scss */
+.portfolio-item .item-inner img {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  transition: all 400ms ease-out;
+  width: 101%;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+/* line 389, ../sass/portfolio.scss */
+.portfolio-item .item-inner h5 {
+  background: #fff;
+  margin: 0;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 0.875em;
+  color: #2c3e50;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* line 403, ../sass/portfolio.scss */
+.portfolio-item .overlay:focus,
+.portfolio-item .overlay:hover {
+  opacity: 1;
+}
+
+/* Start: Recommended Isotope styles */
+/**** Isotope Filtering ****/
+/* line 407, ../sass/portfolio.scss */
+.isotope-item {
+  z-index: 2;
+}
+
+/* line 410, ../sass/portfolio.scss */
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+/* line 415, ../sass/portfolio.scss */
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+
+/* line 423, ../sass/portfolio.scss */
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+
+/* line 430, ../sass/portfolio.scss */
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+/* line 438, ../sass/portfolio.scss */
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+/* disable CSS transitions for containers with infinite scrolling*/
+/* line 449, ../sass/portfolio.scss */
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+@-moz-keyframes loading {
+  0%, 100% {
+    -moz-transform: scale(1) rotateZ(0deg);
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+  }
+  26% {
+    -moz-transform: scale(1.1) rotateZ(12deg);
+    transform: scale(1.1) rotateZ(12deg);
+    opacity: .2;
+  }
+  76% {
+    -moz-transform: scale(0.8) rotateZ(-8deg);
+    transform: scale(0.8) rotateZ(-8deg);
+    opacity: .6;
+  }
+}
+@-webkit-keyframes loading {
+  0%, 100% {
+    -webkit-transform: scale(1) rotateZ(0deg);
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+  }
+  26% {
+    -webkit-transform: scale(1.1) rotateZ(12deg);
+    transform: scale(1.1) rotateZ(12deg);
+    opacity: .2;
+  }
+  76% {
+    -webkit-transform: scale(0.8) rotateZ(-8deg);
+    transform: scale(0.8) rotateZ(-8deg);
+    opacity: .6;
+  }
+}
+@keyframes loading {
+  0%, 100% {
+    -moz-transform: scale(1) rotateZ(0deg);
+    -ms-transform: scale(1) rotateZ(0deg);
+    -webkit-transform: scale(1) rotateZ(0deg);
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+  }
+  26% {
+    -moz-transform: scale(1.1) rotateZ(12deg);
+    -ms-transform: scale(1.1) rotateZ(12deg);
+    -webkit-transform: scale(1.1) rotateZ(12deg);
+    transform: scale(1.1) rotateZ(12deg);
+    opacity: .2;
+  }
+  76% {
+    -moz-transform: scale(0.8) rotateZ(-8deg);
+    -ms-transform: scale(0.8) rotateZ(-8deg);
+    -webkit-transform: scale(0.8) rotateZ(-8deg);
+    transform: scale(0.8) rotateZ(-8deg);
+    opacity: .6;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 522, ../sass/portfolio.scss */
+  .portfolio-items.col-3 > li {
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+}

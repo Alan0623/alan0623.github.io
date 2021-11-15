@@ -53,13 +53,13 @@ $(function(){
           $('.header').removeClass('fixed');
       }
     });
-    if ( $(window).scrollTop() > 110){
+    if ( $(window).scrollTop() > 86){
       $('.ready_fixed,.jump').removeClass('no_fixed').addClass('fixed');
     } else {
         $('.ready_fixed,.jump').removeClass('fixed').addClass('no_fixed');
     }
     $(window).scroll(function() {
-      if ( $(this).scrollTop() > 110){
+      if ( $(this).scrollTop() > 86){
         $('.ready_fixed,.jump').removeClass('no_fixed').addClass('fixed');
       } else {
           $('.ready_fixed,.jump').removeClass('fixed').addClass('no_fixed');

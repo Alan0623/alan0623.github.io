@@ -64,11 +64,19 @@ overflow: hidden;
 	height: 100%;
 	height: 100vh;
 	overflow: hidden;
+	z-index: 1;
 	@include media('mobile'){
 		height: 680px;
 	}
 	@include media('phone'){
 		height: 400px;
+	}
+
+	.loading{
+		img{
+			width: 100%;
+			max-width: 100px;
+		}
 	}
 }
 
@@ -78,6 +86,7 @@ overflow: hidden;
 	width: 100%;
 	right: 0;
 	bottom: 0;
+	z-index: 1;
 	// max-width: 1409px;
 	@include media('mobile'){
 		height: 800px;
@@ -191,10 +200,10 @@ animation: loading .7s linear 0s infinite;
 .mask-container {
 	position: absolute;
 	width: 100%;
-	height: calc(85% - 300px);
-	top: calc(15% + 100px);
+	height: 100%;
+	top: 25px;
 	left: 0;
-
+	z-index: 2;
 	@include media('mobile'){
 		height: 50vw!important;
 		top: calc(45% - 20vw)!important;
@@ -204,7 +213,7 @@ animation: loading .7s linear 0s infinite;
 	position: absolute;
 	height: 100%;
 	top: 0;
-	left: 0;
+	left: -40%;
 	right: 0;
 	margin: 0 auto;
 	overflow: visible;
@@ -591,7 +600,8 @@ transform: translate3d(0, 0, 0);
 	background-color: #EDEDED;
 	z-index: 112;
 	transform: translateX(-400px);
-	min-height: 760px;
+	// min-height: 600px;
+	overflow: scroll;
 	&.transition{
 		transition: $transition;
 	}
@@ -602,7 +612,14 @@ transform: translate3d(0, 0, 0);
 	@include media('phone'){
 		width: 289px;
 	}
-
+	.scrollbar{
+		position: relative;
+		display: inline-block;
+		padding-bottom: 180px;
+		height: 100vh;
+		min-height: 560px;
+		// overflow: scroll
+	}
 	.menu_logo{
 		>a{
 			@extend %hide-text;
@@ -622,7 +639,7 @@ transform: translate3d(0, 0, 0);
 
 	}
 	.nav{
-		margin-top: 48px;
+		margin-top: 16px;
 		padding-left: 24px;
 		box-sizing: border-box;
 
@@ -637,7 +654,7 @@ transform: translate3d(0, 0, 0);
     		height: 40px;
 			margin: 24px 0;
 			@include media('phone'){
-				margin: 6px 0;
+				margin: 4px 0;
 			}
 			a{
 				color: $black;
@@ -681,7 +698,7 @@ transform: translate3d(0, 0, 0);
 		li{
 			// float: left;
 			padding: 0 4px;
-			margin: 16px auto;
+			margin: 12px auto;
 			a{
 				color: #000;
 				height: 37px;
@@ -1252,7 +1269,7 @@ transform: translate3d(0, 0, 0);
     left: 0;
     right: 0;
     z-index: 9;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.8);
 	display: flex;
     margin: 0 auto;
     text-align: center;
@@ -1265,9 +1282,11 @@ transform: translate3d(0, 0, 0);
 		color: white;
 		text-align: left;
 		padding: 0;
-		padding-left: 28px;
-		font-size: 2em;
+		// padding-left: 28px;
+		font-size: 2.2em;
 		margin-bottom: 8px;
+		letter-spacing: 2px;
+		margin-left: 23px;
 		@include media('mobile'){
 			font-size: 1.6em;
 			text-align: center;
@@ -1285,6 +1304,7 @@ transform: translate3d(0, 0, 0);
 		padding: 0 24px;
 		li{
 			position: relative;
+			z-index: 5;
 		}
 	}
 	input[type="search"],
@@ -1327,6 +1347,20 @@ transform: translate3d(0, 0, 0);
 			background-position: center;
 			background-color: #FFF;
 			border: #F6851D solid 2px;
+		}
+	}
+	ul>.btn_close{
+		@media screen and (min-width: 800px){
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			
+		}
+		&::before, &::after{
+			display: none!important;
+			opacity: 0;
 		}
 	}
 }
@@ -1474,9 +1508,9 @@ footer
 		.logo{
 			@extend %hide-text;
 			display: block;
-			width: 264px;
-			height: 43px;
-			background-image: url('../images/logo_w.png');
+			width: 320px;
+			height: 36px;
+			background-image: url('../images/logo_lw.png');
 			background-repeat: no-repeat;
 			background-size: contain;
 		}
@@ -1546,7 +1580,7 @@ footer
 					display: none;
 				}
 
-				
+				.ig,
 				.fb{
 					// position: absolute;
 					// right: 212px;
@@ -1560,7 +1594,7 @@ footer
 						content: "";
 						width: 48px;
 						height: 48px;
-						background-image: url('../images/icon/icon_fb.svg');
+						
 						background-repeat: no-repeat;
 						background-size: contain;
 						border: #FFF solid 1px;
@@ -1572,6 +1606,12 @@ footer
 							border-color: $major-color;
 						}
 					}
+				}
+				.fb a{
+					background-image: url('../images/icon/icon_fb.svg');
+				}
+				.ig a{
+					background-image: url('../images/icon/icon_ig.svg');
 				}
 				.mail{
 					// position: absolute;

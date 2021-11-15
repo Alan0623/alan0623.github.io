@@ -83,8 +83,9 @@ PRODUCTS
                 }
                
                 .figcaption{
+                    padding-top: 8px;
                     b{
-                        font-size: 1.1em;
+                        font-size: 1.2em;
                         display: block;
                     }
                     span{
@@ -326,6 +327,7 @@ quality_center
     .bd{
         text-align: center;
         width: 100%;
+        overflow: hidden;
     }
     .info {
         // display: none;
@@ -516,8 +518,8 @@ news
                     }
 
                     figcaption{
-                        transform: translateY(100%);
-                        transition: all .8s;
+                        transform: translateY(0%);
+                        
                     }
                 }
             }
@@ -536,9 +538,12 @@ news
                 color: white;
                 position: absolute;
                 width: 100%;
+                height: 100%;
                 bottom: 0;
                 background-color: rgba(0,0,0,0.6);
                 padding: 18px;
+                transform: translateY(calc(100% - 130px));
+                transition: all .8s;
                 span{
                     font-size: 1.125em;
                 }
@@ -562,6 +567,9 @@ news
                         font-size: 1em;
                     }
 
+                }
+                >p{
+                    padding: 18px 0;
                 }
             }
         }

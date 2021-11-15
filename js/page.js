@@ -210,3 +210,34 @@ $(function(){
 		});
 	});
 });
+
+
+/*------------------------------------------------------------------
+頁籤
+------------------------------------------------------------------*/
+jQuery(function ($) {
+  //portfolio
+  $(window).load(function () {
+      $portfolio_selectors = $('.catalogue-filter >li>a');
+      $portfolio_selectors.focus(function () {
+          $(this).click();
+      });
+      if ($portfolio_selectors != 'undefined') {
+          $portfolio = $('.portfolio-items');
+          $portfolio.isotope({ filter: ".WEDDESIGN" });
+          $portfolio.isotope({
+              itemSelector: 'li',
+              layoutMode: 'fitRows'
+          });
+          $portfolio_selectors.on('click', function () {
+              $portfolio_selectors.removeClass('active');
+              $(this).addClass('active');
+              var selector = $(this).attr('data-filter');
+              $portfolio.isotope({ filter: selector });
+              return false;
+          });
+      }
+  });
+  
+
+});

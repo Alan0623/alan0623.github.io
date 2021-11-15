@@ -259,6 +259,7 @@ catalogue
                 margin-bottom: 32px;
             }
             .list{
+                position: relative;
                 &::after{
                     @extend %clear;
                 }
@@ -267,11 +268,19 @@ catalogue
                     float: left;
                     margin-bottom: 40px;
                     padding-right: 24px;
+                    position: relative!important;
+                    left:auto!important;
+                    top: auto!important;
+                    transform: none!important;
                     @include rwd(940){
                         width: 50%;
                     }
                     @include rwd(640){
                         width: 100%;
+                    }
+                    &.isotope-hidden{
+                        width: 0!important;
+                        padding: 0!important;
                     }
                 }
                 .figure{
@@ -428,7 +437,7 @@ catalogue
             background-color: white;
             border: $minor-color solid 1px;
             padding: 11px 24px;
-            
+            border-radius: 5px;
             @include rwd(1100){
                 padding: 4px 12px;
             }
@@ -451,6 +460,10 @@ catalogue
             position: relative;
             top: auto;
             box-shadow: none;
+        }
+        .bread_crumbs{
+            padding-top: 0;
+            padding-bottom: 4px;
         }
         .page_title{
             padding-bottom: 0;
