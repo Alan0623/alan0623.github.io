@@ -1028,12 +1028,17 @@ transform: translate3d(0, 0, 0);
 		width: calc(100% - 58px);
 		position: relative;
 		padding-left: 8px;
+		color: #333;
+		&:hover, &:focus{
+			color: $major-color;
+		}
 		.no{
 			text-align: left;
 			@extend %ellipsis;
 			display: block;
 			line-height: 24px;
 			padding-top: 5px;
+			font-weight: bold;
 			&::before{
 				content: "RICH NO：";
 			}
@@ -1047,6 +1052,7 @@ transform: translate3d(0, 0, 0);
 		.name{
 			display: block;
 			float: left;
+			font-weight: normal;
 		}
 		.quantity{
 			display: block;

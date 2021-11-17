@@ -245,11 +245,9 @@ contact
                 padding: 24px 0;
             }
             .info{
-                a{
-                    color: #333;
-                    &:hover, &:focus{
-                        color: $major-color;
-                    }
+                color: #333;
+                &:hover, &:focus{
+                    color: $major-color;
                 }
                 .no{
                     font-size: 1.4em;
@@ -421,14 +419,17 @@ contact
             font-weight: normal;
             position: relative;
             padding: 8px 0px;
-            &::before{
-                content: "*";
-                color: $major-color;
-            }
+
             span{
                 color: $major-color;
                 padding: 0 8px;
                 font-size: 0.8em;
+            }
+        }
+        .star{
+            &::before{
+                content: "*";
+                color: $major-color;
             }
         }
         h5{
@@ -652,7 +653,10 @@ contact
                 min-width: 100%;
             }
         }
+        &.ul_info3,
         &.ul_info2{
+            position: relative;
+            z-index: 3;
             >li{
                 width: calc(25% - 24px);
                 @include rwd(1000){
@@ -670,16 +674,6 @@ contact
             >li{
                 display: inline-block;
                 float: left;
-                width: calc(25% - 24px);
-                @include rwd(1000){
-                    width: calc(50% - 24px);
-                }
-                @include rwd(620){
-                    width: calc(100% - 28px);
-                }
-                &:nth-child(2){
-                    // margin-left: 12px;
-                }
 
             }
         }
@@ -705,6 +699,7 @@ contact
             }
             textarea{
                 height: 117px;
+                max-width: 670px;
             }
 
         }
@@ -727,6 +722,7 @@ contact
         max-width: 274px;
         color: #333;
         min-width: 120px;
+        width: 120px;
         @include rwd(530){
             max-width: auto;
         }

@@ -20,7 +20,7 @@
 /* line 539, ../sass/_base-function.scss */
 .page_content .article_tab ul.tabs::after,
 .news_list .article_tab ul.tabs::after, .news_list .center > ul::after, .next_news ul::after, .catalogue_input .password_submit, .catalogue_list ul::after, .catalogue_content_list .center .article .list::after, .catalogue_content_list .center .article .list .figure::after, .ready_fixed ul.jump::after, .page_detail_list_products ul li::after,
-.page_contact_products ul li::after, .questions_form .fieldset_ul.ul_info1::after, .questions_form .fieldset_ul.ul_info2::after, .questions_form .fieldset_ul.ul_info3::after, .questions_form .fieldset_ul.ul_info4::after, .questions_form .fieldset_ul.ul_info2 > li::after, .products_brand .list::after, .products_brand .list ul::after, .page_products_detail .block_products_detail .detail ul::after, .page_products_detail .interested .center ul::after, .page_no ul::after, .most_read ul::after {
+.page_contact_products ul li::after, .questions_form .fieldset_ul.ul_info1::after, .questions_form .fieldset_ul.ul_info2::after, .questions_form .fieldset_ul.ul_info3::after, .questions_form .fieldset_ul.ul_info4::after, .questions_form .fieldset_ul.ul_info3 > li::after, .questions_form .fieldset_ul.ul_info2 > li::after, .products_brand .list::after, .products_brand .list ul::after, .page_products_detail .block_products_detail .detail ul::after, .page_products_detail .interested .center ul::after, .page_no ul::after, .most_read ul::after {
   content: "​";
   display: block;
   height: 0;
@@ -791,7 +791,7 @@
   background-image: url("../images/icon/icon_list_o.svg");
 }
 /* line 569, ../sass/_page-news.scss */
-.next_news ul li.back:hover .name::before, .next_news ul li.back:focus .name::before {
+.next_news ul li.back a:hover .name::before, .next_news ul li.back a:focus .name::before {
   background-image: url("../images/icon/icon_list_w.svg");
 }
 @media screen and (max-width: 500px) {
@@ -1958,21 +1958,21 @@ contact
     padding: 24px 0;
   }
 }
-/* line 248, ../sass/_page-contact.scss */
-.page_contact_products ul li .info a {
+/* line 247, ../sass/_page-contact.scss */
+.page_contact_products ul li .info {
   color: #333;
 }
-/* line 250, ../sass/_page-contact.scss */
-.page_contact_products ul li .info a:hover, .page_contact_products ul li .info a:focus {
+/* line 249, ../sass/_page-contact.scss */
+.page_contact_products ul li .info:hover, .page_contact_products ul li .info:focus {
   color: #EC8225;
 }
-/* line 254, ../sass/_page-contact.scss */
+/* line 252, ../sass/_page-contact.scss */
 .page_contact_products ul li .info .no {
   font-size: 1.4em;
   padding-bottom: 0;
 }
 
-/* line 262, ../sass/_page-contact.scss */
+/* line 260, ../sass/_page-contact.scss */
 .article_questions_list {
   overflow: hidden;
   padding-top: 48px;
@@ -1983,17 +1983,17 @@ contact
   background-color: #F4F4F4;
   margin-top: 44px;
 }
-/* line 271, ../sass/_page-contact.scss */
+/* line 269, ../sass/_page-contact.scss */
 .article_questions_list .center {
   padding: 0 32px;
 }
 @media screen and (max-width: 500px) {
-  /* line 271, ../sass/_page-contact.scss */
+  /* line 269, ../sass/_page-contact.scss */
   .article_questions_list .center {
     padding: 0 16px;
   }
 }
-/* line 277, ../sass/_page-contact.scss */
+/* line 275, ../sass/_page-contact.scss */
 .article_questions_list h3 {
   display: block;
   clear: both;
@@ -2003,31 +2003,31 @@ contact
   margin-bottom: 16px;
 }
 @media screen and (max-width: 500px) {
-  /* line 277, ../sass/_page-contact.scss */
+  /* line 275, ../sass/_page-contact.scss */
   .article_questions_list h3 {
     font-size: 1.8em;
   }
 }
 
-/* line 289, ../sass/_page-contact.scss */
+/* line 287, ../sass/_page-contact.scss */
 .form {
   clear: both;
 }
 
-/* line 292, ../sass/_page-contact.scss */
+/* line 290, ../sass/_page-contact.scss */
 .progress_bar {
   display: block;
   width: 100%;
   margin-bottom: 16px;
   font-size: 1em;
 }
-/* line 298, ../sass/_page-contact.scss */
+/* line 296, ../sass/_page-contact.scss */
 .progress_bar > p {
   float: left;
   height: 32px;
   line-height: 32px;
 }
-/* line 303, ../sass/_page-contact.scss */
+/* line 301, ../sass/_page-contact.scss */
 .progress_bar ul.step_bar {
   float: left;
   width: 184px;
@@ -2035,19 +2035,19 @@ contact
   padding: 13px 0;
   margin-left: 8px;
 }
-/* line 309, ../sass/_page-contact.scss */
+/* line 307, ../sass/_page-contact.scss */
 .progress_bar ul.step_bar > li {
   background-color: #D8D8D8;
   width: 25%;
   height: 6px;
   float: left;
 }
-/* line 315, ../sass/_page-contact.scss */
+/* line 313, ../sass/_page-contact.scss */
 .progress_bar ul.step_bar > li.active {
   background-color: #EC8225;
 }
 
-/* line 326, ../sass/_page-contact.scss */
+/* line 324, ../sass/_page-contact.scss */
 .questions_list li {
   position: relative;
   height: 64px;
@@ -2055,13 +2055,13 @@ contact
   padding-left: 26px;
 }
 @media screen and (max-width: 500px) {
-  /* line 326, ../sass/_page-contact.scss */
+  /* line 324, ../sass/_page-contact.scss */
   .questions_list li {
     height: 48px;
     padding-left: 20px;
   }
 }
-/* line 335, ../sass/_page-contact.scss */
+/* line 333, ../sass/_page-contact.scss */
 .questions_list li::before {
   content: "";
   display: block;
@@ -2074,25 +2074,25 @@ contact
   left: 2px;
 }
 @media screen and (max-width: 500px) {
-  /* line 335, ../sass/_page-contact.scss */
+  /* line 333, ../sass/_page-contact.scss */
   .questions_list li::before {
     width: 6px;
     height: 6px;
   }
 }
-/* line 350, ../sass/_page-contact.scss */
+/* line 348, ../sass/_page-contact.scss */
 .questions_list li a {
   color: #333;
   font-size: 1.5em;
   position: relative;
 }
 @media screen and (max-width: 500px) {
-  /* line 350, ../sass/_page-contact.scss */
+  /* line 348, ../sass/_page-contact.scss */
   .questions_list li a {
     font-size: 1.2em;
   }
 }
-/* line 357, ../sass/_page-contact.scss */
+/* line 355, ../sass/_page-contact.scss */
 .questions_list li a::before {
   content: "";
   display: block;
@@ -2104,12 +2104,12 @@ contact
   bottom: -8px;
 }
 @media screen and (max-width: 500px) {
-  /* line 357, ../sass/_page-contact.scss */
+  /* line 355, ../sass/_page-contact.scss */
   .questions_list li a::before {
     bottom: -3px;
   }
 }
-/* line 370, ../sass/_page-contact.scss */
+/* line 368, ../sass/_page-contact.scss */
 .questions_list li a::after {
   display: block;
   content: "";
@@ -2126,36 +2126,36 @@ contact
   background-size: cover;
 }
 @media screen and (max-width: 500px) {
-  /* line 370, ../sass/_page-contact.scss */
+  /* line 368, ../sass/_page-contact.scss */
   .questions_list li a::after {
     width: 28px;
     height: 28px;
   }
 }
-/* line 389, ../sass/_page-contact.scss */
+/* line 387, ../sass/_page-contact.scss */
 .questions_list li a:hover, .questions_list li a:focus {
   color: #EA7000;
 }
-/* line 391, ../sass/_page-contact.scss */
+/* line 389, ../sass/_page-contact.scss */
 .questions_list li a:hover::before, .questions_list li a:focus::before {
   background-color: #EA7000;
 }
-/* line 394, ../sass/_page-contact.scss */
+/* line 392, ../sass/_page-contact.scss */
 .questions_list li a:hover::after, .questions_list li a:focus::after {
   background-image: url("../images/icon/icon_more_w.svg");
   background-color: #EA7000;
   border-color: #EA7000;
 }
 
-/* line 404, ../sass/_page-contact.scss */
+/* line 402, ../sass/_page-contact.scss */
 .questions_form .hide {
   display: none;
 }
-/* line 407, ../sass/_page-contact.scss */
+/* line 405, ../sass/_page-contact.scss */
 .questions_form .tab_content {
   position: relative;
 }
-/* line 409, ../sass/_page-contact.scss */
+/* line 407, ../sass/_page-contact.scss */
 .questions_form .tab_content fieldset {
   position: relative;
   clear: both;
@@ -2165,29 +2165,29 @@ contact
   margin-bottom: 16px;
 }
 @media screen and (max-width: 500px) {
-  /* line 409, ../sass/_page-contact.scss */
+  /* line 407, ../sass/_page-contact.scss */
   .questions_form .tab_content fieldset {
     font-size: 1em;
   }
 }
-/* line 420, ../sass/_page-contact.scss */
+/* line 418, ../sass/_page-contact.scss */
 .questions_form .tab_content h4 {
   font-weight: normal;
   position: relative;
   padding: 8px 0px;
 }
-/* line 424, ../sass/_page-contact.scss */
-.questions_form .tab_content h4::before {
-  content: "*";
-  color: #EC8225;
-}
-/* line 428, ../sass/_page-contact.scss */
+/* line 423, ../sass/_page-contact.scss */
 .questions_form .tab_content h4 span {
   color: #EC8225;
   padding: 0 8px;
   font-size: 0.8em;
 }
-/* line 434, ../sass/_page-contact.scss */
+/* line 430, ../sass/_page-contact.scss */
+.questions_form .tab_content .star::before {
+  content: "*";
+  color: #EC8225;
+}
+/* line 435, ../sass/_page-contact.scss */
 .questions_form .tab_content h5 {
   font-size: 1em;
   font-weight: 400;
@@ -2195,13 +2195,13 @@ contact
   margin-top: 5px;
   padding-left: 8px;
 }
-/* line 442, ../sass/_page-contact.scss */
+/* line 443, ../sass/_page-contact.scss */
 .questions_form .tab_content > li.hide_list {
   display: none !important;
   position: absolute;
   top: 0;
 }
-/* line 450, ../sass/_page-contact.scss */
+/* line 451, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul > li {
   display: inline-block;
   line-height: 32px;
@@ -2210,225 +2210,225 @@ contact
   position: relative;
 }
 @media screen and (max-width: 500px) {
-  /* line 450, ../sass/_page-contact.scss */
+  /* line 451, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul > li {
     line-height: 24px;
     padding-left: 30px;
   }
 }
-/* line 462, ../sass/_page-contact.scss */
+/* line 463, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul1 > li {
   width: calc(33.33% - 24px);
 }
 @media screen and (max-width: 1210px) and (min-width: 1px) {
-  /* line 462, ../sass/_page-contact.scss */
+  /* line 463, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul1 > li {
     width: calc(30% - 24px);
   }
-  /* line 466, ../sass/_page-contact.scss */
+  /* line 467, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul1 > li:nth-last-child(1) {
     width: calc(40% - 24px);
   }
 }
 @media screen and (max-width: 1005px) and (min-width: 1px) {
-  /* line 462, ../sass/_page-contact.scss */
+  /* line 463, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul1 > li {
     width: calc(25% - 24px);
   }
-  /* line 472, ../sass/_page-contact.scss */
+  /* line 473, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul1 > li:nth-last-child(1) {
     width: calc(75% - 24px);
   }
 }
 @media screen and (max-width: 787px) and (min-width: 1px) {
-  /* line 462, ../sass/_page-contact.scss */
+  /* line 463, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul1 > li {
     width: calc(50% - 24px);
   }
-  /* line 478, ../sass/_page-contact.scss */
+  /* line 479, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul1 > li:nth-last-child(1) {
     width: calc(100% - 24px);
   }
 }
 @media screen and (max-width: 470px) and (min-width: 1px) {
-  /* line 462, ../sass/_page-contact.scss */
+  /* line 463, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul1 > li {
     width: calc(100% - 24px);
   }
 }
-/* line 488, ../sass/_page-contact.scss */
+/* line 489, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul2 > li {
   width: calc(20% - 24px);
 }
 @media screen and (max-width: 1110px) and (min-width: 1px) {
-  /* line 488, ../sass/_page-contact.scss */
+  /* line 489, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul2 > li {
     width: calc(25% - 24px);
   }
 }
 @media screen and (max-width: 930px) and (min-width: 1px) {
-  /* line 488, ../sass/_page-contact.scss */
+  /* line 489, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul2 > li {
     width: calc(33.33% - 24px);
   }
 }
 @media screen and (max-width: 740px) and (min-width: 1px) {
-  /* line 488, ../sass/_page-contact.scss */
+  /* line 489, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul2 > li {
     width: calc(50% - 24px);
   }
 }
 @media screen and (max-width: 470px) and (min-width: 1px) {
-  /* line 488, ../sass/_page-contact.scss */
+  /* line 489, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul2 > li {
     width: calc(100% - 24px);
   }
 }
-/* line 504, ../sass/_page-contact.scss */
+/* line 505, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul3 {
   position: relative;
   display: inline-block;
   width: 100%;
 }
-/* line 508, ../sass/_page-contact.scss */
+/* line 509, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul3 input {
   max-width: 198px;
 }
-/* line 511, ../sass/_page-contact.scss */
+/* line 512, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul3 > li {
   width: calc(25% - 16px);
 }
 @media screen and (max-width: 550px) and (min-width: 1px) {
-  /* line 511, ../sass/_page-contact.scss */
+  /* line 512, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul3 > li {
     width: calc(33.33% - 16px);
   }
 }
 @media screen and (max-width: 420px) and (min-width: 1px) {
-  /* line 511, ../sass/_page-contact.scss */
+  /* line 512, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul3 > li {
     width: calc(100% - 16px);
   }
 }
-/* line 520, ../sass/_page-contact.scss */
+/* line 521, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul3 > li:nth-child(1) {
   min-width: 336px;
 }
-/* line 523, ../sass/_page-contact.scss */
+/* line 524, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul3 > li:nth-child(4) {
   position: absolute;
   z-index: 2;
 }
 @media screen and (max-width: 980px) and (min-width: 1px) {
-  /* line 523, ../sass/_page-contact.scss */
+  /* line 524, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul3 > li:nth-child(4) {
     left: 357px;
     top: 49px;
   }
 }
 @media screen and (max-width: 550px) and (min-width: 1px) {
-  /* line 523, ../sass/_page-contact.scss */
+  /* line 524, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul3 > li:nth-child(4) {
     left: auto;
     top: auto;
   }
 }
 @media screen and (max-width: 420px) and (min-width: 1px) {
-  /* line 523, ../sass/_page-contact.scss */
+  /* line 524, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul3 > li:nth-child(4) {
     position: relative;
   }
 }
-/* line 538, ../sass/_page-contact.scss */
+/* line 539, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul3 > li:nth-last-child(1) {
   width: 100%;
   min-width: 336px;
 }
-/* line 542, ../sass/_page-contact.scss */
+/* line 543, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul3 > li .Others_country_text {
   max-width: 198px;
 }
-/* line 546, ../sass/_page-contact.scss */
+/* line 547, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul3 .w70 {
   display: inline-block;
   width: 70px;
 }
-/* line 554, ../sass/_page-contact.scss */
+/* line 555, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul5 input, .questions_form .fieldset_ul.ul4 input {
   max-width: 198px;
 }
-/* line 557, ../sass/_page-contact.scss */
+/* line 558, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul5 > li, .questions_form .fieldset_ul.ul4 > li {
   width: calc(25% - 16px);
   float: left;
 }
 @media screen and (max-width: 1020px) and (min-width: 1px) {
-  /* line 557, ../sass/_page-contact.scss */
+  /* line 558, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul5 > li, .questions_form .fieldset_ul.ul4 > li {
     width: calc(33.33% - 16px);
   }
 }
 @media screen and (max-width: 660px) and (min-width: 1px) {
-  /* line 557, ../sass/_page-contact.scss */
+  /* line 558, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul5 > li, .questions_form .fieldset_ul.ul4 > li {
     width: calc(50% - 16px);
   }
 }
-/* line 568, ../sass/_page-contact.scss */
+/* line 569, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul5 .w70, .questions_form .fieldset_ul.ul4 .w70 {
   display: inline-block;
   width: 70px;
 }
-/* line 575, ../sass/_page-contact.scss */
+/* line 576, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul4 > li:nth-last-child(1) {
   min-width: 336px;
 }
 @media screen and (max-width: 470px) and (min-width: 1px) {
-  /* line 574, ../sass/_page-contact.scss */
+  /* line 575, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul4 > li {
     width: calc(100% - 16px);
   }
 }
-/* line 588, ../sass/_page-contact.scss */
+/* line 589, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul6 > li {
   width: calc(20% - 16px);
 }
 @media screen and (max-width: 1180px) and (min-width: 1px) {
-  /* line 588, ../sass/_page-contact.scss */
+  /* line 589, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul6 > li {
     width: calc(33.33% - 20px);
   }
 }
 @media screen and (max-width: 870px) and (min-width: 1px) {
-  /* line 588, ../sass/_page-contact.scss */
+  /* line 589, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul6 > li {
     width: calc(50% - 28px);
   }
 }
 @media screen and (max-width: 620px) and (min-width: 1px) {
-  /* line 588, ../sass/_page-contact.scss */
+  /* line 589, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul6 > li {
     width: calc(100% - 28px);
   }
 }
-/* line 608, ../sass/_page-contact.scss */
+/* line 609, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info1 > li, .questions_form .fieldset_ul.ul_info2 > li, .questions_form .fieldset_ul.ul_info3 > li, .questions_form .fieldset_ul.ul_info4 > li {
   width: calc(25% - 24px);
   padding-left: 0;
   float: left;
 }
 @media screen and (max-width: 1000px) and (min-width: 1px) {
-  /* line 608, ../sass/_page-contact.scss */
+  /* line 609, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul_info1 > li, .questions_form .fieldset_ul.ul_info2 > li, .questions_form .fieldset_ul.ul_info3 > li, .questions_form .fieldset_ul.ul_info4 > li {
     width: calc(33.33% - 24px);
   }
 }
-/* line 616, ../sass/_page-contact.scss */
+/* line 617, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info1 label, .questions_form .fieldset_ul.ul_info2 label, .questions_form .fieldset_ul.ul_info3 label, .questions_form .fieldset_ul.ul_info4 label {
   width: 100%;
   display: block;
 }
-/* line 620, ../sass/_page-contact.scss */
+/* line 621, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info1 input[type=email],
 .questions_form .fieldset_ul.ul_info1 input[type=tel],
 .questions_form .fieldset_ul.ul_info1 input[type=text], .questions_form .fieldset_ul.ul_info2 input[type=email],
@@ -2441,11 +2441,11 @@ contact
   margin: 0;
   width: 100%;
 }
-/* line 626, ../sass/_page-contact.scss */
+/* line 627, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info1 select, .questions_form .fieldset_ul.ul_info2 select, .questions_form .fieldset_ul.ul_info3 select, .questions_form .fieldset_ul.ul_info4 select {
   float: left;
 }
-/* line 634, ../sass/_page-contact.scss */
+/* line 635, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info1 .Messanging_Apps,
 .questions_form .fieldset_ul.ul_info1 .Contact_Person, .questions_form .fieldset_ul.ul_info2 .Messanging_Apps,
 .questions_form .fieldset_ul.ul_info2 .Contact_Person, .questions_form .fieldset_ul.ul_info3 .Messanging_Apps,
@@ -2455,61 +2455,53 @@ contact
   float: left;
   margin-left: 16px !important;
 }
-/* line 642, ../sass/_page-contact.scss */
+/* line 643, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info1 > li {
   width: calc(25% - 24px);
 }
 @media screen and (max-width: 1000px) and (min-width: 1px) {
-  /* line 642, ../sass/_page-contact.scss */
+  /* line 643, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul_info1 > li {
     width: calc(50% - 24px);
   }
 }
 @media screen and (max-width: 620px) and (min-width: 1px) {
-  /* line 642, ../sass/_page-contact.scss */
+  /* line 643, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul_info1 > li {
     width: calc(100% - 28px);
   }
 }
-/* line 651, ../sass/_page-contact.scss */
+/* line 652, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info1 select {
   min-width: 100%;
 }
 /* line 656, ../sass/_page-contact.scss */
-.questions_form .fieldset_ul.ul_info2 > li {
+.questions_form .fieldset_ul.ul_info3, .questions_form .fieldset_ul.ul_info2 {
+  position: relative;
+  z-index: 3;
+}
+/* line 660, ../sass/_page-contact.scss */
+.questions_form .fieldset_ul.ul_info3 > li, .questions_form .fieldset_ul.ul_info2 > li {
   width: calc(25% - 24px);
 }
 @media screen and (max-width: 1000px) and (min-width: 1px) {
-  /* line 656, ../sass/_page-contact.scss */
-  .questions_form .fieldset_ul.ul_info2 > li {
+  /* line 660, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul_info3 > li, .questions_form .fieldset_ul.ul_info2 > li {
     width: calc(50% - 24px);
   }
 }
 @media screen and (max-width: 620px) and (min-width: 1px) {
-  /* line 656, ../sass/_page-contact.scss */
-  .questions_form .fieldset_ul.ul_info2 > li {
+  /* line 660, ../sass/_page-contact.scss */
+  .questions_form .fieldset_ul.ul_info3 > li, .questions_form .fieldset_ul.ul_info2 > li {
     width: calc(100% - 28px);
   }
 }
-/* line 670, ../sass/_page-contact.scss */
+/* line 674, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info3 > li {
   display: inline-block;
   float: left;
-  width: calc(25% - 24px);
 }
-@media screen and (max-width: 1000px) and (min-width: 1px) {
-  /* line 670, ../sass/_page-contact.scss */
-  .questions_form .fieldset_ul.ul_info3 > li {
-    width: calc(50% - 24px);
-  }
-}
-@media screen and (max-width: 620px) and (min-width: 1px) {
-  /* line 670, ../sass/_page-contact.scss */
-  .questions_form .fieldset_ul.ul_info3 > li {
-    width: calc(100% - 28px);
-  }
-}
-/* line 686, ../sass/_page-contact.scss */
+/* line 680, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info4 {
   position: absolute;
   width: 100%;
@@ -2519,42 +2511,43 @@ contact
   z-index: 2;
 }
 @media screen and (max-width: 1000px) and (min-width: 1px) {
-  /* line 686, ../sass/_page-contact.scss */
+  /* line 680, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul_info4 {
     position: relative;
     right: auto;
     top: auto;
   }
 }
-/* line 698, ../sass/_page-contact.scss */
+/* line 692, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info4 > li {
   width: calc(50% - 24px);
   float: right;
 }
 @media screen and (max-width: 1000px) and (min-width: 1px) {
-  /* line 698, ../sass/_page-contact.scss */
+  /* line 692, ../sass/_page-contact.scss */
   .questions_form .fieldset_ul.ul_info4 > li {
     width: calc(100% - 32px);
     float: left;
   }
 }
-/* line 706, ../sass/_page-contact.scss */
+/* line 700, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul.ul_info4 textarea {
   height: 117px;
+  max-width: 670px;
 }
-/* line 711, ../sass/_page-contact.scss */
+/* line 706, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul .Others_country_text,
 .questions_form .fieldset_ul .Europe_text {
   width: calc(100% - 100px);
   margin: 0;
 }
-/* line 716, ../sass/_page-contact.scss */
+/* line 711, ../sass/_page-contact.scss */
 .questions_form .fieldset_ul .business_Others_text,
 .questions_form .fieldset_ul .supplier_Others_text {
   margin: 0;
   width: calc(100% - 70px);
 }
-/* line 722, ../sass/_page-contact.scss */
+/* line 717, ../sass/_page-contact.scss */
 .questions_form select {
   height: 34px;
   border: #979797 solid 1px;
@@ -2563,14 +2556,15 @@ contact
   max-width: 274px;
   color: #333;
   min-width: 120px;
+  width: 120px;
 }
 @media screen and (max-width: 530px) and (min-width: 1px) {
-  /* line 722, ../sass/_page-contact.scss */
+  /* line 717, ../sass/_page-contact.scss */
   .questions_form select {
     max-width: auto;
   }
 }
-/* line 734, ../sass/_page-contact.scss */
+/* line 730, ../sass/_page-contact.scss */
 .questions_form input[type=checkbox],
 .questions_form input[type=radio] {
   position: absolute;
@@ -2581,7 +2575,7 @@ contact
   opacity: 0;
   cursor: pointer;
 }
-/* line 745, ../sass/_page-contact.scss */
+/* line 741, ../sass/_page-contact.scss */
 .questions_form input[type=email],
 .questions_form input[type=tel],
 .questions_form input[type=text] {
@@ -2594,7 +2588,7 @@ contact
   padding: 0 8px;
   font-size: 1.05em;
 }
-/* line 758, ../sass/_page-contact.scss */
+/* line 754, ../sass/_page-contact.scss */
 .questions_form textarea {
   height: 144px;
   width: 100%;
@@ -2606,7 +2600,7 @@ contact
   border: #979797 solid 1px;
   border-radius: 5px;
 }
-/* line 769, ../sass/_page-contact.scss */
+/* line 765, ../sass/_page-contact.scss */
 .questions_form label span {
   display: inline-block;
   padding-left: 26px;
@@ -2622,7 +2616,7 @@ contact
   left: 0;
 }
 @media screen and (max-width: 500px) {
-  /* line 769, ../sass/_page-contact.scss */
+  /* line 765, ../sass/_page-contact.scss */
   .questions_form label span {
     font-size: 1.1em;
     margin: 2px 0;
@@ -2630,7 +2624,7 @@ contact
     height: 24px;
   }
 }
-/* line 789, ../sass/_page-contact.scss */
+/* line 785, ../sass/_page-contact.scss */
 .questions_form label span::before {
   content: "";
   display: block;
@@ -2644,17 +2638,17 @@ contact
   cursor: pointer;
 }
 @media screen and (max-width: 500px) {
-  /* line 789, ../sass/_page-contact.scss */
+  /* line 785, ../sass/_page-contact.scss */
   .questions_form label span::before {
     width: 24px;
     height: 24px;
   }
 }
-/* line 807, ../sass/_page-contact.scss */
+/* line 803, ../sass/_page-contact.scss */
 .questions_form label span.radio::before {
   border-radius: 100px;
 }
-/* line 815, ../sass/_page-contact.scss */
+/* line 811, ../sass/_page-contact.scss */
 .questions_form label.selected span
 input[type=checkbox].selected + span::before,
 .questions_form input[type=checkbox]:checked + span::before,
@@ -2662,21 +2656,21 @@ input[type=checkbox].selected + span::before,
 .questions_form input[type=radio]:checked + span::before {
   background-color: #FF9336;
 }
-/* line 824, ../sass/_page-contact.scss */
+/* line 820, ../sass/_page-contact.scss */
 .questions_form input[type=checkbox].selected + label + span::before,
 .questions_form input[type=checkbox]:checked + label + span::before,
 .questions_form input[type=radio].selected + label + span::before,
 .questions_form input[type=radio]:checked + label + span::before {
   background-color: #FF9336;
 }
-/* line 828, ../sass/_page-contact.scss */
+/* line 824, ../sass/_page-contact.scss */
 .questions_form .btn.tabs {
   margin-top: 24px;
   text-align: center;
   width: 100%;
   height: 56px;
 }
-/* line 833, ../sass/_page-contact.scss */
+/* line 829, ../sass/_page-contact.scss */
 .questions_form .btn.tabs > li {
   display: inline-block;
   padding: 0 5%;
@@ -2684,18 +2678,18 @@ input[type=checkbox].selected + span::before,
   float: left;
 }
 @media screen and (max-width: 800px) {
-  /* line 833, ../sass/_page-contact.scss */
+  /* line 829, ../sass/_page-contact.scss */
   .questions_form .btn.tabs > li {
     padding: 0 16px;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 833, ../sass/_page-contact.scss */
+  /* line 829, ../sass/_page-contact.scss */
   .questions_form .btn.tabs > li {
     padding: 0 8px;
   }
 }
-/* line 846, ../sass/_page-contact.scss */
+/* line 842, ../sass/_page-contact.scss */
 .questions_form .prev,
 .questions_form .next {
   width: 100%;
@@ -2712,25 +2706,25 @@ input[type=checkbox].selected + span::before,
   max-width: 390px;
 }
 @media screen and (max-width: 500px) {
-  /* line 846, ../sass/_page-contact.scss */
+  /* line 842, ../sass/_page-contact.scss */
   .questions_form .prev,
   .questions_form .next {
     font-size: 1em;
   }
 }
-/* line 863, ../sass/_page-contact.scss */
+/* line 859, ../sass/_page-contact.scss */
 .questions_form .prev:hover, .questions_form .prev:focus,
 .questions_form .next:hover,
 .questions_form .next:focus {
   opacity: 0.7;
   animation: btn_pluse_effect 1200ms linear 2 alternate;
 }
-/* line 867, ../sass/_page-contact.scss */
+/* line 863, ../sass/_page-contact.scss */
 .questions_form .prev span,
 .questions_form .next span {
   position: relative;
 }
-/* line 869, ../sass/_page-contact.scss */
+/* line 865, ../sass/_page-contact.scss */
 .questions_form .prev span::before,
 .questions_form .next span::before {
   display: block;
@@ -2745,49 +2739,49 @@ input[type=checkbox].selected + span::before,
   top: 0;
 }
 @media screen and (max-width: 500px) {
-  /* line 869, ../sass/_page-contact.scss */
+  /* line 865, ../sass/_page-contact.scss */
   .questions_form .prev span::before,
   .questions_form .next span::before {
     width: 7px;
     height: 23px;
   }
 }
-/* line 888, ../sass/_page-contact.scss */
+/* line 884, ../sass/_page-contact.scss */
 .questions_form .prev {
   background-color: #aaa;
   float: right;
 }
-/* line 891, ../sass/_page-contact.scss */
+/* line 887, ../sass/_page-contact.scss */
 .questions_form .prev span {
   padding-left: 32px;
 }
 @media screen and (max-width: 500px) {
-  /* line 891, ../sass/_page-contact.scss */
+  /* line 887, ../sass/_page-contact.scss */
   .questions_form .prev span {
     padding-left: 14px;
   }
 }
-/* line 896, ../sass/_page-contact.scss */
+/* line 892, ../sass/_page-contact.scss */
 .questions_form .prev span::before {
   left: 0;
   transform: rotateZ(180deg);
 }
-/* line 903, ../sass/_page-contact.scss */
+/* line 899, ../sass/_page-contact.scss */
 .questions_form .next {
   background-color: #EC8225;
   float: left;
 }
-/* line 906, ../sass/_page-contact.scss */
+/* line 902, ../sass/_page-contact.scss */
 .questions_form .next span {
   padding-right: 32px;
 }
 @media screen and (max-width: 500px) {
-  /* line 906, ../sass/_page-contact.scss */
+  /* line 902, ../sass/_page-contact.scss */
   .questions_form .next span {
     padding-right: 14px;
   }
 }
-/* line 911, ../sass/_page-contact.scss */
+/* line 907, ../sass/_page-contact.scss */
 .questions_form .next span::before {
   right: 0;
 }
