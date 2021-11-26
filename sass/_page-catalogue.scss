@@ -2,11 +2,16 @@
 /*------------------------------------------------------------------
 catalogue
 ------------------------------------------------------------------*/
+.thanks_input,
 .catalogue_input{
     width: 100%;
     height: calc(100vh - 101px);
     background-image: url('../images/catalogue/bg_catalogue_default.jpg');
     background-size: cover;
+    background-position: center;
+    @include media('phone'){
+        height: calc(100vh - 240px);
+    }
     .center{
         height: 100%;
         display: flex;
@@ -109,7 +114,28 @@ catalogue
         }
     }
 }
-
+.thanks_input{
+    background-image: url('../images/bg_thanks_default.jpg');
+    .center{
+        p{
+            max-width: initial;
+        }
+        .gohome{
+            text-align: center;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 54px;
+            background-color: #F6851D;
+            border: #F6851D solid 2px;
+            transition: $transition;
+            font-size: 1.2em;
+            &:hover, &:focus{
+                color: #F6851D;
+                background-color: #FFF;
+            }
+        }
+    }
+}
 .catalogue_list{
     width: 100%;
     height: calc(100vh - 101px);

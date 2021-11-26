@@ -521,6 +521,7 @@ products
         padding-top: 40px;
         display: inline-block;
         width: 100%;
+        margin-bottom: 48px;
         &.show_list{
             >li{
                 width: 100%;
@@ -554,11 +555,15 @@ products
                     float: left;
                     margin-left: 16px;
                     max-width: calc(100% - 400px);
+                    @include media('mobile'){
+                        max-width: calc(100% - 160px)!important;
+                    }
                     .no{
                         font-size: 1.4em;
                     }
                     @include rwd(420){
                         margin: 0;
+                        max-width: 100%!important;
                     }
                 }
                 .select_quantity{
@@ -602,8 +607,13 @@ products
                     width: 100%;
                 }
                 @include rwd(420){
-                    padding-bottom: 32px;
+                    padding-bottom: 12px;
+                    padding-top: 16px;
                     border-bottom: #979797 dashed 1px;
+                    .products_name{
+                        height: auto!important;
+                        padding: 0!important;
+                    }
                 }
                 .img{
                     max-width: 230px;
@@ -668,6 +678,7 @@ products
                     text-align: left;
                     padding: 0;
                     padding-bottom: 32px;
+                    overflow: visible;
                     @include rwd(1400){
                         padding-bottom: 16px;
                     }
@@ -697,12 +708,15 @@ products
         position: absolute;
         bottom: 0;
         margin-left: 16px;
+        
         @include rwd(630){
             position: relative;
             margin: 0 auto;
             text-align: center;
             margin-bottom: 16px;
             float: none;
+            bottom: auto!important;
+            padding-top: 16px;
         }
         select{
             height: 48px;

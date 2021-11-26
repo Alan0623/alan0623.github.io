@@ -159,6 +159,12 @@ qna
         padding-right: 88px;
         background-color: #F9F9F9;
         border-radius: 0 0 16px 16px;
+        @include media('mobile'){
+            padding-left: 88px!important;
+        }
+        @include media('phone'){
+            padding-left: 38px!important;
+        }
         &::before{
             content: "A";
             background-color: #A69C9C;

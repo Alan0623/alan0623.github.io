@@ -134,7 +134,7 @@
         @include media('phone'){
             font-size: 1.6em;
             line-height: 1.2em;
-            padding: 24px 0;
+            padding: 18px 0;
         }
         &.s{
             padding: 0;
@@ -306,7 +306,13 @@
         padding: 0 4px;
         height: 34px;
     }
-
+    &.mobile_white{
+        ul li a{
+            @include rwd(520){
+            color: white;
+            }
+        }
+    }
     ul{
         float: right;
         display: block;

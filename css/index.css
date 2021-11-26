@@ -749,11 +749,17 @@ news
   transform: translateY(calc(100% - 130px));
   transition: all .8s;
 }
-/* line 547, ../sass/index.scss */
+@media screen and (max-width: 500px) {
+  /* line 537, ../sass/index.scss */
+  .news ul li figcaption {
+    transform: translateY(calc(100% - 100px));
+  }
+}
+/* line 550, ../sass/index.scss */
 .news ul li figcaption span {
   font-size: 1.125em;
 }
-/* line 551, ../sass/index.scss */
+/* line 554, ../sass/index.scss */
 .news ul li figcaption h3 {
   font-size: 1.5em;
   font-weight: 600;
@@ -766,24 +772,24 @@ news
   overflow: hidden;
 }
 @media screen and (max-width: 800px) {
-  /* line 551, ../sass/index.scss */
+  /* line 554, ../sass/index.scss */
   .news ul li figcaption h3 {
     font-size: 1.4em;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 551, ../sass/index.scss */
+  /* line 554, ../sass/index.scss */
   .news ul li figcaption h3 {
     height: 44px;
     overflow: hidden;
     font-size: 1em;
   }
 }
-/* line 571, ../sass/index.scss */
+/* line 574, ../sass/index.scss */
 .news ul li figcaption > p {
   padding: 18px 0;
 }
-/* line 577, ../sass/index.scss */
+/* line 580, ../sass/index.scss */
 .news .more {
   margin-right: 16px;
 }

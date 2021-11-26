@@ -173,6 +173,7 @@
     }
     @include media('phone'){
         padding-bottom: 24px!important;  
+        min-height: 530px;
     }
     .center{
         padding: 0 32px;
@@ -184,6 +185,9 @@
         width: 100%;
         margin-bottom: 48px;
         margin-top: -48px;
+        @include media('phone'){
+            margin-top: 0;
+        }
         ul.tabs{
             &::after{
                 @extend %clear;
@@ -330,7 +334,7 @@
     
     img{
         @include media('mobile'){
-            float: none!important;
+            // float: none!important;
         }
     }
 }
@@ -454,7 +458,7 @@
                             font-size: 1.4em;
                         }
                         @include media('phone'){
-                            height: 44px;
+                            // height: 44px;
                             overflow: hidden;
                             font-size: 1em;
                         }
@@ -554,6 +558,8 @@
                 width: 35%;
                 @include media('phone'){
                     width: 100%;
+                    padding-left: 4px;
+                    box-sizing: border-box;
                 }
             }
             &.prev{
@@ -577,6 +583,9 @@
                 }
                 a{
                     padding-left: 64px;
+                    @include media('phone'){
+                        padding-left: 56px;
+                    }
                 }
                 .name{
                     left: 0;
@@ -600,7 +609,10 @@
                 a{
                     float: right;
                     padding-right: 64px;
-                    // padding-right: 64px;
+                    @include media('phone'){
+                        padding-right: 0;
+                        padding-left: 56px;
+                    }
                 }
                 .name{
                     right: 0;

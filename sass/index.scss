@@ -544,6 +544,9 @@ news
                 padding: 18px;
                 transform: translateY(calc(100% - 130px));
                 transition: all .8s;
+                @include media('phone'){
+                    transform: translateY(calc(100% - 100px));
+                }
                 span{
                     font-size: 1.125em;
                 }

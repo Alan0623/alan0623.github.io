@@ -114,11 +114,22 @@ overflow: hidden;
 	padding: 0;
 	font-size: 2.2em;
 	@include media("mobile"){
+		font-size: 1.8em;
 		position: absolute;
 		bottom: 0;
 		padding-left: 24px;
 		padding-bottom: 48px;
+		padding-right: 24px;
 	}
+	@include media("phone"){
+		font-size: 1em;
+		padding-top: 8px;
+		padding-left: 8px;
+		padding-bottom: 8px;
+		padding-right: 8px;
+		background: linear-gradient(0deg, rgba(0,0,0,0.3)20%, rgba(0,0,0,0)100%);
+	}
+	
 	.t1{
 		display: block;
 		line-height: 1;
@@ -130,6 +141,9 @@ overflow: hidden;
 		font-size: 1em;
 		font-weight: 800;
 		text-shadow:rgba(0,0,0,0.5) 2px 4px 5px;
+		@include media("phone"){
+			text-shadow:rgba(0,0,0,0.5) 1px 1px 2px;
+		}
 	}
 	.t2{
 		color: white;
@@ -139,6 +153,9 @@ overflow: hidden;
 		@include media("mobile"){
 			width: 100%!important;
 			padding-right: 24px;
+		}
+		@include media("phone"){
+			text-shadow:rgba(0,0,0,0.5) 1px 1px 2px;
 		}
 	}
 }
@@ -613,14 +630,20 @@ transform: translate3d(0, 0, 0);
 
 	@include media('phone'){
 		width: 289px;
+		// padding-bottom: 160px;
+		// min-height: 560px;
 	}
 	.scrollbar{
 		position: relative;
 		display: inline-block;
-		padding-bottom: 180px;
+		// padding-bottom: 180px;
 		height: 100vh;
-		min-height: 560px;
+		min-height: 710px;
 		// overflow: scroll
+		@include media('phone'){
+			padding-bottom: 160px;
+			min-height: 560px;
+		}
 	}
 	.menu_logo{
 		>a{
@@ -1381,10 +1404,14 @@ transform: translate3d(0, 0, 0);
 footer
 ------------------------------------------------------------------*/
 .footer{
+	overflow: hidden;
 	clear: both;
 	padding-top: 80px;
 	background-color: #000;
 	color: #FFF;
+	@include rwd(550){
+		padding-top: 40px;
+	}
 	@include media('phone'){
 		padding-top: 32px;
 	}
@@ -1519,15 +1546,20 @@ footer
 		}
 		@include media('phone'){
             padding: 0 16px;
+			margin-bottom: 8px;
         }
 		.logo{
 			@extend %hide-text;
 			display: block;
-			width: 320px;
-			height: 36px;
+			width: 427px;
+			height: 48px;
 			background-image: url('../images/logo_lw.png');
 			background-repeat: no-repeat;
 			background-size: contain;
+			@include rwd(550){
+				width: 320px;
+				height: 36px;
+			}
 		}
 		&::after{
 			@extend %clear;
@@ -1697,6 +1729,13 @@ a.gotop{
 		color: black;
 		border-color: $major-color;
 	}
+	@include media('phone'){
+		right: 16px;
+		top: auto;
+		bottom: 12px;
+		width: 40px;
+		height: 40px;
+	}
 }
 
 
@@ -1725,10 +1764,10 @@ a.gotop{
 			@include media('phone'){
 				line-height: 1.6em;
 				font-size: 0.8em;
-				text-align: center;
+				text-align: left;
 				width: 100%;
 				padding-top: 8px;
-				padding-left: 0;
+				padding-left: 16px;
 			}
 		}
 		ul{
@@ -1738,7 +1777,7 @@ a.gotop{
 			@include media('phone'){
 				width: 100%;
 				font-size: 0.8em;
-				text-align: center;
+				text-align: left;
 				line-height: 1em;
 				padding: 8px 0 24px 0;
 			}
