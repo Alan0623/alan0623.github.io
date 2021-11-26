@@ -54,7 +54,7 @@
         </div>
         <!-- BELOW .header   ////////////////////////////////////////////////////////////////-->
         <header class="header black">
-            <nav class="menu">
+            <nav class="menu"><div class="scrollbar">
                 <div class="menu_logo">
                     <a href="/"  title="Rich Parts[Go Home Page]">RICH PARTS INDUSTRIAL CO.</a>
                 </div>
@@ -72,7 +72,7 @@
                     <li><a class="tool2" href="javascript:void(0)" title="Inquiry">Inquiry</a></li>
                     <li><a class="tool3" href="javascript:void(0)" title="English">English</a></li>
                 </ul>
-            </nav>
+            </div></nav>
 
             <div class="header_center">
                 <a href="javascript:void(0)" title="menu" class="open_nav" for="main_menu">
@@ -571,5 +571,43 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
     <script type="text/javascript" src="js/page.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.to_article1').stop().click(function() {
+                $('html,body').animate({scrollTop: 0}, 600);
+                return false;
+            });
+
+
+            $('.to_article2').stop().click(function() {
+                $('html,body').animate({scrollTop: $('#article2').offset().top - 206}, 600);
+                return false;
+            });
+            $('.to_article3').stop().click(function() {
+                $('html,body').animate({scrollTop: $('#article3').offset().top - 206}, 600);
+                return false;
+            });
+            $('.to_article4').stop().click(function() {
+                $('html,body').animate({scrollTop: $('#article4').offset().top - 206}, 600);
+                return false;
+            });
+            $('.to_article5').stop().click(function() {
+                $('html,body').animate({scrollTop: $('#article5').offset().top - 206}, 600);
+                return false;
+            });
+            $('.to_article6').stop().click(function() {
+                $('html,body').animate({scrollTop: $('#article6').offset().top - 206}, 600);
+                return false;
+            });
+            $('.to_article7').stop().click(function() {
+                $('html,body').animate({scrollTop: $('#article7').offset().top - 206}, 600);
+                return false;
+            });
+            $('.to_article8').stop().click(function() {
+                $('html,body').animate({scrollTop: $('#article8').offset().top - 206}, 600);
+                return false;
+            });
+        });
+    </script>
 </body>
 </html>
