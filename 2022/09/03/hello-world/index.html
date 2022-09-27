@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hello World | Alan Lin&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="HIHI～😍 如果你是第一次來的話，『Chan-Chan-Dev』是一個專門用簡單的圖文與故事講解網路程式技術的網站。若你也喜歡用這種方式學習的話，歡迎加入 Chan-Chan-Dev Facebook 的粉絲團，在發佈的時候就有比較多機會收到通知喔！😍   這篇文章是寫給誰看的呢？ 會使用 Git 的工程師 或 對 Git 有一定瞭解的人 瞭解 Markdown 語法怎麼使用 需要架設自己">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="https://lin623.github.io/2022/09/03/hello-world/index.html">
+<meta property="og:site_name" content="Alan Lin&#39;s Blog">
+<meta property="og:description" content="HIHI～😍 如果你是第一次來的話，『Chan-Chan-Dev』是一個專門用簡單的圖文與故事講解網路程式技術的網站。若你也喜歡用這種方式學習的話，歡迎加入 Chan-Chan-Dev Facebook 的粉絲團，在發佈的時候就有比較多機會收到通知喔！😍   這篇文章是寫給誰看的呢？ 會使用 Git 的工程師 或 對 Git 有一定瞭解的人 瞭解 Markdown 語法怎麼使用 需要架設自己">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/index.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/Nodejs.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/Git.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/vscode.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/hexo-init-01.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/Theme.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/butterfly-theme.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/first-post.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-index.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-name.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-link.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/deploy-github-repo-2.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/deploy-github-repo-3.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/deploy-github-repo-4.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/deploy-result-01.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godaddy-index.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-buy-domain.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-menu.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-menu-2.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-menu-3.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-A-1.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-A-2.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-A-1.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-custom-domain-1.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-custom-domain-2.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-custom-domain-3.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/rat.png">
+<meta property="og:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/apply-img.png">
+<meta property="article:published_time" content="2022-09-03T05:51:00.000Z">
+<meta property="article:modified_time" content="2022-09-27T12:36:32.306Z">
+<meta property="article:author" content="Alan Lin">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/index.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Alan Lin&#39;s Blog" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Alan Lin&#39;s Blog" rel="home"> Alan Lin&#39;s Blog </a>
+            
+          </h1>
+          
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首頁</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="archives"> <a class="" href="/archives">彙整</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="categories"> <a class="" href="/categories">分類</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="tags"> <a class="" href="/tags">標籤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="about"> <a class="" href="/about">關于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-hello-world" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Hello World
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2022/09/03/hello-world/" class="article-date">
+	  <time datetime="2022-09-03T05:51:00.000Z" itemprop="datePublished">九月 3, 2022</time>
+	</a>
+
+       
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <article class="post-content" id="article-container"><p><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/index.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/index.png"></a><div class="img-alt is-center"></div></p>
+<div class="note success simple"><p>HIHI～😍 如果你是第一次來的話，『Chan-Chan-Dev』是一個專門用簡單的圖文與故事講解網路程式技術的網站。<br>若你也喜歡用這種方式學習的話，歡迎加入 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.facebook.com/chanchandev">Chan-Chan-Dev Facebook</a> 的粉絲團，在發佈的時候就有比較多機會收到通知喔！😍</p>
+</div>
+<hr>
+<h1 id="這篇文章是寫給誰看的呢？"><a href="#這篇文章是寫給誰看的呢？" class="headerlink" title="這篇文章是寫給誰看的呢？"></a>這篇文章是寫給誰看的呢？</h1><ul>
+<li>會使用 Git 的工程師 或 對 <code>Git</code> 有一定瞭解的人</li>
+<li>瞭解 Markdown 語法怎麼使用</li>
+<li>需要架設自己 Blog 且 希望有<code>自己的網域</code>的人</li>
+</ul>
+<p>若你已經知道為什麼要寫 Blog 與使用 Hexo 的原因的朋友，可以快轉到 <a href="#%E5%AE%89%E8%A3%9D-Hexo">安裝 / 設定 Hexo</a> 囉 😍</p>
+<hr>
+<h1 id="為什麼要架設-Blog"><a href="#為什麼要架設-Blog" class="headerlink" title="為什麼要架設 Blog"></a>為什麼要架設 Blog</h1><p>身爲一個<code>工程師</code>，隨著時間的成長，所需學習的知識日益增加。<br>對於過往的知識都要完美地記得似乎是一個不可能的任務。<br>於是爲自己所學的技能設立一個<code>知識資料庫</code>讓未來的自己可以查詢似乎就變得十分重要了。</p>
+<h1 id="架設-Blog-有什麼好處呢？"><a href="#架設-Blog-有什麼好處呢？" class="headerlink" title="架設 Blog 有什麼好處呢？"></a>架設 Blog 有什麼好處呢？</h1><ul>
+<li>快速方便地回顧記錄過的知識與遇到的問題的解法</li>
+<li>累積屬於自己在技術專業知識品牌</li>
+<li>面試時可以作爲加分的作品集項目</li>
+</ul>
+<h1 id="選擇-Hexo-的原因"><a href="#選擇-Hexo-的原因" class="headerlink" title="選擇 Hexo 的原因"></a>選擇 Hexo 的原因</h1><p>在 2021 年架設 Blog 有上千種可行的做法。<br>馬上想到的也許有 Wordpress、Medium、Blogger 等等超多種不同的選擇，所以怎麼選擇？</p>
+<div class="note success simple"><p>從自身的需求出發：用最簡單的方式撰寫 Blog，並且有一個自己的網域域名（Domain）放在網路上</p>
+</div>
+<p>當初在 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://jessie75919.medium.com/">Medium</a> 與 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://jcxcode.wordpress.com/">Wordpress</a> 有遇到以下幾點問題：</p>
+<ul>
+<li>Medium 對於程式碼的語法高亮顯示不夠友善，所以程式碼都會呈現看起來不舒服的狀態</li>
+<li>Medium 與 Wordpress 都無法使用 Markdown 語法快速地書寫 H1、H2、列點樣式</li>
+<li>Medium 無法替換自己的 Blog 主題樣式</li>
+<li>Wordpress 設定感覺好複雜</li>
+<li>Medium 無法自己保有文章在自己手上，如果之後要轉移陣地的話，似乎就有點困擾</li>
+<li>想要 Blog 有自己的網域域名（Domain）</li>
+<li>幫文章找一個家，但不想要 Host 伺服器主機</li>
+</ul>
+<p>把問題列出來之後發現自己有點難搞 🤣</p>
+<h3 id="需求整理："><a href="#需求整理：" class="headerlink" title="需求整理："></a>需求整理：</h3><ul>
+<li>支援程式碼語法高亮顯示</li>
+<li>支援 <code>Markdown</code> 語法</li>
+<li>主題樣式選擇多樣，且可彈性客製化</li>
+<li>自己可以擁有這些文章檔案，讓未來的遷移有更多的自由度</li>
+<li>幫文章找一個<code>免費</code>的家又不用管理伺服器主機</li>
+<li>可以簡單快速撰寫與發佈，不需要太多的複雜繁複的設定</li>
+</ul>
+<p>帶著上述的需求開始在網路上尋找，於是找到了所謂的<code>靜態網站產生器（Static Site Generator）</code>。<br>相較會因使用者於有所不同的呈現內容的動態網站（e.g: Facebook）。<br><code>靜態網站</code>則不會因爲不同的使用者而有所不同的呈現，所以很適合用於像是 Blog 這種資訊內容的網站。</p>
+<p><code>靜態網站產生器（Static Site Generator）</code> 其實也有滿多套的，最後自己選擇了 <code>Hexo</code></p>
+<h3 id="為什麼要使用-Hexo-呢？"><a href="#為什麼要使用-Hexo-呢？" class="headerlink" title="為什麼要使用 Hexo 呢？"></a>為什麼要使用 Hexo 呢？</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-tw/">Hexo</a> 是一套專門用來寫網誌的框架，他有幾個特性可以滿足自己上述的需求：</p>
+<ul>
+<li>簡單、易懂、快速</li>
+<li>Markdown 支援</li>
+<li>一鍵部署</li>
+<li>豐富的色彩主題與外掛</li>
+<li>可以將產生的靜態網站放在 Github 的儲存庫作爲 Blog 文章的家</li>
+</ul>
+<h1 id="安裝所需工具"><a href="#安裝所需工具" class="headerlink" title="安裝所需工具"></a>安裝所需工具</h1><h2 id="NodeJs"><a href="#NodeJs" class="headerlink" title="NodeJs"></a>NodeJs</h2><p>Hexo 需要 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://nodejs.org/en/">Nodejs</a> 的環境，若電腦上沒有的需要安裝 Nodejs 喔！<br>傑西這邊使用的是 mac 的 <code>v14.16.0</code> 版本<br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/Nodejs.png" data-fancybox="group" data-caption="Nodejs" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/Nodejs.png" alt="Nodejs"></a><div class="img-alt is-center">Nodejs</div></p>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>Hexo 也需要使用到 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://git-scm.com/">Git</a>，若電腦上沒有的需要安裝 Git 喔！<br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/Git.png" data-fancybox="group" data-caption="Git" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/Git.png" alt="Git"></a><div class="img-alt is-center">Git</div></p>
+<h2 id="Visual-Studio-Code-vs-code"><a href="#Visual-Studio-Code-vs-code" class="headerlink" title="Visual Studio Code (vs code)"></a>Visual Studio Code (vs code)</h2><p>可以用自己習慣的 IDE 作爲編輯器，本篇文章的範例是使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://code.visualstudio.com/">Visual Studio Code</a><br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/vscode.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/vscode.png"></a><div class="img-alt is-center"></div></p>
+<h2 id="安裝-Hexo"><a href="#安裝-Hexo" class="headerlink" title="安裝 Hexo"></a>安裝 Hexo</h2><p>確認上述兩個工具都有安裝後，我們終於可以來安裝 Hexo 囉。<br>依照 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-tw/docs/#%E5%AE%89%E8%A3%9D">Hexo 官方文件的指示</a>，我們可以在 <code>終端機</code> 執行：</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></tbody></table></figure>
+<div class="hide-toggle"><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>如何打開終端機 ？</span></div>
+<div class="hide-content"><p>Mac: 在 <code>spotlight</code> 上搜尋 <code>Terminal.app</code> 即可<br>Win：在<code>開始</code> 搜尋 <code>Git Bash</code></p>
+</div></div>
+<h2 id="建立-Hexo-專案"><a href="#建立-Hexo-專案" class="headerlink" title="建立 Hexo 專案"></a>建立 Hexo 專案</h2><p>切換到家目錄</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="建立-Hexo-專案-1"><a href="#建立-Hexo-專案-1" class="headerlink" title="建立 Hexo 專案"></a>建立 Hexo 專案</h3><p>以下指令會產生一個叫做 <code>my-blog</code> 的資料夾，資料夾名稱可以任意更改，只要是<code>英文</code>即可</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init my-blog</span><br></pre></td></tr></tbody></table></figure>
+<p>切換到產生的專案資料夾，<code>記得要跟上面定義的資料夾名稱一樣</code>喔</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd my-blog</span><br></pre></td></tr></tbody></table></figure>
+<p>用 npm 下載 hexo 所需要用到的套件</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></tbody></table></figure>
+<p>在本機端啓動 Hexo 的伺服器</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></tbody></table></figure>
+<p>打開瀏覽器在網址輸入 <code>http://localhost:4000/</code>，應該就會看到 Hexo 出現在你的瀏覽器囉 😍<br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/hexo-init-01.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/hexo-init-01.png"></a><div class="img-alt is-center"></div></p>
+<h1 id="Hexo-設定"><a href="#Hexo-設定" class="headerlink" title="Hexo 設定"></a>Hexo 設定</h1><p>產生的 Hexo 的專案資料夾會呈現以下的資料夾結構：</p>
+<figure class="highlight text"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">text</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li>scaffolds<br>鷹架資料夾。當您建立新文章時，Hexo 會根據 scaffold 來建立檔案。</li>
+<li>source<br>原始檔案資料夾是放置內容的地方。檔案 / 資料夾名稱開頭為 _ (底線) 和隱藏檔案會被忽略，除了 <code>_posts</code> 資料夾以外。Markdown 和 HTML 檔案會被處理並放到 public 資料夾，而其他檔案會被拷貝過去。</li>
+<li>themes<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/themes">主題</a> 資料夾。Hexo 會根據主題來產生靜態檔案。</li>
+<li>package.json<br>Hexo 所需的套件資料</li>
+<li>_config.yml<br>設定專案的大部分配置，可以參考 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-tw/docs/configuration">Hexo 官網上的文件說明</a></li>
+</ul>
+<h1 id="選擇主題樣式"><a href="#選擇主題樣式" class="headerlink" title="選擇主題樣式"></a>選擇主題樣式</h1><p><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/Theme.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/Theme.png"></a><div class="img-alt is-center"></div><br>Hexo 剛下載下來已經有個預設的主題了，但是如果像我一樣覺得看不順眼，還可以到<a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/themes/">官網的主題頁面</a> 挑一個喜翻的主題喔 😍</p>
+<h3 id="Butterfly"><a href="#Butterfly" class="headerlink" title="Butterfly"></a>Butterfly</h3><p>花了三天三夜仔細比較後，最後選擇了 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a> 這套主題，樣式看起來很棒也提供了許多自己寫文章所需要的功能，簡單記錄一下安裝步驟囉。</p>
+<p>終端機切換到 Hexo 專案資料夾</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/my-blog</span><br></pre></td></tr></tbody></table></figure>
+<p>安裝 Butterfly 主題樣式</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-theme-butterfly</span><br></pre></td></tr></tbody></table></figure>
+<p>安裝 Butterfly 所需的套件</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></tbody></table></figure>
+<p>用 vs code 開啓 Hexo 的專案，開啓 <code>_config.yml</code> 檔，更改 <code>theme</code> 設定</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: butterfly</span><br></pre></td></tr></tbody></table></figure>
+<p>在本機端啓動 Hexo 的伺服器，就可以看到套用了 <code>Butterfly</code> 主題樣式的網站囉！</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></tbody></table></figure>
+<p><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/butterfly-theme.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/butterfly-theme.png"></a><div class="img-alt is-center"></div></p>
+<p>Butterfly 詳細設定，請參考 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://butterfly.js.org/posts/21cfbf15/">Butterfly 安裝文檔(一) 快速開始</a></p>
+<h1 id="Hexo-常用指令"><a href="#Hexo-常用指令" class="headerlink" title="Hexo 常用指令"></a>Hexo 常用指令</h1><p>這裏列出比較常用的指令，若想瞭解全部，請參考 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-tw/docs/commands">Hexo 官方指令</a></p>
+<h3 id="初始化專案-建立專案資料夾"><a href="#初始化專案-建立專案資料夾" class="headerlink" title="初始化專案 / 建立專案資料夾"></a>初始化專案 / 建立專案資料夾</h3><figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init [資料夾名稱]</span><br></pre></td></tr></tbody></table></figure>
+<p>範例</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand"></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table style="display: block;"><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init my-blog</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="建立一篇新的文章，若標題包括空格，請用引號括起來"><a href="#建立一篇新的文章，若標題包括空格，請用引號括起來" class="headerlink" title="建立一篇新的文章，若標題包括空格，請用引號括起來"></a>建立一篇新的文章，若標題包括空格，請用引號括起來</h3><figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;文章標題&gt;</span><br></pre></td></tr></tbody></table></figure>
+<p>範例</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post "我的第一篇文章 By Hexo"</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="在本機端啓動伺服器，預設是-http-localhost-4000"><a href="#在本機端啓動伺服器，預設是-http-localhost-4000" class="headerlink" title="在本機端啓動伺服器，預設是 http://localhost:4000/"></a>在本機端啓動伺服器，預設是 <code>http://localhost:4000/</code></h3><figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></tbody></table></figure>
+<h1 id="指令新增第一篇文章"><a href="#指令新增第一篇文章" class="headerlink" title="指令新增第一篇文章"></a>指令新增第一篇文章</h1><p>當我們執行以下的指令：</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post "我的第一篇文章 By Hexo"</span><br></pre></td></tr></tbody></table></figure>
+<p>會發現在 <code>source</code> 的 <code>_posts</code> 的資料夾多了一個 <code>我的第一篇文章-By-Hexo.md</code> 的檔案。</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">source</span><br><span class="line">└── _posts</span><br><span class="line">    ├── hello-world.md</span><br><span class="line">    └── 我的第一篇文章-By-Hexo.md</span><br></pre></td></tr></tbody></table></figure>
+<div class="note info simple"><p><code>.md</code> 副檔名代表爲 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://markdown.tw/">markdown</a> 的檔案格式<br>關於更多的 Markdown 使用方法請參考 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://markdown.tw/">https://markdown.tw/</a></p>
+</div>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 我的第一篇文章 By Hexo</span><br><span class="line">date: 2021-03-07 17:15:57</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"># 我的第一篇文章的標題</span><br><span class="line">hihihi ~ 你好～ 😍 我是第一篇文章的內容～</span><br><span class="line">在這裏可以用 `Markdown` 語法撰寫喔～</span><br><span class="line"></span><br><span class="line">```js</span><br><span class="line">console.log('Hello World!');</span><br><span class="line">```</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<p>由上下兩個 <code>---</code> 包夾的區塊爲 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-tw/docs/front-matter">Front-matter</a>，用來<code>敘述文章的屬性</code>。例如 title(標題)、date(建立日期)、tags(標籤)等等。更多可以參考官網的 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-tw/docs/front-matter">Front-matter</a>，而在 Butterfly 的主題也有定義自己的 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://butterfly.js.org/posts/dc584b87/#Front-matter">Front-matter</a>，有興趣的大大可以參考喔。</p>
+<h4 id="我的第一篇文章-By-Hexo-在網站上呈現的結果"><a href="#我的第一篇文章-By-Hexo-在網站上呈現的結果" class="headerlink" title="我的第一篇文章 By Hexo 在網站上呈現的結果"></a><code>我的第一篇文章 By Hexo</code> 在網站上呈現的結果</h4><p><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/first-post.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/first-post.png"></a><div class="img-alt is-center"></div></p>
+<div class="note green icon simple"><i class="note-icon fas fa-question-circle"></i><p>等等！如果我想要<a href="#%E8%A6%81%E6%80%8E%E9%BA%BC%E5%9C%A8%E5%9C%A8%E6%96%87%E7%AB%A0%E4%B8%8A%E6%94%BE%E5%9C%96%E7%89%87%E5%91%A2-%EF%BC%9F">在文章上加上圖片</a>呢 ？</p>
+</div>
+<h1 id="部署-Deploy-設定"><a href="#部署-Deploy-設定" class="headerlink" title="部署 Deploy 設定"></a>部署 Deploy 設定</h1><p>當文章的撰寫告一個段落，就可以發佈到網路上囉！😍<br>Hexo 有很多種部署的做法，這邊挑選個人覺得最簡單容易的 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/">Github</a> 方法囉！</p>
+<p><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-index.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-index.png"></a><div class="img-alt is-center"></div></p>
+<h2 id="Github-Page-準備事項"><a href="#Github-Page-準備事項" class="headerlink" title="Github Page 準備事項"></a>Github Page 準備事項</h2><ul>
+<li><p>申請 Github 帳號</p>
+<ul>
+<li>這邊就不再詳細解釋，請需要的大大參考<a target="_blank" rel="noopener external nofollow noreferrer" href="https://git-scm.com/book/zh-tw/v2/GitHub-%E5%BB%BA%E7%AB%8B%E5%B8%B3%E6%88%B6%E5%8F%8A%E8%A8%AD%E5%AE%9A">這篇</a></li>
+</ul>
+</li>
+<li><p>新增一個<code>public</code> 的 repository，並且命名爲 <code>&lt;github-username&gt;.github.io</code><br>例如：你的 github 使用者帳號爲 <code>abc_xyz</code> 那麼這個 repository 的名稱就會是 <code>abc_xyz.github.io</code><br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-name.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-name.png"></a><div class="img-alt is-center"></div></p>
+</li>
+<li><p>安裝<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/hexojs/hexo-deployer-git">部署外掛</a></p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></tbody></table></figure></li>
+<li><p>複製 github Repository 的連結<br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-link.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-link.png"></a><div class="img-alt is-center"></div></p>
+</li>
+<li><p><code>_config.yml</code> 設定爲以下調整，<a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-tw/docs/one-command-deployment#Git">官網參考</a></p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:abc_xyz/abc_xyz.github.io.git # 貼上剛剛複製的 Github Repository 網址</span><br><span class="line">  branch: master # 預設分支名稱</span><br><span class="line">  message:</span><br></pre></td></tr></tbody></table></figure></li>
+<li><p>執行以下指令將 Hexo 產生的網站內容上傳到 Github 🚀</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></tbody></table></figure></li>
+<li><p>重新整理 Github 的 <code>abc_xyz.github.io</code> Repository，確認是否上傳內容成功<br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/deploy-github-repo-2.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/deploy-github-repo-2.png"></a><div class="img-alt is-center"></div></p>
+</li>
+<li><p>點選 Repository 的 Setting<br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/deploy-github-repo-3.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/deploy-github-repo-3.png"></a><div class="img-alt is-center"></div></p>
+</li>
+<li><p>在 <code>Github Pages</code> 的選單下，切換 Source 到 <code>master</code> 並且 <code>save</code><br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/deploy-github-repo-4.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/deploy-github-repo-4.png"></a><div class="img-alt is-center"></div></p>
+</li>
+<li><p>用瀏覽器在網址輸入上述的網址，就可以看到 Hexo 的網站順利地架在 Github 的 Page 上囉 😍<br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/deploy-result-01.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/deploy-result-01.png"></a><div class="img-alt is-center"></div></p>
+</li>
+</ul>
+<p>其實上述步驟已經足夠讓自己的 Blog <code>免費地</code>架在網路上了 😆，美中不足的就只是網址就會是呈現 <code>&lt;github_username&gt;.github.io</code> 的格式。</p>
+<p>如果你跟我一樣願意花一點點 💰 去買個自己的網域名稱，那就繼續看下去囉 😍</p>
+<hr>
+<h1 id="自訂-Domain-網域"><a href="#自訂-Domain-網域" class="headerlink" title="自訂 Domain 網域"></a>自訂 Domain 網域</h1><div style="font-size: 24px">
+<div class="note danger simple"><p>因爲這個階段關係到需要付款的步驟，以下的教學步驟僅供參考，請需要自己審慎地考慮清楚在行動喔！😀</p>
+</div>
+</div>
+<h2 id="GoDaddy-購買網域"><a href="#GoDaddy-購買網域" class="headerlink" title="GoDaddy 購買網域"></a>GoDaddy 購買網域</h2><p>買網域的管道有很多，只是剛好我是在 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://tw.godaddy.com/">GoDaddy</a> 上面購買的。<br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godaddy-index.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godaddy-index.png"></a><div class="img-alt is-center"></div></p>
+<p>挑一個自己喜歡的網域名稱，這個名字就會是之後這個 Blog 的網址囉</p>
+<div style="font-size: 24px">
+<div class="note danger modern"><p>GoDaddy 的購買網址請依照個人的需求填寫，這邊只是隨便亂打的網域，請勿跟著照打喔 😵</p>
+</div>
+</div>
+<p><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-buy-domain.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-buy-domain.png"></a><div class="img-alt is-center"></div></p>
+<h2 id="GoDaddy-設定-Github-的-IP-轉向設定"><a href="#GoDaddy-設定-Github-的-IP-轉向設定" class="headerlink" title="GoDaddy 設定 Github 的 IP 轉向設定"></a>GoDaddy 設定 Github 的 IP 轉向設定</h2><p>我們購買了自己的網域之後，之後只要任何人在網址上輸入我們購買的網域，這邊以 <code>chan-chan-dev.com</code> 爲例，請求訊息就會打到 GoDaddy 這邊來。</p>
+<p>因爲我們的 Blog 是放在 Github 的網址上，所以我們需要做些設定，讓 GoDaddy 知道要把這個請求<code>轉送</code>到 Github 那邊去，我們來看看怎麼操作吧。</p>
+<p>從 <code>我的產品</code> 的頁面找到剛剛買的網域，這邊以 <code>chan-chan-dev.com</code> 爲例<br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-menu.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-menu.png"></a><div class="img-alt is-center"></div><br>選擇 <code>DNS</code> &gt; <code>管理區域</code><br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-menu-2.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-menu-2.png"></a><div class="img-alt is-center"></div><br>輸入購買的網域後，點擊 <code>搜尋</code><br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-menu-3.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-menu-3.png"></a><div class="img-alt is-center"></div></p>
+<p>點選 <code>新增</code><br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-A-1.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-A-1.png"></a><div class="img-alt is-center"></div></p>
+<p>因爲 Github 的網址 IP 有四組，所以要新增四組<code>指向</code>爲以下內容的記錄（一次新增一組）：</p>
+<ul>
+<li>185.199.108.153</li>
+<li>185.199.109.153</li>
+<li>185.199.110.153</li>
+<li>185.199.111.153</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-A-2.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-A-2.png"></a><div class="img-alt is-center"></div></p>
+<p>完成結果<br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-A-1.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/godday-domain-A-1.png"></a><div class="img-alt is-center"></div></p>
+<p>GoDaddy 的設定這邊就差不多告一段落囉，接下來我們要處理 Github 那邊的設定囉 😆</p>
+<h2 id="Github-Repo-設定-CNAME-到買的網域"><a href="#Github-Repo-設定-CNAME-到買的網域" class="headerlink" title="Github Repo 設定 CNAME 到買的網域"></a>Github Repo 設定 CNAME 到買的網域</h2><p>到 Github Repository Setting &gt; GitHub Pages 的區塊，填寫剛剛所購買的網域，並且點擊 <code>Save</code><br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-custom-domain-1.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-custom-domain-1.png"></a><div class="img-alt is-center"></div><br>在 Github Repository 會新增一個叫做 <code>CNAME</code> 的檔案<br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-custom-domain-2.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-custom-domain-2.png"></a><div class="img-alt is-center"></div></p>
+<p>如果順利的話，也許<code>過一段時間</code>就可以用自己購買的網域看看是否有成功地看到 Hexo 的 Blog 網站囉 😍</p>
+<div class="note warning simple"><p>DNS 設定的時間不等，最常也許需要等候 24 小時，所以無法馬上看到畫面是正常的</p>
+</div>
+<h3 id="Enforce-HTTPS"><a href="#Enforce-HTTPS" class="headerlink" title="Enforce HTTPS"></a>Enforce HTTPS</h3><p>如果已經成功看到自己的網站，以許可以開啓 <code>Https</code> 的設定，使自己的網站更安全一些喔～<br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-custom-domain-3.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/github-repo-custom-domain-3.png"></a><div class="img-alt is-center"></div></p>
+<p>呼，其實還有一些部分沒有 Cover 到，例如在 Hexo 設定 GA 或 Sitemap 的功能，不過也許一開始設定的想要<code>簡單地撰寫部落格</code> 的目標已經達到囉。</p>
+<h1 id="後記更新"><a href="#後記更新" class="headerlink" title="後記更新"></a>後記更新</h1><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://chan-chan-dev.com/">chan-chan-dev.com</a> 在經過幾個月之後有所升級調整囉！</p>
+<p>相關的後續調整記錄在《<a href="/note/Hexo/website-upgrade/4114456147/" title="ChanChanDev 升級記錄！一起用 Github Actions 潮一下吧！">ChanChanDev 升級記錄！一起用 Github Actions 潮一下吧！</a>》囉！</p>
+<p>最後也感謝你的收看啦 😍</p>
+<hr>
+<h1 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h1><h2 id="要怎麼在在文章上放圖片呢-？"><a href="#要怎麼在在文章上放圖片呢-？" class="headerlink" title="要怎麼在在文章上放圖片呢 ？"></a>要怎麼在在文章上放圖片呢 ？</h2><ul>
+<li>在 <code>_config.yml</code> 調整 <code>post_asset_folder</code> 設定爲 <code>true</code></li>
+</ul>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></tbody></table></figure>
+<p>新增一篇文章，這裏以文章名稱爲 <code>abc</code> 爲例：</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post abc</span><br></pre></td></tr></tbody></table></figure>
+<p>在 <code>hexo new post abc</code> Hexo 也會自動新增一個跟<code>文章名稱</code>一樣的 <code>abc</code> 資料夾，裏面可以放置自己想要貼在 <code>abc</code> 這篇文章的圖檔。</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">source</span><br><span class="line">└── _posts</span><br><span class="line">    ├── abc  #abc資料夾</span><br><span class="line">    ├── abc.md  #abc文章</span><br><span class="line">    ├── hello-world.md</span><br><span class="line">    └── 我的第一篇文章-By-Hexo.md</span><br></pre></td></tr></tbody></table></figure>
+<p>假如我們有一張檔名叫做 <code>rat.png</code> 的圖，並且放在 <code>abc</code> 資料夾中<br><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/rat.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/rat.png"></a><div class="img-alt is-center"></div></p>
+<p>我們就可以在 <code>abc.md</code> 直接使用他囉</p>
+<figure class="highlight plain"><div class="highlight-tools "><i class="fas fa-angle-down expand "></i><div class="code-lang">Code</div><div class="copy-notice"></div><i class="fas fa-paste copy-button"></i></div><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: abc</span><br><span class="line">date: 2021-03-07 17:46:52</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line"># 我的老鼠塗鴉 😍</span><br><span class="line">![老鼠好可愛](https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/rat.png)</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<p><a target="_blank" rel="noopener" href="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/apply-img.png" data-fancybox="group" data-caption="" class="fancybox"><img src="https://chanchandev.s3.ap-northeast-2.amazonaws.com/blogs/hexo-introduction/apply-img.png"></a><div class="img-alt is-center"></div></p>
+</article>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/09/03/perspective-%E5%92%8C-preserve-3d/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Perspective 和 Preserve-3d
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2006/11/27/20061127/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">無米粥</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目錄</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%99%E7%AF%87%E6%96%87%E7%AB%A0%E6%98%AF%E5%AF%AB%E7%B5%A6%E8%AA%B0%E7%9C%8B%E7%9A%84%E5%91%A2%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">這篇文章是寫給誰看的呢？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E6%9E%B6%E8%A8%AD-Blog"><span class="nav-number">2.</span> <span class="nav-text">為什麼要架設 Blog</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9E%B6%E8%A8%AD-Blog-%E6%9C%89%E4%BB%80%E9%BA%BC%E5%A5%BD%E8%99%95%E5%91%A2%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">架設 Blog 有什麼好處呢？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%81%B8%E6%93%87-Hexo-%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="nav-number">4.</span> <span class="nav-text">選擇 Hexo 的原因</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E6%95%B4%E7%90%86%EF%BC%9A"><span class="nav-number">4.0.1.</span> <span class="nav-text">需求整理：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E4%BD%BF%E7%94%A8-Hexo-%E5%91%A2%EF%BC%9F"><span class="nav-number">4.0.2.</span> <span class="nav-text">為什麼要使用 Hexo 呢？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D%E6%89%80%E9%9C%80%E5%B7%A5%E5%85%B7"><span class="nav-number">5.</span> <span class="nav-text">安裝所需工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NodeJs"><span class="nav-number">5.1.</span> <span class="nav-text">NodeJs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-number">5.2.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Visual-Studio-Code-vs-code"><span class="nav-number">5.3.</span> <span class="nav-text">Visual Studio Code (vs code)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-Hexo"><span class="nav-number">5.4.</span> <span class="nav-text">安裝 Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B-Hexo-%E5%B0%88%E6%A1%88"><span class="nav-number">5.5.</span> <span class="nav-text">建立 Hexo 專案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B-Hexo-%E5%B0%88%E6%A1%88-1"><span class="nav-number">5.5.1.</span> <span class="nav-text">建立 Hexo 專案</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-%E8%A8%AD%E5%AE%9A"><span class="nav-number">6.</span> <span class="nav-text">Hexo 設定</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%81%B8%E6%93%87%E4%B8%BB%E9%A1%8C%E6%A8%A3%E5%BC%8F"><span class="nav-number">7.</span> <span class="nav-text">選擇主題樣式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Butterfly"><span class="nav-number">7.0.1.</span> <span class="nav-text">Butterfly</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="nav-number">8.</span> <span class="nav-text">Hexo 常用指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B0%88%E6%A1%88-%E5%BB%BA%E7%AB%8B%E5%B0%88%E6%A1%88%E8%B3%87%E6%96%99%E5%A4%BE"><span class="nav-number">8.0.1.</span> <span class="nav-text">初始化專案 &#x2F; 建立專案資料夾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84%E6%96%87%E7%AB%A0%EF%BC%8C%E8%8B%A5%E6%A8%99%E9%A1%8C%E5%8C%85%E6%8B%AC%E7%A9%BA%E6%A0%BC%EF%BC%8C%E8%AB%8B%E7%94%A8%E5%BC%95%E8%99%9F%E6%8B%AC%E8%B5%B7%E4%BE%86"><span class="nav-number">8.0.2.</span> <span class="nav-text">建立一篇新的文章，若標題包括空格，請用引號括起來</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E6%9C%AC%E6%A9%9F%E7%AB%AF%E5%95%93%E5%8B%95%E4%BC%BA%E6%9C%8D%E5%99%A8%EF%BC%8C%E9%A0%90%E8%A8%AD%E6%98%AF-http-localhost-4000"><span class="nav-number">8.0.3.</span> <span class="nav-text">在本機端啓動伺服器，預設是 http:&#x2F;&#x2F;localhost:4000&#x2F;</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E6%96%B0%E5%A2%9E%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0"><span class="nav-number">9.</span> <span class="nav-text">指令新增第一篇文章</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0-By-Hexo-%E5%9C%A8%E7%B6%B2%E7%AB%99%E4%B8%8A%E5%91%88%E7%8F%BE%E7%9A%84%E7%B5%90%E6%9E%9C"><span class="nav-number">9.0.0.1.</span> <span class="nav-text">我的第一篇文章 By Hexo 在網站上呈現的結果</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2-Deploy-%E8%A8%AD%E5%AE%9A"><span class="nav-number">10.</span> <span class="nav-text">部署 Deploy 設定</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Github-Page-%E6%BA%96%E5%82%99%E4%BA%8B%E9%A0%85"><span class="nav-number">10.1.</span> <span class="nav-text">Github Page 準備事項</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E8%A8%82-Domain-%E7%B6%B2%E5%9F%9F"><span class="nav-number">11.</span> <span class="nav-text">自訂 Domain 網域</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GoDaddy-%E8%B3%BC%E8%B2%B7%E7%B6%B2%E5%9F%9F"><span class="nav-number">11.1.</span> <span class="nav-text">GoDaddy 購買網域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GoDaddy-%E8%A8%AD%E5%AE%9A-Github-%E7%9A%84-IP-%E8%BD%89%E5%90%91%E8%A8%AD%E5%AE%9A"><span class="nav-number">11.2.</span> <span class="nav-text">GoDaddy 設定 Github 的 IP 轉向設定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github-Repo-%E8%A8%AD%E5%AE%9A-CNAME-%E5%88%B0%E8%B2%B7%E7%9A%84%E7%B6%B2%E5%9F%9F"><span class="nav-number">11.3.</span> <span class="nav-text">Github Repo 設定 CNAME 到買的網域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Enforce-HTTPS"><span class="nav-number">11.3.1.</span> <span class="nav-text">Enforce HTTPS</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98%E6%9B%B4%E6%96%B0"><span class="nav-number">12.</span> <span class="nav-text">後記更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FAQ"><span class="nav-number">13.</span> <span class="nav-text">FAQ</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%81%E6%80%8E%E9%BA%BC%E5%9C%A8%E5%9C%A8%E6%96%87%E7%AB%A0%E4%B8%8A%E6%94%BE%E5%9C%96%E7%89%87%E5%91%A2-%EF%BC%9F"><span class="nav-number">13.1.</span> <span class="nav-text">要怎麼在在文章上放圖片呢 ？</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2022 Alan Lin&#39;s Blog All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
