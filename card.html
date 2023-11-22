@@ -194,36 +194,36 @@ body {
   align-items: center;
   gap: 1em;
   margin: 0;
-  background-color: #4d79f6;
+  background-color: #1a2a24;
    background-image: repeating-linear-gradient(
       120deg,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5) 1px,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2) 1px,
       transparent 1px,
       transparent 60px
     ),
     repeating-linear-gradient(
       60deg,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5) 1px,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2) 1px,
       transparent 1px,
       transparent 60px
     ),
     linear-gradient(
       60deg,
-      rgba(0255, 255, 255, 0.1) 25%,
+      rgba(0255, 255, 255, 0.05) 25%,
       transparent 25%,
       transparent 75%,
-      rgba(255, 255, 255, 0.1) 75%,
-      rgba(255, 255, 255, 0.1)
+      rgba(255, 255, 255, 0.05) 75%,
+      rgba(255, 255, 255, 0.05)
     ),
     linear-gradient(
       120deg,
-      rgba(255, 255, 255, 0.1) 25%,
+      rgba(255, 255, 255, 0.05) 25%,
       transparent 25%,
       transparent 75%,
-      rgba(255, 255, 255, 0.1) 75%,
-      rgba(255, 255, 255, 0.1)
+      rgba(255, 255, 255, 0.05) 75%,
+      rgba(255, 255, 255, 0.05)
     );
   background-size: 70px 120px;
 }
@@ -232,14 +232,15 @@ label .flip-card {
   position: relative;
   height: 350px;
   width: calc(350px / 1.4);
-  
   margin: calc(40vmin / 10);
-  border-radius: calc(40vmin / 20);
+  border-radius: 20px;
   box-shadow: 0 calc(40vmin / 40) calc(40vmin / 10) 0 rgba(0, 0, 0, 0.6);
  background-color: #1d1e22;
   overflow: hidden;
   transition: transform 200ms linear, box-shadow 100ms linear;
   transform: rotateY(0deg);
+  border-bottom: solid 1px black;
+  border-left: solid 1px rgba(0,0,0,0.2)
 }
 input:checked + label .flip-card {
   transform: rotateY(180deg);
