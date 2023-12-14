@@ -7592,7 +7592,7 @@ function qc(n) {
 function Dc(n, e, t) {
     let r, s, i, l, a, o, f, c, _, S, w, k, $, g, W, R, T, v, A, N = "",
         M = !0;
-    const D = async () => await (await fetch("/data/cards.json")).json(), K = async () => D().then(b => {
+    const D = async () => await (await fetch("https://alan0623.github.io/card/data/cards.json")).json(), K = async () => D().then(b => {
         window.cards = b, t(0, r = b[0]), t(1, s = b.slice(1, 4)), t(2, i = [...b.slice(4, 7), ...b.slice(70, 76)]), t(3, l = b.slice(7, 13)), t(4, a = b.slice(13, 16)), t(5, o = b.slice(76, 85)), t(6, f = b.slice(16, 19)), t(7, c = b.slice(19, 22)), t(8, _ = b.slice(22, 25)), t(9, S = b.slice(25, 28)), t(10, w = b.slice(28, 34)), t(11, k = b.slice(37, 40)), t(12, $ = b.slice(40, 43)), t(13, g = b.slice(43, 46)), t(14, W = b.slice(46, 52)), t(15, R = b.slice(52, 58)), t(16, T = b.slice(58, 64)), t(17, v = b.slice(64, 70)), t(18, A = b.slice(85, 91)), t(20, M = !1)
     });
     pl(() => {
