@@ -54,6 +54,45 @@
 		<script type="module" crossorigin src="assets/index.js"></script>
 		<link rel="stylesheet" href="assets/index.css">
     <style>
+html {
+  background: #1d1e22;
+}
+body {
+  background-attachment: fixed;
+  height: auto;
+  background-color: #1a2a24;
+   background-image: repeating-linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      60deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    linear-gradient(
+      60deg,
+      rgba(0255, 255, 255, 0.05) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.05) 75%,
+      rgba(255, 255, 255, 0.05)
+    ),
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.05) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.05) 75%,
+      rgba(255, 255, 255, 0.05)
+    );
+  background-size: 70px 120px;
+}
       .svelte-1leehxl,
       .search-area,
       header{
@@ -63,6 +102,12 @@
       h2{
         margin-top: 0;
       }
+      h3,
+      p{
+        opacity: 0!important;
+        display: none!important;
+      }
+
     </style>
 	</head>
 	<body>
