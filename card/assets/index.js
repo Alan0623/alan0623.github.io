@@ -3961,7 +3961,7 @@ function Tu(n, e, t) {
     let b = !1,
         Q = A,
         V = "",
-        U = v.startsWith("http") ? "" : "https://images.pokemontcg.io/",
+        U = v.startsWith("http") ? "" : "https://alan0623.github.io/card/images/",
         X, J, ie = !1,
         pe = !1,
         Se = !0,
@@ -4321,7 +4321,7 @@ function Ru(n, e, t) {
     _ && (c = c + " Reverse Holo"), T && (ee(c) && c.startsWith("Trainer Gallery") && (c = c.replace(/Trainer Gallery\s*/, "")), ee(c) && c.includes("Rare Holo V") && ee(o) && o.includes("VMAX") && (c = "Rare Holo VMAX"), ee(c) && c.includes("Rare Holo V") && ee(o) && o.includes("VSTAR") && (c = "Rare Holo VSTAR")), A && (r === "swshp-SWSH076" || r === "swshp-SWSH077" ? c = "Rare Secret" : ee(o) && o.includes("V") ? c = "Rare Holo V" : ee(o) && o.includes("V-UNION") ? c = "Rare Holo VUNION" : ee(o) && o.includes("VMAX") ? c = "Rare Holo VMAX" : ee(o) && o.includes("VSTAR") ? c = "Rare Holo VSTAR" : ee(o) && o.includes("Radiant") && (c = "Radiant Rare"));
 
     function N() {
-        return ee(S) ? S : ee(l) && ee(i) ? `https://images.pokemontcg.io/${l.toLowerCase()}/${i}_hires.png` : ""
+        return ee(S) ? S : ee(l) && ee(i) ? `https://alan0623.github.io/card/images/${l.toLowerCase()}/${i}_hires.png` : ""
     }
 
     function M(b, Q = "masks") {
@@ -4576,7 +4576,7 @@ function Mu(n) {
             name: "Computer Error",
             set: "basep",
             number: "16",
-            img: "https://images.pokemontcg.io/basep/16_hires.png",
+            img: "https://alan0623.github.io/card/images/basep/16_hires.png",
             supertype: "Trainer",
             subtypes: "Rocket's Secret Machine",
             rarity: "Promo",
