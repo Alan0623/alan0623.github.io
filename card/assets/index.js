@@ -3904,13 +3904,13 @@ function Au(n) {
     let e, t, r, s, i, l, a, o, f, c, _, S, w, k, $, g, W, R, T;
     return {
         c() {
-            e = O("div"), t = O("div"), r = O("button"), s = O("img"), l = E(), a = O("div"), o = O("img"), _ = E(), S = O("div"), w = E(), k = O("div"), H(s, "class", "card__back"), en(s.src, i = n[19]) || H(s, "src", i), H(s, "alt", "The back of a Pok Card, a Pokeball in the center with Pok logo above and below"), H(s, "loading", "lazy"), H(s, "width", "660"), H(s, "height", "921"), en(o.src, f = n[10]) || H(o, "src", f), H(o, "alt", c = "Front design of the " + n[5] + " Pok Card, with the stats and info around the edge"), H(o, "loading", "lazy"), H(o, "width", "660"), H(o, "height", "921"), H(S, "class", "card__shine"), H(k, "class", "card__glare"), H(a, "class", "card__front"), H(a, "style", $ = n[28] + n[17]), H(r, "class", "card__rotator"), H(r, "aria-label", g = "Expand the Pok Card; " + n[5] + "."), H(r, "tabindex", "0"), H(t, "class", "card__translater"), H(e, "class", W = "card " + n[1] + " / interactive /"), H(e, "data-number", n[0]), H(e, "data-set", n[6]), H(e, "data-subtypes", n[2]), H(e, "data-supertype", n[3]), H(e, "data-rarity", n[4]), H(e, "data-trainer-gallery", n[9]), H(e, "style", n[18]), Ee(e, "active", n[11]), Ee(e, "interacting", n[12]), Ee(e, "loading", n[13]), Ee(e, "masked", !!n[7])
+            e = O("div"), t = O("div"), r = O("button"), s = O("img"), l = E(), a = O("div"), o = O("img"), _ = E(), S = O("div"), w = E(), k = O("div"), H(s, "class", "card__back"), en(s.src, i = n[19]) || H(s, "src", i), H(s, "alt", "The back of a Reading club Magic Card, a Pokeball in the center with Pok logo above and below"), H(s, "loading", "lazy"), H(s, "width", "660"), H(s, "height", "921"), en(o.src, f = n[10]) || H(o, "src", f), H(o, "alt", c = "Front design of the " + n[5] + " Reading club Magic Card, with the stats and info around the edge"), H(o, "loading", "lazy"), H(o, "width", "660"), H(o, "height", "921"), H(S, "class", "card__shine"), H(k, "class", "card__glare"), H(a, "class", "card__front"), H(a, "style", $ = n[28] + n[17]), H(r, "class", "card__rotator"), H(r, "aria-label", g = "Expand the Reading club Magic Card; " + n[5] + "."), H(r, "tabindex", "0"), H(t, "class", "card__translater"), H(e, "class", W = "card " + n[1] + " / interactive /"), H(e, "data-number", n[0]), H(e, "data-set", n[6]), H(e, "data-subtypes", n[2]), H(e, "data-supertype", n[3]), H(e, "data-rarity", n[4]), H(e, "data-trainer-gallery", n[9]), H(e, "style", n[18]), Ee(e, "active", n[11]), Ee(e, "interacting", n[12]), Ee(e, "loading", n[13]), Ee(e, "masked", !!n[7])
         },
         m(v, A) {
             m(v, e, A), Y(e, t), Y(t, r), Y(r, s), Y(r, l), Y(r, a), Y(a, o), Y(a, _), Y(a, S), Y(a, w), Y(a, k), n[43](e), R || (T = [et(Cu, "scroll", n[27]), et(o, "load", n[29]), et(r, "click", n[25]), et(r, "pointermove", n[23]), et(r, "mouseout", n[24]), et(r, "blur", n[26])], R = !0)
         },
         p(v, A) {
-            A[0] & 1024 && !en(o.src, f = v[10]) && H(o, "src", f), A[0] & 32 && c !== (c = "Front design of the " + v[5] + " Pok Card, with the stats and info around the edge") && H(o, "alt", c), A[0] & 131072 && $ !== ($ = v[28] + v[17]) && H(a, "style", $), A[0] & 32 && g !== (g = "Expand the Pok Card; " + v[5] + ".") && H(r, "aria-label", g), A[0] & 2 && W !== (W = "card " + v[1] + " / interactive /") && H(e, "class", W), A[0] & 1 && H(e, "data-number", v[0]), A[0] & 64 && H(e, "data-set", v[6]), A[0] & 4 && H(e, "data-subtypes", v[2]), A[0] & 8 && H(e, "data-supertype", v[3]), A[0] & 16 && H(e, "data-rarity", v[4]), A[0] & 512 && H(e, "data-trainer-gallery", v[9]), A[0] & 262144 && H(e, "style", v[18]), A[0] & 2050 && Ee(e, "active", v[11]), A[0] & 4098 && Ee(e, "interacting", v[12]), A[0] & 8194 && Ee(e, "loading", v[13]), A[0] & 130 && Ee(e, "masked", !!v[7])
+            A[0] & 1024 && !en(o.src, f = v[10]) && H(o, "src", f), A[0] & 32 && c !== (c = "Front design of the " + v[5] + " Reading club Magic Card, with the stats and info around the edge") && H(o, "alt", c), A[0] & 131072 && $ !== ($ = v[28] + v[17]) && H(a, "style", $), A[0] & 32 && g !== (g = "Expand the Reading club Magic Card; " + v[5] + ".") && H(r, "aria-label", g), A[0] & 2 && W !== (W = "card " + v[1] + " / interactive /") && H(e, "class", W), A[0] & 1 && H(e, "data-number", v[0]), A[0] & 64 && H(e, "data-set", v[6]), A[0] & 4 && H(e, "data-subtypes", v[2]), A[0] & 8 && H(e, "data-supertype", v[3]), A[0] & 16 && H(e, "data-rarity", v[4]), A[0] & 512 && H(e, "data-trainer-gallery", v[9]), A[0] & 262144 && H(e, "style", v[18]), A[0] & 2050 && Ee(e, "active", v[11]), A[0] & 4098 && Ee(e, "interacting", v[12]), A[0] & 8194 && Ee(e, "loading", v[13]), A[0] & 130 && Ee(e, "masked", !!v[7])
         },
         i: C,
         o: C,
@@ -4059,7 +4059,7 @@ function Tu(n, e, t) {
         De = P => {
             i && i === X ? tn(jt, i = void 0, i) : (tn(jt, i = X, i), Pu(), gtag("event", "select_item", {
                 item_list_id: "cards_list",
-                item_list_name: "Pok Cards",
+                item_list_name: "Reading club Magic Cards",
                 items: [{
                     item_id: S,
                     item_name: w,
@@ -4313,7 +4313,7 @@ function Ru(n, e, t) {
     } = e, {
         showcase: g = !1
     } = e;
-    const W = "https://poke-holo.b-cdn.net",
+    const W = "https://alan0623.github.io/card/images",
         R = ee(i) && i.toLowerCase().startsWith("sv"),
         T = ee(i) && !!i.match(/^[tg]g/i),
         v = ee(r) && ku.includes(r) && !R && !T,
@@ -4642,7 +4642,7 @@ function Lu(n, e, t) {
         o = !1;
     po.configure({
         apiKey: {
-            VITE_CDN: "https://poke-holo.b-cdn.net",
+            VITE_CDN: "https://alan0623.github.io/card/images",
             VITE_GA: "G-3SKXCY5997",
             BASE_URL: "/",
             MODE: "production",
@@ -4999,54 +4999,58 @@ function Fo(n) {
         }
     }), {
         c() {
-            e = O("h2"), e.innerHTML = '<a href="#\u2693-common">小天使</a>', t = E(), r = O("p"), r.innerHTML = `All cards get a 3d rotation with CSS based on the cursor position.<br/> The default basic
+            e = O("h2"), e.innerHTML = '<a href="#-common">奇幻風格</a>', t = E(), r = O("p"), r.innerHTML = `All cards get a 3d rotation with CSS based on the cursor position.<br/> The default basic
 			non-holo cards simply apply a <mark>flare/glare effect</mark> to the card which follows the mouse.`, s = E(), I(i.$$.fragment), l = E(), 
 
         
-            a = O("h2"), a.innerHTML = '<a href="#\u2693-reverse">奇幻風格</a>', o = E(), f = O("p"), f.innerHTML = `Reverse holo cards come in <mark>many shapes and sizes</mark> (trainer, stage1, and different energy types). <br/> Therefore
+            a = O("h2"), a.innerHTML = '<a href="#-reverse">BBB</a>', o = E(), f = O("p"), f.innerHTML = `Reverse holo cards come in <mark>many shapes and sizes</mark> (trainer, stage1, and different energy types). <br/> Therefore
 			there are a few examples here to show the different variations. The <mark>background uses a foil and a mask layer</mark>
-			along with a glare. I also <mark>clip the glare</mark> into the image window to treat the image and the holofoil differently.`, c = E(), I(_.$$.fragment), S = E(), w = O("h2"), w.innerHTML = '<a href="#\u2693-holo">卡通類型</a>', k = E(), $ = O("p"), $.innerHTML = `Holo cards have an additional <mark>vertical beam holo effect</mark>. <br/> This uses a
+			along with a glare. I also <mark>clip the glare</mark> into the image window to treat the image and the holofoil differently.`, c = E(), I(_.$$.fragment), S = E(), 
+            
+            w = O("h2"), w.innerHTML = '<a href="#-holo">CCC</a>', k = E(), $ = O("p"), $.innerHTML = `Holo cards have an additional <mark>vertical beam holo effect</mark>. <br/> This uses a
 			combintation of <mark>repeating gradients and filters</mark>, with <mark>clip-path</mark> to mask
 			the holo areas for each stage. To get the holo effect to change while rotating the card I set the
 			background-position of each gradient layer based on cursor.`, g = E(), I(W.$$.fragment), R = E(), 
             
-            T = O("h2"), T.innerHTML = '<a href="#\u2693-galaxy">Galaxy/Cosmos Holofoil</a>', v = E(), A = O("p"), A.innerHTML = `Similar to the Holofoil, but this uses a special image <mark>background of a galaxy effect</mark>
-			with a <mark>gradient rainbow set to color-dodge &amp; color-burn</mark> on top.`, N = E(), M = O("h3"), M.textContent = "An instant classic for any PTCG fan!", D = E(), I(K.$$.fragment), j = E(), b = O("h2"), b.innerHTML = '<a href="#\u2693-amazing">可愛動物</a>', Q = E(), V = O("p"), V.innerHTML = `Amazing Rare cards have a <mark>very unique shiny foil</mark> that extends past the frame and is much shinier than
-			a regular holo effect, and textured. We achieve this by using a mask and applying a glitter effect with a lighten filter.`, U = E(), I(X.$$.fragment), J = E(), ie = O("h2"), ie.innerHTML = '<a href="#\u2693-radiant">Radiant Holofoil</a>', pe = E(), Se = O("p"), Se.innerHTML = `The newest holofoil added to the series! <br/> The radiant effect proved
+            T = O("h2"), T.innerHTML = '<a href="#-galaxy">童趣類型</a>', v = E(), A = O("p"), A.innerHTML = `Similar to the Holofoil, but this uses a special image <mark>background of a galaxy effect</mark>
+			with a <mark>gradient rainbow set to color-dodge &amp; color-burn</mark> on top.`, N = E(), M = O("h3"), M.textContent = "An instant classic for any PTCG fan!", D = E(), I(K.$$.fragment), j = E(), b = O("h2"), b.innerHTML = '<a href="#-amazing">可愛動物</a>', Q = E(), V = O("p"), V.innerHTML = `Amazing Rare cards have a <mark>very unique shiny foil</mark> that extends past the frame and is much shinier than
+			a regular holo effect, and textured. We achieve this by using a mask and applying a glitter effect with a lighten filter.`, U = E(), I(X.$$.fragment), J = E(), ie = O("h2"), ie.innerHTML = '<a href="#-radiant">Radiant Holofoil</a>', pe = E(), Se = O("p"), Se.innerHTML = `The newest holofoil added to the series! <br/> The radiant effect proved
 			<mark>very difficult to emulate</mark>
 			without crazy math, so I settled with a <mark>criss-cross linear gradient pattern</mark> that moves
 			across the card.`, lt = E(), I(be.$$.fragment), _e = E(), 
             
-            Te = O("h2"), Te.innerHTML = '<a href="#\u2693-trainer-gallery-holo">Trainer Gallery Holofoil</a>', te = E(), re = O("p"), re.innerHTML = `The effect for Trainer Gallery holofoils gives it a <mark>kind of metallic effect with iridescent shine</mark>. This is achieved with a <mark>large color dodge linear gradient</mark>, and a
-			<mark>hard-light radial gradient</mark> on top, at the cursor position, to give the shimmer.`, ne = E(), I(we.$$.fragment), $e = E(), ve = O("h2"), ve.innerHTML = '<a href="#\u2693-v">Pok V</a>', Be = E(), Fe = O("p"), Fe.innerHTML = `V cards have a <mark>diagonal holographic effect</mark> which that appears to travel in opposite
+            Te = O("h2"), Te.innerHTML = '<a href="#-trainer-gallery-holo">Trainer Gallery Holofoil</a>', te = E(), re = O("p"), re.innerHTML = `The effect for Trainer Gallery holofoils gives it a <mark>kind of metallic effect with iridescent shine</mark>. This is achieved with a <mark>large color dodge linear gradient</mark>, and a
+			<mark>hard-light radial gradient</mark> on top, at the cursor position, to give the shimmer.`, ne = E(), I(we.$$.fragment), $e = E(), 
+            
+            ve = O("h2"), ve.innerHTML = '<a href="#-v">Pok V</a>', Be = E(), Fe = O("p"), Fe.innerHTML = `V cards have a <mark>diagonal holographic effect</mark> which that appears to travel in opposite
 			directions when you tilt the card into the light.`, it = E(), qe = O("p"), qe.innerHTML = `This effect is achieved with <mark>multiple background gradients</mark> and I change the background
 			positions based on the cursor x/y. The gradients are set to color-dodge, and there&#39;s a subtle svg
 			noise effect.`, at = E(), I(Oe.$$.fragment), We = E(), 
             
-            De = O("h2"), De.innerHTML = '<a href="#\u2693-v-full-art">Pok V <sup>(Full Art)</sup></a>', Tt = E(), ft = O("p"), ft.innerHTML = `Similar to the Pok V effect, Full-Art cards <mark>use diagonal gradients</mark>, but they
+            De = O("h2"), De.innerHTML = '<a href="#-v-full-art">Pok V <sup>(Full Art)</sup></a>', Tt = E(), ft = O("p"), ft.innerHTML = `Similar to the Pok V effect, Full-Art cards <mark>use diagonal gradients</mark>, but they
 			have <mark>additional texture</mark> when looked at from certain angles. This is achieved with
 			an <mark>additional background image with an exclusion filter</mark>. The effect is also more
 			vibrant which adds to the metallic look.`, ut = E(), ct = O("p"), ct.textContent = `The texture effect is not identical to reality as the real cards each have a unique pattern that
-			follows the art.`, $t = E(), I(Re.$$.fragment), pt = E(), Ue = O("h2"), Ue.innerHTML = '<a href="#\u2693-v-alternate-art">Pok V <sup>(Alternate Art)</sup></a>', Ot = E(), je = O("p"), je.innerHTML = "Alternate Art Pok V cards have <mark>practically the same holo effect as the Ultra Rare (Full Art) cards</mark>. The only difference is the pattern texture.", Rt = E(), ht = O("p"), ht.textContent = "The effect looks somewhat different though due to the type of artwork.", P = E(), I(se.$$.fragment), Z = E(), x = O("h2"), x.innerHTML = '<a href="#\u2693-v-max">VMax</a>', fe = E(), Ve = O("p"), Ve.innerHTML = `The gradient effect of Pok VMax is more subtle, using a <mark>larger background gradient</mark>
-			which moves more slowly. But the <mark>texture effect is more pronounced</mark>.`, $r = E(), I(ze.$$.fragment), Or = E(), Nt = O("h2"), Nt.innerHTML = '<a href="#\u2693-v-max-alternate">VMax <sup>(Alternate/Rainbow)</sup></a>', Rr = E(), nr = O("p"), nr.innerHTML = `There&#39;s some VMax cards that show a <mark>full, or alternate artwork</mark>. These are
+			follows the art.`, $t = E(), I(Re.$$.fragment), pt = E(), Ue = O("h2"), Ue.innerHTML = '<a href="#-v-alternate-art">Pok V <sup>(Alternate Art)</sup></a>', Ot = E(), je = O("p"), je.innerHTML = "Alternate Art Pok V cards have <mark>practically the same holo effect as the Ultra Rare (Full Art) cards</mark>. The only difference is the pattern texture.", Rt = E(), ht = O("p"), ht.textContent = "The effect looks somewhat different though due to the type of artwork.", P = E(), I(se.$$.fragment), Z = E(), x = O("h2"), x.innerHTML = '<a href="#-v-max">VMax</a>', fe = E(), Ve = O("p"), Ve.innerHTML = `The gradient effect of Pok VMax is more subtle, using a <mark>larger background gradient</mark>
+			which moves more slowly. But the <mark>texture effect is more pronounced</mark>.`, $r = E(), I(ze.$$.fragment), Or = E(), Nt = O("h2"), Nt.innerHTML = '<a href="#-v-max-alternate">VMax <sup>(Alternate/Rainbow)</sup></a>', Rr = E(), nr = O("p"), nr.innerHTML = `There&#39;s some VMax cards that show a <mark>full, or alternate artwork</mark>. These are
 			<mark>classed as &quot;rainbow rare&quot;</mark>
 			and have a similar effect to the rainbow cards. It&#39;s a really
 			<mark>vibrant and glittery overlay</mark>.`, Nr = E(), sr = O("p"), sr.innerHTML = `This is achieved with a <mark>background image of glitter/sparkles</mark>, and a texture pattern
-			background image, sandwiching the usual linear gradients.`, Mr = E(), I(Je.$$.fragment), Gr = E(), Mt = O("h2"), Mt.innerHTML = '<a href="#\u2693-v-star">VStar</a>', Lr = E(), or = O("p"), or.innerHTML = `Again back to the <mark>diagonal gradients overlaying a texture</mark>, VStar are quite
+			background image, sandwiching the usual linear gradients.`, Mr = E(), I(Je.$$.fragment), Gr = E(), Mt = O("h2"), Mt.innerHTML = '<a href="#-v-star">VStar</a>', Lr = E(), or = O("p"), or.innerHTML = `Again back to the <mark>diagonal gradients overlaying a texture</mark>, VStar are quite
 			<mark>similar to the Ultra Rare</mark>
 			(Full/Alt) cards. The cards are generally <mark>brighter with a pastel hue</mark>, though, which
-			makes the gradient and texture more subtle.`, Ir = E(), I(Ke.$$.fragment), Br = E(), Gt = O("h2"), Gt.innerHTML = '<a href="#\u2693-trainer-full-art">Trainer Holo <sup>(Full Art / Trainer Gallery)</sup></a>', Fr = E(), lr = O("p"), lr.innerHTML = `Again back to the <mark>diagonal gradients overlaying a texture</mark>, VStar are quite
+			makes the gradient and texture more subtle.`, Ir = E(), I(Ke.$$.fragment), Br = E(), Gt = O("h2"), Gt.innerHTML = '<a href="#-trainer-full-art">Trainer Holo <sup>(Full Art / Trainer Gallery)</sup></a>', Fr = E(), lr = O("p"), lr.innerHTML = `Again back to the <mark>diagonal gradients overlaying a texture</mark>, VStar are quite
 			<mark>similar to the Ultra Rare</mark>
 			(Full/Alt) cards. The cards are generally <mark>brighter with a pastel hue</mark>, though, which
-			makes the gradient and texture more subtle.`, qr = E(), I(Xe.$$.fragment), Dr = E(), Lt = O("h2"), Lt.innerHTML = '<a href="#\u2693-rainbow-rare">Rainbow Rare <sup>(VMax, VStar)</sup></a>', Ur = E(), ir = O("p"), ir.innerHTML = `The Rainbow Rare is a <mark>super glittery effect on top of pastel gradients</mark>. This is
+			makes the gradient and texture more subtle.`, qr = E(), I(Xe.$$.fragment), Dr = E(), Lt = O("h2"), Lt.innerHTML = '<a href="#-rainbow-rare">Rainbow Rare <sup>(VMax, VStar)</sup></a>', Ur = E(), ir = O("p"), ir.innerHTML = `The Rainbow Rare is a <mark>super glittery effect on top of pastel gradients</mark>. This is
 			achieved with a background image of glitter/sparkles and a
-			<mark>color-burn/hard-light background blend</mark> for some pastel gradients.`, jr = E(), I(Qe.$$.fragment), Vr = E(), It = O("h2"), It.innerHTML = '<a href="#\u2693-secret-rare">Secret Rare <sup>(Gold)</sup></a>', zr = E(), ar = O("p"), ar.innerHTML = `<mark>GOLD!</mark> Here we apply two glitter layers on top of each other with a overlay effect and
+			<mark>color-burn/hard-light background blend</mark> for some pastel gradients.`, jr = E(), I(Qe.$$.fragment), Vr = E(), It = O("h2"), It.innerHTML = '<a href="#-secret-rare">Secret Rare <sup>(Gold)</sup></a>', zr = E(), ar = O("p"), ar.innerHTML = `<mark>GOLD!</mark> Here we apply two glitter layers on top of each other with a overlay effect and
 		<mark>slide the two layers in opposite directions</mark>. We also <mark>mask the foil image</mark> with a gadient so
-		that foil and glitter layers are mutually exclusive. The resulting effect is a shimmering glitter layer!`, Jr = E(), I(Ye.$$.fragment), Kr = E(), Bt = O("h2"), Bt.innerHTML = '<a href="#\u2693-trainer-gallery-v">Trainer Gallery <sup>(V / VMax)</sup></a>', Xr = E(), fr = O("p"), fr.textContent = `The V and VMax cards in the Trainer Gallery are generally quite similar to the normal V and VMax
-			cards, so here I've just tweaked the values a little and added a different background texture.`, Qr = E(), I(Ze.$$.fragment), Yr = E(), Ft = O("h2"), Ft.innerHTML = '<a href="#\u2693-shiny-vault">Shiny Vault <sup>(Basic / Stage 1 / V / VMax)</sup></a>', Zr = E(), ur = O("p"), ur.textContent = `Shiny Vault cards have quite a unique effect in whereby the foil background is a shiny silver
+		that foil and glitter layers are mutually exclusive. The resulting effect is a shimmering glitter layer!`, Jr = E(), I(Ye.$$.fragment), Kr = E(), Bt = O("h2"), Bt.innerHTML = '<a href="#-trainer-gallery-v">Trainer Gallery <sup>(V / VMax)</sup></a>', Xr = E(), fr = O("p"), fr.textContent = `The V and VMax cards in the Trainer Gallery are generally quite similar to the normal V and VMax
+			cards, so here I've just tweaked the values a little and added a different background texture.`, Qr = E(), I(Ze.$$.fragment), Yr = E(), Ft = O("h2"), Ft.innerHTML = '<a href="#-shiny-vault">Shiny Vault <sup>(Basic / Stage 1 / V / VMax)</sup></a>', Zr = E(), ur = O("p"), ur.textContent = `Shiny Vault cards have quite a unique effect in whereby the foil background is a shiny silver
 			color. To achieve this we apply the foil image with some radial gradients to darken the foil
 			over the background. This creates a slightly silver effect on top of the white card background.
-			This effect works best in Firefox.`, xr = E(), I(xe.$$.fragment), H(e, "id", "\u2693-common"), H(a, "id", "\u2693-reverse"), H(w, "id", "\u2693-holo"), H(T, "id", "\u2693-galaxy"), H(b, "id", "\u2693-amazing"), H(ie, "id", "\u2693-radiant"), H(Te, "id", "\u2693-trainer-gallery-holo"), H(ve, "id", "\u2693-v"), H(De, "id", "\u2693-v-full-art"), H(Ue, "id", "\u2693-v-alternate-art"), H(x, "id", "\u2693-v-max"), H(Nt, "id", "\u2693-v-max-alternate"), H(Mt, "id", "\u2693-v-star"), H(Gt, "id", "\u2693-trainer-full-art"), H(Lt, "id", "\u2693-rainbow-rare"), H(It, "id", "\u2693-secret-rare"), H(Bt, "id", "\u2693-trainer-gallery-v"), H(Ft, "id", "\u2693-shiny-vault")
+			This effect works best in Firefox.`, xr = E(), I(xe.$$.fragment), H(e, "id", "-common"), H(a, "id", "-reverse"), H(w, "id", "-holo"), H(T, "id", "-galaxy"), H(b, "id", "-amazing"), H(ie, "id", "-radiant"), H(Te, "id", "-trainer-gallery-holo"), H(ve, "id", "-v"), H(De, "id", "-v-full-art"), H(Ue, "id", "-v-alternate-art"), H(x, "id", "-v-max"), H(Nt, "id", "-v-max-alternate"), H(Mt, "id", "-v-star"), H(Gt, "id", "-trainer-full-art"), H(Lt, "id", "-rainbow-rare"), H(It, "id", "-secret-rare"), H(Bt, "id", "-trainer-gallery-v"), H(Ft, "id", "-shiny-vault")
         },
         m(u, p) {
             m(u, e, p), m(u, t, p), m(u, r, p), m(u, s, p), G(i, u, p), m(u, l, p), m(u, a, p), m(u, o, p), m(u, f, p), m(u, c, p), G(_, u, p), m(u, S, p), m(u, w, p), m(u, k, p), m(u, $, p), m(u, g, p), G(W, u, p), m(u, R, p), m(u, T, p), m(u, v, p), m(u, A, p), m(u, N, p), m(u, M, p), m(u, D, p), G(K, u, p), m(u, j, p), m(u, b, p), m(u, Q, p), m(u, V, p), m(u, U, p), G(X, u, p), m(u, J, p), m(u, ie, p), m(u, pe, p), m(u, Se, p), m(u, lt, p), G(be, u, p), m(u, _e, p), m(u, Te, p), m(u, te, p), m(u, re, p), m(u, ne, p), G(we, u, p), m(u, $e, p), m(u, ve, p), m(u, Be, p), m(u, Fe, p), m(u, it, p), m(u, qe, p), m(u, at, p), G(Oe, u, p), m(u, We, p), m(u, De, p), m(u, Tt, p), m(u, ft, p), m(u, ut, p), m(u, ct, p), m(u, $t, p), G(Re, u, p), m(u, pt, p), m(u, Ue, p), m(u, Ot, p), m(u, je, p), m(u, Rt, p), m(u, ht, p), m(u, P, p), G(se, u, p), m(u, Z, p), m(u, x, p), m(u, fe, p), m(u, Ve, p), m(u, $r, p), G(ze, u, p), m(u, Or, p), m(u, Nt, p), m(u, Rr, p), m(u, nr, p), m(u, Nr, p), m(u, sr, p), m(u, Mr, p), G(Je, u, p), m(u, Gr, p), m(u, Mt, p), m(u, Lr, p), m(u, or, p), m(u, Ir, p), G(Ke, u, p), m(u, Br, p), m(u, Gt, p), m(u, Fr, p), m(u, lr, p), m(u, qr, p), G(Xe, u, p), m(u, Dr, p), m(u, Lt, p), m(u, Ur, p), m(u, ir, p), m(u, jr, p), G(Qe, u, p), m(u, Vr, p), m(u, It, p), m(u, zr, p), m(u, ar, p), m(u, Jr, p), G(Ye, u, p), m(u, Kr, p), m(u, Bt, p), m(u, Xr, p), m(u, fr, p), m(u, Qr, p), G(Ze, u, p), m(u, Yr, p), m(u, Ft, p), m(u, Zr, p), m(u, ur, p), m(u, xr, p), G(xe, u, p), cr = !0
@@ -7551,9 +7555,9 @@ function qc(n) {
     let j = n[19].length < 3 && Fo(n);
     return {
         c() {
-            e = O("main"), t = O("header"), r = O("h1"), r.innerHTML = "Pok Cards <sup>V2</sup>", s = E(), i = O("p"), i.innerHTML = `By <a href="https://twitter.com/simeydotme"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg> @simeydotme</a> |
+            e = O("main"), t = O("header"), r = O("h1"), r.innerHTML = "Reading club Magic Cards <sup>V2</sup>", s = E(), i = O("p"), i.innerHTML = `By <a href="https://twitter.com/simeydotme"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg> @simeydotme</a> |
 			<em><a href="https://github.com/simeydotme/pok-cards-css"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg> Simon Goellner</a></em>`, l = E(), a = O("section"), a.innerHTML = `<p>A collection of <mark>advanced CSS</mark> styles to create
-				<mark>realistic-looking effects</mark> for the faces of Pok cards. 
+				<mark>realistic-looking effects</mark> for the faces of Reading club Magic Cards. 
 				The cards use <mark>3d transforms</mark>, <mark>filters</mark>, <mark>blend modes</mark>,
 				<mark>css gradients</mark> and interactions to provide a unique experience when taking a closer look!</p>`, o = E(), f = O("div"), _.c(), S = E(), w = O("section"), w.innerHTML = `<h2>Click on a Card to take a Closer look!</h2> 
 
@@ -7562,7 +7566,7 @@ function qc(n) {
 			<p class="small">I&#39;m using SvelteJS to handle interactivity and state; <strong>assigning values to css custom properties</strong> (variables) which 
 					in-turn drive the effects and 3d transforms. 
 					<br/> 
-					<a href="https://github.com/simeydotme/pok-cards-css">Source code is in the repository</a>.</p>`, k = E(), I($.$$.fragment), W = E(), j && j.c(), R = E(), T = O("div"), T.innerHTML = '<a href="#\u2693-top" class="svelte-71964w">Back to Top</a>', H(r, "id", "\u2693-top"), H(i, "class", "author"), H(a, "class", "intro"), H(a, "id", "\u2693-intro"), H(f, "class", "showcase"), H(w, "class", "info"), H(T, "class", "back-to-top svelte-71964w")
+					<a href="https://github.com/simeydotme/pok-cards-css">Source code is in the repository</a>.</p>`, k = E(), I($.$$.fragment), W = E(), j && j.c(), R = E(), T = O("div"), T.innerHTML = '<a href="#-common" class="svelte-71964w" title="回最上面">回最上面</a>', H(r, "id", "-top"), H(i, "class", "author"), H(a, "class", "intro"), H(a, "id", "-intro"), H(f, "class", "showcase"), H(w, "class", "info"), H(T, "class", "back-to-top svelte-71964w")
         },
         m(b, Q) {
             m(b, e, Q), Y(e, t), Y(t, r), Y(t, s), Y(t, i), Y(t, l), Y(t, a), Y(t, o), Y(t, f), N[c].m(f, null), Y(t, S), Y(t, w), Y(e, k), G($, e, null), Y(e, W), j && j.m(e, null), m(b, R, Q), m(b, T, Q), v = !0
@@ -7592,7 +7596,7 @@ function qc(n) {
 function Dc(n, e, t) {
     let r, s, i, l, a, o, f, c, _, S, w, k, $, g, W, R, T, v, A, N = "",
         M = !0;
-    const D = async () => await (await fetch("https://alan0623.github.io/card/data/cards.json")).json(), K = async () => D().then(b => {
+    const D = async () => await (await fetch("/data/cards.json")).json(), K = async () => D().then(b => {
         window.cards = b, t(0, r = b[0]), t(1, s = b.slice(1, 4)), t(2, i = [...b.slice(4, 7), ...b.slice(70, 76)]), t(3, l = b.slice(7, 13)), t(4, a = b.slice(13, 16)), t(5, o = b.slice(76, 85)), t(6, f = b.slice(16, 19)), t(7, c = b.slice(19, 22)), t(8, _ = b.slice(22, 25)), t(9, S = b.slice(25, 28)), t(10, w = b.slice(28, 34)), t(11, k = b.slice(37, 40)), t(12, $ = b.slice(40, 43)), t(13, g = b.slice(43, 46)), t(14, W = b.slice(46, 52)), t(15, R = b.slice(52, 58)), t(16, T = b.slice(58, 64)), t(17, v = b.slice(64, 70)), t(18, A = b.slice(85, 91)), t(20, M = !1)
     });
     pl(() => {
