@@ -5019,7 +5019,7 @@ function Fo(n) {
 			without crazy math, so I settled with a <mark>criss-cross linear gradient pattern</mark> that moves
 			across the card.`, lt = E(), I(be.$$.fragment), _e = E(), 
             
-            Te = O("h2"), Te.innerHTML = '<a href="#-trainer-gallery-holo">Trainer Gallery Holofoil</a>', te = E(), re = O("p"), re.innerHTML = `The effect for Trainer Gallery holofoils gives it a <mark>kind of metallic effect with iridescent shine</mark>. This is achieved with a <mark>large color dodge linear gradient</mark>, and a
+            Te = O("h2"), Te.innerHTML = '<a href="#-trainer-gallery-holo">其他風格</a>', te = E(), re = O("p"), re.innerHTML = `The effect for Trainer Gallery holofoils gives it a <mark>kind of metallic effect with iridescent shine</mark>. This is achieved with a <mark>large color dodge linear gradient</mark>, and a
 			<mark>hard-light radial gradient</mark> on top, at the cursor position, to give the shimmer.`, ne = E(), I(we.$$.fragment), $e = E(), 
             
             ve = O("h2"), ve.innerHTML = '<a href="#-v">Pok V</a>', Be = E(), Fe = O("p"), Fe.innerHTML = `V cards have a <mark>diagonal holographic effect</mark> which that appears to travel in opposite
