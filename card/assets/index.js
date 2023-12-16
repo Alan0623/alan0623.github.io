@@ -5019,7 +5019,7 @@ function Fo(n) {
 			without crazy math, so I settled with a <mark>criss-cross linear gradient pattern</mark> that moves
 			across the card.`, lt = E(), I(be.$$.fragment), _e = E(), 
             
-            Te = O("h2"), Te.innerHTML = '<a href="#-trainer-gallery-holo">其他風格</a>', te = E(), re = O("p"), re.innerHTML = `The effect for Trainer Gallery holofoils gives it a <mark>kind of metallic effect with iridescent shine</mark>. This is achieved with a <mark>large color dodge linear gradient</mark>, and a
+            Te = O("h2"), Te.innerHTML = '<a href="#-trainer-gallery-holo">人性議題</a>', te = E(), re = O("p"), re.innerHTML = `The effect for Trainer Gallery holofoils gives it a <mark>kind of metallic effect with iridescent shine</mark>. This is achieved with a <mark>large color dodge linear gradient</mark>, and a
 			<mark>hard-light radial gradient</mark> on top, at the cursor position, to give the shimmer.`, ne = E(), I(we.$$.fragment), $e = E(), 
             
             ve = O("h2"), ve.innerHTML = '<a href="#-v">Pok V</a>', Be = E(), Fe = O("p"), Fe.innerHTML = `V cards have a <mark>diagonal holographic effect</mark> which that appears to travel in opposite
@@ -5031,7 +5031,7 @@ function Fo(n) {
 			have <mark>additional texture</mark> when looked at from certain angles. This is achieved with
 			an <mark>additional background image with an exclusion filter</mark>. The effect is also more
 			vibrant which adds to the metallic look.`, ut = E(), ct = O("p"), ct.textContent = `The texture effect is not identical to reality as the real cards each have a unique pattern that
-			follows the art.`, $t = E(), I(Re.$$.fragment), pt = E(), Ue = O("h2"), Ue.innerHTML = '<a href="#-v-alternate-art">Pok V <sup>(Alternate Art)</sup></a>', Ot = E(), je = O("p"), je.innerHTML = "Alternate Art Pok V cards have <mark>practically the same holo effect as the Ultra Rare (Full Art) cards</mark>. The only difference is the pattern texture.", Rt = E(), ht = O("p"), ht.textContent = "The effect looks somewhat different though due to the type of artwork.", P = E(), I(se.$$.fragment), Z = E(), x = O("h2"), x.innerHTML = '<a href="#-v-max">VMax</a>', fe = E(), Ve = O("p"), Ve.innerHTML = `The gradient effect of Pok VMax is more subtle, using a <mark>larger background gradient</mark>
+			follows the art.`, $t = E(), I(Re.$$.fragment), pt = E(), Ue = O("h2"), Ue.innerHTML = '<a href="#-v-alternate-art">其他風格</a>', Ot = E(), je = O("p"), je.innerHTML = "Alternate Art Pok V cards have <mark>practically the same holo effect as the Ultra Rare (Full Art) cards</mark>. The only difference is the pattern texture.", Rt = E(), ht = O("p"), ht.textContent = "The effect looks somewhat different though due to the type of artwork.", P = E(), I(se.$$.fragment), Z = E(), x = O("h2"), x.innerHTML = '<a href="#-v-max">VMax</a>', fe = E(), Ve = O("p"), Ve.innerHTML = `The gradient effect of Pok VMax is more subtle, using a <mark>larger background gradient</mark>
 			which moves more slowly. But the <mark>texture effect is more pronounced</mark>.`, $r = E(), I(ze.$$.fragment), Or = E(), Nt = O("h2"), Nt.innerHTML = '<a href="#-v-max-alternate">VMax <sup>(Alternate/Rainbow)</sup></a>', Rr = E(), nr = O("p"), nr.innerHTML = `There&#39;s some VMax cards that show a <mark>full, or alternate artwork</mark>. These are
 			<mark>classed as &quot;rainbow rare&quot;</mark>
 			and have a similar effect to the rainbow cards. It&#39;s a really
@@ -7596,7 +7596,7 @@ function qc(n) {
 function Dc(n, e, t) {
     let r, s, i, l, a, o, f, c, _, S, w, k, $, g, W, R, T, v, A, N = "",
         M = !0;
-    const D = async () => await (await fetch("https://alan0623.github.io/card/data/cards.json")).json(), K = async () => D().then(b => {
+    const D = async () => await (await fetch("/data/cards.json")).json(), K = async () => D().then(b => {
         window.cards = b, t(0, r = b[0]), t(1, s = b.slice(1, 4)), t(2, i = [...b.slice(4, 7), ...b.slice(70, 76)]), t(3, l = b.slice(7, 13)), t(4, a = b.slice(13, 16)), t(5, o = b.slice(76, 85)), t(6, f = b.slice(16, 19)), t(7, c = b.slice(19, 22)), t(8, _ = b.slice(22, 25)), t(9, S = b.slice(25, 28)), t(10, w = b.slice(28, 34)), t(11, k = b.slice(37, 40)), t(12, $ = b.slice(40, 43)), t(13, g = b.slice(43, 46)), t(14, W = b.slice(46, 52)), t(15, R = b.slice(52, 58)), t(16, T = b.slice(58, 64)), t(17, v = b.slice(64, 70)), t(18, A = b.slice(85, 91)), t(20, M = !1)
     });
     pl(() => {
