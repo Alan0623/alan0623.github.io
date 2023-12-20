@@ -93,7 +93,19 @@ body {
   padding: 0 16px;
   line-height: 80px;
 }
-
+.menu li.home {
+  padding: 0;
+}
+.menu li.home a{
+  font: 0/0 a;
+  display: block;
+  background-image: url(https://alan0623.github.io/card/images/home.png);
+  width: 32px;
+  height: 32px;
+  margin-top: 22px;
+  padding: 0;
+  background-size: contain;
+}
 .menu li span {
   transform: rotateY(50deg);
   opacity: 0;
@@ -677,4 +689,100 @@ input {
   background: #fff;
   transform: translateX(-50%);
   border-radius: 50% 50% 50% 50%/30% 30% 70% 70%;
+}
+
+.illustration_img,
+.title_img{
+  width: 100%;
+}
+article{
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.125em;
+  line-height: 1.6em;
+  padding-bottom: 24px;
+}
+article p{
+  margin: 0;
+}
+article h1{
+  margin: 0;
+  font:0/0 a;
+  opacity: 0;
+}
+article ul{
+  padding: 0 24px;
+  margin-top: 8px;
+}
+article li{
+  margin: 4px 0;
+}
+article .header{
+  padding-top: 48px;
+  opacity: 1!important;
+  display: block!important;
+  margin: 0 auto;
+  max-width: 600px;
+}
+article .header .title,
+article .header .illustration{
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+article .header .title{
+  width: 80%;
+  max-width: 400px;
+}
+article .header .illustration{
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 42%;
+  width: calc(100% - 40px);
+}
+article section{
+  background-color: rgba(0,0,0,0.8);
+  padding: 28px 32px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+article section::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+article section .block{
+  width: 50%;
+  float: left;
+}
+article section .block h2{
+  margin-bottom: 0;
+  font-size: 1.4em;
+}
+article section .block a{
+  background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 14px 22px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-left: 24px;
+}
+article section .block a:hover{
+  background-color: orange;
+}
+@media screen and (max-width: 620px){
+  article section .block{
+    width: 100%;
+    float: left;
+    clear: both;
+  }
+  article{
+    padding-bottom: 0;
+  }
+}
+div[data-set*=pgo],
+div[data-set*=swsh]{
+  display: none;
 }
