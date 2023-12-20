@@ -8,10 +8,6 @@
   <meta name="author" content="Alan Lin">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>HPX119 讀書會魔法使</title>
-  <meta name="description" content="HPX119 讀書會魔法使" />
-
-  <link rel="canonical" href="index.html" />
-  <link rel="icon" href="favicon.png" />
   <meta name="thumbnail" content="thumb.png" />
 
   <meta property="og:url" content="https://alan0623.github.io/card/index.html" />
@@ -25,10 +21,7 @@
   <meta name="twitter:image" content="thumb.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- styles -->
-  <link rel="stylesheet" href="css/global.css" />
-
-  <script type="module" crossorigin src="assets/index.js"></script>
-  <link rel="stylesheet" href="assets/index.css">
+  <link rel="stylesheet" href="css/global.css"/>
 </head>
 
 <body>
@@ -40,6 +33,25 @@
     </ul>
     <button class="main"></button>
   </div>
+  <input type="checkbox" id="flop" checked />
+  <label for="flop">
+    <div class="flip-card">
+      <div class="cat">
+        <div class="ear ear_left"></div>
+        <div class="ear ear_right"></div>
+        <div class="face">
+          <div class="eye eye_left">
+            <div class="eye_pupil"></div>
+          </div>
+          <div class="eye eye_right">
+            <div class="eye_pupil"></div>
+          </div>
+          <div class="muzzle"></div>
+        </div>
+      </div>
+      <div class="flip-random"></div>
+    </div>
+  </label>
   <script>
     var input = document.querySelector('.menu');
     var button = document.querySelector('button');
