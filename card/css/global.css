@@ -90,7 +90,7 @@ body {
 .menu li {
   color: white;
   list-style: none;
-  padding: 0 16px;
+  padding: 0 12px;
   line-height: 80px;
 }
 .menu li.home {
@@ -170,7 +170,7 @@ button.main::after {
 }
 
 .menu.active {
-  width: 480px;
+  width: 490px;
   transition: all 1.3s cubic-bezier(0.01, 0.41, 0.63, 1.2);
 }
 
@@ -226,7 +226,10 @@ h2#-galaxy,
 h2#-common {
   /* display: block; */
 }
-
+h2#-common {
+  display: block;
+  font: 0/0 a;
+}
 #app h3,
 #app p {
   opacity: 0 !important;
