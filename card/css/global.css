@@ -3,12 +3,14 @@
   --primary: hsl(187, 85%, 60%);
   --link-hover: hsl(207, 100%, 94%)
 }
-
 * {
   box-sizing: border-box;
 }
 .logo{
   opacity: 0;
+  width: 1px!important;
+  height: 1px!important;
+  overflow: hidden;
 }
 body,
 html {
@@ -57,8 +59,27 @@ body {
       rgba(255, 255, 255, 0.05));
   background-size: 70px 120px;
 }
-
-
+/*大廳---------------------------------------------------------*/
+.door{
+  display: block;
+  width: 160px;
+  height: 32px;
+  padding-top: 280px;
+  background-image: url(https://alan0623.github.io/card/images/door.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: white;
+  text-align: center;
+  font-size: 1.25em;
+  position: absolute;
+  right: calc(50vw - 80px);
+  top: calc(50vh - 180px);
+  z-index: 1;
+}
+#canvas3d{
+  position: relative;
+  z-index: 2;
+}
 /*主選單---------------------------------------------------------*/
 .menu {
   transform: scale(0.7);
@@ -96,7 +117,7 @@ body {
   line-height: 80px;
 }
 .menu li.home {
-  padding: 0;
+  padding: 0 6px;
 }
 .menu li.home a{
   font: 0/0 a;
