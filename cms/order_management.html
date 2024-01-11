@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+	<title>ARK管理中心  |  訂單管理</title>
+	<!--IE integration -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"><!--強迫 IE 在顯示網頁時使用最新的引擎版本-->
+	<!--viewport integration -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Telephone -->
+	<meta name="format-detection" content="telephone=no" />
+	<!--Google font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/global.css" type="text/css">
+	<link rel="stylesheet" href="css/page.css" type="text/css">
+</head><!--/head-->
+<body class="no_js">
+	<div class="wrapper">
+		<header id="header">
+			<nav class="header_menu">
+				<div class="header_menu_logo">
+					<a href="lobby.html" title="回首頁">
+						<h1>ARK  |  La Solution Parfait</h1>
+					</a>
+				</div>
+				<ul class="header_menu_ul">
+					<li><a class="announcement" href="news.html" title="訊息公告">訊息公告</a></li>
+					<li class="is-active"><a class="order_management" href="order_management.html" title="訂單管理">訂單管理</a></li>
+					<li><a class="info_customer" href="info_customer.html" title="客戶資料">客戶資料</a></li>
+					<li><a class="product_management" href="product_management.html" title="商品管理">商品管理</a></li>
+				</ul>
+				<ul class="header_menu_ul">
+					<li><a class="send_sms" href="send_sms.html" title="發送簡訊">發送簡訊</a></li>
+					<li><a class="send_email" href="send_email.html" title="發送電子郵件">發送電子郵件</a></li>
+					<li><a class="coupon" href="coupon.html" title="折扣券">折扣券</a></li>
+				</ul>
+				<ul class="header_menu_ul">
+					<li><a class="info_staff" href="info_staff.html" title="員工資料">員工資料</a></li>
+					<li><a class="info_dealer" href="info_dealer.html" title="經銷商資料">經銷商資料</a></li>
+					<li><a class="info_partner" href="info_partner.html" title="合作夥伴資料">合作夥伴資料</a></li>
+				</ul>
+			</nav>
+		</header><!--header以上主選單區-->
+		<main id="main">
+			<section class="main_header">
+				<div class="bread_crumbs">
+					<ul>
+						<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
+						<li>訂單管理</li>
+					</ul>
+				</div>
+				<div class="personal">
+					<a href="#">
+						<div class="personal_img">
+							<img src="./images/personal_img.jpg" alt="">
+						</div>
+						<div class="personal_name">陸人甲</div>
+					</a>
+					<div class="personal_functions">
+						<ul>
+							<li><a href="info_personal.html" title="個人資料">個人資料</a></li>
+							<li><a href="#" title="登出">登出</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="main_content">
+				<div class="main_content_title">
+					<h2 class="order_management">訂單管理</h2>
+					<div class="main_content_title_input">
+						<ul>
+							<li class="input-orderNo">
+								<form>                   
+									<label for="orderNo"  class="hide">訂單編號</label>
+									<input type="text" id="orderNo" name="orderNo" placeholder="請輸入訂單編號" title="請輸入訂單編號">
+									<label for="orderNo_submit" class="hide">送出訂單編號查詢</label>
+									<input type="submit" id="orderNo_submit" name="orderNo_submit" value="送出查詢" title="送出訂單編號查詢" >
+								</form>
+							</li>
+							<li class="input-date">
+								<form>         
+									<label class="hide" for="from">從</label>
+									<input type="text" id="from" placeholder="開始日期" name="from">
+									<label for="to">～</label>
+									<input type="text" id="datepick" placeholder="結束日期"  name="to">          
+									<!-- <label for="datepicker"  class="hide">日期區間</label>
+									<input type="text" id="datepicker" name="datepicker" placeholder="YYYY/MM/DD ~ YYYY/MM/DD" title="請輸入日期區間"> -->
+									<label for="datepicker_submit" class="hide">送出日期區間查詢</label>
+									<input type="submit" id="datepicker_submit" name="datepicker_submit" value="送出查詢" title="送出日期區間查詢" >
+								</form>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="main_content_block">
+					<div class="abgne_tab">
+						<ul class="tabs">
+								<li><a href="#tab1">全部</a></li>  <!-- href="#tab1"  抓 <div id="tab1" -->
+								<li><a href="#tab2">待付款</a></li>
+								<li><a href="#tab1">待出貨</a></li>
+								<li><a href="#tab2">運送中</a></li>
+								<li><a href="#tab1">已完成</a></li>
+								<li><a href="#tab2">已取消</a></li>
+								<li><a href="#tab1">退貨</a></li>
+						</ul>
+		 
+						<div class="tab_container">
+								<div id="tab1" class="tab_content">
+										<ul class="main_content_orderTilte">
+											<li>購物清單</li>
+											<li>總金額</li>
+											<li>處理狀態</li>
+											<li>運送方式</li>
+											<li>聯絡電話</li>
+											<li>收件地址</li>
+											<li>動作</li>
+										</ul>
+
+										<div class="main_content_orderInfo">
+											<div class="orderInfo_title">
+												<ul class="orderInfo_title_img">
+													<li><span class="img"><img src="./images/personal_img.jpg" alt=""></span></li>
+													<li>陸人甲</li>
+													<li>11dqhiu1@wdnwodoo.com.tw</li>
+												</ul>
+												
+												<ul class="orderInfo_title_date">
+													<li class="order_date">訂單建立日期：2020/10/06 16:53</li>
+													<li class="order_no">訂單編號：201019Q8JPCS6Q</li>
+												</ul>
+											</div>
+											
+											<ul class="orderInfo_content">
+												<li class="orderInfo_product">
+													<ol>
+														<li class="product_img">
+															<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+														</li>
+														<li class="product_name">
+															<span class="name">極光膠囊</span>
+															<span class="info">30顆極光盒</span>
+														</li>
+														<li class="product_quantity">1</li>
+													</ol>
+													<ol><!-- 產生第二組 -->
+														<li class="product_img">
+															<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+														</li>
+														<li class="product_name">
+															<span class="name">極光膠囊</span>
+															<span class="info">30顆極光盒</span>
+														</li>
+														<li class="product_quantity">1</li>
+													</ol>
+
+													<ol><!-- 產生第3組 -->
+														<li class="product_img">
+															<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+														</li>
+														<li class="product_name">
+															<span class="name">極光膠囊</span>
+															<span class="info">30顆極光盒</span>
+														</li>
+														<li class="product_quantity">1</li>
+													</ol>
+												</li>
+												<li class="orderInfo_price">
+													<ol>
+														<li class="price"><span>US$</span>5,500</li> <!-- 幣別 有3種 NT$ US$ €-->
+														<li class="coupon"><span class="coupon_title">折扣碼</span></li>
+														<li class="payment"><span class="credit">信用卡</span></li>
+													</ol>
+												</li>
+												<li><span class="wait">待出貨</li><!-- 只有wait 待出貨 是紅色 -->
+												<li>宅配到府</li>
+												<li>0910123456</li>
+												<li>100台北市中正區中正里重慶南路一段1巷2弄122號</li>
+												<li class="orderInfo_product_functions">
+													<ol class="functions">
+														<li><a class="order_look" href="order_details.html" title="查閱">查閱</a></li>
+													</ol>
+												</li>
+											</ul>
+										</div><!-- main_content_orderInfo  為一筆資料 -->
+
+
+										<div class="main_content_orderInfo">
+											<div class="orderInfo_title">
+												<ul class="orderInfo_title_img">
+													<li><span class="img"><img src="./images/personal_img.jpg" alt=""></span></li>
+													<li>陸人甲</li>
+													<li>11dqhiu1@wdnwodoo.com.tw</li>
+												</ul>
+												
+												<ul class="orderInfo_title_date">
+													<li class="order_date">訂單建立日期：2020/10/06 16:53</li>
+													<li class="order_no">訂單編號：201019Q8JPCS6Q</li>
+												</ul>
+											</div>
+											
+											<ul class="orderInfo_content">
+												<li class="orderInfo_product">
+													<ol>
+														<li class="product_img">
+															<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+														</li>
+														<li class="product_name">
+															<span class="name">極光膠囊</span>
+															<span class="info">30顆極光盒</span>
+														</li>
+														<li class="product_quantity">1</li>
+													</ol>
+												</li>
+												<li class="orderInfo_price">
+													<ol>
+														<li class="price"><span>NT$</span>5,500</li>
+														<li class="coupon"><span class="coupon_title">折扣碼</span></li>
+														<li class="payment"><span class="credit">信用卡</span></li>
+													</ol>
+												</li>
+												<li><span class="done">已完成</li>
+												<li>宅配到府</li>
+												<li>0910123456</li>
+												<li>100台北市中正區中正里重慶南路一段1巷2弄122號</li>
+												<li class="orderInfo_product_functions">
+													<ol class="functions">
+														<li><a class="order_look" href="order_details.html" title="查閱">查閱</a></li>
+													</ol>
+												</li>
+											</ul>
+										</div><!-- main_content_orderInfo  為一筆資料 -->
+
+
+										<div class="main_content_pageno">
+											<ul>
+												<li class="prev"><a href="#" title="上一頁">上一頁</a></li>
+												<li class="is-active"><a href="#" title="第1頁">1</a></li>
+												<li><a href="#" title="第2頁">2</a></li>
+												<li><a href="#" title="第3頁">3</a></li>
+												<li><a href="#" title="第4頁">5</a></li>
+												<li><a>...</a></li>
+												<li><a href="#" title="第10頁">10</a></li>
+												<li class="next"><a href="#" title="下一頁">下一頁</a></li>
+											</ul>
+											<ul>
+												<li><a href="#" title="第10頁">10</a></li> <!-- 最後一夜 -->
+											</ul>
+										</div>
+								</div>
+								<div id="tab2" class="tab_content">
+
+									<ul class="main_content_orderTilte">
+										<li>購物清單</li>
+										<li>總金額</li>
+										<li>處理狀態</li>
+										<li>運送方式</li>
+										<li>聯絡電話</li>
+										<li>收件地址</li>
+										<li>動作</li>
+									</ul>
+
+									<div class="main_content_orderInfo">
+										<div class="orderInfo_title">
+											<ul class="orderInfo_title_img">
+												<li><span class="img"><img src="./images/personal_img.jpg" alt=""></span></li>
+												<li>陸人甲</li>
+												<li>11dqhiu1@wdnwodoo.com.tw</li>
+											</ul>
+											
+											<ul class="orderInfo_title_date">
+												<li class="order_date">訂單建立日期：2020/10/06 16:53</li>
+												<li class="order_no">訂單編號：201019Q8JPCS6Q</li>
+											</ul>
+										</div>
+										
+										<ul class="orderInfo_content">
+											<li class="orderInfo_product">
+												<ol>
+													<li class="product_img">
+														<span class="img"><img src="./images/product_img.jpg" alt=""></span>
+													</li>
+													<li class="product_name">
+														<span class="name">極光膠囊</span>
+														<span class="info">30顆極光盒</span>
+													</li>
+													<li class="product_quantity">1</li>
+												</ol>
+											</li>
+											<li class="orderInfo_price">
+												<ol>
+													<li class="price"><span>€</span>5,500</li>
+													<li class="coupon"><span class="coupon_title">折扣碼</span></li>
+													<li class="payment"><span class="credit">信用卡</span></li>
+												</ol>
+											</li>
+											<li><span class="done">待付款</li>
+											<li>宅配到府</li>
+											<li>0910123456</li>
+											<li>100台北市中正區中正里重慶南路一段1巷2弄122號</li>
+											<li class="orderInfo_product_functions">
+												<ol class="functions">
+													<li><a class="order_look" href="order_details.html" title="查閱">查閱</a></li>
+												</ol>
+											</li>
+										</ul>
+									</div><!-- main_content_orderInfo  為一筆資料 -->
+
+								</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+		</main>
+		<footer>
+			<ul>
+				<li>© 2020 LA SOLUTION PARFAIT</li>
+				<li>Version: 1.0</li>
+			</ul>
+		</footer>
+	</div>
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.slider.js"></script>
+    <script src="js/jquery.lightbox.js"></script>
+	<script src='js/effect.js'></script>
+	
+</body>
+</html>

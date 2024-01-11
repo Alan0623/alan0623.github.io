@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+	<title>ARK管理中心</title>
+	<!--IE integration -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"><!--強迫 IE 在顯示網頁時使用最新的引擎版本-->
+	<!--viewport integration -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Telephone -->
+	<meta name="format-detection" content="telephone=no" />
+	<!--Google font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/global.css" type="text/css">
+	<link rel="stylesheet" href="css/index.css" type="text/css">
+</head><!--/head-->
+<body class="no_js">
+	<div class="wrapper">
+		<div class="main_content_title_input">
+			<form>
+				<ul>
+					<li class="logo">
+						<img src="./images/ark_logo_horizontal.png" alt="ARK管理中心">
+					</li>
+					<li class="input-account">
+										
+							<label for="account"  class="hide">使用者帳號</label>
+							<input type="email" id="account" name="account" placeholder="請輸入使用者帳號" title="請輸入使用者帳號">
+							<span class="error hide">
+								使用者帳號輸入錯誤
+							</span>
+					
+					</li>
+					<li class="input-password">
+								
+							<label for="password"  class="hide">使用者密碼</label>
+							<input type="password" id="password" name="password" placeholder="請輸入使用者密碼" title="請輸入使用者密碼">
+							<span class="error hide">
+								使用者密碼輸入錯誤
+							</span>
+					</li>
+					<li class="input-checkbox">
+
+							
+							<label class="control control--checkbox">
+								<input type="checkbox">
+								<div class="control__indicator"></div>
+							</label>
+							<label class="title">點選完成真人驗證</label>
+					</li>
+					<li class="input-send" >
+						<button class="forget" href="forget_password.html" title="忘記密碼">
+						<span>忘記密碼</span>	
+						</button>
+						<button class="login" href="lobby.html" title="登入">
+						<span>登入</span>
+						</button>
+					</li>
+				</ul>
+			</form>
+		</div>
+	</div>
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.slider.js"></script>
+    <script src="js/jquery.lightbox.js"></script>
+	<script src='js/effect.js'></script>	
+</body>
+</html>

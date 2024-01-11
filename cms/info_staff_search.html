@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+	<title>ARK管理中心  |  員工資料</title>
+	<!--IE integration -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"><!--強迫 IE 在顯示網頁時使用最新的引擎版本-->
+	<!--viewport integration -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Telephone -->
+	<meta name="format-detection" content="telephone=no" />
+	<!--Google font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/global.css" type="text/css">
+	<link rel="stylesheet" href="css/page.css" type="text/css">
+</head><!--/head-->
+<body class="no_js">
+	<div class="wrapper">
+		<header id="header">
+			<nav class="header_menu">
+				<div class="header_menu_logo">
+					<a href="lobby.html" title="回首頁">
+						<h1>ARK  |  La Solution Parfait</h1>
+					</a>
+				</div>
+				<ul class="header_menu_ul">
+					<li><a class="announcement" href="news.html" title="訊息公告">訊息公告</a></li>
+					<li><a class="order_management" href="order_management.html" title="訂單管理">訂單管理</a></li>
+					<li><a class="info_customer" href="info_customer.html" title="客戶資料">客戶資料</a></li>
+					<li><a class="product_management" href="product_management.html" title="商品管理">商品管理</a></li>
+				</ul>
+				<ul class="header_menu_ul">
+					<li><a class="send_sms" href="send_sms.html" title="發送簡訊">發送簡訊</a></li>
+					<li><a class="send_email" href="send_email.html" title="發送電子郵件">發送電子郵件</a></li>
+					<li><a class="coupon" href="coupon.html" title="折扣券">折扣券</a></li>
+				</ul>
+				<ul class="header_menu_ul">
+					<li class="is-active"><a class="info_staff" href="info_staff.html" title="員工資料">員工資料</a></li>
+					<li><a class="info_dealer" href="info_dealer.html" title="經銷商資料">經銷商資料</a></li>
+					<li><a class="info_partner" href="info_partner.html" title="合作夥伴資料">合作夥伴資料</a></li>
+				</ul>
+			</nav>
+		</header><!--header以上主選單區-->
+		<main id="main">
+			<section class="main_header">
+				<div class="bread_crumbs">
+					<ul>
+						<li><a href="lobby.html" title="回首頁">ARK管理中心</a></li>
+						<li>員工資料</li>
+					</ul>
+				</div>
+				<div class="personal">
+					<a href="#">
+						<div class="personal_img">
+							<img src="./images/personal_img.jpg" alt="">
+						</div>
+						<div class="personal_name">陸人甲</div>
+					</a>
+					<div class="personal_functions">
+						<ul>
+							<li><a href="info_personal.html" title="個人資料">個人資料</a></li>
+							<li><a href="#" title="登出">登出</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="main_content">
+				<div class="main_content_title big">
+					<h2 class="info_staff">員工資料 搜尋結果</h2>
+					<div class="main_content_title_input">
+						<ul>
+							<li class="input-add">
+								<a href="info_staff_content_add.html" title="新增員工資料">新增員工資料</a>
+							</li>
+							<li class="input-customer">
+								<form>                   
+									<label for="customer"  class="hide">員工姓名搜尋</label>
+									<input type="text" id="customer" name="customer" placeholder="請輸入員工姓名" title="請輸入員工姓名">
+									<label for="customer_submit" class="hide">送出員工姓名查詢</label>
+									<input type="submit" id="customer_submit" name="customer_submit" value="送出查詢" title="送出員工姓名查詢" >
+								</form>
+							</li>
+							<li class="input-email">
+								<form>                   
+									<label for="email"  class="hide">請輸入 E-mail / 帳號搜尋</label>
+									<input type="email" id="email" name="email" placeholder="請輸入請輸入 E-mail / 帳號" title="請輸入請輸入 E-mail / 帳號">
+									<label for="email_submit" class="hide">送出請輸入 E-mail / 帳號查詢</label>
+									<input type="submit" id="email_submit" name="email_submit" value="送出查詢" title="送出請輸入 E-mail / 帳號查詢" >
+								</form>
+							</li>
+							<li class="input-phone" >
+								<form>                   
+									<label for="phone"  class="hide">聯絡電話搜尋</label>
+									<input type="text" id="phone" name="phone" placeholder="請輸入聯絡電話" title="請輸入聯絡電話">
+									<label for="phone_submit" class="hide">送出聯絡電話查詢</label>
+									<input type="submit" id="phone_submit" name="phone_submit" value="送出查詢" title="送出聯絡電話查詢" >
+								</form>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="main_content_search">搜尋結果： 共 3 筆資料</div>
+				<div class="main_content_table">
+					<table class="info_customer_table">
+						<thead>
+							<tr>
+								<th>編號</th>
+								<th>照片</th>
+								<th>姓名</th>
+								<th>職稱</th>
+								<th>E-mail / 帳號</th>
+								<th>審閱權限</th>
+								<th>到職日期</th>
+								<th>狀態</th>
+								<th class="w100">動作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>行銷總監</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>
+									<span class="authority1">客</span>
+									<span class="authority2">經</span>
+									<span class="authority3">銷</span>
+								</td>
+								<td>2020/10/05</td>
+								<td><span class="luck">鎖定</span></td>
+								<td>
+									<ul class="functions">
+										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
+										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>
+									<span class="authority1">客</span>
+									<span class="authority2">經</span>
+
+								</td>
+								<td>2020/10/05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										
+										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
+										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td><span class="img"><img src="./images/personal_img.jpg" alt=""></span>
+								</td>
+								<td>陸人甲</td>
+								<td>經銷</td>
+								<td>11dqhiu1@wdnwodoo.com.tw</td>
+								<td>
+
+									<span class="authority3">銷</span>
+								</td>
+								<td>2020/10/05</td>
+								<td><span class="good">正常</span></td>
+								<td>
+									<ul class="functions">
+										
+										<li><a class="btn edit" href="info_staff_content.html" title="修改">修改</a></li>
+										<li><a data-fancybox="" data-animation-duration="500" data-src="#animatedModal" href="javascript:;" class="btn delete btn-primary" title="刪除">刪除</a></li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<ul>
+				<li>© 2020 LA SOLUTION PARFAIT</li>
+				<li>Version: 1.0</li>
+			</ul>
+		</footer>
+	</div>
+	<div id="animatedModal" class="animated-modal fancybox-content" style="display: none;">
+		<div class="animated-modal-flex">
+			<ul>
+				<li>
+					<p>
+						確定刪除此筆員工資料嗎？
+					</p>
+				</li>
+				<li class="input-send" >
+					<a class="cancel" data-fancybox-close href="javascript:void(0)" title="取消">
+					<span>取消</span>	
+					</a>
+					<a class="confirm" href="#" title="確定">
+					<span>確定</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.slider.js"></script>
+    <script src="js/jquery.lightbox.js"></script>
+	<script src='js/effect.js'></script>
+</body>
+</html>
