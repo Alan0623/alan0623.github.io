@@ -1,16 +1,54 @@
 /*------------------------------------------------------------------
 preload 預先載圖
 ------------------------------------------------------------------*/
-$.preload( '../images/icon/social_links/social_links1_o.svg',
-  '../images/icon/social_links/social_links2_o.svg',
-  '../images/icon/social_links/social_links3_o.svg',
-  '../images/icon/social_links/social_links4_o.svg',
-  '../images/icon/icon_lock_o.svg',
-  '../images/icon/icon_close.svg',
-  '../images/icon/icon_tab1_h.svg',
-  '../images/icon/icon_tab2_h.svg',
-  '../images/icon/icon_Arrow_hover.svg'
+$.preload( '../images/icon/icon_fb_o.svg',
+  '../images/icon/icon_ig_o.svg',
+  '../images/icon/icon_say_o.svg',
+  '../images/icon/icon_yt_o.svg'
 );
+/*------------------------------------------------------------------
+主選單
+------------------------------------------------------------------*/
+$(function(){
+    $(window).scroll(function() {
+      if ( $(this).scrollTop() > 34){
+          $('.header').addClass('fixed');
+          // $(".audit_fixed").removeClass("selected"),
+          // $(".audit_btn").removeClass("open");
+      } else {
+          $('.header').removeClass('fixed');
+      }
+    });
+    $("body").removeClass("no_js");
+    console.log("Hello!! Nice to see you.(\u30fb\u2200\u30fb)."),
+    console.log("Front-end programming By Wei-Ching Lin");
+    $(".open_nav").click(function () {
+        $(this).toggleClass("open"),
+        $(".menu").toggleClass("open_menu");
+        window.addEventListener("resize", function () {
+          $(window).width() > 768 && ($(".menu").removeAttr("style").removeClass("open_menu"),
+            $(".open_nav").removeClass("open"))
+        })
+    });
+    $(".sub_menu_title,sub_menu").on('mouseenter', function() {
+      $(this).addClass("open");
+      $(".sub_menu,.main_menu").addClass("open");
+    }).on('mouseleave', function() {
+      $(this).removeClass("open");
+      $(".sub_menu,.main_menu").removeClass("open");
+    });
+  });
+  /*------------------------------------------------------------------
+  手機版選單
+  ------------------------------------------------------------------*/
+  $(function(){
+    $("#mobile_menu").on('click', function(e) {
+      $(this).toggleClass('open');
+      $("#mobile_scroll_menu").toggleClass('menu_show');
+    });
+  });
+  
+  
 /*------------------------------------------------------------------
 fancybox
 ------------------------------------------------------------------*/
@@ -96,17 +134,14 @@ $(function(){
     });
 
 });
-$(window).load(function() {
-    $("#container1").twentytwenty();
-  });
+
 /*------------------------------------------------------------------
 //block_links 舊活動
 ------------------------------------------------------------------*/
 $(function() {
-  var jcarousel = $('.links_list');
-
-  jcarousel
-      .on('jcarousel:reload jcarousel:create', function () {
+    var jcarousel3 = $('.links_list3');
+  
+    jcarousel3.on('jcarousel:reload jcarousel:create', function () {
           var carousel = $(this),
               width = carousel.innerWidth();
 
@@ -129,29 +164,29 @@ $(function() {
     });
 
     if ($(window).width() > 828) {
-        $('.links_list_prev').jcarouselControl({target: '-=3'});
-        $('.links_list_next').jcarouselControl({target: '+=3'});
+        $('.links_list3_prev').jcarouselControl({target: '-=3'});
+        $('.links_list3_next').jcarouselControl({target: '+=3'});
     } else if ($(window).width() > 598) {
-        $('.links_list_prev').jcarouselControl({target: '-=2'});
-        $('.links_list_next').jcarouselControl({target: '+=2'});
+        $('.links_list3_prev').jcarouselControl({target: '-=2'});
+        $('.links_list3_next').jcarouselControl({target: '+=2'});
     } else if ($(window).width() > 300) {
-        $('.links_list_prev').jcarouselControl({target: '-=1'});
-        $('.links_list_next').jcarouselControl({target: '+=1'});
+        $('.links_list3_prev').jcarouselControl({target: '-=1'});
+        $('.links_list3_next').jcarouselControl({target: '+=1'});
     }
     $(window).resize(function() {
         if ($(window).width() > 828) {
-            $('.links_list_prev').jcarouselControl({target: '-=3'});
-            $('.links_list_next').jcarouselControl({target: '+=3'});
+            $('.links_list3_prev').jcarouselControl({target: '-=3'});
+            $('.links_list3_next').jcarouselControl({target: '+=3'});
         } else if ($(window).width() > 598) {
-            $('.links_list_prev').jcarouselControl({target: '-=2'});
-            $('.links_list_next').jcarouselControl({target: '+=2'});
+            $('.links_list3_prev').jcarouselControl({target: '-=2'});
+            $('.links_list3_next').jcarouselControl({target: '+=2'});
         } else if ($(window).width() > 300) {
-            $('.links_list_prev').jcarouselControl({target: '-=1'});
-            $('.links_list_next').jcarouselControl({target: '+=1'});
+            $('.links_list3_prev').jcarouselControl({target: '-=1'});
+            $('.links_list3_next').jcarouselControl({target: '+=1'});
         }
     });
 
-  $('.links_list_pagination')
+  $('.links_list3_pagination')
       .on('jcarouselpagination:active', 'a', function() {
           $(this).addClass('active');
       })
@@ -169,6 +204,72 @@ $(function() {
       });
 
 });
+$(function() {
+    var jcarousel6 = $('.links_list6');
+  
+    jcarousel6.on('jcarousel:reload jcarousel:create', function () {
+            var carousel = $(this),
+                width = carousel.innerWidth();
+  
+            if (width >= 1000) {
+                width = width / 6;
+            } else if (width >= 700) {
+                width = width / 4;
+            } else if (width >= 550) {
+                width = width / 2;
+            } else if (width >= 300) {
+                width = width / 1;
+            }
+  
+            carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+        })
+        .jcarousel({
+            wrap: 'circular'
+        }).jcarouselSwipe({
+          perSwipe: 1
+      });
+  
+      if ($(window).width() > 828) {
+          $('.links_list6_prev').jcarouselControl({target: '-=3'});
+          $('.links_list6_next').jcarouselControl({target: '+=3'});
+      } else if ($(window).width() > 598) {
+          $('.links_list6_prev').jcarouselControl({target: '-=2'});
+          $('.links_list6_next').jcarouselControl({target: '+=2'});
+      } else if ($(window).width() > 300) {
+          $('.links_list6_prev').jcarouselControl({target: '-=1'});
+          $('.links_list6_next').jcarouselControl({target: '+=1'});
+      }
+      $(window).resize(function() {
+          if ($(window).width() > 828) {
+              $('.links_list6_prev').jcarouselControl({target: '-=3'});
+              $('.links_list6_next').jcarouselControl({target: '+=3'});
+          } else if ($(window).width() > 598) {
+              $('.links_list6_prev').jcarouselControl({target: '-=2'});
+              $('.links_list6_next').jcarouselControl({target: '+=2'});
+          } else if ($(window).width() > 300) {
+              $('.links_list6_prev').jcarouselControl({target: '-=1'});
+              $('.links_list6_next').jcarouselControl({target: '+=1'});
+          }
+      });
+  
+    $('.links_list6_pagination')
+        .on('jcarouselpagination:active', 'a', function() {
+            $(this).addClass('active');
+        })
+        .on('jcarouselpagination:inactive', 'a', function() {
+            $(this).removeClass('active');
+        })
+        .on('click', function(e) {
+            e.preventDefault();
+        })
+        .jcarouselPagination({
+            perPage: 1,
+            item: function(page) {
+                return '<a href="#' + page + '">' + page + '</a>';
+            }
+        });
+  
+  });
 $(function(){
     $(window).scroll(function() {
       if ( $(this).scrollTop() > $("#block_index1").height()){
@@ -252,3 +353,26 @@ $(function(){
 	}).scroll();
 });
 
+
+/*------------------------------------------------------------------
+footer_tabs 滑動頁籤
+------------------------------------------------------------------*/
+$(".footer_tabs .tabs a").hover(function () {
+
+    var position = $(this).parent().position();
+    var width = $(this).parent().width();
+
+    $(".footer_tabs .tabs .floor").css({
+        "left": position.left,
+        "width": width
+    });
+
+});
+
+var actWidth = $(".footer_tabs .tabs").find(".active").parent("li").width();
+var actPosition = $(".footer_tabs .tabs .active").position();
+
+$(".footer_tabs .tabs .floor").css({
+    "left": actPosition.left,
+    "width": actWidth
+});
