@@ -1,0 +1,244 @@
+@for $i from 1 through 10 {
+	.block_about#{$i}{
+		clear: both;
+		padding: 72px 0;
+	}
+	.block_about1 .swiper-slide#{$i}{
+		background-image: url('../images/about/main_slice#{$i}.jpg');
+	}
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+主視覺
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.swiper-wrapper_about{
+	height: 600px;
+}
+.block_about1{
+	padding: 0;
+	.center{
+		position: absolute;
+		height: 600px;
+		width: 100%;
+		left: 0;
+		right: 0;
+	}
+	article h2{
+		text-align: center;
+		letter-spacing: 0.2em;
+	}
+	.swiper-button-prev,
+	.swiper-button-next{
+		&::before{
+			filter: brightness(100);
+		}
+	}
+	.swiper-button-next{
+		right: 0;
+	}
+} 
+
+.block_about2{
+	position: relative;
+	&::before{
+		content: $content;
+		position: absolute;
+		width: 40vw;
+		min-height: 369px;
+		background-color: #D8D6CE;
+		z-index: 1;
+		top: 128px;
+		left: 0;
+	}
+	.center{
+		position: relative;
+		z-index: 2;
+		display: flex;
+		max-width: 1320px;
+		justify-content: space-between;
+	}
+	article{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		align-items: flex-end;
+		max-width: 646px;
+		width: 100%;
+		margin-top: 56px;
+	}
+	.info{
+		width: 100%;	
+		min-height: 369px;
+		padding: 56px 0;
+		background-color: #D8D6CE;
+		letter-spacing: 0.1em;
+		border-radius: 0 16px 16px 0;
+		h2{
+			font-size: 1.875em;
+			margin-bottom: 40px;
+		}
+		p{
+			line-height: 1.8em;
+		}
+		
+	}
+	.year_list{
+		float: right;	
+		letter-spacing: 0.1em;
+		line-height: 1.8em;
+	}
+
+}
+.block_about3{
+	position: relative;
+	background-image: url('../images/index/bg_block_index5.jpg');
+    background-size: contain;
+    background-attachment: fixed;
+	.person_tabs{
+		ul.tab_content{
+			li{
+				display: flex;
+				max-width: 1320px;
+				margin: 0 auto;
+			}
+		}
+		.jcarousel-wrapper{
+			max-width: 1480px;
+			margin: 0 auto;
+			display: block;
+			margin-top: 32px;
+		}
+	}
+	.person_big_img{
+		border-radius: 8px;
+		overflow: hidden;
+		width: 646px;
+		background-color: white;
+		img{
+			float: left;
+			width: 100%;
+		}
+	}
+	article{
+		padding-left: 64px;
+		max-width: calc(100% - 646px);
+		h3{
+			font-size: 1.5em;
+			color:white;
+			background-color:black;
+			display: inline-block;
+			padding: 14px 18px;
+			font-weight: bold;
+			border-radius: 100px;
+			margin-bottom: 24px;
+		}
+		.person_info{
+			padding-left: 4px;
+			letter-spacing: 0.1em;
+			li{
+				padding: 4px 0;
+			}
+			.motto{
+				font-size: 2em;
+				font-weight: bold;
+				padding-top: 16px;
+			}
+		}
+	}
+	.links_list6{
+		max-width: 1344px;
+    	margin: 0 auto;
+		li{
+			padding: 0 12px;
+			figure{
+				display: flex;
+				border-radius: 8px;
+				overflow: hidden;
+				flex-direction: column;
+				.img{
+					margin-bottom: 0;
+					height: 0;
+					padding-bottom: 100%;
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-color: white;
+				}
+			}
+			figcaption{
+				background-color: black;
+				color: white;
+				padding: 8px 12px;
+				ul.list_person_info{
+					width: 100%;
+					max-width: 100%;
+					padding: 0;
+					letter-spacing: 0.1em;
+					li{
+						display: inline-block;
+						width: auto;
+						line-height: 26px;
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+	.links_list6_prev,
+	.links_list6_next{
+		filter: brightness(0);
+	}
+	.jcarousel-pagination{
+		display: none;
+	}
+}
+.block_about4{
+	background-color: #D8D6CE;
+	text-align: center;
+	padding-bottom: 40px;
+	article{
+		margin-bottom: 24px;
+		h2{
+			font-size: 2.2em;
+			letter-spacing: 0.1em;
+			margin-bottom: 56px;
+		}
+		p{
+			letter-spacing: 0.1em;
+			line-height: 1.6em;
+		}
+	}
+	
+	.business_collaboration{
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		flex-wrap: wrap;
+		justify-content: center;
+		max-width: 1060px;
+		margin: 0 auto;
+		li{
+			display: inline-block;
+			margin: 40px;
+			&:first-child{
+				margin-left: 5%;
+			}
+		}
+		figure{
+			.img{
+				border-radius: 200px;
+				overflow: hidden;
+				display: block;
+				width: 184px;
+				height: 184px;
+				margin-bottom: 16px;
+			}
+		}
+		figcaption{
+			letter-spacing: 0.1em;
+			span{
+				display: block;
+			}
+		}
+	}
+}
