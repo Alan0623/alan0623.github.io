@@ -1,0 +1,9 @@
+@for $i from 1 through 10 {
+	.block_works1#{$i}{
+		clear: both;
+		padding: 72px 0;
+	}
+	.block_works1 .swiper-slide#{$i}{
+		background-image: url('../images/works/main_slice#{$i}.jpg');
+	}
+}

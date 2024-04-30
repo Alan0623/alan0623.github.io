@@ -14,6 +14,7 @@
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 .block_index1{ 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.block_works1,
 .block_about1,
 .block_index1{//主視覺
 	position: relative;
@@ -39,9 +40,19 @@
 				display: block;
 				&.zh{
 					font-size: 4em;
+					font-weight: normal;
+				    letter-spacing: 0.1em;
+					@include media('mobile') {
+						font-size: 2em;
+					}
 				}
 				&.en{
 					font-size: 2em;
+					font-weight: normal;
+				    letter-spacing: 0.1em;
+					@include media('mobile') {
+						font-size: 1em;
+					}
 				}
 			}
 		}
@@ -49,13 +60,13 @@
 }
 .block_index1{//主視覺
 	min-height: 100vh;
-	@include media('mobile') {
+	@include media('center') {
 		min-height: auto;
 	}
 	.swiper-wrapper_index{
 		height: 100%;
 		min-height: 100vh;
-		@include media('mobile') {
+		@include media('center') {
 			min-height: auto;
 		}
 	}
@@ -90,8 +101,12 @@
 	align-items: center;
 	width: 100%;
 	overflow: hidden;
+	@include media('center') {
+		min-height: auto;
+	}
 	@include media('mobile') {
 		min-height: auto;
+		padding-top: 40px;
 	}
 	.social_media{
 		&::before{
@@ -105,6 +120,11 @@
 		z-index: 3;
 		text-align: center;
 		display: block;
+		bottom: auto;
+		&::before{
+			filter: brightness(0);
+			opacity: 0.2;
+		}
 	}
 
 	figure.img{
@@ -175,7 +195,7 @@
 			@include media('mobile') {
 				width: 100%;
 				float: inherit;
-				padding: 0;
+				padding: 0 16px 0 32px;
 			}
 			h2{
 				font-size: 1em;
@@ -187,17 +207,30 @@
 					font-size: 2.25em;
 					letter-spacing: 0.1em;
 					margin-bottom: 8px;
+					@include media('mobile') {
+						font-size: 2em;
+						letter-spacing: 0.05em;
+					}
 				}
 				.en{
 					font-size: 1.25em;
 					letter-spacing: 0.1em;
 					font-weight: normal;
+					@include media('mobile') {
+						font-size: 1em;
+						letter-spacing: 0.05em;
+					}
 				}
 			}
 			p{
 				font-size: 1em;
 				line-height: 1.8em;
 				letter-spacing: 0.1em;
+				@include media('mobile') {
+					font-size: 0.9em;
+					line-height: 1.6em;
+					letter-spacing: 0em;
+				}
 			}
 		}
 	}
@@ -221,7 +254,9 @@
 			justify-content: space-between;
 			padding-left: 108px;
 			box-sizing: border-box;
-
+			@include media('phone') {
+				display: block;
+			}
 			&:nth-child(2){
 				padding-left: 0px;
 				padding-right: 140px;
@@ -247,6 +282,9 @@
 				align-items: flex-start;
 				flex-direction: column;
 				min-width: 300px;
+			}
+			@include media('phone') {
+				display: block;
 			}
 			.text{
 				margin-left: 48px;
@@ -293,11 +331,23 @@
 			height: 160px;
 			margin-bottom: 16px;
 		}
+		@include media('phone') {
+			width: 140px;
+			height: 140px;
+			float: left;
+			margin-right: 16px;
+		}
 		.zh{
 			font-size: 1.5em;
+			@include media('mobile') {
+				font-size: 1.2em;
+			}
 		}
 		.en{
 			font-size: 3em;
+			@include media('mobile') {
+				font-size: 2em;
+			}
 		}
 		span{
 			display: inline-block;
@@ -337,6 +387,9 @@
 			padding: 0 18px;
 			box-sizing: border-box;
 			z-index: 2;
+			@include media('mobile') {
+				padding: 0 24px;
+			}
 			&::after{
 				@extend %clear;
 			}
@@ -396,29 +449,41 @@
 	}
 	.jcarousel-control-prev,
 	.jcarousel-control-next{
+		@extend %hide-text;
 		display: block;
 		position: absolute;
 		top: calc(50% - 44px);
-		@extend %hide-text;
 		width: 48px;
 		height: 48px;
 		border-radius: 50px;
-		border: white solid 1px;
-		background-image: url('../images/icon/scroll_arrow.svg');
-		background-size: 60%;
-		background-position: center;
-		background-repeat: no-repeat;
-		transition: $transition;
-		z-index: 2;
-		filter: brightness(0);
-
-		@include rwd(400){
-			width: 38px;
-			height: 38px;
+		overflow: hidden;
+		border: black solid 1px;
+		transition: all 0.8s ease-out;
+		z-index: 4;
+		transform: rotateZ(-90deg);
+		// background-color: white;
+		&::before{
+			content: $content;
+			display: block;
+			width: 48px;
+			height: 48px;
+			background-image: url(../images/icon/scroll_arrow.svg);
+			background-size: 60%;
+			background-position: 42% 40%;
+			background-repeat: no-repeat;
+			filter: brightness(0);
 		}
-
 		&:hover, &:focus{
-			// filter: brightness(100);
+			background-color: #235FD8;
+		}
+		@include media('mobile') {
+			top: 50%;
+			width: 32px;
+			height: 32px;
+			&::before{
+				width: 32px;
+				height: 32px;
+			}
 		}
 	}
 
@@ -496,6 +561,7 @@
 					max-width: 100%;
 					overflow: hidden;
 					margin-bottom: 8px;
+					width: 100%;
 				}
 				               
 				img {
@@ -558,9 +624,21 @@
 				display: block;
 				&.zh{
 					font-size: 2.25em;
+					letter-spacing: 0.1em;
+					margin-bottom: 8px;
+					@include media('mobile') {
+						font-size: 2em;
+						letter-spacing: 0.05em;
+					}
 				}
 				&.en{
 					font-size: 1.25em;
+					letter-spacing: 0.1em;
+					font-weight: normal;
+					@include media('mobile') {
+						font-size: 1em;
+						letter-spacing: 0.05em;
+					}
 				}
 			}
 		}
@@ -569,6 +647,9 @@
 	.service_process_tabs{
 		width: 100%;
 		position: relative;
+		@include media('mobile') {
+			padding-bottom: 64px;
+		}
 		.btn{
 			position: absolute;
 			bottom: 0;
@@ -578,7 +659,10 @@
 		.tab_container{
 			width: 50%;
 			float: left;
-
+			@include media('mobile') {
+				width: 100%;
+				float: inherit;
+			}
 			.tab_content{
 				width: 100%;
 				height: 0;
@@ -616,6 +700,12 @@
 				position: relative;
 				justify-content: center;
 				align-items: center;
+				@include media('mobile') {
+					padding: 24px 0;
+				}
+				@include media('phone') {
+					flex: 0 0 33.33%;
+				}
 			}
 			a{
 				color: black;
@@ -674,8 +764,13 @@
 	min-height: 100vh;
 	padding: 72px 0;
 	box-sizing: border-box;
+	@include media('center') {
+		min-height: auto;
+	}
 	@include media('mobile') {
 		min-height: auto;
+		padding: 24px;
+		padding-bottom: 32px;
 	}
 	.center{
 		background-color: black;
@@ -683,6 +778,7 @@
 		position: relative;
 	}
 	article{
+		display: none;
 		position: absolute;
 		bottom: 0px;
 		left: 0px;
@@ -694,6 +790,21 @@
 		}
 		.zh{
 			font-size: 2.25em;
+			letter-spacing: 0.1em;
+			margin-bottom: 8px;
+			@include media('mobile') {
+				font-size: 2em;
+				letter-spacing: 0.05em;
+			}
+		}
+		.en{
+			font-size: 1.25em;
+			letter-spacing: 0.1em;
+			font-weight: normal;
+			@include media('mobile') {
+				font-size: 1em;
+				letter-spacing: 0.05em;
+			}
 		}
 		p{
 			font-size: 1em;

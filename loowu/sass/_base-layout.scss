@@ -351,6 +351,7 @@ header class="mobile_top_bar_box"
 		opacity: 1;
 		.mobile_scroll_menu_center{
 			transform: translateX(0%);
+			height: 100vh;
 		}
 		&::after{
 			position: fixed;
@@ -559,7 +560,8 @@ footer class="footer"
 	padding-top: 44px;
 	padding-bottom: 96px;
 	@include media('mobile') {
-		padding-bottom: 24px;
+		padding: 24px;
+		overflow: hidden;
 	}
 }
 .footer_center{
@@ -698,6 +700,7 @@ footer class="footer"
 	}
 }
 .footer_info_copyright{
+	display: inline-block;
 	letter-spacing: 0.1em;
 	transform: translateY(-24px);
 	@include media('mobile') {
@@ -843,6 +846,15 @@ footer class="footer"
 	&:hover, &:focus{
 		background-color: #235FD8;
 	}
+	@include media('mobile') {
+		top: 50%;
+		width: 32px;
+		height: 32px;
+		&::before{
+			width: 32px;
+			height: 32px;
+		}
+	}
 }
 .swiper-button-prev{
 	transform: rotateZ(90deg);
@@ -875,6 +887,9 @@ footer class="footer"
     top: 50%;
     z-index: 6;
     transform: translateY(-50%);
+	@include media('mobile') {
+		display: none;
+	}
 	&.fixed{
 		position: fixed;
 		
@@ -904,6 +919,9 @@ footer class="footer"
 	padding-top: 28px;
 	margin: 0 auto;
 	text-align: center;
+	@include media('mobile') {
+		bottom: 24px;
+	}
 	&::before{
 		content: $content;
 		position: absolute;
@@ -954,6 +972,7 @@ footer class="footer"
 		font-weight: bold;
 		padding-right: 80px;
 		position: relative;
+
 		&::before{
 			content: $content;
 			display: block;
@@ -979,6 +998,19 @@ footer class="footer"
 			transform: translateY(-50%);
 			right: 23px;
 			border-radius: 50px;
+		}
+
+		@include media('mobile') {
+			font-size: 1em;
+			padding-right: 64px;
+			&::before{
+				width: 20px;
+				height: 20px;
+			}
+			&::after{
+				width: 32px;
+				right: 21px;
+			}
 		}
 	}
 	&.btn_dark{
