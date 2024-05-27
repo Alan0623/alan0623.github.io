@@ -147,10 +147,10 @@ $(function() {
 
           if (width >= 1000) {
               width = width / 3;
-          } else if (width >= 700) {
-              width = width / 3;
-          } else if (width >= 550) {
+          } else if (width >= 800) {
               width = width / 2;
+          } else if (width >= 500) {
+              width = width / 1;
           } else if (width >= 300) {
               width = width / 1;
           }

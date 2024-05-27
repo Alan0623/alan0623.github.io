@@ -112,6 +112,33 @@
 		&::before{
 			content: $content;
 		}
+		a{
+			filter: brightness(0);
+		}
+		.form a{
+			background-image: url('../images/icon/icon_say_o.svg');
+			&:hover, &:focus{
+				background-image: url('../images/icon/icon_say.svg');
+			}
+		}
+		.youtube a{
+			background-image: url('../images/icon/icon_yt_o.svg');
+			&:hover, &:focus{
+				background-image: url('../images/icon/icon_yt.svg');
+			}
+		}
+		.facebook a{
+			background-image: url('../images/icon/icon_fb_o.svg');
+			&:hover, &:focus{
+				background-image: url('../images/icon/icon_fb.svg');
+			}
+		}
+		.instagram a{
+			background-image: url('../images/icon/icon_ig_o.svg');
+			&:hover, &:focus{
+				background-image: url('../images/icon/icon_ig.svg');
+			}
+		}
 	}
 	.scroll{
 		color: black;
@@ -125,6 +152,7 @@
 			filter: brightness(0);
 			opacity: 0.2;
 		}
+		
 	}
 
 	figure.img{
@@ -474,7 +502,7 @@
 			filter: brightness(0);
 		}
 		&:hover, &:focus{
-			background-color: #235FD8;
+			background-color: black;
 		}
 		@include media('mobile') {
 			top: 50%;
@@ -610,9 +638,9 @@
 	article{
 		width: 50%;
 		float: left;
-		padding-left: 56px;
 		box-sizing: border-box;
 		padding-left: 32px;
+		padding-bottom: 80px;
 		@include media('mobile') {
 			width: 100%;
 			padding: 0 16px;
@@ -711,8 +739,8 @@
 				color: black;
 				&:hover, &:focus{
 					.img{
-						background-color: #265BC5;
-						border-color: #265BC5;
+						background-color: black;
+						border-color: black;
 						&::before{
 							filter: grayscale(0) brightness(100);
 						}
