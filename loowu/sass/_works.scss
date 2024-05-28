@@ -20,6 +20,10 @@
 	}
 } 
 .block_works2{
+	overflow: hidden;
+	.center{
+		position: relative;
+	}
 	h2{
 		text-align: center;
 		font-size: 1em;
@@ -34,11 +38,18 @@
 	.swiper-slide{
 		height: auto;
 	}
+	.swiper-container-stopplay{
+		// overflow: hidden;
+	}
 	.swiper-wrapper_works{
 		height: auto;
 	}
 	.swiper-pagination-bullet{
 		position: absolute;
+		background: white;
+		display: inline-block;
+		width: auto;
+		height: auto;
 		opacity: 0;
 	}
 	.swiper-pagination-bullet-active{
@@ -59,15 +70,25 @@
 			@include media('mobile') {
 				flex: 0 0 50%;
 			}
+			@include media('phone') {
+				flex: 0 0 100%;
+			}
 			a{
 				color: black;
+				p{
+					padding: 16px 0;
+				}
 			}
 		}
 		.img{
+			background-color: lightgray;
 			img{
 				width: 100%;
+				float: left;
 			}
-			
+			&::after{
+				@extend %clear;
+			}
 		}
 	}
 } 

@@ -863,9 +863,45 @@ footer class="footer"
 		}
 	}
 }
+.swiper-button-next-stopplay,
+.swiper-button-prev-stopplay{
+    top: auto;
+    width: 32px;
+    height: 32px;
+    right: 16px;
+	border-color: black;
+	&::before{
+		width: 32px;
+		height: 32px;
+	}
+}
+.swiper-button-next-stopplay{
+	right: 16px;
+}
+.swiper-button-prev-stopplay{
+	right: 64px;
+}
 .swiper-button-prev-stopplay,
 .swiper-button-prev{
 	transform: rotateZ(90deg);
+}
+.swiper-pagination-stopplay{
+    bottom: -30px;
+    right: 208px;
+    position: absolute;
+    font-size: 1.5em;
+	letter-spacing: 0.05em;
+	&::before{
+		content: "Work Page.";
+	}
+	&::after{
+		content: " / 03";
+		transform: translateX(77px);
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
 }
 .swiper-pagination{
 	bottom: 24px;
