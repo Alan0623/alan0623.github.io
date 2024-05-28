@@ -507,6 +507,9 @@ header class="header"
 					&.zh{
 						font-size: 1.25em;
 					}
+					&.en{
+						font-family: system-ui;
+					}
 				}
 			}
 			&.portfolio{
@@ -798,11 +801,7 @@ footer class="footer"
 .center{
 	@extend %center;
 }
-// @for $i from 1 through 10 {
-// 	.swiper-slide#{$i}{
-// 		background-image: url('../images/index/main_slice#{$i}.jpg');
-// 	}
-// }
+
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 主視覺
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -824,6 +823,8 @@ footer class="footer"
 .swiper-slide-active,.swiper-slide-duplicate-active{
 	opacity: 1;
 }
+.swiper-button-next-stopplay,
+.swiper-button-prev-stopplay,
 .swiper-button-next,
 .swiper-button-prev{
 	@extend %hide-text;
@@ -862,6 +863,7 @@ footer class="footer"
 		}
 	}
 }
+.swiper-button-prev-stopplay,
 .swiper-button-prev{
 	transform: rotateZ(90deg);
 }

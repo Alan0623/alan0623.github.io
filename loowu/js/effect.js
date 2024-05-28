@@ -88,6 +88,24 @@ $(function(){
     }
   });
 });
+
+$(function(){
+    var swiper = new Swiper('.swiper-container-stopplay', {
+      slidesPerView: 1,
+      // spaceBetween: 180,
+      centeredSlides: true,
+      loop: true,
+      autoplay: false,
+      pagination: {
+        el: '.swiper-pagination-stopplay',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next-stopplay',
+        prevEl: '.swiper-button-prev-stopplay',
+      }
+    });
+  });
 /*------------------------------------------------------------------
 
 ------------------------------------------------------------------*/

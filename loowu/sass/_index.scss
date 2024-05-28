@@ -14,9 +14,7 @@
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 .block_index1{ 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.block_works1,
-.block_about1,
-.block_index1{//主視覺
+.block_banner{//主視覺
 	position: relative;
 	article{
 		position: absolute;
@@ -38,8 +36,9 @@
 			transform: translateY(-50%);
 			span{
 				display: block;
+				padding: 8px 0;
 				&.zh{
-					font-size: 4em;
+					font-size: 2.5em;
 					font-weight: normal;
 				    letter-spacing: 0.1em;
 					@include media('mobile') {
@@ -47,9 +46,10 @@
 					}
 				}
 				&.en{
-					font-size: 2em;
+					font-size: 1.5em;
 					font-weight: normal;
 				    letter-spacing: 0.1em;
+					font-family: system-ui;
 					@include media('mobile') {
 						font-size: 1em;
 					}
