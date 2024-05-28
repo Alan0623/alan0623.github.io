@@ -1,9 +1,73 @@
 @for $i from 1 through 10 {
-	.block_works1#{$i}{
+	.block_works#{$i}{
 		clear: both;
 		padding: 72px 0;
 	}
 	.block_works1 .swiper-slide#{$i}{
 		background-image: url('../images/works/main_slice#{$i}.jpg');
 	}
+
+	.block_works2 span[aria-label="Go to slide #{$i}"]{
+		&::before{
+			content: '0#{$i}';
+		}
+	}
 }
+.block_works1 {
+	padding: 0;
+	.center{
+		
+	}
+} 
+.block_works2{
+	h2{
+		text-align: center;
+		font-size: 1em;
+		letter-spacing: 0.1em;
+		margin-bottom: 40px;
+		.zh{
+			display: block;
+			font-size: 1.75em;
+			padding: 8px 0;
+		}
+	}
+	.swiper-slide{
+		height: auto;
+	}
+	.swiper-wrapper_works{
+		height: auto;
+	}
+	.swiper-pagination-bullet{
+		position: absolute;
+		opacity: 0;
+	}
+	.swiper-pagination-bullet-active{
+		opacity: 1;
+	}
+	ul.block_works_list{
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: flex-start;
+		width: 100%;
+		flex-wrap: wrap;
+		@extend %center;
+		li{
+			flex: 0 0 33.33%;
+			padding: 18px;
+    		box-sizing: border-box;
+			@include media('mobile') {
+				flex: 0 0 50%;
+			}
+			a{
+				color: black;
+			}
+		}
+		.img{
+			img{
+				width: 100%;
+			}
+			
+		}
+	}
+} 
