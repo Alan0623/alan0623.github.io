@@ -88,6 +88,42 @@
 	.swiper-button-next{
 		right: 16px;
 	}
+	.swiper-pagination{
+		display: inline-block;
+		width: auto;
+		margin: 0 auto;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 96px;
+		background-color: rgba(255, 255, 255, 0.3);
+		padding: 16px 48px;
+		border-radius: 50px!important;
+		.swiper-pagination-bullet{
+			width: auto;
+			height: auto;
+			color: white;
+			background-color: transparent;
+			opacity: 0.8;
+			padding: 0 8px;
+			letter-spacing: 0.05em;
+			&:nth-child(1)::before{
+				content: "老屋翻新";
+			}
+			&:nth-child(2)::before{
+				content: "新成屋設計";
+			}
+			&:nth-child(3)::before{
+				content: "透天改造";
+			}
+			&.swiper-pagination-bullet-active{
+				opacity: 1;
+				font-weight: bold;
+			}
+			&:hover, &:focus{
+				opacity: 1;
+			}
+		}
+	}
 }
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 .block_index2 
@@ -147,7 +183,7 @@
 		z-index: 3;
 		text-align: center;
 		display: block;
-		bottom: auto;
+		bottom: 64px;
 		&::before{
 			filter: brightness(0);
 			opacity: 0.2;
@@ -316,6 +352,7 @@
 			}
 			.text{
 				margin-left: 48px;
+				text-wrap: nowrap;
 				@include media('mobile') {
 					margin-left: 0;
 				}
