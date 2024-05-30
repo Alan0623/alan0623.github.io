@@ -21,7 +21,7 @@
 .clearfix, ul.menu::after, .header .main_menu_ul::after, .footer_center::after, .footer_info .footer_info_logo::after, .footer_tabs ul.tabs::after, .block_index2 .center::after, .block_index2 .center .block_index2_img::after, .block_index4 .tab_content li::after, .block_service2 .service_process_tabs .tab_container .tab_content li::after, .block_service3 .center::after, .block_works2 ul.block_works_list .img::after, .block_location2 ul.tabs li::after, .block_location2 .tab_content::after, .block_location2 .tab_content .showbox2::after,
 .block_location2 .tab_content .showbox::after, .block_location2 .tab_content .abgne-block2::after,
 .block_location2 .tab_content .abgne-block::after, .block_location2 .tab_content .abgne-block2 a::after,
-.block_location2 .tab_content .abgne-block a::after, .block_location3 .tabs_list::after {
+.block_location2 .tab_content .abgne-block a::after, .block_location3 .tabs_list::after, .block_reservation2 article::after {
   content: "​";
   display: block;
   height: 0;
@@ -3450,7 +3450,7 @@ button.swiper-pagination-bullet {
   width: auto;
   height: auto;
   color: white;
-  background-color: transparent;
+  background-color: transparent !important;
   opacity: 0.8;
   padding: 0 8px;
   letter-spacing: 0.05em;
@@ -6100,7 +6100,7 @@ button.swiper-pagination-bullet {
 /* line 47, ../sass/_works.scss */
 .block_works2 .swiper-pagination-bullet {
   position: absolute;
-  background: white;
+  background: white !important;
   display: inline-block;
   width: auto;
   height: auto;
@@ -6575,8 +6575,35 @@ button.swiper-pagination-bullet {
 /* line 14, ../sass/_reservation.scss */
 .block_reservation2 {
   padding: 0;
+  padding-top: 64px;
 }
-/* line 16, ../sass/_reservation.scss */
+/* line 17, ../sass/_reservation.scss */
 .block_reservation2 .center {
   border: none;
+}
+/* line 20, ../sass/_reservation.scss */
+.block_reservation2 h2 {
+  margin-bottom: 24px;
+}
+/* line 28, ../sass/_reservation.scss */
+.block_reservation2 .info {
+  background-color: #F2F2F2;
+  display: block;
+  padding: 16px 20px;
+  float: left;
+  margin-right: 32px;
+}
+/* line 34, ../sass/_reservation.scss */
+.block_reservation2 .info h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  height: 48px;
+  padding-right: 16px;
+}
+/* line 43, ../sass/_reservation.scss */
+.block_reservation2 .info p {
+  display: block;
+  float: left;
 }
