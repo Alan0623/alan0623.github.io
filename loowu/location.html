@@ -49,28 +49,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/global.css">
-    <style>
-        .showbox {
-            width: 700px;
-            height: 460px;
-            border: 2px solid #1dd;
-            vertical-align: middle;
-        }
-        .abgne-block {
-            margin-top: 10px;
-            width: 680px;
-            overflow: hidden;
-        }
-        .abgne-block a {
-            margin-right: 10px;
-        }
-        .abgne-block a img {
-            width: 140px;
-            height: 92px;
-            border: 2px solid #1dd;
-            vertical-align: middle;
-        }
-    </style>
     <!-- End stylesheet -->
 </head>
 <body class="no_js">
@@ -143,7 +121,7 @@
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
             <section id="block_location2" class="block_location2">
                 <div class="center">
-                    <article>
+                    <article class="tabs_list">
                         <h2>
                             <span class="en">Introduction to base</span>
                             <span class="zh">據點介紹</span>
@@ -152,29 +130,47 @@
                             <ul class="tab_content">
                                 <li id="photo_tab1" class="event">
                                     <div class="showbox">
-                                        <img id="show-image" src="https://fakeimg.pl/700x460/eeeeee/?text=AAA"/></div>
-                                        <p>
-                                            分隔用....
-                                        </p>
-                                        <div class="abgne-block">
-                                            <a href="https://fakeimg.pl/700x460/eeeeee/?text=AAA">
-                                          <img src="https://fakeimg.pl/700x460/eeeeee/?text=AAA"/>
+                                        <img id="show-image" src="./images/location/Banqiao1.jpg"/>
+                                    </div>
+                                    <div class="abgne-block">
+                                        <a href="./images/location/Banqiao1.jpg">
+                                        <img src="./images/location/Banqiao1.jpg"/>
                                         </a>
-                                            <a href="https://fakeimg.pl/720x420/333333/?text=BBB">
-                                          <img src="https://fakeimg.pl/720x420/333333/?text=BBB"/>
+                                        <a href="./images/location/Banqiao2.jpg">
+                                        <img src="./images/location/Banqiao2.jpg"/>
                                         </a>
-                                            <a href="https://fakeimg.pl/720x420/888888/?text=CCC">
-                                          <img src="https://fakeimg.pl/720x420/888888/?text=CCC"/>
+                                        <a href="./images/location/Banqiao3.jpg">
+                                        <img src="./images/location/Banqiao3.jpg"/>
                                         </a>
-                                            <a href="https://fakeimg.pl/720x420/444444/?text=DDD">
-                                          <img src="https://fakeimg.pl/720x420/444444/?text=DDD"/>
-                                        </a><a href="https://fakeimg.pl/720x420/444444/?text=EEE">
-                                            <img src="https://fakeimg.pl/720x420/444444/?text=EEE"/>
-                                          </a>
-                                        </div>
+                                        <a href="./images/location/Banqiao4.jpg">
+                                        <img src="./images/location/Banqiao4.jpg"/>
+                                        </a>
+                                        <a href="./images/location/Banqiao5.jpg">
+                                        <img src="./images/location/Banqiao5.jpg"/>
+                                        </a>
+                                    </div>
                                 </li>
                                 <li id="photo_tab2" class="event">
-
+                                    <div class="showbox2">
+                                        <img id="show-image2" src="./images/location/Taoyuan1.jpg"/>
+                                    </div>
+                                    <div class="abgne-block2">
+                                        <a href="./images/location/Taoyuan1.jpg">
+                                        <img src="./images/location/Taoyuan1.jpg"/>
+                                        </a>
+                                        <a href="./images/location/Taoyuan2.jpg">
+                                        <img src="./images/location/Taoyuan2.jpg"/>
+                                        </a>
+                                        <a href="./images/location/Taoyuan3.jpg">
+                                        <img src="./images/location/Taoyuan3.jpg"/>
+                                        </a>
+                                        <a href="./images/location/Taoyuan4.jpg">
+                                        <img src="./images/location/Taoyuan4.jpg"/>
+                                        </a>
+                                        <a href="./images/location/Taoyuan5.jpg">
+                                        <img src="./images/location/Taoyuan5.jpg"/>
+                                        </a>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -186,39 +182,47 @@
                 </div>
             </section>
             <section id="block_location3" class="block_location3">
-                <div class="center">
+                <div class="center tabs_list">
                     <article>
                         <h2>
                             <span class="zh">線上預約</span>
                             <span class="en">Online Reservation</span>
                         </h2>
                         <p>歡迎預約諮詢設計相關資訊</p>
-                        <div class="text">
-                            <h3>營業時間</h3>
-                            <p>Mon.- Fri.​9:00 – 18:00 <br/>Sat.預約制  Sun.公休</p>
-                        </div>
-                        <div class="text">
-                            <h3>商業合作信箱</h3>
-                            <p>hirotv16888@gmail.com</p>
-                        </div>
+                        <ul class="info">
+                            <li class="text">
+                                <h3>營業時間</h3>
+                                <p>Mon.- Fri.​9:00 – 18:00 <br/>Sat.預約制  Sun.公休</p>
+                            </li>
+                            <li class="text">
+                                <h3>商業合作信箱</h3>
+                                <p>hirotv16888@gmail.com</p>
+                            </li>
+                        </ul>
                         <ul class="tabs">
                             <li class="active">
-                                <a href="#">
+                                <a href="#map_tab1" title="板橋總部">
                                     <span>板橋總部</span>
                                     <span>新北市板橋區民生路三段176號</span>
                                     <span>02-82855225</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#map_tab2" title="桃園旗艦店">
                                     <span>桃園旗艦店</span>
-                                    <span>新北市板橋區民生路三段176號</span>
-                                    <span>02-82855225</span>
+                                    <span>桃園市楊梅區甡甡路768號</span>
+                                    <span>03-2717699</span>
                                 </a>
                             </li>
                         </ul>
                         <p>本店位於板橋與新莊的交匯處，這裡是翻你的老屋的起點，服務超過上百位屋主與老屋，多次媒體採訪、新聞轉載，團隊資歷平均超過十年，針對老舊格局、漏水壁癌、電力加強等老屋核心問題給予最妥善的規劃，讓老屋煥然新生，為這個空間的回憶與感動，延續新的篇章。</p>
                     </article>
+                    <div class="tab_container map">
+                        <ul class="tab_content">
+                            <li id="map_tab1"><iframe title="新北市板橋區民生路三段176號" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.145484214948!2d121.46286137537628!3d25.029136377819544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a86b27c52775%3A0x9639c17bd6e6c061!2zMjIw5paw5YyX5biC5p2_5qmL5Y2A5rCR55Sf6Lev5LiJ5q61MTc26Jmf!5e0!3m2!1szh-TW!2stw!4v1717051597307!5m2!1szh-TW!2stw" width="678" height="679" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+                            <li id="map_tab2"><iframe title="桃園市楊梅區甡甡路768號" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.185013519761!2d121.11971487604751!3d24.89167004400666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34683b8b79c682f5%3A0x273cd8b8517c830e!2zMzI25qGD5ZyS5biC5qWK5qKF5Y2A55Sh55Sh6LevNzY46Jmf!5e0!3m2!1szh-TW!2stw!4v1717052230176!5m2!1szh-TW!2stw" width="678" height="679" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </main>
@@ -290,6 +294,21 @@
             // 如果現在大圖跟目前要顯示的圖不是同一張時
             if($showImage.attr('src') != _src){
                 $showImage.hide().attr('src', _src).stop(false, true).fadeTo(400, 1);
+            }
+        }).click(function(){
+            // 如果超連結被點擊時, 取消連結動作
+            return false;
+        });
+
+        var $showImage2 = $('#show-image2');
+    
+        // 當滑鼠移到 .abgne-block-20120106 中的某一個超連結時
+        $('.abgne-block2 a').mouseover(function(){
+            var $this = $(this), 
+                _src = $this.attr('href');
+            // 如果現在大圖跟目前要顯示的圖不是同一張時
+            if($showImage2.attr('src') != _src){
+                $showImage2.hide().attr('src', _src).stop(false, true).fadeTo(400, 1);
             }
         }).click(function(){
             // 如果超連結被點擊時, 取消連結動作
