@@ -1,0 +1,28 @@
+@for $i from 1 through 10 {
+	.block_portfolio#{$i}{
+		clear: both;
+		padding: 72px 0;
+	}
+	.block_portfolio1 .swiper-slide#{$i}{
+		background-image: url('../images/portfolio/main_slice#{$i}.jpg');
+	}
+
+	.block_portfolio4 span[aria-label="Go to slide #{$i}"]{
+		&::before{
+			content: '0#{$i}';
+		}
+	}
+}
+
+.block_portfolio1{
+	padding: 0;
+}
+.block_portfolio2{
+	background-color: white;
+}
+.block_portfolio3{
+	background-color: #EBEBEB;
+}
+.block_portfolio3{
+	background-color: #D8D6CE;
+}

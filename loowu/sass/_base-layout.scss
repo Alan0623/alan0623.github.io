@@ -470,6 +470,13 @@ header class="header"
 		padding: 16px 0;
 		.mark_logo{
 			display: inline-block;
+			.logo{
+				width: 204px;
+				margin-right: 52px;
+			}
+			.mid{
+				width: 193px;
+			}
 			h1{
 				@extend %hide-text;
 			}
@@ -487,11 +494,12 @@ header class="header"
 			text-align: center;
 			float: left;
 			// margin: 0 8px;
-			margin-left: 16px;
+			margin-left: 0px;
 			a{
+				font-size: 0.95em;
 				display: block;
 				color: white;
-				padding: 6px 32px;
+				padding: 6px 20.5px;
 				border-radius: 100px;
 				border: transparent 2px solid;
 				@include rwd(1060){
@@ -517,8 +525,8 @@ header class="header"
 				display: none;
 			}
 			&.location{
-				margin-left: 0;
-    			margin-right: 8px;
+				margin-right: 24px;
+				margin-left: 20px;
 				a{
 					position: relative;
 					box-sizing: border-box;
@@ -550,6 +558,7 @@ header class="header"
 			&.reservation{
 				a{
 					border-color: white;
+					padding: 6px 30px;
 					&:hover, &:focus{
 						border-color: black;
 						background-color: black;
@@ -606,7 +615,7 @@ footer class="footer"
 		width: 40px;
 		height: 40px;
 		border-radius: 40px;
-		border: white solid 2px;
+		border: white solid 1px;
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -661,7 +670,25 @@ footer class="footer"
 			display: block;
 			float: left;
 		}
+		.mark_logo{
+			display: block;
+			float: left;
+			.logo{
+				width: 169px;
+				margin-right: 36px;
+			}
+			.mid{
+				width: 160px;
+			}
 
+		}
+		.social_media{
+			margin-top: 4px;
+			a{
+				width: 32px;
+				height: 32px;
+			}
+		} 
 	}
 	.footer_info_list{
 		display: flex;
@@ -670,6 +697,7 @@ footer class="footer"
 		align-content: flex-start;
 		line-height: 1.8em;
 		margin: 16px 0;
+		padding-left: 6px;
 		li{
 			flex: 0 0 50%;
 			box-sizing: border-box;
@@ -681,6 +709,7 @@ footer class="footer"
 			}
 			p{
 				letter-spacing: 0.1em;
+				font-weight: lighter;
 			}
 			a{
 				color: white;
@@ -693,6 +722,7 @@ footer class="footer"
 			}
 			&.location{
 				position: relative;
+				padding-left: 64px;
 				&::before{
 					content: $content;
 					display: block;
@@ -704,7 +734,7 @@ footer class="footer"
 					background-position: center;
 					position: absolute;
 					top: 20px;
-					left: -30px;
+					left: 33px;
 					z-index: 2;
 				}
 			}
@@ -715,6 +745,8 @@ footer class="footer"
 	display: inline-block;
 	letter-spacing: 0.1em;
 	transform: translateY(-24px);
+	float: left;
+    clear: both;
 	@include media('mobile') {
 		letter-spacing: 0.1em;
 		transform: inherit;

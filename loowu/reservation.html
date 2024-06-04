@@ -58,7 +58,7 @@
         </noscript>
         <header class="mobile_top_bar_box">
             <div class="mobile_logo">
-                <a href="/" title="翻你的老屋"><img src="./images/logo.svg" alt="行動網頁-翻你的老屋商標"/></a>
+                <a href="/" title="翻你的老屋"><img src="./images/logo.png" alt="行動網頁-翻你的老屋商標"/></a>
             </div>
             <a id="mobile_menu" href="javascript:void(0)" title="手機版選單"><span>手機版選單</span></a>
             <div id="mobile_scroll_menu"><!--手機版選單-->
@@ -80,7 +80,8 @@
             <div class="header_center">
                 <nav class="main_menu">
                     <a class="mark_logo" href="index.html" title="翻你的老屋[回到首頁]">
-                        <img src="images/logo.png" alt="翻你的老屋標誌">
+                        <img class="logo" src="images/logo.png" alt="翻你的老屋標誌">
+                        <img class="mid" src="images/mid.svg" alt="Mingfang Interiot design">
                         <h1>翻你的老屋</h1>
                     </a>
                     <ul class="main_menu_ul">
@@ -125,7 +126,7 @@
             <section id="block_reservation2" class="block_reservation2">
                 <form>
                 <fieldset class="center">
-                    <article>
+                    <article class="article0">
                         <h2><span class="zh">接案門檻</span></h2>
                         <div class="info">
                             <h3>老屋翻新</h3>
@@ -136,203 +137,218 @@
                             <p>新成屋:150萬起<br/>毛胚屋:200萬起 (以上不含家具、家電)</p>
                         </div>
                     </article>
-                    <article>
-                        <span class="part">PART.01</span>
-                        <div class="from">
-                            <legend class="h2">裝修地點</legend>
-                            <p>目前服務地區僅有「雙北地區、桃園地區」</p>
-                            <ul>
-                                <li>
-                                    <input name="region" id="northern_region" type="radio" title="雙北地區" value="雙北地區">
-                                    <label for="northern_region">雙北地區</label>
-                                </li>
-                                <li>
-                                    <input name="region" id="taoyuan_region" type="radio" title="桃園地區" value="桃園地區">
-                                    <label for="taoyuan_region">桃園地區</label>
-                                </li>
-                            </ul>
+                    <article class="article1">
+                        <div class="title"><span class="part">PART.01</span></div>
+                        <div class="article_form">
+                            <fieldset class="from">
+                                <legend class="h2">裝修地點</legend>
+                                <p>目前服務地區僅有「雙北地區、桃園地區」</p>
+                                <ul>
+                                    <li>
+                                        <div class="checkbok">
+                                            <input name="region" id="northern_region" type="radio" title="雙北地區" value="雙北地區">
+                                            <label for="northern_region">雙北地區</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="checkbok">
+                                            <input name="region" id="taoyuan_region" type="radio" title="桃園地區" value="桃園地區">
+                                            <label for="taoyuan_region">桃園地區</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <fieldset class="from">
+                                <legend class="h2">裝修所在的詳細地址</legend>
+                                <div class="gary_info">
+                                    <textarea name="Address" id="Address" placeholder="[ 台北地區 ] 、 [ 新北地區 ] 、[ 桃園地區 ] 、[ 中壢地區 ] 為主，暫不包含：三芝、金山、深坑、平溪、石碇、雙溪、貢寮、坪林、烏來及其他縣市"></textarea>
+                                </div>
+                            </fieldset>
                         </div>
-                        <div class="from">
-                            <h2>裝修所在的詳細地址</h2>
-                            <div class="gary_info">[ 台北地區 ] 、 [ 新北地區 ] 、[ 桃園地區 ] 、[ 中壢地區 ] 為主，<br/>暫不包含：三芝、金山、深坑、平溪、石碇、雙溪、貢寮、坪林、烏來及其他縣市</div>
+                        <div class="article_form">
+                            <fieldset class="from">
+                                <legend class="h2">裝修預算</legend>
+                                <p>僅承接 200 萬起專案（不含傢俱、家電），<br/>可簡易計算單坪8-12萬，局部修繕本公司未承攬</p>
+                                <ul>
+                                    <li><div class="checkbok">
+                                        <input name="price" id="200w" type="radio" title="200-250萬" value="200-250萬">
+                                        <label for="200w">200-250萬</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="price" id="250w" type="radio" title="250-300萬" value="250-300萬">
+                                        <label for="250w">250-300萬</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="price" id="300w" type="radio" title="300-400萬" value="300-400萬">
+                                        <label for="300w">300-400萬</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="price" id="400w" type="radio" title="400萬以上" value="400萬以上">
+                                        <label for="400w">400萬以上</label></div>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <fieldset class="from">
+                                <legend class="h2">方便聯繫時段</legend>
+                                <p>初訪約10分鐘</p>
+                                <ul>
+                                    <li><div class="checkbok">
+                                        <input name="time" id="alltime" type="checkbox" title="全時段皆可" value="全時段皆可">
+                                        <label for="alltime">全時段皆可</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="time" id="9time" type="checkbox" title="9:00-12:00" value="9:00-12:00">
+                                        <label for="9time">9:00-12:00</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="time" id="13time" type="checkbox" title="13:00-18:00" value="13:00-18:00">
+                                        <label for="13time">13:00-18:00</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="time" id="18time" type="checkbox" title="18:00-21:00" value="18:00-21:00">
+                                        <label for="18time">18:00-21:00</label></div>
+                                    </li>
+                                </ul>
+                            </fieldset>
                         </div>
-                        <div class="from">
-                            <legend class="h2">裝修預算</legend>
-                            <p>僅承接 200 萬起專案（不含傢俱、家電），<br/>可簡易計算單坪8-12萬，局部修繕本公司未承攬</p>
-                            <ul>
-                                <li>
-                                    <input name="price" id="200w" type="radio" title="200-250萬" value="200-250萬">
-                                    <label for="200w">200-250萬</label>
-                                </li>
-                                <li>
-                                    <input name="price" id="250w" type="radio" title="250-300萬" value="250-300萬">
-                                    <label for="250w">250-300萬</label>
-                                </li>
-                                <li>
-                                    <input name="price" id="300w" type="radio" title="300-400萬" value="300-400萬">
-                                    <label for="300w">300-400萬</label>
-                                </li>
-                                <li>
-                                    <input name="price" id="400w" type="radio" title="400萬以上" value="400萬以上">
-                                    <label for="400w">400萬以上</label>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="from">
-                            <h2>方便聯繫時段</h2>
-                            <p>初訪約10分鐘</p>
-                            <ul>
-                                <li>
-                                    <input name="time" id="alltime" type="checkbox" title="全時段皆可" value="全時段皆可">
-                                    <label for="alltime">全時段皆可</label>
-                                </li>
-                                <li>
-                                    <input name="time" id="9time" type="checkbox" title="9:00-12:00" value="9:00-12:00">
-                                    <label for="9time">9:00-12:00</label>
-                                </li>
-                                <li>
-                                    <input name="time" id="13time" type="checkbox" title="13:00-18:00" value="13:00-18:00">
-                                    <label for="13time">13:00-18:00</label>
-                                </li>
-                                <li>
-                                    <input name="time" id="18time" type="checkbox" title="18:00-21:00" value="18:00-21:00">
-                                    <label for="18time">18:00-21:00</label>
-                                </li>
-                            </ul>
-                        </div>
+
                     </article>
-                    <article>
-                        <span class="part">PART.02</span>
-                        <div class="from">
+                    <article class="article2">
+                        <div class="title"><span class="part">PART.02</span></div>
+                        <fieldset class="from">
                             <h2>本公司酌收現場實勘規劃諮詢費 $3,000元</h2>
-                            <h3>服務內容包含：</h3>
                             <ol class="tab_list">
+                                <h3>服務內容包含：</h3>
                                 <li>1.老屋現場實勘（確認房屋狀況、丈量）</li>
                                 <li>2.平面配置圖討論（原況圖、規劃圖）</li>
                                 <li>3.風格提案 （預算討論、風格設定）</li>
                             </ol>
-                            <div class="3000ntd">
-                                <input name="3000ntd" id="3000ntd" type="checkbox" title="瞭解，並且同意" value="瞭解，並且同意">
-                                <label for="3000ntd">瞭解，並且同意</label>
+                            <div class="agree3000ntd"><div class="checkbok">
+                                <input name="agree3000ntd" id="agree3000ntd" type="checkbox" title="瞭解，並且同意" value="瞭解，並且同意">
+                                <label for="agree3000ntd">瞭解，並且同意</label></div>
                             </div>
-                        </div>
+                        </fieldset>
                     </article>
-                    <article>
-                        <span class="part">PART.03</span>
-                        <div class="from customer_information">
-                            <h2>客戶資訊</h2>
-                            <ul>
-                                <li>
-                                    <input name="interior_style" id="interior_style" type="text" title="真實姓名" placeholder="真實姓名">
-                                    <label for="interior_style">真實姓名</label>
-                                </li>
-                                <li>
-                                    <input name="interior_style" id="interior_style" type="text" title="裝修屋齡" placeholder="裝修屋齡">
-                                    <label for="interior_style">裝修屋齡</label>
-                                </li>
-                                <li>
-                                    <input name="interior_style" id="interior_style" type="text" title="LINE ID" placeholder="LINE ID">
-                                    <label for="interior_style">LINE ID</label>
-                                </li>
-                                <li>
-                                    <input name="interior_style" id="interior_style" type="text" title="室內裝修實際坪數" placeholder="室內裝修實際坪數">
-                                    <label for="interior_style">室內裝修實際坪數</label>
-                                </li>
-                                <li>
-                                    <input name="interior_style" id="interior_style" type="text" title="聯絡電話" placeholder="聯絡電話">
-                                    <label for="interior_style">聯絡電話</label>
-                                    <p>三次未接通視同無效表單</p>
-                                </li>
-                                <li>
-                                    <select name="housing_category" id="housing_category">
-                                        <option selected>房屋類別</option>
-                                        <option value="公寓 (單層)">公寓 (單層)</option>
-                                        <option value="公寓 (樓中樓、頂樓加蓋)">公寓 (樓中樓、頂樓加蓋)</option>
-                                        <option value="電梯大樓、集合式住宅、電梯華廈">電梯大樓、集合式住宅、電梯華廈</option>
-                                        <option value="透天">透天</option>
-                                        <option value="商業空間">商業空間</option>
-                                        <option value="合法隔套">合法隔套</option>
-                                    </select>
-                                    <label for="housing_category">房屋類別</label>
-                                </li>
-                            </ul>
+                    <article class="article3">
+                        <div class="title"><span class="part">PART.03</span></div>
+                        <div class="article_form">
+                            <fieldset class="from customer_information">
+                                <legend class="h2">客戶資訊</legend>
+                                <ul>
+                                    <li><div class="checkbok">
+                                        <input name="interior_style" id="interior_style" type="text" title="真實姓名" placeholder="真實姓名">
+                                        <label for="interior_style">真實姓名</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="interior_style" id="interior_style" type="text" title="裝修屋齡" placeholder="裝修屋齡">
+                                        <label for="interior_style">裝修屋齡</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="interior_style" id="interior_style" type="text" title="LINE ID" placeholder="LINE ID">
+                                        <label for="interior_style">LINE ID</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="interior_style" id="interior_style" type="text" title="室內裝修實際坪數" placeholder="室內裝修實際坪數">
+                                        <label for="interior_style">室內裝修實際坪數</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="interior_style" id="interior_style" type="text" title="聯絡電話" placeholder="聯絡電話">
+                                        <label for="interior_style">聯絡電話</label></div>
+                                        <p>三次未接通視同無效表單</p>
+                                    </li>
+                                    <li>
+                                        <select name="housing_category" id="housing_category">
+                                            <option selected>房屋類別</option>
+                                            <option value="公寓 (單層)">公寓 (單層)</option>
+                                            <option value="公寓 (樓中樓、頂樓加蓋)">公寓 (樓中樓、頂樓加蓋)</option>
+                                            <option value="電梯大樓、集合式住宅、電梯華廈">電梯大樓、集合式住宅、電梯華廈</option>
+                                            <option value="透天">透天</option>
+                                            <option value="商業空間">商業空間</option>
+                                            <option value="合法隔套">合法隔套</option>
+                                        </select>
+                                        <label for="housing_category">房屋類別</label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <fieldset class="from customer_information">
+                                <legend class="h2">特殊需求說明</legend>
+                                <p>若 “無特殊需求” 可略過</p>
+                                <textarea name="special_needs_description" id="" cols="30" rows="5" placeholder="風水、無障礙空間、AI智慧宅"></textarea>
+                                <label for="special_needs_description">特殊需求說明</label>
+                            </fieldset>
                         </div>
-                        <div class="from customer_information">
-                            <h2>特殊需求說明</h2>
-                            <p>若 “無特殊需求” 可略過</p>
-                            <textarea name="special_needs_description" id="" cols="30" rows="10" placeholder="風水、無障礙空間、AI智慧宅"></textarea>
-                            <label for="special_needs_description">特殊需求說明</label>
-                        </div>
-                        <div class="from">
-                            <h2>您喜歡的室內風格？</h2>
-                            <p>可複選</p>
-                            <ul>
-                                <li>
-                                    <input name="interior_style" id="modern_style" type="checkbox" title="現代風" value="現代風">
-                                    <label for="modern_style">現代風</label>
-                                </li>
-                                <li>
-                                    <input name="interior_style" id="MUJI_style" type="checkbox" title="無印風" value="無印風">
-                                    <label for="MUJI_style">無印風</label>
-                                </li>
-                                <li>
-                                    <input name="interior_style" id="luxurious_style" type="checkbox" title="奢華風" value="奢華風">
-                                    <label for="luxurious_style">奢華風</label>
-                                </li>
-                                <li>
-                                    <input name="interior_style" id="industrial_style" type="checkbox" title="工業風" value="工業風">
-                                    <label for="industrial_style">工業風</label>
-                                </li>
-                                <li>
-                                    <input name="interior_style" id="nordic_style" type="checkbox" title="北歐風" value="北歐風">
-                                    <label for="nordic_style">北歐風</label>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="from">
-                            <h2>規劃需求</h2>
-                            <p>可複選</p>
-                            <ul>
-                                <li>
-                                    <input name="planning_needs" id="renovation" type="checkbox" title="格局翻新" value="格局翻新">
-                                    <label for="renovation">格局翻新</label>
-                                </li>
-                                <li>
-                                    <input name="planning_needs" id="expansion" type="checkbox" title="擴建" value="擴建">
-                                    <label for="expansion">擴建</label>
-                                </li>
-                                <li>
-                                    <input name="planning_needs" id="structural_strengthening" type="checkbox" title="結構加強" value="結構加強">
-                                    <label for="structural_strengthening">結構加強</label>
-                                </li>
-                                <li>
-                                    <input name="planning_needs" id="tin_house_renovation" type="checkbox" title="鐵皮屋翻新" value="鐵皮屋翻新">
-                                    <label for="tin_house_renovation">鐵皮屋翻新</label>
-                                </li>
-                                <li>
-                                    <input name="planning_needs" id="water_and_electricity_reconnected" type="checkbox" title="水電重新牽線" value="水電重新牽線">
-                                    <label for="water_and_electricity_reconnected">水電重新牽線</label>
-                                </li>
-                                <li>
-                                    <input name="planning_needs" id="whole_room_door_and_window_planning" type="checkbox" title="全室門窗規劃" value="全室門窗規劃">
-                                    <label for="whole_room_door_and_window_planning">全室門窗規劃</label>
-                                </li>
-                                <li>
-                                    <input name="planning_needs" id="soft_decoration_planning" type="checkbox" title="軟裝規劃" value="軟裝規劃">
-                                    <label for="soft_decoration_planning">軟裝規劃</label>
-                                </li>
-                                <li>
-                                    <input name="planning_needs" id="wall_cancer_and_wet_water_treatment" type="checkbox" title="壁癌/濕水處理" value="壁癌/濕水處理">
-                                    <label for="wall_cancer_and_wet_water_treatment">壁癌/濕水處理</label>
-                                </li>
-                            </ul>
+                        <div class="article_form">
+                            <fieldset class="from">
+                                <legend class="h2">您喜歡的室內風格？</legend>
+                                <p>可複選</p>
+                                <ul>
+                                    <li><div class="checkbok">
+                                        <input name="interior_style" id="modern_style" type="checkbox" title="現代風" value="現代風">
+                                        <label for="modern_style">現代風</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="interior_style" id="MUJI_style" type="checkbox" title="無印風" value="無印風">
+                                        <label for="MUJI_style">無印風</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="interior_style" id="luxurious_style" type="checkbox" title="奢華風" value="奢華風">
+                                        <label for="luxurious_style">奢華風</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="interior_style" id="industrial_style" type="checkbox" title="工業風" value="工業風">
+                                        <label for="industrial_style">工業風</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="interior_style" id="nordic_style" type="checkbox" title="北歐風" value="北歐風">
+                                        <label for="nordic_style">北歐風</label></div>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <fieldset class="from">
+                                <legend class="h2">規劃需求</legend>
+                                <p>可複選</p>
+                                <ul>
+                                    <li><div class="checkbok">
+                                        <input name="planning_needs" id="renovation" type="checkbox" title="格局翻新" value="格局翻新">
+                                        <label for="renovation">格局翻新</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="planning_needs" id="expansion" type="checkbox" title="擴建" value="擴建">
+                                        <label for="expansion">擴建</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="planning_needs" id="structural_strengthening" type="checkbox" title="結構加強" value="結構加強">
+                                        <label for="structural_strengthening">結構加強</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="planning_needs" id="tin_house_renovation" type="checkbox" title="鐵皮屋翻新" value="鐵皮屋翻新">
+                                        <label for="tin_house_renovation">鐵皮屋翻新</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="planning_needs" id="water_and_electricity_reconnected" type="checkbox" title="水電重新牽線" value="水電重新牽線">
+                                        <label for="water_and_electricity_reconnected">水電重新牽線</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="planning_needs" id="whole_room_door_and_window_planning" type="checkbox" title="全室門窗規劃" value="全室門窗規劃">
+                                        <label for="whole_room_door_and_window_planning">全室門窗規劃</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="planning_needs" id="soft_decoration_planning" type="checkbox" title="軟裝規劃" value="軟裝規劃">
+                                        <label for="soft_decoration_planning">軟裝規劃</label></div>
+                                    </li>
+                                    <li><div class="checkbok">
+                                        <input name="planning_needs" id="wall_cancer_and_wet_water_treatment" type="checkbox" title="壁癌/濕水處理" value="壁癌/濕水處理">
+                                        <label for="wall_cancer_and_wet_water_treatment">壁癌/濕水處理</label></div>
+                                    </li>
+                                </ul>
+                            </fieldset>
                         </div>
                     </article>
                     <article class="end_article">
                         <button id="go" type="button" onclick="c.cusForm();" title="確認送出">確認送出</button>
-                        <div class="agree">
+                        <div class="agree"><div class="checkbok">
                             <input id="agree" type="checkbox">
-                            <label for="agree"><span>我已詳細閱讀並同意<a href="#" target="_blank" title="隱私權使用條款">隱私權使用條款</a></span></label>
+                            <label for="agree"><span>我已詳細閱讀並同意<a href="#" target="_blank" title="隱私權使用條款">隱私權使用條款</a></span></label></div>
                         </div>
                     </article>
                 </fieldset>
@@ -343,9 +359,10 @@
             <div class="footer_center">
                 <section class="footer_info">
                     <div class="footer_info_logo">
-                        <figure class="img">
-                            <img src="./images/logo.png" alt="翻你的老屋標誌">
-                        </figure>
+                        <a class="mark_logo" href="index.html" title="翻你的老屋[回到首頁]">
+                            <img class="logo" src="images/logo.png" alt="翻你的老屋標誌">
+                            <img class="mid" src="images/mid.svg" alt="Mingfang Interiot design">
+                        </a>
                         <ul class="social_media">
                             <li class="form"><a title="form" href="#">form</a></li>
                             <li class="youtube"><a title="youtube" href="https://www.youtube.com/channel/UC6PnHBBAjnRlB-sOsMgL_Fw">youtube</a></li>
