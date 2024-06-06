@@ -104,10 +104,10 @@
                     </div>
                     <article>
                         <div class="h2">
-                        <span class="portfolio_num">01</span>
-                        <span class="portfolio_zh">台北復興北路</span>
+                        <span class="portfolio_num">21</span>
+                        <span class="portfolio_zh">中和景新街</span>
                         <span class="portfolio_zh2">公寓老宅翻新</span>
-                        <p>採用現代簡約灰階的風格，整體顏色以灰白黑為主色調，俐落的顏色分隔讓空間帶有時尚搭配一些造型鐵件、特殊設計電視牆整體氛圍和諧一致，在喧囂都市裡營造星級飯店感</p>
+                        <p>剛踏進這間房子時，仔細看會發現外牆有白華的狀況，陳舊的櫃體、廚具都需要做全面的整治，屋主非常孝順，特別叮囑孝親房的配置需要無障礙設計，同時長輩愛物惜物的習慣，也保留了原本臥室的家具以及化妝桌，改造完之後，告別原本的老舊廚房，調整為超大L型廚房，辦公區域也配置了系統櫃體與活動層板，整體空間感明亮舒適。</p>
                         </div>
                     </article>
                     <div class="swiper-wrapper swiper-wrapper_about">
@@ -136,12 +136,27 @@
                                     </div>
                                     <div class="case_works_big_img">
                                         <article>
-                                            <h2><span class="zh">灰色旋律</span></h2>
-                                            <ul>
-                                                <li>空間｜公寓5F/4F 4房1廳2衛</li>
-                                                <li>坪數｜32坪</li>
-                                                <li>屋齡｜30年</li>
-                                            </ul>
+                                            <div class="case_works_big_img_info">
+                                                <h2><span class="zh">中和景新街</span></h2>
+                                                <ul>
+                                                    <li>風格｜北歐無印風</li>
+                                                    <li>空間｜公寓5F/3F 3房2廳2衛1書房</li>
+                                                    <li>坪數｜40坪</li>
+                                                    <li>屋齡｜40年</li>
+                                                </ul>
+                                            </div>
+                                            <div class="case_works_big_img_focus">
+                                                <h3>
+                                                    <span class="zh">改造重點</span>
+                                                    <span class="en">Transformation focus</span>
+                                                </h3>
+                                                <ul>
+                                                    <li>#牆面漏水</li>
+                                                    <li>#中島規劃</li>
+                                                    <li>#牆面開洞書房改造</li>
+                                                    <li>#舒適辦公宅</li>
+                                                </ul>
+                                            </div>
                                         </article>
                                     </div>
                                 </li>
@@ -261,9 +276,7 @@
                         <div class="swiper-slide swiper-slide1">
                             <ul class="block_works_list">
                                 <li>
-                                    <a href="#">
-                                        <figure class="img"><img src="https://picsum.photos/416/237?image=41"></figure>
-                                    </a>
+                                    <a href="https://picsum.photos/2080/1185?image=41" data-fancybox="gallery"><figure class="img"><img alt="Gallery picture #1" src="https://picsum.photos/416/237?image=41"></figure></a>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -469,9 +482,24 @@
     <script src="js/jquery.js"></script>
     <script src="js/jquery.event.move.js"></script>
     <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/jquery.lightbox.js"></script>
     <script src="js/script.js"></script>
     <script src="js/effect.js"></script>
     <script>
+    /*light box*/
+    $(function() {
+        var imgOpts = $.extend(true, {}, $.fancybox.defaults, {
+            caption : function( instance, item ) {
+                return $(this).next('figcaption').html();
+            }
+        });
+
+        // Shortcut to apply options to image gallery
+        function applyImgOpts() {
+            $('[data-fancybox="images"]').fancybox(imgOpts);
+        }
+        applyImgOpts();
+    });
     /*案例作品 前後對比*/
     $(window).load(function() {
         $("#container1").twentytwenty();

@@ -442,8 +442,8 @@ header class="mobile_top_bar_box"
   display: block;
   float: left;
   left: 16px;
-  margin-top: 13.5px;
-  max-width: 160px;
+  margin-top: 0;
+  max-height: 56px;
   position: fixed;
   z-index: 2;
 }
@@ -1586,7 +1586,8 @@ body.compensate-for-scrollbar {
   mix-blend-mode: difference;
   padding: 0 10px;
   pointer-events: none;
-  top: 0;
+  top: auto;
+  bottom: 0;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1594,13 +1595,13 @@ body.compensate-for-scrollbar {
   user-select: none;
 }
 
-/* line 108, ../sass/_fancybox.scss */
+/* line 109, ../sass/_fancybox.scss */
 .fancybox-toolbar {
   right: 0;
   top: 0;
 }
 
-/* line 113, ../sass/_fancybox.scss */
+/* line 114, ../sass/_fancybox.scss */
 .fancybox-stage {
   direction: ltr;
   overflow: visible;
@@ -1608,12 +1609,12 @@ body.compensate-for-scrollbar {
   z-index: 99994;
 }
 
-/* line 120, ../sass/_fancybox.scss */
+/* line 121, ../sass/_fancybox.scss */
 .fancybox-is-open .fancybox-stage {
   overflow: hidden;
 }
 
-/* line 124, ../sass/_fancybox.scss */
+/* line 125, ../sass/_fancybox.scss */
 .fancybox-slide {
   -webkit-backface-visibility: hidden;
   /* Using without prefix would break IE11 */
@@ -1633,7 +1634,7 @@ body.compensate-for-scrollbar {
   z-index: 99994;
 }
 
-/* line 144, ../sass/_fancybox.scss */
+/* line 145, ../sass/_fancybox.scss */
 .fancybox-slide::before {
   content: '';
   display: inline-block;
@@ -1643,7 +1644,7 @@ body.compensate-for-scrollbar {
   width: 0;
 }
 
-/* line 153, ../sass/_fancybox.scss */
+/* line 154, ../sass/_fancybox.scss */
 .fancybox-is-sliding .fancybox-slide,
 .fancybox-slide--previous,
 .fancybox-slide--current,
@@ -1652,23 +1653,23 @@ body.compensate-for-scrollbar {
   overflow: visible;
 }
 
-/* line 161, ../sass/_fancybox.scss */
+/* line 162, ../sass/_fancybox.scss */
 .fancybox-slide--image {
   overflow: hidden;
   padding: 44px 0;
 }
 
-/* line 166, ../sass/_fancybox.scss */
+/* line 167, ../sass/_fancybox.scss */
 .fancybox-slide--image::before {
   display: none;
 }
 
-/* line 170, ../sass/_fancybox.scss */
+/* line 171, ../sass/_fancybox.scss */
 .fancybox-slide--html {
   padding: 6px;
 }
 
-/* line 174, ../sass/_fancybox.scss */
+/* line 175, ../sass/_fancybox.scss */
 .fancybox-content {
   text-align: center;
   display: inline-block;
@@ -1680,23 +1681,23 @@ body.compensate-for-scrollbar {
   max-width: 800px;
   padding: 24px;
 }
-/* line 190, ../sass/_fancybox.scss */
+/* line 191, ../sass/_fancybox.scss */
 .fancybox-content figure {
   display: inline-block;
   margin: 0 auto;
   text-align: center;
 }
-/* line 196, ../sass/_fancybox.scss */
+/* line 197, ../sass/_fancybox.scss */
 .fancybox-content figure img {
   margin: 0 auto;
   display: block;
 }
-/* line 201, ../sass/_fancybox.scss */
+/* line 202, ../sass/_fancybox.scss */
 .fancybox-content figure .video-container {
   max-width: 800px;
   margin: 0 auto;
 }
-/* line 205, ../sass/_fancybox.scss */
+/* line 206, ../sass/_fancybox.scss */
 .fancybox-content figure figcaption {
   position: absolute;
   right: 0;
@@ -1708,13 +1709,13 @@ body.compensate-for-scrollbar {
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 6px;
 }
 @media screen and (max-width: 1320px) and (min-width: 1025px) {
-  /* line 205, ../sass/_fancybox.scss */
+  /* line 206, ../sass/_fancybox.scss */
   .fancybox-content figure figcaption {
     position: relative;
     width: 100%;
   }
 }
-/* line 218, ../sass/_fancybox.scss */
+/* line 219, ../sass/_fancybox.scss */
 .fancybox-content figure figcaption h4 {
   font-size: 1.6em;
   line-height: 1.3em;
@@ -1722,14 +1723,14 @@ body.compensate-for-scrollbar {
   color: #333;
   padding-bottom: 24px;
 }
-/* line 225, ../sass/_fancybox.scss */
+/* line 226, ../sass/_fancybox.scss */
 .fancybox-content figure figcaption p {
   font-size: 1.25em;
   line-height: 1.4em;
   font-weight: normal;
 }
 
-/* line 234, ../sass/_fancybox.scss */
+/* line 235, ../sass/_fancybox.scss */
 .fancybox-slide--image .fancybox-content {
   animation-timing-function: cubic-bezier(0.5, 0, 0.14, 1);
   -webkit-backface-visibility: hidden;
@@ -1752,41 +1753,42 @@ body.compensate-for-scrollbar {
   z-index: 99995;
 }
 
-/* line 256, ../sass/_fancybox.scss */
+/* line 257, ../sass/_fancybox.scss */
 .fancybox-can-zoomOut .fancybox-content {
   cursor: zoom-out;
 }
 
-/* line 260, ../sass/_fancybox.scss */
+/* line 261, ../sass/_fancybox.scss */
 .fancybox-can-zoomIn .fancybox-content {
   cursor: zoom-in;
 }
 
-/* line 264, ../sass/_fancybox.scss */
+/* line 265, ../sass/_fancybox.scss */
 .fancybox-can-swipe .fancybox-content,
 .fancybox-can-pan .fancybox-content {
   cursor: -webkit-grab;
   cursor: grab;
 }
 
-/* line 270, ../sass/_fancybox.scss */
+/* line 271, ../sass/_fancybox.scss */
 .fancybox-is-grabbing .fancybox-content {
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-/* line 275, ../sass/_fancybox.scss */
+/* line 276, ../sass/_fancybox.scss */
 .fancybox-container [data-selectable='true'] {
   cursor: text;
 }
 
-/* line 279, ../sass/_fancybox.scss */
+/* line 280, ../sass/_fancybox.scss */
 .fancybox-image,
 .fancybox-spaceball {
   background: transparent;
   border: 0;
   height: 100%;
   /* left: -50%; */
+  left: 0;
   margin: 0;
   max-height: none;
   max-width: none;
@@ -1800,12 +1802,12 @@ body.compensate-for-scrollbar {
   width: 100%;
 }
 
-/* line 298, ../sass/_fancybox.scss */
+/* line 300, ../sass/_fancybox.scss */
 .fancybox-spaceball {
   z-index: 1;
 }
 
-/* line 302, ../sass/_fancybox.scss */
+/* line 304, ../sass/_fancybox.scss */
 .fancybox-slide--video .fancybox-content,
 .fancybox-slide--map .fancybox-content,
 .fancybox-slide--pdf .fancybox-content,
@@ -1816,22 +1818,22 @@ body.compensate-for-scrollbar {
   width: 100%;
 }
 
-/* line 312, ../sass/_fancybox.scss */
+/* line 314, ../sass/_fancybox.scss */
 .fancybox-slide--video .fancybox-content {
   background: #000;
 }
 
-/* line 316, ../sass/_fancybox.scss */
+/* line 318, ../sass/_fancybox.scss */
 .fancybox-slide--map .fancybox-content {
   background: #e5e3df;
 }
 
-/* line 320, ../sass/_fancybox.scss */
+/* line 322, ../sass/_fancybox.scss */
 .fancybox-slide--iframe .fancybox-content {
   background: #fff;
 }
 
-/* line 324, ../sass/_fancybox.scss */
+/* line 326, ../sass/_fancybox.scss */
 .fancybox-video,
 .fancybox-iframe {
   background: transparent;
@@ -1845,14 +1847,14 @@ body.compensate-for-scrollbar {
 }
 
 /* Fix iOS */
-/* line 337, ../sass/_fancybox.scss */
+/* line 339, ../sass/_fancybox.scss */
 .fancybox-iframe {
   left: 0;
   position: absolute;
   top: 0;
 }
 
-/* line 343, ../sass/_fancybox.scss */
+/* line 345, ../sass/_fancybox.scss */
 .fancybox-error {
   background: #fff;
   cursor: default;
@@ -1861,7 +1863,7 @@ body.compensate-for-scrollbar {
   width: 100%;
 }
 
-/* line 351, ../sass/_fancybox.scss */
+/* line 353, ../sass/_fancybox.scss */
 .fancybox-error p {
   color: #444;
   font-size: 16px;
@@ -1871,7 +1873,7 @@ body.compensate-for-scrollbar {
 }
 
 /* Buttons */
-/* line 361, ../sass/_fancybox.scss */
+/* line 363, ../sass/_fancybox.scss */
 .fancybox-button {
   background: rgba(30, 30, 30, 0.6);
   border: 0;
@@ -1889,29 +1891,29 @@ body.compensate-for-scrollbar {
   width: 44px;
 }
 
-/* line 378, ../sass/_fancybox.scss */
+/* line 380, ../sass/_fancybox.scss */
 .fancybox-button,
 .fancybox-button:visited,
 .fancybox-button:link {
   color: #ccc;
 }
 
-/* line 384, ../sass/_fancybox.scss */
+/* line 386, ../sass/_fancybox.scss */
 .fancybox-button:hover {
   color: #fff;
 }
 
-/* line 388, ../sass/_fancybox.scss */
+/* line 390, ../sass/_fancybox.scss */
 .fancybox-button:focus {
   outline: none;
 }
 
-/* line 392, ../sass/_fancybox.scss */
+/* line 394, ../sass/_fancybox.scss */
 .fancybox-button.fancybox-focus {
   outline: 1px dotted;
 }
 
-/* line 396, ../sass/_fancybox.scss */
+/* line 398, ../sass/_fancybox.scss */
 .fancybox-button[disabled],
 .fancybox-button[disabled]:hover {
   color: #888;
@@ -1920,12 +1922,12 @@ body.compensate-for-scrollbar {
 }
 
 /* Fix IE11 */
-/* line 404, ../sass/_fancybox.scss */
+/* line 406, ../sass/_fancybox.scss */
 .fancybox-button div {
   height: 100%;
 }
 
-/* line 408, ../sass/_fancybox.scss */
+/* line 410, ../sass/_fancybox.scss */
 .fancybox-button svg {
   display: block;
   height: 100%;
@@ -1935,31 +1937,31 @@ body.compensate-for-scrollbar {
   color: #FFF;
 }
 @media screen and (max-width: 1320px) and (min-width: 1025px) {
-  /* line 408, ../sass/_fancybox.scss */
+  /* line 410, ../sass/_fancybox.scss */
   .fancybox-button svg {
     transform: skewY(0);
   }
 }
 
-/* line 421, ../sass/_fancybox.scss */
+/* line 423, ../sass/_fancybox.scss */
 .fancybox-button svg path {
   fill: currentColor;
   stroke-width: 0;
 }
 
-/* line 426, ../sass/_fancybox.scss */
+/* line 428, ../sass/_fancybox.scss */
 .fancybox-button--play svg:nth-child(2),
 .fancybox-button--fsenter svg:nth-child(2) {
   display: none;
 }
 
-/* line 431, ../sass/_fancybox.scss */
+/* line 433, ../sass/_fancybox.scss */
 .fancybox-button--pause svg:nth-child(1),
 .fancybox-button--fsexit svg:nth-child(1) {
   display: none;
 }
 
-/* line 436, ../sass/_fancybox.scss */
+/* line 438, ../sass/_fancybox.scss */
 .fancybox-progress {
   background: #ff5268;
   height: 2px;
@@ -1977,7 +1979,7 @@ body.compensate-for-scrollbar {
 }
 
 /* Close button on the top right corner of html content */
-/* line 454, ../sass/_fancybox.scss */
+/* line 456, ../sass/_fancybox.scss */
 .fancybox-close-small {
   border: 0;
   border-radius: 0;
@@ -1994,13 +1996,13 @@ body.compensate-for-scrollbar {
   background: #F9C270;
 }
 
-/* line 473, ../sass/_fancybox.scss */
+/* line 475, ../sass/_fancybox.scss */
 .fancybox-close-small:hover {
   background: #ffd597;
   opacity: 1;
 }
 
-/* line 479, ../sass/_fancybox.scss */
+/* line 481, ../sass/_fancybox.scss */
 .fancybox-slide--html .fancybox-close-small {
   color: currentColor;
   padding: 10px;
@@ -2008,19 +2010,19 @@ body.compensate-for-scrollbar {
   top: 0px !important;
 }
 
-/* line 486, ../sass/_fancybox.scss */
+/* line 488, ../sass/_fancybox.scss */
 .fancybox-slide--image.fancybox-is-scaling .fancybox-content {
   overflow: hidden;
 }
 
-/* line 490, ../sass/_fancybox.scss */
+/* line 492, ../sass/_fancybox.scss */
 .fancybox-is-scaling .fancybox-close-small,
 .fancybox-is-zoomable.fancybox-can-pan .fancybox-close-small {
   display: none;
 }
 
 /* Navigation arrows */
-/* line 497, ../sass/_fancybox.scss */
+/* line 499, ../sass/_fancybox.scss */
 .fancybox-navigation .fancybox-button {
   background-clip: content-box;
   height: 100px;
@@ -2030,19 +2032,19 @@ body.compensate-for-scrollbar {
   width: 70px;
 }
 
-/* line 506, ../sass/_fancybox.scss */
+/* line 508, ../sass/_fancybox.scss */
 .fancybox-navigation .fancybox-button div {
   padding: 7px;
 }
 
-/* line 510, ../sass/_fancybox.scss */
+/* line 512, ../sass/_fancybox.scss */
 .fancybox-navigation .fancybox-button--arrow_left {
   left: 0;
   left: env(safe-area-inset-left);
   padding: 31px 26px 31px 6px;
 }
 
-/* line 516, ../sass/_fancybox.scss */
+/* line 518, ../sass/_fancybox.scss */
 .fancybox-navigation .fancybox-button--arrow_right {
   padding: 31px 6px 31px 26px;
   right: 0;
@@ -2050,7 +2052,7 @@ body.compensate-for-scrollbar {
 }
 
 /* Caption */
-/* line 524, ../sass/_fancybox.scss */
+/* line 526, ../sass/_fancybox.scss */
 .fancybox-caption {
   bottom: 0;
   font-size: 14px;
@@ -2064,12 +2066,12 @@ body.compensate-for-scrollbar {
   z-index: 99996;
 }
 
-/* line 537, ../sass/_fancybox.scss */
+/* line 539, ../sass/_fancybox.scss */
 .fancybox-caption--separate {
   margin-top: -50px;
 }
 
-/* line 541, ../sass/_fancybox.scss */
+/* line 543, ../sass/_fancybox.scss */
 .fancybox-caption__body {
   max-height: 50vh;
   overflow: auto;
@@ -2082,7 +2084,7 @@ body.compensate-for-scrollbar {
   text-align: left;
 }
 
-/* line 552, ../sass/_fancybox.scss */
+/* line 554, ../sass/_fancybox.scss */
 .fancybox-caption__body h4 {
   font-size: 1.6em;
   line-height: 1.3em;
@@ -2090,18 +2092,18 @@ body.compensate-for-scrollbar {
   color: #333;
 }
 
-/* line 558, ../sass/_fancybox.scss */
+/* line 560, ../sass/_fancybox.scss */
 .fancybox-caption__body p {
   font-size: 1.25em;
 }
 
-/* line 567, ../sass/_fancybox.scss */
+/* line 569, ../sass/_fancybox.scss */
 .fancybox-caption a:hover {
   text-decoration: underline;
 }
 
 /* Loading indicator */
-/* line 573, ../sass/_fancybox.scss */
+/* line 575, ../sass/_fancybox.scss */
 .fancybox-loading {
   animation: fancybox-rotate 1s linear infinite;
   background: transparent;
@@ -2125,78 +2127,78 @@ body.compensate-for-scrollbar {
   }
 }
 /* Transition effects */
-/* line 598, ../sass/_fancybox.scss */
+/* line 600, ../sass/_fancybox.scss */
 .fancybox-animated {
   transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 }
 
 /* transitionEffect: slide */
-/* line 604, ../sass/_fancybox.scss */
+/* line 606, ../sass/_fancybox.scss */
 .fancybox-fx-slide.fancybox-slide--previous {
   opacity: 0;
   transform: translate3d(-100%, 0, 0);
 }
 
-/* line 609, ../sass/_fancybox.scss */
+/* line 611, ../sass/_fancybox.scss */
 .fancybox-fx-slide.fancybox-slide--next {
   opacity: 0;
   transform: translate3d(100%, 0, 0);
 }
 
-/* line 614, ../sass/_fancybox.scss */
+/* line 616, ../sass/_fancybox.scss */
 .fancybox-fx-slide.fancybox-slide--current {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
 
 /* transitionEffect: fade */
-/* line 621, ../sass/_fancybox.scss */
+/* line 623, ../sass/_fancybox.scss */
 .fancybox-fx-fade.fancybox-slide--previous,
 .fancybox-fx-fade.fancybox-slide--next {
   opacity: 0;
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-/* line 627, ../sass/_fancybox.scss */
+/* line 629, ../sass/_fancybox.scss */
 .fancybox-fx-fade.fancybox-slide--current {
   opacity: 1;
 }
 
 /* transitionEffect: zoom-in-out */
-/* line 633, ../sass/_fancybox.scss */
+/* line 635, ../sass/_fancybox.scss */
 .fancybox-fx-zoom-in-out.fancybox-slide--previous {
   opacity: 0;
   transform: scale3d(1.5, 1.5, 1.5);
 }
 
-/* line 638, ../sass/_fancybox.scss */
+/* line 640, ../sass/_fancybox.scss */
 .fancybox-fx-zoom-in-out.fancybox-slide--next {
   opacity: 0;
   transform: scale3d(0.5, 0.5, 0.5);
 }
 
-/* line 643, ../sass/_fancybox.scss */
+/* line 645, ../sass/_fancybox.scss */
 .fancybox-fx-zoom-in-out.fancybox-slide--current {
   opacity: 1;
   transform: scale3d(1, 1, 1);
 }
 
 /* transitionEffect: rotate */
-/* line 650, ../sass/_fancybox.scss */
+/* line 652, ../sass/_fancybox.scss */
 .fancybox-fx-rotate.fancybox-slide--previous {
   opacity: 0;
   -ms-transform: rotate(-360deg);
   transform: rotate(-360deg);
 }
 
-/* line 656, ../sass/_fancybox.scss */
+/* line 658, ../sass/_fancybox.scss */
 .fancybox-fx-rotate.fancybox-slide--next {
   opacity: 0;
   -ms-transform: rotate(360deg);
   transform: rotate(360deg);
 }
 
-/* line 662, ../sass/_fancybox.scss */
+/* line 664, ../sass/_fancybox.scss */
 .fancybox-fx-rotate.fancybox-slide--current {
   opacity: 1;
   -ms-transform: rotate(0deg);
@@ -2204,59 +2206,59 @@ body.compensate-for-scrollbar {
 }
 
 /* transitionEffect: circular */
-/* line 670, ../sass/_fancybox.scss */
+/* line 672, ../sass/_fancybox.scss */
 .fancybox-fx-circular.fancybox-slide--previous {
   opacity: 0;
   transform: scale3d(0, 0, 0) translate3d(-100%, 0, 0);
 }
 
-/* line 675, ../sass/_fancybox.scss */
+/* line 677, ../sass/_fancybox.scss */
 .fancybox-fx-circular.fancybox-slide--next {
   opacity: 0;
   transform: scale3d(0, 0, 0) translate3d(100%, 0, 0);
 }
 
-/* line 680, ../sass/_fancybox.scss */
+/* line 682, ../sass/_fancybox.scss */
 .fancybox-fx-circular.fancybox-slide--current {
   opacity: 1;
   transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
 }
 
 /* transitionEffect: tube */
-/* line 687, ../sass/_fancybox.scss */
+/* line 689, ../sass/_fancybox.scss */
 .fancybox-fx-tube.fancybox-slide--previous {
   transform: translate3d(-100%, 0, 0) scale(0.1) skew(-10deg);
 }
 
-/* line 691, ../sass/_fancybox.scss */
+/* line 693, ../sass/_fancybox.scss */
 .fancybox-fx-tube.fancybox-slide--next {
   transform: translate3d(100%, 0, 0) scale(0.1) skew(10deg);
 }
 
-/* line 695, ../sass/_fancybox.scss */
+/* line 697, ../sass/_fancybox.scss */
 .fancybox-fx-tube.fancybox-slide--current {
   transform: translate3d(0, 0, 0) scale(1);
 }
 
 /* Styling for Small-Screen Devices */
 @media all and (max-height: 576px) {
-  /* line 701, ../sass/_fancybox.scss */
+  /* line 703, ../sass/_fancybox.scss */
   .fancybox-slide {
     padding-left: 6px;
     padding-right: 6px;
   }
 
-  /* line 706, ../sass/_fancybox.scss */
+  /* line 708, ../sass/_fancybox.scss */
   .fancybox-slide--image {
     padding: 6px 0;
   }
 
-  /* line 710, ../sass/_fancybox.scss */
+  /* line 712, ../sass/_fancybox.scss */
   .fancybox-close-small {
     right: -6px;
   }
 
-  /* line 714, ../sass/_fancybox.scss */
+  /* line 716, ../sass/_fancybox.scss */
   .fancybox-slide--image .fancybox-close-small {
     background: #4e4e4e;
     color: #f2f4f6;
@@ -2268,14 +2270,14 @@ body.compensate-for-scrollbar {
     width: 36px;
   }
 
-  /* line 725, ../sass/_fancybox.scss */
+  /* line 727, ../sass/_fancybox.scss */
   .fancybox-caption {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
 /* Share */
-/* line 732, ../sass/_fancybox.scss */
+/* line 734, ../sass/_fancybox.scss */
 .fancybox-share {
   background: #f4f4f4;
   border-radius: 3px;
@@ -2284,7 +2286,7 @@ body.compensate-for-scrollbar {
   text-align: center;
 }
 
-/* line 740, ../sass/_fancybox.scss */
+/* line 742, ../sass/_fancybox.scss */
 .fancybox-share h1 {
   color: #222;
   font-size: 35px;
@@ -2292,13 +2294,13 @@ body.compensate-for-scrollbar {
   margin: 0 0 20px 0;
 }
 
-/* line 747, ../sass/_fancybox.scss */
+/* line 749, ../sass/_fancybox.scss */
 .fancybox-share p {
   margin: 0;
   padding: 0;
 }
 
-/* line 752, ../sass/_fancybox.scss */
+/* line 754, ../sass/_fancybox.scss */
 .fancybox-share__button {
   border: 0;
   border-radius: 3px;
@@ -2318,48 +2320,48 @@ body.compensate-for-scrollbar {
   white-space: nowrap;
 }
 
-/* line 771, ../sass/_fancybox.scss */
+/* line 773, ../sass/_fancybox.scss */
 .fancybox-share__button:visited,
 .fancybox-share__button:link {
   color: #fff;
 }
 
-/* line 776, ../sass/_fancybox.scss */
+/* line 778, ../sass/_fancybox.scss */
 .fancybox-share__button:hover {
   text-decoration: none;
 }
 
-/* line 780, ../sass/_fancybox.scss */
+/* line 782, ../sass/_fancybox.scss */
 .fancybox-share__button--fb {
   background: #3b5998;
 }
 
-/* line 784, ../sass/_fancybox.scss */
+/* line 786, ../sass/_fancybox.scss */
 .fancybox-share__button--fb:hover {
   background: #344e86;
 }
 
-/* line 788, ../sass/_fancybox.scss */
+/* line 790, ../sass/_fancybox.scss */
 .fancybox-share__button--pt {
   background: #bd081d;
 }
 
-/* line 792, ../sass/_fancybox.scss */
+/* line 794, ../sass/_fancybox.scss */
 .fancybox-share__button--pt:hover {
   background: #aa0719;
 }
 
-/* line 796, ../sass/_fancybox.scss */
+/* line 798, ../sass/_fancybox.scss */
 .fancybox-share__button--tw {
   background: #1da1f2;
 }
 
-/* line 800, ../sass/_fancybox.scss */
+/* line 802, ../sass/_fancybox.scss */
 .fancybox-share__button--tw:hover {
   background: #0d95e8;
 }
 
-/* line 804, ../sass/_fancybox.scss */
+/* line 806, ../sass/_fancybox.scss */
 .fancybox-share__button svg {
   height: 25px;
   margin-right: 7px;
@@ -2369,12 +2371,12 @@ body.compensate-for-scrollbar {
   width: 25px;
 }
 
-/* line 813, ../sass/_fancybox.scss */
+/* line 815, ../sass/_fancybox.scss */
 .fancybox-share__button svg path {
   fill: #fff;
 }
 
-/* line 817, ../sass/_fancybox.scss */
+/* line 819, ../sass/_fancybox.scss */
 .fancybox-share__input {
   background: transparent;
   border: 0;
@@ -2389,7 +2391,7 @@ body.compensate-for-scrollbar {
 }
 
 /* Thumbs */
-/* line 831, ../sass/_fancybox.scss */
+/* line 833, ../sass/_fancybox.scss */
 .fancybox-thumbs {
   background: #ddd;
   bottom: 0;
@@ -2406,28 +2408,28 @@ body.compensate-for-scrollbar {
   z-index: 99995;
 }
 
-/* line 847, ../sass/_fancybox.scss */
+/* line 849, ../sass/_fancybox.scss */
 .fancybox-thumbs-x {
   overflow-x: auto;
   overflow-y: hidden;
 }
 
-/* line 852, ../sass/_fancybox.scss */
+/* line 854, ../sass/_fancybox.scss */
 .fancybox-show-thumbs .fancybox-thumbs {
   display: block;
 }
 
-/* line 855, ../sass/_fancybox.scss */
+/* line 857, ../sass/_fancybox.scss */
 .fancybox-inner {
   /* background-color: rgba(255,255,255,0.8); */
 }
 
-/* line 858, ../sass/_fancybox.scss */
+/* line 860, ../sass/_fancybox.scss */
 .fancybox-show-thumbs .fancybox-inner {
   right: 212px;
 }
 
-/* line 862, ../sass/_fancybox.scss */
+/* line 864, ../sass/_fancybox.scss */
 .fancybox-thumbs__list {
   font-size: 0;
   height: 100%;
@@ -2442,30 +2444,30 @@ body.compensate-for-scrollbar {
   width: 100%;
 }
 
-/* line 876, ../sass/_fancybox.scss */
+/* line 878, ../sass/_fancybox.scss */
 .fancybox-thumbs-x .fancybox-thumbs__list {
   overflow: hidden;
 }
 
-/* line 880, ../sass/_fancybox.scss */
+/* line 882, ../sass/_fancybox.scss */
 .fancybox-thumbs-y .fancybox-thumbs__list::-webkit-scrollbar {
   width: 7px;
 }
 
-/* line 884, ../sass/_fancybox.scss */
+/* line 886, ../sass/_fancybox.scss */
 .fancybox-thumbs-y .fancybox-thumbs__list::-webkit-scrollbar-track {
   background: #fff;
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-/* line 890, ../sass/_fancybox.scss */
+/* line 892, ../sass/_fancybox.scss */
 .fancybox-thumbs-y .fancybox-thumbs__list::-webkit-scrollbar-thumb {
   background: #2a2a2a;
   border-radius: 10px;
 }
 
-/* line 895, ../sass/_fancybox.scss */
+/* line 897, ../sass/_fancybox.scss */
 .fancybox-thumbs__list a {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -2487,7 +2489,7 @@ body.compensate-for-scrollbar {
   width: 100px;
 }
 
-/* line 916, ../sass/_fancybox.scss */
+/* line 918, ../sass/_fancybox.scss */
 .fancybox-thumbs__list a::before {
   border: 6px solid #ff5268;
   bottom: 0;
@@ -2501,39 +2503,39 @@ body.compensate-for-scrollbar {
   z-index: 99991;
 }
 
-/* line 929, ../sass/_fancybox.scss */
+/* line 931, ../sass/_fancybox.scss */
 .fancybox-thumbs__list a:focus::before {
   opacity: .5;
 }
 
-/* line 933, ../sass/_fancybox.scss */
+/* line 935, ../sass/_fancybox.scss */
 .fancybox-thumbs__list a.fancybox-thumbs-active::before {
   opacity: 1;
 }
 
 /* Styling for Small-Screen Devices */
 @media all and (max-width: 576px) {
-  /* line 939, ../sass/_fancybox.scss */
+  /* line 941, ../sass/_fancybox.scss */
   .fancybox-thumbs {
     width: 110px;
   }
 
-  /* line 943, ../sass/_fancybox.scss */
+  /* line 945, ../sass/_fancybox.scss */
   .fancybox-show-thumbs .fancybox-inner {
     right: 110px;
   }
 
-  /* line 947, ../sass/_fancybox.scss */
+  /* line 949, ../sass/_fancybox.scss */
   .fancybox-thumbs__list a {
     max-width: calc(100% - 10px);
   }
 }
-/* line 951, ../sass/_fancybox.scss */
+/* line 953, ../sass/_fancybox.scss */
 a.btn_html,
 a.btn_lightbox {
   position: relative;
 }
-/* line 954, ../sass/_fancybox.scss */
+/* line 956, ../sass/_fancybox.scss */
 a.btn_html > span,
 a.btn_lightbox > span {
   opacity: 0;
@@ -2552,55 +2554,55 @@ a.btn_lightbox > span {
   transform: scale(0.6);
   transition: all 0.8s ease-out;
 }
-/* line 973, ../sass/_fancybox.scss */
+/* line 975, ../sass/_fancybox.scss */
 a.btn_html > span > b,
 a.btn_lightbox > span > b {
   width: 80%;
 }
-/* line 974, ../sass/_fancybox.scss */
+/* line 976, ../sass/_fancybox.scss */
 a.btn_html > span > b i,
 a.btn_lightbox > span > b i {
   transform: translateY(6px);
   display: inline-block;
 }
-/* line 983, ../sass/_fancybox.scss */
+/* line 985, ../sass/_fancybox.scss */
 a.btn_html:hover span,
 a.btn_lightbox:hover span {
   opacity: 0.8;
   transform: scale(1);
 }
-/* line 986, ../sass/_fancybox.scss */
+/* line 988, ../sass/_fancybox.scss */
 a.btn_html:hover span > b,
 a.btn_lightbox:hover span > b {
   transform: scale(1);
 }
 
 @media screen and (max-width: 1320px) and (min-width: 1025px) {
-  /* line 993, ../sass/_fancybox.scss */
+  /* line 995, ../sass/_fancybox.scss */
   .crystals_list a.btn_lightbox > span > b {
     transform: skewY(0);
   }
 }
 
-/* line 1002, ../sass/_fancybox.scss */
+/* line 1004, ../sass/_fancybox.scss */
 .animated-modal {
   transform: translateY(-50px);
   transition: all .7s;
 }
-/* line 1009, ../sass/_fancybox.scss */
+/* line 1011, ../sass/_fancybox.scss */
 .animated-modal img {
   max-height: 90vh;
   max-width: 80vw;
 }
 @media screen and (max-width: 1320px) and (min-width: 1025px) {
-  /* line 1009, ../sass/_fancybox.scss */
+  /* line 1011, ../sass/_fancybox.scss */
   .animated-modal img {
     width: 100%;
     max-width: 100%;
     height: auto;
   }
 }
-/* line 1018, ../sass/_fancybox.scss */
+/* line 1020, ../sass/_fancybox.scss */
 .animated-modal figcaption,
 .animated-modal h4,
 .animated-modal p {
@@ -2609,14 +2611,14 @@ a.btn_lightbox:hover span > b {
   transition-property: transform, opacity;
   transition-duration: .4s;
 }
-/* line 1026, ../sass/_fancybox.scss */
+/* line 1028, ../sass/_fancybox.scss */
 .animated-modal figcaption i,
 .animated-modal h4 i,
 .animated-modal p i {
   transform: translateY(6px);
   display: inline-block;
 }
-/* line 1031, ../sass/_fancybox.scss */
+/* line 1033, ../sass/_fancybox.scss */
 .animated-modal figcaption ul li,
 .animated-modal h4 ul li,
 .animated-modal p ul li {
@@ -2624,7 +2626,7 @@ a.btn_lightbox:hover span > b {
   padding-left: 14px;
   position: relative;
 }
-/* line 1035, ../sass/_fancybox.scss */
+/* line 1037, ../sass/_fancybox.scss */
 .animated-modal figcaption ul li::after,
 .animated-modal h4 ul li::after,
 .animated-modal p ul li::after {
@@ -2641,7 +2643,7 @@ a.btn_lightbox:hover span > b {
 }
 
 /* Final state */
-/* line 1056, ../sass/_fancybox.scss */
+/* line 1058, ../sass/_fancybox.scss */
 .fancybox-slide--current .animated-modal,
 .fancybox-slide--current .animated-modal figcaption,
 .fancybox-slide--current .animated-modal h4,
@@ -2651,12 +2653,12 @@ a.btn_lightbox:hover span > b {
 }
 
 /* Reveal content with different delays */
-/* line 1065, ../sass/_fancybox.scss */
+/* line 1067, ../sass/_fancybox.scss */
 .fancybox-slide--current .animated-modal h4 {
   transition-delay: .2s;
 }
 
-/* line 1069, ../sass/_fancybox.scss */
+/* line 1071, ../sass/_fancybox.scss */
 .fancybox-slide--current .animated-modal p {
   transition-delay: .4s;
 }
@@ -4139,7 +4141,7 @@ button.swiper-pagination-bullet {
   height: 8px;
   display: inline-block;
   border-radius: 100px;
-  background: white;
+  background: gray;
   transition: all 0.8s ease-out;
 }
 /* line 592, ../sass/_index.scss */
@@ -6245,13 +6247,14 @@ button.swiper-pagination-bullet {
 .block_portfolio4,
 .block_works2 {
   overflow: hidden;
+  padding-bottom: 96px;
 }
-/* line 25, ../sass/_works.scss */
+/* line 26, ../sass/_works.scss */
 .block_portfolio4 .center,
 .block_works2 .center {
   position: relative;
 }
-/* line 28, ../sass/_works.scss */
+/* line 29, ../sass/_works.scss */
 .block_portfolio4 h2,
 .block_works2 h2 {
   text-align: center;
@@ -6259,24 +6262,24 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.1em;
   margin-bottom: 40px;
 }
-/* line 33, ../sass/_works.scss */
+/* line 34, ../sass/_works.scss */
 .block_portfolio4 h2 .zh,
 .block_works2 h2 .zh {
   display: block;
   font-size: 1.75em;
   padding: 8px 0;
 }
-/* line 39, ../sass/_works.scss */
+/* line 40, ../sass/_works.scss */
 .block_portfolio4 .swiper-slide,
 .block_works2 .swiper-slide {
   height: auto;
 }
-/* line 45, ../sass/_works.scss */
+/* line 46, ../sass/_works.scss */
 .block_portfolio4 .swiper-wrapper_works,
 .block_works2 .swiper-wrapper_works {
   height: auto;
 }
-/* line 48, ../sass/_works.scss */
+/* line 49, ../sass/_works.scss */
 .block_portfolio4 .swiper-pagination-bullet,
 .block_works2 .swiper-pagination-bullet {
   position: absolute;
@@ -6286,12 +6289,12 @@ button.swiper-pagination-bullet {
   height: auto;
   opacity: 0;
 }
-/* line 56, ../sass/_works.scss */
+/* line 57, ../sass/_works.scss */
 .block_portfolio4 .swiper-pagination-bullet-active,
 .block_works2 .swiper-pagination-bullet-active {
   opacity: 1;
 }
-/* line 59, ../sass/_works.scss */
+/* line 60, ../sass/_works.scss */
 .block_portfolio4 ul.block_works_list,
 .block_works2 ul.block_works_list {
   display: flex;
@@ -6302,7 +6305,7 @@ button.swiper-pagination-bullet {
   flex-wrap: wrap;
   max-width: 1360px;
 }
-/* line 68, ../sass/_works.scss */
+/* line 69, ../sass/_works.scss */
 .block_portfolio4 ul.block_works_list li,
 .block_works2 ul.block_works_list li {
   flex: 0 0 33.33%;
@@ -6310,30 +6313,30 @@ button.swiper-pagination-bullet {
   box-sizing: border-box;
 }
 @media screen and (max-width: 1024px) {
-  /* line 68, ../sass/_works.scss */
+  /* line 69, ../sass/_works.scss */
   .block_portfolio4 ul.block_works_list li,
   .block_works2 ul.block_works_list li {
     flex: 0 0 50%;
   }
 }
 @media screen and (max-width: 800px) {
-  /* line 68, ../sass/_works.scss */
+  /* line 69, ../sass/_works.scss */
   .block_portfolio4 ul.block_works_list li,
   .block_works2 ul.block_works_list li {
     flex: 0 0 100%;
   }
 }
-/* line 78, ../sass/_works.scss */
+/* line 79, ../sass/_works.scss */
 .block_portfolio4 ul.block_works_list li a,
 .block_works2 ul.block_works_list li a {
   color: black;
 }
-/* line 80, ../sass/_works.scss */
+/* line 81, ../sass/_works.scss */
 .block_portfolio4 ul.block_works_list li a p,
 .block_works2 ul.block_works_list li a p {
   padding: 16px 0;
 }
-/* line 85, ../sass/_works.scss */
+/* line 86, ../sass/_works.scss */
 .block_portfolio4 ul.block_works_list .img,
 .block_works2 ul.block_works_list .img {
   width: 100%;
@@ -6341,7 +6344,7 @@ button.swiper-pagination-bullet {
   padding-bottom: 57%;
   background-color: lightgray;
 }
-/* line 90, ../sass/_works.scss */
+/* line 91, ../sass/_works.scss */
 .block_portfolio4 ul.block_works_list .img img,
 .block_works2 ul.block_works_list .img img {
   width: 100%;
@@ -7271,33 +7274,45 @@ button.swiper-pagination-bullet {
   font-weight: normal;
   line-height: 36px;
   float: left;
+  margin-bottom: 46px;
 }
-/* line 35, ../sass/_portfolio.scss */
+/* line 36, ../sass/_portfolio.scss */
 .block_portfolio1.block_page_banner article .h2 span.portfolio_num, .block_portfolio1.block_page_banner article h2 span.portfolio_num {
   border-bottom: white solid 2px;
   display: inline-block;
   text-align: center;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  line-height: 1.8em;
+  padding: 0 0 0 2px;
+  margin-right: 24px;
 }
-/* line 43, ../sass/_portfolio.scss */
+/* line 46, ../sass/_portfolio.scss */
+.block_portfolio1.block_page_banner article .h2 span.portfolio_zh, .block_portfolio1.block_page_banner article h2 span.portfolio_zh {
+  margin-right: 64px;
+}
+/* line 52, ../sass/_portfolio.scss */
 .block_portfolio1.block_page_banner article p {
   clear: both;
   text-align: left;
   font-size: 1em;
   max-width: 1320px;
   transform: translateY(-50%);
+  transform: none;
+  width: 50%;
 }
 
-/* line 52, ../sass/_portfolio.scss */
+/* line 63, ../sass/_portfolio.scss */
 .block_portfolio2 {
   background-color: white;
 }
 
-/* line 55, ../sass/_portfolio.scss */
+/* line 66, ../sass/_portfolio.scss */
 .block_portfolio3 {
   background-color: #EBEBEB;
 }
 
-/* line 58, ../sass/_portfolio.scss */
+/* line 69, ../sass/_portfolio.scss */
 .block_portfolio3 {
   background-color: #D8D6CE;
 }
