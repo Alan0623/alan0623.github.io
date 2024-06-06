@@ -4,7 +4,7 @@
 		padding: 72px 0;
 	}
 	.block_works1 .swiper-slide#{$i}{
-		background-image: url('../images/works/main_slice#{$i}.jpg');
+		background-image: image-url('works/main_slice#{$i}.jpg');
 	}
 
 	.block_works2 span[aria-label="Go to slide #{$i}"]{
@@ -63,6 +63,7 @@
 		justify-content: flex-start;
 		width: 100%;
 		flex-wrap: wrap;
+		max-width: 1360px;
 		@extend %center;
 		li{
 			flex: 0 0 33.33%;

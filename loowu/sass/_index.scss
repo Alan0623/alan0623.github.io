@@ -4,11 +4,11 @@
 	}
 	.block_index5 .service_process_tabs .tabs li:nth-child(#{$i}) a{
 		.img::before{
-			background-image: url('../images/icon/service_process_tab#{$i}.svg');
+			background-image: image-url('icon/service_process_tab#{$i}.svg');
 		}
 	}
 	.block_index1 .swiper-slide#{$i}{
-		background-image: url('../images/index/main_slice#{$i}.jpg');
+		background-image: image-url('index/main_slice#{$i}.jpg');
 	}
 }
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -25,7 +25,7 @@
 		width: 100%;
 		padding: 0 64px;
 		transform: translateY(-25%);
-		h2{
+		.h2, h2{
 			// font-family: 'Noto Serif TC', serif;
 			@extend %center;
 			display: block;
@@ -163,27 +163,27 @@
 			filter: brightness(0);
 		}
 		.form a{
-			background-image: url('../images/icon/icon_say_o.svg');
+			background-image: image-url('icon/icon_say_o.svg');
 			&:hover, &:focus{
-				background-image: url('../images/icon/icon_say.svg');
+				background-image: image-url('icon/icon_say.svg');
 			}
 		}
 		.youtube a{
-			background-image: url('../images/icon/icon_yt_o.svg');
+			background-image: image-url('icon/icon_yt_o.svg');
 			&:hover, &:focus{
-				background-image: url('../images/icon/icon_yt.svg');
+				background-image: image-url('icon/icon_yt.svg');
 			}
 		}
 		.facebook a{
-			background-image: url('../images/icon/icon_fb_o.svg');
+			background-image: image-url('icon/icon_fb_o.svg');
 			&:hover, &:focus{
-				background-image: url('../images/icon/icon_fb.svg');
+				background-image: image-url('icon/icon_fb.svg');
 			}
 		}
 		.instagram a{
-			background-image: url('../images/icon/icon_ig_o.svg');
+			background-image: image-url('icon/icon_ig_o.svg');
 			&:hover, &:focus{
-				background-image: url('../images/icon/icon_ig.svg');
+				background-image: image-url('icon/icon_ig.svg');
 			}
 		}
 	}
@@ -222,8 +222,8 @@
 			@extend %clear;
 		}
 		.block_index2_img{
-			max-width: 748px;
-			width: calc(100% - 540px);
+			max-width: 786px;
+			width: calc(100% - 500px);
 			float: left;
 			background-color: #D8D6CE;
 			border-radius: 0 16px 16px 0;
@@ -262,7 +262,7 @@
 			}
 		}
 		article{
-			width: 540px;
+			width: 556px;
 			// max-width: calc(100% - 748px);
 			float: left;
 			padding-left: 56px;
@@ -281,7 +281,7 @@
 				.zh{
 					font-size: 2.25em;
 					letter-spacing: 0.1em;
-					margin-bottom: 8px;
+					margin-bottom: 13px;
 					@include media('mobile') {
 						font-size: 2em;
 						letter-spacing: 0.05em;
@@ -317,7 +317,7 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .block_index3{
 	position: relative;
-	background-image: url('../images/index/bg_block_index5.jpg');
+	background-image: image-url('index/bg_block_index5.jpg');
     background-size: contain;
     padding: 64px 0;
     background-attachment: fixed;
@@ -587,14 +587,14 @@
 			height: 8px;
 			display: inline-block;
 			border-radius: 100px;
-			background: #E1E1E1;
+			background: white;
 			transition: $transition;
 			&:hover, &:focus{
-				background-color: #FFD300;
+				background-color: black;
 			}
 			&.active {
 				width: 32px;
-				background-color: #FFD300;
+				background-color: black;
 			}
 		}
 	}
@@ -665,7 +665,7 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .block_index5{
 	position: relative;
-	background-image: url('../images/index/bg_block_index5.jpg');
+	background-image: image-url('index/bg_block_index5.jpg');
 	background-size: contain;
 	height: 100vh;
 	background-attachment: fixed;

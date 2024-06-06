@@ -4,7 +4,7 @@
 		padding: 72px 0;
 	}
 	.block_reservation1 .swiper-slide#{$i}{
-		background-image: url('../images/reservation/main_slice#{$i}.jpg');
+		background-image: image-url('reservation/main_slice#{$i}.jpg');
 	}
 }
 
@@ -24,14 +24,18 @@
 	}
 }
 .block_reservation2{
+	// background-image: image-url('2.png');
+	background-repeat: no-repeat;
+	background-position: center top;
 	padding: 0;
-	padding-top: 64px;
+	padding-top: 62px;
 	.center{
 		border: none;
 	}
 	h2{
 		margin-bottom: 24px;
 		font-size: 1.75em;
+		letter-spacing: 3px;
 	}
 	article{
 		&::after{
@@ -42,18 +46,40 @@
 		}
 		&.article2{
 			border: #000 dashed 1px;
-			margin-top: 48px;
+			margin-top: 42px;
 			border-left: 0;
 			border-right: 0;
 			padding-bottom: 48px;
+			.tab_list{
+				margin-bottom: 28px;
+			}
+		}
+		&.article3{
+			.part{
+				margin: 46px 0 19px 0;
+			}
+			.article_form:nth-child(even){
+				padding-right: 14px;
+			}
+			.customer_information ul li:nth-child(5){
+				padding-bottom: 2px;
+			}
+			>div:nth-child(3){
+				padding-top: 13px;
+				.from:nth-child(1) ul{
+					max-width: 421px;
+					padding: 30px 0 36px 0;
+				}
+			}
 		}
 		&.end_article{
 			clear: both;
 			text-align: center;
 			padding-bottom: 64px;
-			padding-top: 56px;
+			padding-top: 59px;
 			.agree{
 				text-align: center;
+				margin-top: 22px;
 			}
 			.checkbok{
 				display: flex;
@@ -70,26 +96,34 @@
 			float: left;
 			box-sizing: border-box;
 			&:nth-child(odd){
-				padding-left: 44px;
+				padding-left: 66px;
+				margin-top: -2px;
+				// padding-top: 13px;
 			}
 			&:nth-child(even){
 				padding-right: 44px;
+			}
+
+			.customer_information:first-child{
+				legend.h2{
+					display: none;
+				}
 			}
 		}
 
 		.info{
 			background-color: #F2F2F2;
 			display: block;
-			padding: 16px 32px;
+			padding: 14px 27px;
 			float: left;
-			margin-right: 26px;
+			margin-right: 34px;
 			h3{
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				float: left;
 				height: 48px;
-				padding-right: 16px;
+				padding-right: 26px;
 				letter-spacing: 0.1em;
 				font-weight: normal;
 				font-size: 1.25em;
@@ -99,17 +133,18 @@
 				display: block;
 				float: left;
 				letter-spacing: 0.1em;
+				line-height: 1.71em;
 			}
 		}
 		.part{
 			color: white;
 			background-color: black;
 			font-size: 1.75em;
-			padding: 8px 16px;
+			padding: 10px 18px;
 			box-sizing: border-box;
 			display: inline-block;
 			letter-spacing: 0.1em;
-			margin: 48px 0 40px 0;
+			margin: 50px 0 34px 0;
 		}
 	
 		.from{
@@ -124,7 +159,7 @@
 				font-weight: bold;
 				letter-spacing: 0.1em;
 				float: left;
-				margin-right: 40px;
+				margin-right: 38px;
 				height: 40px;
 			}
 			h3{
@@ -140,7 +175,7 @@
 	
 			ul{
 				clear: both;
-				padding: 32px 0;
+				padding: 22px 0 32px 0;
 				display: inline-block;
 				li{
 					display: inline-block;
@@ -211,6 +246,9 @@
 						&:nth-child(even){
 							padding-left: 24px;
 						}
+						p{
+							font-size: 0.8em;
+						}
 					}
 				}
 			}
@@ -256,6 +294,14 @@
 			padding: 14px 48px;
 			border-radius: 40px;
 			margin-bottom: 24px;
+			display: block;
+			cursor: pointer;
+			margin: 0 auto;
+			z-index: 2;
+			&:hover, &:focus{
+				color: white;
+				background-color: black;
+			}
 		}
 	}
 }

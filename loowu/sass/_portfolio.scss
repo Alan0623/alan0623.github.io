@@ -4,7 +4,7 @@
 		padding: 72px 0;
 	}
 	.block_portfolio1 .swiper-slide#{$i}{
-		background-image: url('../images/portfolio/main_slice#{$i}.jpg');
+		background-image: image-url('portfolio/main_slice#{$i}.jpg');
 	}
 
 	.block_portfolio4 span[aria-label="Go to slide #{$i}"]{
@@ -16,6 +16,38 @@
 
 .block_portfolio1{
 	padding: 0;
+	&.block_page_banner article{
+		top: auto;
+		bottom: 0;
+		transform: none;
+		.h2, h2{
+			text-align: left;
+			&::after{
+				@extend %clear;
+			}
+			span{
+				display: block;
+				padding: 0;
+				font-size: 1.5em;
+				font-weight: normal;
+				line-height: 36px;
+				float: left;
+				&.portfolio_num{
+					border-bottom: white solid 2px;
+					display: inline-block;
+					text-align: center;
+				}
+			}
+		}
+	
+		p{
+			clear: both;
+			text-align: left;
+			font-size: 1em;
+			max-width: 1320px;
+			transform: translateY(-50%);
+		}
+	} 
 }
 .block_portfolio2{
 	background-color: white;
