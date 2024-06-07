@@ -5,6 +5,7 @@
 	}
 	.block_about1 .swiper-slide#{$i}{
 		background-image: url('../images/about/main_slice#{$i}.jpg');
+		height: 600px;
 	}
 }
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -13,6 +14,9 @@
 .swiper-wrapper_works,
 .swiper-wrapper_about{
 	height: 600px;
+	@include media('mobile') {
+		height: 400px;
+	}
 }
 .block_page_banner{
 	padding: 0;
@@ -22,6 +26,9 @@
 		width: 100%;
 		left: 0;
 		right: 0;
+		@include media('mobile') {
+			height: 400px;
+		}
 	}
 	article h2{
 		text-align: center;
@@ -54,7 +61,7 @@
 		position: relative;
 		z-index: 2;
 		display: flex;
-		max-width: 1432px;
+		max-width: $pc-width;
 		justify-content: space-between;
 	}
 	article{
@@ -99,7 +106,7 @@
 		ul.tab_content{
 			li{
 				display: flex;
-				max-width: 1432px;
+				max-width: $pc-width;
 				margin: 0 auto;
 			}
 		}

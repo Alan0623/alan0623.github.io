@@ -635,6 +635,9 @@
 	margin: 0 auto;
     padding: 0 56px;
     box-sizing: border-box;
+	@include media('mobile') {
+		padding: 0 24px;
+	}
 	@if( $rwd ) {
 		max-width: $pc-width;
 	}@else {

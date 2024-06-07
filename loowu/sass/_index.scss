@@ -32,8 +32,9 @@
 			width: 100%;
 			text-align: left;
 			font-size: 1em;
-			max-width: 1432px;
+			max-width: 1308px;
 			transform: translateY(-50%);
+			padding: 0;
 			span{
 				display: block;
 				padding: 8px 0;
@@ -215,7 +216,7 @@
 		
 	}
 	.center{
-		max-width: 1432px;
+		max-width: $pc-width;
 		display: flex;
 		align-items: center;
 		height: 100vh;
@@ -402,6 +403,7 @@
 	.circular{
 		width: 200px;
 		height: 200px;
+		min-width: 200px;
 		border: black solid 2px;
 		border-radius: 200px;
 		display: flex;
@@ -410,14 +412,16 @@
 		flex-direction: column;
 		letter-spacing: 0.1em;
 		font-weight: bold;
-		@include media('mobile') {
+		@include rwd(1280){
 			width: 160px;
 			height: 160px;
+			min-width: 160px;
 			margin-bottom: 16px;
 		}
 		@include media('phone') {
 			width: 140px;
 			height: 140px;
+			min-width: 140px;
 			float: left;
 			margin-right: 16px;
 		}
@@ -454,7 +458,7 @@
 		.btn{
 			position: absolute;
 			bottom: 0;
-			right: 0;
+			right: 64px;
 			z-index: 2;
 		}
 	}
@@ -469,11 +473,14 @@
 		li{
 			position: relative;
 			width: 100%;
-			padding: 0 18px;
+			padding: 0 12px;
 			box-sizing: border-box;
 			z-index: 2;
 			@include media('mobile') {
 				padding: 0 24px;
+			}
+			@include media('phone') {
+				padding: 0;
 			}
 			&::after{
 				@extend %clear;
@@ -486,8 +493,9 @@
 	}
 
 	.case_works_container{
-		width: 100%;
-		max-width: 856px;
+		// width: 100%;
+		width: 868px;
+		max-width: 70%;
 		display: block;
 		float: left;
 		@include media('mobile') {
@@ -496,8 +504,9 @@
 		}
 	}
 	.case_works_big_img{
-		width: 100%;
-		max-width: calc(100% - 856px);
+		// width: 100%;
+		// max-width: calc(100% - 868px);
+		width: 30%;
 		display: block;
 		float: left;
 		padding-left: 36px;
@@ -506,14 +515,66 @@
 			float: inherit;
 			padding: 0;
 		}
-		img{
+		> img{
 			width: 100%;
+			margin-bottom: 16px;
 		}
 		article{
-			margin-top: 16px;
+			margin-top: 0;
 			text-align: left;
 			h2{
 				margin-bottom: 4px;
+			}
+			h3{
+				font-size: 1em;
+				font-weight: normal;
+				.zh{
+					font-size: 1.75em;
+					letter-spacing: 0.08em;
+				}
+				.en{
+					letter-spacing: 0.02em;
+				}
+			}
+		}
+
+		.case_works_big_img_info{
+			h2{
+				font-size: 1em;
+				font-weight: normal;
+				.zh{
+					font-size: 1.75em;
+					letter-spacing: 0.08em;
+				}
+				.en{
+					letter-spacing: 0.02em;
+				}
+			}
+			ul{
+				margin-top: 56px;
+				li{
+					margin: 2px 0;
+					padding: 0;
+				}
+			}
+		}
+
+		.case_works_big_img_focus{
+			position: absolute;
+			bottom: 0;
+			ul{
+				margin-top: 56px;
+				&::after{
+					@extend %clear;
+				}
+				li{
+					display: block;
+					padding: 0;
+					float: left;
+					width: auto;
+					margin: 2px 0;
+					margin-right: 16px;
+				}
 			}
 		}
 	}
@@ -537,16 +598,18 @@
 		@extend %hide-text;
 		display: block;
 		position: absolute;
-		top: calc(50% - 44px);
+		top: calc(50% - 38px);
 		width: 48px;
 		height: 48px;
 		border-radius: 50px;
 		overflow: hidden;
-		border: black solid 1px;
+		border: white solid 1px;
 		transition: all 0.8s ease-out;
 		z-index: 4;
 		transform: rotateZ(-90deg);
 		// background-color: white;
+		background-color: rgba(0, 0, 0, 0.5);
+		opacity: 0.5;
 		&::before{
 			content: $content;
 			display: block;
@@ -556,9 +619,10 @@
 			background-size: 60%;
 			background-position: 42% 40%;
 			background-repeat: no-repeat;
-			filter: brightness(0);
+			filter: grayscale(1) brightness(100);
 		}
 		&:hover, &:focus{
+			opacity: 1;
 			background-color: black;
 		}
 		@include media('mobile') {
@@ -573,11 +637,11 @@
 	}
 
 	.jcarousel-control-prev{
-		left: 0;
+		left: -13px;
 		transform: rotate(90deg);
 	}
 	.jcarousel-control-next{
-		right: 0;
+		right: -13px;
 		transform: rotate(-90deg);
 	}
 
@@ -625,7 +689,7 @@
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
-            padding: 0 18px;
+            padding: 0 12px;
             a{
                 color: #2D2D2D;
                 display: inline-block;
@@ -860,9 +924,8 @@
 		padding-bottom: 32px;
 	}
 	.center{
-		background-color: black;
-		color: white;
 		position: relative;
+		max-width: 1420px;
 	}
 	article{
 		display: none;
@@ -898,6 +961,8 @@
 		}
 	}
 	.video-container {
+		background-color: black;
+		color: white;
 		position: relative;
 		padding-bottom: 56.25%;
 		padding-top: 30px;

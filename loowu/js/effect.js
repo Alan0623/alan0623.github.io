@@ -89,6 +89,25 @@ $(function(){
     }
   });
 });
+$(function(){
+    var swiper = new Swiper('.swiper-container-portfolio', {
+      slidesPerView: 1,
+      // spaceBetween: 180,
+      speed: 1200,
+      centeredSlides: true,
+      loop: true,
+      autoplay:false,
+      pagination: {
+        el: '.swiper-pagination-portfolio',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next-portfolio',
+        prevEl: '.swiper-button-prev-portfolio',
+      }
+    });
+  });
+
 
 $(function(){
     var swiper = new Swiper('.swiper-container-stopplay', {

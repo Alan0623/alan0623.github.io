@@ -489,6 +489,9 @@ header class="header"
 			.logo{
 				width: 204px;
 				margin-right: 52px;
+				@include rwd(1280){
+					margin-right: 0;
+				}
 			}
 			.mid{
 				width: 193px;
@@ -604,7 +607,10 @@ footer class="footer"
 }
 .footer_center{
 	@extend %center;
-	max-width: 1432px;
+	max-width: $pc-width;
+	@include media('mobile') {
+	    padding: 0;	
+	}
 	&::after{
 		@extend %clear;
 	}
@@ -681,7 +687,7 @@ footer class="footer"
 	@include media('mobile') {
 		width: 100%;
 		float: inherit;
-		max-width: 612px;
+		// max-width: 612px;
 		margin: 0 auto;
 	}
 
@@ -699,11 +705,17 @@ footer class="footer"
 			.logo{
 				width: 169px;
 				margin-right: 36px;
+				@include media('phone') {
+					width: 50%;
+					margin-right: 2%;
+				}
 			}
 			.mid{
 				width: 160px;
+				@include media('phone') {
+					width: 43%;
+				}
 			}
-
 		}
 		.social_media{
 			margin-top: 4px;
@@ -778,11 +790,14 @@ footer class="footer"
 	transform: translateY(-24px);
 	float: left;
     clear: both;
+	margin-left: 8px;
 	@include media('mobile') {
 		letter-spacing: 0.1em;
 		transform: inherit;
-		text-align: center;
+		// text-align: center;
 		margin-top: 24px;
+		margin: 0;
+		width: 100%;
 	}
 }
 .footer_tabs{
@@ -798,6 +813,8 @@ footer class="footer"
         max-width: 612px;
         padding: 0;
         margin: 0 auto;
+
+		display: none;
 	}
 	ul.tabs{
 		position: relative;
@@ -885,7 +902,7 @@ footer class="footer"
     background-repeat: no-repeat;
     background-position: center;
 	@include media('mobile') {
-		height: 400px;
+		height: 400px!important;
 	}
 }
 .swiper-slide-active,.swiper-slide-duplicate-active{
@@ -922,6 +939,9 @@ footer class="footer"
 	&:hover, &:focus{
 		opacity: 1;
 		background-color: black;
+		&::before{
+			filter: brightness(100);
+		}
 	}
 	@include media('mobile') {
 		top: 50%;
@@ -946,10 +966,10 @@ footer class="footer"
 	}
 }
 .swiper-button-next-stopplay{
-	right: 16px;
+	right: 64px;
 }
 .swiper-button-prev-stopplay{
-	right: 64px;
+	right: 112px;
 }
 .swiper-button-prev-stopplay,
 .swiper-button-prev{
@@ -957,7 +977,7 @@ footer class="footer"
 }
 .swiper-pagination-stopplay{
     bottom: -30px;
-    right: 208px;
+    right: 256px;
     position: absolute;
     font-size: 1.5em;
 	letter-spacing: 0.05em;

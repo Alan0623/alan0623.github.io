@@ -5,6 +5,7 @@
 	}
 	.block_works1 .swiper-slide#{$i}{
 		background-image: url('../images/works/main_slice#{$i}.jpg');
+		height: 600px;
 	}
 
 	.block_works2 span[aria-label="Go to slide #{$i}"]{
@@ -38,13 +39,13 @@
 		}
 	}
 	.swiper-slide{
-		height: auto;
+		height: auto !important;
 	}
 	.swiper-container-stopplay{
 		// overflow: hidden;
 	}
 	.swiper-wrapper_works{
-		height: auto;
+		height: auto !important;
 	}
 	.swiper-pagination-bullet{
 		position: absolute;
@@ -65,6 +66,7 @@
 		width: 100%;
 		flex-wrap: wrap;
 		max-width: 1360px;
+		padding: 0 6px;
 		@extend %center;
 		li{
 			flex: 0 0 33.33%;

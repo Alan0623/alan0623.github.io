@@ -5,6 +5,7 @@
 	}
 	.block_reservation1 .swiper-slide#{$i}{
 		background-image: url('../images/reservation/main_slice#{$i}.jpg');
+		height: 600px;
 	}
 }
 
@@ -31,11 +32,15 @@
 	padding-top: 62px;
 	.center{
 		border: none;
+		max-width: 1420px;
 	}
 	h2{
 		margin-bottom: 24px;
 		font-size: 1.75em;
 		letter-spacing: 3px;
+		@include media('mobile') {
+			font-size: $font-size-xl;
+		}
 	}
 	article{
 		&::after{
@@ -95,13 +100,23 @@
 			width: 50%;
 			float: left;
 			box-sizing: border-box;
+			@include media('mobile') {
+				width: 100%;
+			}
 			&:nth-child(odd){
 				padding-left: 66px;
 				margin-top: -2px;
-				// padding-top: 13px;
+				@include media('mobile') {
+					padding: 0;
+					margin: 0;
+				}
 			}
 			&:nth-child(even){
 				padding-right: 44px;
+				@include media('mobile') {
+					padding: 0;
+					margin: 0;
+				}
 			}
 
 			.customer_information:first-child{
@@ -116,7 +131,10 @@
 			display: block;
 			padding: 14px 27px;
 			float: left;
-			margin-right: 34px;
+			margin-bottom: 24px;
+			&:nth-child(2){
+				margin-right: 34px;
+			}
 			h3{
 				display: flex;
 				justify-content: center;
@@ -127,6 +145,9 @@
 				letter-spacing: 0.1em;
 				font-weight: normal;
 				font-size: 1.25em;
+				@include media('mobile') {
+					font-size: 1.125em;
+				}
 			}
 	
 			p{
@@ -144,7 +165,10 @@
 			box-sizing: border-box;
 			display: inline-block;
 			letter-spacing: 0.1em;
-			margin: 50px 0 34px 0;
+			margin: 26px 0 34px 0;
+			@include media('mobile') {
+				font-size: $font-size-xl;
+			}
 		}
 	
 		.from{
@@ -161,6 +185,10 @@
 				float: left;
 				margin-right: 38px;
 				height: 40px;
+				margin-bottom: 8px;
+				@include media('mobile') {
+					font-size: $font-size-xl;
+				}
 			}
 			h3{
 				font-size: 1em;
@@ -175,8 +203,11 @@
 	
 			ul{
 				clear: both;
-				padding: 22px 0 32px 0;
+				padding: 14px 0 32px 0;
 				display: inline-block;
+				@include media('mobile') {
+					display: block;
+				}
 				li{
 					display: inline-block;
 					margin-right: 24px;
@@ -219,6 +250,7 @@
 					padding: 8px 20px;
 					border-radius: 40px;
 					margin-right: 20px;
+					margin-bottom: 16px;
 				}
 			}
 
@@ -263,6 +295,12 @@
 			padding: 4px 18px;
 			box-sizing: border-box;
 			min-height: 44px;
+			&:hover, &:focus{
+				background-color: white;
+				outline-color: black;
+				outline-width: 2px;
+				outline-style: auto;
+			}
 		}
 		input[type="checkbox"],
 		input[type="radio"]{
@@ -270,8 +308,13 @@
 			height: 18px;
 			margin-right: 16px;
 			cursor: pointer;
+			opacity: 0.6;
 			&:focus, &:hover{
-				opacity: 0.5;
+				opacity: 1;
+				background-color: white;
+				outline-color: black;
+				outline-width: 2px;
+				outline-style: auto;
 			}
 		}
 		textarea{
@@ -284,6 +327,12 @@
 			box-sizing: border-box;
 			min-height: 88px;
 			clear: both;
+			&:hover, &:focus{
+				background-color: white;
+				outline-color: black;
+				outline-width: 2px;
+				outline-style: auto;
+			}
 		}
 
 		button[type="button"]{
