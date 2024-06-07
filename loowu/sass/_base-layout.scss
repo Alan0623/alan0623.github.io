@@ -1000,6 +1000,9 @@ footer class="footer"
     position: absolute;
     font-size: 1.5em;
 	letter-spacing: 0.05em;
+	@include media('mobile') {
+		font-size: 1.25em;
+	}
 	&::before{
 		content: "Work Page.";
 	}

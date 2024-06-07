@@ -30,9 +30,6 @@
 .block_works2{
 	overflow: hidden;
 	padding-bottom: 96px;
-	@include media('mobile') {
-		padding-bottom: 24px;
-	}
 	.center{
 		position: relative;
 	}
@@ -126,3 +123,13 @@
 		}
 	}
 } 
+.block_portfolio4{
+	@include media('mobile') {
+		padding-bottom: 24px;
+	}
+}
+.block_works2{
+	@include media('mobile') {
+		padding-bottom: 64px;
+	}
+}
