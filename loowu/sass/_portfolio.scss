@@ -2,6 +2,12 @@
 	.block_portfolio#{$i}{
 		clear: both;
 		padding: 72px 0;
+		@include media('mobile') {
+			padding: 48px 0;
+		}
+		@include media('phone') {
+			padding: 32px 0;
+		}
 	}
 	.block_portfolio1 .swiper-slide#{$i}{
 		background-image: url('../images/portfolio/main_slice/main_slice#{$i}.jpg');
@@ -21,8 +27,17 @@
 		top: auto;
 		bottom: 0;
 		transform: none;
+		@include media('mobile') {
+			padding: 0 24px;
+		}
+		@include media('phone') {
+			padding: 0 16px;
+		}
 		.h2, h2{
 			text-align: left;
+			@include media('mobile') {
+				transform: translateY(-24px);
+			}
 			&::after{
 				@extend %clear;
 			}
@@ -58,6 +73,9 @@
 			transform: translateY(-50%);
 			transform: none;
 			width: 50%;
+			@include media('mobile') {
+				width: 100%;
+			}
 		}
 	} 
 }

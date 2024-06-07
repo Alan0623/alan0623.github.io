@@ -2,6 +2,12 @@
 	.block_location#{$i}{
 		clear: both;
 		padding: 72px 0;
+		@include media('mobile') {
+			padding: 48px 0;
+		}
+		@include media('phone') {
+			padding: 32px 0;
+		}
 	}
 	.block_location1 .swiper-slide#{$i}{
 		background-image: url('../images/location/main_slice#{$i}.jpg');

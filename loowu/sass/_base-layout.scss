@@ -690,7 +690,9 @@ footer class="footer"
 		// max-width: 612px;
 		margin: 0 auto;
 	}
-
+	@include media('phone') {
+		font-size: 0.8em;
+	}
 	.footer_info_logo{
 		&::after{
 			@extend %clear;
@@ -733,6 +735,9 @@ footer class="footer"
 		line-height: 1.8em;
 		margin: 16px 0;
 		padding-left: 6px;
+		@include media('phone') {
+			padding-left: 0;
+		}
 		li{
 			flex: 0 0 50%;
 			box-sizing: border-box;
@@ -762,7 +767,9 @@ footer class="footer"
 				@include rwd(1280){
 					padding-left: 0;
 				}
-
+				@include media('phone') {
+					padding-left: 24px;
+				}
 				&::before{
 					content: $content;
 					display: block;
@@ -778,6 +785,10 @@ footer class="footer"
 					z-index: 2;
 					@include rwd(1280){
 						left: -31px;	
+					}
+					@include media('phone') {
+						top: 18px;
+						left: -7px;
 					}
 				}
 			}
@@ -798,6 +809,9 @@ footer class="footer"
 		margin-top: 24px;
 		margin: 0;
 		width: 100%;
+	}
+	@include media('phone') {
+		font-size: 0.8em;
 	}
 }
 .footer_tabs{

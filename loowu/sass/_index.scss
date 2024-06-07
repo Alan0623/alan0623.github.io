@@ -477,7 +477,7 @@
 			box-sizing: border-box;
 			z-index: 2;
 			@include media('mobile') {
-				padding: 0 24px;
+				padding: 0;
 			}
 			@include media('phone') {
 				padding: 0;
@@ -501,6 +501,8 @@
 		@include media('mobile') {
 			float: inherit;
 			margin: 0 auto;
+			width: 100%;
+			max-width: 868px;
 		}
 	}
 	.case_works_big_img{
@@ -511,6 +513,7 @@
 		float: left;
 		padding-left: 36px;
 		@include media('mobile') {
+			width: 100%;
 			max-width: 100%;
 			float: inherit;
 			padding: 0;
@@ -522,6 +525,12 @@
 		article{
 			margin-top: 0;
 			text-align: left;
+			@include media('mobile') {
+				// display: flex;
+				// flex-direction: row;
+				// align-items: flex-start;
+				margin-top: 24px;
+			}
 			h2{
 				margin-bottom: 4px;
 			}
@@ -531,6 +540,9 @@
 				.zh{
 					font-size: 1.75em;
 					letter-spacing: 0.08em;
+					@include media('phone') {
+						font-size: 1.4em;
+					}
 				}
 				.en{
 					letter-spacing: 0.02em;
@@ -539,12 +551,27 @@
 		}
 
 		.case_works_big_img_info{
+			@include media('mobile') {
+				width: 50%;
+				float: left;
+			}
+			@include media('phone') {
+				width: 100%;
+				clear: both;
+				
+			}
 			h2{
 				font-size: 1em;
 				font-weight: normal;
+				@include media('mobile') {
+					margin-bottom: 4px;
+				}
 				.zh{
 					font-size: 1.75em;
 					letter-spacing: 0.08em;
+					@include media('phone') {
+						font-size: 1.4em;
+					}
 				}
 				.en{
 					letter-spacing: 0.02em;
@@ -552,6 +579,9 @@
 			}
 			ul{
 				margin-top: 56px;
+				@include media('mobile') {
+					margin-top: auto;
+				}
 				li{
 					margin: 2px 0;
 					padding: 0;
@@ -562,8 +592,21 @@
 		.case_works_big_img_focus{
 			position: absolute;
 			bottom: 0;
+			@include media('mobile') {
+				width: 50%;
+				float: left;
+				position: relative;
+			}
+			@include media('phone') {
+				width: 100%;
+				clear: both;
+				margin-top: 24px;
+			}
 			ul{
 				margin-top: 56px;
+				@include media('mobile') {
+					margin-top: auto;
+				}
 				&::after{
 					@extend %clear;
 				}
@@ -690,6 +733,9 @@
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
             padding: 0 12px;
+			@include media('mobile') {
+				padding: 0;
+			}
             a{
                 color: #2D2D2D;
                 display: inline-block;
@@ -700,9 +746,13 @@
 				overflow: hidden;
 
                 &:hover, &:focus{
-                    img {
-                        transform: scale(1.2);
-                    }
+					.img{
+						background-color: black;
+						img {
+							transform: scale(1.2);
+							opacity: 0.4;
+						}
+					}
                 }
 				.img{
 					display: block;

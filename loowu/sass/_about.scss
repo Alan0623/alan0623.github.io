@@ -2,6 +2,12 @@
 	.block_about#{$i}{
 		clear: both;
 		padding: 72px 0;
+		@include media('mobile') {
+			padding: 48px 0;
+		}
+		@include media('phone') {
+			padding: 32px 0;
+		}
 	}
 	.block_about1 .swiper-slide#{$i}{
 		background-image: url('../images/about/main_slice#{$i}.jpg');
@@ -158,6 +164,7 @@
     	margin: 0 auto;
 		li{
 			padding: 0 12px;
+
 			figure{
 				display: flex;
 				border-radius: 8px;
