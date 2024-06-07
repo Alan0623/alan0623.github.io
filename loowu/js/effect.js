@@ -75,6 +75,7 @@ $(function(){
   var swiper = new Swiper('.swiper-container1', {
     slidesPerView: 1,
     // spaceBetween: 180,
+    speed: 1200,
     centeredSlides: true,
     loop: true,
     autoplay:true,
@@ -92,7 +93,8 @@ $(function(){
 $(function(){
     var swiper = new Swiper('.swiper-container-stopplay', {
       slidesPerView: 1,
-      // spaceBetween: 180,
+    //   spaceBetween: 180,
+        speed: 1200,
       centeredSlides: true,
       loop: true,
       autoplay: false,
@@ -290,6 +292,9 @@ $(function() {
         });
     }
 });
+/*------------------------------------------------------------------
+.block_index1
+------------------------------------------------------------------*/
 $(function(){
     if($('.block_index1')[0] != undefined){ 
         $(window).scroll(function() {

@@ -4,16 +4,16 @@
 		padding: 72px 0;
 	}
 	.block_service2 .service_process_tabs .tabs li:nth-child(#{$i}) a .img::before{
-			background-image: image-url('icon/service_process_tab#{$i}.svg');
+			background-image: url('../images/icon/service_process_tab#{$i}.svg');
 	}
 	.block_service1 .mySwiper .swiper-slide#{$i}::after{
-		background-image: image-url('icon/swiper-slide#{$i}.svg');
+		background-image: url('../images/icon/swiper-slide#{$i}.svg');
 	}
 	.block_service1 .mySwiper2 .swiper-slide#{$i}{
-		background-image: image-url('service/main_slice#{$i}.jpg');
+		background-image: url('../images/service/main_slice#{$i}.jpg');
 	}
 	.block_service2 .service_process_tabs .tab_container .tab_content li:nth-child(#{$i}) .icon::before{
-		background-image: image-url('icon/service_process_tab#{$i}.svg');
+		background-image: url('../images/icon/service_process_tab#{$i}.svg');
 	}
 }
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -38,7 +38,7 @@
 			color: white;
 			text-align: left;
 			width: 100%;
-			max-width: 1320px;
+			max-width: 1432px;
 			margin: 0 auto;
 			height: 100vh;
 			h2{
@@ -90,7 +90,7 @@
 			span{
 				display: block;
 				width: 100%;
-				max-width: 1320px;
+				max-width: 1432px;
 				margin: 0 auto;
 				text-align: left;
 				margin-bottom: 32px;
@@ -103,7 +103,7 @@
 	.mySwiper{
 		width: 100%;
 		height: 240px;
-		max-width: 1320px;
+		max-width: 1432px;
 		margin: 0 auto;
 		position: absolute;
 		height: 240px;
@@ -148,7 +148,7 @@
     			top: 0;
 				width: 120px;
 				padding-bottom: 50%;
-				// background-image: image-url('icon/swiper-slide1.svg');
+				// background-image: url('../images/icon/swiper-slide1.svg');
 				background-position: center;
 				background-repeat: no-repeat;
 			}
@@ -205,7 +205,7 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .block_service2{
 	position: relative;
-	background-image: image-url('index/bg_block_index5.jpg');
+	background-image: url('../images/index/bg_block_index5.jpg');
 	background-size: contain;
 	height: 100vh;
 	background-attachment: fixed;
@@ -234,7 +234,7 @@
 
 	.center{
 		position: relative;
-		max-width: 1320px;
+		max-width: 1432px;
 
 	}
 	.service_process{
@@ -300,6 +300,9 @@
 						float: left;
 						border-bottom: #000 solid 2px;
 						padding: 0px 0px 16px 0px;
+						@include media('mobile') {
+							width: 100%;
+						}
 					}
 					.icon{
 						display: block;
@@ -311,6 +314,7 @@
 						background-color: black;
 						background-size: contain;
 						margin-right: 48px;
+						min-width: 124px;
 						&::before{
 							display: block;
 							position: absolute;
@@ -321,13 +325,16 @@
 							content: $content;
 							width: 124px;
 							height: 124px;
-							background-image: image-url('icon/service_process_tab1.svg');
+							background-image: url('../images/icon/service_process_tab1.svg');
 							background-size: contain;
 						}
 					}
 					.image{
 						width: 640px;
 						float: left;
+						@include media('mobile') {
+							width: 100%;
+						}
 					}
 					.txt{
 						display: flex;
@@ -438,7 +445,7 @@
 .block_service3 {
 	padding: 112px 0;
 	.center{
-		max-width: 1320px;
+		max-width: 1432px;
 		&::after{
 			@extend %clear;
 		}
@@ -447,10 +454,16 @@
 			width: calc(100% - 552px);
 			float: left;
 			padding-right: 64px;
+			@include media('mobile') {
+				width: 100%;
+			}
 		}
 		> figure{
 			width: 552px;
 			float: left;
+			@include media('mobile') {
+				width: 100%;
+			}
 		}
 		h2{
 			font-size: 1em;
