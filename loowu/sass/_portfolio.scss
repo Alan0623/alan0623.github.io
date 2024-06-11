@@ -78,6 +78,19 @@
 			}
 		}
 	} 
+	.swiper-wrapper_about{
+		@include media('phone') {
+			min-height: 400px;
+			height: 400px;
+		}
+
+		.swiper-slide{
+			@include media('phone') {
+			min-height: 400px;
+			height: 400px;
+			}
+		}
+	}
 }
 .block_portfolio2{
 	background-color: white;

@@ -22,8 +22,17 @@
 }
 .block_works1 {
 	padding: 0;
-	.center{
-		
+	article h2 span{
+		&.zh{
+			@include media('phone') {
+				max-width: 8em;
+			}
+		}
+		&.en{
+			@include media('phone') {
+				max-width: 14em;
+			}
+		}
 	}
 } 
 .block_portfolio4,
@@ -32,6 +41,13 @@
 	padding-bottom: 96px;
 	.center{
 		position: relative;
+		height: 32px;
+		padding: 0;
+		max-width: 1320px;
+		width: 100%;
+		@include rwd(1320){
+			max-width: calc(100% - 40px);
+		}
 	}
 	h2{
 		text-align: center;
@@ -39,14 +55,19 @@
 		letter-spacing: 0.1em;
 		margin-bottom: 40px;
 		@include media('mobile') {
-			margin-bottom: 0;
+			margin-bottom: 16px;
 		}
 		.zh{
 			display: block;
 			font-size: 1.75em;
 			padding: 8px 0;
-			@include media('phone') {
+			@include media('mobile') {
 				font-size: 1.4em;
+				padding: 2px 0;
+			}
+			@include media('phone') {
+				font-size: 1.125em;
+				padding: 2px 0;
 			}
 		}
 	}
@@ -88,7 +109,7 @@
 				flex: 0 0 50%;
 			}
 			@include media('phone') {
-				flex: 0 0 100%;
+				padding: 4px;
 			}
 			a{
 				color: black;

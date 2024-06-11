@@ -17,6 +17,18 @@
 
 .block_location1{
 	padding: 0;
+	article h2 span{
+		&.zh{
+			@include rwd(685){
+				max-width: 10em;
+			}
+		}
+		&.en{
+			@include rwd(685){
+				max-width: 19em;
+			}
+		}
+	}
 }
 .block_location2{
 	overflow: hidden;
@@ -31,11 +43,20 @@
 		font-size: 1em;
 		letter-spacing: 0.1em;
 		margin-bottom: 40px;
+		@include media('mobile') {
+			margin-bottom: 16px;
+		}
 		.en,
 		.zh{
 			display: inline-block;
 			font-size: 1.75em;
 			padding: 8px 0;
+			@include media('mobile') {
+				font-size: 1.4em;
+			}
+			@include media('phone') {
+				font-size: 1.125em;
+			}
 		}
 	}
 
@@ -51,11 +72,17 @@
 				@extend %clear;
 			}
 			a{
+				word-break: keep-all;
 				display: block;
 				font-size: 1.25em;
 				color: black;
 				border: black solid 1px;
 				padding: 8px 80px;
+				@include rwd(685){
+					padding: 8px 24px;
+					text-align: center;
+					display: inline-block;
+				}
 			}
 			&.active{
 				a{
@@ -140,6 +167,9 @@
 	.info{
 		display: flex;
 		margin: 49px 0 50px 0;
+		@include media('phone') {
+			display: block;
+		}
 		li{
 			padding-right: 25px;
 		}
@@ -155,9 +185,16 @@
 	}
 
 	.tabs{
-		
+		&::after{
+			@extend %clear;
+		}
 		li{
 			margin-bottom: 32px;
+			@include media('mobile') {
+				display: block;
+				float: left;
+				margin-right: 16px;
+			}
 			a{
 				background-color: white;
 				color: black;
@@ -195,10 +232,17 @@
 		
 		article{
 			box-sizing: border-box;
-			padding-right: 96px;
-			width: calc(100% - 678px);
+			// padding-right: 96px;
+			padding-right: 6vw;
+			// width: 642px;
+			width: 48.64%;
 			float: left;
 			letter-spacing: 0.08em;
+			@include media('mobile') {
+				width: 100%;
+				clear: both;
+				padding: 0;
+			}
 			h2{
 				font-weight: normal;
 				font-size: 1em;
@@ -208,6 +252,12 @@
 					font-size: 1.75em;
 					letter-spacing: 3px;
 					margin-right: 4px;
+					@include media('mobile') {
+						font-size: 1.4em;
+					}
+					@include media('phone') {
+						font-size: 1.125em;
+					}
 				}
 				.en{
 					letter-spacing: 1.6px;
@@ -215,16 +265,32 @@
 			}
 			p{
 				letter-spacing: 1.74px;
+				@include media('mobile') {
+					margin-bottom: 32px;
+				}
 			}
 		}
 		.map{
-		    width: 678px;
+		    width: calc(100% - 48.64%);
 			float: left;
+			@include media('mobile') {
+				width: 100%;
+				clear: both;
+			}
 			li:after{
 				@extend %clear;
 			}
 			iframe{
+				width: 100%;
 				float: left;
+				@include media('mobile') {
+					width: 100%;
+					clear: both;
+					max-height: 480px;
+				}
+				@include media('mobile') {
+					max-height: 400px;
+				}
 			}
 		}
 	}

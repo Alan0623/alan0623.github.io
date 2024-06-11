@@ -23,6 +23,12 @@
 	@include media('mobile') {
 		height: 400px;
 	}
+	@include media('phone') {
+		height: 200px;
+	}
+}
+#block_portfolio1{
+
 }
 .block_page_banner{
 	padding: 0;
@@ -34,6 +40,9 @@
 		right: 0;
 		@include media('mobile') {
 			height: 400px;
+		}
+		@include media('phone') {
+			height: 200px;
 		}
 	}
 	article h2{
@@ -69,6 +78,9 @@
 		display: flex;
 		max-width: $pc-width;
 		justify-content: space-between;
+		@include media('mobile') {
+			display: block;
+		}
 	}
 	article{
 		display: flex;
