@@ -1070,7 +1070,14 @@ footer class="footer"
 	}
 	&.fixed{
 		position: fixed;
-		
+	}
+	&.white{
+		.social_media::before{
+			background-color: white;
+		}
+		.social_media a{
+			filter: brightness(100)!important;
+		}
 	}
 	.social_media{
 		margin: 0;
@@ -1099,7 +1106,6 @@ footer class="footer"
 	text-align: center;
 	@include media('mobile') {
 		bottom: 24px;
-		font-size: 0.9em;
 		&::before{
 			width: 16px;
 			height: 16px;
@@ -1129,6 +1135,12 @@ footer class="footer"
 		display: block;
 		font-size: 1.25em;
 		margin-top: 4px;
+		@include media('mobile') {
+			font-size: 1em;
+		}
+		@include media('phone') {
+			font-size: 0.9em;
+		}
 	}
 }
 @keyframes goup {

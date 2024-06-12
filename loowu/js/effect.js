@@ -316,47 +316,78 @@ $(function() {
 ------------------------------------------------------------------*/
 $(function(){
     if($('.block_index1')[0] != undefined){ 
+
         $(window).scroll(function() {
-        if ( $(this).scrollTop() > $("#block_index1").height()){
-            $('#social_media_fixed').addClass('fixed');
-            // $(".audit_fixed").removeClass("selected"),
-            // $(".audit_btn").removeClass("open");
-        } else {
-            $('#social_media_fixed').removeClass('fixed');
-        }
+            if ( $(this).scrollTop() > $("#block_index1").height()){
+                $('#social_media_fixed').addClass('fixed');
+                // $(".audit_fixed").removeClass("selected"),
+                // $(".audit_btn").removeClass("open");
+            } else {
+                $('#social_media_fixed').removeClass('fixed');
+            }
         });
+
+
+        $('#block_index2').addClass('ready-animate');
+        $(window).on('scroll', function(){
+            var $WH = $(window).height() * 0.75;
+            var $WS = $(window).scrollTop() + $WH;
+            var $RO2 = $('#block_index2').offset().top;
+            if(  $WS >  $RO2 ) {
+                $('#block_index2').addClass('run-animate').removeClass('ready-animate');
+            }
+        }).scroll();
+
+        $('.block_index3').addClass('ready-animate');
+        $(window).on('scroll', function(){
+            var $WH = $(window).height() * 0.6;
+            var $WS = $(window).scrollTop() + $WH;
+            var $RO3 = $('.block_index3').offset().top;
+            if(  $WS >  $RO3 ) {
+                $('.block_index3').removeClass('ready-animate').addClass('run-animate');
+                $(".pageLoad1").animateNumbers($(".pageLoad1").attr("value"), true, 1000);
+                $(".pageLoad2").animateNumbers($(".pageLoad2").attr("value"), true, 1500);
+                $(".pageLoad3").animateNumbers($(".pageLoad3").attr("value"), true, 1500);
+            }
+        }).scroll();
+
+        $('#block_index4').addClass('ready-animate');
+        $(window).on('scroll', function(){
+            var $WH = $(window).height() * 0.75;
+            var $WS = $(window).scrollTop() + $WH;
+            var $RO4 = $('#block_index4').offset().top;
+            if(  $WS >  $RO4 ) {
+                $('#block_index4').addClass('run-animate').removeClass('ready-animate');
+            }
+        }).scroll();
+
+        $('#block_index5').addClass('ready-animate');
+        $(window).on('scroll', function(){
+            var $WH = $(window).height() * 0.75;
+            var $WS = $(window).scrollTop() + $WH;
+            var $RO5 = $('#block_index5').offset().top;
+            if(  $WS >  $RO5 ) {
+                $('#block_index5').addClass('run-animate').removeClass('ready-animate');
+            }
+        }).scroll();
+
+        $('#block_index6').addClass('ready-animate');
+        $(window).on('scroll', function(){
+            var $WH = $(window).height() * 0.5;
+            var $WS = $(window).scrollTop() + $WH;
+            var $RO6 = $('#block_index6').offset().top;
+            if(  $WS >  $RO6 ) {
+                $('#block_index6').addClass('run-animate').removeClass('ready-animate');
+                $('#social_media_fixed').addClass('white');
+            } 
+            if(  $WS <  $RO6 ) {
+                $('#social_media_fixed').removeClass('white');
+            }
+        }).scroll();
+    
     }
 });
-// $(function() {
-// 	var $window = $(window), //視窗物件
-// 		$ad = $('#advertisement').css('opacity',0).show(), //讓物件透明，並顯示出來，目地是一開始移動到定位時使用者看不到
-// 		width = $ad.width(), //取得advertisement寬度
-// 		height = $ad.height(), //取得advertisement長度
-// 		diffX = 10, //廣告與右方邊距
-// 		diffY = 10, //廣告與下方邊距
-// 		speed = 800; //移動速度，花多少ms完成移動，越小越快
-	
-// 	//先將廣告移到定點
-// 	$ad.css({
-// 		top 	: $(document).height() , //移到最下面
-// 		left	: $window.width() - width - diffX , //移到右邊定點
-// 		opacity : 1 //解除透明
-// 	});
-	
-// 	//加上scroll和resize事件
-// 	$window.on("scroll resize", function(){
-// 		//控制廣告移動
-// 		$ad.stop().animate({
-// 			top: $(this).scrollTop() + $(this).height() - height - diffY,
-// 			left: $(this).scrollLeft() + $(this).width() - width - diffX
-// 		},speed);
-// 	}).scroll();//啟動scroll
-	
-// 	//關閉廣告
-// 	$('#close_ad').click(function(){
-// 		$('#advertisement').hide();
-// 	});
-// });
+
 /*------------------------------------------------------------------
 .block_index3 數字自動跳動  
 ------------------------------------------------------------------*/
@@ -384,22 +415,7 @@ $(function(){
   };
 })(jQuery);
 
-$(function(){
-    if($('.block_index3')[0] != undefined){ 
-        $('.block_index3').addClass('ready-animate');
-        $(window).on('scroll', function(){
-            var $WH = $(window).height() * 0.6;
-            var $WS = $(window).scrollTop() + $WH;
-            var $RO = $('.block_index3').offset().top;
-            if(  $WS >  $RO ) {
-                $('.block_index3').removeClass('ready-animate').addClass('run-animate');
-                $(".pageLoad1").animateNumbers($(".pageLoad1").attr("value"), true, 1000);
-                $(".pageLoad2").animateNumbers($(".pageLoad2").attr("value"), true, 1500);
-                $(".pageLoad3").animateNumbers($(".pageLoad3").attr("value"), true, 1500);
-            }
-        }).scroll();
-    }
-});
+
 /*------------------------------------------------------------------
 footer_tabs 滑動頁籤
 ------------------------------------------------------------------*/

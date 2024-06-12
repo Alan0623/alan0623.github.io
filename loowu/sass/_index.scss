@@ -172,7 +172,7 @@
 	}
 	@include media('mobile') {
 		min-height: auto;
-		padding-top: 40px;
+		padding-top: 0px;
 	}
 	.social_media{
 		&::before{
@@ -214,6 +214,9 @@
 		text-align: center;
 		display: block;
 		bottom: 64px;
+		@include rwd(1280){
+			bottom: 40px;
+		}
 		&::before{
 			filter: brightness(0);
 			opacity: 0.2;
@@ -224,9 +227,6 @@
 	figure.img{
 		display: inline-block;
 	}
-	article{
-		
-	}
 	.center{
 		max-width: $pc-width;
 		display: flex;
@@ -234,6 +234,9 @@
 		height: 100vh;
 		// padding-bottom: 48px;
 		box-sizing: border-box;
+		@include rwd(1280){
+			height: auto;
+		}
 		@include media('mobile') {
 			display: block;
 			height: auto;
@@ -250,10 +253,16 @@
 			border-radius: 0 16px 16px 0;
 			padding: 104px 0;
 			position: relative;
+			padding-right: 24px;
+			@include rwd(1280){
+				margin-top: 40px;
+			}
 			@include media('mobile') {
 				width: 100%;
 				float: inherit;
 				max-width: 100%;
+				padding-top: 56px;
+    			padding-bottom: 56px;
 			}
 			&::before{
 				content: $content;
@@ -279,7 +288,14 @@
 			}
 			img{
 				width: 100%;
-				max-width: 320px;
+				max-width: 368px;
+				padding: 24px;
+				@include rwd(1200) {
+					padding: 8px;
+				}
+				@include media('mobile') {
+					padding: 24px;
+				}
 			}
 		}
 		article{
@@ -288,14 +304,21 @@
 			float: left;
 			padding-left: 56px;
 			box-sizing: border-box;
+			@include rwd(1200) {
+				padding-left: 26px;
+			}
 			@include media('mobile') {
 				width: 100%;
 				float: inherit;
-				padding: 0 16px 0 32px;
+				// padding: 0 16px 0 32px;
+				padding: 24px 0 48px 8px;
 			}
 			h2{
 				font-size: 1em;
 				margin-bottom: 64px;
+				@include media('mobile') {
+					margin-bottom: 24px;
+				}
 				span{
 					display: block;
 				}
@@ -327,6 +350,12 @@
 					line-height: 1.6em;
 					letter-spacing: 0em;
 				}
+				span{
+					display: block;
+					@include media('mobile') {
+						display: inline-block;
+					}
+				}
 			}
 		}
 	}
@@ -348,8 +377,12 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			padding-left: 108px;
+			// padding-left: 108px;
+			padding-left: 5.6vw;
 			box-sizing: border-box;
+			@include rwd(1280){
+				padding-left: 0;
+			}
 			@include media('phone') {
 				display: block;
 			}
@@ -358,6 +391,9 @@
 				padding-right: 140px;
 				align-items: center;
 				flex-direction: row-reverse;
+				@include rwd(1280){
+					padding-right: 0;
+				}
 				@include media('mobile') {
 					padding-left: 0;
 					padding-right: 0;
@@ -374,6 +410,9 @@
 			align-items: center;
 			min-width: 520px;
 			margin: 0 32px;
+			@include rwd(1280){
+				min-width: auto;
+			}
 			@include media('mobile') {
 				align-items: flex-start;
 				flex-direction: column;
@@ -387,6 +426,9 @@
 			.text{
 				margin-left: 48px;
 				text-wrap: nowrap;
+				@include rwd(1280){
+					margin-left: 16px;
+				}
 				@include media('mobile') {
 					margin-left: 0;
 				}
@@ -408,6 +450,9 @@
 			height: 360px;
 			background-position: center;
 			background-size: cover;
+			@include media('phone') {
+				height: 208px;
+			}
 			img{
 				width: 100%;
 			}
@@ -474,6 +519,9 @@
 			bottom: 0;
 			right: 64px;
 			z-index: 2;
+			@include media('mobile') {
+				right: 24px;
+			}
 		}
 	}
 	.tab_container{
@@ -512,7 +560,7 @@
 		max-width: 70%;
 		display: block;
 		float: left;
-		@include media('mobile') {
+		@include rwd(916) {
 			float: inherit;
 			margin: 0 auto;
 			width: 100%;
@@ -527,6 +575,9 @@
 		float: left;
 		padding-left: 36px;
 		@include media('mobile') {
+			padding-left: 16px;
+		}
+		@include rwd(916) {
 			width: 100%;
 			max-width: 100%;
 			float: inherit;
@@ -535,6 +586,9 @@
 		> img{
 			width: 100%;
 			margin-bottom: 16px;
+			@include rwd(916) {
+				display: none;
+			}
 		}
 		article{
 			margin-top: 0;
@@ -816,6 +870,7 @@
 	color: #000;
 	@include media('mobile') {
 		height: auto;
+		padding-bottom: 40px;
 	}
 	.center{
 		// max-width: 1432px;
@@ -832,20 +887,28 @@
 		box-sizing: border-box;
 		padding-left: 32px;
 		padding-bottom: 80px;
+		@include rwd(1425){
+			padding-left: 8px;
+		}
 		@include media('mobile') {
 			width: 100%;
 			padding: 0 16px;
+			padding-left: 0;
 		}
 		h2{
 			font-size: 1em;
 			letter-spacing: 0.1em;
+			padding-left: 16px;
+			@include media('mobile') {
+				padding-left: 0;
+			}
 			span{
 				display: block;
 				&.zh{
 					font-size: 2.25em;
 					letter-spacing: 0.1em;
 					margin-bottom: 8px;
-					@include media('mobile') {
+					@include rwd(1200) {
 						font-size: 2em;
 						letter-spacing: 0.05em;
 					}
@@ -928,6 +991,12 @@
 				@include media('mobile') {
 					padding: 24px 0;
 				}
+				@include rwd(1300) {
+					flex: 0 0 33.33%;
+				}
+				@include media('mobile') {
+					flex: 0 0 25%;
+				}
 				@include media('phone') {
 					flex: 0 0 33.33%;
 				}
@@ -950,9 +1019,19 @@
 				height: 124px;
 				border: black solid 4px;
 				border-radius: 200px;	
-
 				overflow: hidden;
 				position: relative;
+				
+				@include rwd(1425){
+					width: 96px;
+					height: 96px;
+				}
+
+				@include media('mobile') {
+					width: 124px;
+					height: 124px;
+				}
+
 				&::before{
 					content: $content;
 					display: block;
@@ -964,6 +1043,15 @@
 					background-position: center;
 					background-size: cover;
 					filter: grayscale(0) brightness(0);
+					@include rwd(1425){
+						width: 88px;
+						height: 88px;
+					}
+
+					@include media('mobile') {
+						width: 116px;
+						height: 116px;
+					}
 				}
 			}
 			.figcaption{
