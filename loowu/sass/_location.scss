@@ -34,6 +34,9 @@
 	overflow: hidden;
 	.center{
 		position: relative;
+		@include media('phone') {
+			padding: 0 4px;
+		}
 		article{
 			text-align: center;
 		}
@@ -79,7 +82,8 @@
 				border: black solid 1px;
 				padding: 8px 80px;
 				@include rwd(685){
-					padding: 8px 24px;
+					font-size: 1.125em;
+					padding: 8px 24px 12px 24px;
 					text-align: center;
 					display: inline-block;
 				}
@@ -114,6 +118,13 @@
 			height: 0;
 			padding-bottom: calc(34.8% - 8px);
 			margin-bottom: 8px;
+
+			@include media('phone') {
+				width: calc(66.66% - 4px);
+				padding: 4px;
+				padding-bottom: calc(34.8% - 4px);
+				margin-bottom: 4px;
+			}
 			&::after{
 				@extend %clear;
 			}
@@ -136,6 +147,10 @@
 				padding-bottom: 17.1%;
 				overflow: hidden;
 				margin-top: 0px;
+				@include media('phone') {
+					padding: 4px;
+					padding-bottom: 17.1%;
+				}
 				&::after{
 					@extend %clear;
 				}
@@ -146,6 +161,9 @@
 					z-index: 1;
 					margin: 0;
 					padding-bottom: calc(17.1% - 8px);
+					@include media('phone') {
+						padding-bottom: calc(17.1% - 4px);
+					}
 				}
 				&:nth-child(2){
 					position: absolute;
@@ -169,6 +187,7 @@
 		margin: 49px 0 50px 0;
 		@include media('phone') {
 			display: block;
+			margin: 0;
 		}
 		li{
 			padding-right: 25px;
@@ -193,16 +212,32 @@
 			@include media('mobile') {
 				display: block;
 				float: left;
-				margin-right: 16px;
+				margin-right: 0;
+				width: 50%;
+			}
+			@include media('phone') {
+				width: 100%;
+				margin: 0;
 			}
 			a{
 				background-color: white;
 				color: black;
 				display: inline-block;
 				border-radius: 100px;
-				padding: 16px 70px;
+				padding: 16px 0px 16px 70px;
 				line-height: 1.6em;
 				width: 400px;
+				@include media('mobile') {
+					width: 100%;
+				}
+				@include rwd(780) {
+					padding: 16px 0px 16px 40px;
+				}
+				@include media('phone') {
+					padding: 16px 0px 16px 40px;
+					width: 100%;
+					margin-bottom: 24px;
+				}
 				span{
 					display: block;
 					&:first-child{

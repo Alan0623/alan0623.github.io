@@ -330,6 +330,9 @@
 						font-size: 2em;
 						letter-spacing: 0.05em;
 					}
+					@include media('phone') {
+						font-size: 1.25em;
+					}
 				}
 				.en{
 					font-size: 1.25em;
@@ -442,12 +445,21 @@
 			h3{
 				font-size: 1.5em;
 				margin-bottom: 16px;
-				
+				@include media('mobile') {
+					font-size: 1.4em;
+				}
+				@include media('phone') {
+					font-size: 1.25em;
+				}
 			}
 			p{
 				font-size: 1em;
 				line-height: 1.8em;
 				letter-spacing: 0.1em;
+				@include media('phone') {
+					font-size: 0.9em;
+					line-height: 1.6em;
+				}
 			}
 		}
 		.img{
@@ -507,6 +519,11 @@
 			float: left;
 			margin-right: 16px;
 		}
+		@include media('phone') {
+			width: 96px;
+			height: 96px;
+			min-width: 96px;
+		}
 		.zh{
 			font-size: 1.5em;
 			@include rwd(1320){
@@ -514,6 +531,10 @@
 			}
 			@include media('mobile') {
 				font-size: 1.2em;
+			}
+			@include media('phone') {
+				font-size: 0.9em;
+				letter-spacing: 0.01em;
 			}
 		}
 		.en{
@@ -523,6 +544,9 @@
 			}
 			@include media('mobile') {
 				font-size: 2em;
+			}
+			@include media('phone') {
+				font-size: 1.25em;
 			}
 		}
 		span{
@@ -956,6 +980,12 @@
 					@include rwd(1200) {
 						font-size: 2em;
 						letter-spacing: 0.05em;
+					}
+					@include media('mobile') {
+						font-size: 2em;
+					}
+					@include media('phone') {
+						font-size: 1.25em;
 					}
 				}
 				&.en{
