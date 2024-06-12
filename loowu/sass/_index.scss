@@ -371,6 +371,12 @@
     background-size: contain;
     padding: 64px 0;
     background-attachment: fixed;
+	@include media('mobile') {
+		padding: 48px 0;
+	}
+	@include rwd(780){
+		padding-top: 0;
+	}
 	ul.block_index3_list{
 		li{
 			width: 100%;
@@ -383,7 +389,7 @@
 			@include rwd(1280){
 				padding-left: 0;
 			}
-			@include media('phone') {
+			@include rwd(780){
 				display: block;
 			}
 			&:nth-child(2){
@@ -418,7 +424,7 @@
 				flex-direction: column;
 				min-width: 300px;
 			}
-			@include media('phone') {
+			@include rwd(780){
 				display: block;
 				margin: 0;
         		padding: 48px 0 16px 0;
@@ -450,7 +456,13 @@
 			height: 360px;
 			background-position: center;
 			background-size: cover;
-			@include media('phone') {
+			@include rwd(1280){
+				height: 328px;
+			}
+			@include media('mobile') {
+				height: 282px;
+			}
+			@include rwd(780){
 				height: 208px;
 			}
 			img{
@@ -471,13 +483,24 @@
 		flex-direction: column;
 		letter-spacing: 0.1em;
 		font-weight: bold;
-		@include rwd(1280){
+		@include rwd(1320){
 			width: 160px;
 			height: 160px;
 			min-width: 160px;
 			margin-bottom: 16px;
 		}
-		@include media('phone') {
+		@include rwd(1200){
+			width: 140px;
+			height: 140px;
+			min-width: 140px;
+			margin-bottom: 16px;
+		}
+		@include media('mobile') {
+			width: 128px;
+			height: 128px;
+			min-width: 128px;
+		}
+		@include rwd(780){
 			width: 140px;
 			height: 140px;
 			min-width: 140px;
@@ -486,12 +509,18 @@
 		}
 		.zh{
 			font-size: 1.5em;
+			@include rwd(1320){
+				font-size: 1.4em;
+			}
 			@include media('mobile') {
 				font-size: 1.2em;
 			}
 		}
 		.en{
 			font-size: 3em;
+			@include rwd(1320){
+				font-size: 2.2em;
+			}
 			@include media('mobile') {
 				font-size: 2em;
 			}
@@ -509,6 +538,9 @@
 .block_index4{
 	padding: 64px 0;
 	background-color: #D8D6CE;
+	@include media('mobile') {
+		padding: 48px 0;
+	}
 	.center{
 		max-width: 1440px;
 		text-align: center;
@@ -593,14 +625,19 @@
 		article{
 			margin-top: 0;
 			text-align: left;
-			@include media('mobile') {
-				// display: flex;
-				// flex-direction: row;
-				// align-items: flex-start;
-				margin-top: 24px;
-			}
 			h2{
+				font-size: 1em;
 				margin-bottom: 4px;
+				.zh{
+					font-size: 1.5em;
+					letter-spacing: 0.08em;
+					@include media('mobile') {
+						font-size: 1.25em;
+					}
+					@include media('phone') {
+						font-size: 1.125em;
+					}
+				}
 			}
 			h3{
 				font-size: 1em;
@@ -696,7 +733,14 @@
 		}
 	}
 }
-
+.block_index4{
+	.jcarousel-wrapper .jcarousel-pagination{
+		@include media('phone') {
+			left: 19px;
+    		transform: none;
+		}
+	}
+}
 
 .jcarousel-wrapper {
 	display: inline-block;
@@ -879,6 +923,7 @@
 		height: 100vh;
 		@include media('mobile') {
 			height: auto;
+			padding-top: 48px;
 		}
 	}
 	article{
@@ -1032,6 +1077,11 @@
 					height: 124px;
 				}
 
+				@include media('phone') {
+					width: 96px;
+					height: 96px;
+				}
+
 				&::before{
 					content: $content;
 					display: block;
@@ -1052,6 +1102,11 @@
 						width: 116px;
 						height: 116px;
 					}
+
+					@include media('phone') {
+						width: 88px;
+						height: 88px;
+					}
 				}
 			}
 			.figcaption{
@@ -1064,7 +1119,12 @@
 				word-break: keep-all;
 				left: 0;
 				right: 0;
-				margin: 0 auto;
+				// margin: 0 auto;
+				margin: 0 -24px;
+				@include media('phone') {
+					letter-spacing: 0;
+					font-size: 0.9em;
+				}
 			}
 		}
 	}
