@@ -1106,11 +1106,10 @@ footer class="footer"
 	text-align: center;
 	@include media('mobile') {
 		bottom: 24px;
-		&::before{
-			width: 16px;
-			height: 16px;
-			top: 8px;
-		}
+		font-size: 0.9em;
+	}
+	@include media('phone') {
+		font-size: 0.8em;
 	}
 	&::before{
 		content: $content;
@@ -1129,7 +1128,11 @@ footer class="footer"
 		margin: 0 auto;
 		text-align: center;
 		animation: goup 600ms infinite linear;
-		
+		@include media('mobile') {
+			width: 16px;
+			height: 16px;
+			top: 8px;
+		}
 	}
 	span{
 		display: block;
@@ -1139,7 +1142,7 @@ footer class="footer"
 			font-size: 1em;
 		}
 		@include media('phone') {
-			font-size: 0.9em;
+			font-size: 1.1em;
 		}
 	}
 }

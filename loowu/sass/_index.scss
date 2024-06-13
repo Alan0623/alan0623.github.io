@@ -296,6 +296,9 @@
 				@include media('mobile') {
 					padding: 24px;
 				}
+				@include media('phone') {
+					padding: 8px;
+				}
 			}
 		}
 		article{
@@ -758,6 +761,12 @@
 	}
 }
 .block_index4{
+	.jcarousel-wrapper .jcarousel-control-prev, .jcarousel-wrapper .jcarousel-control-next{
+		@include media('phone') {
+			top: calc(50% - 52px);
+		}
+		
+	}
 	.jcarousel-wrapper .jcarousel-pagination{
 		@include media('phone') {
 			left: 19px;
@@ -1078,6 +1087,7 @@
 			}
 			a{
 				color: black;
+				transition: $transition;
 				&:hover, &:focus{
 					.img{
 						background-color: black;
@@ -1092,7 +1102,7 @@
 				display: block;
 				width: 124px;
 				height: 124px;
-				border: black solid 4px;
+				border: black solid 2px;
 				border-radius: 200px;	
 				overflow: hidden;
 				position: relative;
@@ -1180,6 +1190,12 @@
 	.center{
 		position: relative;
 		max-width: 1420px;
+		@include media('mobile') {
+			padding: 0 8px;
+		}
+		@include media('phone') {
+			padding: 0;
+		}
 	}
 	article{
 		display: none;

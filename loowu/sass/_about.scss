@@ -73,7 +73,7 @@
 		content: $content;
 		position: absolute;
 		width: 40vw;
-		min-height: 369px;
+		min-height: 340px;
 		background-color: #D8D6CE;
 		z-index: 1;
 		top: 128px;
@@ -120,7 +120,7 @@
 	.info{
 		display: block;
 		width: 100%;	
-		min-height: 369px;
+		min-height: 340px;
 		padding: 56px 0;
 		background-color: #D8D6CE;
 		letter-spacing: 0.1em;
@@ -149,6 +149,7 @@
 		float: right;	
 		letter-spacing: 0.1em;
 		line-height: 1.8em;
+		margin-top: 56px;
 	}
 }
 .block_about3{
@@ -419,8 +420,14 @@
 	background-color: #D8D6CE;
 	text-align: center;
 	padding-bottom: 40px;
+	@include media('phone') {
+		padding: 0;
+	}
 	article{
 		margin-bottom: 24px;
+		@include media('phone') {
+			padding: 0 16px;
+		}
 		h2{
 			font-size: 2.2em;
 			letter-spacing: 0.1em;
@@ -447,11 +454,18 @@
 		justify-content: center;
 		max-width: 1060px;
 		margin: 0 auto;
+		width: 100%;
 		li{
 			display: inline-block;
 			margin: 40px;
+			@include media('phone') {
+				margin: 8px;
+			}
 			&:first-child{
 				margin-left: 5%;
+				@include media('phone') {
+					margin-left: 0;
+				}
 			}
 		}
 		figure{
@@ -462,10 +476,18 @@
 				width: 184px;
 				height: 184px;
 				margin-bottom: 16px;
+				@include media('phone') {
+					width: 96px;
+					height: 96px;
+					margin-bottom: 8px;
+				}
 			}
 		}
 		figcaption{
 			letter-spacing: 0.1em;
+			@include media('phone') {
+				width: 96px;
+			}
 			span{
 				display: block;
 			}
