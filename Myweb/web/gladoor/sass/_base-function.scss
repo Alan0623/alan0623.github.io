@@ -1,0 +1,42 @@
+/*------------------------------------------------------------------
+參數
+------------------------------------------------------------------*/
+%hide-text {//隱藏文字的方法
+    font: 0/0 a;
+    color: transparent;
+}
+%parallax_layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+%parallax_layer_title{
+    position: absolute;
+    left: $paddingLR;
+    top: 11%;
+    font-size:1.6em;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    @media screen and (min-width:$media_pad) {
+        font-size:1.8em;
+    }
+}
+%icomoon{
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 32px;
+}
+%parallelogram{ 
+-webkit-clip-path: polygon(0 45%, 100% 0%, 100% 55%, 0% 100%);
+clip-path: polygon(0 45%, 100% 0%, 100% 55%, 0% 100%);
+}

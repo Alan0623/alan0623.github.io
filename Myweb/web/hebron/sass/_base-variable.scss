@@ -1,0 +1,50 @@
+//變數
+//設定================================================================
+	$rwd: true; // true 或 false，是否開啟 rwd
+//主要版面顏色================================================================
+	$major-color: #953624; //主色: 
+	$minor-color: #4D3A3A; //次色
+	$border-radius:5px;
+//文字樣式================================================================
+	@font-face {
+		font-family: '微軟正黑體修正';
+		unicode-range: U+7db0, U+78A7, U+7B75; /* ASCII (碧筵綰) */
+		font-style: normal;
+		font-weight: bold;
+		src: local(Yu Gothic), local(MS Gothic);
+	}
+	/* 一般粗細的時候改回微軟正黑 */
+	@font-face {
+		font-family: '微軟正黑體修正';
+		unicode-range: U+7db0, U+78A7, U+7B75; /* ASCII (碧筵綰) */
+		font-style: normal;
+		font-weight: normal;
+		src: local(微軟正黑體);
+	}
+	$base-font-style: Arial,'微軟正黑體修正', '微軟正黑體', 'Helvetica Neue', Helvetica, sans-serif, '新細明體';
+
+	@font-face {
+		font-family: "DIN_Medium";
+		src: url(../fonts/DIN_Medium.ttf);
+	}
+	@font-face {
+		font-family: "apercu_light";
+		src: url(../fonts/apercu_light.otf);
+	}
+//rwd設定================================================================
+	$high-width: 1160px; //pc寬度
+	$pc-width:	910px; //pc寬度
+	$pad-width: 768px; //pad寬度
+	$phone-width: 480px; //phone寬度
+	$low-width: 400px; //phone寬度
+	$rwd-btn-size: 44px; //RWD 手機側欄按鈕大小x
+//瀏覽器媒體，給 rwd 用================================================================
+	$media: (
+		'center': '(min-width: #{$pc-width})',
+		'pc': '(max-width: #{$pc-width}) and (min-width: #{$pad-width + 1})',
+		'mobile': '(min-width: #{$pad-width})',
+		'pad': '(max-width: #{$pad-width}) and (min-width: #{$phone-width + 1})',
+		'phone': '(min-width: #{$phone-width})',
+		'low': '(min-width: #{$low-width})'
+	);
+

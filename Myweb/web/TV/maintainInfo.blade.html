@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <title>新北市智能生活社區 - 維護資訊</title>
+    <!--IE integration -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--viewport integration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google integration -->
+    <meta name="description" content="新北市智能生活社區" />
+    <meta name="keywords" content="新北市智能生活社區" />
+    <meta name="author" content="新北市智能生活社區"/>
+    <meta name="copyright" content="新北市政府"/>
+    <!--Telephone -->
+    <meta name="format-detection" content="telephone=no" />
+     <!--[if gte IE 9]><!-->
+    <link rel="stylesheet" href="css/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="css/pageDetail.css" type="text/css">
+    <link rel="stylesheet" href="css/export.css" type="text/css">
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <link rel="stylesheet" href="css/indexIE.css" type="text/css">
+    <![endif]--> 
+</head><!--/head-->
+<body id="inside">
+    <header id="header">
+        <ul class="header_ul">
+            <li class="logo_ntcg"><img src="images/logo_ntcg.png"></li>
+            <li class="logo_tier"><img src="images/logo_tier.png"></li>
+            <li class="logo_dudu"><img src="images/logo_dudu.png"></li>
+            <li class="logo_name">
+                <h1><a href="index.html" title="新北市智能生活社區(返回首頁)"><img src="images/logo_name.png"></a></h1>
+            </li>
+            <li class="info">
+                <div class="date">2018-12-12</div>
+                <div class="time">AM 09 : 27</div>
+                <!--div class="temperature">30
+                    <span>oC</span>
+                </div-->
+            </li>
+            <li class="weather">
+                <iframe id="embedweather" style="margin: 0; padding: 0; border: none; width:400px; position:relative; top:-40px;right: -220px; overflow:hidden; margin-bottom: -60px;">
+                </iframe>
+            </li>
+        </ul>
+    </header>
+    <main id="main_content">
+        <section class="info_block">
+            <div class="community_photo">
+                <h2>社區照片</h2>
+                <ul class="community_photo_img">
+                    <li class="ad"><img src="images/img_index1.jpg"></li>
+                    <li class="ad"><img src="images/img_index2.jpg"></li>
+                    <li class="ad"><img src="images/img_index3.jpg"></li>
+                    <li class="ad"><img src="images/img_index4.jpg"></li>
+                    <li class="ad"><img src="images/img_index5.jpg"></li>
+                    <li class="ad"><img src="images/img_index6.jpg"></li>
+                </ul>    
+            </div>
+            <div class="system_menu">
+                <h2>主選單</h2>
+                <ul class="system_menu_text">
+                    <li><a href="curves.blade.html">曲線資訊</a></li>
+                    <li><a href="warningInfo.blade.html">告警處理</a></li>
+                    <li><a class="active" href="maintainInfo.blade.html">維護資訊</a></li>
+                    <li><a href="useElectAllInfo.blade.html">用戶用電資訊</a></li>
+                    <li><b>用戶:張起零</b><a>登出</a></li>
+                    <li><a href="single.blade.html">後端數據</a></li>
+                    <li><a class="hide" href="useElectInfo.blade.html">單戶用電介面</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="data_list inside_page">
+            <div class="data_list_info">
+                <h2>菠爾設備狀態</h2>
+                <div class="exception_message">異常訊息:無</div>
+            </div>
+            <div class="data_list_table">
+                <h2>維護資訊</h2>
+                <div class="download"><a href="javascript:;">報表下載</a></div>
+                <ul class="time_picker">
+                    <li>時間：</li>
+                    <li><input class="datetimepicker1" type="text" placeholder="年 - 月 - 日"/></li>
+                    <li>~</li>
+                    <li><input class="datetimepicker2" type="text" placeholder="年 - 月 - 日"/></li>
+                </ul>
+                <div class="search"><a href="javascript:;">搜尋</a></div>
+                <table class="maintenance" width=100% cellpadding=0 cellspacing=0 border='0'>
+                    <thead>
+                        <tr>
+                            <th>序號</th>
+                            <th>維護原因</th>
+                            <th>派工時間</th>
+                            <th>維護人員</th>
+                            <th>維護時間</th>
+                            <th>維護訊息</th>
+                            <th>目前<br>系統狀態</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>燃料電池的燃料低落，前往進行燃料加入動作燃料電池的燃料低落，前往進行燃料加入動作</td>
+                            <td><b>2018-07-26</b><b>08:00</b></td>
+                            <td>張嘉文</td>
+                            <td><b>2018-07-26</b><b>08:30 ~ 09:30</b></td>
+                            <td>燃料添加完畢</td>
+                            <td>正常</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>燃料電池的燃料低落，前往進行燃料加入動作</td>
+                            <td><b>2018-07-26</b><b>08:00</b></td>
+                            <td>張嘉文</td>
+                            <td><b>2018-07-26</b><b>08:30 ~ 09:30</b></td>
+                            <td>燃料添加完畢</td>
+                            <td>正常</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>燃料電池的燃料低落，前往進行燃料加入動作</td>
+                            <td><b>2018-07-26</b><b>08:00</b></td>
+                            <td>張嘉文</td>
+                            <td><b>2018-07-26</b><b>08:30 ~ 09:30</b></td>
+                            <td>燃料添加完畢</td>
+                            <td>正常</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>燃料電池的燃料低落，前往進行燃料加入動作</td>
+                            <td><b>2018-07-26</b><b>08:00</b></td>
+                            <td>張嘉文</td>
+                            <td><b>2018-07-26</b><b>08:30 ~ 09:30</b></td>
+                            <td>燃料添加完畢</td>
+                            <td>正常</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>燃料電池的燃料低落，前往進行燃料加入動作</td>
+                            <td><b>2018-07-26</b><b>08:00</b></td>
+                            <td>張嘉文</td>
+                            <td><b>2018-07-26</b><b>08:30 ~ 09:30</b></td>
+                            <td>燃料添加完畢</td>
+                            <td>正常</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>燃料電池的燃料低落，前往進行燃料加入動作</td>
+                            <td><b>2018-07-26</b><b>08:00</b></td>
+                            <td>張嘉文</td>
+                            <td><b>2018-07-26</b><b>08:30 ~ 09:30</b></td>
+                            <td>燃料添加完畢</td>
+                            <td>正常</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>燃料電池的燃料低落，前往進行燃料加入動作</td>
+                            <td><b>2018-07-26</b><b>08:00</b></td>
+                            <td>張嘉文</td>
+                            <td><b>2018-07-26</b><b>08:30 ~ 09:30</b></td>
+                            <td>燃料添加完畢</td>
+                            <td>正常</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>燃料電池的燃料低落，前往進行燃料加入動作</td>
+                            <td><b>2018-07-26</b><b>08:00</b></td>
+                            <td>張嘉文</td>
+                            <td><b>2018-07-26</b><b>08:30 ~ 09:30</b></td>
+                            <td>燃料添加完畢</td>
+                            <td>正常</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>燃料電池的燃料低落，前往進行燃料加入動作</td>
+                            <td><b>2018-07-26</b><b>08:00</b></td>
+                            <td>張嘉文</td>
+                            <td><b>2018-07-26</b><b>08:30 ~ 09:30</b></td>
+                            <td>燃料添加完畢</td>
+                            <td>正常</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>燃料電池的燃料低落，前往進行燃料加入動作</td>
+                            <td><b>2018-07-26</b><b>08:00</b></td>
+                            <td>張嘉文</td>
+                            <td><b>2018-07-26</b><b>08:30 ~ 09:30</b></td>
+                            <td>燃料添加完畢</td>
+                            <td>正常</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="page_no">
+                    <ul class="page">
+                        <li><a class="active" href="javascript:;">1</a></li>
+                        <li><a href="javascript:;">2</a></li>
+                        <li><a href="javascript:;">3</a></li>
+                        <li><a href="javascript:;">4</a></li>
+                        <li>...</li>
+                        <li><a href="javascript:;">10</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">COPYRIGHT &#169; 2018 新北市智能生活社區</footer>  
+    <script src="js/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var weatherProperties = 'lat=25.010996&lon=121.502369&color=#FFFFFF&text-color=#FFFFFF&lang=zh-tw&time=+0800&units=si';
+            // initial load
+            document.getElementById('embedweather').src = 'http://forecast.io/embed/?ts=' + (Date.now()) + '#' + weatherProperties;
+            // refresh
+            var weatherRefresh = setInterval(function () {
+                document.getElementById('embedweather').src = 'http://forecast.io/embed/?ts=' + (Date.now()) + '#' + weatherProperties;
+            }, 1800000);
+        })
+    </script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/pageDetail.js"></script>
+    <script src="js/amcharts.js"></script>
+    <script src="js/pie.js"></script>
+    <script src="js/light.js"></script>
+    <script src="js/export.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery-ui-timepicker-addon.js"></script>
+    <script src='js/jquery-ui-sliderAccess.js'></script>
+</body>
+</html>

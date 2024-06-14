@@ -1,0 +1,32 @@
+#PROJECT-NAV{  position:absolute; background:url(../images/header_bg.png);   top:0;   left:0;   z-index:9999;   width:100%;   height:44px;   color:#fff; border-bottom:#774243 solid 2px}
+#PROJECT-PAGE-LOGO{  float:right;   width:155px;   height:44px;   background:transparent url("../images/logo.png") no-repeat 0 0;  margin:0 26px 0 0}
+#PROJECT-PAGE-LOGO a{ display:block;  width:100%;  height:100%}
+#PROJECT-PAGE-LOGO h1{ margin:0}
+#PROJECT-DROPDOWN{font-family:"微軟正黑體",Microsoft JhengHei,Arial,Helvetica,sans-serif;   position:relative;   float:left;   background:#444 url("img/pointer-bottom.png") no-repeat 275px 19px;  width:300px;  height:44px;  opacity:0.8;  -webkit-transition:opacity 0.3s ease-in-out;  -moz-transition:opacity 0.3s ease-in-out;  -o-transition:opacity 0.3s ease-in-out;  transition:opacity 0.3s ease-in-out;  -webkit-transition:background-color 0.3s ease-in-out;  -moz-transition:background-color 0.3s ease-in-out;  -o-transition:background-color 0.3s ease-in-out;  transition:background-color 0.3s ease-in-out}
+#PROJECT-DROPDOWN.NEWS_DROPDOWN{ height:40px; position:absolute; z-index:99999;}
+#PROJECT-DROPDOWN:hover{ opacity:1;}
+#PROJECT-DROPDOWN:active{ background-position:275px 20px}
+#PROJECT-DROPDOWN a{ display:block;  margin:13px 12px 12px 12px;  text-transform:uppercase;  font-size:0.95em;  font-weight:600;  color:#fff}
+#PROJECT-DROPDOWN.NEWS_DROPDOWN a{margin:0 12px; line-height:40px;}
+#PROJECT-DROPDOWN a span{ font-weight:400;  color:#ccc}
+#PROJECT-DROPDOWN ul{ position:absolute; z-index:9999;top:-9999px;  width:300px;  margin:0;  padding:0;  background-color:#fff;  opacity:0;  -webkit-box-shadow:1px 1px 2px #444;  -moz-box-shadow:1px 1px 2px #444;  box-shadow:1px 1px 2px #444;  -webkit-transition:opacity 0.3s ease-in-out;  -moz-transition:opacity 0.3s ease-in-out;  -o-transition:opacity 0.3s ease-in-out;  -ms-transition:opacity 0.3s ease-in-out;  transition:opacity 0.3s ease-in-out}
+#PROJECT-DROPDOWN ul li{ list-style-type:none;  margin:0;  padding:0}
+#PROJECT-DROPDOWN ul li a{ width:276px;  color:#000;  margin:0;  padding:0px 12px 0px 12px;  border-bottom:1px solid #eee}
+#PROJECT-DROPDOWN.NEWS_DROPDOWN ul li a{margin:0;}
+#PROJECT-DROPDOWN ul li a:hover{ background-color:#eee}
+#PROJECT-DROPDOWN ul li a:active{ position:relative;  bottom:0}
+#PROJECT-DROPDOWN ul li.back{ background-color:#ffe39c;  border-bottom:0px solid black}
+#PROJECT-DROPDOWN ul li.back a{ color:#000;  border-bottom:0 solid black}
+#PROJECT-DROPDOWN ul li.back a:hover{ color:#fff;  background-color:#444}
+#PROJECT-DROPDOWN:hover ul{ top:44px;  opacity:1}
+#PROJECT-DROPDOWN.NEWS_DROPDOWN:hover ul{ top:40px;  opacity:1}
+@media screen and (max-width: 700px) {
+#PROJECT-DROPDOWN {width: 160px;background: #444444 url("img/pointer-bottom.png") no-repeat 135px 19px; }
+#PROJECT-DROPDOWN span {display: none; }
+#PROJECT-DROPDOWN ul {width: 160px; }#PROJECT-DROPDOWN li a {width: 136px !important; }
+#PROJECT-PAGE-LOGO {width: 26px;height: 44px;background: transparent url(""../images/logo.png"") no-repeat 0px 0px; margin-right:10px; }
+}
+#BACK-TO-WORK{  float:left;   background:transparent url("../images/back.png") no-repeat;  width:70px;  height:44px;  text-align:right;  opacity:0.8;  -webkit-transition:opacity 0.3s ease-in-out;  -moz-transition:opacity 0.3s ease-in-out;  -o-transition:opacity 0.3s ease-in-out;  transition:opacity 0.3s ease-in-out;  -webkit-transition:background-color 0.3s ease-in-out;  -moz-transition:background-color 0.3s ease-in-out;  -o-transition:background-color 0.3s ease-in-out;  transition:background-color 0.3s ease-in-out}
+#BACK-TO-WORK:hover{ opacity:0.99}
+#BACK-TO-WORK a{ display:block; height:44px; width:70px}
+#BACK-TO-WORK a span{ font-weight:400;  color:#ccc}

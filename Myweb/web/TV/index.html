@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <title>新北市智能生活社區</title>
+    <!--IE integration -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--viewport integration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google integration -->
+    <meta name="description" content="新北市智能生活社區" />
+    <meta name="keywords" content="新北市智能生活社區" />
+    <meta name="author" content="新北市智能生活社區"/>
+    <meta name="copyright" content="新北市政府"/>
+    <!--Telephone -->
+    <meta name="format-detection" content="telephone=no" />
+     <!--[if gte IE 9]><!-->
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/export.css" type="text/css">
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <link rel="stylesheet" href="css/indexIE.css" type="text/css">
+    <![endif]--> 
+</head><!--/head-->
+<body class="night">
+    <header id="header">
+        <ul class="header_ul">
+            <li class="logo_ntcg"><img src="images/logo_ntcg.png"></li>
+            <li class="logo_tier"><img src="images/logo_tier.png"></li>
+            <li class="logo_dudu"><img src="images/logo_dudu.png"></li>
+            <li class="logo_name">
+                <h1><a href="index.html" title="新北市智能生活社區(返回首頁)"><img src="images/logo_name.png"></a></h1>
+            </li>
+            <li class="info">
+                <div class="date">107/12/12</div>
+                <div class="time">AM 09 : 27</div>
+                <!--div class="temperature">30
+                    <span>oC</span>
+                </div-->
+            </li>
+            <li class="weather">
+                <iframe id="embedweather" style="margin: 0; padding: 0; border: none; width:400px; position:relative; top:-40px;right: -220px; overflow:hidden; margin-bottom: -60px;">
+                </iframe>
+            </li>
+        </ul>
+    </header>
+    <main id="main_content">
+        <section class="info_block">
+            <div class="community_photo">
+                <h2>社區照片</h2>
+                <ul class="community_photo_img">
+                    <li class="ad"><img src="images/img_index1.jpg"></li>
+                    <li class="ad"><img src="images/img_index2.jpg"></li>
+                    <li class="ad"><img src="images/img_index3.jpg"></li>
+                    <li class="ad"><img src="images/img_index4.jpg"></li>
+                    <li class="ad"><img src="images/img_index5.jpg"></li>
+                    <li class="ad"><img src="images/img_index6.jpg"></li>
+                </ul>    
+            </div>
+            <div class="system_status">
+                <h2>系統狀態</h2>
+                <ul class="system_status_text">
+                    <li><b>Inverter 狀態：</b><i>WAIT_FOR_FAULT_ACK</i></li>
+                    <li><b>燃料電池狀態：</b><i>WAIT_FOR_FAULT_ACK</i></li>
+                    <li><b>儲能電池狀態：</b><i>WAIT_FOR_FAULT_ACK</i></li>
+                </ul>
+            </div>
+            <div class="btn_curve_information">
+                <a href="curves.blade.html"><h2>詳細頁面資訊</h2></a>
+            </div>
+        </section>
+        <section class="data_list">
+            <img class="night" src="images/bg_index_night.jpg">
+            <img class="day" src="images/bg_index_day.jpg">
+            <div class="solar_energy">
+                <div id="fade_block1">
+                    <div class="ad">
+                        <ul><h2>太陽能</h2>
+                            <li>
+                                <b>設置容量</b>
+                                <b>00.00</b>
+                                <b>KWH</b>
+                            </li>
+                            <li>
+                                <b>CO2減碳量</b>
+                                <b>00.00</b>
+                                <b>KWH</b>
+                            </li>
+                            <li>
+                                <b>即時發電量</b>
+                                <b>12345678</b>
+                                <b>KWH</b>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ad">
+                        <ul><h2>太陽能</h2>
+                            <li>
+                                <b>累積發電量</b>
+                                <b>00.00</b>
+                                <b>KWH</b>
+                            </li>
+                            <li>
+                                <b>累積日發電量</b>
+                                <b>00.00</b>
+                                <b>KWH</b>
+                            </li>
+                            <li>
+                                <b>累積月發電量</b>
+                                <b>12345678</b>
+                                <b>KWH</b>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="wind_power">
+                <div id="fade_block2">
+                    <div class="ad">
+                        <ul><h2>風力發電</h2>
+                            <li>
+                                <b>設置容量</b>
+                                <b>00.00</b>
+                                <b>KWH</b>
+                            </li>
+                            <li>
+                                <b>CO2減碳量</b>
+                                <b>00.00</b>
+                                <b>KWH</b>
+                            </li>
+                            <li>
+                                <b>即時發電量</b>
+                                <b>12345678</b>
+                                <b>KWH</b>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ad">
+                        <ul><h2>風力發電</h2>
+                            <li>
+                                <b>累積發電量</b>
+                                <b>00.00</b>
+                                <b>KWH</b>
+                            </li>
+                            <li>
+                                <b>累積日發電量</b>
+                                <b>00.00</b>
+                                <b>KWH</b>
+                            </li>
+                            <li>
+                                <b>累積月發電量</b>
+                                <b>12345678</b>
+                                <b>KWH</b>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="storage_battery">
+                <ul><h2>儲能電池</h2>
+                    <li>
+                        <b>設置容量</b>
+                        <b>00.00</b>
+                        <b>KW</b>
+                    </li>
+                    <li>
+                        <b>目前電量</b>
+                        <b>00.00</b>
+                        <b>KWH</b>
+                    </li>
+                    <li>
+                        <b>累積月釋出量</b>
+                        <b>12345678</b>
+                        <b>KWH</b>
+                    </li>
+                </ul>
+            </div>
+            <div class="fuel_battery">
+                <ul><h2>燃料電池</h2>
+                    <li>
+                        <b>設定功率</b>
+                        <b>00.00</b>
+                        <b>KW</b>
+                    </li>
+                    <li>
+                        <b>累積月釋出量</b>
+                        <b>12345678</b>
+                        <b>KWH</b>
+                    </li>
+                </ul>
+            </div>
+            <div class="user_point">
+                <ul><h2>30戶用點</h2>
+                    <li>
+                        <b>裝設前月用電</b>
+                        <b>234.1</b>
+                        <b>KWH</b>
+                    </li>
+                    <li>
+                        <b>裝設後月用電</b>
+                        <b>0</b>
+                        <b>KWH</b>
+                    </li>
+                </ul>
+            </div>
+            <div class="doughnut">
+                <ul>
+                    <li><b>市電</b></li>
+                    <li><b>風機</b></li>
+                    <li><b>燃料電池</b></li>
+                    <li><b>太陽能</b></li>
+                </ul>
+                <!--span>65%</span-->
+            </div>
+            <div id="chartdiv" class="pie_chart">
+            </div>
+        </section>
+    </main>
+    <footer id="footer">COPYRIGHT &#169; 2018 新北市智能生活社區</footer>  
+    <script src="js/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var weatherProperties = 'lat=25.010996&lon=121.502369&color=#FFFFFF&text-color=#FFFFFF&lang=zh-tw&time=+0800&units=si';
+            // initial load
+            document.getElementById('embedweather').src = 'http://forecast.io/embed/?ts=' + (Date.now()) + '#' + weatherProperties;
+            // refresh
+            var weatherRefresh = setInterval(function () {
+                document.getElementById('embedweather').src = 'http://forecast.io/embed/?ts=' + (Date.now()) + '#' + weatherProperties;
+            }, 1800000);
+        })
+    </script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery-ui-timepicker-addon.js"></script>
+    <script src='js/jquery-ui-sliderAccess.js'></script>
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<script>
+        var chart = AmCharts.makeChart("chartdiv", {
+            "type": "pie",
+            "theme": "light",
+            "allLabels": [{
+                "text": "20%",
+                "align": "center",
+                "bold": true,
+                "y": "45%",
+                "color": "#6faf3d",
+                "size": 32
+            }, {
+                "text": "",
+                "align": "center",
+                "bold": false,
+                "y": "49%",
+            }],
+            "innerRadius": "70%",
+            //"gradientRatio": [-0.4, -0.4, -0.4, -0.4, -0.4, -0.4, 0, 0.1, 0.2, 0.1, 0, -0.2, -0.5],
+            "dataProvider": [{
+                "energy": "市電",
+                "color": "#0224ba",
+                "litres": 2400
+            }, {
+                "energy": "太陽能",
+                "color": "#f3ea6b",
+                "litres": 500
+            }, {
+                "energy": "燃料電池",
+                "color": "#6faf3d",
+                "litres": 1500
+            }, {
+                "energy": "風機",
+                "color": "#f590a3",
+                "litres": 700
+            }],
+            "balloonText": "[[energy]]:[[value]]",
+            "valueField": "litres",
+            "titleField": "energy",
+            "colorField": "color",
+            "labelText": "",
+            "balloon": {
+                "drop": false,
+                "adjustBorderColor": false,
+                "color": "#FFFFFF",
+                "fontSize": 16
+            },
+            "export": {
+                "enabled": true
+            }
+        });
+    </script>
+</body>
+</html>

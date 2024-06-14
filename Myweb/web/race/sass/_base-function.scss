@@ -1,0 +1,197 @@
+%hide-text {
+    //隱藏文字的方法
+    font: 0/0 a;
+    color: transparent;
+}
+
+%ellipsis {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    //單行超過範圍文字變成'...'的方法
+    //overflow: hidden;
+    //text-overflow: ellipsis;
+    //white-space: nowrap;
+}
+%btn_more{
+    position: absolute;
+    left: 405px;
+    top: 20px;
+        &::after{
+        content: "";
+        display: block;
+        width: 107px;
+        height: 34px;
+        background-color: rgba(0, 0, 0, 0.8);
+        transform-origin:bottom;
+        transform:skewX(-50deg);
+        position: absolute;
+        z-index: 1;
+        top:4px;
+        left:8px;
+        }
+    a{  color: #202429;
+        font-weight: bold;
+        text-shadow: #ffd81e 1px 1px 1px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 5;
+        width: 137px;
+        height: 34px;
+        background-image:url('../images/btn_bg.png');
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        text-align: center;
+        line-height: 34px;
+        //box-shadow: 7px 5px 0px rgba(0, 0, 0, 0.3);
+        &:focus,
+        &:hover{
+        background-position: bottom center;
+        color: #ffe427;
+        text-shadow: #202429 1px 1px 1px;
+        }
+    }
+}
+%index_more {
+    position: absolute;
+    z-index: 99;
+    bottom: 0;
+    right: 0;
+    width: 85px;height: 85px;
+    a{
+    display: block;
+    width: 85px;height: 85px;
+    background-image:url('../images/more_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 55px;
+    padding-left: 38px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    &:focus,
+    &:hover{
+        color: #ffd800;
+    }
+    }
+}
+%loginblock{
+    font-size: 1.05em;
+    width: 545px;
+    height: 70px;
+    position: fixed;
+    //overflow: hidden;
+    z-index: 992;
+    top: 50px;
+    right: 0; 
+    background-image:url('../images/login_bg.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    .block_ul{
+      padding: 8px 90px 0 50px;
+      li{display: inline-block;
+        a{
+          color: #202429;
+          font-weight: bold;
+          text-shadow: #ffd81e 1px 1px 1px;
+        }
+      }
+    }
+}
+%title_h2{
+	display: block;
+	width: 296px;
+	height: 46.5px;
+	background-image:url('../images/block_title_bg.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+    background-size: cover;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    span,
+    a{
+    display: block;
+    height: 46.5px;
+    line-height: 46.5px;
+    font-size: .8em;
+    color: #4f2100;
+    font-weight: bold;
+    background: -webkit-linear-gradient(top,#b07401 0,#4f2100 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    padding-left: 38px;
+        &::before{
+            content: "";
+            display: block;
+            width: 27.5px;
+            height: 27.5px;
+            background-image:url('../images/icon/icon_champion.jpg');
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            position: absolute;
+            left: 10px;
+            top: 8px;
+        }
+    }
+}
+
+%banner_vision_img{
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 430px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+%team_vs{
+  line-height: 1.6em;
+  position: relative;
+  .race_name,
+  .race_date{
+    padding-left: 10px;
+    padding-bottom: 12px;
+  }
+  .race_date{
+    padding-bottom: 0;
+  }
+  .race_time{
+  float: left;
+  width: 80px;
+  padding-left: 10px;
+  padding-top:55px;
+  }
+  .vs,
+  .team{
+    float: left;
+    width: 100px;
+    text-align: center;
+    img{width: 78px;height: 78px;display: block;margin: 0 auto;}
+    span{display: block;}
+  }
+  .vs{
+    padding-top: 78px;
+    position: relative;
+    &::before{
+        content:"";
+        display: block;
+        width: 30px;
+        height: 15px;
+        background-image:url('../images/vs.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 38px;
+        left: 33px;
+    }
+  }
+}

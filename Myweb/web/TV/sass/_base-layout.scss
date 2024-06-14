@@ -1,0 +1,91 @@
+//主要版面顏色================================================================
+  $title-color: #9effff; 
+  $text-color: #4f4f4f; 
+  $menu-color: #179ea2;
+//隱藏文字與...================================================================
+  %hide-text {//隱藏文字的方法
+      font: 0/0 a;
+      color: transparent;
+  }
+/*------------------------------------------------------------------
+Reset HTML5
+------------------------------------------------------------------*/
+article,aside,dialog,footer,header,section,footer,nav,figure,menu,details,figcaption,figure,hgroup{display:block;}
+audio, canvas, video{display: inline-block; *display: inline; *zoom: 1;}
+audio:not([controls]){display: none;}
+[hidden]{display: none;}
+/*------------------------------------------------------------------
+Reset
+------------------------------------------------------------------*/
+*{margin: 0;padding: 0;box-sizing: border-box;}
+html, body {min-width: 300px;height: 100%;padding: 0; margin: 0;font-family: "微軟正黑體","Ubuntu", Helvetica, "Heiti TC", "Microsoft Sans Serif", "Microsoft Sans Serif", "Helvetica", "Geneva", "sans-serif";}
+a{outline: none;}
+a, a:active, a:hover{text-decoration: none;}
+ul,li{list-style: none;padding: 0;margin: 0;}
+
+#header{
+  display: block;
+  width: 100%;
+  height: 133px;
+  background-image: url("../images/bg_header.jpg");
+  background-repeat: repeat-x;
+  color: white;
+  position: relative;
+  a{
+    color: white;
+  }
+  .header_ul{
+    background-image: url("../images/bg_header_r.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    .logo{
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .date{}
+    .time{}
+    .temperature{}
+    .weather{}
+  }
+}
+#main_content{
+  background-color: #a3a3a3;
+  .main_menu{
+    width: 292px;
+    background-image: url("../images/bg_nav.gif");
+    background-repeat: repeat-y;
+  }
+  .content{
+    
+  }
+  .main_list{
+    width: 247px;
+    box-sizing: border-box;
+    padding-left: 19px;
+    background-image: url("../images/bg_nav.gif");
+    a{
+      color: $menu-color;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    >.main_list{
+      >li{
+      a{
+      }
+      >.sub_list{
+        li{
+          a{
+
+          }
+        }
+      }
+      }
+    }
+  }
+}
+.content{
+  background-image: url("../images/bg_header.gif");
+}
+#footer{
+  @extend %hide-text;
+}

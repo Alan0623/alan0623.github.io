@@ -1,0 +1,443 @@
+.data_list{//左邊數據資訊
+    width: 100%;
+    min-width: 1024px;
+    min-height: 540px;
+    //max-height: 507px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
+    position: relative;
+    img{width: 100%!important;height: unset!important;}
+    .solar_energy,//太陽能
+    .wind_power,
+    .storage_battery,
+    .fuel_battery,
+    .user_point{
+        width: 18%;
+        min-width: 190px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        background-color: #ffece6;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        @media screen and (min-width: 1100px){
+            width: 17%;
+        }
+        @media screen and (min-width: 1200px){
+            width: 17.5%;
+        }
+        h2{
+            width: 100%;
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 2px;
+            @media screen and (min-width: 1500px){
+                margin-bottom: 5px;
+            }
+            @media screen and (min-width: 1650px){
+                margin-bottom: 10px;
+            }
+        }
+        ul{
+            top: 14%;
+            width: 100%;
+            font-size: .7em;
+            padding: 0 0%;
+            @media screen and (min-width: 1100px){
+            font-size: .75em;
+            padding: 0 2%;
+            }
+            @media screen and (min-width: 1200px){
+                font-size: .75em;
+            }
+            @media screen and (min-width: 1250px){
+                font-size: .8em;
+            }
+            @media screen and (min-width: 1300px){
+                font-size: .82em;
+            }
+            @media screen and (min-width: 1370px){
+                font-size: .85em;
+                margin-top: 1px;
+            }
+            @media screen and (min-width: 1400px){
+                font-size: .87em;
+            }
+            @media screen and (min-width: 1500px){
+                font-size: .9em;
+            }
+            @media screen and (min-width: 1550px){
+                font-size: .95em;
+            }
+            @media screen and (min-width: 1600px){
+                margin-top: 5px;
+            }
+            @media screen and (min-width: 1700px){
+                font-size: 1.05em;
+            }
+            @media screen and (min-width: 1800px){
+                font-size: 1.1em;
+            }
+            li{ display: block;
+                width: 100%;
+                line-height: 1.6em;
+                &::after{
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+                b{
+                    display: inline-block;
+                    float: left;
+                }
+                b:nth-child(1){
+                    width:40%;
+                    text-align: right;
+                }
+                b:nth-child(2){
+                    width:40%;
+                    text-align: right;
+                    color: #d20915;
+                }
+                b:nth-child(3){
+                    text-align: left;
+                    padding-left: 3px;
+                }
+            }
+        }
+    }
+    .solar_energy{//太陽能
+        border-top: none;
+        border-bottom: none;
+        color: #726f20;
+        top: 60px;
+        left: 20%;
+        background-color: unset;
+        @media screen and (min-width: 1100px){ border-width: 6px;}
+        @media screen and (min-width: 1200px){ border-width: 7px;}
+        @media screen and (min-width: 1300px){ border-width: 8px;}
+        @media screen and (min-width: 1400px){ border-width: 9px;}
+    }
+    .wind_power{
+        //border: #f52f53 solid 5px;
+        border-top: none;
+        border-bottom: none;
+        color: #c21f3d;
+        top: 250px;
+        left: 20%;
+        background-color: unset;
+        @media screen and (min-width: 1100px){ border-width: 6px;}
+        @media screen and (min-width: 1200px){ border-width: 7px;}
+        @media screen and (min-width: 1300px){ border-width: 8px;}
+        @media screen and (min-width: 1400px){ border-width: 9px;}
+    }
+    .storage_battery{
+        border: #70e5b1 solid 5px;
+        border-top: none;
+        border-bottom: none;
+        color: #006030;
+        top: 177px;
+        right: 5%;
+        @media screen and (min-width: 1100px){ border-width: 6px;}
+        @media screen and (min-width: 1200px){ border-width: 7px;}
+        @media screen and (min-width: 1300px){ border-width: 8px;}
+        @media screen and (min-width: 1400px){ border-width: 9px;}
+    }
+    .fuel_battery{
+        border: #6faf3d solid 5px;
+        border-top: none;
+        border-bottom: none;
+        color: #55872f;
+        top: 295px;
+        right: 12%;
+        @media screen and (min-width: 1100px){ border-width: 6px;}
+        @media screen and (min-width: 1200px){ border-width: 7px;}
+        @media screen and (min-width: 1300px){ border-width: 8px;}
+        @media screen and (min-width: 1400px){ border-width: 9px;}
+        ul{
+            top: 22%;
+        }
+    }
+    .user_point{
+        border: #0224ba solid 5px;
+        border-top: none;
+        border-bottom: none;
+        color: #0224ba;
+        top: 410px;
+        right: 5%;
+        @media screen and (min-width: 1100px){ border-width: 6px;}
+        @media screen and (min-width: 1200px){ border-width: 7px;}
+        @media screen and (min-width: 1300px){ border-width: 8px;}
+        @media screen and (min-width: 1400px){ border-width: 9px;}
+        ul{
+            top: 22%;
+        }
+    }
+    @media screen and (min-width: 1100px){
+        .solar_energy{top: 65px;}
+        .wind_power{top: 255px;}
+        .storage_battery{top: 182px;}
+        .fuel_battery{top: 294px;}
+        .user_point{top: 405px;}
+    }
+    @media screen and (min-width: 1200px){
+        .solar_energy{top: 70px;}
+        .wind_power{top: 260px;}
+        .storage_battery{top: 187px;}
+        .fuel_battery{top: 310px;}
+        .user_point{top: 430px;}
+    }
+    @media screen and (min-width: 1250px){
+        .solar_energy{top: 72px;}
+        .wind_power{top: 280px;}
+        .storage_battery{top: 218px;}
+        .fuel_battery{top: 350px;right: 13%;}
+        .user_point{top: 480px;}
+    }
+    @media screen and (min-width: 1300px){
+        .solar_energy{top: 75px;}
+        .wind_power{top: 300px;}
+        .storage_battery{top: 228px;}
+        .fuel_battery{top: 366px;}
+        .user_point{top: 500px;}
+    }
+    @media screen and (min-width: 1350px){
+        .solar_energy{top: 78px;}
+        .wind_power{top: 305px;}
+        .storage_battery{top: 228px;}
+        .fuel_battery{top: 366px;}
+        .user_point{top: 500px;}
+    }
+    @media screen and (min-width: 1400px){
+        .solar_energy{top: 79px;}
+        .wind_power{top: 315px;}
+        .storage_battery{top: 246px;}
+        .fuel_battery{top: 390px;}
+        .user_point{top: 530px;}
+    }
+    @media screen and (min-width: 1450px){
+        .solar_energy{top: 79px;left: 20.1%;}
+        .wind_power{top: 325px;left: 20.1%;}
+        .storage_battery{top: 256px;}
+        .fuel_battery{top: 405px;right: 13%;}
+        .user_point{top: 550px;}
+    }
+    @media screen and (min-width: 1500px){
+        .solar_energy{top: 79px;}
+        .wind_power{top: 335px;}
+        .storage_battery{top: 260px;}
+        .fuel_battery{top: 410px;right: 13%;}
+        .user_point{top: 555px;}
+    }
+    @media screen and (min-width: 1550px){
+        .solar_energy{top: 79px;}
+        .wind_power{top: 350px;}
+        .storage_battery{top: 265px;}
+        .fuel_battery{top: 420px;right: 13%;}
+        .user_point{top: 570px;}
+    }
+    @media screen and (min-width: 1600px){
+        .solar_energy{top: 79px;}
+        .wind_power{top: 365px;}
+        .storage_battery{top: 275px;}
+        .fuel_battery{top: 435px;right: 13%;}
+        .user_point{top: 590px;}
+    }
+    @media screen and (min-width: 1650px){
+        .solar_energy{top: 79px;}
+        .wind_power{top: 375px;}
+        .storage_battery{top: 290px;}
+        .fuel_battery{top: 460px;right: 13%;}
+        .user_point{top: 628px;}
+    }
+    @media screen and (min-width: 1700px){
+        .solar_energy{top: 79px;}
+        .wind_power{top: 385px;}
+        .storage_battery{top: 292px;}
+        .fuel_battery{top: 465px;right: 13%;}
+        .user_point{top: 632px;}
+    }
+    @media screen and (min-width: 1750px){
+        .solar_energy{top: 79px;}
+        .wind_power{top: 395px;}
+        .storage_battery{top: 300px;}
+        .fuel_battery{top: 475px;right: 13%;}
+        .user_point{top: 645px;}
+    }
+    @media screen and (min-width: 1800px){
+        .solar_energy{top: 79px;}
+        .wind_power{top: 405px;}
+        .storage_battery{top: 310px;}
+        .fuel_battery{top: 490px;right: 13%;}
+        .user_point{top: 665px;}
+    }
+    @media screen and (min-width: 1850px){
+        .solar_energy{top: 79px;}
+        .wind_power{top: 411px;}
+        .storage_battery{top: 315px;}
+        .fuel_battery{top: 500px;right: 13%;}
+        .user_point{top: 679px;}
+    }
+    @media screen and (min-width: 1900px){
+        .solar_energy{top: 79px;}
+        .wind_power{top: 421px;}
+        .storage_battery{top: 328px;}
+        .fuel_battery{top: 526px;right: 13%;}
+        .user_point{top: 720px;}
+    }
+    .doughnut{
+        position: absolute; top: 10px; right: 0px;
+        @media screen and (min-width: 1100px){right: 10px;}
+        @media screen and (min-width: 1200px){right: 20px;}
+        @media screen and (min-width: 1600px){top: 20px;}
+        @media screen and (min-width: 1700px){top: 30px;}
+        @media screen and (min-width: 1800px){top: 40px;}
+        @media screen and (min-width: 1900px){top: 50px;right: 60px;}
+        span{
+            color: #61bc86;
+            position: absolute;
+            top: 69px;
+            right: 196px;
+            font-size: 2em;
+            @media screen and (min-width: 1050px){right: 200px;}
+            @media screen and (min-width: 1200px){font-size: 2.1em;top: 68px;right: 203px;}
+            @media screen and (min-width: 1270px){font-size: 2.1em;top: 68px;right: 213px;}
+            @media screen and (min-width: 1300px){font-size: 2.15em;top: 68px;right: 205px;}
+            @media screen and (min-width: 1350px){font-size: 2.2em;top: 68px;right: 210px;}
+            @media screen and (min-width: 1400px){font-size: 2.25em;top: 67px;right: 213px;}
+            @media screen and (min-width: 1450px){font-size: 2.3em;top: 67px;right: 215px;}
+            @media screen and (min-width: 1500px){font-size: 2.5em;top: 66px;right: 218px;}
+            @media screen and (min-width: 1550px){font-size: 2.8em;top: 66px;right: 220px;}
+            @media screen and (min-width: 1600px){font-size: 3em;top: 65px;right: 223px;}
+            @media screen and (min-width: 1650px){font-size: 3.2em;top: 65px;right: 225px;}
+            @media screen and (min-width: 1700px){font-size: 3.3em;top: 64px;right: 240px;}
+            @media screen and (min-width: 1750px){font-size: 3.4em;top: 64px;right: 250px;}
+            @media screen and (min-width: 1780px){font-size: 3.5em;top: 64px;right: 260px;}
+            @media screen and (min-width: 1800px){font-size: 3.6em;top: 63px;right: 270px;}
+            @media screen and (min-width: 1850px){font-size: 3.7em;top: 68px;right: 285px;}
+            @media screen and (min-width: 1900px){font-size: 3.8em;top: 61px;right: 250px;}
+            @media screen and (min-width: 1920px){font-size: 4em;top: 60px;right: 253px;}
+        }
+        ul{ 
+            @media screen and (min-width: 1500px){font-size: 1.1em;}
+            @media screen and (min-width: 1800px){font-size: 1.2em;}
+            li{
+                color: #fff;
+                //display: inline-block;
+                margin: 10px 0;
+                
+                b{
+                display: inline-block;padding: 6px 10px;position: relative;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 30px;height: 30px;
+                        background-image: url("../images/icon1.png");
+                        background-size: cover;
+                        left: -32px;top: 0;
+                        @media screen and (min-width: 1800px){
+                        width: 44px;
+                        height: 44px;
+                        top: -6px;left: -48px;
+                        }
+                    }
+                }
+                &:nth-child(1){
+                    b{background-color:  #0224ba;}
+                } 
+                &:nth-child(2){
+                    margin-left: -20px;
+                    b{background-color:  #f590a3;
+                        &::before{
+                            background-image: url("../images/icon2.png");
+                        }
+                    }
+                } 
+                &:nth-child(3){
+                    b{background-color:  #6faf3d;
+                        &::before{
+                            background-image: url("../images/icon3.png");
+                        }
+                    }
+                } 
+                &:nth-child(4){
+                    margin-left: -20px;
+                    b{background-color:  #f3ea6b;
+                        &::before{
+                            background-image: url("../images/icon4.png");
+                        }
+                    }
+                } 
+                
+            }
+        }
+    }
+}
+//#chartdiv
+.pie_chart {//圓餅圖
+    width: 100%;
+    height: 280px;
+    position: absolute;
+    top: 0;
+    path{
+        stroke-opacity: 0;
+    }
+    .amcharts-main-div {
+        position: absolute !important;
+        right: -285px;
+        top: -40px;
+        @media screen and (min-width: 1050px){right: -295px;}
+        @media screen and (min-width: 1070px){right: -300px;}
+        @media screen and (min-width: 1085px){right: -305px;}
+        @media screen and (min-width: 1100px){transform: scale(1.1);right: -305px;}
+        @media screen and (min-width: 1120px){transform: scale(1.1);right: -315px;}
+        @media screen and (min-width: 1140px){transform: scale(1.1);right: -325px;}
+        @media screen and (min-width: 1150px){transform: scale(1.1);right: -335px;}
+        @media screen and (min-width: 1180px){transform: scale(1.1);right: -345px;}
+        @media screen and (min-width: 1200px){transform: scale(1.15);top: -38px;}
+        @media screen and (min-width: 1230px){transform: scale(1.15);top: -38px;right: -355px;}
+        @media screen and (min-width: 1250px){transform: scale(1.15);top: -38px;right: -365px;}
+        @media screen and (min-width: 1280px){transform: scale(1.15);top: -37px;right: -375px;}
+        @media screen and (min-width: 1300px){transform: scale(1.2);top: -36px;right: -385px;}
+        @media screen and (min-width: 1310px){transform: scale(1.2);top: -35px;right: -390px;}
+        @media screen and (min-width: 1330px){transform: scale(1.2);top: -35px;right: -400px;}
+        @media screen and (min-width: 1350px){transform: scale(1.2);top: -34px;right: -410px;}
+        @media screen and (min-width: 1365px){transform: scale(1.2);top: -34px;right: -415px;}
+        @media screen and (min-width: 1380px){transform: scale(1.2);top: -33px;right: -420px;}
+        @media screen and (min-width: 1400px){transform: scale(1.25);top: -33px;right: -430px;}
+        @media screen and (min-width: 1410px){transform: scale(1.25);top: -32px;right: -440px;}
+        @media screen and (min-width: 1430px){transform: scale(1.25);top: -32px;right: -450px;}
+        @media screen and (min-width: 1450px){transform: scale(1.25);top: -31px;right: -460px;}
+        @media screen and (min-width: 1480px){transform: scale(1.25);top: -30px;right: -470px;}
+        @media screen and (min-width: 1500px){transform: scale(1.3);top: -30px;right: -480px;}
+        @media screen and (min-width: 1530px){transform: scale(1.3);top: -30px;right: -490px;}
+        @media screen and (min-width: 1550px){transform: scale(1.3);top: -30px;right: -500px;}
+        @media screen and (min-width: 1580px){transform: scale(1.3);top: -30px;right: -510px;}
+        @media screen and (min-width: 1600px){transform: scale(1.35);top: -30px;right: -520px;}
+        @media screen and (min-width: 1630px){transform: scale(1.35);top: -30px;right: -530px;}
+        @media screen and (min-width: 1650px){transform: scale(1.35);top: -28px;right: -540px;}
+        @media screen and (min-width: 1680px){transform: scale(1.35);top: -25px;right: -550px;}
+        @media screen and (min-width: 1700px){transform: scale(1.4);top: -23px;right: -550px;}
+        @media screen and (min-width: 1730px){transform: scale(1.4);top: -22px;right: -550px;}
+        @media screen and (min-width: 1750px){transform: scale(1.4);top: -20px;right: -550px;}
+        @media screen and (min-width: 1780px){transform: scale(1.4);top: -15px;right: -555px;}
+        @media screen and (min-width: 1800px){transform: scale(1.45);top: -10px;right: -560px;}
+        @media screen and (min-width: 1830px){transform: scale(1.45);top: -5px;right: -565px;}
+        @media screen and (min-width: 1850px){transform: scale(1.45);top: 0px;right: -570px;}
+        @media screen and (min-width: 1880px){transform: scale(1.45);top: 5px;right: -575px;}
+        @media screen and (min-width: 1900px){transform: scale(1.5);top: 10px;right: -580px;}        
+    }
+    tspan{
+        font-size: 1.2em;
+        display: block;
+        width: 100px;
+        height: 100px;
+        text-shadow: #fff 1px 1px 5px, #fff 1px 1px 8px ,#fff 1px 1px 10px;
+        font-weight: bold;
+    }
+    .amcharts-chart-div a{
+        display: none;
+    }
+}

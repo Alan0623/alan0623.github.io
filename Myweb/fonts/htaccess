@@ -1,0 +1,56 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+Options -Indexes
+AuthUserFile /.htpasswd
+AuthGroupFile /dev/null
+AuthName "Please enter your ID and password"
+AuthType Basic
+require valid-user 
+ErrorDocument 400 404.html
+ErrorDocument 401 404.html
+ErrorDocument 402 404.html
+ErrorDocument 403 404.html
+ErrorDocument 404 404.html
+ErrorDocument 405 404.html
+ErrorDocument 406 404.html
+ErrorDocument 407 404.html
+ErrorDocument 408 404.html
+ErrorDocument 409 404.html
+ErrorDocument 410 404.html
+ErrorDocument 411 404.html
+ErrorDocument 412 404.html
+ErrorDocument 413 404.html
+ErrorDocument 414 404.html
+ErrorDocument 500 404.html
+ErrorDocument 501 404.html
+ErrorDocument 502 404.html
+ErrorDocument 503 404.html
+ErrorDocument 504 404.html
+ErrorDocument 505 404.html
+DirectoryIndex index.html       
+order deny,allow
+allow from http://www.alan-lin.com/index.html
+allow from http://www.alan-lin.com/about.html
+allow from http://www.alan-lin.com/portfolio.html
+allow from http://www.alan-lin.com/graphic.html
+allow from http://www.alan-lin.com/contact.html
+allow from http://alan-lin.com/index.html
+allow from http://alan-lin.com/about.html
+allow from http://alan-lin.com/portfolio.html
+allow from http://alan-lin.com/graphic.html
+allow from http://alan-lin.com/contact.html
+allow from https://webnotebook.blogspot.com/
+allow from http://www.alan-lin.com/app/cat_web/index.html
+allow from http://alan-lin.com/app/cat_web/index.html
+deny from all 
+deny from http://www.alan-lin.com/images/
+deny from http://www.alan-lin.com/js/
+deny from http://www.alan-lin.com/css/
+deny from http://www.alan-lin.com/fonts/
+deny from http://www.alan-lin.com/sass/
+deny from http://alan-lin.com/images/
+deny from http://alan-lin.com/js/
+deny from http://alan-lin.com/css/
+deny from http://alan-lin.com/fonts/
+deny from http://alan-lin.com/sass/

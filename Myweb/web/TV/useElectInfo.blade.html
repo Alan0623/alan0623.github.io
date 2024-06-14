@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <title>新北市智能生活社區 - 單戶用電介面</title>
+    <!--IE integration -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--viewport integration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google integration -->
+    <meta name="description" content="新北市智能生活社區" />
+    <meta name="keywords" content="新北市智能生活社區" />
+    <meta name="author" content="新北市智能生活社區"/>
+    <meta name="copyright" content="新北市政府"/>
+    <!--Telephone -->
+    <meta name="format-detection" content="telephone=no" />
+     <!--[if gte IE 9]><!-->
+    <link rel="stylesheet" href="css/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="css/pageDetail.css" type="text/css">
+    <link rel="stylesheet" href="css/export.css" type="text/css">
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <link rel="stylesheet" href="css/indexIE.css" type="text/css">
+    <![endif]--> 
+</head><!--/head-->
+<body id="inside">
+    <header id="header">
+        <ul class="header_ul">
+            <li class="logo_ntcg"><img src="images/logo_ntcg.png"></li>
+            <li class="logo_tier"><img src="images/logo_tier.png"></li>
+            <li class="logo_dudu"><img src="images/logo_dudu.png"></li>
+            <li class="logo_name">
+                <h1><a href="index.html" title="新北市智能生活社區(返回首頁)"><img src="images/logo_name.png"></a></h1>
+            </li>
+            <li class="info">
+                <div class="date">2018-12-12</div>
+                <div class="time">AM 09 : 27</div>
+                <!--div class="temperature">30
+                    <span>oC</span>
+                </div-->
+            </li>
+            <li class="weather">
+                <iframe id="embedweather" style="margin: 0; padding: 0; border: none; width:400px; position:relative; top:-40px;right: -220px; overflow:hidden; margin-bottom: -60px;">
+                </iframe>
+            </li>
+        </ul>
+    </header>
+    <main id="main_content">
+        <section class="info_block">
+            <div class="community_photo">
+                <h2>社區照片</h2>
+                <ul class="community_photo_img">
+                    <li class="ad"><img src="images/img_index1.jpg"></li>
+                    <li class="ad"><img src="images/img_index2.jpg"></li>
+                    <li class="ad"><img src="images/img_index3.jpg"></li>
+                    <li class="ad"><img src="images/img_index4.jpg"></li>
+                    <li class="ad"><img src="images/img_index5.jpg"></li>
+                    <li class="ad"><img src="images/img_index6.jpg"></li>
+                </ul>    
+            </div>
+            <div class="system_menu">
+                <h2>主選單</h2>
+                <ul class="system_menu_text">
+                    <li><a href="curves.blade.html">曲線資訊</a></li>
+                    <li><a href="warningInfo.blade.html">告警處理</a></li>
+                    <li><a href="maintainInfo.blade.html">維護資訊</a></li>
+                    <li><a class="active" href="useElectAllInfo.blade.html">用戶用電資訊</a></li>
+                    <li><b>用戶:張起零</b><a>登出</a></li>
+                    <li><a class="active" href="single.blade.html">後端數據</a></li>
+                    <li><a class="hide" href="useElectInfo.blade.html">單戶用電介面</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="data_list inside_page">
+            <div class="data_list_info">
+                <h2>菠爾設備狀態</h2>
+                                <div class="data_list_info_img">
+                    <a href="javascript:;">
+                        <ul class="btn_img">
+                            <li><img src="images/icon_curve10.png"></li>
+                            <li>
+                                <ul>
+                                    <li>減碳量</li>
+                                    <li>127</li>
+                                    <li>kg-CO2／kWh</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </a>
+                    <a href="javascript:;">
+                        <ul class="btn_img">
+                            <li><img src="images/icon_curve2.png"></li>
+                            <li>
+                                <ul>
+                                    <li>日照計</li>
+                                    <li>127</li>
+                                    <li>Lux</li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </a>
+                    <a href="javascript:;">
+                        <ul class="btn_img">
+                            <li><img src="images/icon_curve4.png"></li>
+                            <li>
+                                <ul>
+                                    <li>風速計</li>
+                                    <li>127</li>
+                                    <li>km/h</li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </a>
+                </div>
+            </div>
+            </div>
+            <div class="data_list_table">
+                <div class="btn_info_table">
+                    <ul class="query_table">
+                        <li><a href="javascript:;" class="active"><b>即時用電量</b><p>1234567</p><i>kW</i></a></li>
+                        <li><a href="javascript:;"><b>當月累積用電量</b><p>123</p><i>度</i></a></li>
+                        <li><a href="javascript:;"><b>智慧電表<br/>裝設前後比較</b><p></p><i>度</i></a></li>
+                        <li><a href="javascript:;" class="show_smart_user add_compare_time"><b>與前年當月整體<br/>用電量度數差異</b><p></p><i>度</i></a></li>
+                        <li><a href="javascript:;"><b>當月整體<br/>節電比例</b><p></p><i>度</i></a></li>
+                    </ul>
+                </div>
+                <ul class="tool_bar query">
+                    <li><h2 class="color_white">當年當月用電比對</h2></li>
+                    <li>
+                        <ul class="time_picker time_interval" id="timeRange">
+                            <li>時間區間：</li>
+                            <li>
+                                <input class="datetimepicker1 show_compare_time" type="text" placeholder="年 - 月 - 日" />
+                            </li>
+                            <li>~</li>
+                            <li>
+                                <input class="datetimepicker2 show_compare_time" type="text" placeholder="年 - 月 - 日" />
+                            </li>
+                        </ul>
+                        
+                        <ul class="time_picker compare_time" id="timeRange" style="display: none;">
+                            <li>比較時間：</li>
+                            <li>
+                                <input class="datetimepicker3" type="text" placeholder="年 - 月 - 日" />
+                            </li>
+                            <li>~</li>
+                            <li>
+                                <input class="datetimepicker4" type="text" placeholder="年 - 月 - 日" />
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="time_date">
+                            <li>顯示方式：</li>
+                            <li onclick="byDay()"><a href="javascript:;">日</a></li>
+                            <li onclick="byMonth()"><a href="javascript:;">月</a></li>
+                            <li onclick="byYears()"><a href="javascript:;">年</a></li>
+                            <li onclick="histery()"><a href="javascript:;">歷史</a></li>
+                            <!--li><a href="#">重新設定</a></li-->
+                        </ul>
+                    </li>
+                </ul>
+                <div class="instant_curve_chart">
+                    <div id="chartdiv" class="line_graph"></div>
+                    <div class="smart_user" style="display: none;">
+                        <ul class="comparison_ul">
+                            <li class="show" id="notSmart">
+                                <span style="background-color:#05c1fe;"></span>未安裝智慧電錶用戶</li>
+                            <li class="show" id="setSmart">
+                                <span style="background-color:#28fa1d;"></span>安裝智慧電錶用戶</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">COPYRIGHT &#169; 2018 新北市智能生活社區</footer>  
+    <script src="js/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var weatherProperties = 'lat=25.010996&lon=121.502369&color=#FFFFFF&text-color=#FFFFFF&lang=zh-tw&time=+0800&units=si';
+            // initial load
+            document.getElementById('embedweather').src = 'http://forecast.io/embed/?ts=' + (Date.now()) + '#' + weatherProperties;
+            // refresh
+            var weatherRefresh = setInterval(function () {
+                document.getElementById('embedweather').src = 'http://forecast.io/embed/?ts=' + (Date.now()) + '#' + weatherProperties;
+            }, 1800000);
+        })
+    </script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/pageDetail.js"></script>
+    <!--script src="js/amcharts.js"></script>
+    <script src="js/serial.js"></script>
+    <script src="js/pie.js"></script>
+    <script src="js/light.js"></script>
+    <script src="js/export.min.js"></script-->
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery-ui-timepicker-addon.js"></script>
+    <script src='js/jquery-ui-sliderAccess.js'></script>
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <script>
+        var chart = AmCharts.makeChart("chartdiv", {
+            "type": "serial",
+            "theme": "light",
+            "legend": {
+                "useGraphSettings": true
+            },
+            "synchronizeGrid": true,
+            "valueAxes": [{
+                "id": "v1",
+                "axisColor": "#00c1ff",
+                "axisThickness": 2,
+                "axisAlpha": 1,
+                "position": "right"
+            }, {
+                "id": "v2",
+                "axisColor": "#26fc1c",
+                "axisThickness": 2,
+                "axisAlpha": 1,
+                "position": "left"
+            }, {
+                "id": "v3",
+                "axisColor": "#de5300",
+                "axisThickness": 4,
+                "gridAlpha": 0,
+                "offset": 50,
+                "axisAlpha": 1,
+                "position": "left"
+            }],
+            "graphs": [{
+                "valueAxis": "v1",
+                "lineColor": "#00c1ff",
+                "bullet": "round",
+                "bulletBorderThickness": 1,
+                "hideBulletsCount": 30,
+                "title": "同期用電",
+                "valueField": "aValue",
+                "fillAlphas": 0
+            }, {
+                "valueAxis": "v2",
+                "lineColor": "#26fc1c",
+                "bullet": "square",
+                "bulletBorderThickness": 1,
+                "hideBulletsCount": 30,
+                "title": "智慧用電",
+                "valueField": "bValue",
+                "fillAlphas": 0
+            }, {
+                "valueAxis": "v3",
+                "lineColor": "#de5300",
+                "lineThickness": 3,
+                "bullet": "triangleUp",
+                "bulletBorderThickness": 2,
+                "hideBulletsCount": 30,
+                "title": "綠能節電",
+                "valueField": "cValue",
+                "fillAlphas": 0
+            }],
+            "chartCursor": {
+                "cursorPosition": "mouse"
+            },
+            "categoryField": "date",
+            "categoryAxis": {
+                "dateFormats": [{
+                    "period": "DD",
+                    "format": "MM/DD"
+                }, {
+                    "period": "WW",
+                    "format": "MM DD"
+                }, {
+                    "period": "MM",
+                    "format": "MM"
+                }, {
+                    "period": "YYYY",
+                    "format": "YYYY"
+                }],
+                "parseDates": true,
+                "axisColor": "#DADADA",
+                "minorGridEnabled": true
+            },
+            "export": {
+                "enabled": true,
+                "position": "bottom-right"
+            },
+            "dataProvider": [{
+                "date": "07-01",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 912,
+                "bValue": 824,
+                "cValue": 88
+            }, {
+                "date": "07-02",
+                // "ay": 97,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 968,
+                "bValue": 844,
+                "cValue": 84
+            }, {
+                "date": "07-03",
+                // "ay": 94,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 1024,
+                "bValue": 945,
+                "cValue": 79
+            }, {
+                "date": "07-04",
+                // "ay": 90,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 1001,
+                "bValue": 926,
+                "cValue": 75
+            }, {
+                "date": "07-05",
+                // "ay": 90,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 900,
+                "bValue": 812,
+                "cValue": 88
+            }, {
+                "date": "07-06",
+                // "ay": 90,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 923,
+                "bValue": 837,
+                "cValue": 86
+            }, {
+                "date": "07-07",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 985,
+                "bValue": 898,
+                "cValue": 87
+            }, {
+                "date": "07-08",
+                // "ay": 90,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 951,
+                "bValue": 867,
+                "cValue": 84
+            }, {
+                "date": "07-09",
+                // "ay": 90,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 963,
+                "bValue": 923,
+                "cValue": 40
+            }, {
+                "date": "07-10",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 1008,
+                "bValue": 970,
+                "cValue": 38
+            }, {
+                "date": "07-11",
+                // "ay": 90,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 998,
+                "bValue": 958,
+                "cValue": 40
+            }, {
+                "date": "07-12",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 981,
+                "bValue": 961,
+                "cValue": 20
+            }, {
+                "date": "07-13",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 914,
+                "bValue": 839,
+                "cValue": 75
+            }, {
+                "date": "07-14",
+                // "ay": 90,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 924,
+                "bValue": 844,
+                "cValue": 80
+            }, {
+                "date": "07-15",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 983,
+                "bValue": 915,
+                "cValue": 68
+            }, {
+                "date": "07-16",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 975,
+                "bValue": 930,
+                "cValue": 45
+            }, {
+                "date": "07-17",
+                // "ay": 90,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 1120,
+                "bValue": 1071,
+                "cValue": 49
+            }, {
+                "date": "07-18",
+                // "ay": 90,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 1008,
+                "bValue": 930,
+                "cValue": 78
+            }, {
+                "date": "07-19",
+                // "ay": 90,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 911,
+                "bValue": 826,
+                "cValue": 85
+            }, {
+                "date": "07-20",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 925,
+                "bValue": 837,
+                "cValue": 88
+            }, {
+                "date": "07-21",
+                // "ay": 90,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 946,
+                "bValue": 858,
+                "cValue": 88
+            }, {
+                "date": "07-22",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 938,
+                "bValue": 875,
+                "cValue": 63
+            }, {
+                "date": "07-23",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 958,
+                "bValue": 886,
+                "cValue": 72
+            }, {
+                "date": "07-24",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 1101,
+                "bValue": 1013,
+                "cValue": 88
+            }, {
+                "date": "07-25",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 1022,
+                "bValue": 957,
+                "cValue": 65
+            }, {
+                "date": "07-26",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 917,
+                "bValue": 848,
+                "cValue": 69
+            }, {
+                "date": "07-27",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 911,
+                "bValue": 841,
+                "cValue": 70
+            }, {
+                "date": "07-28",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 927,
+                "bValue": 839,
+                "cValue": 88
+            }, {
+                "date": "07-29",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 968,
+                "bValue": 886,
+                "cValue": 82
+            }, {
+                "date": "07-30",
+                // "ay": 90,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 975,
+                "bValue": 910,
+                "cValue": 65
+            }, {
+                "date": "07-31",
+                // "ay": 100,
+                // "by": 80,
+                // "cy": 20,
+                "aValue": 1011,
+                "bValue": 1099,
+                "cValue": 88
+            }]
+        });
+    </script>
+</body>
+</html>

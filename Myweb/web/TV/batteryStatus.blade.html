@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <title>新北市智能生活社區 - 儲能電池運行狀態資訊</title>
+    <!--IE integration -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--viewport integration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google integration -->
+    <meta name="description" content="新北市智能生活社區" />
+    <meta name="keywords" content="新北市智能生活社區" />
+    <meta name="author" content="新北市智能生活社區"/>
+    <meta name="copyright" content="新北市政府"/>
+    <!--Telephone -->
+    <meta name="format-detection" content="telephone=no" />
+     <!--[if gte IE 9]><!-->
+    
+    <link rel="stylesheet" href="css/page.css" type="text/css">
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <link rel="stylesheet" href="css/indexIE.css" type="text/css">
+    <![endif]--> 
+</head><!--/head-->
+<body class="page">
+    <header id="header">
+        <ul class="header_ul">
+            <li class="logo_name">
+                <h1><a href="index.html" title="新北市智能生活社區(返回首頁)"><img src="images/logo_name.png"></a></h1>
+            </li>
+            <li class="info">
+                <div class="date">107/12/12</div>
+                <div class="time">AM 09 : 27</div>
+                <!--div class="temperature">30
+                    <span>oC</span>
+                </div-->
+            </li>
+            <li class="weather">
+                <iframe id="embedweather" style="margin: 0; padding: 0; border: none; width:400px; position:relative; top:-40px;right: -220px; overflow:hidden; margin-bottom: -60px;">
+                </iframe>
+            </li>
+        </ul>
+    </header>
+    <main id="main_content">
+        <nav class="main_menu">
+            <ul class="main_list">
+                <li>
+                    <a href="index.html" title="首頁">首頁</a>
+                </li>
+                <li>
+                    <a href="single.blade.html" title="單線圖">單線圖</a>
+                </li>
+                <li>
+                    <a href="solar.blade.html" title="太陽能資訊">太陽能資訊</a>
+                </li>
+                <li>
+                    <a href="ME.blade.html" title="燃料電池資訊">燃料電池資訊</a>
+                </li>
+                <li>
+                    <a href="battery.blade.html" title="儲能電池資訊">儲能電池資訊</a>
+                </li>
+                <li>
+                    <a href="windPowerStatus.blade.html" title="風機資訊">風機資訊</a>
+                </li>
+                <li>
+                    <a href="meterInformation.blade.html" title="電表資訊">電表資訊</a>
+                </li>
+                <li>
+                    <a href="meter.blade.html" title="30用戶用電資訊">30用戶用電資訊</a>
+                    <ul class="sub_list">
+                        <li>
+                            <a href="meterTHD.blade.html" title="電力品質資訊">電力品質資訊</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" title="各系統狀態資訊">各系統狀態資訊</a>
+                    <ul class="sub_list">
+                        <li>
+                            <a href="batteryStatus.blade.html" title="儲能系統運型狀態">儲能系統運型狀態</a>
+                        </li>
+                        <li>
+                            <a href="MEstatus.blade.html" title="燃料電池運型狀態">燃料電池運型狀態</a>
+                        </li>
+                        <li>
+                            <a href="inerterStatus.blade.html" title="逆變器運型狀態">逆變器運型狀態</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <section class="content">
+            <article class="article">
+                <h2>儲能電池運行狀態資訊</h2>
+                <div class="table_list">
+                    <div class="user">
+                        <div class="user_name">電池群組</div>
+                        <form>
+                            <select name="">
+                                <option value="Taipei">ID : 1 ~ ID : 5</option>
+                                <option value="Taoyuan">ID : 6 ~ ID : 10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="Inerter_Status">
+                        <div class="Inerter_Status_L">
+                            <div class="Inerter_Status_LT sameheight">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b>I2C <i>COMUNICATING</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>S<i>HORT CURRENT</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>F<i>LAG</i> DFET</b>
+                                    </td>
+                                    <td>
+                                        <ol><li class="red">1</li><li>2</li><li class="red">3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>F<i>LAG</i> CFET</b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>F<i>LAG</i> PDSG</b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li class="red">2</li><li>3</li><li>4</li><li class="red">5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>D<i>ISCHARGE UNDER TEMPERATURE</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li class="red">1</li><li class="red">2</li><li class="red">3</li><li class="red">4</li><li class="red">5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>C<i>URRENT UNDER TEMPERATURE</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>F<i>ULLY DISCHARGE</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                            </table>
+                            </div>
+                            <div class="Inerter_Status_LB sameheight">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b>F<i>ULLY CHARGE</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>C<i>ELL IMCALANCE</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>D<i>ISCHARGE OVER CURRENT</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>F<i>ET</i> NG <i>(FET OUT OF CINTROL)</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>F<i>ET OVER TEAMPERATURE(</i>2<i>ND)</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>PF <i>ALREADY BURNED(FUSE WAS BURNED)</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>C<i>ELL BALANCING</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>M<i>EMORY ALLOC ERROR</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                            </table>  
+                            </div>
+                        </div>
+                        <div class="Inerter_Status_R">
+                            <div class="Inerter_Status_RT sameheight">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b>P<i>OWER SWITCH</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>IDLE</b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li class="red">2</li><li class="red">3</li><li class="red">4</li><li class="red">5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>DSG<i>-ING</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li class="red">3</li><li class="red">4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>CHG<i>-ING</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>P<i>RED</i>FET <i>OVER TEMPERATURE</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>D<i>ISCHARGE OVER TEMPERATURE</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>C<i>URRENT OVER TEMPERATURE</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li class="red">3</li><li class="red">4</li><li class="red">5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>U<i>NDER VOLTAGE</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                            </table>
+                            </div>
+                            <div class="Inerter_Status_RB sameheight">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b>O<i>VER VOLTAGE PROTECTION</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>O<i>VER VOLTAGE</i> 2<i>ND PROTECTION</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>C<i>HARGE OVER CURRENT</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>F<i>AULT</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>F<i>ET OVER TEMPERATURE</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>P<i>ERMANENT FAILED</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>P<i>ACK</i> ID <i>ERROR</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>A<i>LERT</i> GPIO <i>FAIL</i></b>
+                                    </td>
+                                    <td>
+                                        <ol><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol>
+                                    </td>
+                                </tr>
+                            </table>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer id="footer">COPYRIGHT &#169; 2018 新北市智能生活社區</footer>
+    <script src="js/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var weatherProperties = 'lat=25.010996&lon=121.502369&color=#FFFFFF&text-color=#FFFFFF&lang=zh-tw&time=+0800&units=si';
+            // initial load
+            document.getElementById('embedweather').src = 'http://forecast.io/embed/?ts=' + (Date.now()) + '#' + weatherProperties;
+            // refresh
+            var weatherRefresh = setInterval(function () {
+                document.getElementById('embedweather').src = 'http://forecast.io/embed/?ts=' + (Date.now()) + '#' + weatherProperties;
+            }, 1800000);
+        })
+    </script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/page.js"></script>
+</body>
+</html>

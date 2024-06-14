@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <title>新北市智能生活社區 - 太陽能資訊</title>
+    <!--IE integration -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--viewport integration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google integration -->
+    <meta name="description" content="新北市智能生活社區" />
+    <meta name="keywords" content="新北市智能生活社區" />
+    <meta name="author" content="新北市智能生活社區"/>
+    <meta name="copyright" content="新北市政府"/>
+    <!--Telephone -->
+    <meta name="format-detection" content="telephone=no" />
+     <!--[if gte IE 9]><!-->
+    
+    <link rel="stylesheet" href="css/page.css" type="text/css">
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <link rel="stylesheet" href="css/indexIE.css" type="text/css">
+    <![endif]--> 
+</head><!--/head-->
+<body class="page">
+    <header id="header">
+        <ul class="header_ul">
+            <li class="logo_name">
+                <h1><a href="index.html" title="新北市智能生活社區(返回首頁)"><img src="images/logo_name.png"></a></h1>
+            </li>
+            <li class="info">
+                <div class="date">107/12/12</div>
+                <div class="time">AM 09 : 27</div>
+                <!--div class="temperature">30
+                    <span>oC</span>
+                </div-->
+            </li>
+            <li class="weather">
+                <iframe id="embedweather" style="margin: 0; padding: 0; border: none; width:400px; position:relative; top:-40px;right: -220px; overflow:hidden; margin-bottom: -60px;">
+                </iframe>
+            </li>
+        </ul>
+    </header>
+    <main id="main_content">
+        <nav class="main_menu">
+            <ul class="main_list">
+                <li>
+                    <a href="index.html" title="首頁">首頁</a>
+                </li>
+                <li>
+                    <a href="single.blade.html" title="單線圖">單線圖</a>
+                </li>
+                <li>
+                    <a href="solar.blade.html" title="太陽能資訊">太陽能資訊</a>
+                </li>
+                <li>
+                    <a href="ME.blade.html" title="燃料電池資訊">燃料電池資訊</a>
+                </li>
+                <li>
+                    <a href="battery.blade.html" title="儲能電池資訊">儲能電池資訊</a>
+                </li>
+                <li>
+                    <a href="windPowerStatus.blade.html" title="風機資訊">風機資訊</a>
+                </li>
+                <li>
+                    <a href="meterInformation.blade.html" title="電表資訊">電表資訊</a>
+                </li>
+                <li>
+                    <a href="meter.blade.html" title="30用戶用電資訊">30用戶用電資訊</a>
+                    <ul class="sub_list">
+                        <li>
+                            <a href="meterTHD.blade.html" title="電力品質資訊">電力品質資訊</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" title="各系統狀態資訊">各系統狀態資訊</a>
+                    <ul class="sub_list">
+                        <li>
+                            <a href="batteryStatus.blade.html" title="儲能系統運型狀態">儲能系統運型狀態</a>
+                        </li>
+                        <li>
+                            <a href="MEstatus.blade.html" title="燃料電池運型狀態">燃料電池運型狀態</a>
+                        </li>
+                        <li>
+                            <a href="inerterStatus.blade.html" title="逆變器運型狀態">逆變器運型狀態</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <section class="content">
+            <article class="article">
+                <h2>太陽能資訊</h2>
+                <div class="table_list">
+                    <div class="solar_info solar_info_top">
+                        <div class="bg_gray">
+                            <b class="title">I<i>LLUMINANCE</i></b>
+                            <span>L<i>UX</i></span>
+                        </div>
+                    </div>
+                    <div class="solar_info solar_info_down">
+                        <div class="bg_gray">
+                            <b class="title">R_PV1</b>
+                            <table>
+                                <tr>
+                                    <td>V<i>OLUTAGE</i></td>
+                                    <td>12233</td>
+                                    <td>V</td>
+                                </tr>
+                                <tr>
+                                    <td>C<i>URRENT</i></td>
+                                    <td>12233</td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>W<i>ATT</i></td>
+                                    <td>12233</td>
+                                    <td>W</td>
+                                </tr>
+                            </table>
+                            <b class="title">R_PV2</b>
+                            <table>
+                                <tr>
+                                    <td>V<i>OLUTAGE</i></td>
+                                    <td>12233</td>
+                                    <td>V</td>
+                                </tr>
+                                <tr>
+                                    <td>C<i>URRENT</i></td>
+                                    <td>12233</td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>W<i>ATT</i></td>
+                                    <td>12233</td>
+                                    <td>W</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="bg_gray">
+                            <b class="title">S_PV1</b>
+                            <table>
+                                <tr>
+                                    <td>V<i>OLUTAGE</i></td>
+                                    <td>12233</td>
+                                    <td>V</td>
+                                </tr>
+                                <tr>
+                                    <td>C<i>URRENT</i></td>
+                                    <td>12233</td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>W<i>ATT</i></td>
+                                    <td>12233</td>
+                                    <td>W</td>
+                                </tr>
+                            </table>
+                            <b class="title">S_PV2</b>
+                            <table>
+                                <tr>
+                                    <td>V<i>OLUTAGE</i></td>
+                                    <td>12233</td>
+                                    <td>V</td>
+                                </tr>
+                                <tr>
+                                    <td>C<i>URRENT</i></td>
+                                    <td>12233</td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>W<i>ATT</i></td>
+                                    <td>12233</td>
+                                    <td>W</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="bg_gray">
+                            <b class="title">T_PV1</b>
+                            <table>
+                                <tr>
+                                    <td>V<i>OLUTAGE</i></td>
+                                    <td>12233</td>
+                                    <td>V</td>
+                                </tr>
+                                <tr>
+                                    <td>C<i>URRENT</i></td>
+                                    <td>12233</td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>W<i>ATT</i></td>
+                                    <td>12233</td>
+                                    <td>W</td>
+                                </tr>
+                            </table>
+                            <b class="title">T_PV2</b>
+                            <table>
+                                <tr>
+                                    <td>V<i>OLUTAGE</i></td>
+                                    <td>12233</td>
+                                    <td>V</td>
+                                </tr>
+                                <tr>
+                                    <td>C<i>URRENT</i></td>
+                                    <td>12233</td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>W<i>ATT</i></td>
+                                    <td>12233</td>
+                                    <td>W</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer id="footer">COPYRIGHT &#169; 2018 新北市智能生活社區</footer>
+    <script src="js/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var weatherProperties = 'lat=25.010996&lon=121.502369&color=#FFFFFF&text-color=#FFFFFF&lang=zh-tw&time=+0800&units=si';
+            // initial load
+            document.getElementById('embedweather').src = 'http://forecast.io/embed/?ts=' + (Date.now()) + '#' + weatherProperties;
+            // refresh
+            var weatherRefresh = setInterval(function () {
+                document.getElementById('embedweather').src = 'http://forecast.io/embed/?ts=' + (Date.now()) + '#' + weatherProperties;
+            }, 1800000);
+        })
+    </script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/page.js"></script>
+</body>
+</html>

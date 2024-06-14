@@ -1,0 +1,1259 @@
+@charset "UTF-8";
+/* line 1316, ../sass/_base-function.scss */
+.pageheader {
+  padding: 0;
+  margin: -11px -60px 0 -60px;
+}
+
+/* line 1317, ../sass/_base-function.scss */
+.pagehr {
+  padding: 0 15px 0 15px;
+  border-bottom: #d4d0cb solid 1px;
+}
+
+/* line 1318, ../sass/_base-function.scss */
+.pagebg1,
+.pagebg2 {
+  padding: 0 60px;
+  min-height: 400px;
+  background: transparent;
+  margin: 0 -60px;
+}
+
+/* line 1322, ../sass/_base-function.scss */
+.pagebg1 h3 > span > a,
+.pagebg1 h4 > span > a,
+.pagebg2 h3 > span > a,
+.pagebg2 h4 > span > a {
+  color: #fbfbfb !important;
+}
+
+@media (mix-width: 768px) {
+  /* line 1328, ../sass/_base-function.scss */
+  .pagebg1,
+  .pagebg2 {
+    padding: 0px 0px;
+  }
+}
+@media (max-width: 768px) and (min-width: 481px) {
+  /* line 1332, ../sass/_base-function.scss */
+  .pagebg1 > .in > .ct > .in > div,
+  .pagebg2 > .in > .ct > .in > div {
+    margin: 0px 60px;
+  }
+}
+@media (max-width: 480px) {
+  /* line 1338, ../sass/_base-function.scss */
+  .pagebg1 > .in > .ct > .in > div,
+  .pagebg2 > .in > .ct > .in > div {
+    margin: 0px 60px;
+  }
+}
+/*
+.parallax-group {height: 500px;-webkit-perspective: 300px;perspective: 300px;
+        overflow-x: hidden;
+        overflow-y: auto;}
+.parallax01,
+.parallax02,
+.parallax03,
+.parallax04,
+.parallax05,
+.parallax06,
+.parallax07,
+.parallax08,
+.parallax09,
+.parallax10{
+    position: relative;
+    min-height: 500px;
+    -webkit-transform-style: preserve-3d;
+     transform-style: preserve-3d;
+}
+.parallax01{z-index:10}
+.parallax02{z-index:9}
+.parallax03{z-index:8}
+.parallax04{z-index:7}
+.parallax05{z-index:6}
+.parallax06{z-index:5}
+.parallax07{z-index:4}
+.parallax08{z-index:3}
+.parallax09{z-index:2}
+.parallax10{z-index:1}
+.parallax-fore {
+    position: absolute;top: 0;left: 0;right: 0;bottom: 0;
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+}
+    
+.parallax-base {
+    position: absolute;top: 0;left: 0;right: 0;bottom: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+}
+    
+.parallax-back {
+    position: absolute;top: 0;left: 0;right: 0;bottom: 0;
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+}
+.parallax-deep01,
+.parallax-deep02,
+.parallax-deep {
+    position: absolute;top: 0;left: 0;right: 0;bottom: 0;
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+}
+
+
+.parallax-deep01>.in{
+background-image:url('../Images/bg2.jpg');
+width: 100%;
+height: 100%;
+background-size:cover;
+}
+
+*/
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Description: The default skin for the Nivo Slider.
+Version: 1.3
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+Supports Thumbs: true
+*/
+/* line 11, ../sass/_base-vision_slider.scss */
+.theme-default .nivoSlider {
+  position: relative;
+  background: #fff url(../images/loading.gif) no-repeat 50% 50%;
+  margin-bottom: 10px;
+  /*-webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+  -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+  box-shadow: 0px 1px 5px 0px #4a4a4a;*/
+}
+
+/* line 19, ../sass/_base-vision_slider.scss */
+.theme-default .nivoSlider img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+
+/* line 25, ../sass/_base-vision_slider.scss */
+.theme-default .nivoSlider a {
+  border: 0;
+  display: block;
+}
+
+/* line 30, ../sass/_base-vision_slider.scss */
+.theme-default .nivo-controlNav {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* line 34, ../sass/_base-vision_slider.scss */
+.theme-default .nivo-controlNav a {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(../images/bullets.png) no-repeat;
+  text-indent: -9999px;
+  border: 0;
+  margin: 0 2px;
+}
+
+/* line 43, ../sass/_base-vision_slider.scss */
+.theme-default .nivo-controlNav a.active {
+  background-position: 0 -22px;
+}
+
+/* line 47, ../sass/_base-vision_slider.scss */
+.theme-default .nivo-directionNav a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(../images/arrows.png) no-repeat;
+  text-indent: -9999px;
+  border: 0;
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+/* line 60, ../sass/_base-vision_slider.scss */
+.theme-default:hover .nivo-directionNav a {
+  opacity: 1;
+}
+
+/* line 61, ../sass/_base-vision_slider.scss */
+.theme-default a.nivo-nextNav {
+  background-position: -30px 0;
+  right: 15px;
+}
+
+/* line 65, ../sass/_base-vision_slider.scss */
+.theme-default a.nivo-prevNav {
+  left: 15px;
+}
+
+/* line 69, ../sass/_base-vision_slider.scss */
+.theme-default .nivo-caption {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 72, ../sass/_base-vision_slider.scss */
+.theme-default .nivo-caption a {
+  color: #fff;
+  border-bottom: 1px dotted #fff;
+}
+
+/* line 76, ../sass/_base-vision_slider.scss */
+.theme-default .nivo-caption a:hover {
+  color: #fff;
+}
+
+/* line 80, ../sass/_base-vision_slider.scss */
+.theme-default .nivo-controlNav.nivo-thumbs-enabled {
+  width: 100%;
+}
+
+/* line 83, ../sass/_base-vision_slider.scss */
+.theme-default .nivo-controlNav.nivo-thumbs-enabled a {
+  width: auto;
+  height: auto;
+  background: none;
+  margin-bottom: 5px;
+}
+
+/* line 89, ../sass/_base-vision_slider.scss */
+.theme-default .nivo-controlNav.nivo-thumbs-enabled img {
+  display: block;
+  width: 120px;
+  height: auto;
+}
+
+/*
+ * jQuery Nivo Slider v3.2
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+/* The Nivo Slider styles */
+/* line 104, ../sass/_base-vision_slider.scss */
+.nivoSlider {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* line 110, ../sass/_base-vision_slider.scss */
+.nivoSlider img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  max-width: none;
+}
+
+/* line 116, ../sass/_base-vision_slider.scss */
+.nivo-main-image {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+/* line 123, ../sass/_base-vision_slider.scss */
+.nivoSlider a.nivo-imageLink {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 6;
+  display: none;
+  background: white;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+/* The slices and boxes in the Slider */
+/* line 139, ../sass/_base-vision_slider.scss */
+.nivo-slice {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  height: 100%;
+  top: 0;
+}
+
+/* line 146, ../sass/_base-vision_slider.scss */
+.nivo-box {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  overflow: hidden;
+}
+
+/* line 152, ../sass/_base-vision_slider.scss */
+.nivo-box img {
+  display: block;
+}
+
+/* Caption styles */
+/* line 155, ../sass/_base-vision_slider.scss */
+.nivo-caption {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  z-index: 8;
+  padding: 5px 10px;
+  opacity: 0.8;
+  overflow: hidden;
+  display: none;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=8);
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+
+/* line 173, ../sass/_base-vision_slider.scss */
+.nivo-caption p {
+  padding: 5px;
+  margin: 0;
+}
+
+/* line 177, ../sass/_base-vision_slider.scss */
+.nivo-caption a {
+  display: inline !important;
+}
+
+/* line 180, ../sass/_base-vision_slider.scss */
+.nivo-html-caption {
+  display: none;
+}
+
+/* Direction nav styles (e.g. Next & Prev) */
+/* line 184, ../sass/_base-vision_slider.scss */
+.nivo-directionNav a {
+  position: absolute;
+  top: 45%;
+  z-index: 9;
+  cursor: pointer;
+}
+
+/* line 190, ../sass/_base-vision_slider.scss */
+.nivo-prevNav {
+  left: 0px;
+}
+
+/* line 193, ../sass/_base-vision_slider.scss */
+.nivo-nextNav {
+  right: 0px;
+}
+
+/* Control nav styles (e.g. 1,2,3...) */
+/* line 197, ../sass/_base-vision_slider.scss */
+.nivo-controlNav {
+  display: none;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* line 202, ../sass/_base-vision_slider.scss */
+.nivo-controlNav a {
+  cursor: pointer;
+}
+
+/* line 205, ../sass/_base-vision_slider.scss */
+.nivo-controlNav a.active {
+  font-weight: bold;
+}
+
+/*------------------------------------------------------------------
+首頁 
+------------------------------------------------------------------*/
+/* line 7, ../sass/index.scss */
+main#content {
+  position: relative;
+  /*main#content*/
+  /*#my_services*/
+}
+/* line 9, ../sass/index.scss */
+main#content:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 220px 360px;
+  border-color: transparent transparent #D8D8D8 transparent;
+  line-height: 0px;
+  _border-color: #000000 #000000 #D8D8D8 #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  opacity: 0.8;
+  transition: transform 0.5s;
+}
+/* line 26, ../sass/index.scss */
+main#content section#master_Vision {
+  margin-top: 60px;
+  position: relative;
+}
+/* line 29, ../sass/index.scss */
+main#content section#master_Vision:before {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  right: 0;
+  z-index: 9;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 220px 360px;
+  border-color: transparent transparent #D8D8D8 transparent;
+  line-height: 0px;
+  _border-color: #000000 #000000 #D8D8D8 #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  opacity: 0.8;
+  transition: transform 0.5s;
+}
+/* line 45, ../sass/index.scss */
+main#content section#master_Vision .slider-wrapper.theme-default {
+  width: 100%;
+}
+/* line 47, ../sass/index.scss */
+main#content section#master_Vision .slider-wrapper.theme-default #slider li {
+  width: 100%;
+}
+/* line 49, ../sass/index.scss */
+main#content section#master_Vision .slider-wrapper.theme-default #slider li img {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+/* line 57, ../sass/index.scss */
+main#content section#master_Vision div.Hello {
+  height: unset;
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 58, ../sass/index.scss */
+main#content section#master_Vision h2, main#content section#master_Vision h3 {
+  font-family: 'Vidaloka', serif;
+}
+/* line 59, ../sass/index.scss */
+main#content section#master_Vision h2 {
+  position: absolute;
+  z-index: 10;
+  font-size: 4.5em;
+  bottom: 50px;
+  right: 40%;
+  font-weight: 100;
+  color: #71C1DD;
+  transition: transform 0.3s, opacity 0.3s;
+}
+@media screen and (min-width: 400px) {
+  /* line 68, ../sass/index.scss */
+  main#content section#master_Vision h2 {
+    right: 50%;
+  }
+}
+/* line 70, ../sass/index.scss */
+main#content section#master_Vision h3 {
+  position: absolute;
+  z-index: 11;
+  color: #fff;
+  width: 100%;
+  z-index: 11;
+  font-size: 2.5em;
+  line-height: .9em;
+  right: 20px;
+  text-align: right;
+  bottom: -25px;
+}
+@media screen and (min-width: 400px) {
+  /* line 70, ../sass/index.scss */
+  main#content section#master_Vision h3 {
+    bottom: -10px;
+  }
+}
+/* line 84, ../sass/index.scss */
+main#content section#master_Vision u {
+  position: absolute;
+  z-index: 12;
+  color: #fff;
+  bottom: -45px;
+  right: 20px;
+  font-family: 'Ubuntu', serif;
+  text-decoration: none;
+  font-size: .9em;
+  font-weight: lighter;
+}
+@media screen and (min-width: 400px) {
+  /* line 84, ../sass/index.scss */
+  main#content section#master_Vision u {
+    bottom: -30px;
+  }
+}
+/* line 98, ../sass/index.scss */
+main#content #my_services {
+  padding: 0 20px;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+  /*section#web_design*/
+  /*section#APP_UI_UX_Design  #graphic_design*/
+}
+/* line 103, ../sass/index.scss */
+main#content #my_services:before {
+  content: "";
+  position: absolute;
+  z-index: -1px;
+  left: 0px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 306px 500px 0 0;
+  border-color: #f6f6f6 transparent transparent transparent;
+  line-height: 0px;
+  _border-color: #f6f6f6 #000000 #000000 #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+/* line 118, ../sass/index.scss */
+main#content #my_services img {
+  width: 100%;
+}
+/* line 119, ../sass/index.scss */
+main#content #my_services h2 {
+  font-weight: normal;
+  position: relative;
+  margin-top: 14px;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+/* line 123, ../sass/index.scss */
+main#content #my_services h2 b {
+  color: #DFDFDF;
+}
+/* line 124, ../sass/index.scss */
+main#content #my_services h2 i {
+  font-style: normal;
+  display: block;
+}
+/* line 125, ../sass/index.scss */
+main#content #my_services h2 u {
+  text-decoration: none;
+  display: block;
+}
+/* line 126, ../sass/index.scss */
+main#content #my_services h2:after {
+  position: absolute;
+  content: "";
+  bottom: -8px;
+  left: 0;
+  width: 150px;
+  height: 3px;
+  background-color: #71C1DD;
+}
+/* line 138, ../sass/index.scss */
+main#content #my_services section figure {
+  position: relative;
+}
+/* line 140, ../sass/index.scss */
+main#content #my_services section figure figcaption h3 {
+  font-weight: normal;
+  font-family: 'Vidaloka', serif;
+  font-size: 5em;
+  line-height: .7em;
+}
+/* line 144, ../sass/index.scss */
+main#content #my_services section figure figcaption h3 b {
+  font-weight: normal;
+}
+/* line 146, ../sass/index.scss */
+main#content #my_services section figure figcaption a {
+  margin: 20px 50px;
+}
+/* line 147, ../sass/index.scss */
+main#content #my_services section figure figcaption p {
+  font-size: 1em;
+  line-height: 1.6em;
+}
+/* line 151, ../sass/index.scss */
+main#content #my_services section#web_design {
+  padding-top: 20px;
+}
+/* line 154, ../sass/index.scss */
+main#content #my_services section#web_design figure .image {
+  position: relative;
+}
+/* line 155, ../sass/index.scss */
+main#content #my_services section#web_design figure .image:before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 49px 80px;
+  border-color: transparent transparent #fff transparent;
+  line-height: 0px;
+  _border-color: #000000 #000000 #fff #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  opacity: 1;
+}
+/* line 173, ../sass/index.scss */
+main#content #my_services section#web_design figure figcaption h3 {
+  bottom: 270px;
+  position: absolute;
+}
+/* line 174, ../sass/index.scss */
+main#content #my_services section#web_design figure figcaption h3 b {
+  color: #71C1DD;
+  font-weight: normal;
+}
+@media screen and (min-width: 400px) {
+  /* line 177, ../sass/index.scss */
+  main#content #my_services section#web_design figure figcaption h3 {
+    bottom: 240px;
+  }
+}
+/* line 179, ../sass/index.scss */
+main#content #my_services section#web_design figure figcaption p {
+  padding-top: 100px;
+}
+/* line 183, ../sass/index.scss */
+main#content #my_services section#APP_UI_UX_Design,
+main#content #my_services section#graphic_design {
+  margin-top: 50px;
+}
+/* line 187, ../sass/index.scss */
+main#content #my_services section#APP_UI_UX_Design figure .image,
+main#content #my_services section#graphic_design figure .image {
+  position: relative;
+}
+/* line 188, ../sass/index.scss */
+main#content #my_services section#APP_UI_UX_Design figure .image:before,
+main#content #my_services section#graphic_design figure .image:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 49px 80px 0 0;
+  border-color: #fff  transparent transparent transparent;
+  line-height: 0px;
+  _border-color: #fff #000000 #000000  #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  opacity: 1;
+}
+/* line 205, ../sass/index.scss */
+main#content #my_services section#APP_UI_UX_Design figure figcaption h3,
+main#content #my_services section#graphic_design figure figcaption h3 {
+  position: relative;
+}
+/* line 213, ../sass/index.scss */
+main#content #my_services section#APP_UI_UX_Design > figure > figcaption h3 {
+  margin: 0 -20px;
+  padding-left: 20px;
+}
+/* line 216, ../sass/index.scss */
+main#content #my_services section#APP_UI_UX_Design > figure > figcaption h3 i {
+  color: #71C1DD;
+  font-style: normal;
+}
+/* line 217, ../sass/index.scss */
+main#content #my_services section#APP_UI_UX_Design > figure > figcaption h3 b {
+  color: white;
+}
+/* line 218, ../sass/index.scss */
+main#content #my_services section#APP_UI_UX_Design > figure > figcaption h3:after {
+  content: "";
+  display: block;
+  height: 120px;
+  width: 75%;
+  background-color: #71C1DD;
+  position: absolute;
+  z-index: -1;
+  top: -5px;
+  right: -20px;
+}
+@media screen and (min-width: 400px) {
+  /* line 218, ../sass/index.scss */
+  main#content #my_services section#APP_UI_UX_Design > figure > figcaption h3:after {
+    right: 0px;
+  }
+}
+@media screen and (min-width: 400px) {
+  /* line 235, ../sass/index.scss */
+  main#content #my_services section#APP_UI_UX_Design > figure > figcaption h3:after {
+    top: -2px;
+  }
+}
+@media screen and (min-width: 500px) {
+  /* line 242, ../sass/index.scss */
+  main#content #my_services section#APP_UI_UX_Design > figure > figcaption h3:after {
+    width: 77%;
+  }
+}
+@media screen and (min-width: 550px) {
+  /* line 249, ../sass/index.scss */
+  main#content #my_services section#APP_UI_UX_Design > figure > figcaption h3:after {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 550px) {
+  /* line 256, ../sass/index.scss */
+  main#content #my_services section#APP_UI_UX_Design > figure > figcaption h3:after {
+    width: 82%;
+  }
+}
+@media screen and (min-width: 730px) {
+  /* line 263, ../sass/index.scss */
+  main#content #my_services section#APP_UI_UX_Design > figure > figcaption h3:after {
+    width: 83%;
+  }
+}
+/* line 270, ../sass/index.scss */
+main#content #my_services section#APP_UI_UX_Design > figure > figcaption p {
+  padding-top: 5px;
+}
+/* line 273, ../sass/index.scss */
+main#content #my_services section#graphic_design > figure > figcaption h3 {
+  margin: 0 -20px;
+  padding-left: 17px;
+  margin-top: 65px;
+}
+/* line 277, ../sass/index.scss */
+main#content #my_services section#graphic_design > figure > figcaption h3 b {
+  color: white;
+}
+/* line 278, ../sass/index.scss */
+main#content #my_services section#graphic_design > figure > figcaption h3:after {
+  content: "";
+  display: block;
+  height: 120px;
+  width: 90%;
+  background-color: #71C1DD;
+  position: absolute;
+  z-index: -1;
+  top: -69px;
+  left: 0;
+}
+/* line 289, ../sass/index.scss */
+main#content #my_services section#graphic_design > figure > figcaption h3 u {
+  text-decoration: none;
+  padding-left: 50px;
+}
+@media screen and (min-width: 400px) {
+  /* line 295, ../sass/index.scss */
+  main#content #my_services section#graphic_design > figure > figcaption h3 {
+    padding-left: 20px;
+  }
+  /* line 296, ../sass/index.scss */
+  main#content #my_services section#graphic_design > figure > figcaption h3 u {
+    padding-left: 120px;
+  }
+}
+/* line 301, ../sass/index.scss */
+main#content #my_services section#graphic_design > figure > figcaption a {
+  margin-bottom: 50px;
+}
+/* line 302, ../sass/index.scss */
+main#content #my_services section#graphic_design > figure > figcaption p {
+  padding-top: 5px;
+}
+
+/*------------------------------------------------------------------
+
+------------------------------------------------------------------*/
+@media screen and (min-width: 400px) and (max-width: 409px) {
+  /* line 310, ../sass/index.scss */
+  main#content:after {
+    border-width: 0 0 244px 400px !important;
+  }
+
+  /* line 311, ../sass/index.scss */
+  section#master_Vision:before {
+    border-width: 0 0 244px 400px !important;
+  }
+}
+@media screen and (min-width: 410px) and (max-width: 419px) {
+  /* line 314, ../sass/index.scss */
+  main#content:after {
+    border-width: 0 0 250px 410px !important;
+  }
+
+  /* line 315, ../sass/index.scss */
+  section#master_Vision:before {
+    border-width: 0 0 250px 410px !important;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 429px) {
+  /* line 318, ../sass/index.scss */
+  main#content:after {
+    border-width: 0 0 256px 420px !important;
+  }
+
+  /* line 319, ../sass/index.scss */
+  section#master_Vision:before {
+    border-width: 0 0 256px 420px !important;
+  }
+}
+@media screen and (min-width: 430px) and (max-width: 439px) {
+  /* line 322, ../sass/index.scss */
+  main#content:after {
+    border-width: 0 0 262px 430px !important;
+  }
+
+  /* line 323, ../sass/index.scss */
+  section#master_Vision:before {
+    border-width: 0 0 262px 430px !important;
+  }
+}
+@media screen and (min-width: 440px) and (max-width: 449px) {
+  /* line 326, ../sass/index.scss */
+  main#content:after {
+    border-width: 0 0 268px 440px !important;
+  }
+
+  /* line 327, ../sass/index.scss */
+  section#master_Vision:before {
+    border-width: 0 0 268px 440px !important;
+  }
+}
+@media screen and (min-width: 450px) {
+  /* line 330, ../sass/index.scss */
+  main#content:after {
+    border-width: 0 0 275px 450px !important;
+  }
+
+  /* line 331, ../sass/index.scss */
+  section#master_Vision:before {
+    border-width: 0 0 275px 450px !important;
+  }
+}
+@media screen and (min-width: 480px) {
+  /* line 2, ../sass/_index_for_pad.scss */
+  main#content section#master_Vision h2 {
+    right: unset;
+    left: 20px;
+    bottom: -48px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 8, ../sass/_index_for_pad.scss */
+  main#content {
+    /*article#my_services*/
+  }
+  /* line 9, ../sass/_index_for_pad.scss */
+  main#content:after {
+    border-width: 0 0 293px 480px !important;
+  }
+  /* line 12, ../sass/_index_for_pad.scss */
+  main#content section#master_Vision {
+    background-image: url("../images/Master_Vision_pad.jpg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 446px;
+    width: 100%;
+  }
+  /* line 19, ../sass/_index_for_pad.scss */
+  main#content section#master_Vision:before {
+    bottom: 0px;
+  }
+  /* line 22, ../sass/_index_for_pad.scss */
+  main#content section#master_Vision div.Hello {
+    height: 446px;
+  }
+  /* line 23, ../sass/_index_for_pad.scss */
+  main#content section#master_Vision u {
+    bottom: 30px;
+  }
+  /* line 24, ../sass/_index_for_pad.scss */
+  main#content section#master_Vision h2 {
+    left: unset;
+    right: 20px;
+    top: 80px;
+  }
+  /* line 25, ../sass/_index_for_pad.scss */
+  main#content section#master_Vision h3 {
+    bottom: 50px;
+  }
+  /* line 26, ../sass/_index_for_pad.scss */
+  main#content section#master_Vision .slider-wrapper.theme-default {
+    display: none;
+  }
+  /* line 33, ../sass/_index_for_pad.scss */
+  main#content article#my_services {
+    margin-top: 0px;
+    padding-bottom: 47px;
+    /*section#web_design*/
+    /*section#APP_UI_UX_Design*/
+    /*section#graphic_design*/
+  }
+  /* line 34, ../sass/_index_for_pad.scss */
+  main#content article#my_services:before {
+    border-width: 196px 320px 0 0;
+  }
+  /* line 37, ../sass/_index_for_pad.scss */
+  main#content article#my_services h2 {
+    margin-top: 20px;
+  }
+  /* line 38, ../sass/_index_for_pad.scss */
+  main#content article#my_services h2 b {
+    display: inline-block;
+  }
+  /* line 39, ../sass/_index_for_pad.scss */
+  main#content article#my_services h2 i {
+    display: inline-block;
+  }
+  /* line 40, ../sass/_index_for_pad.scss */
+  main#content article#my_services h2 u {
+    display: inline-block;
+  }
+  /* line 41, ../sass/_index_for_pad.scss */
+  main#content article#my_services h2:after {
+    display: none;
+  }
+  /* line 45, ../sass/_index_for_pad.scss */
+  main#content article#my_services section {
+    width: 713px;
+    margin: 0 auto;
+  }
+  /* line 47, ../sass/_index_for_pad.scss */
+  main#content article#my_services section figure > figcaption h3 {
+    font-size: 4.4em;
+    line-height: .68em;
+  }
+  /* line 48, ../sass/_index_for_pad.scss */
+  main#content article#my_services section figure > figcaption a {
+    font-size: .5em;
+    width: 238px;
+    height: 48px;
+    line-height: 48px;
+    padding: 0;
+  }
+  /* line 51, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#web_design {
+    padding-top: 40px;
+  }
+  /* line 53, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#web_design figure u.image {
+    float: right;
+    display: block;
+    width: 470px;
+    margin-right: 0px;
+    padding-left: 10px;
+    padding-top: 8px;
+  }
+  /* line 55, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#web_design figure u.image:before {
+    border-width: 0 0 72px 118px;
+  }
+  /* line 60, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#web_design figure figcaption h3 {
+    bottom: unset;
+    top: 0;
+    left: 0px;
+  }
+  /* line 61, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#web_design figure figcaption p {
+    width: 240px;
+    margin-left: 0px;
+    line-height: 1.5em;
+  }
+  /* line 62, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#web_design figure figcaption a.button_more {
+    margin: 6px 2px;
+  }
+  /* line 68, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#APP_UI_UX_Design figure u.image {
+    float: left;
+    display: block;
+    width: 470px;
+    margin-left: 0px;
+    padding-right: 10px;
+  }
+  /* line 69, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#APP_UI_UX_Design figure u.image:before {
+    border-width: 72px 118px 0 0;
+  }
+  /* line 73, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#APP_UI_UX_Design figure figcaption {
+    float: right;
+  }
+  /* line 74, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#APP_UI_UX_Design figure figcaption h3 {
+    padding-top: 4px;
+  }
+  /* line 75, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#APP_UI_UX_Design figure figcaption h3:after {
+    top: 2px;
+    height: 96px;
+    width: 148px;
+    right: 20px;
+  }
+  /* line 82, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#APP_UI_UX_Design figure figcaption p {
+    width: 240px;
+    padding-bottom: 40px;
+  }
+  /* line 83, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#APP_UI_UX_Design figure figcaption a.button_more {
+    clear: both;
+    margin: 0;
+  }
+  /* line 87, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#graphic_design {
+    clear: both;
+    padding-top: 47px;
+  }
+  /* line 89, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#graphic_design figure u.image {
+    float: right;
+    display: block;
+    width: 380px;
+    margin-left: 0px;
+    padding-right: 0px;
+  }
+  /* line 90, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#graphic_design figure u.image:before {
+    border-width: 72px 118px 0 0;
+  }
+  /* line 94, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#graphic_design figure figcaption {
+    float: left;
+    width: 333px;
+  }
+  /* line 95, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#graphic_design figure figcaption h3 {
+    padding-top: 4px;
+    margin-top: 40px;
+  }
+  /* line 96, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#graphic_design figure figcaption h3:after {
+    left: 20px;
+    top: -40px;
+    height: 100px;
+    width: 280px;
+  }
+  /* line 99, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#graphic_design figure figcaption h3 u {
+    padding-left: 108px;
+  }
+  /* line 101, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#graphic_design figure figcaption p {
+    padding-top: 0px;
+    margin-top: -10px;
+  }
+  /* line 102, ../sass/_index_for_pad.scss */
+  main#content article#my_services section#graphic_design figure figcaption a.button_more {
+    clear: both;
+    margin: 0;
+    margin-top: 40px;
+    margin-left: 80px;
+  }
+}
+@media screen and (min-width: 940px) {
+  /* line 2, ../sass/_index_for_pc.scss */
+  body {
+    background-image: url("../images/body_bg.gif");
+    background-position: center 553px;
+    background-size: unset;
+    background-repeat: no-repeat;
+  }
+
+  /* line 13, ../sass/_index_for_pc.scss */
+  main#content {
+    min-width: 940px;
+    min-height: 550px;
+    /*article#my_services*/
+  }
+  /* line 16, ../sass/_index_for_pc.scss */
+  main#content:after {
+    display: none;
+  }
+  /* line 19, ../sass/_index_for_pc.scss */
+  main#content section#master_Vision {
+    background-image: url("../images/Master_Vision_pc.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 494px;
+    width: 100%;
+  }
+  /* line 26, ../sass/_index_for_pc.scss */
+  main#content section#master_Vision:before {
+    display: none;
+  }
+  /* line 29, ../sass/_index_for_pc.scss */
+  main#content section#master_Vision div.Hello {
+    height: 494px;
+  }
+  /* line 30, ../sass/_index_for_pc.scss */
+  main#content section#master_Vision div.Hello h2 {
+    font-size: 10em;
+    opacity: .6;
+    top: 50px;
+    right: 60px;
+  }
+  /* line 37, ../sass/_index_for_pc.scss */
+  main#content section#master_Vision u {
+    right: 80px;
+    bottom: 23px;
+    font-size: 1.1em;
+  }
+  /* line 38, ../sass/_index_for_pc.scss */
+  main#content section#master_Vision h2 {
+    right: 200px;
+  }
+  /* line 39, ../sass/_index_for_pc.scss */
+  main#content section#master_Vision h3 {
+    right: 70px;
+    bottom: 48px;
+    font-size: 3.2em;
+  }
+  /* line 47, ../sass/_index_for_pc.scss */
+  main#content article#my_services {
+    /*section#web_design*/
+    /*section#APP_UI_UX_Design*/
+    /*section#graphic_design*/
+  }
+  /* line 50, ../sass/_index_for_pc.scss */
+  main#content article#my_services:before {
+    display: none;
+  }
+  /* line 52, ../sass/_index_for_pc.scss */
+  main#content article#my_services h2 {
+    margin: 0 auto;
+    width: 940px;
+    margin-top: 40px;
+  }
+  /* line 56, ../sass/_index_for_pc.scss */
+  main#content article#my_services h2 b {
+    display: block;
+  }
+  /* line 57, ../sass/_index_for_pc.scss */
+  main#content article#my_services h2 i {
+    display: block;
+  }
+  /* line 58, ../sass/_index_for_pc.scss */
+  main#content article#my_services h2 u {
+    display: block;
+  }
+  /* line 59, ../sass/_index_for_pc.scss */
+  main#content article#my_services h2:after {
+    display: block;
+  }
+  /* line 64, ../sass/_index_for_pc.scss */
+  main#content article#my_services section {
+    width: 940px;
+    margin: 0 auto;
+  }
+  /* line 66, ../sass/_index_for_pc.scss */
+  main#content article#my_services section figure > figcaption h3 {
+    transform-origin: 0;
+    transform: scaleX(1.1);
+  }
+  /* line 70, ../sass/_index_for_pc.scss */
+  main#content article#my_services section#web_design {
+    margin-top: -90px;
+  }
+  /* line 72, ../sass/_index_for_pc.scss */
+  main#content article#my_services section#web_design figure u.image {
+    width: 470px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+  /* line 80, ../sass/_index_for_pc.scss */
+  main#content article#my_services section#web_design figure figcaption {
+    position: relative;
+    margin-left: 210px;
+  }
+  /* line 82, ../sass/_index_for_pc.scss */
+  main#content article#my_services section#web_design figure figcaption h3 {
+    top: 3px;
+  }
+  /* line 90, ../sass/_index_for_pc.scss */
+  main#content article#my_services section#APP_UI_UX_Design figure u.image {
+    width: 460px;
+  }
+  /* line 94, ../sass/_index_for_pc.scss */
+  main#content article#my_services section#APP_UI_UX_Design figure figcaption {
+    margin-right: 170px;
+  }
+  /* line 95, ../sass/_index_for_pc.scss */
+  main#content article#my_services section#APP_UI_UX_Design figure figcaption h3 {
+    line-height: .7em;
+  }
+  /* line 96, ../sass/_index_for_pc.scss */
+  main#content article#my_services section#APP_UI_UX_Design figure figcaption h3:after {
+    top: 3px;
+    height: 97px;
+    right: unset;
+    left: 111px;
+    width: 338px;
+  }
+  /* line 103, ../sass/_index_for_pc.scss */
+  main#content article#my_services section#APP_UI_UX_Design figure figcaption p {
+    padding-bottom: 51px;
+    width: 300px;
+  }
+  /* line 110, ../sass/_index_for_pc.scss */
+  main#content article#my_services section#graphic_design figure u.image {
+    margin-right: 90px;
+  }
+  /* line 114, ../sass/_index_for_pc.scss */
+  main#content article#my_services section#graphic_design figure figcaption {
+    margin-left: 94px;
+  }
+  /* line 116, ../sass/_index_for_pc.scss */
+  main#content article#my_services section#graphic_design figure figcaption h3:after {
+    left: -67px;
+    top: -40px;
+    right: unset;
+    height: 100px;
+    width: 345px;
+  }
+  /* line 125, ../sass/_index_for_pc.scss */
+  main#content article#my_services section#graphic_design figure figcaption a.button_more {
+    margin-right: -20px;
+    float: right;
+  }
+
+  /* line 133, ../sass/_index_for_pc.scss */
+  footer#fatfooter {
+    background-image: url("../images/footer_bg.gif");
+  }
+}

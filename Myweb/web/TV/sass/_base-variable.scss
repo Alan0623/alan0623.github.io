@@ -1,0 +1,80 @@
+//主要版面顏色================================================================
+    $title-color: #9effff; 
+    $text-color: #4f4f4f; 
+    $menu-color: #20b4b9;
+//隱藏文字與...================================================================
+    %hide-text {//隱藏文字的方法
+        font: 0/0 a;
+        color: transparent;
+    }
+//頁面================================================================
+  %tag_g {//窄標籤
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 34px;
+    background-color: #05c287;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media screen and (min-width: 1100px){width: 4px;height: 36px;}
+    @media screen and (min-width: 1200px){width: 4px;height: 38px;}
+    @media screen and (min-width: 1300px){width: 5px;height: 40px;}
+    @media screen and (min-width: 1400px){width: 5px;height: 43px;}
+    @media screen and (min-width: 1500px){width: 5px;height: 45px;}
+    @media screen and (min-width: 1600px){width: 5px;height: 48px;}
+    @media screen and (min-width: 1700px){width: 6px;height: 50px;}
+    @media screen and (min-width: 1800px){width: 7px;height: 55px;}
+    @media screen and (min-width: 1900px){width: 8px;height: 60px;}
+  }
+  %tag_g_w {//寬標籤
+    line-height: 30px;
+    min-height: 30px;
+    padding: 2px 0 2px 2px;
+    white-space: nowrap;
+    font-size: .7em;
+    font-weight: normal;
+    @media screen and (min-width: 1050px){font-size: .8em;}
+    @media screen and (min-width: 1100px){line-height: 36px;max-height: 36px;font-size: .83em;padding: 2px 0 2px 10px;}
+    @media screen and (min-width: 1200px){line-height: 38px;max-height: 38px;}
+    @media screen and (min-width: 1300px){line-height: 40px;max-height: 40px;padding-left: 12px;}
+    @media screen and (min-width: 1400px){line-height: 43px;max-height: 43px;padding-left: 13px;}
+    @media screen and (min-width: 1500px){line-height: 45px;max-height: 45px;padding-left: 14px;}
+    @media screen and (min-width: 1600px){line-height: 48px;max-height: 48px;padding-left: 15px;font-size: .85em;}
+    @media screen and (min-width: 1700px){line-height: 50px;max-height: 50px;padding-left: 16px;font-size: .9em;}
+    @media screen and (min-width: 1800px){line-height: 55px;max-height: 55px;padding-left: 17px;}
+    @media screen and (min-width: 1900px){line-height: 60px;max-height: 60px;padding-left: 18px;}
+    &::before{
+        background-image: url("../images/tag_battery.gif");
+        width: 3px;
+        @media screen and (min-width: 1100px){width: 4px;}
+        @media screen and (min-width: 1200px){width: 6px;}
+        @media screen and (min-width: 1300px){width: 8px;}
+        @media screen and (min-width: 1400px){width: 10px;}
+        @media screen and (min-width: 1500px){width: 12px;}
+        @media screen and (min-width: 1600px){width: 14px;}
+        @media screen and (min-width: 1700px){width: 16px;}
+        @media screen and (min-width: 1800px){width: 18px;}
+        @media screen and (min-width: 1900px){width: 20px;}
+    }  
+  }
+/*------------------------------------------------------------------
+Reset HTML5
+------------------------------------------------------------------*/
+article,aside,dialog,footer,header,section,footer,nav,figure,menu,details,figcaption,figure,hgroup{display:block;}
+audio, canvas, video{display: inline-block; *display: inline; *zoom: 1;}
+audio:not([controls]){display: none;}
+[hidden]{display: none;}
+/*------------------------------------------------------------------
+Reset
+------------------------------------------------------------------*/
+*{margin: 0;padding: 0;box-sizing: border-box;}
+html, body {min-width: 1024px;height: 100%;padding: 0; margin: 0;font-family: "微軟正黑體","Ubuntu", Helvetica, "Heiti TC", "Microsoft Sans Serif", "Microsoft Sans Serif", "Helvetica", "Geneva", "sans-serif";}
+body::-webkit-scrollbar {display:none}
+a{outline: none;}
+a, a:active, a:hover{text-decoration: none;}
+ul,li{list-style: none;padding: 0;margin: 0;}
+.show{display: block;opacity: 1;}
+.hide{display: none;opacity: 0;}

@@ -1,0 +1,700 @@
+@charset "UTF-8";
+/* line 1, ../sass/about.scss */
+header#head {
+  background-repeat: repeat-x;
+}
+
+/* line 5, ../sass/about.scss */
+main#content {
+  overflow: hidden;
+  min-height: 550px;
+  background-image: none;
+  background-position: -680px top;
+  background-repeat: no-repeat;
+  padding-bottom: 183px;
+}
+@media screen and (max-width: 602px) {
+  /* line 5, ../sass/about.scss */
+  main#content {
+    padding-bottom: 257px;
+  }
+}
+@media screen and (max-width: 449px) {
+  /* line 5, ../sass/about.scss */
+  main#content {
+    padding-bottom: 379px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 5, ../sass/about.scss */
+  main#content {
+    background-image: url(../images/body_bg2.gif);
+  }
+}
+/* line 21, ../sass/about.scss */
+.high_contrast main#content {
+  background-image: none;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 25, ../sass/about.scss */
+  #about_me {
+    height: 1950px;
+  }
+}
+
+/* line 31, ../sass/about.scss */
+#contact_me,
+#about_me {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 200px;
+  position: relative;
+}
+/* line 40, ../sass/about.scss */
+#contact_me b,
+#about_me b {
+  padding: 1px 0px 3px 4px;
+  margin-right: 2px;
+}
+/* line 48, ../sass/about.scss */
+#contact_me:before,
+#about_me:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 367px 600px 0 0;
+  border-color: #F6F6F6 transparent transparent  transparent;
+  line-height: 0px;
+  opacity: 1;
+  transition: transform 0.5s;
+}
+@media screen and (min-width: 768px) {
+  /* line 48, ../sass/about.scss */
+  #contact_me:before,
+  #about_me:before {
+    display: none;
+  }
+}
+/* line 66, ../sass/about.scss */
+#contact_me::after,
+#about_me::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* line 72, ../sass/about.scss */
+.high_contrast #contact_me:before, .high_contrast
+#about_me:before {
+  display: none;
+}
+/* line 76, ../sass/about.scss */
+#contact_me h2,
+#about_me h2 {
+  font-weight: normal;
+  position: absolute;
+  z-index: 10;
+  top: 100px;
+  margin-top: 14px;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  display: block;
+  width: 260px;
+  height: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+/* line 88, ../sass/about.scss */
+#contact_me h2 b,
+#about_me h2 b {
+  color: #DFDFDF;
+  float: left;
+  font-size: 2.6em;
+}
+/* line 89, ../sass/about.scss */
+#contact_me h2 i,
+#about_me h2 i {
+  font-style: normal;
+  display: block;
+  position: absolute;
+  width: 300px;
+  padding-left: 87px;
+  margin-top: -13px;
+}
+/* line 90, ../sass/about.scss */
+#contact_me h2 u,
+#about_me h2 u {
+  text-decoration: none;
+  display: block;
+  position: absolute;
+  padding-left: 87px;
+  top: 15px;
+  width: 300px;
+}
+/* line 91, ../sass/about.scss */
+#contact_me h2:after,
+#about_me h2:after {
+  position: absolute;
+  content: "";
+  top: 47px;
+  left: 0;
+  width: 260px;
+  height: 3px;
+  background-color: #71C1DD;
+}
+@media screen and (min-width: 768px) {
+  /* line 76, ../sass/about.scss */
+  #contact_me h2,
+  #about_me h2 {
+    left: 25px;
+    right: auto;
+  }
+}
+/* line 97, ../sass/about.scss */
+.high_contrast #contact_me h2 b, .high_contrast
+#about_me h2 b {
+  color: #fefe00;
+  opacity: .5;
+}
+/* line 98, ../sass/about.scss */
+.high_contrast #contact_me h2:after, .high_contrast
+#about_me h2:after {
+  background-color: #fefe00;
+}
+/* line 103, ../sass/about.scss */
+#contact_me #info,
+#contact_me #WORK_EXPERIENCE,
+#contact_me #EDUCATION,
+#contact_me #COMPUTER_SKILL,
+#contact_me #LICENSES,
+#about_me #info,
+#about_me #WORK_EXPERIENCE,
+#about_me #EDUCATION,
+#about_me #COMPUTER_SKILL,
+#about_me #LICENSES {
+  max-width: 470px;
+  font-size: 1em;
+  line-height: 1.6em;
+  margin-bottom: 54px;
+}
+/* line 112, ../sass/about.scss */
+#contact_me #info h3,
+#contact_me #WORK_EXPERIENCE h3,
+#contact_me #EDUCATION h3,
+#contact_me #COMPUTER_SKILL h3,
+#contact_me #LICENSES h3,
+#about_me #info h3,
+#about_me #WORK_EXPERIENCE h3,
+#about_me #EDUCATION h3,
+#about_me #COMPUTER_SKILL h3,
+#about_me #LICENSES h3 {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  color: #499CB9;
+}
+/* line 117, ../sass/about.scss */
+.high_contrast #contact_me #info h3, .high_contrast
+#contact_me #WORK_EXPERIENCE h3, .high_contrast
+#contact_me #EDUCATION h3, .high_contrast
+#contact_me #COMPUTER_SKILL h3, .high_contrast
+#contact_me #LICENSES h3, .high_contrast
+#about_me #info h3, .high_contrast
+#about_me #WORK_EXPERIENCE h3, .high_contrast
+#about_me #EDUCATION h3, .high_contrast
+#about_me #COMPUTER_SKILL h3, .high_contrast
+#about_me #LICENSES h3 {
+  color: #fefe00;
+}
+/* line 122, ../sass/about.scss */
+#contact_me #info ul li,
+#contact_me #WORK_EXPERIENCE ul li,
+#contact_me #EDUCATION ul li,
+#contact_me #COMPUTER_SKILL ul li,
+#contact_me #LICENSES ul li,
+#about_me #info ul li,
+#about_me #WORK_EXPERIENCE ul li,
+#about_me #EDUCATION ul li,
+#about_me #COMPUTER_SKILL ul li,
+#about_me #LICENSES ul li {
+  font-size: 1em;
+  line-height: 1.6em;
+  margin: 8px 0;
+}
+/* line 129, ../sass/about.scss */
+#contact_me #info h3,
+#about_me #info h3 {
+  color: #000;
+}
+/* line 130, ../sass/about.scss */
+.high_contrast #contact_me #info h3, .high_contrast
+#about_me #info h3 {
+  color: #fefe00;
+}
+/* line 134, ../sass/about.scss */
+#contact_me #LICENSES ul,
+#about_me #LICENSES ul {
+  position: relative;
+}
+/* line 136, ../sass/about.scss */
+#contact_me #LICENSES ul::after,
+#about_me #LICENSES ul::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -38%;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  border-bottom: 3px solid #71C1DD;
+  transform-origin: bottom center;
+  transform: rotateZ(-38deg) scale(0.5);
+}
+/* line 150, ../sass/about.scss */
+.high_contrast #contact_me #LICENSES ul::after, .high_contrast
+#about_me #LICENSES ul::after {
+  border-color: #fefe00;
+  opacity: .5;
+}
+@keyframes slash {
+  0% {
+    transform: rotateZ(0deg) scale(1);
+  }
+  30% {
+    transform: rotateZ(45deg) scale(1);
+  }
+  60% {
+    transform: rotateZ(45deg) scale(1.414);
+  }
+  100% {
+    transform: rotateZ(45deg) scale(1.414);
+  }
+}
+/* line 171, ../sass/about.scss */
+#contact_me #info figure img,
+#about_me #info figure img {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 186px;
+  right: 0;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  /* line 171, ../sass/about.scss */
+  #contact_me #info figure img,
+  #about_me #info figure img {
+    left: 10px;
+    right: auto;
+  }
+}
+/* line 183, ../sass/about.scss */
+.high_contrast #contact_me #info figure img, .high_contrast
+#about_me #info figure img {
+  border: #fefe00 solid thin;
+  border-radius: 50%;
+}
+/* line 189, ../sass/about.scss */
+#contact_me #info figcaption,
+#about_me #info figcaption {
+  margin-top: 280px;
+  position: relative;
+  right: 0;
+  top: 0;
+  max-width: 470px;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+/* line 197, ../sass/about.scss */
+#contact_me #info figcaption::after,
+#about_me #info figcaption::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  right: -38%;
+  width: 80%;
+  height: 50px;
+  box-sizing: border-box;
+  border-bottom: 3px solid #71C1DD;
+  transform-origin: bottom center;
+  transform: rotateZ(-38deg) scale(0.5);
+}
+/* line 211, ../sass/about.scss */
+.high_contrast #contact_me #info figcaption::after, .high_contrast
+#about_me #info figcaption::after {
+  border-color: #fefe00;
+  opacity: .5;
+}
+@media screen and (min-width: 768px) {
+  /* line 189, ../sass/about.scss */
+  #contact_me #info figcaption,
+  #about_me #info figcaption {
+    position: absolute;
+    top: -80px;
+    right: 30px;
+  }
+}
+/* line 222, ../sass/about.scss */
+#contact_me #info figcaption h3,
+#about_me #info figcaption h3 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2em;
+  line-height: 1.6em;
+  margin-bottom: 5px;
+}
+/* line 228, ../sass/about.scss */
+#contact_me #info figcaption p,
+#about_me #info figcaption p {
+  padding: 5px 0;
+}
+@media screen and (min-width: 768px) {
+  /* line 231, ../sass/about.scss */
+  #contact_me .form_list,
+  #contact_me .cv,
+  #about_me .form_list,
+  #about_me .cv {
+    top: 450px;
+    right: 30px;
+    z-index: 99999;
+    float: right;
+    margin-right: 10px;
+  }
+}
+/* line 242, ../sass/about.scss */
+#contact_me .cv,
+#about_me .cv {
+  margin-top: 0px;
+}
+@media screen and (min-width: 768px) {
+  /* line 242, ../sass/about.scss */
+  #contact_me .cv,
+  #about_me .cv {
+    margin-top: 25em;
+  }
+}
+/* line 251, ../sass/about.scss */
+#contact_me #EDUCATION ul li,
+#contact_me #LICENSES ul li,
+#contact_me #WORK_EXPERIENCE ul li,
+#about_me #EDUCATION ul li,
+#about_me #LICENSES ul li,
+#about_me #WORK_EXPERIENCE ul li {
+  padding-left: 61px;
+  position: relative;
+}
+/* line 254, ../sass/about.scss */
+#contact_me #EDUCATION ul li::before,
+#contact_me #LICENSES ul li::before,
+#contact_me #WORK_EXPERIENCE ul li::before,
+#about_me #EDUCATION ul li::before,
+#about_me #LICENSES ul li::before,
+#about_me #WORK_EXPERIENCE ul li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #71C1DD;
+}
+/* line 265, ../sass/about.scss */
+#contact_me #EDUCATION ul li a,
+#contact_me #LICENSES ul li a,
+#contact_me #WORK_EXPERIENCE ul li a,
+#about_me #EDUCATION ul li a,
+#about_me #LICENSES ul li a,
+#about_me #WORK_EXPERIENCE ul li a {
+  color: #000;
+  text-decoration: underline;
+}
+/* line 266, ../sass/about.scss */
+#contact_me #EDUCATION ul li a:focus, #contact_me #EDUCATION ul li a:hover,
+#contact_me #LICENSES ul li a:focus,
+#contact_me #LICENSES ul li a:hover,
+#contact_me #WORK_EXPERIENCE ul li a:focus,
+#contact_me #WORK_EXPERIENCE ul li a:hover,
+#about_me #EDUCATION ul li a:focus,
+#about_me #EDUCATION ul li a:hover,
+#about_me #LICENSES ul li a:focus,
+#about_me #LICENSES ul li a:hover,
+#about_me #WORK_EXPERIENCE ul li a:focus,
+#about_me #WORK_EXPERIENCE ul li a:hover {
+  color: #71C1DD;
+}
+/* line 270, ../sass/about.scss */
+.high_contrast #contact_me #EDUCATION ul li a, .high_contrast
+#contact_me #LICENSES ul li a, .high_contrast
+#contact_me #WORK_EXPERIENCE ul li a, .high_contrast
+#about_me #EDUCATION ul li a, .high_contrast
+#about_me #LICENSES ul li a, .high_contrast
+#about_me #WORK_EXPERIENCE ul li a {
+  color: #fefe00;
+  text-decoration: underline;
+}
+/* line 273, ../sass/about.scss */
+.high_contrast #contact_me #EDUCATION ul li a:focus, .high_contrast #contact_me #EDUCATION ul li a:hover, .high_contrast
+#contact_me #LICENSES ul li a:focus, .high_contrast
+#contact_me #LICENSES ul li a:hover, .high_contrast
+#contact_me #WORK_EXPERIENCE ul li a:focus, .high_contrast
+#contact_me #WORK_EXPERIENCE ul li a:hover, .high_contrast
+#about_me #EDUCATION ul li a:focus, .high_contrast
+#about_me #EDUCATION ul li a:hover, .high_contrast
+#about_me #LICENSES ul li a:focus, .high_contrast
+#about_me #LICENSES ul li a:hover, .high_contrast
+#about_me #WORK_EXPERIENCE ul li a:focus, .high_contrast
+#about_me #WORK_EXPERIENCE ul li a:hover {
+  background-color: #fefe00;
+  color: black;
+}
+/* line 280, ../sass/about.scss */
+#contact_me #EDUCATION ul li b,
+#contact_me #LICENSES ul li b,
+#contact_me #WORK_EXPERIENCE ul li b,
+#about_me #EDUCATION ul li b,
+#about_me #LICENSES ul li b,
+#about_me #WORK_EXPERIENCE ul li b {
+  padding-right: 10px;
+  display: block;
+  float: left;
+  position: absolute;
+  left: 7px;
+}
+/* line 290, ../sass/about.scss */
+#contact_me #COMPUTER_SKILL ul li,
+#contact_me #LICENSES ul li,
+#about_me #COMPUTER_SKILL ul li,
+#about_me #LICENSES ul li {
+  padding-left: 11px;
+  position: relative;
+}
+/* line 293, ../sass/about.scss */
+#contact_me #COMPUTER_SKILL ul li::before,
+#contact_me #LICENSES ul li::before,
+#about_me #COMPUTER_SKILL ul li::before,
+#about_me #LICENSES ul li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #71C1DD;
+}
+
+/*about_me*/
+/* line 307, ../sass/about.scss */
+#contact_me {
+  margin-bottom: 50px;
+}
+
+/* line 308, ../sass/about.scss */
+.form_list {
+  width: 99%;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  padding-top: 200px;
+}
+@media screen and (min-width: 768px) {
+  /* line 308, ../sass/about.scss */
+  .form_list {
+    padding-top: 0px;
+  }
+}
+/* line 316, ../sass/about.scss */
+.form_list h3 {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  color: #499CB9;
+}
+/* line 320, ../sass/about.scss */
+.high_contrast .form_list h3 {
+  color: #fefe00;
+}
+/* line 322, ../sass/about.scss */
+.form_list .instant_messaging {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* line 325, ../sass/about.scss */
+.form_list .instant_messaging li {
+  margin: 10px 0;
+}
+/* line 326, ../sass/about.scss */
+.form_list .instant_messaging li::before {
+  line-height: 16px;
+  padding-right: 0px;
+}
+/* line 330, ../sass/about.scss */
+.form_list .instant_messaging li a {
+  color: #000;
+  text-decoration: underline;
+}
+/* line 332, ../sass/about.scss */
+.form_list .instant_messaging li a:focus, .form_list .instant_messaging li a:hover {
+  color: #71C1DD;
+}
+/* line 336, ../sass/about.scss */
+.high_contrast .form_list .instant_messaging li a {
+  color: #fefe00;
+}
+/* line 337, ../sass/about.scss */
+.high_contrast .form_list .instant_messaging li a:focus, .high_contrast .form_list .instant_messaging li a:hover {
+  color: #000;
+  background-color: #fefe00;
+}
+/* line 348, ../sass/about.scss */
+.form_list form label {
+  display: block;
+  margin: 5px 0;
+}
+/* line 352, ../sass/about.scss */
+.form_list form input, .form_list form textarea {
+  font-size: 0.8em;
+  font-family: "微軟正黑體","Ubuntu", Helvetica, "Heiti TC", "Microsoft Sans Serif", "Microsoft Sans Serif", "Helvetica", "Geneva", "sans-serif";
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0.9em;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+}
+/* line 362, ../sass/about.scss */
+.form_list form input:focus, .form_list form textarea:focus {
+  outline: #71C1DD solid 4px;
+  border-radius: 5px;
+}
+/* line 366, ../sass/about.scss */
+.high_contrast .form_list form input, .high_contrast .form_list form textarea {
+  background-color: #000;
+  border: #fefe00 solid 3px;
+  color: #fefe00;
+}
+/* line 370, ../sass/about.scss */
+.high_contrast .form_list form input ::-webkit-input-placeholder, .high_contrast .form_list form textarea ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fefe00;
+}
+/* line 373, ../sass/about.scss */
+.high_contrast .form_list form input ::-moz-placeholder, .high_contrast .form_list form textarea ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fefe00;
+}
+/* line 376, ../sass/about.scss */
+.high_contrast .form_list form input :-ms-input-placeholder, .high_contrast .form_list form textarea :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fefe00;
+}
+/* line 379, ../sass/about.scss */
+.high_contrast .form_list form input :-moz-placeholder, .high_contrast .form_list form textarea :-moz-placeholder {
+  /* Firefox 18- */
+  color: #fefe00;
+}
+/* line 384, ../sass/about.scss */
+.form_list form textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 300px;
+}
+/* line 388, ../sass/about.scss */
+.form_list form button.button_more {
+  border: 1px solid #ddd;
+  padding: .1em 3em;
+}
+/* line 391, ../sass/about.scss */
+.high_contrast .form_list form button.button_more {
+  border: 3px solid #fefe00;
+}
+
+@media screen and (min-width: 505px) {
+  /* line 398, ../sass/about.scss */
+  .form_list {
+    width: 470px;
+    max-width: 470px;
+    min-width: 470px;
+    margin-top: 0px;
+  }
+  /* line 402, ../sass/about.scss */
+  .form_list form textarea {
+    width: 470px;
+    max-width: 470px;
+    min-width: 470px;
+    min-height: 300px;
+  }
+}
+/* line 409, ../sass/about.scss */
+.sitmap_info {
+  line-height: 1.6em;
+}
+/* line 411, ../sass/about.scss */
+.sitmap_info .sitmap_info_title {
+  margin-top: 20px;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+/* line 415, ../sass/about.scss */
+.sitmap_info .sitmap_info_title h3 {
+  margin-bottom: 10px;
+}
+/* line 421, ../sass/about.scss */
+.sitmap_info .sitemap_list a,
+.sitmap_info .sitmap_info_browser a {
+  color: #249edd;
+  text-decoration: underline;
+}
+/* line 424, ../sass/about.scss */
+.sitmap_info .sitemap_list a:focus, .sitmap_info .sitemap_list a:hover,
+.sitmap_info .sitmap_info_browser a:focus,
+.sitmap_info .sitmap_info_browser a:hover {
+  color: orange;
+}
+/* line 429, ../sass/about.scss */
+.high_contrast .sitmap_info .sitemap_list a, .high_contrast
+.sitmap_info .sitmap_info_browser a {
+  color: #fefe00;
+  text-decoration: underline;
+}
+/* line 432, ../sass/about.scss */
+.high_contrast .sitmap_info .sitemap_list a:focus, .high_contrast .sitmap_info .sitemap_list a:hover, .high_contrast
+.sitmap_info .sitmap_info_browser a:focus, .high_contrast
+.sitmap_info .sitmap_info_browser a:hover {
+  color: black;
+  background-color: #fefe00;
+}
+/* line 439, ../sass/about.scss */
+.sitmap_info .sitemap_list {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+/* line 442, ../sass/about.scss */
+.sitmap_info .sitemap_list li {
+  list-style-type: decimal;
+  padding: 5px 0;
+}
+/* line 444, ../sass/about.scss */
+.sitmap_info .sitemap_list li b {
+  display: block;
+  font-weight: normal;
+  color: #3e3b33;
+  font-size: .9em;
+  line-height: 1.4em;
+}
+/* line 450, ../sass/about.scss */
+.high_contrast .sitmap_info .sitemap_list li b {
+  color: #fefe00;
+}

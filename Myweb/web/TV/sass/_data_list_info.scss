@@ -1,0 +1,108 @@
+.inside_page{ //內頁 左邊數據資訊
+    padding-left: 20%;
+    margin-top: 0px;
+    padding-right: 1%;
+    @media screen and (min-width: 1100px){padding-left: 21%;}
+}
+.data_list_info{
+    display: block;
+    color: #594a46;
+    background-color: #ffece6;
+    margin-bottom: 5px;
+    padding: .5% 2%;
+    position: relative;
+    min-height: 90px;
+    //min-height: 90px;
+    h2{ display: inline-block;
+        letter-spacing: 3px;
+        font-size: 1.3em;
+        @media screen and (min-width: 1100px){font-size: 1.4em;}
+        @media screen and (min-width: 1200px){font-size: 1.5em;}
+        @media screen and (min-width: 1300px){font-size: 1.6em;}
+        @media screen and (min-width: 1400px){font-size: 1.7em;}
+        @media screen and (min-width: 1500px){font-size: 1.8em;}
+        @media screen and (min-width: 1600px){font-size: 1.9em;}
+        @media screen and (min-width: 1700px){font-size: 2em;}
+        /*
+        @media screen and (min-width: 1800px){font-size: 2.1em;}
+        @media screen and (min-width: 1900px){font-size: 2.2em;}
+        */
+    }
+    .exception_message{
+        display: block;
+        padding: 10px 0 0 0px;
+        //position: absolute;
+        left: .8em;
+        bottom: 1em;
+        font-size: 1em;
+        @media screen and (min-width: 1100px){font-size: 1.05em;}
+        @media screen and (min-width: 1200px){font-size: 1.15em;}
+        @media screen and (min-width: 1300px){font-size: 1.2em;}
+        @media screen and (min-width: 1400px){font-size: 1.25em;}
+        @media screen and (min-width: 1500px){font-size: 1.3em;}
+        @media screen and (min-width: 1600px){font-size: 1.35em;}
+        @media screen and (min-width: 1700px){font-size: 1.4em;}
+        @media screen and (min-width: 1800px){font-size: 1.45em;}
+        @media screen and (min-width: 1900px){font-size: 1.5em;}
+    }
+
+    .data_list_info_img{
+        display: inline-block;
+        //clear: both;
+        position: absolute;
+        width: 82%;
+        >a{
+            width: 200px;
+            display: inline-block;
+            float: left;
+            box-sizing: border-box;
+            padding: 5px;
+            position: absolute;
+            ul.btn_img{
+                border-radius: 5px;
+                >li{
+                    text-align: center;
+                    color: #4c3a32;
+                    padding: 3px 0;
+                    letter-spacing: 2px;
+                    display: inline-block;
+                    width: 50%;
+                    float: left;
+                    @media screen and (min-width: 1100px){font-size: 1.05em;}
+                    @media screen and (min-width: 1200px){font-size: 1.15em;}
+                    img{
+                       width: 90%;
+                    }
+                    >ul{    //font-size: 2em;
+                            //margin: 15px 0;
+                            width: 80px;
+                            margin-left: -20px;
+                        li{
+                            &:nth-last-child(1){
+                            font-size: .8em;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(1){
+                position: relative;
+                ul.btn_img{
+                    >li{
+                        >ul{
+                            width: 120px;
+                            @media screen and (min-width: 1300px){width: 150px;}
+                            @media screen and (min-width: 1400px){width: 200px;}
+                        }
+                    }
+                }
+            }
+            &:nth-child(2){
+                right: 160px;
+            }
+            &:nth-child(3){
+                right: 0px;
+            }
+        }
+    }
+}

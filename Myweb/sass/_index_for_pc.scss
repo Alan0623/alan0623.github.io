@@ -1,0 +1,145 @@
+@media screen and (min-width: 960px){
+    body{
+        background-image: url("../images/body_bg.gif");
+            background-position:center 493px;
+            background-size: unset;
+            background-repeat: no-repeat;
+    }
+    header#head{
+        #head_bar{
+            
+        }
+    }
+    main#content{
+        padding-bottom: 183px;
+        min-width: 960px;
+        min-height: 550px;
+        &:after{
+            display: none;
+        }
+        section#master_Vision{
+            background-image: url("../images/Master_Vision_pc.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 494px;
+            width: 100%;
+            .high_contrast &{
+                background-image: url("../images/Master_Vision_pc_hc.gif");
+            }
+            &:before{
+               display: none;
+            }
+            div.Hello{height:494px;
+                h2{
+                    font-size: 10em;
+                    opacity: .6;
+                    //top: 50px;
+                    top: 120px;
+                    right: 60px;
+                }
+            }
+            u{right: 80px;bottom: 23px;font-size: 1.1em;}
+            h2{right: 200px;}
+            h3{right: 70px;bottom:48px;font-size: 3.2em;}
+           .slider-wrapper.theme-default{
+                #slider{
+
+                }
+            }
+        }
+
+        article#my_services{
+            
+            
+            &:before{display:none;
+            }
+            h2{ 
+                margin: 0 auto;
+                width: 960px;
+                margin-top: 40px;
+                b{display:block;}
+                i{display:block;}
+                u{display:block;}
+                &:after{
+                    display: block;
+                }
+
+            }
+            section{width: 960px;margin: 0 auto;
+                figure>figcaption{
+                    h3{transform-origin: 0;transform: scaleX(1.1);}
+                    a{}
+                }
+            }
+            section#web_design{margin-top: -90px;
+                figure{
+                    u.image{    width: 470px;
+                                margin-right: 0px;
+                                padding-left: 0px;
+                                padding-top: 0px;
+                        &:before{
+                    
+                        }
+                    }
+                    figcaption{
+                        position: relative;margin-left: 210px;
+                        h3{top: 3px;}
+                        p{}
+                        a.button_more{}
+                    }
+                }
+            }/*section#web_design*/
+            section#APP_UI_UX_Design{
+                figure{
+                    u.image{width: 470px;
+                        &:before{
+                        }
+                    }
+                    figcaption{margin-right: 170px;
+                        h3{line-height: .7em;
+                            &:after{top: 3px;
+                                height: 97px;
+                                right: auto;
+                                left: 111px;
+                                width: 338px;
+                            }
+                        }
+                        p{padding-bottom: 51px;width:300px }
+                        a.button_more{}
+                    }
+                }  
+            }/*section#APP_UI_UX_Design*/
+            section#graphic_design{
+                figure{
+                    u.image{margin-right: 90px;
+                        &:before{
+                        }
+                    }
+                    figcaption{margin-left: 94px;
+                        h3{
+                            &:after{    left: -67px;
+                                        top: -40px;
+                                        right: auto;
+                                        height: 100px;
+                                        width: 345px;
+                            }
+                            u{}
+                        }
+                        p{}
+                        a.button_more{margin-right: -20px;float: right;}
+                    }
+                }
+            }/*section#graphic_design*/
+        }/*article#my_services*/
+        
+    }
+
+  footer#fatfooter{
+    padding-top: 30px;
+    background-image: url("../images/footer_bg.gif");
+    .high_contrast &{
+        background-image: none;
+    }
+  }
+}

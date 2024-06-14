@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <title>新北市智能生活社區 - 逆變器運行狀態資訊</title>
+    <!--IE integration -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--viewport integration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google integration -->
+    <meta name="description" content="新北市智能生活社區" />
+    <meta name="keywords" content="新北市智能生活社區" />
+    <meta name="author" content="新北市智能生活社區"/>
+    <meta name="copyright" content="新北市政府"/>
+    <!--Telephone -->
+    <meta name="format-detection" content="telephone=no" />
+     <!--[if gte IE 9]><!-->
+    
+    <link rel="stylesheet" href="css/page.css" type="text/css">
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <link rel="stylesheet" href="css/indexIE.css" type="text/css">
+    <![endif]--> 
+</head><!--/head-->
+<body class="page">
+    <header id="header">
+        <ul class="header_ul">
+            <li class="logo_name">
+                <h1><a href="index.html" title="新北市智能生活社區(返回首頁)"><img src="images/logo_name.png"></a></h1>
+            </li>
+            <li class="info">
+                <div class="date">107/12/12</div>
+                <div class="time">AM 09 : 27</div>
+                <!--div class="temperature">30
+                    <span>oC</span>
+                </div-->
+            </li>
+            <li class="weather">
+                <iframe id="embedweather" style="margin: 0; padding: 0; border: none; width:400px; position:relative; top:-40px;right: -220px; overflow:hidden; margin-bottom: -60px;">
+                </iframe>
+            </li>
+        </ul>
+    </header>
+    <main id="main_content">
+        <nav class="main_menu">
+            <ul class="main_list">
+                <li>
+                    <a href="index.html" title="首頁">首頁</a>
+                </li>
+                <li>
+                    <a href="single.blade.html" title="單線圖">單線圖</a>
+                </li>
+                <li>
+                    <a href="solar.blade.html" title="太陽能資訊">太陽能資訊</a>
+                </li>
+                <li>
+                    <a href="ME.blade.html" title="燃料電池資訊">燃料電池資訊</a>
+                </li>
+                <li>
+                    <a href="battery.blade.html" title="儲能電池資訊">儲能電池資訊</a>
+                </li>
+                <li>
+                    <a href="windPowerStatus.blade.html" title="風機資訊">風機資訊</a>
+                </li>
+                <li>
+                    <a href="meterInformation.blade.html" title="電表資訊">電表資訊</a>
+                </li>
+                <li>
+                    <a href="meter.blade.html" title="30用戶用電資訊">30用戶用電資訊</a>
+                    <ul class="sub_list">
+                        <li>
+                            <a href="meterTHD.blade.html" title="電力品質資訊">電力品質資訊</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" title="各系統狀態資訊">各系統狀態資訊</a>
+                    <ul class="sub_list">
+                        <li>
+                            <a href="batteryStatus.blade.html" title="儲能系統運型狀態">儲能系統運型狀態</a>
+                        </li>
+                        <li>
+                            <a href="MEstatus.blade.html" title="燃料電池運型狀態">燃料電池運型狀態</a>
+                        </li>
+                        <li>
+                            <a href="inerterStatus.blade.html" title="逆變器運型狀態">逆變器運型狀態</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <section class="content">
+            <article class="article">
+                <h2>儲能電池運行狀態資訊</h2>
+                <div class="table_list">
+                    <div class="user">
+                        <div class="user_name">電池群組</div>
+                        <form>
+                            <select name="">
+                                <option value="Taipei">ID : 1 ~ ID : 5</option>
+                                <option value="Taoyuan">ID : 6 ~ ID : 10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="Inerter_StatusT">
+                    <div class="Inerter_Status1">
+                        <table class="table1">
+                            <tr>
+                                <td>
+                                    <b>B<i>ATTERY NOT CONNECTED</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>E<i>QUALIZED CHARGING</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>F<i>LOATING CHARGING, LEVEL</i> 1</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>F<i>LOATING CHARGING, LEVEL</i> 2</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>C<i>HARGING IDLE</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>D<i>ISCHARGING</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>B<i>ATTERY CUT-OFF WARNING</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="div_table">
+                    <table class="table2">
+                        <tr>
+                            <td>
+                                <b>B<i>ATTERY </i>HIGH <i>WARNING</i></b>
+                            </td>
+                            <td>
+                                <ol>
+                                    <li>R</li>
+                                    <li>S</li>
+                                    <li>T</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>B<i>ATTERY VOLTAGE </i>LOW <i>WARNING</i>
+                                </b>
+                            </td>
+                            <td>
+                                <ol>
+                                    <li>R</li>
+                                    <li>S</li>
+                                    <li>T</li>
+                                </ol>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table3">
+                        <tr>
+                            <td>
+                                <b>B<i>ATTERY CAPACITY </i>1<i> (</i>E<i>MPTY)</i>
+                                </b>
+                            </td>
+                            <td>
+                                <ol>
+                                    <li>R</li>
+                                    <li>S</li>
+                                    <li>T</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>B<i>ATTERY CAPACITY </i>2<i> (</i>M<i>EDIUM)</i>
+                                </b>
+                            </td>
+                            <td>
+                                <ol>
+                                    <li>R</li>
+                                    <li>S</li>
+                                    <li>T</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>B<i>ATTERY CAPACITY </i>3<i> (</i>H<i>IGH)</i>
+                                </b>
+                            </td>
+                            <td>
+                                <ol>
+                                    <li>R</li>
+                                    <li>S</li>
+                                    <li>T</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>B<i>ATTERY CAPACITY </i>4<i> (</i>F<i>ULL)</i>
+                                </b>
+                            </td>
+                            <td>
+                                <ol>
+                                    <li>R</li>
+                                    <li>S</li>
+                                    <li>T</li>
+                                </ol>
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+                    </div>
+                    <div class="Inerter_StatusB">
+                    <div class="Inerter_Status2">
+                        <table class="table1">
+                            <tr>
+                                <td>
+                                    <b>AC<i> VOLTAGE</i> HIGH</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>AC<i> VOLTAGE</i> LOW</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>AC<i> FREQUENCY</i> HIGH</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>AC<i> FREQUENCY</i> LOW</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>DC<i> VOLTAGE</i> HIGH</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>ISO <i>FAULT</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>G<i>ROUND CURRENT</i> HIGH</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>AC O<i>VERLOAD</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>DC O<i>VERLOAD</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>I<i>NVERTER VOLTAGE</i> HIGH</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>I<i>NVERTER VOLTAGE</i> LOW</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>O<i>UTPUT SHORT</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table1">
+                            <tr>
+                                <td>
+                                    <b>M<i>ANUAL OFF</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>DCI<i> FAULT</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>R<i>ELAY FAULT</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>T<i>EMPERATURE</i> HIGH</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>GFCI <i>FAULT</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>F<i>AN FAULT</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>B<i>US VOLTAGE</i> LOW</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>B<i>US VOLTAGE</i> HIGH</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>I<i>NTERNAL COMMUNICATION LOSS</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>B<i>ATTERY VOLTAGE</i> HIGH</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>C<i>ONSUSTENT FAULT</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>&nbsp;</b></td>
+                                <td><ol>&nbsp;</ol></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="Inerter_Status3">
+                        <table class="table4">
+                            <tr>
+                                <td>
+                                    <b>I<i>NVERTER</i> S<i>TATUS</i></b>
+                                </td>
+                                <td>
+                                    <b>S<i>TANDBY</i></b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>I<i>NVERTER</i> S<i>TATUS</i></b>
+                                </td>
+                                <td>
+                                    <b>S<i>TANDBY</i></b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>I<i>NVERTER</i> S<i>TATUS</i></b>
+                                </td>
+                                <td>
+                                    <b>S<i>TANDBY</i></b>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table5">
+                            <tr>
+                                <td>
+                                    <b>B<i>ATTERY VOLTAGE</i> LOW</b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>N<i>O</i> B<i>ATTERY</i></b>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>R</li>
+                                        <li>S</li>
+                                        <li>T</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer id="footer">COPYRIGHT &#169; 2018 新北市智能生活社區</footer>
+    <script src="js/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var weatherProperties = 'lat=25.010996&lon=121.502369&color=#FFFFFF&text-color=#FFFFFF&lang=zh-tw&time=+0800&units=si';
+            // initial load
+            document.getElementById('embedweather').src = 'http://forecast.io/embed/?ts=' + (Date.now()) + '#' + weatherProperties;
+            // refresh
+            var weatherRefresh = setInterval(function () {
+                document.getElementById('embedweather').src = 'http://forecast.io/embed/?ts=' + (Date.now()) + '#' + weatherProperties;
+            }, 1800000);
+        })
+    </script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/page.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/*------------------------------------------------------------------
+按鈕 更多
+------------------------------------------------------------------*/
+.button_more {
+	cursor: pointer;
+	font-size: .9em;
+	line-height: 50px;
+	letter-spacing: 2px;
+	font-weight: normal;
+	display: flex; align-items: center; justify-content: center;
+	border: none;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	padding: .5em 1em;
+	color: #000;
+	-webkit-transition: background-color 0.3s, color 0.3s;
+	transition: background-color 0.3s, color 0.3s;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #d9d9d9;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #ffffff 5%, #f0f0f0 100% );
+	background:-ms-linear-gradient( top, #ffffff 5%, #f0f0f0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f0f0f0');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ffffff), color-stop(100%, #f0f0f0) );
+	background-color:#ffffff;
+	color:#4d4d4d;
+	text-shadow:1px 1px 0px #ffffff;
+ 	-webkit-box-shadow:inset 1px 1px 2px 0px #ffffff;
+ 	-moz-box-shadow:inset 1px 1px 2px 0px #ffffff;
+ 	box-shadow:inset 1px 1px 2px 0px #ffffff;
+	&:focus {
+		border: none;
+		outline: none;
+	}
+	span{
+		vertical-align: middle;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: -20px;
+		left: -20px;
+		bottom: -20px;
+		right: -20px;
+		background: inherit;
+		border-radius: 5px;
+		z-index: -1;
+		opacity: 0.4;
+		-webkit-transform: scale3d(0.5, 0.5, 1);
+		transform: scale3d(0.5, 0.5, 1);
+	}
+	&:focus,
+	&:hover {
+		background:none;
+		text-shadow:none;
+		box-shadow:none;
+		-webkit-transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+		transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+		color: #ECEFF1;
+		background-color: #71C1DD;
+		-webkit-animation: anim-moema-1 0.3s forwards;
+		animation: anim-moema-1 0.3s forwards;
+		border: solid #71C1DD  1px;
+	}
+
+	&:focus:before,
+	&:hover:before {/*水波*/
+		-webkit-animation: anim-moema-2 0.3s 0.3s forwards;
+		animation: anim-moema-2 0.3s 0.3s forwards;
+	}
+	@-webkit-keyframes anim-moema-1 {
+		60% {
+			-webkit-transform: scale3d(0.8, 0.8, 1);
+			transform: scale3d(0.8, 0.8, 1);
+		}
+		85% {
+			-webkit-transform: scale3d(1.1, 1.1, 1);
+			transform: scale3d(1.1, 1.1, 1);
+		}
+		100% {
+			-webkit-transform: scale3d(1, 1, 1);
+			transform: scale3d(1, 1, 1);
+		}
+	}
+	@keyframes anim-moema-1 {
+		60% {
+			-webkit-transform: scale3d(0.8, 0.8, 1);
+			transform: scale3d(0.8, 0.8, 1);
+		}
+		85% {
+			-webkit-transform: scale3d(1.1, 1.1, 1);
+			transform: scale3d(1.1, 1.1, 1);
+		}
+		100% {
+			-webkit-transform: scale3d(1, 1, 1);
+			transform: scale3d(1, 1, 1);
+		}
+	}
+	@-webkit-keyframes anim-moema-2 {
+		to {
+			opacity: 0;
+			-webkit-transform: scale3d(1, 1, 1);
+			transform: scale3d(1, 1, 1);
+		}
+	}
+	@keyframes anim-moema-2 {
+		to {
+			opacity: 0;
+			-webkit-transform: scale3d(1, 1, 1);
+			transform: scale3d(1, 1, 1);
+		}
+	}
+
+}

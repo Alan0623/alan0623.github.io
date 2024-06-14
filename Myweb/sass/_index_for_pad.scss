@@ -1,0 +1,123 @@
+@media screen and (min-width: 480px){
+    main#content section#master_Vision h2{
+right: auto;left: 20px;bottom: -48px;
+    }
+}
+@media screen and (min-width: 768px){
+
+    main#content{
+        padding-bottom: 217px;
+        &:after {
+            border-width: 0 0 293px 480px !important;
+        }
+        section#master_Vision{
+            background-image: url("../images/Master_Vision_pad.jpg");
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 446px;
+            width: 100%;
+            .high_contrast &{
+                background-image: url("../images/Master_Vision_pad_hc.gif");
+            }
+            &:before{
+                bottom: 0px;
+            }
+            div.Hello{height:446px;}
+            u{bottom: 30px;}
+            h2{left: auto;
+                //right: 20px;top: 80px;
+                top: 160px;
+                right: 50px;
+            }
+            h3{bottom: 50px;}
+           .slider-wrapper.theme-default{display: none;
+                #slider{
+
+                }
+            }
+        }
+
+        article#my_services{
+            margin-top: 0px;
+            padding-bottom: 16px;
+            &:before{
+                border-width: 196px 320px 0 0
+            }
+            h2{ margin-top: 20px;
+                b{display: inline-block;}
+                i{display: inline-block;}
+                u{display: inline-block;}
+                &:after{
+                    display: none;
+                }
+            }
+            section{width: 713px;margin: 0 auto;
+                figure>figcaption{
+                    h3{font-size: 4.4em;line-height: .68em;}
+                    a{//font-size: .5em;
+                    width:238px;height:48px;line-height:48px;padding: 0;}
+                }
+            }
+            section#web_design{padding-top: 40px;
+                figure{
+                    u.image{float: right;display: block;width: 470px;margin-right:0px;
+                        padding-left: 10px;padding-top:8px;
+                        &:before{
+                            border-width: 0 0 72px 118px;
+                        }
+                    }
+                    figcaption{
+                        h3{bottom: unset;top: 0;left: 0px;}
+                        p{width: 240px;margin-left:0px;}
+                        a.button_more{margin: 6px 2px;}
+                    }
+                }
+            }/*section#web_design*/
+            section#APP_UI_UX_Design{
+                figure{
+                    u.image{float: left;display: block;width: 470px;margin-left:0px;padding-right: 10px;
+                        &:before{
+                            border-width:72px 118px 0 0;
+                        }
+                    }
+                    figcaption{float: right;
+                        h3{padding-top: 4px;
+                            &:after{
+                                top: 2px;
+                                height: 96px;
+                                width: 148px;
+                                right: 20px;
+                            }
+                        }
+                        p{width: 240px;padding-bottom: 40px;}
+                        a.button_more{clear: both;margin: 0;}
+                    }
+                }  
+            }/*section#APP_UI_UX_Design*/
+            section#graphic_design{clear: both;padding-top: 47px;
+                figure{
+                    u.image{float:right;display: block;width: 380px;margin-left:0px;padding-right:0px;
+                        &:before{
+                            border-width:72px 118px 0 0;
+                        }
+                    }
+                    figcaption{float: left;width: 333px;
+                        h3{padding-top: 4px;margin-top: 40px;
+                            &:after{
+                                    left: 20px;top: -40px;height: 100px;width: 280px;
+                            }
+                            u{padding-left: 108px;}
+                        }
+                        p{padding-top: 0px; margin-top: -10px;}
+                        a.button_more{clear: both;margin: 0;margin-top:40px;margin-left: 80px;}
+                    }
+                }
+            }/*section#graphic_design*/
+        }/*article#my_services*/
+        
+    }
+    
+}
+
+*::-ms-backdrop, article#my_services{padding-bottom: 15px;}

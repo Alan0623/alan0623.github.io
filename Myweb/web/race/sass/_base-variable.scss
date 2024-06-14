@@ -1,0 +1,132 @@
+//變數
+//主要版面顏色================================================================
+	$major-color: #ffb400 !default; //主色: 
+	$minor-color: #0b0e10  !default; //次色
+//灰階=======================================================================
+	$white: #fff; //白色
+	$light: lighten($major-color, 65%); //淺色
+	$light-gray: lighten($major-color, 25%); //淺灰  #D8CAB6 seach框
+	$gray: $major-color ; //灰色 #767164 footer框
+	$deep-gray: darken($major-color, 10%); //深灰
+	$deep: darken($major-color, 15%); //深色 #1E1D1B 內文字色
+	$black: #000 ;//黑色
+
+//文字樣式================================================================
+	$base-font-style: Arial, '微軟正黑體', 'Helvetica Neue', Helvetica, sans-serif, '新細明體';
+
+//文字大小================================================================
+	$font-size-xs: .8em;
+	$font-size-s: .9em;
+	$font-size-m: 1em;
+	$font-size-l: 1.1em;
+	$font-size-xl: 1.3em;
+	$font-size-xxl: 1.4em;
+	$font-size-xxxl: 1.6em;
+
+//文字厚度================================================================
+	$font-weight-n: 400;
+	$font-weight-b: 700;
+
+//文字行高================================================================
+	$line-height-xs: 1;
+	$line-height-s: 1.3em;
+	$line-height-m: 1.6em;
+	$line-height-l: 2;
+	$line-height-xl: 2.4;
+
+//文字間格================================================================
+	$letter-spacing-xs: 1px;
+	$letter-spacing-s: 2px;
+	$letter-spacing-m: 3px;
+	$letter-spacing-l: 4px;
+	$letter-spacing-xl: 5px;
+
+//透明度================================================================
+	$opacity-vl: .1;
+	$opacity-l: .3;
+	$opacity-m: .5;
+	$opacity-h: .7;
+	$opacity-vh: .9;
+
+//變形大小================================================================
+	$size-xs: .6;
+	$size-s: .8;
+	$size-m: 1;
+	$size-l: 1.2;
+	$size-xl: 1.4;
+
+//間隔設定================================================================
+	$interval-xs: 3px;
+	$interval-s: 5px;
+	$interval-m: 10px;
+	$interval-l: 15px;
+	$interval-xl: 20px;
+
+//基本動畫速度================================================================
+	$transition: 150ms;
+
+//RWD設定================================================================
+	$high-width: 1160px; //pc寬度
+	$pc-width: 1280px; //pc寬度
+	$pad-width: 768px; //pad寬度
+	$phone-width: 480px; //phone寬度
+	$low-width: 320px; //phone寬度
+	$rwd-btn-size: 44px; //RWD 手機側欄按鈕大小
+
+//預設陰影================================================================
+	$box-shadow: 0 0 $interval-m $gray;
+	$text-shadow: 0 0 $interval-m $deep-gray;
+
+//文字圖示================================================================
+	$icon-font-size: inherit; //文字圖示大小
+	$icon-font-color: inherit; //文字圖示顏色
+
+//全頁文字================================================================
+	$body-font-color: $deep; //網站文字顏色
+	
+	$body-font-size-s: 0.95em !default; //small
+	$body-font-size-m: 1em !default; //medium
+	$body-font-size-l: 1.05em !default; //large
+
+//預設線條================================================================
+	$border-style: solid;
+	$border-width: 1px;
+	$border-color: $gray;
+	$border: $border-width $border-style $border-color;
+
+//預設圓角================================================================
+	$border-radius: $interval-s;
+
+//連結顏色================================================================
+	$link-color: inherit; //連結顏色
+	$visited-color: inherit; //造訪過連結顏色
+	$hover-color: $gray; //指標移入連結顏色，不可與任何底色重疊
+	$active-color: inherit; //點擊連結顏色
+
+//按鈕樣式================================================================
+	$btn-bg-color: transparent; //按鈕背景色
+	$btn-hover-bg-color: transparent; //按鈕滑入顏色
+	$btn-text-color: $body-font-color; //按鈕文字顏色
+	$btn-padding: $interval-m $interval-l; //按鈕內邊距，決定按鈕大小
+	$btn-padding-xs: $interval-xs $interval-s; //按鈕內邊距，決定按鈕大小
+	$btn-border: 1px solid $minor-color; //按鈕線框
+
+//輸入框樣式================================================================
+	$input-padding: $interval-s $interval-m;
+	$input-border: $border;
+	$input-bg-color: $white;
+
+//特殊字元"\"================================================================
+	$backslash: str-slice( '\\', 1, 1 ); //反斜線字串
+
+//範例陣列===============================================================
+	$sample-list: #fff #fff;
+
+//範例物件===============================================================
+	$sample-map: (
+		'key1': $white,
+		'key2': $white
+	);
+
+
+

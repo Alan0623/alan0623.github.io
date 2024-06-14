@@ -1,0 +1,94 @@
+//方法與函式
+//rwd 與 hack================================================================
+
+	@mixin rwd($max, $min: 0) { //自訂 RWD 寬度，第一個參數是最大值，第二個參數是最小值
+
+		@if( $rwd==true) {
+			$type: 'screen and (max-width: #{$max + 0px }) and (min-width: #{$min + 1px})';
+
+			@media #{$type} {
+				@content;
+			}
+		}
+	}
+
+	@mixin hack($key) { //查詢瀏覽器媒體，給 hack 用，$key 為 $hack 的 key
+
+		@media #{map-get( $hack, $key )} {
+			@content;
+		}
+	}
+
+	@mixin media($key) { //查詢瀏覽器媒體，給 rwd 用，$key 為 $media 的 key
+
+		@if( $rwd == true ) {
+
+			@media #{map-get( $media, $key )} {
+				@content;
+			}
+		}
+	}
+
+	@mixin supports($key) { //查詢瀏覽器媒體與瀏覽器支持，在不同情況下呈現不同樣式，$key 為 $supports 的 $key
+
+		@supports #{ '(' + $key + ')' } {
+			@content;
+		}
+	}
+//隱藏文字================================================================
+	%hide-text {
+		//隱藏文字的方法
+		font: 0/0 a;
+		color: transparent;
+	}
+	%ellipsis {
+		overflow : hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		//單行超過範圍文字變成'...'的方法
+		//overflow: hidden;
+		//text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	%main_nav_a{
+		letter-spacing: 2px;
+		color: white;
+		text-shadow:$text-shadow;
+		span{
+		padding-top: 3px;
+		letter-spacing: 0px;
+		display: block;
+		width: 90px;
+		font-family: 'Fjalla One', sans-serif;
+		line-height: 1.6em;
+		font-size: 1em;
+		}
+	}
+	%title_h3{
+        color: $title-color;
+        font-size: 1.6em;
+        font-weight: normal;
+        letter-spacing: 2px;
+        margin-bottom: 13px;
+	}
+	%colorful_box{
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		width: 42px;
+		height: 42px;
+		background-color: gray;
+		position: absolute;
+		top: 2px;
+		left: 0;
+		font-weight: normal;
+		font-size: .8em;
+		color: #fff;
+		&.yellow{background-color: #fba600;}
+		&.orange{background-color: #f15a24;}
+		&.red{background-color: #98242a;}
+		&.green{background-color: #3b5809;}
+		&.blue{background-color: #1242b1;}
+	}

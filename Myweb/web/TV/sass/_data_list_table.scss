@@ -1,0 +1,552 @@
+.time_picker{//日期選取器
+    //display: inline-block;
+    //float: right;
+    padding-top: 10px;
+    li{
+        display: inline-block;
+        input{
+            font-size: 0.8em;
+            line-height: 30px;
+            width: 90px;
+            text-align: center;
+            @media screen and (min-width: 1200px){width: 95px;}
+            @media screen and (min-width: 1300px){width: 100px;}
+            @media screen and (min-width: 1400px){width: 105px;}
+            @media screen and (min-width: 1500px){width: 110px;}
+            @media screen and (min-width: 1700px){width: 115px;}
+            @media screen and (min-width: 1900px){width: 120px;}
+        }
+    }
+    &.time_interval,
+    &.compare_time{
+        display: block;
+        clear: both;
+        margin-bottom:0!important;
+    }
+}
+.time_date{//日月年歷史
+    li{
+        display: inline-block;
+        line-height: 42px;
+        float: left;
+        margin: 0 3px;
+        a{
+            display: block;
+            width: 42px;
+            height: 42px;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.15em;
+            background-image: url("../images/bg_date.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        @media screen and (min-width: 1300px){line-height: 45px;a{width: 45px;height: 45px;font-size: 1.2em;}}
+        @media screen and (min-width: 1500px){line-height: 48px;a{width: 48px;height: 48px;font-size: 1.3em;}}
+        @media screen and (min-width: 1700px){line-height: 50px;a{width: 50px;height: 50px;font-size: 1.4em;}}
+        @media screen and (min-width: 1900px){line-height: 52px;a{width: 52px;height: 52px;font-size: 1.5em;}}
+    
+        &:nth-child(1){
+            @media screen and (min-width: 1100px){font-size: 1.05em;}
+            @media screen and (min-width: 1200px){font-size: 1.15em;}
+            @media screen and (min-width: 1300px){font-size: 1.2em;}
+            @media screen and (min-width: 1400px){font-size: 1.25em;}
+            @media screen and (min-width: 1500px){font-size: 1.3em;}
+            @media screen and (min-width: 1600px){font-size: 1.35em;}
+            @media screen and (min-width: 1700px){font-size: 1.4em;}
+            @media screen and (min-width: 1800px){font-size: 1.45em;}
+            @media screen and (min-width: 1900px){font-size: 1.5em;} 
+        }
+        /*&:nth-last-child(1){
+            @extend %hide-text;
+            a{
+                background-image: url("../images/icon_reset.png");
+            }
+        }*/
+    }
+}
+.instant_curve_chart{//坎入圖表
+    background-color: #fff;
+    position: relative;
+    display: block;
+    height: 400px;
+    @media screen and (min-width: 1800px){height: 420px;}
+    @media screen and (min-width: 1900px){height: 430px;}
+    .line_graph{
+        height: 400px;
+        @media screen and (min-width: 1800px){height: 420px;}
+        @media screen and (min-width: 1900px){height: 430px;}
+    }
+}
+.search{//維護資訊 搜尋按鈕
+    display: inline-block;margin-left: 6%;
+    position: absolute;
+    right: 1em;
+    top: 14px;
+    a{
+        background-color: #9e5637;
+        color: #fffcd4;
+        padding: 10px 15px;
+        border-radius: 2px;
+        position: relative;
+        padding-left: 38px;
+        @media screen and (min-width: 1300px){font-size: 1.1em;
+            padding: 10px 22px;
+            padding-left: 38px;
+        }
+        @media screen and (min-width: 1400px){font-size: 1.15em;}
+        @media screen and (min-width: 1500px){font-size: 1.2em;}
+        @media screen and (min-width: 1600px){font-size: 1.25em;}
+        @media screen and (min-width: 1700px){font-size: 1.3em;}
+        @media screen and (min-width: 1800px){font-size: 1.35em;}
+        @media screen and (min-width: 1900px){font-size: 1.4em;}
+        &::before{
+            content: "";
+            position: absolute;
+            left: 2px;
+            top:0;
+            display: block;
+            background-image: url("../images/icon_search.gif");
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+            width: 30px;
+            @media screen and (min-width: 1300px){
+                left: 5px;height: 90%;
+            }
+        }
+    }
+}///search
+.data_list_table{//告警處理
+    background-color: #fffaf9;
+    color: #594a46;
+    border: #ffece6 solid 5px;
+    padding: 5px 15px;
+    position: relative;
+    .download{display: inline-block;margin-left: 6%;
+        a{
+            background-color: #e6dcbe;
+            color: #4a3a39;
+            padding: 10px 15px;
+            border-radius: 2px;
+            @media screen and (min-width: 1300px){font-size: 1.1em;}
+            @media screen and (min-width: 1400px){font-size: 1.15em;}
+            @media screen and (min-width: 1500px){font-size: 1.2em;}
+            @media screen and (min-width: 1600px){font-size: 1.25em;}
+            @media screen and (min-width: 1700px){font-size: 1.3em;}
+            @media screen and (min-width: 1800px){font-size: 1.35em;}
+            @media screen and (min-width: 1900px){font-size: 1.4em;}
+        }
+    }
+    .time_picker{//選擇日期
+        display: inline-block;
+        margin-bottom: 15px;
+        margin-top: -10px;    
+        //margin-right: 100px;
+        margin-left: 10px;
+        @media screen and (min-width: 1300px){ margin-left: 50px;font-size: 1.1em;line-height: 38px;}
+        @media screen and (min-width: 1400px){font-size: 1.15em;}
+        @media screen and (min-width: 1500px){font-size: 1.2em;line-height: 42px;}
+        @media screen and (min-width: 1600px){font-size: 1.25em;}
+        @media screen and (min-width: 1700px){font-size: 1.3em;}
+        @media screen and (min-width: 1800px){font-size: 1.35em;}
+        @media screen and (min-width: 1900px){font-size: 1.4em;line-height: 45px;}
+        &.compare_time{
+            display: block;
+            padding: 0;
+            margin-top: -15px;
+        }
+    }
+    h2{ display: inline-block;
+        letter-spacing: 3px;
+        margin-bottom: 12px;
+        padding-left: 5px;
+    }
+    table{
+        border: #7d7d7d solid 1px;
+        @media screen and (min-width: 1300px){font-size: 1.1em;}
+        @media screen and (min-width: 1400px){font-size: 1.15em;}
+        @media screen and (min-width: 1500px){font-size: 1.2em;}
+        @media screen and (min-width: 1600px){font-size: 1.25em;}
+        @media screen and (min-width: 1700px){font-size: 1.3em;}
+        @media screen and (min-width: 1800px){font-size: 1.35em;}
+        @media screen and (min-width: 1900px){font-size: 1.4em;}
+        td,th{border: none;padding: 5px;
+        border-right: #bfbfbf solid 2px;
+        border-left: #bfbfbf solid 2px;
+        text-align: center;
+        }
+        thead{border: none;background-color: #9e5637;
+            tr{border: none;
+                th{ margin: 0;font-size: .9em;
+                    background-color: #9e5637;
+                    color: #fff;
+                    padding: 10px 5px;
+                    border-top: #bfbfbf solid 2px;
+                    border-bottom: #bfbfbf solid 2px;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    font-size: .9em;
+                    b{  display: block;
+                        font-weight: normal;
+                    }
+                }
+            }
+            tr:nth-last-child(1){
+                td{
+                    border-bottom: #bfbfbf solid 2px;
+                }
+            }
+        }                td,th{border: none;padding: 5px;
+        border-right: #bfbfbf solid 2px;
+        border-left: #bfbfbf solid 2px;
+        text-align: center;
+        }
+        thead{border: none;background-color: #9e5637;
+            tr{border: none;
+                th{ margin: 0;font-size: .9em;
+                    background-color: #9e5637;
+                    color: #fff;
+                    padding: 10px 5px;
+                    border-top: #bfbfbf solid 2px;
+                    border-bottom: #bfbfbf solid 2px;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    font-size: .9em;
+                    b{  display: block;
+                        font-weight: normal;
+                    }
+                }
+            }
+            tr:nth-last-child(1){
+                td{
+                    border-bottom: #bfbfbf solid 2px;
+                }
+            }
+        }
+        &.maintenance{//maintainInfo.blade.html
+            thead{
+                tr{
+                    th{
+                        &:nth-child(1){width: 6%;}
+                        &:nth-child(3){width: 12%;}
+                        &:nth-child(4){width: 10%;}
+                        &:nth-child(5){width: 14%;}
+                        &:nth-child(6){min-width:80px}
+                        &:nth-child(7){width: 10%;}
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{ padding: 6px 0;
+                        text-align: left;
+                        &:nth-child(1),
+                        &:nth-child(4){
+                            text-align: center;
+                        }
+                    }
+                }
+
+            }
+        }
+        &.alarm{//warningInfo.blade.html
+            thead{
+                tr{
+                    th{
+                        &:nth-child(1){width: 5%;}
+                        &:nth-child(3){width: 5%;}
+                        &:nth-child(4){width: 14%;}
+                        &:nth-child(5){width: 14%;}
+                        &:nth-child(6){min-width: 120px;}
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{ padding: 6px 0;
+                        text-align: left;
+                        &:nth-child(1),
+                        &:nth-child(3){
+                            text-align: center;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    .page_no{//頁碼
+        clear: both;
+        margin-top: 30px;
+        width: 100%;
+        text-align: center;
+        @media screen and (min-width: 1300px){font-size: 1.1em;}
+        @media screen and (min-width: 1400px){font-size: 1.15em;}
+        @media screen and (min-width: 1500px){font-size: 1.2em;}
+        @media screen and (min-width: 1600px){font-size: 1.25em;}
+        @media screen and (min-width: 1700px){font-size: 1.3em;}
+        @media screen and (min-width: 1800px){font-size: 1.35em;}
+        @media screen and (min-width: 1900px){font-size: 1.4em;}
+        .page{
+            li{margin: 0;padding: 0; display: inline-block;
+                a{
+                    background-color: #9e5637;
+                    color: #fffcd4;
+                    padding: 5px 10px;
+                    border-radius: 2px;
+                    position: relative;
+                    &.action,
+                    &.active{
+                        background-color: #fffcd4;
+                        color: #9e5637;
+                        border: #9e5637 solid thin;
+                    }
+                }
+            }
+        }
+    }
+    .btn_info_img{
+        display: inline-block;
+        clear: both;
+        width: 82%;
+        >a{
+            width: calc(100% / 7);
+            width: -moz-calc(100% / 7);
+            width: -webkit-calc(100% / 7);
+            width: -o-calc(100% / 7);
+            display: inline-block;
+            float: left;
+            box-sizing: border-box;
+            padding: 5px;
+            .btn_img{
+                background-color: #ffe9df;
+                border-radius: 5px;
+                li{
+                    text-align: center;
+                    color: #4c3a32;
+                    //padding: 1px 0;
+                    letter-spacing: 2px;
+                    @media screen and (min-width: 1100px){font-size: 1.05em;}
+                    @media screen and (min-width: 1200px){font-size: 1.15em;}
+                    /*
+                    @media screen and (min-width: 1300px){font-size: 1.2em;}
+                    @media screen and (min-width: 1400px){font-size: 1.25em;}
+                    @media screen and (min-width: 1500px){font-size: 1.3em;}
+                    @media screen and (min-width: 1600px){font-size: 1.35em;}
+                    @media screen and (min-width: 1700px){font-size: 1.4em;}
+                    @media screen and (min-width: 1800px){font-size: 1.45em;}
+                    @media screen and (min-width: 1900px){font-size: 1.5em;}  
+                    */
+
+                    &:nth-child(1){
+                        padding: 5px 10px 0px 10px;
+                    }
+                    img{//太陽能 風力 創能 圖示
+                        width: 65%; 
+                    }
+                }
+            }
+            &.active{
+                .btn_img{
+                    background-color: #ca9796;
+                    li{
+                       // color: #fff;
+                        //font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    .tool_bar{
+        display: inline-block;
+        width: 100%;
+        clear: both;
+        line-height: 42px;
+        //@media screen and (min-width: 1300px){font-size: 1.1em;}
+        //@media screen and (min-width: 1500px){font-size: 1.2em;}
+        //@media screen and (min-width: 1900px){font-size: 1.3em;}
+        li{   
+            display: block;
+            float: left;
+            margin: 0px 2px;
+            h2{
+                padding: 0;
+                margin: 0;
+                font-size: 1.2em;
+                letter-spacing: 1px;
+                @media screen and (min-width: 1100px){font-size: 1.4em;letter-spacing: 3px;}
+                @media screen and (min-width: 1250px){font-size: 1.65em;}
+                @media screen and (min-width: 1300px){font-size: 1.7em;}
+                @media screen and (min-width: 1350px){font-size: 1.8em;}
+                @media screen and (min-width: 1400px){font-size: 1.9em;}
+                &.color_white{
+                    background-color: #fec037;
+                    color: #fff;
+                    padding: 0 10px;
+                    //margin-right: 50px;
+                }
+            }
+            &:nth-last-child(1){
+                float: right;
+            }
+        }
+        >li.sub_title{
+            @media screen and (min-width: 1300px){font-size: 1.1em;}
+            @media screen and (min-width: 1400px){font-size: 1.15em;}
+            @media screen and (min-width: 1500px){font-size: 1.2em;}
+            @media screen and (min-width: 1600px){font-size: 1.25em;}
+            @media screen and (min-width: 1700px){font-size: 1.3em;}
+            @media screen and (min-width: 1800px){font-size: 1.35em;}
+            @media screen and (min-width: 1900px){font-size: 1.4em;}
+        }
+    }
+    .comparison{//30戶用電比對
+        h2{     font-size: 1.4em;
+                @media screen and (min-width: 1250px){font-size: 1.65em;}
+                @media screen and (min-width: 1300px){font-size: 1.7em;}
+                @media screen and (min-width: 1350px){font-size: 1.8em;}
+                @media screen and (min-width: 1400px){font-size: 1.9em;}
+            a{
+
+                &.active{
+                    background-color: #fec037;
+                }  
+            }
+        }
+    }
+    .comparison_ul{//未安裝智慧電錶用戶
+        display: table;
+        clear: both;
+        margin-left:60px;
+        li{ background-color: #e6ddbe;
+            line-height: 1.5em;
+            padding: 6px 12px;
+            position: relative;
+            padding-left: 25px;
+            @media screen and (min-width: 1300px){font-size: 1.1em;}
+            @media screen and (min-width: 1400px){font-size: 1.15em;}
+            @media screen and (min-width: 1500px){font-size: 1.2em;}
+            @media screen and (min-width: 1600px){font-size: 1.25em;}
+            @media screen and (min-width: 1700px){font-size: 1.3em;}
+            @media screen and (min-width: 1800px){font-size: 1.35em;}
+            @media screen and (min-width: 1900px){font-size: 1.4em;}
+            &::before{
+                //content: "";
+                //display: block;
+                position: absolute;
+                top: 7px;
+                left: 0;
+                width: 10px;
+                height: 10px;
+                background-color:#9be66f;
+                border-radius: 50%; 
+            }
+            span{
+                display:inline-block;position:absolute;top: 12px;
+                left: 10px;width:10px;height:10px;
+                @media screen and (min-width: 1300px){top: 13px;}
+                @media screen and (min-width: 1400px){top: 16px;}
+            }
+        }
+    }
+    .smart_user{
+        position: absolute;
+        bottom: -12px;
+        right: 5px;
+        .comparison_ul{
+            li{
+                float: left;
+                margin: 0 5px;
+                background-color: #fff5d2;
+            }
+        }
+    }
+    .btn_info_table{
+        margin-bottom: 10px;
+        .query_table{
+            display: table;
+            margin: 0 auto;
+            li{
+                display: inline-block;
+                float: left;
+                background-color: #fff4d4;
+                color: #59584a;
+                margin-right: 20px;
+                //height: 136px;
+                text-align: center;
+                @media screen and (min-width: 1300px){font-size: 1.1em;}
+                @media screen and (min-width: 1400px){font-size: 1.15em;}
+                /*
+                @media screen and (min-width: 1500px){font-size: 1.2em;}
+                @media screen and (min-width: 1600px){font-size: 1.25em;}
+                @media screen and (min-width: 1700px){font-size: 1.3em;}
+                @media screen and (min-width: 1800px){font-size: 1.35em;}
+                @media screen and (min-width: 1900px){font-size: 1.4em;}
+                */
+                b{
+                    background-color: #227873;
+                    color: #fff;
+                    padding: 5px 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 46px;
+                    vertical-align: middle;
+                    @media screen and (min-width: 1250px){padding: 5px 20px;}
+                    @media screen and (min-width: 1300px){padding: 5px 30px;}
+                    @media screen and (min-width: 1400px){padding: 5px 40px;}
+                    @media screen and (min-width: 1500px){padding: 5px 45px;}
+                    @media screen and (min-width: 1600px){padding: 5px 50px;}
+                    @media screen and (min-width: 1800px){padding: 5px 55px;}
+                    @media screen and (min-width: 1900px){padding: 5px 60px;}
+                }
+                a{
+                display: block;
+                cursor: pointer;
+                color: #59584a;
+                    &.active{
+                        color: #2a2920;
+                        background-color: #fff9e6;
+                        height: 100%;
+                        b{
+                            background-color: #005544;
+                        }
+                    }
+                }
+                p{
+                    display: block;
+                    padding: 10px 8px 0 8px;
+                    min-height: 38px;
+                }
+                i{
+                    display: block;
+                    padding: 5px 0 8px 0;
+                    font-style:normal;
+                    font-size: .9em;
+                    @media screen and (min-width: 1900px){padding: 5px 0 10px 0;}
+                }
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3){
+                    b{
+                        //line-height: 40px;
+                        //@media screen and (min-width: 1300px){line-height: 43px;}
+                        //@media screen and (min-width: 1700px){line-height: 46px;}
+                        //@media screen and (min-width: 1900px){line-height: 50px;}
+                    }
+                }
+
+            }
+        }
+    }
+}/*data_list_table*/

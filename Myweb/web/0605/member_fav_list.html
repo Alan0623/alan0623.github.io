@@ -1,0 +1,162 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/index.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!--/////////////////////////////////////////////////////////////////////////////
+Web Design & Development : Begonia Design http://www.begonia.tw/
+Web Designer : 海棠設計 Web Designer 林位青 alan lin
+Copyright : Copyright © 2013 Filmmart Media Inc. All Rights Reserved.
+////////////////////////////////////////////////////////////////////////////-->
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>BBC台灣獨家代理：科技企業股份有限公司 - 介購清單</title>
+<meta name="description" content="">
+<meta name="keywords" content="科技,BBC">
+<!-- InstanceEndEditable --> 
+<meta name="copyright" content="Copyright © 2013 Filmmart Media Inc. All Rights Reserved.">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<!--[if IE 7]><link href="css/inside_IE7.css" rel="stylesheet" type="text/css"/><![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/effect.js"></script>
+<!--[if lt IE 9]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/ie7-squish.js"></script>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- InstanceBeginEditable name="head" -->
+<script type="text/javascript">
+$(document).ready(function() { $('body').addClass('MEMBER');});
+$(function(){
+/*checkBox*/$('input:checkbox').checkbox({cls: 'jquery-checkbox',empty: 'images/product/empty.png'});
+/*GoTop*/$("footer ul.NAV").prepend('<a href="#" class="GOTOP"></a>').each(function(){$(".GOTOP").stop().on("touchstart click",TOP);function TOP(){$("html,body").animate({scrollTop:0},900);return false}});
+});
+
+function printScreen(block){
+var value = block.innerHTML;
+var printPage = window.open("","printPage","");
+printPage.document.open();
+printPage.document.write('<HTML><head><img src="images/index/logo.png" width="180" height="41"></head><BODY onload="window.print();window.close()">');
+printPage.document.write("<PRE>");
+printPage.document.write(value);
+printPage.document.write("</PRE>");
+printPage.document.close("</BODY></HTML>");
+}
+</script>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<header>
+  <a href="index.html" class="LOGO" title="回首頁">BBC公播版台灣獨家代理-<h1>科技企業股份有限公司</h1></a><!--.LOGO-->
+    <ul class="TOOL">
+        <li><a href="http://blog.bbc.net.tw/" target="_blank" class="BLOG" title="BBC科技新知網部落格">BLOG</a><a href="https://www.facebook.com/bbc.educationvideo.com.tw" target="_blank" class="FB" title="BBC科技新知網粉絲團">FB</a><a href="site_map.html" class="MAP" title="網站地圖">網站地圖</a><!-- InstanceBeginEditable name="TOOL" --><div id="TOOL_MEMBER"><b class="WELCOME">歡迎會員<b>陳思韻</b></b><a href="member_edit.html">會員中心</a>/<a href="member_fav_list.html" class="FAV">介購清單(<b>5</b>)</a><a href="index.html" class="LOGOUT">登出</a></div><!-- InstanceEndEditable --></li><!--.LINK-->
+        <li><input name="" type="text"><a href="search.html" class="SEARCH_BTN" title="搜尋"><b>搜尋</b></a></li><!--.SEARCH-->
+    </ul><!--ul.TOOL-->
+    <ul class="NAV"><h2>主選單</h2>
+    <li><a href="about_us.html">關於我們</a></li>
+    <li><a href="news.html">最新消息</a></li>
+    <li><a href="product_list.html">醫療衛生</a></li>
+    <li><a href="product_list.html">地球生態</a></li>
+    <li><a href="product_list.html">考古歷史</a></li>
+    <li><a href="product_list.html">商業管理</a></li>
+    <li><a href="product_list.html">社會議題</a></li>
+    <li><a href="product_list.html">工程航太</a></li>
+    <li><a href="product_list.html">藝術設計</a></li>
+    <li><a href="product_list.html">語言文學</a></li>
+    <li><a href="product_list.html">通識教育</a></li>
+    <li><a href="contact_us.html">聯絡我們</a></li>
+    </ul><!--ul.nav-->
+</header><!--header-->
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<!-- InstanceBeginEditable name="section" -->
+<section class="CONTENT">
+<b class="CRUMBS"><a href="index.html">首頁</a>&gt;<b>介購清單</b></b><!--.CRUMBS-->
+	
+    <div id="REGISTER_BG" class="MEMBER_EDIT">
+        <ul class="MEMBER_EDIT_NAV"><h2 id="TITLE_MEMBER">會員中心</h2>
+            <li class="TOOL_FAV"><a href="member_edit.html">會員資料修改</a></li>
+            <li class="TOOL_FAV"><a href="member_fav_list.html">介購清單紀錄</a></li>
+            <li class="TOOL_PRINT"><a href="javascript:printScreen(block)">列印介購清單(3)</a></li>
+			<li class="TOOL_EMAIL"><a href="member_forward.html">轉寄介購清單(3)</a></li>
+			<li class="TOOL_DELETE"><a href="#">刪除介購清單(3)</a></li>
+        </ul><!--MEMBER_EDIT_NAV--> 
+        <div class="MAIL_TEXT" id="block"><h2 style="display:none">介購列表</h2><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<tr bgcolor="#FFFFFF" height="160"><td class="FORM_BOX" background="http://bbc.begonia.tw/images/member/mail_form_bg.gif" width="47" align="center"><label><input name="checkbox" type="checkbox"></label></td>
+<td bgcolor="#FFFFFF" width="255" height="160" align="center" valign="middle" ><img src="http://bbc.begonia.tw/images/product/content_sub_list_images.jpg" width="228" height="135"></td>
+<td width="3" height="160" background="http://bbc.begonia.tw/images/inside/y_bar160.gif"></td>
+<td bgcolor="#FFFFFF" style="padding:0px 15px;" height="160"> <table width="100%" height="129" border="0" cellspacing="0" cellpadding="0" style="overflow:hidden;"><tr height="36"><td width="350">
+<p style="padding:0;margin:0;font-size:15px;line-height:17px; font-weight:bold; ">推理要在晚餐後</p>
+<p style="padding:0;margin:0;font-size:11px;line-height:17px;-webkit-text-size-adjust:none; letter-spacing:0px;">Reasoning after dinner</p>
+</td><td width="32" height="32" align="right";><img src="http://bbc.begonia.tw/images/member/left_nav_icon_01.gif" width="32" height="32"></td>
+</tr><tr><td align="left" valign="top" colspan="2">
+<p style="padding:0;margin:0;color:#bcbcbc;font-size:12px;line-height:17px;"><b style="color:#545353;padding:0 3px 0 0px;">2009</b>/<b style="color:#545353; padding:0 3px;">4 x 50’</b>/<b style="color:#545353;padding:0 3px;">DVD</b>/<b style="font-weight:bold; color:#ba0000;padding:0 3px;">$8,550</b></p>
+<p style="padding:0;margin:0;font-size:12px; line-height:19px;color:#545353;">剛任職於警視廳國立署的菜鳥刑警寶生麗子，其實是聞名全球、坐擁無數企業的「寶生集團」千金大小姐。工作時，麗子總是刻意隱瞞自己的身分──然而和她搭檔調查案件的直屬上司風祭警部，毫不掩飾自己是有錢人家的公子，實在是蠢到不行.....
+<a href="http://bbc.begonia.tw/product_content.html" style="color:#666;">more</a></p>
+</td></tr></table></td></tr><tr height="20"><td colspan="3"></td></tr><!--為一則-->
+
+<tr bgcolor="#FFFFFF" height="160"><td class="FORM_BOX" background="http://bbc.begonia.tw/images/member/mail_form_bg.gif" width="47" align="center"><label><input name="checkbox" type="checkbox"></label></td>
+<td bgcolor="#FFFFFF" width="255" height="160" align="center" valign="middle" ><img src="http://bbc.begonia.tw/images/product/content_sub_list_images.jpg" width="228" height="135"></td>
+<td width="3" height="160" background="http://bbc.begonia.tw/images/inside/y_bar160.gif"></td>
+<td bgcolor="#FFFFFF" style="padding:0px 15px;" height="160"> <table width="100%" height="129" border="0" cellspacing="0" cellpadding="0" style="overflow:hidden;"><tr height="36"><td width="350">
+<p style="padding:0;margin:0;font-size:15px;line-height:17px; font-weight:bold; ">推理要在晚餐後</p>
+<p style="padding:0;margin:0;font-size:11px;line-height:17px;-webkit-text-size-adjust:none; letter-spacing:0px;">Reasoning after dinner</p>
+</td><td width="32" height="32" align="right";><img src="http://bbc.begonia.tw/images/member/left_nav_icon_02.gif" width="32" height="32"></td>
+</tr><tr><td align="left" valign="top" colspan="2">
+<p style="padding:0;margin:0;color:#bcbcbc;font-size:12px;line-height:17px;"><b style="color:#545353;padding:0 3px 0 0px;">2009</b>/<b style="color:#545353; padding:0 3px;">4 x 50’</b>/<b style="color:#545353;padding:0 3px;">DVD</b>/<b style="font-weight:bold; color:#ba0000;padding:0 3px;">$8,550</b></p>
+<p style="padding:0;margin:0;font-size:12px; line-height:19px;color:#545353;">剛任職於警視廳國立署的菜鳥刑警寶生麗子，其實是聞名全球、坐擁無數企業的「寶生集團」千金大小姐。工作時，麗子總是刻意隱瞞自己的身分──然而和她搭檔調查案件的直屬上司風祭警部，毫不掩飾自己是有錢人家的公子，實在是蠢到不行.....
+<a href="http://bbc.begonia.tw/product_content.html" style="color:#666;">more</a></p>
+</td></tr></table></td></tr><tr height="20"><td colspan="3"></td></tr><!--為一則-->
+
+<tr bgcolor="#FFFFFF" height="160"><td class="FORM_BOX" background="http://bbc.begonia.tw/images/member/mail_form_bg.gif" width="47" align="center"><label><input name="checkbox" type="checkbox"></label></td>
+<td bgcolor="#FFFFFF" width="255" height="160" align="center" valign="middle" ><img src="http://bbc.begonia.tw/images/product/content_sub_list_images.jpg" width="228" height="135"></td>
+<td width="3" height="160" background="http://bbc.begonia.tw/images/inside/y_bar160.gif"></td>
+<td bgcolor="#FFFFFF" style="padding:0px 15px;" height="160"> <table width="100%" height="129" border="0" cellspacing="0" cellpadding="0" style="overflow:hidden;"><tr height="36"><td width="350">
+<p style="padding:0;margin:0;font-size:15px;line-height:17px; font-weight:bold; ">推理要在晚餐後</p>
+<p style="padding:0;margin:0;font-size:11px;line-height:17px;-webkit-text-size-adjust:none; letter-spacing:0px;">Reasoning after dinner</p>
+</td><td width="32" height="32" align="right";><img src="http://bbc.begonia.tw/images/member/left_nav_icon_03.gif" width="32" height="32"></td>
+</tr><tr><td align="left" valign="top" colspan="2">
+<p style="padding:0;margin:0;color:#bcbcbc;font-size:12px;line-height:17px;"><b style="color:#545353;padding:0 3px 0 0px;">2009</b>/<b style="color:#545353; padding:0 3px;">4 x 50’</b>/<b style="color:#545353;padding:0 3px;">DVD</b>/<b style="font-weight:bold; color:#ba0000;padding:0 3px;">$8,550</b></p>
+<p style="padding:0;margin:0;font-size:12px; line-height:19px;color:#545353;">剛任職於警視廳國立署的菜鳥刑警寶生麗子，其實是聞名全球、坐擁無數企業的「寶生集團」千金大小姐。工作時，麗子總是刻意隱瞞自己的身分──然而和她搭檔調查案件的直屬上司風祭警部，毫不掩飾自己是有錢人家的公子，實在是蠢到不行.....
+<a href="http://bbc.begonia.tw/product_content.html" style="color:#666;">more</a></p>
+</td></tr></table></td></tr><tr height="20"><td colspan="3"></td></tr><!--為一則-->
+
+<tr bgcolor="#FFFFFF" height="160"><td class="FORM_BOX" background="http://bbc.begonia.tw/images/member/mail_form_bg.gif" width="47" align="center"><label><input name="checkbox" type="checkbox"></label></td>
+<td bgcolor="#FFFFFF" width="255" height="160" align="center" valign="middle" ><img src="http://bbc.begonia.tw/images/product/content_sub_list_images.jpg" width="228" height="135"></td>
+<td width="3" height="160" background="http://bbc.begonia.tw/images/inside/y_bar160.gif"></td>
+<td bgcolor="#FFFFFF" style="padding:0px 15px;" height="160"> <table width="100%" height="129" border="0" cellspacing="0" cellpadding="0" style="overflow:hidden;"><tr height="36"><td width="350">
+<p style="padding:0;margin:0;font-size:15px;line-height:17px; font-weight:bold; ">推理要在晚餐後</p>
+<p style="padding:0;margin:0;font-size:11px;line-height:17px;-webkit-text-size-adjust:none; letter-spacing:0px;">Reasoning after dinner</p>
+</td><td width="32" height="32" align="right";><img src="http://bbc.begonia.tw/images/member/left_nav_icon_04.gif" width="32" height="32"></td>
+</tr><tr><td align="left" valign="top" colspan="2">
+<p style="padding:0;margin:0;color:#bcbcbc;font-size:12px;line-height:17px;"><b style="color:#545353;padding:0 3px 0 0px;">2009</b>/<b style="color:#545353; padding:0 3px;">4 x 50’</b>/<b style="color:#545353;padding:0 3px;">DVD</b>/<b style="font-weight:bold; color:#ba0000;padding:0 3px;">$8,550</b></p>
+<p style="padding:0;margin:0;font-size:12px; line-height:19px;color:#545353;">剛任職於警視廳國立署的菜鳥刑警寶生麗子，其實是聞名全球、坐擁無數企業的「寶生集團」千金大小姐。工作時，麗子總是刻意隱瞞自己的身分──然而和她搭檔調查案件的直屬上司風祭警部，毫不掩飾自己是有錢人家的公子，實在是蠢到不行.....
+<a href="http://bbc.begonia.tw/product_content.html" style="color:#666;">more</a></p>
+</td></tr></table></td></tr><tr height="20"><td colspan="3"></td></tr><!--為一則-->
+
+<tr bgcolor="#FFFFFF" height="160"><td class="FORM_BOX" background="http://bbc.begonia.tw/images/member/mail_form_bg.gif" width="47" align="center"><label><input name="checkbox" type="checkbox"></label></td>
+<td bgcolor="#FFFFFF" width="255" height="160" align="center" valign="middle" ><img src="http://bbc.begonia.tw/images/product/content_sub_list_images.jpg" width="228" height="135"></td>
+<td width="3" height="160" background="http://bbc.begonia.tw/images/inside/y_bar160.gif"></td>
+<td bgcolor="#FFFFFF" style="padding:0px 15px;" height="160"> <table width="100%" height="129" border="0" cellspacing="0" cellpadding="0" style="overflow:hidden;"><tr height="36"><td width="350">
+<p style="padding:0;margin:0;font-size:15px;line-height:17px; font-weight:bold; ">推理要在晚餐後</p>
+<p style="padding:0;margin:0;font-size:11px;line-height:17px;-webkit-text-size-adjust:none; letter-spacing:0px;">Reasoning after dinner</p>
+</td><td width="32" height="32" align="right";><img src="http://bbc.begonia.tw/images/member/left_nav_icon_05.gif" width="32" height="32"></td>
+</tr><tr><td align="left" valign="top" colspan="2">
+<p style="padding:0;margin:0;color:#bcbcbc;font-size:12px;line-height:17px;"><b style="color:#545353;padding:0 3px 0 0px;">2009</b>/<b style="color:#545353; padding:0 3px;">4 x 50’</b>/<b style="color:#545353;padding:0 3px;">DVD</b>/<b style="font-weight:bold; color:#ba0000;padding:0 3px;">$8,550</b></p>
+<p style="padding:0;margin:0;font-size:12px; line-height:19px;color:#545353;">剛任職於警視廳國立署的菜鳥刑警寶生麗子，其實是聞名全球、坐擁無數企業的「寶生集團」千金大小姐。工作時，麗子總是刻意隱瞞自己的身分──然而和她搭檔調查案件的直屬上司風祭警部，毫不掩飾自己是有錢人家的公子，實在是蠢到不行.....
+<a href="http://bbc.begonia.tw/product_content.html" style="color:#666;">more</a></p>
+</td></tr></table></td></tr><tr height="20"><td colspan="3"></td></tr><!--為一則-->
+
+        </table></div><!--MAIL_TEXT-->
+        
+    </div><!--REGISTER_BG-->
+</section>
+
+<!-- InstanceEndEditable -->
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<footer>
+科技企業股份有限公司TEL : (02)2835-0847  FAX:(02)2832-3592. Copyright © 2013 Filmmart Media Inc. All Rights Reserved.
+</footer><!--footer-->
+
+</body>
+<!-- InstanceEnd --></html>
