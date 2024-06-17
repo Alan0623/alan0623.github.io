@@ -197,16 +197,16 @@
                                         <label for="alltime">全時段皆可</label></div>
                                     </li>
                                     <li><div class="checkbok">
-                                        <input name="Time" id="9time" type="checkbox" title="9:00-12:00" value="9:00-12:00">
-                                        <label for="9time">9:00-12:00</label></div>
+                                        <input name="Time" id="time9" type="checkbox" title="9:00-12:00" value="9:00-12:00">
+                                        <label for="time9">9:00-12:00</label></div>
                                     </li>
                                     <li><div class="checkbok">
-                                        <input name="Time" id="13time" type="checkbox" title="13:00-18:00" value="13:00-18:00">
-                                        <label for="13time">13:00-18:00</label></div>
+                                        <input name="Time" id="time13" type="checkbox" title="13:00-18:00" value="13:00-18:00">
+                                        <label for="time13">13:00-18:00</label></div>
                                     </li>
                                     <li><div class="checkbok">
-                                        <input name="Time" id="18time" type="checkbox" title="18:00-21:00" value="18:00-21:00">
-                                        <label for="18time">18:00-21:00</label></div>
+                                        <input name="Time" id="time18" type="checkbox" title="18:00-21:00" value="18:00-21:00">
+                                        <label for="time18">18:00-21:00</label></div>
                                     </li>
                                 </ul>
                             </fieldset>
@@ -512,51 +512,45 @@
 
 
 
-                var checkboxesTimeValues = $('input[name="Time"]');
-                var checkedInputTimeValues = [];
-                checkboxesTimeValues.each(function() {
-                    var checkbox = $(this);
-                    if (checkbox.is(':checked')) {
-                        checkedInputTimeValues.push(checkbox.val());
-                    }
-                });
+                // var checkboxesTimeValues = $('input[name="Time"]');
+                // var checkedInputTimeValues = [];
+                // checkboxesTimeValues.each(function() {
+                //     var checkbox = $(this);
+                //     if (checkbox.is(':checked')) {
+                //         checkedInputTimeValues.push(checkbox.val());
+                //     }
+                // });
 
-                var checkboxesinterior_styleValues = $('input[name="interior_style"]');
-                var checkedInputinterior_styleValues = [];
-                checkboxesinterior_styleValues.each(function() {
-                    var checkbox = $(this);
-                    if (checkbox.is(':checked')) {
-                        checkedInputinterior_styleValues.push(checkbox.val());
-                    }
-                });
-
-
-                var checkboxesplanning_needsValues = $('input[name="planning_needs"]');
-                var checkedInputplanning_needsValues = [];
-                checkboxesplanning_needsValues.each(function() {
-                    var checkbox = $(this);
-                    if (checkbox.is(':checked')) {
-                        checkedInputplanning_needsValues.push(checkbox.val());
-                    }
-                });
+                // var checkboxesinterior_styleValues = $('input[name="interior_style"]');
+                // var checkedInputinterior_styleValues = [];
+                // checkboxesinterior_styleValues.each(function() {
+                //     var checkbox = $(this);
+                //     if (checkbox.is(':checked')) {
+                //         checkedInputinterior_styleValues.push(checkbox.val());
+                //     }
+                // });
 
 
+                // var checkboxesplanning_needsValues = $('input[name="planning_needs"]');
+                // var checkedInputplanning_needsValues = [];
+                // checkboxesplanning_needsValues.each(function() {
+                //     var checkbox = $(this);
+                //     if (checkbox.is(':checked')) {
+                //         checkedInputplanning_needsValues.push(checkbox.val());
+                //     }
+                // });
 
-                
-// var checkboxes = $('input[name="planning_needs"]');
-// var selectedValues = [];
-// checkboxes.each(function() {
-//     var checkbox = $(this);
-//     if (checkbox.is(':checked')) {
-//         selectedValues.push(checkbox.val());
-//     }
-// });
 
-// console.log(selectedValues);
 
                 let checkedInputRegionValues = document.querySelector('input[name="Region"]:checked').value;
                 let addressValue = document.querySelector('#addressValue').value;
                 let checkedInputPriceValues = document.querySelector('input[name="Price"]:checked').value;
+
+                let alltime = document.querySelector('input#alltime:checked').value;
+                let time9 = document.querySelector('input#time9:checked').value;
+                let time13 = document.querySelector('input#time13:checked').value;
+                let time18 = document.querySelector('input#time18:checked').value;
+
                 let info_personal_name = document.querySelector('#info_personal_name').value;
                 let info_decoration_age = document.querySelector('#info_decoration_age').value;
                 let info_line_id = document.querySelector('#info_line_id').value;
@@ -564,6 +558,22 @@
                 let info_contact_number = document.querySelector('#info_contact_number').value;
                 let shopTypeValue = document.querySelector('#shopTypeValue').value;
                 let special_needs_description = document.querySelector('#special_needs_description').value;
+
+                let interior_style_modern = document.querySelector('input#interior_style_modern:checked').value;
+                let interior_style_MUJI = document.querySelector('input#interior_style_MUJI:checked').value;
+                let interior_style_luxurious = document.querySelector('input#interior_style_luxurious:checked').value;
+                let interior_style_industrial = document.querySelector('input#interior_style_industrial:checked').value;
+                let interior_style_nordic = document.querySelector('input#interior_style_nordic:checked').value;
+
+                let renovation = document.querySelector('input#renovation:checked').value;
+                let expansion = document.querySelector('input#expansion:checked').value;
+                let structural_strengthening = document.querySelector('input#structural_strengthening:checked').value;
+                let tin_house_renovation = document.querySelector('input#tin_house_renovation:checked').value;
+                let water_and_electricity_reconnected = document.querySelector('input#water_and_electricity_reconnected:checked').value;
+                let whole_room_door_and_window_planning = document.querySelector('input#whole_room_door_and_window_planning:checked').value;
+                let soft_decoration_planning = document.querySelector('input#soft_decoration_planning:checked').value;
+                let wall_cancer_and_wet_water_treatment = document.querySelector('input#soft_decoration_planning:checked').value;
+
                 $.ajax({
                     url: "https://script.google.com/macros/s/AKfycbyBr_UtqZHgHBjZtiiUDrcvVsFn_BvHCp5hdz2kFq1e5oaKnbV2WQLlZDD6KQKv_SSiVA/exec",
                     data: {
