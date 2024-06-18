@@ -12,18 +12,35 @@
 	.block_reservation1 .swiper-slide#{$i}{
 		background-image: url('../images/reservation/main_slice#{$i}.jpg');
 		height: 600px;
+		opacity: 0.7;
 	}
 }
 
 .block_reservation1{
 	padding: 0;
-
+	background-color: black;
 	.reservation_en{
 		font-size: 1.25em;
 		font-weight: lighter;
+		@include media('mobile') {
+			font-size: 1em;
+		}
+		@include media('phone') {
+			font-size: 0.9em;
+			padding: 2px 0;
+			letter-spacing: 0;
+		}
 	}
 	.reservation_zh{
 		font-size: 2.25em;
+		@include media('mobile') {
+			font-size: 2em;
+		}
+		@include media('phone') {
+			font-size: 1.25em;
+			padding: 2px 0;
+			letter-spacing: 0;
+		}
 	}
 	.reservation_zh2{
 		letter-spacing: 0;
@@ -36,6 +53,9 @@
 	background-position: center top;
 	padding: 0;
 	padding-top: 62px;
+	@include media('phone') {
+		padding-top: 40px;
+	}
 	.center{
 		border: none;
 		max-width: 1420px;
@@ -48,7 +68,7 @@
 			font-size: 1.4em;
 		}
 		@include media('phone') {
-			font-size: 1.125em;
+			font-size: 1.25em;
 		}
 	}
 	article{
@@ -94,6 +114,9 @@
 			text-align: center;
 			padding-bottom: 64px;
 			padding-top: 59px;
+			@include media('mobile') {
+				padding-top: 0;
+			}
 			.agree{
 				text-align: center;
 				margin-top: 22px;
@@ -146,6 +169,9 @@
 			margin-bottom: 24px;
 			&:nth-child(2){
 				margin-right: 34px;
+				@include media('mobile') {
+					margin-right: 0;
+				}
 			}
 			h3{
 				display: flex;
@@ -183,6 +209,7 @@
 			}
 			@include media('phone') {
 				font-size: 1.125em;
+				margin-bottom: 20px;
 			}
 		}
 	
@@ -203,9 +230,12 @@
 				margin-bottom: 8px;
 				@include media('mobile') {
 					font-size: 1.4em;
+					margin-bottom: 0;
+					display: flex;
+					align-items: center;
 				}
 				@include media('phone') {
-					font-size: 1.125em;
+					font-size: 1.25em;
 				}
 			}
 			h3{
@@ -239,6 +269,7 @@
 					display: inline-block;
 					height: 18px;
 					line-height: 18px;
+					cursor: pointer;
 				}
 			}
 
@@ -251,6 +282,10 @@
 				display: block;
 				clear: both;
 				padding-top: 24px;
+				@include media('mobile') {
+					padding-top: 4px;
+					padding-bottom: 40px;
+				}
 				textarea{
 					min-height: 88px;
 				}
@@ -289,12 +324,20 @@
 						margin: 0;
 						box-sizing: border-box;
 						padding: 16px 0;
-						// padding-bottom: 32px;
+						@include media('phone') {
+							padding: 8px 0;
+						}
 						&:nth-child(odd){
 							padding-right: 24px;
+							@include media('phone') {
+								padding-right: 4px;
+							}
 						}
 						&:nth-child(even){
 							padding-left: 24px;
+							@include media('phone') {
+								padding-left: 4px;
+							}
 						}
 						p{
 							font-size: 0.9em;

@@ -100,10 +100,10 @@
         <main class="index_main">
             <section id="block_reservation1" class="block_reservation1 block_banner block_page_banner">
                 <div class="swiper-container swiper-container1">
-                    <div class="center">
+                    <!-- <div class="center">
                         <a href="javascript:void(0)" class="swiper-button-prev swiper-button-prev1" title="上一則">上一則</a>
                         <a href="javascript:void(0)" class="swiper-button-next swiper-button-next1" title="下一則">下一則</a>
-                    </div>
+                    </div> -->
                     <article>
                         <h2>
                         <span class="reservation_en">RESERVATION</span>
@@ -111,15 +111,15 @@
                         <span class="reservation_zh2">請您耐心填寫基本資料 / 聯絡方式，目前服務地區僅有「雙北地區、桃園地區」，感謝您的支持，團隊會再努力擴點服務！</span>
                         </h2>
                     </article>
-                    <div class="swiper-wrapper swiper-wrapper_about">
+                    <div class="swiper-wrapper_about">
                         <div class="swiper-slide swiper-slide1">
                         </div>
-                        <div class="swiper-slide swiper-slide2">
+                        <!-- <div class="swiper-slide swiper-slide2">
                         </div>
                         <div class="swiper-slide swiper-slide3">
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="swiper-pagination swiper-pagination1"></div>
+                    <!-- <div class="swiper-pagination swiper-pagination1"></div> -->
                 </div>
             </section>
             <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -510,7 +510,50 @@
             if (chk) { //格式正確
                 $("button#go").addClass("active");
 
+// 获取所有 name 为 "Time" 的 checkbox 元素
+var timeCheckboxes = $('input[type=checkbox][name="Time"]');
 
+// 获取所有 name 为 "interior_style" 的 checkbox 元素
+var interiorStyleCheckboxes = $('input[type=checkbox][name="interior_style"]');
+
+// 获取所有 name 为 "planning_needs" 的 checkbox 元素
+var planningNeedsCheckboxes = $('input[type=checkbox][name="planning_needs"]');
+
+// 存储已选中的值
+var selectedTimeValues = [];
+var selectedInteriorStyleValues = [];
+var selectedPlanningNeedsValues = [];
+
+// 遍历所有 name 为 "Time" 的 checkbox
+timeCheckboxes.each(function() {
+    if ($(this).is(':checked')) {
+        selectedTimeValues.push($(this).val());
+    }
+});
+
+// 遍历所有 name 为 "interior_style" 的 checkbox
+interiorStyleCheckboxes.each(function() {
+    if ($(this).is(':checked')) {
+        selectedInteriorStyleValues.push($(this).val());
+    }
+});
+
+// 遍历所有 name 为 "planning_needs" 的 checkbox
+planningNeedsCheckboxes.each(function() {
+    if ($(this).is(':checked')) {
+        selectedPlanningNeedsValues.push($(this).val());
+    }
+});
+
+// 将选中值转换为字符串
+var checkedInputTimeValues = selectedTimeValues.join(',');
+var checkedInputinterior_styleValues = selectedInteriorStyleValues.join(',');
+var checkedInputplanning_needsValues = selectedPlanningNeedsValues.join(',');
+
+// 现在包含了所有选中的值
+console.log('Selected Time Values: ' + checkedInputTimeValues);
+console.log('Selected Interior Style Values: ' + checkedInputinterior_styleValues);
+console.log('Selected Planning Needs Values: ' + checkedInputplanning_needsValues);
 
                 // var checkboxesTimeValues = $('input[name="Time"]');
                 // var checkedInputTimeValues = [];
@@ -546,10 +589,10 @@
                 let addressValue = document.querySelector('#addressValue').value;
                 let checkedInputPriceValues = document.querySelector('input[name="Price"]:checked').value;
 
-                let alltime = document.querySelector('input#alltime:checked').value;
-                let time9 = document.querySelector('input#time9:checked').value;
-                let time13 = document.querySelector('input#time13:checked').value;
-                let time18 = document.querySelector('input#time18:checked').value;
+                // let alltime = document.querySelector('input#alltime[type="checkbox"]:checked').value;
+                // let time9 = document.querySelector('input#time9:checked').value;
+                // let time13 = document.querySelector('input#time13:checked').value;
+                // let time18 = document.querySelector('input#time18:checked').value;
 
                 let info_personal_name = document.querySelector('#info_personal_name').value;
                 let info_decoration_age = document.querySelector('#info_decoration_age').value;
@@ -559,20 +602,20 @@
                 let shopTypeValue = document.querySelector('#shopTypeValue').value;
                 let special_needs_description = document.querySelector('#special_needs_description').value;
 
-                let interior_style_modern = document.querySelector('input#interior_style_modern:checked').value;
-                let interior_style_MUJI = document.querySelector('input#interior_style_MUJI:checked').value;
-                let interior_style_luxurious = document.querySelector('input#interior_style_luxurious:checked').value;
-                let interior_style_industrial = document.querySelector('input#interior_style_industrial:checked').value;
-                let interior_style_nordic = document.querySelector('input#interior_style_nordic:checked').value;
+                // let interior_style_modern = document.querySelector('input#interior_style_modern:checked').value;
+                // let interior_style_MUJI = document.querySelector('input#interior_style_MUJI:checked').value;
+                // let interior_style_luxurious = document.querySelector('input#interior_style_luxurious:checked').value;
+                // let interior_style_industrial = document.querySelector('input#interior_style_industrial:checked').value;
+                // let interior_style_nordic = document.querySelector('input#interior_style_nordic:checked').value;
 
-                let renovation = document.querySelector('input#renovation:checked').value;
-                let expansion = document.querySelector('input#expansion:checked').value;
-                let structural_strengthening = document.querySelector('input#structural_strengthening:checked').value;
-                let tin_house_renovation = document.querySelector('input#tin_house_renovation:checked').value;
-                let water_and_electricity_reconnected = document.querySelector('input#water_and_electricity_reconnected:checked').value;
-                let whole_room_door_and_window_planning = document.querySelector('input#whole_room_door_and_window_planning:checked').value;
-                let soft_decoration_planning = document.querySelector('input#soft_decoration_planning:checked').value;
-                let wall_cancer_and_wet_water_treatment = document.querySelector('input#soft_decoration_planning:checked').value;
+                // let renovation = document.querySelector('input#renovation:checked').value;
+                // let expansion = document.querySelector('input#expansion:checked').value;
+                // let structural_strengthening = document.querySelector('input#structural_strengthening:checked').value;
+                // let tin_house_renovation = document.querySelector('input#tin_house_renovation:checked').value;
+                // let water_and_electricity_reconnected = document.querySelector('input#water_and_electricity_reconnected:checked').value;
+                // let whole_room_door_and_window_planning = document.querySelector('input#whole_room_door_and_window_planning:checked').value;
+                // let soft_decoration_planning = document.querySelector('input#soft_decoration_planning:checked').value;
+                // let wall_cancer_and_wet_water_treatment = document.querySelector('input#soft_decoration_planning:checked').value;
 
                 $.ajax({
                     url: "https://script.google.com/macros/s/AKfycbyBr_UtqZHgHBjZtiiUDrcvVsFn_BvHCp5hdz2kFq1e5oaKnbV2WQLlZDD6KQKv_SSiVA/exec",
@@ -595,9 +638,9 @@
                         if (response == "成功") {
                             $("button#go").removeClass('active').addClass('done')
                             alert("您填寫資料已紀錄，即將跳轉至首頁");
-                            // setTimeout(
-                            //     "location.href='https://myship.7-11.com.tw/general/detail/GM2312319081223'",
-                            //     10); // 1秒後跳轉頁面
+                            setTimeout(
+                                "location.href='https://alan0623.github.io/loowu/'",
+                                10); // 1秒後跳轉頁面
                         }
                     },
                 });

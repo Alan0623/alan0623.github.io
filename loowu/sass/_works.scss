@@ -12,6 +12,7 @@
 	.block_works1 .swiper-slide#{$i}{
 		background-image: url('../images/works/main_slice#{$i}.jpg');
 		height: 600px;
+		opacity: 0.7;
 	}
 
 	.block_works2 span[aria-label="Go to slide #{$i}"]{
@@ -22,6 +23,7 @@
 }
 .block_works1 {
 	padding: 0;
+	background-color: black;
 	article h2 span{
 		&.zh{
 			@include media('phone') {

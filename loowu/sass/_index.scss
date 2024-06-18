@@ -73,6 +73,7 @@
 			top: auto;
 			bottom: 0;
 			transform: none;
+			padding: 0 24px;
 			h2{
 				text-align: left;
 				@include media('phone') {
@@ -743,8 +744,23 @@
 				clear: both;
 				margin-top: 24px;
 			}
+			h3{
+				margin: 48px 0;
+			}
+			ol{
+				padding: 0;
+				margin: 0;
+				list-style-type: none;
+				@include media('mobile') {
+					margin-top: auto;
+				}
+				li{
+					margin: 2px 0;
+					padding: 0;
+				}
+			}
 			ul{
-				margin-top: 56px;
+				// margin-top: 56px;
 				@include media('mobile') {
 					margin-top: auto;
 				}
