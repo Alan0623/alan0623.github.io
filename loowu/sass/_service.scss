@@ -591,6 +591,9 @@
 				@include media('phone') {
 					flex: 0 0 33.33%;
 				}
+				@include rwd(365) {
+					flex: 0 0 50%;
+				}
 			}
 			a{
 				color: black;
@@ -610,9 +613,17 @@
 				height: 124px;
 				border: black solid 2px;
 				border-radius: 200px;	
-
 				overflow: hidden;
 				position: relative;
+				@include rwd(720) {
+					width: 96px;
+					height: 96px;	
+				}
+				@include media('phone') {
+					width: 88px;
+					height: 88px;
+					border: black solid 1px;
+				}
 				&::before{
 					content: $content;
 					display: block;
@@ -624,6 +635,14 @@
 					background-position: center;
 					background-size: cover;
 					filter: grayscale(0) brightness(0);
+					@include rwd(720) {
+						width: 92px;
+						height: 92px;
+					}
+					@include media('phone') {
+						width: 86px;
+						height: 86px;
+					}
 				}
 			}
 			.figcaption{
@@ -637,6 +656,14 @@
 				left: 0;
 				right: 0;
 				margin: 0 auto;
+				width: 150%;
+    			transform: translateX(-16%);
+				@include media('mobile') {
+					font-size: 0.9em;
+				}
+				@include media('phone') {
+					font-size: 0.8em;
+				}
 			}
 		}
 	}
@@ -723,12 +750,19 @@
 				flex: 0 0 33.33%;
 				padding-bottom: 0;
 			}
+			@include rwd(435) {
+				flex: 0 0 50%;
+			}
 			span{
 				display: block;
 				text-align: center;
 				&.english_name{
 					font-weight: bold;
 					margin-bottom: 8px;
+					@include media('phone') {
+						margin-bottom: 2px;
+						font-size: 0.9em;
+					}
 				}
 				&.chinese_name{
 					font-size: 0.875em;

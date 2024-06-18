@@ -7679,20 +7679,26 @@ button.swiper-pagination-bullet {
     flex: 0 0 33.33%;
   }
 }
-/* line 595, ../sass/_service.scss */
+@media screen and (max-width: 365px) and (min-width: 1px) {
+  /* line 576, ../sass/_service.scss */
+  .block_service2 .service_process_tabs .tabs li {
+    flex: 0 0 50%;
+  }
+}
+/* line 598, ../sass/_service.scss */
 .block_service2 .service_process_tabs .tabs a {
   color: black;
 }
-/* line 598, ../sass/_service.scss */
+/* line 601, ../sass/_service.scss */
 .block_service2 .service_process_tabs .tabs a:hover .img, .block_service2 .service_process_tabs .tabs a:focus .img {
   background-color: black;
   border-color: black;
 }
-/* line 601, ../sass/_service.scss */
+/* line 604, ../sass/_service.scss */
 .block_service2 .service_process_tabs .tabs a:hover .img::before, .block_service2 .service_process_tabs .tabs a:focus .img::before {
   filter: grayscale(0) brightness(100);
 }
-/* line 607, ../sass/_service.scss */
+/* line 610, ../sass/_service.scss */
 .block_service2 .service_process_tabs .tabs .img {
   display: block;
   width: 124px;
@@ -7702,7 +7708,22 @@ button.swiper-pagination-bullet {
   overflow: hidden;
   position: relative;
 }
-/* line 616, ../sass/_service.scss */
+@media screen and (max-width: 720px) and (min-width: 1px) {
+  /* line 610, ../sass/_service.scss */
+  .block_service2 .service_process_tabs .tabs .img {
+    width: 96px;
+    height: 96px;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 610, ../sass/_service.scss */
+  .block_service2 .service_process_tabs .tabs .img {
+    width: 88px;
+    height: 88px;
+    border: black solid 1px;
+  }
+}
+/* line 627, ../sass/_service.scss */
 .block_service2 .service_process_tabs .tabs .img::before {
   content: "​";
   display: block;
@@ -7715,7 +7736,21 @@ button.swiper-pagination-bullet {
   background-size: cover;
   filter: grayscale(0) brightness(0);
 }
-/* line 629, ../sass/_service.scss */
+@media screen and (max-width: 720px) and (min-width: 1px) {
+  /* line 627, ../sass/_service.scss */
+  .block_service2 .service_process_tabs .tabs .img::before {
+    width: 92px;
+    height: 92px;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 627, ../sass/_service.scss */
+  .block_service2 .service_process_tabs .tabs .img::before {
+    width: 86px;
+    height: 86px;
+  }
+}
+/* line 648, ../sass/_service.scss */
 .block_service2 .service_process_tabs .tabs .figcaption {
   position: absolute;
   bottom: 0;
@@ -7726,26 +7761,40 @@ button.swiper-pagination-bullet {
   left: 0;
   right: 0;
   margin: 0 auto;
+  width: 150%;
+  transform: translateX(-16%);
+}
+@media screen and (max-width: 1024px) {
+  /* line 648, ../sass/_service.scss */
+  .block_service2 .service_process_tabs .tabs .figcaption {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 648, ../sass/_service.scss */
+  .block_service2 .service_process_tabs .tabs .figcaption {
+    font-size: 0.8em;
+  }
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 .block_service3
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* line 647, ../sass/_service.scss */
+/* line 674, ../sass/_service.scss */
 .block_service3 {
   padding: 112px 0;
 }
 @media screen and (max-width: 1024px) {
-  /* line 647, ../sass/_service.scss */
+  /* line 674, ../sass/_service.scss */
   .block_service3 {
     padding: 48px 0;
   }
 }
-/* line 652, ../sass/_service.scss */
+/* line 679, ../sass/_service.scss */
 .block_service3 .center {
   max-width: 1432px;
 }
-/* line 657, ../sass/_service.scss */
+/* line 684, ../sass/_service.scss */
 .block_service3 .center > article {
   letter-spacing: 0.1em;
   width: 63%;
@@ -7753,13 +7802,13 @@ button.swiper-pagination-bullet {
   padding-right: 64px;
 }
 @media screen and (max-width: 1024px) {
-  /* line 657, ../sass/_service.scss */
+  /* line 684, ../sass/_service.scss */
   .block_service3 .center > article {
     width: 100%;
     padding-right: 0;
   }
 }
-/* line 669, ../sass/_service.scss */
+/* line 696, ../sass/_service.scss */
 .block_service3 .center > figure {
   max-width: 552px;
   float: left;
@@ -7767,44 +7816,44 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 @media screen and (max-width: 1024px) {
-  /* line 669, ../sass/_service.scss */
+  /* line 696, ../sass/_service.scss */
   .block_service3 .center > figure {
     width: 100%;
     max-width: 100%;
     height: 0;
     padding-bottom: 80%;
   }
-  /* line 679, ../sass/_service.scss */
+  /* line 706, ../sass/_service.scss */
   .block_service3 .center > figure img {
     width: 100%;
     max-width: 100%;
   }
 }
-/* line 685, ../sass/_service.scss */
+/* line 712, ../sass/_service.scss */
 .block_service3 .center h2 {
   font-size: 1em;
   margin-bottom: 40px;
 }
-/* line 688, ../sass/_service.scss */
+/* line 715, ../sass/_service.scss */
 .block_service3 .center h2 .english,
 .block_service3 .center h2 .chinese {
   font-size: 1.75em;
 }
 @media screen and (max-width: 1024px) {
-  /* line 688, ../sass/_service.scss */
+  /* line 715, ../sass/_service.scss */
   .block_service3 .center h2 .english,
   .block_service3 .center h2 .chinese {
     font-size: 1.4em;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 688, ../sass/_service.scss */
+  /* line 715, ../sass/_service.scss */
   .block_service3 .center h2 .english,
   .block_service3 .center h2 .chinese {
     font-size: 1.125em;
   }
 }
-/* line 702, ../sass/_service.scss */
+/* line 729, ../sass/_service.scss */
 .block_service3 .service_point {
   display: flex;
   flex-direction: row;
@@ -7813,12 +7862,12 @@ button.swiper-pagination-bullet {
   align-items: flex-start;
 }
 @media screen and (max-width: 600px) {
-  /* line 702, ../sass/_service.scss */
+  /* line 729, ../sass/_service.scss */
   .block_service3 .service_point {
     padding-bottom: 32px;
   }
 }
-/* line 711, ../sass/_service.scss */
+/* line 738, ../sass/_service.scss */
 .block_service3 .service_point li {
   display: flex;
   flex: 0 0 25%;
@@ -7829,46 +7878,59 @@ button.swiper-pagination-bullet {
   align-items: center;
 }
 @media screen and (max-width: 1024px) {
-  /* line 711, ../sass/_service.scss */
+  /* line 738, ../sass/_service.scss */
   .block_service3 .service_point li {
     padding: 24px 0;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 711, ../sass/_service.scss */
+  /* line 738, ../sass/_service.scss */
   .block_service3 .service_point li {
     flex: 0 0 33.33%;
     padding-bottom: 0;
   }
 }
-/* line 726, ../sass/_service.scss */
+@media screen and (max-width: 435px) and (min-width: 1px) {
+  /* line 738, ../sass/_service.scss */
+  .block_service3 .service_point li {
+    flex: 0 0 50%;
+  }
+}
+/* line 756, ../sass/_service.scss */
 .block_service3 .service_point li span {
   display: block;
   text-align: center;
 }
-/* line 729, ../sass/_service.scss */
+/* line 759, ../sass/_service.scss */
 .block_service3 .service_point li span.english_name {
   font-weight: bold;
   margin-bottom: 8px;
 }
-/* line 733, ../sass/_service.scss */
+@media screen and (max-width: 600px) {
+  /* line 759, ../sass/_service.scss */
+  .block_service3 .service_point li span.english_name {
+    margin-bottom: 2px;
+    font-size: 0.9em;
+  }
+}
+/* line 767, ../sass/_service.scss */
 .block_service3 .service_point li span.chinese_name {
   font-size: 0.875em;
 }
-/* line 738, ../sass/_service.scss */
+/* line 772, ../sass/_service.scss */
 .block_service3 .service_point a {
   color: black;
 }
-/* line 741, ../sass/_service.scss */
+/* line 775, ../sass/_service.scss */
 .block_service3 .service_point a:hover .img, .block_service3 .service_point a:focus .img {
   background-color: black;
   border-color: black;
 }
-/* line 744, ../sass/_service.scss */
+/* line 778, ../sass/_service.scss */
 .block_service3 .service_point a:hover .img::before, .block_service3 .service_point a:focus .img::before {
   filter: grayscale(0) brightness(100);
 }
-/* line 750, ../sass/_service.scss */
+/* line 784, ../sass/_service.scss */
 .block_service3 .service_point .img {
   display: block;
   width: 124px;
@@ -7880,18 +7942,18 @@ button.swiper-pagination-bullet {
   margin-bottom: 16px;
 }
 @media screen and (max-width: 1370px) and (min-width: 1px) {
-  /* line 750, ../sass/_service.scss */
+  /* line 784, ../sass/_service.scss */
   .block_service3 .service_point .img {
     width: 96px;
     height: 96px;
     margin: 0 auto;
   }
 }
-/* line 767, ../sass/_service.scss */
+/* line 801, ../sass/_service.scss */
 .block_service3 .service_point .img img {
   width: 100%;
 }
-/* line 770, ../sass/_service.scss */
+/* line 804, ../sass/_service.scss */
 .block_service3 .service_point .img::before {
   content: "​";
   display: block;
@@ -7904,7 +7966,7 @@ button.swiper-pagination-bullet {
   background-size: cover;
   filter: grayscale(0) brightness(0);
 }
-/* line 783, ../sass/_service.scss */
+/* line 817, ../sass/_service.scss */
 .block_service3 .service_point .figcaption {
   position: absolute;
   bottom: 0;
