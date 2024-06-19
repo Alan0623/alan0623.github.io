@@ -1391,7 +1391,13 @@
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-  
+	width: 868px;
+	height: 570px;
+
+	@include rwd(1400){
+		width: auto;
+		weight: auto;
+	}
 	img {
 	  max-width: 100%;
 	  position: absolute;
