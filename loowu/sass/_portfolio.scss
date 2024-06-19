@@ -71,11 +71,15 @@
 			clear: both;
 			text-align: left;
 			font-size: 1em;
-			max-width: 1432px;
+			// max-width: 1432px;
 			transform: translateY(-50%);
 			transform: none;
-			width: 50%;
+			// width: 50%;
+
+			max-width: 868px;
+			width: 100%;
 			@include media('mobile') {
+				max-width: 100%;
 				width: 100%;
 			}
 		}
