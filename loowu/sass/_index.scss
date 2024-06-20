@@ -577,6 +577,19 @@
 		text-align: center;
 		position: relative;
 		padding-bottom: 48px;
+		> h2{
+			display: none;
+			@include media('mobile') {
+				display: block;
+				font-size: 1.75em;
+				letter-spacing: 0.05em;
+				margin-bottom: 32px;
+				text-align: left;
+			}
+			@include media('phone') {
+				font-size: 1.25em;
+			}
+		}
 		.btn{
 			position: absolute;
 			bottom: 0;
@@ -623,7 +636,7 @@
 		max-width: 70%;
 		display: block;
 		float: left;
-		@include rwd(916) {
+		@include media('mobile') {
 			float: inherit;
 			margin: 0 auto;
 			width: 100%;
@@ -640,7 +653,7 @@
 		@include media('mobile') {
 			padding-left: 16px;
 		}
-		@include rwd(916) {
+		@include media('mobile') {
 			width: 100%;
 			max-width: 100%;
 			float: inherit;
@@ -649,7 +662,7 @@
 		> img{
 			width: 100%;
 			margin-bottom: 16px;
-			@include rwd(916) {
+			@include media('mobile') {
 				display: none;
 			}
 		}
@@ -662,6 +675,12 @@
 				.zh{
 					font-size: 1.5em;
 					letter-spacing: 0.08em;
+					a {
+						color: black;
+						&:hover, &:focus{
+							text-decoration: underline;
+						}
+					}
 					@include media('mobile') {
 						font-size: 1.25em;
 					}
@@ -691,6 +710,7 @@
 
 		.case_works_big_img_info{
 			@include media('mobile') {
+				display: none;
 				width: 50%;
 				float: left;
 			}
@@ -735,7 +755,8 @@
 			position: absolute;
 			bottom: 0;
 			@include media('mobile') {
-				width: 50%;
+				margin-top: 24px;
+				width: 100%;
 				float: left;
 				position: relative;
 			}
@@ -746,6 +767,10 @@
 			}
 			h3{
 				margin: 48px 0;
+				@include media('mobile') {
+					margin-bottom: 8px;
+					margin-top: 24px;	
+				}
 			}
 			ol{
 				padding: 0;
@@ -1212,11 +1237,20 @@
 	.center{
 		position: relative;
 		max-width: 1420px;
-		@include media('mobile') {
-			padding: 0 8px;
-		}
-		@include media('phone') {
-			padding: 0;
+		// @include media('mobile') {
+		// 	padding: 0 8px;
+		// }
+		// @include media('phone') {
+		// 	padding: 0;
+		// }
+		> h2{
+			display: block;
+			font-size: 1.75em;
+			letter-spacing: 0.05em;
+			margin-bottom: 32px;
+			@include media('phone') {
+				font-size: 1.25em;
+			}
 		}
 	}
 	article{
