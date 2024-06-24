@@ -82,10 +82,11 @@
 		position: absolute;
 		width: 40vw;
 		min-height: 340px;
-		background-color: #D8D6CE;
+		background-color: white;
 		z-index: 1;
 		top: 128px;
 		left: 0;
+		transition: $transition;
 		@include rwd(820) {
 			display: none;
 		}
@@ -130,6 +131,15 @@
 	.img{
 		width: calc(50% - 72px);
 		float: left;
+		transition: $transition;
+		transform: translateX(100%);
+		filter: blur(20px);
+		opacity: 0;
+		@include js(false) {
+			transform: translateX(0);
+			filter: blur(0);
+			opacity: 1;
+		}
 		@include rwd(820) {
 			display: flex;
 			height: 0;
@@ -151,9 +161,10 @@
 		width: 100%;	
 		min-height: 340px;
 		padding: 56px 0;
-		background-color: #D8D6CE;
+		background-color: white;
 		letter-spacing: 0.1em;
 		border-radius: 0 16px 16px 0;
+		transition: $transition;
 		@include rwd(1320) {
 			padding-left: 56px;
 			padding-right: 24px;
@@ -166,6 +177,10 @@
 		h2{
 			font-size: 1.875em;
 			margin-bottom: 40px;
+			transition: $transition;
+			transform: translateX(-30%);
+			filter: blur(20px);
+			opacity: 0;
 			@include media('mobile') {
 				font-size: 1.75em;
 				margin-bottom: 24px;
@@ -177,7 +192,12 @@
 			}
 		}
 		p{
+			transition: $transition;
 			line-height: 1.8em;
+			transition-delay: .4s;
+			transform: translateX(-30%);
+			filter: blur(20px);
+			opacity: 0;
 		}
 		
 	}
@@ -186,12 +206,99 @@
 		letter-spacing: 0.1em;
 		line-height: 1.8em;
 		margin-top: 56px;
+		transition: $transition;
+		transition-delay: .8s;
+		transform: translateX(-130%);
+		filter: blur(20px);
+		opacity: 0;
 		@include rwd(820) {
 			margin-top: 24px;
 			margin-bottom: 24px;
 			float: left;
 			width: 100%;
 			padding-left: 24px;
+		}
+	}
+	&.ready-animate{
+		&::before{
+			background-color: white;
+		}
+		.img{
+			transform: translateX(100%);
+			filter: blur(20px);
+			opacity: 0;
+		}
+		.info{
+			background-color: white;
+			h2{
+				transform: translateX(-30%);
+				filter: blur(20px);
+				opacity: 0;
+			}
+			p{
+				transform: translateX(-30%);
+				filter: blur(20px);
+				opacity: 0;
+			}
+		}
+		.year_list{
+			transform: translateX(-130%);
+			filter: blur(20px);
+			opacity: 0;
+		}
+	}
+
+	&.run-animate{
+		&::before{
+			background-color: #D8D6CE;
+		}
+		.img{
+			transform: translateX(0);
+			filter: blur(0);
+			opacity: 1;
+		}
+		.info{
+			background-color: #D8D6CE;
+			h2{
+				transform: translateX(0);
+				filter: blur(0);
+				opacity: 1;
+			}
+			p{
+				transform: translateX(0);
+				filter: blur(0);
+				opacity: 1;
+			}
+		}
+		.year_list{
+			transform: translateX(0);
+			filter: blur(0);
+			opacity: 1;
+		}
+	}
+
+	@include js(false) {
+		.img{
+			transform: translateX(0);
+			filter: blur(0);
+			opacity: 1;
+		}
+		.info{
+			h2{
+				transform: translateX(0);
+				filter: blur(0);
+				opacity: 1;
+			}
+			p{
+				transform: translateX(0);
+				filter: blur(0);
+				opacity: 1;
+			}
+		}
+		.year_list{
+			transform: translateX(0);
+			filter: blur(0);
+			opacity: 1;
 		}
 	}
 }
@@ -480,6 +587,7 @@
 			font-size: 2.2em;
 			letter-spacing: 0.1em;
 			margin-bottom: 56px;
+			transition: $transition;
 			@include media('mobile') {
 				font-size: 1.75em;
 				margin-bottom: 24px;
@@ -499,6 +607,7 @@
 			max-width: 700px;
 			margin: 0 auto;
 			text-align: left;
+			transition: $transition;
 		}
 	}
 	
@@ -517,6 +626,7 @@
 		li{
 			display: inline-block;
 			margin: 40px;
+			transition: $transition;
 			@include media('mobile') {
 				margin: 0;
     			padding: 0 20px;
@@ -530,6 +640,36 @@
 				@include media('mobile') {
 					margin-left: 0;
 				}
+			}
+			&:nth-child(1){
+				transition-delay: .4s;
+			}
+			&:nth-child(2){
+				transition-delay: .6s;
+			}
+			&:nth-child(3){
+				transition-delay: .8s;
+			}
+			&:nth-child(4){
+				transition-delay: 1s;
+			}
+			&:nth-child(5){
+				transition-delay: 1.2s;
+			}
+			&:nth-child(6){
+				transition-delay: 1.4s;
+			}
+			&:nth-child(7){
+				transition-delay: 1.6s;
+			}
+			&:nth-child(8){
+				transition-delay: 1.8s;
+			}
+			&:nth-child(9){
+				transition-delay: 2s;
+			}
+			&:nth-child(8){
+				transition-delay: 2.2s;
 			}
 		}
 		figure{
@@ -565,6 +705,27 @@
 			span{
 				display: block;
 			}
+		}
+	}
+
+	&.ready-animate{
+		h2,
+		p,
+		.business_collaboration li{
+			transform: translateY(100%);
+			opacity: 0;
+			filter: blur(20px);
+		}
+
+	}
+
+	&.run-animate{
+		h2,
+		p,
+		.business_collaboration li{
+			transform: translateY(0);
+			opacity: 1;
+			filter: blur(0);
 		}
 	}
 }

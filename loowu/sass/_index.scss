@@ -215,6 +215,7 @@
 		text-align: center;
 		display: block;
 		bottom: 64px;
+		transition: $transition;
 		@include rwd(1280){
 			bottom: 40px;
 		}
@@ -283,9 +284,12 @@
 			}
 			.img1{
 				transform: translateY(32px);
+				transition: $transition;
 			}
 			.img2{
 				transform: translateY(-32px);
+				transition-delay: .8s;
+				transition: $transition;
 			}
 			img{
 				width: 100%;
@@ -308,6 +312,7 @@
 			float: left;
 			padding-left: 56px;
 			box-sizing: border-box;
+			transition: $transition;
 			@include rwd(1200) {
 				padding-left: 26px;
 			}
@@ -366,13 +371,57 @@
 			}
 		}
 	}
-
+	&.ready-animate{
+		.center article{
+			transform: translateY(50%);
+			opacity: 0.5;
+			filter: blur(20px);
+		}
+		.block_index2_img{
+			.img1{
+				transform: translateY(100%) scale(1.5);
+				opacity: 0;
+			}
+			.img2{
+				transform: translateY(100%) scale(1.2);
+				opacity: 0;
+			}
+		}
+		.scroll{
+			transform: translateY(-100%);
+			filter: blur(20px);
+			opacity: 0.9;
+		}
+	}
+	&.run-animate{
+		.center article{
+			transform: translateY(0);
+			opacity: 1;
+			filter: blur(0);
+		}
+		.block_index2_img{
+			.img1{
+				transform: translateY(32px) scale(1);
+				opacity: 1;
+			}
+			.img2{
+				transform: translateY(-32px) scale(1);
+				opacity: 1;
+			}
+		}
+		.scroll{
+			transform: translateY(0);
+			filter: blur(0);
+			opacity: 1;
+		}
+	}
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 .block_index3
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .block_index3{
+	overflow: hidden;
 	position: relative;
 	background-image: url('../images/index/bg_block_index5.jpg');
     background-size: contain;
@@ -404,17 +453,6 @@
 				padding-left: 0;
 				padding-right: 0;
 			}
-			&:nth-child(3),
-			&:nth-child(1){
-				article{
-					transform: translateX(-50%);
-					opacity: 0;
-				}
-				.img{
-					transform: translateX(50%);
-					opacity: 0;
-				}
-			}
 			&:nth-child(2){
 				padding-left: 0px;
 				padding-right: 140px;
@@ -426,24 +464,6 @@
 				@include media('mobile') {
 					padding-left: 0;
 					padding-right: 0;
-				}
-				article{
-					transform: translateX(50%);
-					opacity: 0;
-					transition-delay: .4s;
-				}
-				.img{
-					transform: translateX(-50%);
-					opacity: 0;
-					transition-delay: .4s;
-				}
-			}
-			&:nth-child(3){
-				article{
-					transition-delay: .8s;
-				}
-				.img{
-					transition-delay: .8s;
 				}
 			}
 		}
@@ -591,26 +611,70 @@
 			display: inline-block;
 		}
 	}
+	&.ready-animate{
+		ul.block_index3_list{
+			li{
+				&:nth-child(3),
+				&:nth-child(1){
+					article{
+						transform: translateX(-50%);
+						opacity: 0;
+						filter: blur(20px);
+					}
+					.img{
+						transform: translateX(50%);
+						opacity: 0;
+					}
+				}
+				&:nth-child(2){
+					article{
+						transform: translateX(50%);
+						opacity: 0;
+						transition-delay: .4s;
+						filter: blur(20px);
+					}
+					.img{
+						transform: translateX(-50%);
+						opacity: 0;
+						transition-delay: .4s;
+					}
+				}
+				&:nth-child(3){
+					article{
+						transition-delay: .8s;
+						filter: blur(20px);
+					}
+					.img{
+						transition-delay: .8s;
+					}
+				}
+			}
+		}
+	}
 	&.run-animate{
 		ul.block_index3_list{
 			.img,
 			article{
 				transform: translateX(0)!important;
 				opacity: 1!important;
+				filter: blur(0);
+			}
+		} 
+	}
+
+	@include js(false) {
+		ul.block_index3_list{
+			.img,
+			article{
+				transform: translateX(0)!important;
+				opacity: 1!important;
+				filter: blur(0);
 			}
 		} 
 	}
 }
 
-.no_js{
-	.block_index3 ul.block_index3_list{
-		.img,
-		article{
-			transform: translateX(0)!important;
-			opacity: 1!important;
-		}
-	} 
-}
+
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 .block_index4  block_portfolio2
@@ -664,6 +728,7 @@
 			padding: 0 12px;
 			box-sizing: border-box;
 			z-index: 2;
+			display: flex;
 			@include media('mobile') {
 				padding: 0;
 			}
@@ -682,6 +747,7 @@
 
 	.case_works_container{
 		// width: 100%;
+		transition: $transition;
 		width: 868px;
 		max-width: 70%;
 		display: block;
@@ -696,6 +762,7 @@
 	.case_works_big_img{
 		// width: 100%;
 		// max-width: calc(100% - 868px);
+		transition: $transition;
 		width: 30%;
 		display: block;
 		float: left;
@@ -853,6 +920,30 @@
 			}
 		}
 	}
+
+	// &.ready-animate{
+		.case_works_big_img{transition: $transition;transition-delay: .8s;filter: blur(20px);}
+		.case_works_container{transition: $transition;transition-delay: 1.2s;filter: blur(20px);}
+		.center .btn{transition: $transition;transition-delay: .4s;}
+		.case_works_big_img,
+		.case_works_container,
+		.center .btn,
+		.jcarousel-wrapper{
+			transition: $transition;
+			transform: translateY(100%);
+			opacity: 0;
+		}
+	// }
+	&.run-animate{
+		.case_works_big_img,
+		.case_works_container,
+		.center .btn,
+		.jcarousel-wrapper{
+			transform: translateY(0);
+			opacity: 1;
+			filter: blur(0);
+		}
+	}
 }
 .block_index4{
 	.jcarousel-wrapper .jcarousel-control-prev, .jcarousel-wrapper .jcarousel-control-next{
@@ -870,6 +961,7 @@
 }
 
 .jcarousel-wrapper {
+	transition: $transition;
 	display: inline-block;
     margin-top: 32px;
     margin: auto 0;
@@ -1042,6 +1134,7 @@
 	justify-content: center;
 	align-items: center;
 	color: #000;
+	overflow: hidden;
 	@include media('mobile') {
 		height: auto;
 		padding-bottom: 40px;
@@ -1074,6 +1167,7 @@
 			font-size: 1em;
 			letter-spacing: 0.1em;
 			padding-left: 16px;
+			transition: $transition;
 			@include media('mobile') {
 				padding-left: 0;
 			}
@@ -1122,6 +1216,7 @@
 		.tab_container{
 			width: 50%;
 			float: left;
+			transition: $transition;
 			@include media('mobile') {
 				width: 100%;
 				float: inherit;
@@ -1169,6 +1264,7 @@
 				position: relative;
 				justify-content: center;
 				align-items: center;
+				transition: $transition;
 				@include media('mobile') {
 					padding: 24px 0;
 				}
@@ -1180,6 +1276,30 @@
 				}
 				@include media('phone') {
 					flex: 0 0 33.33%;
+				}
+				&:nth-child(1){
+					transition-delay: .4s;
+				}
+				&:nth-child(2){
+					transition-delay: .6s;
+				}
+				&:nth-child(3){
+					transition-delay: .8s;
+				}
+				&:nth-child(4){
+					transition-delay: 1s;
+				}
+				&:nth-child(5){
+					transition-delay: 1.2s;
+				}
+				&:nth-child(6){
+					transition-delay: 1.4s;
+				}
+				&:nth-child(7){
+					transition-delay: 1.6s;
+				}
+				&:nth-child(8){
+					transition-delay: 1.8s;
 				}
 			}
 			a{
@@ -1265,6 +1385,60 @@
 			}
 		}
 	}
+
+	&.ready-animate{
+		.service_process_tabs{
+			.tabs{
+				li{
+					transform: translateY(100%) scale(0.5);
+					opacity: 0;
+					// filter: blur(20px);
+				}
+			}
+			.tab_container{
+				transform: translateY(100%);
+				opacity: 0;
+			}
+		} 
+		article h2{
+			transform: translateX(100%);
+			opacity: 0;
+			filter: blur(20px);
+		}
+
+		.btn.btn_dark{
+			transform: translateY(100%);
+			opacity: 0;
+			filter: blur(20px);
+		}
+	}
+
+	&.run-animate{
+		.service_process_tabs{
+			.tabs{
+				li{
+					transform: translateY(0) scale(1);
+					opacity: 1;
+					filter: blur(0);
+				}
+			}
+			.tab_container{
+				transform: translateY(0);
+				opacity: 1;
+			}
+		} 
+		article h2{
+			transform: translateX(0);
+			opacity: 1;
+			filter: blur(0);
+		}
+		.btn.btn_dark{
+			transition-delay: 2s;
+			transform: translateY(0);
+			opacity: 1;
+			filter: blur(0);
+		}
+	}
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1298,6 +1472,7 @@
 			font-size: 1.75em;
 			letter-spacing: 0.05em;
 			margin-bottom: 32px;
+			transition: $transition;
 			@include media('phone') {
 				font-size: 1.25em;
 			}
@@ -1344,6 +1519,8 @@
 		padding-top: 30px;
 		height: 0;
 		overflow: hidden;
+		transition: $transition;
+		transition-delay: .4s;
 		iframe, object, embed {
 			position: absolute;
 			top: 0;left: 0;
@@ -1352,6 +1529,26 @@
 		}
 	}
 
+	&.ready-animate{
+		h2,
+		.video-container {
+			filter: blur(20px);
+			opacity: 0;
+		}
+	}
+	&.run-animate{
+		h2,
+		.video-container {
+			filter: blur(0);
+			opacity: 1;
+		}
+	}
+
+}
+.block_index6{
+	.center > h2 {
+		color: white;
+	}
 }
 .twentytwenty-horizontal .twentytwenty-handle {
 	&:before, &:after {
