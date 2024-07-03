@@ -54,7 +54,7 @@
 		}
 		.en,
 		.zh{
-			display: inline-block;
+			display: block;
 			font-size: 1.75em;
 			padding: 8px 0;
 			@include media('mobile') {
@@ -63,6 +63,12 @@
 			@include media('phone') {
 				font-size: 1.125em;
 			}
+		}
+		.en{
+			font-weight: normal;
+		}
+		.zh{
+			letter-spacing: 3px;
 		}
 	}
 	.tab_container{
@@ -87,6 +93,7 @@
 				color: black;
 				border: black solid 1px;
 				padding: 8px 80px;
+				letter-spacing: 0.1em;
 				@include rwd(685){
 					font-size: 1.125em;
 					padding: 8px 24px 12px 24px;
@@ -225,7 +232,10 @@
 
 	.info{
 		display: flex;
-		margin: 49px 0 50px 0;
+		margin: 40px 0 40px 0;
+		@include rwd(1260) {
+			margin: 24px 0 24px 0;
+		}
 		@include media('phone') {
 			display: block;
 			margin: 0;
@@ -311,6 +321,9 @@
 		width: 100%;
 		position: relative;
 		padding-bottom: 112px;
+		@include media('mobile') {
+			padding-bottom: 0;
+		}
 		&::after{
 			@extend %clear;
 		}
@@ -369,6 +382,9 @@
 			@include media('mobile') {
 				width: 100%;
 				clear: both;
+				position: relative;
+				padding: 0;
+				right: 0;
 			}
 			li:after{
 				@extend %clear;
@@ -381,7 +397,7 @@
 					clear: both;
 					max-height: 480px;
 				}
-				@include media('mobile') {
+				@include media('phone') {
 					max-height: 400px;
 				}
 			}
@@ -406,10 +422,35 @@
 			left: 0;
 			bottom: 0;
 			z-index: 1;
-			max-width: 535px;
+			max-width: 548px;
+			letter-spacing: 0.1em;
+			line-height: 1.8em;
+			@include rwd(1260) {
+				max-width: 48%;
+				bottom: -80px;
+			}
+			
+			@include media('mobile') {
+				top: auto;
+				bottom: auto;
+				position: relative;
+				max-width: 100%;
+				margin-bottom: 24px;
+			}
 		}
 		#map_tab2 p{
 			bottom: -24px;
+			@include rwd(1260) {
+				max-width: 48%;
+				bottom: -80px;
+			}
+			@include media('mobile') {
+				top: auto;
+				bottom: auto;
+				position: relative;
+				max-width: 100%;
+				margin-bottom: 24px;
+			}
 		}
 	}
 	&.ready-animate{
