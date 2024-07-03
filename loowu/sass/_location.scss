@@ -94,11 +94,16 @@
 				border: black solid 1px;
 				padding: 8px 80px;
 				letter-spacing: 0.1em;
+				transition: $transition;
 				@include rwd(685){
 					font-size: 1.125em;
 					padding: 8px 24px 12px 24px;
 					text-align: center;
 					display: inline-block;
+				}
+				&:hover, &:focus{
+					background: black;
+					color: white;
 				}
 			}
 			&.active{

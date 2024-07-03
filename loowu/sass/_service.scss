@@ -332,7 +332,8 @@
 			.en{
 				font-weight: normal;
 				letter-spacing: 0.12em;
-				line-height: 1.6em;
+				line-height: 1.4em;
+				margin: 8px 0;
 				@include rwd(1175){
 					font-size: 0.9em;
 					line-height: 1.4em;
@@ -910,14 +911,14 @@
 				text-align: center;
 				&.english_name{
 					font-weight: bold;
-					margin-bottom: 8px;
+					margin-bottom: 0px;
 					@include media('phone') {
 						margin-bottom: 2px;
 						font-size: 0.9em;
 					}
 				}
 				&.chinese_name{
-					// font-size: 0.875em;
+					font-size: 0.875em;
 				}
 			}
 		}
