@@ -440,8 +440,11 @@
 			align-items: center;
 			justify-content: space-between;
 			// padding-left: 108px;
-			padding-left: 5.6vw;
+			// padding-left: 5.6vw;
+			padding-left: 0;
 			box-sizing: border-box;
+			box-sizing: border-box;
+			flex-direction: row;
 			@include rwd(1280){
 				padding-left: 0;
 			}
@@ -455,7 +458,7 @@
 			}
 			&:nth-child(2){
 				padding-left: 0px;
-				padding-right: 140px;
+				// padding-right: 140px;
 				align-items: center;
 				flex-direction: row-reverse;
 				@include rwd(1280){
@@ -468,11 +471,14 @@
 			}
 		}
 		article{
+			flex: 0 0 50%;
+			// margin: 0 16px;
 			display: flex;
 			align-items: center;
 			min-width: 520px;
-			margin: 0 32px;
+			// margin: 0 32px;
 			transition: $transition;
+			justify-content: center;
 			@include rwd(1280){
 				min-width: auto;
 			}
@@ -494,6 +500,8 @@
 				}
 				@include media('mobile') {
 					margin-left: 0;
+					margin-left: auto;
+					margin-right: auto;
 				}
 			}
 			h3{
@@ -518,12 +526,15 @@
 			}
 		}
 		.img{
-			width: 100%;
+			flex: 0 0 50%;
+			// margin: 0 16px;
+			// width: 100%;
 			max-width: 760px;
 			height: 360px;
 			background-position: center;
 			background-size: cover;
 			transition: $transition;
+			// max-width: 624px;
 			@include rwd(1280){
 				height: 328px;
 			}
@@ -569,6 +580,8 @@
 			min-width: 128px;
 			margin-bottom: 8px;
 			margin-top: 8px;
+			margin-left: auto;
+        	margin-right: auto;
 		}
 		@include rwd(780){
 			width: 140px;
@@ -1318,21 +1331,23 @@
 			}
 			.img{
 				display: block;
-				width: 124px;
-				height: 124px;
+				width: 104px;
+				height: 104px;
 				border: black solid 2px;
 				border-radius: 200px;	
 				overflow: hidden;
 				position: relative;
-				
+				margin-bottom: 16px;
+				margin-top: 2px;
+				transition: $transition;
 				@include rwd(1425){
 					width: 96px;
 					height: 96px;
 				}
 
 				@include media('mobile') {
-					width: 124px;
-					height: 124px;
+					width: 104px;
+					height: 104px;
 				}
 
 				@include media('phone') {
@@ -1346,19 +1361,20 @@
 					position: absolute;
 					top: 0;
 					left: 0;
-					width: 116px;
-					height: 116px;
+					width: 100px;
+					height: 100px;
 					background-position: center;
 					background-size: cover;
 					filter: grayscale(0) brightness(0);
+					transition: $transition;
 					@include rwd(1425){
 						width: 88px;
 						height: 88px;
 					}
 
 					@include media('mobile') {
-						width: 116px;
-						height: 116px;
+						width: 100px;
+						height: 100px;
 					}
 
 					@include media('phone') {

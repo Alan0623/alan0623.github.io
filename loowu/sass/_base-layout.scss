@@ -504,6 +504,7 @@ header class="header"
 				}
 			}
 			.mid{
+				display: none;
 				width: 193px;
 				@include rwd(1280){
 					display: none;
@@ -636,7 +637,8 @@ footer class="footer"
 	display: block;
 	position: relative;
 	float: left;
-	margin-left: 48px;
+	// margin-left: 48px;
+	margin-left: 162px;
 	@include rwd(1280){
 		margin-left: 0;
 	}
@@ -731,6 +733,7 @@ footer class="footer"
 				}
 			}
 			.mid{
+				display: none;
 				width: 160px;
 				@include media('phone') {
 					width: 43%;
@@ -879,10 +882,9 @@ footer class="footer"
 	}
 	.google_map{
 		width: 100%;
-		// padding-bottom: 62%;
-		// height: 0;
 		overflow: hidden;
 		min-height: 368px;
+		background-color: #f1f3f4;
 		ul{
 			width: 612px;
 			height: 0;

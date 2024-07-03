@@ -421,7 +421,7 @@ footer_tabs 滑動頁籤
 ------------------------------------------------------------------*/
 $(function(){
     $(".footer_tabs .tabs a").hover(function () {
-
+        $(this).click();
         var position = $(this).parent().position();
         var width = $(this).parent().width();
 
@@ -439,6 +439,7 @@ $(function(){
         "left": actPosition.left,
         "width": actWidth
     });
+    
 });
 
 /*------------------------------------------------------------------
