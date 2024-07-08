@@ -176,7 +176,7 @@
 			padding-bottom: 24px;
 		}
 		h2{
-			font-size: 1.875em;
+			font-size: 1em;
 			margin-bottom: 40px;
 			transition: $transition;
 			transform: translateX(-30%);
@@ -190,6 +190,12 @@
 			@include media('phone') {
 				font-size: 1.25em;
 				padding: 2px 0;
+			}
+			.zh{
+				font-size: 1.75em;
+			}
+			.en{
+				font-size: 1em;
 			}
 		}
 		p{
@@ -585,7 +591,7 @@
 			padding: 32px 16px 0px 16px;
 		}
 		h2{
-			font-size: 2.2em;
+			font-size: 1em;
 			letter-spacing: 0.1em;
 			margin-bottom: 56px;
 			transition: $transition;
@@ -598,8 +604,18 @@
 				}
 			}
 			@include media('phone') {
-				font-size: 1.25em;
+				font-size: 1em;
 				padding: 2px 0;
+			}
+			.chinese{
+				font-size: 1.75em;
+				margin-right: 8px;
+				@include media('mobile') {
+					font-size: 1.4em;
+				}
+				@include media('phone') {
+					font-size: 1.125em;
+				}
 			}
 		}
 		p{
