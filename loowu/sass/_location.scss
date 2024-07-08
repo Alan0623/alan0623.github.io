@@ -209,9 +209,10 @@
 			filter: blur(20px);
 			transition: 3s all;
 		}
-		.tabs{
+		ul.tabs a{
 			transform: translateY(100%);
 			opacity: 0;
+			transition-delay: .8s;
 		}
 	// }
 
@@ -226,7 +227,7 @@
 			opacity: 1;
 			filter: blur(0);
 		}
-		.tabs{
+		ul.tabs a{
 			transform: translateY(0);
 			opacity: 1;
 		}
