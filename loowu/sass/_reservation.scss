@@ -109,6 +109,10 @@
 			border-right: 0;
 			padding-bottom: 48px;
 			letter-spacing: 0.1em;
+			@include media('mobile') {
+				padding-top: 8px;
+				margin-top: 0;
+			}
 			.tab_list{
 				margin-bottom: 28px;
 			}
@@ -117,9 +121,16 @@
 			letter-spacing: 0.1em;
 			.part{
 				margin: 46px 0 19px 0;
+				@include media('mobile') {
+					margin: 46px 0 0 0;
+				}
 			}
 			.article_form:nth-child(even){
 				padding-right: 14px;
+				.checkbok{
+					display: block!important;
+					height: 44px;
+				}
 			}
 			.customer_information ul li:nth-child(5){
 				padding-bottom: 2px;
@@ -131,6 +142,7 @@
 					padding: 30px 0 36px 0;
 					@include media('mobile') {
 						max-width: 100%;
+						padding: 0px 0 36px 0;
 					}
 				}
 			}
@@ -263,6 +275,7 @@
 					margin-bottom: 0;
 					display: flex;
 					align-items: center;
+					margin-right: 16px;
 				}
 				@include media('phone') {
 					font-size: 1.25em;
@@ -278,14 +291,23 @@
 				height: 40px;
 				align-items: center;
 				letter-spacing: 0.1em;
+				@include media('phone') {
+					display: block;
+					height: auto;
+					clear: both;
+				}
 			}
-	
+			span{
+				min-height: 40px;
+				line-height: 44px;
+			}
 			ul{
 				clear: both;
 				padding: 14px 0 32px 0;
 				display: inline-block;
 				@include media('mobile') {
 					display: block;
+					padding: 0 0 32px 0;
 				}
 				li{
 					display: inline-block;
@@ -327,6 +349,13 @@
 				h3{
 					display: inline-block;
 					margin-right: 32px;
+					padding: 8px 20px;
+					padding-left: 0;
+					border-radius: 40px;
+					@include media('mobile') {
+						display: block;
+						padding-bottom: 16px;
+					}
 				}
 				li{
 					background-color: #F2F2F2;
@@ -340,9 +369,19 @@
 
 			&.customer_information{
 				// width: 50%;
-
+				@include media('mobile') {
+				    margin-top: 24px;
+				}
 				.h2{
 					margin-bottom: 24px;
+					@include media('mobile') {
+						margin-bottom: 4px;
+					}
+					& ~ p{
+						@include media('mobile') {
+							margin-bottom: 16px;
+						}
+					}
 				}
 				label{
 					@extend %hide-text;
@@ -372,6 +411,8 @@
 						}
 						p{
 							font-size: 0.9em;
+							width: 200%;
+							margin-top: 16px;
 						}
 					}
 				}
