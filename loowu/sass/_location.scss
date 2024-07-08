@@ -48,13 +48,14 @@
 		font-size: 1em;
 		letter-spacing: 0.1em;
 		margin-bottom: 40px;
+		margin-bottom: 24px;
 		transition: $transition;
 		@include media('mobile') {
 			margin-bottom: 16px;
 		}
 		.en,
 		.zh{
-			display: block;
+			// display: block;
 			font-size: 1.75em;
 			padding: 8px 0;
 			@include media('mobile') {
@@ -67,6 +68,8 @@
 		.en{
 			font-weight: normal;
 			font-size: 1em;
+			display: none;
+			opacity: 0;
 		}
 		.zh{
 			letter-spacing: 3px;
@@ -80,7 +83,8 @@
 		display: inline-block;
 		margin: 0 auto;
 		text-align: center;
-		margin-top: 40px;
+		margin-top: 0;
+		margin-bottom: 16px;
 		li{
 			display: block;
 			float: left;
@@ -98,7 +102,8 @@
 				transition: $transition;
 				@include rwd(685){
 					font-size: 1.125em;
-					padding: 8px 24px 12px 24px;
+					// padding: 8px 24px 12px 24px;
+					padding: 8px 18px 12px 18px;
 					text-align: center;
 					display: inline-block;
 				}
