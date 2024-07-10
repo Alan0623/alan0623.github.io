@@ -130,7 +130,7 @@
                         <h2><span class="zh">接案門檻</span></h2>
                         <div class="info">
                             <h3>老屋翻新</h3>
-                            <p>單層公寓、大樓:單層250萬起<br/>樓中樓、透天:400萬起</p>
+                            <p>單層：200萬起<br/>樓中樓、透天：400萬起</p>
                         </div>
                         <div class="info">
                             <h3>新成屋設計裝修</h3>
@@ -417,11 +417,12 @@
         // $sendButton.addEventListener('click', send);
         var c = {},
             $info_personal_name = $('#info_personal_name'),
-            // $demand = $('#demandValue'),
+            $info_decoration_age = $('#info_decoration_age'),
+            $info_line_id = $('#info_line_id'),
+            $info_indoor_decoration = $('#info_indoor_decoration'),
+            $info_contact_number = $('#info_contact_number'),
             $shopType = $('#shopTypeValue'),
             // $name = $('#nameValue'),
-            // $email = $('#emailValue'),
-            $info_contact_number = $('#info_contact_number'),
             // $county = $('#county'),
             // $distric = $('#distric'),
             $addressValue = $('#addressValue'),
@@ -449,9 +450,9 @@
             var err_txt = '', //錯誤訊息
                 chk = true;
             cusData.info_personal_name = $info_personal_name.val();
-            // cusData.demand = $demand.val();
-            // cusData.name = $name.val();
-            // cusData.email = $email.val();
+            cusData.info_decoration_age = $info_decoration_age.val();
+            cusData.info_line_id = $info_line_id.val();
+            cusData.info_indoor_decoration = $info_indoor_decoration.val();
             cusData.phone = $info_contact_number.val();
             cusShopType = $shopType.val();
             // cusCounty = $county.val();
@@ -459,6 +460,18 @@
             cusAdd = $addressValue.val();
             if (cusData.info_personal_name == '') {
                 err_txt += '請填寫真實姓名。\n';
+                chk = false;
+            }
+            if (cusData.info_decoration_age == '') {
+                err_txt += '請填寫裝修屋齡。\n';
+                chk = false;
+            }
+            if (cusData.info_line_id == '') {
+                err_txt += '請填寫LINE ID。\n';
+                chk = false;
+            }
+            if (cusData.info_indoor_decoration == '') {
+                err_txt += '請填寫室內裝修實際坪數。\n';
                 chk = false;
             }
             if (cusData.phone == '') {
