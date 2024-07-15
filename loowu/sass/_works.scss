@@ -250,3 +250,10 @@
 		padding-bottom: 64px;
 	}
 }
+
+.pchide{
+	display: none;
+	@include media('mobile') {
+		display: block;
+	}
+}
