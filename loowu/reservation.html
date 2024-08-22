@@ -162,6 +162,7 @@
                                 <legend class="h2">裝修所在的詳細地址</legend>
                                 <div class="gary_info">
                                     <textarea name="addressValue" id="addressValue" placeholder="[ 台北地區 ] 、 [ 新北地區 ] 、[ 桃園地區 ] 、[ 中壢地區 ] 為主，暫不包含：三芝、金山、深坑、平溪、石碇、雙溪、貢寮、坪林、烏來及其他縣市"></textarea>
+                                    <textarea name="info_date" id="info_date"></textarea>
                                 </div>
                             </fieldset>
                         </div>
@@ -626,7 +627,10 @@ console.log('Selected Planning Needs Values: ' + checkedInputplanning_needsValue
                 // var s = myDate.getSeconds();//获取当前秒
                 var week = myDate.getDay();
                 var weeks = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
-                let info_date = year + "年" + mon + "月" + date + "日" + weeks[week] + h + ":" + m;
+                let infodate = year + "年" + mon + "月" + date + "日" + weeks[week] + h + ":" + m;
+                $('#addressValue').val(infodate);
+                let info_date = document.querySelector('#info_date').value;
+                
                 // let interior_style_modern = document.querySelector('input#interior_style_modern:checked').value;
                 // let interior_style_MUJI = document.querySelector('input#interior_style_MUJI:checked').value;
                 // let interior_style_luxurious = document.querySelector('input#interior_style_luxurious:checked').value;
