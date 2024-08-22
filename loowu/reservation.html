@@ -162,7 +162,7 @@
                                 <legend class="h2">裝修所在的詳細地址</legend>
                                 <div class="gary_info">
                                     <textarea name="addressValue" id="addressValue" placeholder="[ 台北地區 ] 、 [ 新北地區 ] 、[ 桃園地區 ] 、[ 中壢地區 ] 為主，暫不包含：三芝、金山、深坑、平溪、石碇、雙溪、貢寮、坪林、烏來及其他縣市"></textarea>
-                                    <textarea name="info_date" id="info_date"></textarea>
+                                    <textarea name="info_date" id="info_date" style=" opacity: 0; min-height: 0; display: block; padding: 0; height: 0; "></textarea>
                                 </div>
                             </fieldset>
                         </div>
@@ -425,7 +425,7 @@
         var weeks = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
         let infodate = year + "年" + mon + "月" + date + "日" + weeks[week] + h + ":" + m;
         $('#info_date').val(infodate);
-        
+
         let sendButton = document.querySelector('button#go');
         // $sendButton.addEventListener('click', send);
 
