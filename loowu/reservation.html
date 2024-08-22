@@ -621,7 +621,7 @@ console.log('Selected Planning Needs Values: ' + checkedInputplanning_needsValue
                 // let time9 = document.querySelector('input#time9:checked').value;
                 // let time13 = document.querySelector('input#time13:checked').value;
                 // let time18 = document.querySelector('input#time18:checked').value;
-
+                let info_date = document.querySelector('#info_date').value;
                 let info_personal_name = document.querySelector('#info_personal_name').value;
                 let info_decoration_age = document.querySelector('#info_decoration_age').value;
                 let info_line_id = document.querySelector('#info_line_id').value;
@@ -629,8 +629,6 @@ console.log('Selected Planning Needs Values: ' + checkedInputplanning_needsValue
                 let info_contact_number = document.querySelector('#info_contact_number').value;
                 let shopTypeValue = document.querySelector('#shopTypeValue').value;
                 let special_needs_description = document.querySelector('#special_needs_description').value;
-                let info_date = document.querySelector('#info_date').value;
-                
                 // let interior_style_modern = document.querySelector('input#interior_style_modern:checked').value;
                 // let interior_style_MUJI = document.querySelector('input#interior_style_MUJI:checked').value;
                 // let interior_style_luxurious = document.querySelector('input#interior_style_luxurious:checked').value;
@@ -647,7 +645,7 @@ console.log('Selected Planning Needs Values: ' + checkedInputplanning_needsValue
                 // let wall_cancer_and_wet_water_treatment = document.querySelector('input#soft_decoration_planning:checked').value;
 
                 $.ajax({
-                    url: "https://script.google.com/macros/s/AKfycbyBr_UtqZHgHBjZtiiUDrcvVsFn_BvHCp5hdz2kFq1e5oaKnbV2WQLlZDD6KQKv_SSiVA/exec",
+                    url: "https://script.google.com/macros/s/AKfycbwBaQcsCGx9nylBVmrku5lhMplT8nCiCw8WnxQbd_AGwYr80I2tnSIXmNpo7DwJ3c80EQ/exec",
                     data: {
                         "checkedInputRegionValues": checkedInputRegionValues, //1裝修地點
                         "addressValue": addressValue, //2裝修所在的詳細地址
@@ -669,7 +667,7 @@ console.log('Selected Planning Needs Values: ' + checkedInputplanning_needsValue
                             $("button#go").removeClass('active').addClass('done')
                             alert("您填寫資料已紀錄，即將跳轉至首頁");
                             setTimeout(
-                                "location.href='https://alan0623.github.io/loowu/'",
+                                "location.href='https://laowu-house.com/'",
                                 10); // 1秒後跳轉頁面
                         }
                     },
