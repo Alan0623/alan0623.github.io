@@ -415,6 +415,16 @@
     <script>
         let sendButton = document.querySelector('button#go');
         // $sendButton.addEventListener('click', send);
+        var myDate = new Date;
+        var year = myDate.getFullYear(); //获取当前年
+        var mon = myDate.getMonth() + 1; //获取当前月
+        var date = myDate.getDate(); //获取当前日
+        var h = myDate.getHours();//获取当前小时数(0-23)
+        var m = myDate.getMinutes();//获取当前分钟数(0-59)
+        // var s = myDate.getSeconds();//获取当前秒
+        var week = myDate.getDay();
+        var weeks = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+       
         var c = {},
             $info_personal_name = $('#info_personal_name'),
             $info_decoration_age = $('#info_decoration_age'),
@@ -614,7 +624,7 @@ console.log('Selected Planning Needs Values: ' + checkedInputplanning_needsValue
                 let info_contact_number = document.querySelector('#info_contact_number').value;
                 let shopTypeValue = document.querySelector('#shopTypeValue').value;
                 let special_needs_description = document.querySelector('#special_needs_description').value;
-
+                let info_date = year + "年" + mon + "月" + date + "日" + weeks[week] + h + ":" + m;
                 // let interior_style_modern = document.querySelector('input#interior_style_modern:checked').value;
                 // let interior_style_MUJI = document.querySelector('input#interior_style_MUJI:checked').value;
                 // let interior_style_luxurious = document.querySelector('input#interior_style_luxurious:checked').value;
@@ -645,7 +655,8 @@ console.log('Selected Planning Needs Values: ' + checkedInputplanning_needsValue
                         "shopTypeValue": shopTypeValue, //10房屋類別
                         "special_needs_description": special_needs_description, //11特殊需求說明
                         "checkedInputinterior_styleValues": checkedInputinterior_styleValues, //12您喜歡的室內風格？  可複選
-                        "checkedInputplanning_needsValues": checkedInputplanning_needsValues //13規劃需求  可複選
+                        "checkedInputplanning_needsValues": checkedInputplanning_needsValues, //13規劃需求  可複選
+                        "info_date": info_date
                     },
                     success: function (response) {
                         if (response == "成功") {
