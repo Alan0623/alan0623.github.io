@@ -414,6 +414,18 @@
     <script src="js/script.js"></script>
     <script src="js/effect.js"></script>
     <script>
+        var myDate = new Date;
+        var year = myDate.getFullYear(); //获取当前年
+        var mon = myDate.getMonth() + 1; //获取当前月
+        var date = myDate.getDate(); //获取当前日
+        var h = myDate.getHours();//获取当前小时数(0-23)
+        var m = myDate.getMinutes();//获取当前分钟数(0-59)
+        // var s = myDate.getSeconds();//获取当前秒
+        var week = myDate.getDay();
+        var weeks = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+        let infodate = year + "年" + mon + "月" + date + "日" + weeks[week] + h + ":" + m;
+        $('#info_date').val(infodate);
+        
         let sendButton = document.querySelector('button#go');
         // $sendButton.addEventListener('click', send);
 
@@ -617,18 +629,6 @@ console.log('Selected Planning Needs Values: ' + checkedInputplanning_needsValue
                 let info_contact_number = document.querySelector('#info_contact_number').value;
                 let shopTypeValue = document.querySelector('#shopTypeValue').value;
                 let special_needs_description = document.querySelector('#special_needs_description').value;
-
-                var myDate = new Date;
-                var year = myDate.getFullYear(); //获取当前年
-                var mon = myDate.getMonth() + 1; //获取当前月
-                var date = myDate.getDate(); //获取当前日
-                var h = myDate.getHours();//获取当前小时数(0-23)
-                var m = myDate.getMinutes();//获取当前分钟数(0-59)
-                // var s = myDate.getSeconds();//获取当前秒
-                var week = myDate.getDay();
-                var weeks = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
-                let infodate = year + "年" + mon + "月" + date + "日" + weeks[week] + h + ":" + m;
-                $('#addressValue').val(infodate);
                 let info_date = document.querySelector('#info_date').value;
                 
                 // let interior_style_modern = document.querySelector('input#interior_style_modern:checked').value;
