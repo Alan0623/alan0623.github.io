@@ -1,0 +1,1679 @@
+/* Material Design 3 Variables */
+:root{
+  /* Material Design Color System */
+  --md-primary: #1976D2;
+  --md-primary-variant: #1565C0;
+  --md-secondary: #0288D1;
+  --md-secondary-variant: #0277BD;
+  --md-surface: #FFFFFF;
+  --md-background: #FAFAFA;
+  --md-error: #B00020;
+  --md-on-primary: #FFFFFF;
+  --md-on-secondary: #FFFFFF;
+  --md-on-surface: #000000;
+  --md-on-background: #000000;
+  --md-on-error: #FFFFFF;
+  
+  /* Material Design Elevation Shadows */
+  --md-elevation-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --md-elevation-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  --md-elevation-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  --md-elevation-4: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  --md-elevation-6: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  
+  /* Typography Scale */
+  --md-type-headline1: 96px;
+  --md-type-headline2: 60px;
+  --md-type-headline3: 48px;
+  --md-type-headline4: 34px;
+  --md-type-headline5: 24px;
+  --md-type-headline6: 20px;
+  --md-type-subtitle1: 16px;
+  --md-type-subtitle2: 14px;
+  --md-type-body1: 16px;
+  --md-type-body2: 14px;
+  --md-type-button: 14px;
+  --md-type-caption: 12px;
+  
+  /* Spacing */
+  --md-spacing-xs: 4px;
+  --md-spacing-sm: 8px;
+  --md-spacing-md: 16px;
+  --md-spacing-lg: 24px;
+  --md-spacing-xl: 32px;
+  --md-spacing-xxl: 48px;
+  
+  /* Border Radius */
+  --md-radius-sm: 4px;
+  --md-radius-md: 8px;
+  --md-radius-lg: 16px;
+  --md-radius-xl: 24px;
+  
+  --max-width: 1200px;
+}
+
+/* Material Design Reset */
+*{
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  background: var(--md-background);
+  color: var(--md-on-background);
+  line-height: 1.6;
+  font-size: var(--md-type-body1);
+}
+
+/* Material Design Header with Elevation */
+.site-header{
+  background: var(--md-surface);
+  box-shadow: var(--md-elevation-2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-header:hover{
+  box-shadow: var(--md-elevation-3);
+}
+
+.header-inner{
+  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--md-spacing-md);
+  height: 64px;
+}
+
+.brand{
+  position: absolute;
+  left: 72px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: var(--md-spacing-sm);
+  text-decoration: none;
+  color: var(--md-on-surface);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brand:hover{
+  transform: scale(1.02);
+}
+
+.logo{
+  font-size: 28px;
+}
+
+.title{
+  font-weight: 500;
+  font-size: var(--md-type-headline6);
+  letter-spacing: 0.15px;
+}
+
+.main-nav{
+  display: flex;
+  align-items: center;
+  gap: var(--md-spacing-md);
+}
+
+/* Material Design Button */
+.main-nav .btn-primary{
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+  padding: 10px 24px;
+  border-radius: var(--md-radius-sm);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: var(--md-type-button);
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  box-shadow: var(--md-elevation-2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav .btn-primary:hover{
+  background: var(--md-primary-variant);
+  box-shadow: var(--md-elevation-4);
+  transform: translateY(-2px);
+}
+
+.main-nav .btn-primary:active{
+  box-shadow: var(--md-elevation-1);
+  transform: translateY(0);
+}
+
+/* Material Design 漢堡選單按鈕 */
+.hamburger-menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--md-on-surface);
+  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: var(--md-spacing-sm);
+}
+
+.hamburger-menu:hover{
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.hamburger-menu:active{
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.hamburger-menu .material-icons{
+  font-size: 24px;
+}
+
+/* Material Design 側邊導航選單 */
+.side-nav{
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 320px;
+  height: 100vh;
+  background: var(--md-surface);
+  box-shadow: var(--md-elevation-6);
+  z-index: 2000;
+  overflow-y: auto;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.side-nav.active{
+  left: 0;
+}
+
+.side-nav-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--md-spacing-md) var(--md-spacing-lg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.side-nav-header h2{
+  margin: 0;
+  font-size: var(--md-type-headline6);
+  font-weight: 500;
+  color: var(--md-on-surface);
+}
+
+.close-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--md-on-surface);
+  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn:hover{
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.close-btn .material-icons{
+  font-size: 24px;
+}
+
+.side-nav-content{
+  padding: var(--md-spacing-sm) 0;
+}
+
+.nav-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item{
+  margin: 0;
+}
+
+.nav-item a{
+  display: flex;
+  align-items: center;
+  gap: var(--md-spacing-lg);
+  padding: var(--md-spacing-md) var(--md-spacing-lg);
+  color: var(--md-on-surface);
+  text-decoration: none;
+  font-size: var(--md-type-body1);
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item a:hover{
+  background: rgba(25, 118, 210, 0.08);
+}
+
+.nav-item a:active{
+  background: rgba(25, 118, 210, 0.12);
+}
+
+.nav-item .material-icons{
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-divider{
+  height: 1px;
+  background: rgba(0, 0, 0, 0.12);
+  margin: var(--md-spacing-sm) var(--md-spacing-md);
+}
+
+/* 遮罩層 */
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1500;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s;
+}
+
+.overlay.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* Material Design User Info */
+.g_id_signin{
+  display: inline-block;
+  box-shadow: var(--md-elevation-1);
+  border-radius: var(--md-radius-sm);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.g_id_signin:hover{
+  box-shadow: var(--md-elevation-2);
+}
+
+.user-info{
+  display: flex;
+  align-items: center;
+  gap: var(--md-spacing-md);
+  background: var(--md-surface);
+  padding: var(--md-spacing-sm) var(--md-spacing-md);
+  border-radius: 24px;
+  box-shadow: var(--md-elevation-1);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-info:hover{
+  box-shadow: var(--md-elevation-2);
+}
+
+.user-avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--md-elevation-1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-avatar:hover{
+  transform: scale(1.05);
+}
+
+.user-name{
+  font-size: var(--md-type-body1);
+  font-weight: 500;
+  color: var(--md-on-surface);
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: 0.15px;
+}
+
+.logout-btn{
+  background: transparent;
+  color: var(--md-primary);
+  border: none;
+  padding: var(--md-spacing-sm) var(--md-spacing-md);
+  border-radius: var(--md-radius-sm);
+  font-size: var(--md-type-button);
+  font-weight: 500;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logout-btn:hover{
+  background: rgba(25, 118, 210, 0.08);
+}
+
+@media (max-width:768px){
+  .main-nav{
+    flex-wrap: wrap;
+    gap: var(--md-spacing-sm);
+  }
+  
+  .user-name{
+    display: none;
+  }
+  
+  .user-info{
+    padding: var(--md-spacing-xs) var(--md-spacing-sm);
+  }
+  
+  .header-inner{
+    height: 56px;
+    padding: var(--md-spacing-sm);
+  }
+  
+  /* 手機版漢堡選單保持可見 */
+  .hamburger-menu{
+    width: 40px;
+    height: 40px;
+  }
+  
+  .brand .title{
+    font-size: 18px;
+  }
+  
+  /* 側邊選單全寬 */
+  .side-nav{
+    width: 280px;
+    left: -280px;
+  }
+}
+
+/* Material Design Hero Section */
+.hero{
+  background: linear-gradient(rgba(25, 118, 210, 0.85), rgba(21, 101, 192, 0.85)), 
+              url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1600&h=800&fit=crop') center/cover;
+  padding: var(--md-spacing-xxl) var(--md-spacing-md);
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-inner{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1{
+  font-size: var(--md-type-headline3);
+  font-weight: 400;
+  margin: 0 0 var(--md-spacing-md);
+  color: var(--md-on-primary);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.lead{
+  color: rgba(255, 255, 255, 0.95);
+  font-size: var(--md-type-headline6);
+  font-weight: 300;
+  margin: 0 0 var(--md-spacing-xl);
+  letter-spacing: 0.15px;
+  line-height: 1.5;
+}
+/* Material Design CTA Button */
+.cta{
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+  padding: 12px 32px;
+  border-radius: var(--md-radius-sm);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: var(--md-type-button);
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  box-shadow: var(--md-elevation-3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.cta:hover{
+  background: var(--md-primary-variant);
+  box-shadow: var(--md-elevation-6);
+  transform: translateY(-2px);
+}
+
+.cta:active{
+  box-shadow: var(--md-elevation-2);
+  transform: translateY(0);
+}
+
+/* Material Design Sections */
+.section{
+  padding: var(--md-spacing-xxl) var(--md-spacing-md);
+}
+
+.section.alt{
+  background: var(--md-surface);
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.05);
+}
+
+.section-inner{
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section h2{
+  font-size: var(--md-type-headline4);
+  font-weight: 400;
+  margin: 0 0 var(--md-spacing-md);
+  margin-bottom: 0;
+  color: var(--md-on-background);
+  letter-spacing: -0.5px;
+}
+
+.section-desc{
+  color: rgba(0, 0, 0, 0.6);
+  font-size: var(--md-type-body1);
+  margin: 0 0 var(--md-spacing-xl);
+  line-height: 1.6;
+  letter-spacing: 0.15px;
+}
+
+/* Material Design Category Tabs (Chips) */
+.category-tabs{
+  display: flex;
+  gap: var(--md-spacing-sm);
+  margin-bottom: var(--md-spacing-lg);
+  flex-wrap: wrap;
+}
+
+.tab{
+  background: var(--md-surface);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: var(--md-spacing-sm) var(--md-spacing-md);
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: var(--md-type-body2);
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.25px;
+}
+
+.tab:hover{
+  background: rgba(25, 118, 210, 0.08);
+  border-color: var(--md-primary);
+}
+
+.tab.active{
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+  border-color: var(--md-primary);
+  box-shadow: var(--md-elevation-1);
+}
+
+/* Material Design Survey Cards */
+.survey-cards-grid{
+  display: grid;
+  gap: var(--md-spacing-lg);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.survey-card{
+  background: var(--md-surface);
+  border-radius: var(--md-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--md-elevation-2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.survey-card:hover{
+  transform: translateY(-8px);
+  box-shadow: var(--md-elevation-4);
+}
+
+.survey-image{
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--md-spacing-md);
+}
+
+.category-badge{
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+  padding: var(--md-spacing-xs) var(--md-spacing-md);
+  border-radius: 16px;
+  font-size: var(--md-type-caption);
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  display: inline-block;
+  box-shadow: var(--md-elevation-1);
+  text-transform: uppercase;
+}
+
+.category-badge.blue{background:#1976D2}
+.category-badge.purple{background:#7B1FA2}
+.category-badge.orange{background:#F57C00}
+.category-badge.teal{background:#00897B}
+.category-badge.cyan{background:#0097A7}
+.category-badge.green{background:#388E3C}
+.category-badge.pink{background:#C2185B}
+
+.survey-content{
+  padding: var(--md-spacing-md);
+}
+
+.survey-content h3{
+  margin: 0 0 var(--md-spacing-sm);
+  font-size: var(--md-type-headline6);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.15px;
+  color: var(--md-on-surface);
+}
+
+.survey-desc{
+  color: rgba(0, 0, 0, 0.6);
+  font-size: var(--md-type-body2);
+  margin: 0 0 var(--md-spacing-md);
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.survey-stats{
+  display: flex;
+  gap: var(--md-spacing-md);
+  margin-bottom: var(--md-spacing-md);
+  flex-wrap: wrap;
+}
+
+.survey-stats .stat{
+  display: flex;
+  align-items: center;
+  gap: var(--md-spacing-xs);
+  font-size: var(--md-type-caption);
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+.survey-stats .stat svg{
+  flex-shrink: 0;
+}
+
+.survey-cta{
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+  padding: 10px var(--md-spacing-md);
+  border-radius: var(--md-radius-sm);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: var(--md-type-button);
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  width: 100%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--md-elevation-2);
+}
+
+.survey-cta:hover{
+  background: var(--md-primary-variant);
+  box-shadow: var(--md-elevation-3);
+}
+
+.survey-cta:active{
+  box-shadow: var(--md-elevation-1);
+}
+
+/* Material Design Report Cards */
+.report-cards-grid{
+  display: grid;
+  gap: var(--md-spacing-lg);
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+
+.report-card{
+  background: var(--md-surface);
+  border-radius: var(--md-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--md-elevation-2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.report-card:hover{
+  transform: translateY(-8px);
+  box-shadow: var(--md-elevation-4);
+}
+
+.report-image{
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+}
+
+.report-content{
+  padding: var(--md-spacing-lg);
+}
+.report-content h3{
+  margin: 0 0 var(--md-spacing-md);
+  font-size: var(--md-type-headline6);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.15px;
+  color: var(--md-on-surface);
+}
+
+.report-desc{
+  color: rgba(0, 0, 0, 0.6);
+  font-size: var(--md-type-body2);
+  margin: 0 0 var(--md-spacing-md);
+  line-height: 1.6;
+  letter-spacing: 0.25px;
+}
+
+.report-stats{
+  display: flex;
+  gap: var(--md-spacing-md);
+  margin-bottom: var(--md-spacing-md);
+  padding: var(--md-spacing-md) 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.stat-item{
+  flex: 1;
+  text-align: center;
+}
+
+.stat-number{
+  font-size: var(--md-type-headline6);
+  font-weight: 500;
+  color: var(--md-on-surface);
+  margin-bottom: var(--md-spacing-xs);
+  letter-spacing: 0.15px;
+}
+
+.stat-item.highlight .stat-number{
+  color: var(--md-primary);
+  font-weight: 500;
+}
+
+.stat-label{
+  font-size: var(--md-type-caption);
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.report-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.report-author{
+  display: flex;
+  align-items: center;
+  gap: var(--md-spacing-sm);
+}
+
+.author-avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--md-elevation-1);
+}
+
+.author-name{
+  font-size: var(--md-type-body2);
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.25px;
+}
+
+.report-cta{
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+  padding: 8px var(--md-spacing-md);
+  border-radius: var(--md-radius-sm);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: var(--md-type-button);
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--md-elevation-2);
+}
+
+.report-cta:hover{
+  background: var(--md-primary-variant);
+  box-shadow: var(--md-elevation-3);
+}
+
+/* Material Design Report List */
+.report-list{
+  margin-top: var(--md-spacing-xl);
+  background: var(--md-surface);
+  border-radius: var(--md-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--md-elevation-2);
+}
+
+.report-list-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--md-spacing-lg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.report-list-item:last-child{
+  border-bottom: none;
+}
+
+.report-list-item:hover{
+  background: rgba(25, 118, 210, 0.04);
+}
+
+.report-list-content{
+  flex: 1;
+  padding-right: var(--md-spacing-lg);
+}
+
+.report-list-title{
+  margin: 0 0 var(--md-spacing-xs);
+  font-size: var(--md-type-body1);
+  font-weight: 500;
+  color: var(--md-on-surface);
+  letter-spacing: 0.15px;
+}
+
+.report-list-insight{
+  margin: 0;
+  font-size: var(--md-type-body2);
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+}
+
+.report-list-meta{
+  display: flex;
+  align-items: center;
+  gap: var(--md-spacing-md);
+  flex-shrink: 0;
+}
+
+.report-list-sample{
+  font-size: var(--md-type-body2);
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+  letter-spacing: 0.25px;
+}
+
+.report-list-link{
+  color: var(--md-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: var(--md-type-button);
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.report-list-link:hover{
+  color: var(--md-primary-variant);
+}
+
+@media (max-width:768px){
+  .report-list-item{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--md-spacing-md);
+  }
+  
+  .report-list-meta{
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Material Design Tavern Section */
+.tavern-section{
+  background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+}
+
+.tavern-container{
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: var(--md-spacing-xl);
+}
+
+/* Task Wall with Material Design */
+.task-wall{
+  padding: var(--md-spacing-lg) 0;
+}
+
+.task-wall-title{
+  margin: 0 0 var(--md-spacing-lg);
+  font-size: var(--md-type-headline5);
+  font-weight: 500;
+  color: var(--md-on-surface);
+  letter-spacing: 0;
+  border-bottom: 2px solid var(--md-primary);
+  padding-bottom: var(--md-spacing-md);
+}
+
+.task-card{
+  background: var(--md-surface);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: var(--md-radius-md);
+  padding: var(--md-spacing-md);
+  margin-bottom: var(--md-spacing-md);
+  box-shadow: var(--md-elevation-1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.task-card:hover{
+  box-shadow: var(--md-elevation-3);
+  transform: translateY(-2px);
+}
+
+.task-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--md-spacing-md);
+}
+
+.task-author{
+  display: flex;
+  align-items: center;
+  gap: var(--md-spacing-sm);
+}
+
+.task-avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--md-elevation-1);
+}
+
+.task-author-name{
+  font-size: var(--md-type-body2);
+  font-weight: 500;
+  color: var(--md-on-surface);
+  letter-spacing: 0.25px;
+}
+
+.task-title{
+  margin: 0 0 var(--md-spacing-sm);
+  font-size: var(--md-type-subtitle1);
+  font-weight: 500;
+  color: var(--md-on-surface);
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+}
+
+.task-desc{
+  margin: 0 0 var(--md-spacing-md);
+  font-size: var(--md-type-body2);
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+}
+
+.task-reward{
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+  padding: var(--md-spacing-xs) var(--md-spacing-md);
+  border-radius: 16px;
+  font-size: var(--md-type-caption);
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  display: inline-block;
+  box-shadow: var(--md-elevation-1);
+  margin-bottom: 24px;
+}
+
+.task-progress{
+  margin-bottom: var(--md-spacing-md);
+}
+
+.progress-bar{
+  background: rgba(0, 0, 0, 0.12);
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: var(--md-spacing-xs);
+}
+
+.progress-fill{
+  background: orange;
+  height: 100%;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-text{
+  font-size: var(--md-type-caption);
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+.task-cta{
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+  padding: 10px var(--md-spacing-lg);
+  border-radius: var(--md-radius-sm);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: var(--md-type-button);
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  width: 100%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--md-elevation-2);
+}
+
+.task-cta:hover{
+  background: var(--md-primary-variant);
+  box-shadow: var(--md-elevation-3);
+}
+
+.task-cta:active{
+  transform: translateY(0);
+  box-shadow: var(--md-elevation-1);
+}
+
+/* Material Design Discussion Sidebar */
+.discussion-sidebar{
+  background: var(--md-surface);
+  border-radius: var(--md-radius-lg);
+  padding: var(--md-spacing-lg);
+  box-shadow: var(--md-elevation-2);
+}
+
+.sidebar-title{
+  margin: 0 0 var(--md-spacing-md);
+  font-size: var(--md-type-headline6);
+  font-weight: 500;
+  color: var(--md-on-surface);
+  letter-spacing: 0.15px;
+  border-bottom: 2px solid var(--md-primary);
+  padding-bottom: var(--md-spacing-sm);
+}
+
+.discussion-tabs{
+  display: flex;
+  gap: var(--md-spacing-sm);
+  margin-bottom: var(--md-spacing-md);
+  flex-wrap: wrap;
+}
+
+.discussion-tab{
+  background: rgba(0, 0, 0, 0.04);
+  border: none;
+  padding: var(--md-spacing-sm) var(--md-spacing-md);
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: var(--md-type-body2);
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgba(0, 0, 0, 0.87);
+  letter-spacing: 0.25px;
+}
+
+.discussion-tab:hover{
+  background: rgba(25, 118, 210, 0.08);
+}
+
+.discussion-tab.active{
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+  box-shadow: var(--md-elevation-1);
+}
+
+.discussion-list{
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.discussion-item{
+  background: var(--md-surface);
+  border-radius: var(--md-radius-md);
+  padding: var(--md-spacing-md) 0;
+  margin-bottom: var(--md-spacing-md);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.discussion-item:hover{
+  box-shadow: var(--md-elevation-2);
+  transform: translateY(-2px);
+}
+
+.discussion-title{
+  margin: 0 0 var(--md-spacing-xs);
+  font-size: var(--md-type-body1);
+  font-weight: 500;
+  color: var(--md-on-surface);
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+}
+
+.discussion-meta{
+  margin: 0 0 var(--md-spacing-sm);
+  font-size: var(--md-type-caption);
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.4;
+  letter-spacing: 0.4px;
+}
+
+.discussion-stats{
+  display: flex;
+  gap: var(--md-spacing-md);
+  margin-bottom: var(--md-spacing-sm);
+  font-size: var(--md-type-caption);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.discussion-stats .stat{
+  display: flex;
+  align-items: center;
+  gap: var(--md-spacing-xs);
+}
+
+.discussion-join{
+  background: white;
+  color: var(--md-primary);
+  padding: var(--md-spacing-sm) var(--md-spacing-md);
+  border-radius: var(--md-radius-sm);
+  border: var(--md-primary) solid 1px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: var(--md-type-button);
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+
+.discussion-join:hover{
+  background: var(--md-primary-variant);
+  box-shadow: var(--md-elevation-3);
+  transform: translateY(-2px);
+}
+
+@media (max-width:900px){
+  .tavern-container{
+    grid-template-columns: 1fr;
+  }
+  
+  .discussion-sidebar{
+    max-height: 500px;
+  }
+  
+  .discussion-list{
+    max-height: 400px;
+  }
+}
+
+/* Material Design Challenge Section */
+.challenge-section{
+  background: var(--md-surface);
+}
+
+.challenge-section h2{
+  color: var(--md-on-surface);
+  text-align: center;
+  font-size: var(--md-type-headline4);
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  margin-bottom: var(--md-spacing-xl);
+}
+
+.challenge-tabs{
+  display: flex;
+  gap: var(--md-spacing-md);
+  margin-bottom: var(--md-spacing-xl);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.challenge-tab{
+  background: var(--md-surface);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 10px var(--md-spacing-lg);
+  border-radius: var(--md-radius-sm);
+  cursor: pointer;
+  font-size: var(--md-type-body1);
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--md-on-surface);
+  letter-spacing: 0.15px;
+}
+
+.challenge-tab:hover{
+  border-color: var(--md-primary);
+  background: rgba(25, 118, 210, 0.04);
+}
+
+.challenge-tab.active{
+  background: var(--md-primary);
+  border-color: var(--md-primary);
+  color: var(--md-on-primary);
+  box-shadow: var(--md-elevation-2);
+}
+
+.challenge-content{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--md-spacing-xxl);
+  align-items: center;
+}
+
+/* Material Design Survey Preview */
+.survey-preview{
+  position: relative;
+}
+
+.preview-container{
+  background: linear-gradient(135deg, #1976D2 0%, #1565C0 100%);
+  border-radius: var(--md-radius-lg);
+  padding: var(--md-spacing-lg);
+  box-shadow: var(--md-elevation-4);
+  margin-bottom: var(--md-spacing-lg);
+}
+
+.preview-header{
+  background: var(--md-surface);
+  border-radius: var(--md-radius-md);
+  padding: var(--md-spacing-lg);
+  margin-bottom: var(--md-spacing-lg);
+}
+
+.sparkle-icon{
+  font-size: 2.5rem;
+  margin-bottom: var(--md-spacing-md);
+}
+
+.ai-prompt{
+  margin-bottom: var(--md-spacing-md);
+}
+
+.prompt-title{
+  font-weight: 500;
+  font-size: var(--md-type-subtitle1);
+  margin: 0 0 var(--md-spacing-xs);
+  color: var(--md-on-surface);
+  letter-spacing: 0.15px;
+}
+
+.prompt-subtitle{
+  font-size: var(--md-type-body2);
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+  letter-spacing: 0.25px;
+}
+
+.prompt-input{
+  display: flex;
+  gap: var(--md-spacing-sm);
+}
+
+.prompt-input input{
+  flex: 1;
+  padding: 12px var(--md-spacing-md);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: var(--md-radius-sm);
+  font-size: var(--md-type-body1);
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.prompt-input input:focus{
+  outline: none;
+  border-color: var(--md-primary);
+  border-width: 2px;
+}
+
+.send-btn{
+  background: var(--md-secondary);
+  color: var(--md-on-secondary);
+  padding: 12px var(--md-spacing-lg);
+  border: none;
+  border-radius: var(--md-radius-sm);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: var(--md-type-button);
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--md-elevation-2);
+}
+
+.send-btn:hover{
+  background: var(--md-secondary-variant);
+  box-shadow: var(--md-elevation-3);
+}
+
+.preview-body{
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--md-radius-md);
+  padding: var(--md-spacing-lg);
+}
+
+.survey-question{
+  margin-bottom: var(--md-spacing-lg);
+}
+
+.survey-question h4{
+  color: #fff;
+  font-size: var(--md-type-subtitle1);
+  margin: 0 0 var(--md-spacing-md);
+  font-weight: 500;
+  letter-spacing: 0.15px;
+}
+
+.rating-options{
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-spacing-sm);
+}
+
+.rating-options label{
+  color: #fff;
+  font-size: var(--md-type-body2);
+  display: flex;
+  align-items: center;
+  gap: var(--md-spacing-sm);
+  cursor: pointer;
+  padding: var(--md-spacing-sm);
+  border-radius: var(--md-radius-sm);
+  transition: background 0.2s;
+  letter-spacing: 0.25px;
+}
+
+.rating-options label:hover{
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.rating-options input[type="radio"]{
+  margin: 0;
+  accent-color: var(--md-secondary);
+}
+
+/* Material Design Survey Analysis */
+.survey-analysis{
+  background: var(--md-surface);
+  border-radius: var(--md-radius-md);
+  padding: var(--md-spacing-lg);
+}
+
+.survey-analysis h5{
+  margin: 0 0 var(--md-spacing-md);
+  font-size: var(--md-type-subtitle1);
+  font-weight: 500;
+  color: var(--md-on-surface);
+  letter-spacing: 0.15px;
+}
+
+.score-display{
+  display: flex;
+  gap: var(--md-spacing-md);
+  justify-content: center;
+}
+
+.score-box{
+  text-align: center;
+  padding: var(--md-spacing-lg);
+  border-radius: var(--md-radius-md);
+  min-width: 120px;
+  box-shadow: var(--md-elevation-2);
+}
+
+.score-box.yellow{
+  background: #FBC02D;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.score-box.green{
+  background: #388E3C;
+  color: #fff;
+}
+
+.score-number{
+  font-size: var(--md-type-headline4);
+  font-weight: 400;
+  margin-bottom: var(--md-spacing-xs);
+}
+
+.score-label{
+  font-size: var(--md-type-caption);
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.preview-image{
+  border-radius: var(--md-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--md-elevation-3);
+}
+
+.preview-image img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Material Design Challenge Info */
+.challenge-info h3{
+  font-size: var(--md-type-headline4);
+  font-weight: 400;
+  margin: 0 0 var(--md-spacing-md);
+  color: var(--md-on-surface);
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.info-desc{
+  font-size: var(--md-type-body1);
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0 0 var(--md-spacing-xl);
+  line-height: 1.6;
+  letter-spacing: 0.15px;
+}
+
+.info-links{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--md-spacing-xl);
+}
+
+.info-links li{
+  margin-bottom: var(--md-spacing-md);
+}
+
+.info-links a{
+  color: var(--md-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: var(--md-type-body1);
+  transition: color 0.2s;
+  letter-spacing: 0.15px;
+}
+
+.info-links a:hover{
+  color: var(--md-primary-variant);
+  text-decoration: underline;
+}
+
+.info-cta{
+  background: transparent;
+  color: var(--md-primary);
+  border: 2px solid var(--md-primary);
+  padding: 10px var(--md-spacing-xl);
+  border-radius: var(--md-radius-sm);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: var(--md-type-button);
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-cta:hover{
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+  box-shadow: var(--md-elevation-2);
+}
+
+@media (max-width:900px){
+  .challenge-content{
+    grid-template-columns: 1fr;
+  }
+  
+  .challenge-info{
+    order: -1;
+  }
+}
+
+/* Material Design Footer */
+.site-footer{
+  padding: var(--md-spacing-xxl) var(--md-spacing-lg) var(--md-spacing-xl);
+  background: #263238;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.footer-inner{
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer-columns{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--md-spacing-xxl);
+  margin-bottom: var(--md-spacing-xxl);
+}
+
+.footer-column h4.footer-title{
+  font-size: var(--md-type-subtitle1);
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 var(--md-spacing-md);
+  letter-spacing: 0.15px;
+}
+
+.footer-links{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li{
+  margin-bottom: var(--md-spacing-sm);
+}
+
+.footer-links a{
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: var(--md-type-body2);
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--md-spacing-xs);
+  letter-spacing: 0.25px;
+}
+
+.footer-links a:hover{
+  color: #fff;
+}
+
+.badge-hiring{
+  background: #00C853;
+  color: #fff;
+  padding: 2px var(--md-spacing-sm);
+  border-radius: 12px;
+  font-size: var(--md-type-caption);
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.footer-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--md-spacing-xl) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: var(--md-spacing-lg);
+}
+
+.lang-selector{
+  padding: var(--md-spacing-sm) var(--md-spacing-md);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--md-radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  font-size: var(--md-type-body2);
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.87);
+  transition: all 0.2s;
+}
+
+.lang-selector:hover{
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-social{
+  display: flex;
+  gap: var(--md-spacing-md);
+}
+
+.social-link{
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.social-link:hover{
+  color: #fff;
+}
+
+.footer-legal{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--md-spacing-lg);
+}
+
+.copyright{
+  margin: 0;
+  font-size: var(--md-type-body2);
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.25px;
+}
+
+.legal-links{
+  display: flex;
+  gap: var(--md-spacing-sm);
+  align-items: center;
+  font-size: var(--md-type-body2);
+}
+
+.legal-links a{
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+  letter-spacing: 0.25px;
+}
+
+.legal-links a:hover{
+  color: #fff;
+}
+
+.legal-links span{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width:1024px){
+  .footer-columns{
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--md-spacing-xl);
+  }
+}
+
+@media (max-width:768px){
+  .footer-columns{
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--md-spacing-xl);
+  }
+  
+  .footer-bottom{
+    flex-direction: column;
+    gap: var(--md-spacing-lg);
+  }
+  
+  .footer-legal{
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width:480px){
+  .footer-columns{
+    grid-template-columns: 1fr;
+  }
+}

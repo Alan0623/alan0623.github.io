@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>數據風向球 — 首頁</title>
+    <!-- Material Design Roboto Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Google Sign-In API -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <!-- 漢堡選單按鈕 -->
+        <button class="hamburger-menu" id="hamburger-btn" aria-label="開啟選單">
+          <span class="material-icons">menu</span>
+        </button>
+        <a class="brand" href="#">
+          <span class="logo">🌐</span>
+          <span class="title">數據風向球</span>
+        </a>
+        <nav class="main-nav">
+          <a class="btn-primary" href="#create">創建問卷</a>
+          <div id="g_id_onload"
+               data-client_id="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
+               data-callback="handleCredentialResponse"
+               data-auto_prompt="false">
+          </div>
+          <div class="g_id_signin" 
+               data-type="standard"
+               data-shape="rectangular"
+               data-theme="outline"
+               data-text="signin_with"
+               data-size="large"
+               data-logo_alignment="left">
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 側邊導航選單 -->
+    <nav class="side-nav" id="side-nav">
+      <div class="side-nav-header">
+        <h2>選單</h2>
+        <button class="close-btn" id="close-btn" aria-label="關閉選單">
+          <span class="material-icons">close</span>
+        </button>
+      </div>
+      
+      <div class="side-nav-content">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#surveys">
+              <span class="material-icons">assignment</span>
+              <span>探索問卷</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#create">
+              <span class="material-icons">add_circle</span>
+              <span>創建問卷</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#reports">
+              <span class="material-icons">bar_chart</span>
+              <span>分析報告</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#tavern">
+              <span class="material-icons">forum</span>
+              <span>酒館｜社群</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#templates">
+              <span class="material-icons">library_books</span>
+              <span>範本庫</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#my-surveys">
+              <span class="material-icons">folder</span>
+              <span>我的問卷</span>
+            </a>
+          </li>
+          <li class="nav-divider"></li>
+          <li class="nav-item">
+            <a href="#settings">
+              <span class="material-icons">settings</span>
+              <span>設定</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#help">
+              <span class="material-icons">help</span>
+              <span>幫助中心</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 遮罩層 -->
+    <div class="overlay" id="overlay"></div>
+
+    <script>
+      // Google Sign-In 回調函數
+      function handleCredentialResponse(response) {
+        // 解析 JWT token
+        const responsePayload = parseJwt(response.credential);
+        
+        console.log("ID: " + responsePayload.sub);
+        console.log('Full Name: ' + responsePayload.name);
+        console.log('Given Name: ' + responsePayload.given_name);
+        console.log('Family Name: ' + responsePayload.family_name);
+        console.log("Image URL: " + responsePayload.picture);
+        console.log("Email: " + responsePayload.email);
+
+        // 顯示用戶資訊
+        displayUserInfo(responsePayload);
+        
+        // 這裡可以將 token 發送到後端進行驗證
+        // sendTokenToBackend(response.credential);
+      }
+
+      // 解析 JWT token
+      function parseJwt(token) {
+        const base64Url = token.split('.')[1];
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+          return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+        return JSON.parse(jsonPayload);
+      }
+
+      // 顯示用戶資訊
+      function displayUserInfo(user) {
+        const mainNav = document.querySelector('.main-nav');
+        const googleBtn = document.querySelector('.g_id_signin');
+        
+        if (googleBtn) {
+          googleBtn.style.display = 'none';
+        }
+
+        const userInfo = document.createElement('div');
+        userInfo.className = 'user-info';
+        userInfo.innerHTML = `
+          <img src="${user.picture}" alt="${user.name}" class="user-avatar">
+          <span class="user-name">${user.name}</span>
+          <button class="logout-btn" onclick="signOut()">登出</button>
+        `;
+        mainNav.appendChild(userInfo);
+      }
+
+      // 登出函數
+      function signOut() {
+        // 清除 Google 登入狀態
+        google.accounts.id.disableAutoSelect();
+        
+        // 重新載入頁面
+        location.reload();
+      }
+
+      // 發送 token 到後端（範例）
+      function sendTokenToBackend(token) {
+        fetch('/api/auth/google', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ token: token })
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Backend response:', data);
+          // 處理後端回應，例如儲存 session
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+      }
+    </script>
+
+    <main>
+      <!-- 大幅 Banner -->
+      <section class="hero">
+        <div class="hero-inner">
+          <h1>用問卷聆聽真實聲音，讓決策有數據支持</h1>
+          <p class="lead">快速建立問卷、分享給社群，並直觀檢視類別分析結果 — 立即開始，收集第一份回應。</p>
+          <p>
+            <a class="cta" id="create" href="#">創建問卷</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- 待測問卷列表區塊 -->
+      <section class="section" aria-labelledby="upcoming-surveys">
+        <div class="section-inner">
+          <h2 id="upcoming-surveys">熱門問卷等你來挑戰</h2>
+          <p class="section-desc">選擇感興趣的主題，開始你的冒險之旅</p>
+
+          <!-- 類別篩選器 -->
+          <div class="category-tabs">
+            <button class="tab active">全部</button>
+            <button class="tab">娛樂遊戲</button>
+            <button class="tab">職場調查</button>
+            <button class="tab">學術研究</button>
+            <button class="tab">情感心理</button>
+            <button class="tab">美食生活</button>
+            <button class="tab">科技數位</button>
+          </div>
+
+          <div class="survey-cards-grid">
+            <article class="survey-card">
+              <div class="survey-image" style="background-image: url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&h=250&fit=crop');">
+                <span class="category-badge">娛樂遊戲</span>
+              </div>
+              <div class="survey-content">
+                <h3>手遊玩家消費習慣大調查</h3>
+                <p class="survey-desc">玩家不同類型手遊玩家的付費意願與偏好，與我們緊密聯繫歸屬者。</p>
+                <div class="survey-stats">
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10 分鐘</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 1.6K 人</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> 80 積分</span>
+                </div>
+                <button class="survey-cta">開始挑戰</button>
+              </div>
+            </article>
+
+            <article class="survey-card">
+              <div class="survey-image" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop');">
+                <span class="category-badge blue">職場調查</span>
+              </div>
+              <div class="survey-content">
+                <h3>遠距工作效率與挑戰</h3>
+                <p class="survey-desc">了解遠距工作者面臨的挑戰，以及能生存丰的方法。</p>
+                <div class="survey-stats">
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 分鐘</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 2.5K 人</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> 60 積分</span>
+                </div>
+                <button class="survey-cta">開始挑戰</button>
+              </div>
+            </article>
+
+            <article class="survey-card">
+              <div class="survey-image" style="background-image: url('https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=400&h=250&fit=crop');">
+                <span class="category-badge purple">學術研究</span>
+              </div>
+              <div class="survey-content">
+                <h3>大學生線上上學習經驗探討</h3>
+                <p class="survey-desc">分析疫情後大學生線上學習的適應狀況與未來期望，探討數位教學平台的使用體驗、學習效果評估、師生互動模式，以及混合式教學的可行性與挑戰，為後疫情時代的高等教育發展提供重要參考依據。</p>
+                <div class="survey-stats">
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 12 分鐘</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 3.1K 人</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> 100 積分</span>
+                </div>
+                <button class="survey-cta">開始挑戰</button>
+              </div>
+            </article>
+
+            <article class="survey-card">
+              <div class="survey-image" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=400&h=250&fit=crop');">
+                <span class="category-badge orange">美食生活</span>
+              </div>
+              <div class="survey-content">
+                <h3>台灣人最愛的手搖飲品牌</h3>
+                <p class="survey-desc">你今天喝手搖了嗎？ 幫本地茶飲吹盡你心中最愛的品項！</p>
+                <div class="survey-stats">
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 5 分鐘</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 10K+ 人</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> 30 積分</span>
+                </div>
+                <button class="survey-cta">開始挑戰</button>
+              </div>
+            </article>
+
+            <article class="survey-card">
+              <div class="survey-image" style="background-image: url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&h=250&fit=crop');">
+                <span class="category-badge teal">情感心理</span>
+              </div>
+              <div class="survey-content">
+                <h3>現代人的孤獨感指數</h3>
+                <p class="survey-desc">探索都市生活中的孤獨感來源，以及人們如何面對與調適。</p>
+                <div class="survey-stats">
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 15 分鐘</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 4.2K 人</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> 120 積分</span>
+                </div>
+                <button class="survey-cta">開始挑戰</button>
+              </div>
+            </article>
+
+            <article class="survey-card">
+              <div class="survey-image" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=250&fit=crop');">
+                <span class="category-badge cyan">科技數位</span>
+              </div>
+              <div class="survey-content">
+                <h3>AI 工具使用習慣調查</h3>
+                <p class="survey-desc">了解大眾對 ChatGPT 等 AI 工具的使用頻率與應用場景。</p>
+                <div class="survey-stats">
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 分鐘</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 5.8K 人</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> 70 積分</span>
+                </div>
+                <button class="survey-cta">開始挑戰</button>
+              </div>
+            </article>
+
+            <article class="survey-card">
+              <div class="survey-image" style="background-image: url('https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=400&h=250&fit=crop');">
+                <span class="category-badge green">娛樂遊戲</span>
+              </div>
+              <div class="survey-content">
+                <h3>Netflix 追劇偏好大調查</h3>
+                <p class="survey-desc">你最愛的劇種類型是什麼？一起來分享追劇心得吧！</p>
+                <div class="survey-stats">
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 分鐘</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 8.3K 人</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> 40 積分</span>
+                </div>
+                <button class="survey-cta">開始挑戰</button>
+              </div>
+            </article>
+
+            <article class="survey-card">
+              <div class="survey-image" style="background-image: url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=250&fit=crop');">
+                <span class="category-badge pink">娛樂遊戲</span>
+              </div>
+              <div class="survey-content">
+                <h3>電競選手訓練習慣研究</h3>
+                <p class="survey-desc">深入了解職業與業餘電競選手的日常訓練方式與心態調整。</p>
+                <div class="survey-stats">
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 18 分鐘</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 1.9K 人</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> 150 積分</span>
+                </div>
+                <button class="survey-cta">開始挑戰</button>
+              </div>
+            </article>
+
+                        <article class="survey-card">
+              <div class="survey-image" style="background-image: url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=250&fit=crop');">
+                <span class="category-badge pink">娛樂遊戲</span>
+              </div>
+              <div class="survey-content">
+                <h3>電競選手訓練習慣研究</h3>
+                <p class="survey-desc">深入了解職業與業餘電競選手的日常訓練方式與心態調整。</p>
+                <div class="survey-stats">
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 18 分鐘</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 1.9K 人</span>
+                  <span class="stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> 150 積分</span>
+                </div>
+                <button class="survey-cta">開始挑戰</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 各類別分析結果區塊 -->
+      <section class="section alt" aria-labelledby="category-analysis">
+        <div class="section-inner">
+          <h2 id="category-analysis">數據風向：熱門洞察報告</h2>
+          <p class="section-desc">探索最受歡迎的調查結果，發現趨勢與洞察</p>
+
+          <div class="report-cards-grid">
+            <article class="report-card">
+              <div class="report-image" style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop');">
+              </div>
+              <div class="report-content">
+                <h3>2025 台灣年輕人飲食習慣大調查</h3>
+                <p class="report-desc">本報告深入分析 Z 世代與千禧世代的飲食選擇，從健康意識、外食頻率到對永續食物的看法，揭示了最新的消費趨勢與場域。</p>
+                <div class="report-stats">
+                  <div class="stat-item">
+                    <div class="stat-number">3,542 人</div>
+                    <div class="stat-label">樣本數</div>
+                  </div>
+                  <div class="stat-item highlight">
+                    <div class="stat-number">65% 每週外食超過 5 次</div>
+                    <div class="stat-label">關鍵發現</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number">89</div>
+                    <div class="stat-label">則留言</div>
+                  </div>
+                </div>
+                <div class="report-footer">
+                  <div class="report-author">
+                    <img src="https://i.pravatar.cc/40?img=1" alt="作者" class="author-avatar">
+                    <span class="author-name">數據洞察實驗室</span>
+                  </div>
+                  <button class="report-cta">查看報告</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="report-card">
+              <div class="report-image" style="background-image: url('https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=600&h=400&fit=crop');">
+              </div>
+              <div class="report-content">
+                <h3>AI 工具在職場的應用與焦慮報告</h3>
+                <p class="report-desc">隨著生成式 AI 的崛起，本報告探討了職場公室工作者如何應用 AI 工具提升效率，同時分析了他們對於工作被代的潛在焦慮感。</p>
+                <div class="report-stats">
+                  <div class="stat-item">
+                    <div class="stat-number">1,820 人</div>
+                    <div class="stat-label">樣本數</div>
+                  </div>
+                  <div class="stat-item highlight">
+                    <div class="stat-number">72% 認為 AI 提升工作效率</div>
+                    <div class="stat-label">關鍵發現</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number">152</div>
+                    <div class="stat-label">則留言</div>
+                  </div>
+                </div>
+                <div class="report-footer">
+                  <div class="report-author">
+                    <img src="https://i.pravatar.cc/40?img=2" alt="作者" class="author-avatar">
+                    <span class="author-name">未來工作研究社</span>
+                  </div>
+                  <button class="report-cta">查看報告</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="report-card">
+              <div class="report-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop');">
+              </div>
+              <div class="report-content">
+                <h3>台灣電商消費行為趨勢分析</h3>
+                <p class="report-desc">深入剖析台灣消費者在線上購物的偏好、決策因素與支付習慣，揭示後疫情時代的電商新常態。</p>
+                <div class="report-stats">
+                  <div class="stat-item">
+                    <div class="stat-number">4,231 人</div>
+                    <div class="stat-label">樣本數</div>
+                  </div>
+                  <div class="stat-item highlight">
+                    <div class="stat-number">83% 優先選擇免運費</div>
+                    <div class="stat-label">關鍵發現</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number">203</div>
+                    <div class="stat-label">則留言</div>
+                  </div>
+                </div>
+                <div class="report-footer">
+                  <div class="report-author">
+                    <img src="https://i.pravatar.cc/40?img=3" alt="作者" class="author-avatar">
+                    <span class="author-name">電商觀察站</span>
+                  </div>
+                  <button class="report-cta">查看報告</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 文字列表型報告 -->
+          <div class="report-list">
+            <div class="report-list-item">
+              <div class="report-list-content">
+                <h4 class="report-list-title">台灣上班族通勤方式大調查</h4>
+                <p class="report-list-insight">關鍵發現：58% 通勤時間超過 40 分鐘，捷運為首選交通工具</p>
+              </div>
+              <div class="report-list-meta">
+                <span class="report-list-sample">樣本數 2,456 人</span>
+                <a href="#" class="report-list-link">查看報告 →</a>
+              </div>
+            </div>
+
+            <div class="report-list-item">
+              <div class="report-list-content">
+                <h4 class="report-list-title">手機使用習慣與數位健康研究</h4>
+                <p class="report-list-insight">關鍵發現：平均每日螢幕時間 5.2 小時，70% 曾嘗試減少使用時間</p>
+              </div>
+              <div class="report-list-meta">
+                <span class="report-list-sample">樣本數 3,892 人</span>
+                <a href="#" class="report-list-link">查看報告 →</a>
+              </div>
+            </div>
+
+            <div class="report-list-item">
+              <div class="report-list-content">
+                <h4 class="report-list-title">永續消費意識調查報告</h4>
+                <p class="report-list-insight">關鍵發現：76% 願意為環保產品支付溢價，但實際行動率僅 42%</p>
+              </div>
+              <div class="report-list-meta">
+                <span class="report-list-sample">樣本數 1,687 人</span>
+                <a href="#" class="report-list-link">查看報告 →</a>
+              </div>
+            </div>
+
+            <div class="report-list-item">
+              <div class="report-list-content">
+                <h4 class="report-list-title">遠距工作滿意度與挑戰分析</h4>
+                <p class="report-list-insight">關鍵發現：81% 希望保持混合辦公模式，最大挑戰為工作生活界線模糊</p>
+              </div>
+              <div class="report-list-meta">
+                <span class="report-list-sample">樣本數 2,134 人</span>
+                <a href="#" class="report-list-link">查看報告 →</a>
+              </div>
+            </div>
+
+            <div class="report-list-item">
+              <div class="report-list-content">
+                <h4 class="report-list-title">社群媒體使用偏好與影響力研究</h4>
+                <p class="report-list-insight">關鍵發現：Instagram 為最常使用平台，短影音內容互動率提升 3 倍</p>
+              </div>
+              <div class="report-list-meta">
+                <span class="report-list-sample">樣本數 4,521 人</span>
+                <a href="#" class="report-list-link">查看報告 →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 社群討論區 / 酒館媒合 -->
+      <section class="section tavern-section" aria-labelledby="tavern">
+        <div class="section-inner">
+          <h2 id="tavern">風向球酒館：任務媒合大廳</h2>
+          <p class="section-desc">在這裡找到志同道合的夥伴，接取感興趣的周邊任務</p>
+
+          <div class="tavern-container">
+            <!-- 左側：任務牆 -->
+            <div class="task-wall">
+              <h3 class="task-wall-title">任務牆</h3>
+              
+              <article class="task-card">
+                <div class="task-header">
+                  <div class="task-author">
+                    <img src="https://i.pravatar.cc/40?img=11" alt="發布者" class="task-avatar">
+                    <span class="task-author-name">研究生小魚</span>
+                  </div>
+                </div>
+                <h4 class="task-title">尋找 25-35 歲上班族填寫職場調查</h4>
+                <p class="task-desc">我的畢業論文需要更多的幫助！問卷關於工作滿意度與壓力源，懇名填寫，感謝！</p>
+                <div class="task-reward">獎勵：100 積分 + 抽星巴克禮券</div>
+                <div class="task-progress">
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 35%"></div>
+                  </div>
+                  <span class="progress-text">35/100</span>
+                </div>
+                <button class="task-cta">接取任務</button>
+              </article>
+
+              <article class="task-card">
+                <div class="task-header">
+                  <div class="task-author">
+                    <img src="https://i.pravatar.cc/40?img=12" alt="發布者" class="task-avatar">
+                    <span class="task-author-name">商量球科技</span>
+                  </div>
+                </div>
+                <h4 class="task-title">誠徵資深鏟屎官分享養貓經驗</h4>
+                <p class="task-desc">我們正在開發新的貓咪智能餵食器，想了解您與愛貓的互動模式，歡迎各路貓奴！</p>
+                <div class="task-reward">獎勵：120 積分 + 產品優先體驗權</div>
+                <div class="task-progress">
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 58%"></div>
+                  </div>
+                  <span class="progress-text">88/150</span>
+                </div>
+                <button class="task-cta">接取任務</button>
+              </article>
+            </div>
+
+            <!-- 右側：熱門討論 -->
+            <aside class="discussion-sidebar">
+              <h3 class="sidebar-title">熱門討論</h3>
+              
+              <div class="discussion-tabs">
+                <button class="discussion-tab active">全部</button>
+                <button class="discussion-tab">問卷技巧</button>
+                <button class="discussion-tab">數據分析</button>
+              </div>
+
+              <div class="discussion-list">
+                <article class="discussion-item">
+                  <h5 class="discussion-title">如何提升問卷回應率？</h5>
+                  <p class="discussion-meta">最新：我整理了實戰心得引人共鳴...</p>
+                  <div class="discussion-stats">
+                    <span class="stat">👥 25 人參與</span>
+                    <span class="stat">⏱️ 2分鐘前</span>
+                  </div>
+                  <button class="discussion-join">加入討論</button>
+                </article>
+
+                <article class="discussion-item">
+                  <h5 class="discussion-title">遊戲化問卷的題目怎麼設計才好玩？</h5>
+                  <p class="discussion-meta">最新：可以試試融入受訪情境！</p>
+                  <div class="discussion-stats">
+                    <span class="stat">👥 18 人參與</span>
+                    <span class="stat">⏱️ 1小時前</span>
+                  </div>
+                  <button class="discussion-join">加入討論</button>
+                </article>
+
+                <article class="discussion-item">
+                  <h5 class="discussion-title">問卷平台推薦與比較</h5>
+                  <p class="discussion-meta">最新：我用過三家平台的經驗...</p>
+                  <div class="discussion-stats">
+                    <span class="stat">👥 42 人參與</span>
+                    <span class="stat">⏱️ 3小時前</span>
+                  </div>
+                  <button class="discussion-join">加入討論</button>
+                </article>
+
+                <article class="discussion-item">
+                  <h5 class="discussion-title">統計軟體新手求救</h5>
+                  <p class="discussion-meta">最新：推薦從 Google Sheets 開始...</p>
+                  <div class="discussion-stats">
+                    <span class="stat">👥 31 人參與</span>
+                    <span class="stat">⏱️ 5小時前</span>
+                  </div>
+                  <button class="discussion-join">加入討論</button>
+                </article>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- 專為迎接任何挑戰而設計 -->
+      <section class="section challenge-section">
+        <div class="section-inner">
+          <h2>專為迎接任何挑戰而設計</h2>
+          
+          <div class="challenge-tabs">
+            <button class="challenge-tab active">客戶體驗</button>
+            <button class="challenge-tab">員工體驗</button>
+            <button class="challenge-tab">市場研究</button>
+            <button class="challenge-tab">活動意見</button>
+            <button class="challenge-tab">報名表單</button>
+          </div>
+
+          <div class="challenge-content">
+            <!-- 左側：問卷展示 -->
+            <div class="survey-preview">
+              <div class="preview-image">
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&h=400&fit=crop" alt="使用者體驗" />
+              </div>
+            </div>
+
+            <!-- 右側：說明文字 -->
+            <div class="challenge-info">
+              <h3>提升客戶的滿意度和忠誠度</h3>
+              <p class="info-desc">收集客戶歷程中的意見反應、找出痛點、追蹤滿意度並建立品牌忠誠度。</p>
+              
+              <ul class="info-links">
+                <li><a href="#">→ NPS 調查問卷範本</a></li>
+                <li><a href="#">→ 客戶滿意度調查問卷範本</a></li>
+                <li><a href="#">→ 客戶服務意見調查問卷範本</a></li>
+              </ul>
+
+              <button class="info-cta">查看更多範本</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-columns">
+          <!-- 產品 -->
+          <div class="footer-column">
+            <h4 class="footer-title">產品</h4>
+            <ul class="footer-links">
+              <li><a href="#">概覽</a></li>
+              <li><a href="#">調查問卷</a></li>
+              <li><a href="#">線上表單</a></li>
+              <li><a href="#">市場研究</a></li>
+              <li><a href="#">整合</a></li>
+              <li><a href="#">AI (人工智慧)</a></li>
+              <li><a href="#">Enterprise</a></li>
+              <li><a href="#">定價</a></li>
+            </ul>
+          </div>
+
+          <!-- 熱門範本 -->
+          <div class="footer-column">
+            <h4 class="footer-title">熱門範本</h4>
+            <ul class="footer-links">
+              <li><a href="#">客戶滿意度</a></li>
+              <li><a href="#">員工參與度</a></li>
+              <li><a href="#">活動意見</a></li>
+              <li><a href="#">產品測試</a></li>
+              <li><a href="#">Net Promoter Score (NPS)</a></li>
+              <li><a href="#">課程評估</a></li>
+              <li><a href="#">所有範本</a></li>
+            </ul>
+          </div>
+
+          <!-- 資源 -->
+          <div class="footer-column">
+            <h4 class="footer-title">資源</h4>
+            <ul class="footer-links">
+              <li><a href="#">客戶</a></li>
+              <li><a href="#">部落格</a></li>
+              <li><a href="#">資源中心</a></li>
+              <li><a href="#">信任中心</a></li>
+              <li><a href="#">客戶支援</a></li>
+              <li><a href="#">聯絡銷售人員</a></li>
+            </ul>
+          </div>
+
+          <!-- 知識 -->
+          <div class="footer-column">
+            <h4 class="footer-title">知識</h4>
+            <ul class="footer-links">
+              <li><a href="#">如何建立調查問卷</a></li>
+              <li><a href="#">NPS 計算工具</a></li>
+              <li><a href="#">誤差範圍計算工具</a></li>
+              <li><a href="#">樣本大小計算工具</a></li>
+              <li><a href="#">A/B 測試顯著性計算工具</a></li>
+              <li><a href="#">李克特量表</a></li>
+              <li><a href="#">線上測驗</a></li>
+              <li><a href="#">免費調查問卷範本</a></li>
+              <li><a href="#">調查問卷最佳實務</a></li>
+            </ul>
+          </div>
+
+          <!-- 關於 -->
+          <div class="footer-column">
+            <h4 class="footer-title">關於</h4>
+            <ul class="footer-links">
+              <li><a href="#">領導團隊</a></li>
+              <li><a href="#">新聞編輯部</a></li>
+              <li><a href="#">願景與使命</a></li>
+              <li><a href="#">社會影響與包容性</a></li>
+              <li><a href="#">工作機會 <span class="badge-hiring">人才招募</span></a></li>
+              <li><a href="#">營業據點</a></li>
+              <li><a href="#">公司資訊</a></li>
+              <li><a href="#">登入</a></li>
+              <li><a href="#">註冊</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-lang">
+            <select class="lang-selector">
+              <option>🌐 中文(繁體)</option>
+              <option>English</option>
+              <option>日本語</option>
+            </select>
+          </div>
+
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="X (Twitter)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-legal">
+          <p class="copyright">Copyright © 1999-2025 數據風向球</p>
+          <div class="legal-links">
+            <a href="#">隱私權聲明</a>
+            <span>•</span>
+            <a href="#">使用條款</a>
+            <span>•</span>
+            <a href="#">Cookie 聲明</a>
+            <span>•</span>
+            <a href="#">自訂</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 漢堡選單控制 JavaScript -->
+    <script>
+      // 漢堡選單功能
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const sideNav = document.getElementById('side-nav');
+      const closeBtn = document.getElementById('close-btn');
+      const overlay = document.getElementById('overlay');
+
+      // 開啟側邊選單
+      function openSideNav() {
+        sideNav.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // 防止背景滾動
+      }
+
+      // 關閉側邊選單
+      function closeSideNav() {
+        sideNav.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = ''; // 恢復滾動
+      }
+
+      // 事件監聽
+      hamburgerBtn.addEventListener('click', openSideNav);
+      closeBtn.addEventListener('click', closeSideNav);
+      overlay.addEventListener('click', closeSideNav);
+
+      // ESC 鍵關閉
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && sideNav.classList.contains('active')) {
+          closeSideNav();
+        }
+      });
+
+      // 點擊導航連結後關閉選單
+      document.querySelectorAll('.side-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          closeSideNav();
+        });
+      });
+    </script>
+
+  </body>
+</html>

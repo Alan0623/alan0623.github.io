@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>創建問卷 - 數據風向球</title>
+    <!-- Material Design Roboto Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/create-survey.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <span class="logo">🌐</span>
+          <span class="title">數據風向球</span>
+        </a>
+        <nav class="header-nav">
+          <a href="index.html">探索</a>
+          <a href="#templates">範本</a>
+          <a href="#tavern">酒館</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-btn"><span>🔔</span></button>
+          <button class="icon-btn"><span>👤</span></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Progress Stepper -->
+    <div class="progress-stepper">
+      <div class="stepper-container">
+        <div class="step active">
+          <div class="step-number">1</div>
+          <div class="step-label">選擇方式</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-label">編輯內容</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-label">預覽發布</div>
+        </div>
+      </div>
+    </div>
+
+    <main class="create-survey-main">
+      <div class="container">
+        <h1 class="page-title">創建你的問卷</h1>
+        <p class="page-subtitle">選擇最適合的創建方式，快速開始收集數據</p>
+
+        <!-- 選擇創建方式 -->
+        <section id="method-selection" class="method-section">
+          <div class="method-cards">
+            <div class="method-card" data-method="ai">
+              <div class="card-icon">✨</div>
+              <h3>AI 智能生成</h3>
+              <p>輸入主題，AI 自動產生完整問卷</p>
+              <ul class="card-features">
+                <li>快速生成多題型</li>
+                <li>智能分支邏輯</li>
+                <li>可自由編輯調整</li>
+              </ul>
+              <button class="select-method-btn">開始使用</button>
+            </div>
+
+            <div class="method-card" data-method="template">
+              <div class="card-icon">📋</div>
+              <h3>套用範本</h3>
+              <p>選擇預設範本，快速套用修改</p>
+              <ul class="card-features">
+                <li>專業範本庫</li>
+                <li>涵蓋多種場景</li>
+                <li>一鍵套用編輯</li>
+              </ul>
+              <button class="select-method-btn">瀏覽範本</button>
+            </div>
+
+            <div class="method-card" data-method="manual">
+              <div class="card-icon">✍️</div>
+              <h3>手動創建</h3>
+              <p>從零開始，自由設計問卷</p>
+              <ul class="card-features">
+                <li>完全客製化</li>
+                <li>拖曳式編輯</li>
+                <li>靈活分支設定</li>
+              </ul>
+              <button class="select-method-btn">開始創建</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- AI 生成區塊 -->
+        <section id="ai-section" class="creation-section" style="display: none;">
+          <button class="back-btn">← 返回選擇</button>
+          <h2>AI 智能問卷生成器</h2>
+          <p class="section-subtitle">AI 大師正在等待你的指令...</p>
+
+          <div class="ai-form">
+            <div class="form-group">
+              <label>你想調查什麼？ *</label>
+              <textarea 
+                id="ai-topic" 
+                placeholder="例如：我想了解大學生的線上學習體驗，包括使用的平台、學習效果、遇到的困難等..."
+                rows="4"
+              ></textarea>
+              <div class="hint">💡 提示：描述越詳細，生成的問卷越精準</div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>題目數量</label>
+                <select id="ai-question-count">
+                  <option value="5">5 題</option>
+                  <option value="8" selected>8 題</option>
+                  <option value="10">10 題</option>
+                  <option value="15">15 題</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>問卷類型</label>
+                <select id="ai-category">
+                  <option value="academic">學術研究</option>
+                  <option value="market">市場調查</option>
+                  <option value="customer">客戶滿意度</option>
+                  <option value="employee">員工體驗</option>
+                  <option value="event">活動意見</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>題型組合</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" value="single" checked> 單選題</label>
+                <label><input type="checkbox" value="multiple"> 多選題</label>
+                <label><input type="checkbox" value="rating" checked> 評分題</label>
+                <label><input type="checkbox" value="text" checked> 開放式</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>遊戲化風格（選填）</label>
+              <select id="ai-style">
+                <option value="">無特殊風格</option>
+                <option value="adventure">冒險劇情</option>
+                <option value="psychology">心理測驗</option>
+                <option value="mystery">推理解謎</option>
+              </select>
+            </div>
+
+            <button id="generate-btn" class="primary-btn large">
+              <span class="btn-text">✨ 生成問卷</span>
+              <span class="btn-loading" style="display: none;">
+                <span class="spinner"></span> AI 大師正在創作中...
+              </span>
+            </button>
+          </div>
+
+          <!-- AI 生成結果 -->
+          <div id="ai-result" class="ai-result" style="display: none;">
+            <div class="result-header">
+              <h3>AI 生成結果</h3>
+              <div class="result-actions">
+                <button id="regenerate-btn" class="secondary-btn">🔄 重新生成</button>
+                <button id="edit-result-btn" class="primary-btn">編輯問卷</button>
+              </div>
+            </div>
+            <div class="ai-warning">
+              ⚠️ AI 生成內容建議人工審查，確保符合需求
+            </div>
+            <div id="questions-preview" class="questions-preview"></div>
+          </div>
+        </section>
+
+        <!-- 範本庫區塊 -->
+        <section id="template-section" class="creation-section" style="display: none;">
+          <button class="back-btn">← 返回選擇</button>
+          <h2>問卷範本庫</h2>
+          <p class="section-subtitle">選擇適合的範本，快速開始</p>
+
+          <div class="template-filters">
+            <input type="text" id="template-search" placeholder="🔍 搜尋範本..." />
+            <div class="filter-tags">
+              <button class="filter-tag active" data-category="all">全部</button>
+              <button class="filter-tag" data-category="academic">學術研究</button>
+              <button class="filter-tag" data-category="market">市場調查</button>
+              <button class="filter-tag" data-category="customer">客戶滿意度</button>
+              <button class="filter-tag" data-category="employee">員工體驗</button>
+              <button class="filter-tag" data-category="event">活動意見</button>
+            </div>
+          </div>
+
+          <div id="template-grid" class="template-grid">
+            <!-- 範本卡片將動態插入 -->
+          </div>
+        </section>
+
+        <!-- 手動編輯器區塊 -->
+        <section id="editor-section" class="creation-section" style="display: none;">
+          <div class="editor-layout">
+            <div class="editor-sidebar">
+              <button class="back-btn">← 返回選擇</button>
+              <h3>問卷設定</h3>
+              
+              <div class="form-group">
+                <label>問卷標題 *</label>
+                <input type="text" id="survey-title" placeholder="輸入問卷標題..." />
+              </div>
+
+              <div class="form-group">
+                <label>問卷說明</label>
+                <textarea id="survey-description" placeholder="簡短說明問卷目的..." rows="3"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label>封面圖片</label>
+                <div class="image-upload">
+                  <button class="upload-btn">📷 上傳圖片</button>
+                  <button class="ai-image-btn">✨ AI 生成</button>
+                </div>
+              </div>
+
+              <hr />
+
+              <h3>題目工具箱</h3>
+              <div class="question-types">
+                <button class="add-question-btn" data-type="single">
+                  <span class="icon">◉</span> 單選題
+                </button>
+                <button class="add-question-btn" data-type="multiple">
+                  <span class="icon">☑</span> 多選題
+                </button>
+                <button class="add-question-btn" data-type="rating">
+                  <span class="icon">⭐</span> 評分題
+                </button>
+                <button class="add-question-btn" data-type="text">
+                  <span class="icon">📝</span> 文字問答
+                </button>
+                <button class="add-question-btn" data-type="scale">
+                  <span class="icon">📊</span> 量表題
+                </button>
+              </div>
+
+              <button class="import-btn">📥 匯入題目</button>
+            </div>
+
+            <div class="editor-main">
+              <div class="editor-header">
+                <h2>問卷編輯器</h2>
+                <div class="editor-actions">
+                  <button class="icon-btn" title="自動儲存"><span>💾</span></button>
+                  <button class="icon-btn" title="復原"><span>↶</span></button>
+                  <button class="icon-btn" title="重做"><span>↷</span></button>
+                </div>
+              </div>
+
+              <div id="questions-container" class="questions-container">
+                <div class="empty-state">
+                  <div class="empty-icon">📋</div>
+                  <p>從左側工具箱新增題目開始創建問卷</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="editor-preview">
+              <div class="preview-header">
+                <h3>即時預覽</h3>
+                <button id="toggle-preview" class="toggle-btn">👁️</button>
+              </div>
+              <div class="preview-content">
+                <div class="preview-device">
+                  <div id="preview-frame" class="preview-frame">
+                    <div class="preview-empty">
+                      <p>問卷預覽將顯示在這裡</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 固定 CTA 按鈕 -->
+      <div id="fixed-cta" class="fixed-cta" style="display: none;">
+        <div class="cta-container">
+          <button id="save-draft-btn" class="secondary-btn">💾 儲存草稿</button>
+          <button id="preview-survey-btn" class="secondary-btn">👁️ 預覽問卷</button>
+          <button id="publish-btn" class="primary-btn large">🚀 發布問卷</button>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="js/create-survey.js"></script>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>冒險問卷 - 數據風向球</title>
+    <!-- Material Design Roboto Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/survey-question.css" />
+  </head>
+  <body>
+    <!-- 頂部進度條與控制區 -->
+    <header class="progress-header">
+      <button class="back-btn" onclick="goBack()">
+        <span class="material-icons">arrow_back</span>
+        <span>返回冒險</span>
+      </button>
+
+      <div class="progress-container">
+        <div class="progress-title">第 8 / 12 題 - 您的問卷進度</div>
+        <div class="progress-bar-wrapper">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 66.67%"></div>
+          </div>
+          <span class="progress-percentage">67%</span>
+        </div>
+      </div>
+
+      <div class="header-controls">
+        <div class="timer">
+          <span class="material-icons">schedule</span>
+          <span>已用時間：2:45</span>
+        </div>
+        <button class="sound-toggle" onclick="toggleSound()">
+          <span class="material-icons">volume_up</span>
+        </button>
+      </div>
+    </header>
+
+
+
+    <!-- 角色狀態卡片 - 隱藏但保留 -->
+    <div class="character-stats" style="display: none;">
+      <div class="stat-item">
+        <span class="stat-icon">❤️</span>
+        <span class="stat-label">生命值</span>
+        <span class="stat-value">80/100</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-icon">⭐</span>
+        <span class="stat-label">聰慧度</span>
+        <span class="stat-value">+12</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-icon">🤝</span>
+        <span class="stat-label">友誼值</span>
+        <span class="stat-value">+15</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-icon">🔥</span>
+        <span class="stat-label">勇氣值</span>
+        <span class="stat-value">+8</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-icon">💎</span>
+        <span class="stat-label">品格值</span>
+        <span class="stat-value">+10</span>
+      </div>
+    </div>
+
+    <!-- 主要內容區域 -->
+    <main class="question-container">
+      <!-- 中央問題卡片 -->
+      <div class="question-card">
+        <div class="question-tag">
+          <span class="material-icons">bedtime</span>
+          <span>睡眠健康</span>
+        </div>
+        
+        <h2 class="question-main-title">Q8: 您認為引發您失眠或睡眠困擾的「主要原因」是什麼？</h2>
+        
+        <p class="question-subtitle">請選擇最符合您情況的選項</p>
+        
+        <!-- <div class="question-text">了解失眠原因有助於我們為您提供更精準的改善建議</div> -->
+      </div>
+
+      <!-- 選項卡片區 -->
+      <div class="options-container">
+        <div class="option-card" onclick="selectOption(this, 0)">
+          <div class="option-number">A</div>
+          <div class="option-content">
+            <div class="option-text">工作或學業壓力</div>
+            <div class="option-stats">
+              <span class="stat-gain positive">+5 壓力指數</span>
+            </div>
+          </div>
+          <div class="option-icon">💼</div>
+        </div>
+
+        <div class="option-card" onclick="selectOption(this, 1)">
+          <div class="option-number">B</div>
+          <div class="option-content">
+            <div class="option-text">情緒困擾（焦慮、憂鬱、煩惱）</div>
+            <div class="option-stats">
+              <span class="stat-gain positive">+7 情緒關注</span>
+            </div>
+          </div>
+          <div class="option-icon">😰</div>
+        </div>
+
+        <div class="option-card" onclick="selectOption(this, 2)">
+          <div class="option-number">C</div>
+          <div class="option-content">
+            <div class="option-text">生活習慣（熬夜、睡前滑手機、咖啡因或酒精攝取）</div>
+            <div class="option-stats">
+              <span class="stat-gain positive">+6 習慣改善</span>
+            </div>
+          </div>
+          <div class="option-icon">📱</div>
+        </div>
+
+        <div class="option-card" onclick="selectOption(this, 3)">
+          <div class="option-number">D</div>
+          <div class="option-content">
+            <div class="option-text">身體健康因素（疼痛、疾病、更年期、藥物副作用等）</div>
+            <div class="option-stats">
+              <span class="stat-gain positive">+8 健康關注</span>
+            </div>
+          </div>
+          <div class="option-icon">🏥</div>
+        </div>
+
+        <div class="option-card" onclick="selectOption(this, 4)">
+          <div class="option-number">E</div>
+          <div class="option-content">
+            <div class="option-text">睡眠環境不佳（噪音、光線、室溫不適合）</div>
+            <div class="option-stats">
+              <span class="stat-gain positive">+5 環境改善</span>
+            </div>
+          </div>
+          <div class="option-icon">🛏️</div>
+        </div>
+
+        <div class="option-card" onclick="selectOption(this, 5)">
+          <div class="option-number">F</div>
+          <div class="option-content">
+            <div class="option-text">其他</div>
+            <div class="option-input-wrapper">
+              <input 
+                type="text" 
+                class="option-input" 
+                id="otherInput"
+                placeholder="請說明其他原因..." 
+                maxlength="100"
+                onclick="event.stopPropagation();"
+              />
+            </div>
+            <div class="option-stats">
+              <span class="stat-gain positive">+3 個人因素</span>
+            </div>
+          </div>
+          <div class="option-icon">❓</div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 底部操作按鈕區 -->
+    <footer class="navigation-footer">
+      <button class="nav-btn prev-btn" onclick="previousQuestion()">
+        <span class="material-icons">arrow_back</span>
+        <span>上一題</span>
+      </button>
+    <!-- 角色狀態血條 - 放在底部 -->
+    <div class="stats-bars">
+      <div class="stat-bar-item">
+        <div class="stat-bar-header">
+          <span class="stat-bar-icon">❤️</span>
+          <span class="stat-bar-label">生命值</span>
+          <span class="stat-bar-value">80/100</span>
+        </div>
+        <div class="stat-bar-track">
+          <div class="stat-bar-fill life" style="width: 80%"></div>
+        </div>
+      </div>
+
+      <div class="stat-bar-item">
+        <div class="stat-bar-header">
+          <span class="stat-bar-icon">⭐</span>
+          <span class="stat-bar-label">聰慧度</span>
+          <span class="stat-bar-value">+12</span>
+        </div>
+        <div class="stat-bar-track">
+          <div class="stat-bar-fill wisdom" style="width: 60%"></div>
+        </div>
+      </div>
+
+      <div class="stat-bar-item">
+        <div class="stat-bar-header">
+          <span class="stat-bar-icon">🤝</span>
+          <span class="stat-bar-label">友誼值</span>
+          <span class="stat-bar-value">+15</span>
+        </div>
+        <div class="stat-bar-track">
+          <div class="stat-bar-fill friendship" style="width: 75%"></div>
+        </div>
+      </div>
+
+      <div class="stat-bar-item">
+        <div class="stat-bar-header">
+          <span class="stat-bar-icon">🔥</span>
+          <span class="stat-bar-label">勇氣值</span>
+          <span class="stat-bar-value">+8</span>
+        </div>
+        <div class="stat-bar-track">
+          <div class="stat-bar-fill courage" style="width: 40%"></div>
+        </div>
+      </div>
+
+      <div class="stat-bar-item">
+        <div class="stat-bar-header">
+          <span class="stat-bar-icon">💎</span>
+          <span class="stat-bar-label">品格值</span>
+          <span class="stat-bar-value">+10</span>
+        </div>
+        <div class="stat-bar-track">
+          <div class="stat-bar-fill character" style="width: 50%"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+      <button class="nav-btn next-btn" id="nextBtn" disabled onclick="nextQuestion()">
+        <span>下一題</span>
+        <span class="material-icons">arrow_forward</span>
+      </button>
+    </footer>
+
+    <script src="js/survey-question.js"></script>
+  </body>
+</html>
